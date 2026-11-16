@@ -5964,6 +5964,15 @@ function initSidebarHead(){
   syncToggle();
 }
 $("#reloadCsvBtn").addEventListener("click", async () => {
+  // 👇 优先走 GitHub 拉取逻辑
+  if(githubConfig) {
+    toast("正在从 GitHub 云端拉取最新题库...");
+    const ok = await fetchFromGithub();
+    if(ok) toast("题库已更新！");
+    return;
+  }
+  
+  // 原有的本地文件刷新逻辑，作为备用
   if(questionsHandle){
     await loadQuestionsFromBoundCsv({ silent: true });
   }

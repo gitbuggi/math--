@@ -1675,34 +1675,47 @@ function saveGithubConfig(config) {
 
 async function fetchFromGithub() {
   if (!githubConfig) return false;
-
-    //  新增：10秒超时控制，防止一直转圈
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 10000);
-  
   const { owner, repo, path, progressPath, branch, token } = githubConfig;
   
-  // --- 1. 拉取题库 ---
-  try {
-    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`, {
+  // 👇 通用方法：获取文件内容（绕过 download_url，全走 api.github.com）
+  async function getFileContent(targetPath) {
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${targetPath}?ref=${branch}`, {
       headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" }
     });
-    if (!res.ok) throw new Error(`题库拉取失败(${res.status})，请检查Token或文件名`);
+    if (!res.ok) return { error: res.status, msg: "请求失败" };
     
     const data = await res.json();
     let content = "";
+    
     if (data.encoding === "none" || !data.content) {
-        const rawRes = await fetch(data.download_url);
-        content = await rawRes.text();
+        // 大文件：通过 Blob API 获取（依然走 api.github.com）
+        const blobRes = await fetch(data.git_url, {
+           headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" }
+        });
+        if(!blobRes.ok) return { error: blobRes.status, msg: "Blob获取失败" };
+        const blobData = await blobRes.json();
+        
+        const binary = atob(blobData.content.replace(/\s/g, ''));
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+        content = new TextDecoder("utf-8").decode(bytes);
     } else {
+        // 小文件：直接解析
         const binary = atob(data.content.replace(/\s/g, ''));
         const bytes = new Uint8Array(binary.length);
         for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
         content = new TextDecoder("utf-8").decode(bytes);
     }
-    githubConfig.sha = data.sha; 
+    return { content, sha: data.sha };
+  }
+
+  // --- 1. 拉取题库 ---
+  try {
+    const qRes = await getFileContent(path);
+    if (qRes.error) throw new Error(`题库拉取失败: ${qRes.error}`);
     
-    const parsed = parseQuestionsCsv(content);
+    githubConfig.sha = qRes.sha; 
+    const parsed = parseQuestionsCsv(qRes.content);
     if (parsed.length > 0) {
       QS_ALL = parsed;
       rebuildIndex();
@@ -1710,47 +1723,24 @@ async function fetchFromGithub() {
     }
   } catch (e) {
     toast(e.message);
-    console.error(e);
     return false;
   }
 
   // --- 2. 拉取进度 ---
   if(progressPath) {
     try {
-      const resP = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${progressPath}?ref=${branch}`, {
-        headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" }
-      });
-      
-      if (resP.ok) {
-        const dataP = await resP.json();
-        githubConfig.progressSha = dataP.sha;
-        
-        let contentP = "";
-        if (dataP.encoding === "none" || !dataP.content) {
-            const rawRes = await fetch(dataP.download_url);
-            contentP = await rawRes.text();
-        } else {
-            const binary = atob(dataP.content.replace(/\s/g, ''));
-            const bytes = new Uint8Array(binary.length);
-            for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-            contentP = new TextDecoder("utf-8").decode(bytes);
-        }
-        
-        // 👇 这里会返回读取到的条数，并弹窗提示
-        const count = parseProgressCsvText(contentP);
-        toast(`数据已同步！成功加载题库和 ${count} 条做题进度`);
-        
-      } else if(resP.status === 404) {
-        toast("进度文件 progress.csv 在仓库中不存在，跳过进度同步");
+      const pRes = await getFileContent(progressPath);
+      if (pRes.error) {
+        if(pRes.error === 404) toast("进度文件不存在，跳过进度同步");
+        else toast(`进度拉取失败: ${pRes.error}`);
       } else {
-        toast(`进度文件拉取失败: ${resP.status}`);
+        githubConfig.progressSha = pRes.sha;
+        const count = parseProgressCsvText(pRes.content);
+        toast(`同步成功！加载题库和 ${count} 条进度`);
       }
     } catch(e) {
       console.error("拉取进度失败:", e);
-      toast("进度同步出现异常");
     }
-  } else {
-    toast("未配置进度文件路径，仅同步题库");
   }
 
   saveGithubConfig(githubConfig);

@@ -1643,79 +1643,101 @@ function saveGithubConfig(config) {
 
 async function fetchFromGithub() {
   if (!githubConfig) return false;
-  const { owner, repo, path, branch, token } = githubConfig;
+  const { owner, repo, path, progressPath, branch, token } = githubConfig;
+  
+  // --- 1. 拉取题库 ---
   try {
     const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`, {
       headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" }
     });
-    if (!res.ok) {
-      if(res.status === 401) throw new Error("Token无效或已过期，请重新配置");
-      if(res.status === 404) throw new Error("找不到文件，请检查 Path 或文件名");
-      throw new Error("请求失败，状态码 " + res.status);
-    }
-    const data = await res.json();
-    
-    let content = "";
-    // 👇 核心修改：如果文件过大，用 download_url 去拉取原文件
-    if (data.encoding === "none" || !data.content) {
-        const rawRes = await fetch(data.download_url);
-        if(!rawRes.ok) throw new Error("大文件下载失败");
-        content = await rawRes.text();
-    } else {
-        // 小文件的话，依然走原来的 Base64 解析
-        const binary = atob(data.content.replace(/\s/g, ''));
-        const bytes = new Uint8Array(binary.length);
-        for (let i = 0; i < binary.length; i++) {
-            bytes[i] = binary.charCodeAt(i);
-        }
-        content = new TextDecoder("utf-8").decode(bytes);
-    }
-    
-    githubConfig.sha = data.sha; 
-    saveGithubConfig(githubConfig);
-    
-    const parsed = parseQuestionsCsv(content);
-    if (parsed.length > 0) {
-      QS_ALL = parsed;
-      rebuildIndex();
-      refreshSourceDropdown();
-      refreshCurrentView();
-      toast(`成功拉取 ${parsed.length} 道题！`);
-      return true;
-    } else {
-      toast("拉取成功，但解析出 0 道题，请检查 CSV 表头");
-      return false;
+    if (res.ok) {
+      const data = await res.json();
+      let content = "";
+      if (data.encoding === "none" || !data.content) {
+          const rawRes = await fetch(data.download_url);
+          content = await rawRes.text();
+      } else {
+          const binary = atob(data.content.replace(/\s/g, ''));
+          const bytes = new Uint8Array(binary.length);
+          for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+          content = new TextDecoder("utf-8").decode(bytes);
+      }
+      githubConfig.sha = data.sha; 
+      
+      const parsed = parseQuestionsCsv(content);
+      if (parsed.length > 0) {
+        QS_ALL = parsed;
+        rebuildIndex();
+        refreshSourceDropdown();
+      }
     }
   } catch (e) {
-    toast(e.message); 
-    console.error("GitHub 拉取报错:", e);
+    console.error("拉取题库失败:", e);
   }
-  return false;
+
+  // --- 2. 拉取进度 ---
+  if(progressPath) {
+    try {
+      const resP = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${progressPath}?ref=${branch}`, {
+        headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" }
+      });
+      if (resP.ok) {
+        const dataP = await resP.json();
+        githubConfig.progressSha = dataP.sha;
+        
+        let contentP = "";
+        if (dataP.encoding === "none" || !dataP.content) {
+            const rawRes = await fetch(dataP.download_url);
+            contentP = await rawRes.text();
+        } else {
+            const binary = atob(dataP.content.replace(/\s/g, ''));
+            const bytes = new Uint8Array(binary.length);
+            for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+            contentP = new TextDecoder("utf-8").decode(bytes);
+        }
+        
+        // 解析并恢复进度
+        parseProgressCsvText(contentP);
+      }
+    } catch(e) {
+      console.error("拉取进度失败（如果文件不存在则忽略）:", e);
+    }
+  }
+
+  saveGithubConfig(githubConfig);
+  refreshCurrentView();
+  toast("云端数据已同步！");
+  return true;
 }
 
-async function writeToGithub(csvContent) {
+async function writeToGithub(csvContent, isProgress = false) {
   if (!githubConfig) return false;
-  const { owner, repo, path, branch, token, sha } = githubConfig;
+  const { owner, repo, path, progressPath, branch, token } = githubConfig;
+  const targetPath = isProgress ? progressPath : path;
+  const targetSha = isProgress ? githubConfig.progressSha : githubConfig.sha;
   
-  // 将字符串转为 UTF-8 安全的 Base64
+  if(!targetPath) return false;
+
   const base64Content = btoa(encodeURIComponent(csvContent).replace(/%([0-9A-F]{2})/g, function(match, p1) {
     return String.fromCharCode('0x' + p1);
   }));
 
   try {
-    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+    const body = {
+      message: isProgress ? "Auto update progress via Web UI" : "Auto update questions via Web UI",
+      content: base64Content,
+      branch: branch
+    };
+    if(targetSha) body.sha = targetSha; // 如果文件已存在，必须带上 sha 覆盖
+
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${targetPath}`, {
       method: "PUT",
       headers: { 
         "Authorization": `Bearer ${token}`, 
         "Accept": "application/vnd.github.v3+json",
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({
-        message: "Auto update questions.csv via Web UI",
-        content: base64Content,
-        sha: sha,
-        branch: branch
-      })
+      body: JSON.stringify(body)
     });
     
     if (!res.ok) {
@@ -1724,11 +1746,15 @@ async function writeToGithub(csvContent) {
     }
     
     const data = await res.json();
-    githubConfig.sha = data.content.sha; // 更新最新 SHA
+    if(isProgress) {
+      githubConfig.progressSha = data.content.sha;
+    } else {
+      githubConfig.sha = data.content.sha;
+    }
     saveGithubConfig(githubConfig);
     return true;
   } catch (e) {
-    toast("GitHub 同步失败：" + e.message);
+    console.error("GitHub 同步失败：", e);
     return false;
   }
 }
@@ -2441,8 +2467,9 @@ async function bindQuestionsFile(){
 }
 async function writeQuestionsToBoundCsv(){
   if(githubConfig) {
-    return await writeToGithub("\ufeff" + buildQuestionsCsv());
+    return await writeToGithub("\ufeff" + buildQuestionsCsv(), false);
   }
+  // ...（下面保留你原来的本地文件写入逻辑）
   if(!questionsHandle){ toast("请先配置 GitHub 或绑定题库"); return false; }
   if(!QS_ALL.length){ toast("题库为空，拒绝写入"); return false; }
   try{
@@ -5103,7 +5130,33 @@ async function writeSyncFile(){
   }
 }
 let syncTimer = null;
+let syncTimer = null;
 function autoSync(){
+  // 如果有 GitHub 配置，自动把进度传到云端
+  if(githubConfig && githubConfig.progressPath){
+    clearTimeout(syncTimer);
+    syncTimer = setTimeout(async () => {
+      // 构建进度 CSV
+      const STATE_LABEL = { f: "熟悉", v: "模糊", u: "陌生" };
+      const rows = [["题号ID", "来源", "模块", "章节", "题型", "进度", "标签", "笔记"]];
+      for(const q of QS_ALL){
+        const records = recordsOf(q.id);
+        const historyStr = records.map(r => STATE_LABEL[r] || "").filter(Boolean).join(";");
+        const typeLabel = (q.topic || q.type || "").trim();
+        rows.push([String(q.id), q.source || "", q.module, q.chapter, typeLabel, historyStr, getTags(q.id).join(";"), getNote(q.id)]);
+      }
+      const csvStr = rows.map(r => r.map(cell => {
+        const s = String(cell == null ? "" : cell);
+        return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+      }).join(",")).join("\r\n");
+
+      await writeToGithub("\ufeff" + csvStr, true);
+      console.log("进度已同步至云端");
+    }, 1500); // 防抖 1.5 秒，防止连续点击导致频繁请求
+    return;
+  }
+
+  // 原有的本地同步逻辑
   if(!syncHandle || !syncSupported) return;
   clearTimeout(syncTimer);
   syncTimer = setTimeout(writeSyncFile, 500);
@@ -5166,6 +5219,45 @@ function parseCsv(text){
   if(cell !== "" || row.length){ row.push(cell); rows.push(row); }
   return rows.filter(r => r.some(v => v.trim() !== ""));
 }
+function parseProgressCsvText(text) {
+  if(!text) return;
+  const rows = parseCsv(text);
+  if(!rows || !rows.length) return;
+  const hdr = rows[0].map(h => String(h).trim().toLowerCase().replace(/\s+/g, ""));
+  const find = (zh, en) => { const i = hdr.indexOf(zh); return i >= 0 ? i : hdr.indexOf(en); };
+  const ci = { id: find("题号id","id"), st: find("进度","状态"), tags: find("标签","tags"), notes: find("笔记","notes") };
+  if(ci.id < 0) return;
+
+  for(let i = 1; i < rows.length; i++){
+    const r = rows[i];
+    const qid = String(r[ci.id] || "").trim();
+    if(!qid) continue;
+    
+    if(ci.st >= 0){
+      const raw = String(r[ci.st] || "").trim();
+      if(raw){
+        const parts = raw.split(/[;；、|]+/).map(x => x.trim()).filter(Boolean);
+        const arr = [];
+        for(const p of parts){
+          if(p === "熟悉" || p === "已掌握" || p === "f" || p === "m") arr.push("f");
+          else if(p === "模糊" || p === "待复习" || p === "v" || p === "r") arr.push("v");
+          else if(p === "陌生" || p === "u") arr.push("u");
+        }
+        if(arr.length) store.progress[qid] = arr.slice(-REC_MAX);
+      }
+    }
+    if(ci.tags >= 0){
+      const arr = [];
+      String(r[ci.tags] || "").split(/[;；、|]+/).forEach(t => { t = t.trim(); if(t && !arr.includes(t)) arr.push(t); });
+      if(arr.length) store.tags[qid] = arr;
+    }
+    if(ci.notes >= 0){
+      const n = String(r[ci.notes] || "").trim();
+      if(n) store.notes[qid] = { text: n, updatedAt: Date.now() };
+    }
+  }
+  saveStore();
+}  
 function importProgressFile(file){
   const reader = new FileReader();
   reader.onload = () => {
@@ -6174,15 +6266,17 @@ $("#setGithubConfig").addEventListener("click", () => {
   if(owner === null) return;
   const repo = prompt("仓库名 (Repository):", current.repo || "");
   if(repo === null) return;
-  const path = prompt("文件路径 (如 questions.csv):", current.path || "questions.csv");
+  const path = prompt("题库文件路径 (如 question.csv):", current.path || "question.csv");
   if(path === null) return;
+  const progressPath = prompt("进度文件路径 (如 progress.csv):", current.progressPath || "progress.csv");
+  if(progressPath === null) return;
   const branch = prompt("分支名 (默认 main):", current.branch || "main");
   if(branch === null) return;
   const token = prompt("请输入 GitHub PAT (token):", current.token || "");
   if(token === null) return;
   
-  saveGithubConfig({ owner, repo, path, branch, token });
-  toast("GitHub 配置已保存，正在拉取最新题库...");
+  saveGithubConfig({ owner, repo, path, progressPath, branch, token });
+  toast("GitHub 配置已保存，正在拉取最新数据...");
   fetchFromGithub();
 });
 

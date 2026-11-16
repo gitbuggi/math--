@@ -1311,6 +1311,14 @@ input,textarea,select{font-family:inherit}
       </div>
     </div>
     <div class="set-group">
+      <h4>GitHub 云端编辑</h4>
+      <div class="set-row">
+        <div class="lbl">仓库配置<div class="desc" id="ghDesc">未配置 GitHub API</div></div>
+        <button class="btn sm" id="setGithubConfig">配置</button>
+      </div>
+    </div>
+
+    <div class="set-group">
       <h4>进度表格同步</h4>
       <div class="set-row">
         <div class="lbl">自动同步<div class="desc" id="syncDesc">未绑定 progress.csv</div></div>
@@ -1615,6 +1623,94 @@ let store = {
    题库（CSV 文件直接读写）
 ============================================================ */
 let questionsHandle = null;
+
+/* ================= GitHub API 核心逻辑 ================= */
+let githubConfig = null; // { owner, repo, path, branch, token, sha }
+
+async function loadGithubConfig() {
+  try {
+    const raw = localStorage.getItem("math880.github");
+    if (raw) githubConfig = JSON.parse(raw);
+  } catch (e) {}
+  updateQuestionsUI();
+}
+
+function saveGithubConfig(config) {
+  githubConfig = config;
+  localStorage.setItem("math880.github", JSON.stringify(config));
+  updateQuestionsUI();
+}
+
+async function fetchFromGithub() {
+  if (!githubConfig) return false;
+  const { owner, repo, path, branch, token } = githubConfig;
+  try {
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`, {
+      headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" }
+    });
+    if (!res.ok) throw new Error("拉取失败，请检查配置或 Token 是否过期");
+    const data = await res.json();
+    
+    // 解码 Base64 内容 (兼容中文)
+    const content = decodeURIComponent(atob(data.content.replace(/\s/g, '')).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+    
+    githubConfig.sha = data.sha; // 保存最新的 SHA，用于后续覆盖
+    saveGithubConfig(githubConfig);
+    
+    const parsed = parseQuestionsCsv(content);
+    if (parsed.length) {
+      QS_ALL = parsed;
+      rebuildIndex();
+      refreshSourceDropdown();
+      refreshCurrentView();
+      return true;
+    }
+  } catch (e) {
+    toast(e.message);
+  }
+  return false;
+}
+
+async function writeToGithub(csvContent) {
+  if (!githubConfig) return false;
+  const { owner, repo, path, branch, token, sha } = githubConfig;
+  
+  // 将字符串转为 UTF-8 安全的 Base64
+  const base64Content = btoa(encodeURIComponent(csvContent).replace(/%([0-9A-F]{2})/g, function(match, p1) {
+    return String.fromCharCode('0x' + p1);
+  }));
+
+  try {
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+      method: "PUT",
+      headers: { 
+        "Authorization": `Bearer ${token}`, 
+        "Accept": "application/vnd.github.v3+json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        message: "Auto update questions.csv via Web UI",
+        content: base64Content,
+        sha: sha,
+        branch: branch
+      })
+    });
+    
+    if (!res.ok) {
+      const errData = await res.json();
+      throw new Error(errData.message || "写入失败");
+    }
+    
+    const data = await res.json();
+    githubConfig.sha = data.content.sha; // 更新最新 SHA
+    saveGithubConfig(githubConfig);
+    return true;
+  } catch (e) {
+    toast("GitHub 同步失败：" + e.message);
+    return false;
+  }
+}
+/* ======================================================= */
 
 /* CHAPTER_MAP：模块 → 章节号 → 章节名（跟来源无关，天然合并） */
 const CHAPTER_MAP = {
@@ -2322,7 +2418,10 @@ async function bindQuestionsFile(){
   }
 }
 async function writeQuestionsToBoundCsv(){
-  if(!questionsHandle){ toast("请先绑定题库"); return false; }
+  if(githubConfig) {
+    return await writeToGithub("\ufeff" + buildQuestionsCsv());
+  }
+  if(!questionsHandle){ toast("请先配置 GitHub 或绑定题库"); return false; }
   if(!QS_ALL.length){ toast("题库为空，拒绝写入"); return false; }
   try{
     const w = await questionsHandle.createWritable();
@@ -2337,11 +2436,9 @@ async function writeQuestionsToBoundCsv(){
 
 function updateQuestionsUI(){
   const d = $("#qBindDesc");
-  if(d){
-    d.textContent = questionsHandle
-      ? ("已绑定：" + (questionsHandle.name || "questions.csv"))
-      : "未绑定（只读）";
-  }
+  const gd = $("#ghDesc");
+  if(d) d.textContent = questionsHandle ? ("已绑定本地：" + (questionsHandle.name || "questions.csv")) : "未绑定本地题库";
+  if(gd) gd.textContent = githubConfig ? `已配置：${githubConfig.owner}/${githubConfig.repo}` : "未配置 GitHub API";
   if(typeof updateTopNewBtn === "function") updateTopNewBtn();   
 }
 function loadStore(){
@@ -5978,6 +6075,11 @@ if(store.session && !store.session.finished && Array.isArray(store.session.ids) 
 
 (async () => {
   /* 1. 尝试加载绑定的题库 CSV */
+    // 先尝试加载 GitHub 云端题库
+  loadGithubConfig();
+  if(githubConfig) {
+    await fetchFromGithub();
+  }
   const h = await loadQuestionsHandle();
   if(h){
     questionsHandle = h;
@@ -6035,7 +6137,23 @@ if(store.session && !store.session.finished && Array.isArray(store.session.ids) 
     showView("dashboard");
   }
 })();
-
+$("#setGithubConfig").addEventListener("click", () => {
+  const current = githubConfig || {};
+  const owner = prompt("GitHub 用户名 (Owner):", current.owner || "");
+  if(owner === null) return;
+  const repo = prompt("仓库名 (Repository):", current.repo || "");
+  if(repo === null) return;
+  const path = prompt("文件路径 (如 questions.csv):", current.path || "questions.csv");
+  if(path === null) return;
+  const branch = prompt("分支名 (默认 main):", current.branch || "main");
+  if(branch === null) return;
+  const token = prompt("请输入 GitHub PAT (token):", current.token || "");
+  if(token === null) return;
+  
+  saveGithubConfig({ owner, repo, path, branch, token });
+  toast("GitHub 配置已保存，正在拉取最新题库...");
+  fetchFromGithub();
+});
 
 </script>
 </body>

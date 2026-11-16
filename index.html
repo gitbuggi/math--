@@ -1675,6 +1675,11 @@ function saveGithubConfig(config) {
 
 async function fetchFromGithub() {
   if (!githubConfig) return false;
+
+    //  新增：10秒超时控制，防止一直转圈
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 10000);
+  
   const { owner, repo, path, progressPath, branch, token } = githubConfig;
   
   // --- 1. 拉取题库 ---

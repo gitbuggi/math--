@@ -1648,25 +1648,47 @@ async function fetchFromGithub() {
     const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`, {
       headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" }
     });
-    if (!res.ok) throw new Error("拉取失败，请检查配置或 Token 是否过期");
+    if (!res.ok) {
+      if(res.status === 401) throw new Error("Token无效或已过期，请重新配置");
+      if(res.status === 404) throw new Error("找不到文件，请检查 Path 或文件名");
+      throw new Error("请求失败，状态码 " + res.status);
+    }
     const data = await res.json();
     
-    // 解码 Base64 内容 (兼容中文)
-    const content = decodeURIComponent(atob(data.content.replace(/\s/g, '')).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+    let content = "";
+    // 👇 核心修改：如果文件过大，用 download_url 去拉取原文件
+    if (data.encoding === "none" || !data.content) {
+        const rawRes = await fetch(data.download_url);
+        if(!rawRes.ok) throw new Error("大文件下载失败");
+        content = await rawRes.text();
+    } else {
+        // 小文件的话，依然走原来的 Base64 解析
+        const binary = atob(data.content.replace(/\s/g, ''));
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) {
+            bytes[i] = binary.charCodeAt(i);
+        }
+        content = new TextDecoder("utf-8").decode(bytes);
+    }
     
-    githubConfig.sha = data.sha; // 保存最新的 SHA，用于后续覆盖
+    githubConfig.sha = data.sha; 
     saveGithubConfig(githubConfig);
     
     const parsed = parseQuestionsCsv(content);
-    if (parsed.length) {
+    if (parsed.length > 0) {
       QS_ALL = parsed;
       rebuildIndex();
       refreshSourceDropdown();
       refreshCurrentView();
+      toast(`成功拉取 ${parsed.length} 道题！`);
       return true;
+    } else {
+      toast("拉取成功，但解析出 0 道题，请检查 CSV 表头");
+      return false;
     }
   } catch (e) {
-    toast(e.message);
+    toast(e.message); 
+    console.error("GitHub 拉取报错:", e);
   }
   return false;
 }

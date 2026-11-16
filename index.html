@@ -1314,8 +1314,40 @@ input,textarea,select{font-family:inherit}
       <h4>GitHub 云端编辑</h4>
       <div class="set-row">
         <div class="lbl">仓库配置<div class="desc" id="ghDesc">未配置 GitHub API</div></div>
-        <button class="btn sm" id="setGithubConfig">配置</button>
+        <button class="btn sm" id="setGithubConfig">展开/收起配置</button>
       </div>
+      
+      <!-- 👇 新增的配置表单 👇 -->
+      <div id="githubForm" style="display:none; padding:12px; background:var(--paper-2); border-radius:8px; margin-top:8px; border:1px solid var(--line);">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <div class="edit-row">
+            <label>Owner (用户名)</label>
+            <input id="ghOwner" type="text" placeholder="如 gitbuggi">
+          </div>
+          <div class="edit-row">
+            <label>Repository (仓库名)</label>
+            <input id="ghRepo" type="text" placeholder="如 math--">
+          </div>
+          <div class="edit-row">
+            <label>题库文件名</label>
+            <input id="ghPath" type="text" placeholder="如 question.csv">
+          </div>
+          <div class="edit-row">
+            <label>进度文件名</label>
+            <input id="ghProgressPath" type="text" placeholder="如 progress.csv">
+          </div>
+        </div>
+        <div class="edit-row" style="margin-top:10px;">
+          <label>Branch (分支)</label>
+          <input id="ghBranch" type="text" placeholder="main" value="main">
+        </div>
+        <div class="edit-row" style="margin-top:10px;">
+          <label>Token (访问令牌)</label>
+          <input id="ghToken" type="password" placeholder="github_pat_...">
+        </div>
+        <button class="btn primary" id="ghSaveBtn" style="width:100%; margin-top:12px;">保存配置并同步</button>
+      </div>
+      <!-- 👆 新增的配置表单 👆 -->
     </div>
 
     <div class="set-group">
@@ -6275,21 +6307,37 @@ if(store.session && !store.session.finished && Array.isArray(store.session.ids) 
   }
 })();
 $("#setGithubConfig").addEventListener("click", () => {
-  const current = githubConfig || {};
-  const owner = prompt("GitHub 用户名 (Owner):", current.owner || "");
-  if(owner === null) return;
-  const repo = prompt("仓库名 (Repository):", current.repo || "");
-  if(repo === null) return;
-  const path = prompt("题库文件路径 (如 question.csv):", current.path || "question.csv");
-  if(path === null) return;
-  const progressPath = prompt("进度文件路径 (如 progress.csv):", current.progressPath || "progress.csv");
-  if(progressPath === null) return;
-  const branch = prompt("分支名 (默认 main):", current.branch || "main");
-  if(branch === null) return;
-  const token = prompt("请输入 GitHub PAT (token):", current.token || "");
-  if(token === null) return;
-  
+  const form = $("#githubForm");
+  if (form.style.display === "none" || !form.style.display) {
+    // 展开并填充当前保存的数据
+    const c = githubConfig || {};
+    $("#ghOwner").value = c.owner || "";
+    $("#ghRepo").value = c.repo || "";
+    $("#ghPath").value = c.path || "question.csv";
+    $("#ghProgressPath").value = c.progressPath || "progress.csv";
+    $("#ghBranch").value = c.branch || "main";
+    $("#ghToken").value = c.token || "";
+    form.style.display = "block";
+  } else {
+    form.style.display = "none";
+  }
+});
+
+$("#ghSaveBtn").addEventListener("click", () => {
+  const owner = $("#ghOwner").value.trim();
+  const repo = $("#ghRepo").value.trim();
+  const path = $("#ghPath").value.trim();
+  const progressPath = $("#ghProgressPath").value.trim();
+  const branch = $("#ghBranch").value.trim() || "main";
+  const token = $("#ghToken").value.trim();
+
+  if (!owner || !repo || !path || !token) {
+    toast("Owner、Repository、题库文件名和 Token 不能为空");
+    return;
+  }
+
   saveGithubConfig({ owner, repo, path, progressPath, branch, token });
+  $("#githubForm").style.display = "none"; // 收起表单
   toast("GitHub 配置已保存，正在拉取最新数据...");
   fetchFromGithub();
 });

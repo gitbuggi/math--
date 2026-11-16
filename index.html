@@ -1650,29 +1650,31 @@ async function fetchFromGithub() {
     const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`, {
       headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" }
     });
-    if (res.ok) {
-      const data = await res.json();
-      let content = "";
-      if (data.encoding === "none" || !data.content) {
-          const rawRes = await fetch(data.download_url);
-          content = await rawRes.text();
-      } else {
-          const binary = atob(data.content.replace(/\s/g, ''));
-          const bytes = new Uint8Array(binary.length);
-          for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-          content = new TextDecoder("utf-8").decode(bytes);
-      }
-      githubConfig.sha = data.sha; 
-      
-      const parsed = parseQuestionsCsv(content);
-      if (parsed.length > 0) {
-        QS_ALL = parsed;
-        rebuildIndex();
-        refreshSourceDropdown();
-      }
+    if (!res.ok) throw new Error(`题库拉取失败(${res.status})，请检查Token或文件名`);
+    
+    const data = await res.json();
+    let content = "";
+    if (data.encoding === "none" || !data.content) {
+        const rawRes = await fetch(data.download_url);
+        content = await rawRes.text();
+    } else {
+        const binary = atob(data.content.replace(/\s/g, ''));
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+        content = new TextDecoder("utf-8").decode(bytes);
+    }
+    githubConfig.sha = data.sha; 
+    
+    const parsed = parseQuestionsCsv(content);
+    if (parsed.length > 0) {
+      QS_ALL = parsed;
+      rebuildIndex();
+      refreshSourceDropdown();
     }
   } catch (e) {
-    console.error("拉取题库失败:", e);
+    toast(e.message);
+    console.error(e);
+    return false;
   }
 
   // --- 2. 拉取进度 ---
@@ -1681,6 +1683,7 @@ async function fetchFromGithub() {
       const resP = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${progressPath}?ref=${branch}`, {
         headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" }
       });
+      
       if (resP.ok) {
         const dataP = await resP.json();
         githubConfig.progressSha = dataP.sha;
@@ -1696,17 +1699,25 @@ async function fetchFromGithub() {
             contentP = new TextDecoder("utf-8").decode(bytes);
         }
         
-        // 解析并恢复进度
-        parseProgressCsvText(contentP);
+        // 👇 这里会返回读取到的条数，并弹窗提示
+        const count = parseProgressCsvText(contentP);
+        toast(`数据已同步！成功加载题库和 ${count} 条做题进度`);
+        
+      } else if(resP.status === 404) {
+        toast("进度文件 progress.csv 在仓库中不存在，跳过进度同步");
+      } else {
+        toast(`进度文件拉取失败: ${resP.status}`);
       }
     } catch(e) {
-      console.error("拉取进度失败（如果文件不存在则忽略）:", e);
+      console.error("拉取进度失败:", e);
+      toast("进度同步出现异常");
     }
+  } else {
+    toast("未配置进度文件路径，仅同步题库");
   }
 
   saveGithubConfig(githubConfig);
   refreshCurrentView();
-  toast("云端数据已同步！");
   return true;
 }
 
@@ -5219,19 +5230,21 @@ function parseCsv(text){
   return rows.filter(r => r.some(v => v.trim() !== ""));
 }
 function parseProgressCsvText(text) {
-  if(!text) return;
+  if(!text) return 0;
   const rows = parseCsv(text);
-  if(!rows || !rows.length) return;
+  if(!rows || !rows.length) return 0;
   const hdr = rows[0].map(h => String(h).trim().toLowerCase().replace(/\s+/g, ""));
   const find = (zh, en) => { const i = hdr.indexOf(zh); return i >= 0 ? i : hdr.indexOf(en); };
   const ci = { id: find("题号id","id"), st: find("进度","状态"), tags: find("标签","tags"), notes: find("笔记","notes") };
-  if(ci.id < 0) return;
+  if(ci.id < 0) return 0;
 
+  let count = 0;
   for(let i = 1; i < rows.length; i++){
     const r = rows[i];
     const qid = String(r[ci.id] || "").trim();
     if(!qid) continue;
     
+    let hasData = false;
     if(ci.st >= 0){
       const raw = String(r[ci.st] || "").trim();
       if(raw){
@@ -5242,21 +5255,23 @@ function parseProgressCsvText(text) {
           else if(p === "模糊" || p === "待复习" || p === "v" || p === "r") arr.push("v");
           else if(p === "陌生" || p === "u") arr.push("u");
         }
-        if(arr.length) store.progress[qid] = arr.slice(-REC_MAX);
+        if(arr.length) { store.progress[qid] = arr.slice(-REC_MAX); hasData = true; }
       }
     }
     if(ci.tags >= 0){
       const arr = [];
       String(r[ci.tags] || "").split(/[;；、|]+/).forEach(t => { t = t.trim(); if(t && !arr.includes(t)) arr.push(t); });
-      if(arr.length) store.tags[qid] = arr;
+      if(arr.length) { store.tags[qid] = arr; hasData = true; }
     }
     if(ci.notes >= 0){
       const n = String(r[ci.notes] || "").trim();
-      if(n) store.notes[qid] = { text: n, updatedAt: Date.now() };
+      if(n) { store.notes[qid] = { text: n, updatedAt: Date.now() }; hasData = true; }
     }
+    if(hasData) count++;
   }
   saveStore();
-}  
+  return count;
+}
 function importProgressFile(file){
   const reader = new FileReader();
   reader.onload = () => {

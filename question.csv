@@ -37808,7 +37808,7 @@ $$ \frac {\mathrm{d} y}{\mathrm{d} x} = f ^ {\prime} (u) \cdot g ^ {\prime} (x),
 解 由已知条件知 $f(\mathrm{e}) = \ln \sqrt{\mathrm{e}} = \frac{1}{2}$ .
 由链式法则知 ，
 $$ \begin{array}{r l} \frac {\mathrm{d} y}{\mathrm{d} x} \Big | _ {x = \mathrm{e}} & = f ^ {\prime} (f (x)) \cdot f ^ {\prime} (x) \Big | _ {x = \mathrm{e}} = f ^ {\prime} (f (\mathrm{e})) \cdot f ^ {\prime} (\mathrm{e}) = f ^ {\prime} \left(\frac {1}{2}\right) \cdot f ^ {\prime} (\mathrm{e}) \\ & = \frac {\mathrm{d} (2 x - 1)}{\mathrm{d} x} \Big | _ {x = \frac {1}{2}} \cdot \frac {\mathrm{d} (\ln \sqrt {x})}{\mathrm{d} x} \Big | _ {x = \mathrm{e}} = 2 \times \frac {1}{2 \mathrm{e}} = \frac {1}{\mathrm{e}}. \end{array} $$"
-zt-031211,真题,微积分,第五章 多元函数微分学,数三2012,11,填空题,,,"(11) 设连续函数 $z = f(x, y)$ 满足 $\lim\limits_{\substack{x \to 0 \\ y \to 1}} \frac{f(x, y) - 2x + y - 2}{\sqrt{x^2 + (y - 1)^2}} = 0$ ，则 $\mathrm{d}z|_{(0,1)} =$ ____ .",,,,,"答案 应填 2dx - dy.
+zt-031211,真题,微积分,第五章 多元函数微分学,数三2012,11,填空题,,,"(11) 设连续函数 $z = f(x, y)$ 满足 $\lim\limits_{\substack{x \to 0  y \to 1}} \frac{f(x, y) - 2x + y - 2}{\sqrt{x^2 + (y - 1)^2}} = 0$ ，则 $\mathrm{d}z|_{(0,1)} =$ ____ .",,,,,"答案 应填 2dx - dy.
 分析 本题主要考查全微分的定义.
 设函数 $z = f(x, y)$ 在点 $(x, y)$ 的某邻域内有定义，若函数在点 $(x, y)$ 处的全增量 $\Delta z = f(x + \Delta x, y + \Delta y) - f(x, y)$ 可表示为 $\Delta z = A\Delta x + B\Delta y + o(\rho)$ ，其中 $A$ 和 $B$ 仅与 $x$ 和 $y$ 有关， $\rho = \sqrt{(\Delta x)^2 + (\Delta y)^2}$ ，则称函数 $z = f(x, y)$ 在点 $(x, y)$ 处可微分，而 $A\Delta x + B\Delta y$ 称为函数 $z = f(x, y)$ 在点 $(x, y)$ 处的全微分，记作 $\mathrm{d}z$ ，即 $\mathrm{d}z = A\Delta x + B\Delta y$ 。
 函数 $z = f(x,y)$ 在点 $(x_0,y_0)$ 处可微等价于

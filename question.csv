@@ -37806,7 +37806,7 @@ zt-031210,真题,微积分,第二章 一元函数微分学,数三2012,10,填空�
 $$ \frac {\mathrm{d} y}{\mathrm{d} x} = f ^ {\prime} (u) \cdot g ^ {\prime} (x), \quad \text {或} \quad \frac {\mathrm{d} y}{\mathrm{d} x} = \frac {\mathrm{d} y}{\mathrm{d} u} \cdot \frac {\mathrm{d} u}{\mathrm{d} x}. $$
 由于 $f(x)$ 为分段函数,在不同区间上求导时表达式不一样,故求导时需注意求导的区间.
 解 由已知条件知 $f(\mathrm{e}) = \ln \sqrt{\mathrm{e}} = \frac{1}{2}$ .
-由链式法则知，
+由链式法则知 ，
 $$ \begin{array}{r l} \frac {\mathrm{d} y}{\mathrm{d} x} \Big | _ {x = \mathrm{e}} & = f ^ {\prime} (f (x)) \cdot f ^ {\prime} (x) \Big | _ {x = \mathrm{e}} = f ^ {\prime} (f (\mathrm{e})) \cdot f ^ {\prime} (\mathrm{e}) = f ^ {\prime} \left(\frac {1}{2}\right) \cdot f ^ {\prime} (\mathrm{e}) \\ & = \frac {\mathrm{d} (2 x - 1)}{\mathrm{d} x} \Big | _ {x = \frac {1}{2}} \cdot \frac {\mathrm{d} (\ln \sqrt {x})}{\mathrm{d} x} \Big | _ {x = \mathrm{e}} = 2 \times \frac {1}{2 \mathrm{e}} = \frac {1}{\mathrm{e}}. \end{array} $$"
 zt-031211,真题,微积分,第五章 多元函数微分学,数三2012,11,填空题,,,"(11) 设连续函数 $z = f(x, y)$ 满足 $\lim\limits_{\substack{x \to 0 \\ y \to 1}} \frac{f(x, y) - 2x + y - 2}{\sqrt{x^2 + (y - 1)^2}} = 0$ ，则 $\mathrm{d}z|_{(0,1)} =$ ____ .",,,,,"答案 应填 2dx - dy.
 分析 本题主要考查全微分的定义.

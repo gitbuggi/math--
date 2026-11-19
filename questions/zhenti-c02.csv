@@ -86,7 +86,7 @@ $$ \lim\limits_ {n \to \infty} \int_ {0} ^ {1} t ^ {n} | \ln t | \mathrm{d} t = 
 ② 在用夹逼准则求极限值时,一般要对原数列的界做估计.第(Ⅰ)问提供了一种估计,法三没有利用第(Ⅰ)问的结论,而是提供了另一种估计方法,都是可行的.但是要注意,使用法三时,一定要说明反常积分 $\int_{0}^{1}\left|\ln t\right|dt$ 收敛.跳过验证反常积分 $\int_{0}^{1}\left|\ln t\right|dt$ 收敛这一步而直接得到 $\lim\limits_{n\to\infty}\left(\ln2\right)^{n}\int_{0}^{1}\left|\ln t\right|dt=0$ ,这种做法是不完整的.
 ③第(Ⅱ)问中，“ $\lim\limits_{t\to0^{+}}t^{n+1}\ln t=0$ ”可由洛必达法则推出.
 $$ \lim\limits_ {t \to 0 ^ {+}} \frac {\ln t}{t ^ {- (n + 1)}} \overset{\text {洛必达}}{=} \lim\limits_ {t \to 0 ^ {+}} \frac {1}{- (n + 1) t ^ {- (n + 1)}} = \lim\limits_ {t \to 0 ^ {+}} \frac {- t ^ {n + 1}}{n + 1} = 0. $$"
-zt-031104,真题,微积分,第三章 一元函数积分学,数三2011,4,选择题,,题型六 积分不等式,"(4) 设 $I = \int_{0}^{\frac{\pi}{4}} \ln(\sin x) \, dx, J = \int_{0}^{\frac{\pi}{4}} \ln(\cot x) \, dx, K = \int_{0}^{\frac{\pi}{4}} \ln(\cos x) \, dx$ ，则 I, J, K 的大小关系为 ( )",I < J < K.,I < K < J.,J < I < K.,K < J < I.,"答案 B.
+zt-031104,真题,微积分,第三章 一元函数积分学,数三2011,4,选择题,,题型六 积分不等式,"(4) 设 $I = \int_{0}^{\frac{\pi}{4}} \ln(\sin x) \, dx, J = \int_{0}^{\frac{\pi}{4}} \ln(\cot x) \, dx, K = \int_{0}^{\frac{\pi}{4}} \ln(\cos x) \, dx$ ，则 I, J, K 的大小关系为 ( )",$I < J < K$.,$I < K < J$.,$J < I < K$.,$K < J < I$.,"答案 B.
 分析 本题主要考查定积分的性质.
 注意到 I, J, K 的积分区间一致, 根据定积分的保号性, 比较它们的大小只需比较被积函数在积分区间上的大小. 由于被积函数均形如 $\ln[f(x)]$ , 且 $\ln u$ 在 $(0, +\infty)$ 上为单调增加函数, 故比较被积函数的大小可归结为比较 $\sin x, \cos x, \cot x$ 的大小.
 定积分的保号性 若在区间 $[a, b]$ 上， $f(x) \leqslant g(x)$ ，则

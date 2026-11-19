@@ -1414,6 +1414,10 @@ input,textarea,select{font-family:inherit}
     <div class="set-group">
       <h4>危险操作</h4>
       <div class="set-row">
+        <div class="lbl">清空本地分片缓存<div class="desc">加载异常时用；只清浏览器缓存，不动仓库</div></div>
+        <button class="btn sm" id="setClearCache">清空</button>
+      </div>
+      <div class="set-row">
         <div class="lbl">清空全部数据<div class="desc">删除所有进度、标签、笔记</div></div>
         <button class="btn sm" id="setClearAll" style="color:var(--red);border-color:#E8C5C0">清空</button>
       </div>
@@ -1728,6 +1732,33 @@ function partsDirOf(p){
   return s.replace(/\/[^\/]*$/, "");
 }
 function stripBom(s){ return String(s == null ? "" : s).replace(/^\ufeff/, ""); }
+
+/* 有些代理/扩展会把 Accept: raw 丢掉，返回 GitHub 的元数据信封
+   {"content":"base64...","encoding":"base64"} —— 这里统一还原成正文 */
+function readGithubText(text){
+  const raw = stripBom(text == null ? "" : text);
+  if(!/^\s*\{/.test(raw)) return raw;
+  try{
+    const j = JSON.parse(raw);
+    if(j && typeof j.content === "string"){
+      const bin = atob(String(j.content).replace(/\s/g, ""));
+      const bytes = new Uint8Array(bin.length);
+      for(let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      return stripBom(new TextDecoder("utf-8").decode(bytes));
+    }
+  }catch(e){}
+  return raw;
+}
+
+/* 清单只认 {parts:[{file:...}]} 这个形状 */
+function parseManifest(text){
+  let j = null;
+  try{ j = JSON.parse(stripBom(text || "")); }catch(e){ return null; }
+  if(!j || !Array.isArray(j.parts)) return null;
+  const parts = j.parts.filter(p => p && p.file);
+  if(!parts.length) return null;
+  return { version: j.version || 1, parts };
+}
 /* 比较用：统一换行、去掉 BOM，并忽略文件末尾的空行
    （分片文件由 csv 写出时末尾带 CRLF，而 buildQuestionsCsv 不补末尾换行；
      不忽略的话每保存一次都会误判成"所有分片都变了"） */
@@ -1854,7 +1885,7 @@ async function fetchRepoTree(){
   try{
     const res = await fetch(
       `https://api.github.com/repos/${owner}/${repo}/git/trees/${encodeURIComponent(branch || "main")}?recursive=1`,
-      { headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github+json" } }
+      { cache: "no-store", headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github+json" } }
     );
     if(!res.ok) return null;
     const d = await res.json();
@@ -1872,25 +1903,39 @@ async function getFileText(path){
   try{
     const res = await fetch(
       `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${encodeURIComponent(branch || "main")}`,
-      { headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.raw" } }
+      { cache: "no-store", headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.raw" } }
     );
     if(!res.ok) return { error: res.status };
-    return { text: await res.text() };
+    return { text: readGithubText(await res.text()) };
   }catch(e){ return { error: "network" }; }
 }
 
-/* 带缓存取文本：sha 没变就不下载 */
-async function getFileTextCached(path){
+/* 带缓存取文本：sha 没变就不下载；noCache=true 时强制走网络 */
+async function getFileTextCached(path, opts){
   const key = partCacheKey(path);
   const sha = treeSha(path);
-  if(sha){
+  if(sha && !(opts && opts.noCache)){
     const hit = await cacheGet(key);
-    if(hit && hit.sha === sha && typeof hit.text === "string") return { text: hit.text, sha, cached: true };
+    if(hit && hit.sha === sha && typeof hit.text === "string") return { text: readGithubText(hit.text), sha, cached: true };
   }
   const r = await getFileText(path);
   if(r.error) return { error: r.error };
   if(sha) cachePut(key, { sha, text: r.text });
   return { text: r.text, sha, cached: false };
+}
+
+async function cacheDel(key){
+  _memCache.delete(key);
+  if(!_idbOK) return;
+  try{
+    const db = await cacheOpen();
+    await new Promise((res, rej) => {
+      const tx = db.transaction(CACHE_STORE, "readwrite");
+      tx.objectStore(CACHE_STORE).delete(key);
+      tx.oncomplete = () => res();
+      tx.onerror = () => rej(tx.error);
+    });
+  }catch(e){ _idbOK = false; }
 }
 
 /* 这次加载真正下载了几个分片（0 = 全部来自缓存） */
@@ -1899,13 +1944,24 @@ let hydratedFromCache = false;
 
 /* 读清单 + 并行拉取所有分片；返回合并后的题目数组 */
 async function loadQuestionsFromParts(dir, getText){
-  const manRes = await getText(dir + "/_manifest.json");
+  const manPath = dir + "/_manifest.json";
+  let manRes = await getText(manPath);
   if(manRes.error) return { error: manRes.error };
 
-  let man = null;
-  try{ man = JSON.parse(stripBom(manRes.text)); }catch(e){}
-  const parts = (man && Array.isArray(man.parts)) ? man.parts.filter(p => p && p.file) : [];
-  if(!parts.length) return { error: "清单里没有分片" };
+  let man = parseManifest(manRes.text);
+  if(!man){
+    /* 可能是缓存里存了坏内容：清掉这条，强制走网络再试一次 */
+    await cacheDel(partCacheKey(manPath));
+    manRes = await getText(manPath, { noCache: true });
+    if(manRes.error) return { error: manRes.error };
+    man = parseManifest(manRes.text);
+  }
+  if(!man){
+    const snip = String(manRes.text || "").slice(0, 80).replace(/\s+/g, " ");
+    console.warn("[880] 清单解析失败，收到：", manRes.text);
+    return { error: "清单里没有分片｜收到：" + snip };
+  }
+  const parts = man.parts;
 
   let downloaded = 0;
   const fetched = await mapLimit(parts, 14, async p => {
@@ -1989,7 +2045,7 @@ async function ghFileMeta(filePath){
   try{
     const res = await fetch(
       `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}?ref=${encodeURIComponent(branch || "main")}`,
-      { headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" } }
+      { cache: "no-store", headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" } }
     );
     if(!res.ok) return null;
     const d = await res.json();
@@ -2187,6 +2243,7 @@ async function fetchFromGithub() {
   // 👇 通用方法：获取文件内容（绕过 download_url，全走 api.github.com）
   async function getFileContent(targetPath) {
     const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${targetPath}?ref=${branch}`, {
+      cache: "no-store",
       headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" }
     });
     if (!res.ok) return { error: res.status, msg: "请求失败" };
@@ -2235,10 +2292,17 @@ async function fetchFromGithub() {
     if(isPartsPath(path)){
       const dir = partsDirOf(path);
       const res = await loadQuestionsFromParts(dir, getFileTextCached);
-      if(res.error === 404) throw new Error(`没找到 ${path}，请先按指南拆分并上传 questions 目录`);
-      if(res.error) throw new Error(`题库清单读取失败: ${res.error}`);
-      parsed = res.questions || [];
-      if(res.failed && res.failed.length) toast(`有 ${res.failed.length} 个分片读取失败，已跳过`);
+      if(res.error){
+        /* 分片挂了不要白屏：退回 question.csv，至少能刷题 */
+        questionParts = null;
+        const single = await loadSingle("question.csv");
+        if(single.error) throw new Error(`题库清单读取失败: ${res.error}`);
+        parsed = single.questions;
+        toast("分片加载失败，已用 question.csv 兜底（" + res.error + "）");
+      } else {
+        parsed = res.questions || [];
+        if(res.failed && res.failed.length) toast(`有 ${res.failed.length} 个分片读取失败，已跳过`);
+      }
     } else {
       /* 还没配置成分片：探一下清单在不在（有 sha 表时不需要额外请求） */
       const hasManifest = repoTree
@@ -6757,6 +6821,23 @@ $("#importFile").addEventListener("change", e => {
   const f = e.target.files && e.target.files[0];
   if(f) importProgressFile(f);
   e.target.value = "";
+});
+$("#setClearCache").addEventListener("click", async () => {
+  if(!confirm("清空本地分片缓存？只清浏览器里的缓存，仓库内容不受影响。")) return;
+  _memCache.clear();
+  try{
+    if(_idbOK){
+      const db = await cacheOpen();
+      await new Promise((res, rej) => {
+        const tx = db.transaction(CACHE_STORE, "readwrite");
+        tx.objectStore(CACHE_STORE).clear();
+        tx.oncomplete = () => res();
+        tx.onerror = () => rej(tx.error);
+      });
+    }
+  }catch(e){}
+  toast("已清空缓存，正在重新加载…");
+  setTimeout(() => location.reload(), 400);
 });
 $("#setClearAll").addEventListener("click", () => {
   if(!confirm("确定清空所有进度、标签和笔记吗？")) return;

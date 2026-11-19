@@ -6,6 +6,7 @@
 <title>880 数学题库</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232F5E8C'/><text x='50' y='50' font-size='70' font-family='sans-serif' font-weight='bold' fill='%23F6F3EC' text-anchor='middle' dominant-baseline='central'>数</text></svg>">
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<link rel="preconnect" href="https://api.github.com" crossorigin>
 <link rel="stylesheet" href="vendor/katex/katex.min.css">
 <style>
 :root{
@@ -1793,23 +1794,129 @@ function uniquePartFile(source, list, chapterIndex){
   return name;
 }
 
+/* ============================================================
+   分片缓存：IndexedDB（不可用时自动退回内存）+ 仓库 sha 表
+   ============================================================ */
+const CACHE_DB = "math880-parts", CACHE_STORE = "files";
+const _memCache = new Map();
+let _idbOK = (typeof indexedDB !== "undefined");
+let _dbPromise = null;
+
+function cacheOpen(){
+  if(!_idbOK) return Promise.reject(new Error("no indexedDB"));
+  if(_dbPromise) return _dbPromise;
+  _dbPromise = new Promise((res, rej) => {
+    const r = indexedDB.open(CACHE_DB, 1);
+    r.onupgradeneeded = () => { r.result.createObjectStore(CACHE_STORE); };
+    r.onsuccess = () => res(r.result);
+    r.onerror = () => rej(r.error);
+    r.onblocked = () => rej(new Error("blocked"));
+  });
+  return _dbPromise;
+}
+async function cacheGet(key){
+  if(_idbOK){
+    try{
+      const db = await cacheOpen();
+      return await new Promise((res, rej) => {
+        const tx = db.transaction(CACHE_STORE, "readonly");
+        const rq = tx.objectStore(CACHE_STORE).get(key);
+        rq.onsuccess = () => res(rq.result || null);
+        rq.onerror = () => rej(rq.error);
+      });
+    }catch(e){ _idbOK = false; }
+  }
+  return _memCache.get(key) || null;
+}
+async function cachePut(key, val){
+  _memCache.set(key, val);
+  if(!_idbOK) return;
+  try{
+    const db = await cacheOpen();
+    await new Promise((res, rej) => {
+      const tx = db.transaction(CACHE_STORE, "readwrite");
+      tx.objectStore(CACHE_STORE).put(val, key);
+      tx.oncomplete = () => res();
+      tx.onerror = () => rej(tx.error);
+    });
+  }catch(e){ _idbOK = false; }
+}
+function partCacheKey(path){
+  const c = githubConfig || {};
+  return "v1:" + (c.owner || "") + "/" + (c.repo || "") + "@" + (c.branch || "main") + ":" + path;
+}
+
+/* 一次请求拿到仓库所有 blob 的 sha（约 47KB），用来判断哪些分片变了 */
+let repoTree = null;
+async function fetchRepoTree(){
+  if(!githubConfig) return null;
+  const { owner, repo, branch, token } = githubConfig;
+  try{
+    const res = await fetch(
+      `https://api.github.com/repos/${owner}/${repo}/git/trees/${encodeURIComponent(branch || "main")}?recursive=1`,
+      { headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github+json" } }
+    );
+    if(!res.ok) return null;
+    const d = await res.json();
+    const m = new Map();
+    for(const it of (d.tree || [])) if(it.type === "blob") m.set(it.path, it.sha);
+    return m;
+  }catch(e){ return null; }
+}
+function treeSha(path){ return repoTree ? (repoTree.get(path) || null) : null; }
+
+/* 取纯文本（raw），省掉 base64 和二次解码 */
+async function getFileText(path){
+  if(!githubConfig) return { error: "no-config" };
+  const { owner, repo, branch, token } = githubConfig;
+  try{
+    const res = await fetch(
+      `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${encodeURIComponent(branch || "main")}`,
+      { headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.raw" } }
+    );
+    if(!res.ok) return { error: res.status };
+    return { text: await res.text() };
+  }catch(e){ return { error: "network" }; }
+}
+
+/* 带缓存取文本：sha 没变就不下载 */
+async function getFileTextCached(path){
+  const key = partCacheKey(path);
+  const sha = treeSha(path);
+  if(sha){
+    const hit = await cacheGet(key);
+    if(hit && hit.sha === sha && typeof hit.text === "string") return { text: hit.text, sha, cached: true };
+  }
+  const r = await getFileText(path);
+  if(r.error) return { error: r.error };
+  if(sha) cachePut(key, { sha, text: r.text });
+  return { text: r.text, sha, cached: false };
+}
+
+/* 这次加载真正下载了几个分片（0 = 全部来自缓存） */
+let lastLoadFetched = 0;
+let hydratedFromCache = false;
+
 /* 读清单 + 并行拉取所有分片；返回合并后的题目数组 */
-async function loadQuestionsFromParts(getFileContent, dir){
-  const manRes = await getFileContent(dir + "/_manifest.json");
+async function loadQuestionsFromParts(dir, getText){
+  const manRes = await getText(dir + "/_manifest.json");
   if(manRes.error) return { error: manRes.error };
 
   let man = null;
-  try{ man = JSON.parse(stripBom(manRes.content)); }catch(e){}
+  try{ man = JSON.parse(stripBom(manRes.text)); }catch(e){}
   const parts = (man && Array.isArray(man.parts)) ? man.parts.filter(p => p && p.file) : [];
   if(!parts.length) return { error: "清单里没有分片" };
 
-  const fetched = await mapLimit(parts, 10, async p => {
+  let downloaded = 0;
+  const fetched = await mapLimit(parts, 14, async p => {
     const path = dir + "/" + String(p.file).replace(/^\/+/, "");
-    const r = await getFileContent(path);
+    const r = await getText(path);
     const meta = { source: String(p.source || ""), chapter: ("chapter" in p ? String(p.chapter == null ? "" : p.chapter) : undefined), file: p.file };
     if(r.error) return Object.assign(meta, { error: r.error });
-    return Object.assign(meta, { sha: r.sha, text: r.content });
+    if(!r.cached) downloaded++;
+    return Object.assign(meta, { sha: r.sha, text: r.text });
   });
+  lastLoadFetched = downloaded;
 
   const ok = [], bad = [];
   for(const f of fetched) (f.error ? bad : ok).push(f);
@@ -1834,6 +1941,45 @@ async function loadQuestionsFromParts(getFileContent, dir){
     }))
   };
   return { questions: qs, failed: bad };
+}
+
+/* 首屏提速：直接吃 IndexedDB 里的分片，不联网 */
+async function hydrateFromCache(){
+  if(!githubConfig || !isPartsPath(githubConfig.path)) return false;
+  const dir = partsDirOf(githubConfig.path);
+  const manHit = await cacheGet(partCacheKey(dir + "/_manifest.json"));
+  if(!manHit || typeof manHit.text !== "string") return false;
+
+  let man = null;
+  try{ man = JSON.parse(stripBom(manHit.text)); }catch(e){ return false; }
+  const parts = (man && Array.isArray(man.parts)) ? man.parts.filter(p => p && p.file) : [];
+  if(!parts.length) return false;
+
+  const hits = await mapLimit(parts, 8, async p => {
+    const hit = await cacheGet(partCacheKey(dir + "/" + p.file));
+    return { p, hit };
+  });
+  if(hits.some(x => !x.hit || typeof x.hit.text !== "string")) return false;
+
+  const list = [], qs = [];
+  for(const { p, hit } of hits){
+    const arr = parseQuestionsCsv(stripBom(hit.text));
+    if(!arr.length) return false;
+    list.push({
+      source: String(p.source || ""),
+      chapter: ("chapter" in p ? String(p.chapter == null ? "" : p.chapter) : undefined),
+      file: p.file,
+      sha: hit.sha || null,
+      text: hit.text,
+      count: arr.length
+    });
+    for(const q of arr) qs.push(q);
+  }
+  if(!qs.length) return false;
+  questionParts = { dir, degraded: false, list };
+  QS_ALL = qs;
+  hydratedFromCache = true;
+  return true;
 }
 
 /* 取某个文件的当前 sha（写入冲突 / 新文件时用） */
@@ -1952,12 +2098,14 @@ async function writeQuestionParts(){
       p.sha = await putGithubFile(part.dir + "/" + p.file, text, p.sha, "Update questions: " + p.source);
       p.text = text;
       p.count = n;
+      cachePut(partCacheKey(part.dir + "/" + p.file), { sha: p.sha, text });   /* 下次打开不用再下 */
     }
     if(added.length){
       for(const a of added){
         const text = "\ufeff" + buildQuestionsCsv(a.rows);
         const sha = await putGithubFile(part.dir + "/" + a.file, text, null, "Add questions: " + a.source);
         part.list.push({ source: a.source, chapter: a.chapter, file: a.file, sha, text, count: a.rows.length });
+        cachePut(partCacheKey(part.dir + "/" + a.file), { sha, text });
       }
       await writePartsManifest();
     }
@@ -1977,7 +2125,8 @@ async function writePartsManifest(){
     : { source: p.source, chapter: p.chapter, file: p.file }) };
   const text = JSON.stringify(man, null, 2) + "\n";
   const meta = await ghFileMeta(part.dir + "/_manifest.json");
-  await putGithubFile(part.dir + "/_manifest.json", text, meta && meta.sha, "Update questions manifest");
+  const sha = await putGithubFile(part.dir + "/_manifest.json", text, meta && meta.sha, "Update questions manifest");
+  cachePut(partCacheKey(part.dir + "/_manifest.json"), { sha, text });
 }
 
 /* ============================================================
@@ -2067,6 +2216,9 @@ async function fetchFromGithub() {
     return { content, sha: data.sha };
   }
 
+  // 仓库 sha 表：一次请求，用来判断哪些分片变了（失败就退回逐个下载）
+  try{ repoTree = await fetchRepoTree(); }catch(e){ repoTree = null; }
+
   // --- 1. 拉取题库（支持「按来源拆分」的清单，也兼容原来的单文件） ---
   try {
     questionParts = null;
@@ -2082,16 +2234,18 @@ async function fetchFromGithub() {
 
     if(isPartsPath(path)){
       const dir = partsDirOf(path);
-      const res = await loadQuestionsFromParts(getFileContent, dir);
+      const res = await loadQuestionsFromParts(dir, getFileTextCached);
       if(res.error === 404) throw new Error(`没找到 ${path}，请先按指南拆分并上传 questions 目录`);
       if(res.error) throw new Error(`题库清单读取失败: ${res.error}`);
       parsed = res.questions || [];
       if(res.failed && res.failed.length) toast(`有 ${res.failed.length} 个分片读取失败，已跳过`);
     } else {
-      /* 还没配置成分片：先探一下清单在不在，在就自动迁过去 */
-      const probe = await getFileContent(DIR + "/_manifest.json");
-      if(!probe.error){
-        const res = await loadQuestionsFromParts(getFileContent, DIR);
+      /* 还没配置成分片：探一下清单在不在（有 sha 表时不需要额外请求） */
+      const hasManifest = repoTree
+        ? repoTree.has(DIR + "/_manifest.json")
+        : !(await getFileContent(DIR + "/_manifest.json")).error;
+      if(hasManifest){
+        const res = await loadQuestionsFromParts(DIR, getFileTextCached);
         const complete = !res.error && !(res.failed && res.failed.length) && (res.questions || []).length > 0;
         if(complete){
           parsed = res.questions;
@@ -2139,7 +2293,11 @@ async function fetchFromGithub() {
   }
 
   saveGithubConfig(githubConfig);
-  refreshCurrentView();
+  if(hydratedFromCache && questionParts && lastLoadFetched === 0){
+    console.log("[880] 分片缓存已是最新（0 个下载），跳过重绘");
+  } else {
+    refreshCurrentView();
+  }
   return true;
 }
 
@@ -6638,7 +6796,12 @@ if(store.session && !store.session.finished && Array.isArray(store.session.ids) 
   /* 1. 尝试加载绑定的题库 CSV */
     // 先尝试加载 GitHub 云端题库
   loadGithubConfig();
-  if(githubConfig) {
+  /* 分片模式下先用本地缓存秒开，再后台校验 */
+  let fromCache = false;
+  if(githubConfig && isPartsPath(githubConfig.path)){
+    try{ fromCache = await hydrateFromCache(); }catch(e){ fromCache = false; }
+  }
+  if(githubConfig && !fromCache) {
     await fetchFromGithub();
   }
   const h = await loadQuestionsHandle();
@@ -6696,6 +6859,11 @@ if(store.session && !store.session.finished && Array.isArray(store.session.ids) 
   } else {
     renderDashboard();
     showView("dashboard");
+  }
+
+  /* 5. 缓存优先时：后台校验，只有分片真的变了才重绘 */
+  if(githubConfig && fromCache){
+    fetchFromGithub().catch(e => console.warn("[880] 后台校验失败:", e));
   }
 })();
 $("#setGithubConfig").addEventListener("click", () => {

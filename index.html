@@ -2293,12 +2293,13 @@ async function fetchFromGithub() {
       const dir = partsDirOf(path);
       const res = await loadQuestionsFromParts(dir, getFileTextCached);
       if(res.error){
-        /* 分片挂了不要白屏：退回 question.csv，至少能刷题 */
+        /* 分片挂了不要白屏：退回 question.csv，至少能刷题、能保存 */
         questionParts = null;
         const single = await loadSingle("question.csv");
         if(single.error) throw new Error(`题库清单读取失败: ${res.error}`);
         parsed = single.questions;
-        toast("分片加载失败，已用 question.csv 兜底（" + res.error + "）");
+        githubConfig.path = "question.csv";   /* 先按单文件跑，下次打开会自动再试分片 */
+        toast("分片加载失败，本次先用 question.csv（" + res.error + "）");
       } else {
         parsed = res.questions || [];
         if(res.failed && res.failed.length) toast(`有 ${res.failed.length} 个分片读取失败，已跳过`);

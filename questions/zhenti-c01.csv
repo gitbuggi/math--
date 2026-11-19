@@ -108,7 +108,7 @@ $$ \begin{array}{r l} & {\underset {x \to + \infty} {\lim} \frac {\ln (x ^ {\fra
 注 ① 在法一的过程中, 当 $e^{\frac{\ln x}{x}}$ 作为一个因子时, 我们可以先计算 $\lim\limits_{x\to+\infty}e^{\frac{\ln x}{x}}$ . 这是利用极限的四则运算法则: 当 $\lim A, \lim B$ 均存在时, $\lim(AB)=\lim A \cdot \lim B$ .
 ②法二中蕴含了一个结论.若 $f(x)$ 和 $g(x)$ 为 $x\to x_{0}$ （或 $\infty$ ）时的等价无穷小量，且均大于零，则 $\ln f(x)$ 和 $\ln g(x)$ 为 $x\to x_{0}$ （或 $\infty$ ）时的等价无穷大量.事实上，由于
 $$ \begin{array}{r l} & {\underset {x \to x _ {0}} {\lim} \frac {\ln f (x)}{\ln g (x)} - 1 = \underset {x \to x _ {0}} {\lim} \frac {\ln f (x) - \ln g (x)}{\ln g (x)} = \underset {x \to x _ {0}} {\lim} \frac {\ln \frac {f (x)}{g (x)}}{\ln g (x)} = 0,} \\ & {\text {故} \underset {x \to x _ {0}} {\lim} \frac {\ln f (x)}{\ln g (x)} = 1.} \end{array} $$"
-zt-031101,真题,微积分,第一章 函数、极限、连续,数三2011,1,选择题,,,"(1) 已知当 $x \to 0$ 时, 函数 $f(x) = 3\sin x - \sin 3x$ 与 $cx^{k}$ 是等价无穷小量, 则","$k = 1, c = 4$.","$k = 1, c = -4$.","$k = 3, c = 4$.","k = 3, c = -4.","答案 C.
+zt-031101,真题,微积分,第一章 函数、极限、连续,数三2011,1,选择题,,,"(1) 已知当 $x \to 0$ 时, 函数 $f(x) = 3\sin x - \sin 3x$ 与 $cx^{k}$ 是等价无穷小量, 则","$k = 1, c = 4$.","$k = 1, c = -4$.","$k = 3, c = 4$.","$k = 3, c = -4$.","答案 C.
 分析 本题主要考查等价无穷小量的定义.
 由题设,根据等价无穷小量的定义,我们有 $\lim\limits_{x\to0}\frac{f(x)}{cx^{k}}=1$ ,由此可解出k,c.
 解 由题设知, $c \neq 0$ , $k > 0$ . 记 $I = \lim\limits_{x \to 0} \frac{f(x)}{cx^k}$ , 则由等价无穷小量的定义知, $I = 1$ .

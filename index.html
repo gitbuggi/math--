@@ -1727,7 +1727,12 @@ function partsDirOf(p){
   return s.replace(/\/[^\/]*$/, "");
 }
 function stripBom(s){ return String(s == null ? "" : s).replace(/^\ufeff/, ""); }
-function normEol(s){ return stripBom(s).replace(/\r\n/g, "\n").replace(/\r/g, "\n"); }
+/* 比较用：统一换行、去掉 BOM，并忽略文件末尾的空行
+   （分片文件由 csv 写出时末尾带 CRLF，而 buildQuestionsCsv 不补末尾换行；
+     不忽略的话每保存一次都会误判成"所有分片都变了"） */
+function normEol(s){
+  return stripBom(s).replace(/\r\n/g, "\n").replace(/\r/g, "\n").replace(/\n+$/, "");
+}
 
 /* 4MB 的字符串用 encodeURIComponent 会卡好几秒，改为按 UTF-8 字节编码 */
 function toBase64Utf8(str){
@@ -1975,6 +1980,57 @@ async function writePartsManifest(){
   await putGithubFile(part.dir + "/_manifest.json", text, meta && meta.sha, "Update questions manifest");
 }
 
+/* ============================================================
+   保存调度：界面先落地，GitHub 放后台写（不用等往返）
+   ============================================================ */
+let _writeTimer = null, _writeBusy = false, _writeAgain = false, _unsynced = false;
+
+/* 等这一帧画完再干重活，避免重绘卡住弹窗关闭 */
+function nextPaint(){
+  return new Promise(res => requestAnimationFrame(() => setTimeout(res, 0)));
+}
+
+function markUnsynced(on){
+  _unsynced = !!on;
+  let el = document.getElementById("syncChip");
+  if(!el){
+    el = document.createElement("div");
+    el.id = "syncChip";
+    el.style.cssText = "position:fixed;right:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:10px;" +
+      "font-size:12.5px;line-height:1.4;cursor:pointer;display:none;background:#F5E6E3;color:#8a3b2e;" +
+      "border:1px solid #E8C5C0;box-shadow:0 4px 14px rgba(42,37,31,.18)";
+    el.title = "点击重试同步";
+    el.addEventListener("click", () => { el.style.display = "none"; flushQuestionsWrite(); });
+    document.body.appendChild(el);
+  }
+  el.textContent = "未同步 · 点击重试";
+  el.style.display = on ? "block" : "none";
+}
+
+function scheduleQuestionsWrite(delay){
+  clearTimeout(_writeTimer);
+  _writeTimer = setTimeout(flushQuestionsWrite, delay == null ? 400 : delay);
+}
+
+async function flushQuestionsWrite(){
+  if(_writeBusy){ _writeAgain = true; return; }
+  _writeBusy = true;
+  let ok = false;
+  try{ ok = await writeQuestionsToBoundCsv(); }
+  catch(e){ console.error("[880] 后台写入失败:", e); ok = false; }
+  _writeBusy = false;
+  markUnsynced(!ok);
+  if(_writeAgain){ _writeAgain = false; flushQuestionsWrite(); }
+}
+
+/* 有没落盘的改动时，关页面先问一句 */
+window.addEventListener("beforeunload", e => {
+  if(_writeBusy || _unsynced){
+    e.preventDefault();
+    e.returnValue = "";
+  }
+});
+
 async function fetchFromGithub() {
   if (!githubConfig) return false;
   const { owner, repo, path, progressPath, branch, token } = githubConfig;
@@ -2015,6 +2071,15 @@ async function fetchFromGithub() {
   try {
     questionParts = null;
     let parsed = [];
+    const DIR = "questions";
+
+    const loadSingle = async (p) => {
+      const qRes = await getFileContent(p);
+      if (qRes.error) return { error: qRes.error };
+      githubConfig.sha = qRes.sha;
+      return { questions: parseQuestionsCsv(qRes.content) };
+    };
+
     if(isPartsPath(path)){
       const dir = partsDirOf(path);
       const res = await loadQuestionsFromParts(getFileContent, dir);
@@ -2023,10 +2088,28 @@ async function fetchFromGithub() {
       parsed = res.questions || [];
       if(res.failed && res.failed.length) toast(`有 ${res.failed.length} 个分片读取失败，已跳过`);
     } else {
-      const qRes = await getFileContent(path);
-      if (qRes.error) throw new Error(`题库拉取失败: ${qRes.error}`);
-      githubConfig.sha = qRes.sha;
-      parsed = parseQuestionsCsv(qRes.content);
+      /* 还没配置成分片：先探一下清单在不在，在就自动迁过去 */
+      const probe = await getFileContent(DIR + "/_manifest.json");
+      if(!probe.error){
+        const res = await loadQuestionsFromParts(getFileContent, DIR);
+        const complete = !res.error && !(res.failed && res.failed.length) && (res.questions || []).length > 0;
+        if(complete){
+          parsed = res.questions;
+          githubConfig.path = DIR + "/_manifest.json";   // 末尾的 saveGithubConfig 会持久化
+          toast("已自动切换到分片模式：" + githubConfig.path);
+        } else {
+          /* 分片不完整 → 退回单文件，绝不半吊子运行 */
+          questionParts = null;
+          const single = await loadSingle(path);
+          if(single.error) throw new Error(`题库拉取失败: ${single.error}`);
+          parsed = single.questions;
+          toast("分片加载不完整，本次仍用 " + path);
+        }
+      } else {
+        const single = await loadSingle(path);
+        if(single.error) throw new Error(`题库拉取失败: ${single.error}`);
+        parsed = single.questions;
+      }
     }
     if (parsed.length > 0) {
       QS_ALL = parsed;
@@ -6207,10 +6290,11 @@ async function saveEdit(){
     store.settings.lastEditSource = source;
     touchStore(); saveStore();
 
-    const ok = await writeQuestionsToBoundCsv();
-    if(!ok) return;
-
     closeEditModal();
+    toast("已保存");
+    scheduleQuestionsWrite();      /* 后台写，不等 GitHub 往返 */
+    await nextPaint();             /* 先把"弹窗已关"画出来，再重绘列表 */
+
     rebuildIndex();
     renderTree();
     if(typeof refreshSourceDropdown === "function") refreshSourceDropdown();
@@ -6225,7 +6309,6 @@ async function saveEdit(){
     } else {
       refreshCurrentView();
     }
-    toast("已保存");
 
   } else {
     /* ---------- 新增 ---------- */
@@ -6268,10 +6351,10 @@ async function saveEdit(){
     store.settings.lastEditSource = source;
     touchStore(); saveStore();
 
-    const ok = await writeQuestionsToBoundCsv();
-    if(!ok) return;
-
     closeEditModal();
+    scheduleQuestionsWrite();
+    await nextPaint();
+
     rebuildIndex();
     renderTree();
     if(typeof refreshSourceDropdown === "function") refreshSourceDropdown();
@@ -6304,18 +6387,11 @@ async function deleteEdit(){
   delete store.notes[editingQid];
   touchStore(); saveStore();
 
-  const ok = await writeQuestionsToBoundCsv();
-  if(!ok){
-    QS_ALL.splice(idx, 0, backupQ);
-    if(backupProgress !== undefined) store.progress[editingQid] = backupProgress;
-    if(backupTags !== undefined) store.tags[editingQid] = backupTags;
-    if(backupNotes !== undefined) store.notes[editingQid] = backupNotes;
-    touchStore(); saveStore();
-    toast("删除失败，已恢复");
-    return;
-  }
-
   closeEditModal();
+  toast("已删除");
+  scheduleQuestionsWrite();
+  await nextPaint();
+
   rebuildIndex();
   renderTree();
   if(currentView === "list"){
@@ -6328,7 +6404,6 @@ async function deleteEdit(){
   } else {
     refreshCurrentView();
   }
-  toast("已删除");
 }
 
 

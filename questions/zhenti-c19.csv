@@ -6,6 +6,7 @@ t 分布 若 $X \sim N(0,1)$ , $Y \sim \chi^{2}(n)$ 且 X, Y 相互独立, 则�
 本题中， $X_{1} - X_{2}\sim N(0,2\sigma^{2})$ ， $X_{3} + X_{4} - 2\sim N(0,2\sigma^{2})$ ，标准化后有 $\frac{X_1 - X_2}{\sqrt{2}\sigma}\sim N(0,1)$ $\frac{X_3 + X_4 - 2}{\sqrt{2}\sigma}\sim N(0,1)$ .于是 $\left(\frac{X_3 + X_4 - 2}{\sqrt{2}\sigma}\right)^2\sim \chi^2 (1)$ .此时我们发现所求统计量恰好为 $\frac{X_1 - X_2}{\sqrt{2}\sigma}$ 与 $\sqrt{\left(\frac{X_3 + X_4 - 2}{\sqrt{2}\sigma}\right)^2}$ 之比，从而服从 $t$ 分布.
 解 $X_{1}, X_{2}, X_{3}, X_{4}$ 相互独立且都服从正态分布 $N(1, \sigma^{2})$ . 由正态分布的性质可得
 $$ E \left(X _ {1} - X _ {2}\right) = 0, \quad D \left(X _ {1} - X _ {2}\right) = D \left(X _ {1}\right) + D \left(X _ {2}\right) = 2 \sigma^ {2} $$
+
 $$ E \left(X _ {3} + X _ {4} - 2\right) = 0, \quad D \left(X _ {3} + X _ {4} - 2\right) = D \left(X _ {3}\right) + D \left(X _ {4}\right) = 2 \sigma^ {2}. $$
 于是 $X_{1} - X_{2}\sim N(0,2\sigma^{2})$ ， $X_{3} + X_{4} - 2\sim N(0,2\sigma^{2})$ ，从而
 $$ \frac {X _ {1} - X _ {2}}{\sqrt {2} \sigma} \sim N (0, 1), \quad \frac {X _ {3} + X _ {4} - 2}{\sqrt {2} \sigma} \sim N (0, 1), \quad \left(\frac {X _ {3} + X _ {4} - 2}{\sqrt {2} \sigma}\right) ^ {2} \sim \chi^ {2} (1). $$
@@ -22,8 +23,7 @@ $\chi^{2}$ 分布 设 $X_{1}, X_{2}, \cdots, X_{n}$ 是来自总体 $N(0,1)$ 的
 t 分布 设 $X \sim N(0,1)$ , $Y \sim \chi^{2}(n)$ ，且 X, Y 相互独立，则称随机变量 $t = \frac{X}{\sqrt{Y/n}}$ 服从自由度为 n 的 t 分布，记为 $t \sim t(n)$ .
 当自由度 n 足够大时，t 分布近似于正态分布.
 $F$ 分布 设 $U \sim \chi^2(n_1), V \sim \chi^2(n_2)$ , 且 $U, V$ 相互独立, 则称随机变量 $F = \frac{U / n_1}{V / n_2}$ 服从自由度为 $(n_1, n_2)$ 的 $F$ 分布, 记为 $F \sim F(n_1, n_2)$ .
-由 F 分布的定义可知, $\frac{1}{F}\sim F(n_{2},n_{1})$ .
-## 二、填空题"
+由 F 分布的定义可知, $\frac{1}{F}\sim F(n_{2},n_{1})$ ."
 zt-031408,真题,概率论,第六章 统计量分布与数字特征,数三2014,8,选择题,,题型二 三大分布,"(8) 设 $X_{1}, X_{2}, X_{3}$ 为来自正态总体 $N(0, \sigma^{2})$ 的简单随机样本，则统计量 $S = \frac{X_{1} - X_{2}}{\sqrt{2} |X_{3}|}$ 服从的分布为 ()","$F(1,1)$ .","$F(2,1)$ .",$t(1)$ .,$t(2)$ .,"答案 C.
 分析 本题主要考查 t 分布的定义和正态分布的性质.
 t 分布 若 $X \sim N(0,1)$ , $Y \sim \chi^{2}(n)$ 且 X, Y 相互独立, 则称随机变量 $t = \frac{X}{\sqrt{Y/n}}$ 服从自由度为 n 的 t 分布, 记为 $t \sim t(n)$ .

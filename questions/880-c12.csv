@@ -1,0 +1,697 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+80241101,880,线性代数,第四章 线性方程组,,1,基础题,选择题,,"已知 $\eta_1, \eta_2$ 是非齐次线性方程组 $Ax = b$ 的两个不同解, $\xi_1, \xi_2$ 是对应齐次线性方程组 $Ax = 0$ 的基础解系, $k_1, k_2$ 为任意常数, 则 $Ax = b$ 的通解为 ( ).",$k_{1}\xi_{1} + k_{2}(\xi_{1} + \xi_{2}) + \frac{\eta_{1} - \eta_{2}}{2}$,$k_{1}\xi_{1} + k_{2}(\xi_{1} - \xi_{2}) + \frac{\eta_{1} + \eta_{2}}{2}$,$k_{1}\xi_{1} + k_{2}(\eta_{1} + \eta_{2}) + \frac{\eta_{1} - \eta_{2}}{2}$,$k_{1}\xi_{1}+k_{2}(\eta_{1}-\eta_{2})+\frac{\eta_{1}+\eta_{2}}{2}$,"B.
+
+解 Ax = b 的通解为 Ax = 0 的通解加上 Ax = b 的一个特解, 根据非齐次和齐次线性方程组解的性质与结构, 知
+
+$\mathbf {A} \left(\frac {\pmb {\eta} _ {1} - \pmb {\eta} _ {2}}{2}\right) = \frac {1}{2} (\mathbf {A} \pmb {\eta} _ {1} - \mathbf {A} \pmb {\eta} _ {2}) = \mathbf {0}, \quad \mathbf {A} \left(\frac {\pmb {\eta} _ {1} + \pmb {\eta} _ {2}}{2}\right) = \frac {1}{2} (\mathbf {A} \pmb {\eta} _ {1} + \mathbf {A} \pmb {\eta} _ {2}) = \mathbf {b},$
+
+即 $\frac{1}{2}(\boldsymbol{\eta}_{1}-\boldsymbol{\eta}_{2})$ 是Ax=0的解,故排除选项A,C.
+
+因不能判定 $\eta_{1}-\eta_{2}$ 是否与 $\xi_{1}$ 线性无关, 所以不能选 D.
+
+事实上，由于 $\frac{1}{2} (\pmb{\eta}_1 + \pmb{\eta}_2)$ 是 $Ax = b$ 的解，且 $\pmb{\xi}_1$ 与 $\pmb{\xi}_1 - \pmb{\xi}_2$ 线性无关，所以 $\pmb{\xi}_1, \pmb{\xi}_1 - \pmb{\xi}_2$ 是 $Ax = 0$ 的基础解系，故选项B正确.
+
+【注】① $\xi_{1}$ 与 $\xi_{1}-\xi_{2}$ 线性无关可以从几何上看出，如图 12-1 所示，由于 $\xi_{1}$ 与 $\xi_{1}-\xi_{2}$ 不共线，故线性无关.
+
+② 也可利用定义证明 $\pmb{\xi}_{1}$ 与 $\pmb{\xi}_{1} - \pmb{\xi}_{2}$ 线性无关. 设 $k_{1}\pmb{\xi}_{1} + k_{2}(\pmb{\xi}_{1} - \pmb{\xi}_{2}) = \mathbf{0}$ , 即
+
+$\left(k _ {1} + k _ {2}\right) \xi_ {1} - k _ {2} \xi_ {2} = 0.$
+
+由已知， $\pmb{\xi}_1, \pmb{\xi}_2$ 是 $A\pmb{x} = \pmb{0}$ 的基础解系，故线性无关，所以 $k_1 + k_2 = 0, -k_2 = 0$ 故 $k_1 = k_2 = 0$ ，从而 $\pmb{\xi}_1$ 与 $\pmb{\xi}_1 - \pmb{\xi}_2$ 线性无关.
+
+![Image](images/80241101.jpg)
+
+③ 一般地，对任意两个线性无关的向量 $\pmb{\xi}_{1}$ 与 $\pmb{\xi}_{2}$ ，当 $\left| \begin{array}{cc}a & c\\ b & d \end{array} \right| \neq 0$ 时，线性组合 $a\xi_{1} + b\xi_{2},c\xi_{1} + d\xi_{2}$ 仍线性无关.
+
+图12-1"
+80241102,880,线性代数,第四章 线性方程组,,2,基础题,选择题,,设 $A$ 是 $n$ 阶矩阵，对方程组 $(I): Ax = 0$ 和 $(-): A^T Ax = 0$ ，必有（）.,"方程组 $(II)$ 的解是 $(I)$ 的解, 方程组 $(I)$ 的解也是 $(II)$ 的解",方程组 $(II)$ 的解是 $(I)$ 的解，但方程组 $(I)$ 的解不是 $(II)$ 的解,"方程组 $(I)$ 的解不是 $(II)$ 的解, 方程组 $(II)$ 的解也不是 $(I)$ 的解","方程组 $(I)$ 的解是 $(II)$ 的解, 但方程组 $(II)$ 的解不是 $(I)$ 的解","A.
+
+解 由 Ax = 0, 得 $A^{T}Ax = A^{T}(Ax) = 0$ , 故 Ax = 0 的解是 $A^{T}Ax = 0$ 的解.
+
+反之，若 $x$ 是 $\mathbf{A}^{\mathrm{T}}\mathbf{A}\mathbf{x} = \mathbf{0}$ 的解，令 $\mathbf{A}\mathbf{x} = \mathbf{b}$ ，则 $\mathbf{b}^{\mathrm{T}} = (\mathbf{A}\mathbf{x})^{\mathrm{T}} = \mathbf{x}^{\mathrm{T}}\mathbf{A}^{\mathrm{T}}$ ，从而
+
+$\boldsymbol {b} ^ {\mathrm{T}} \boldsymbol {b} = \boldsymbol {x} ^ {\mathrm{T}} \boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {A} \boldsymbol {x} = \boldsymbol {0},$
+
+于是 b 的各分量的平方和为 0，故 b = 0，从而 Ax = 0，因此 $A^{T}Ax = 0$ 的解是 Ax = 0 的解.
+
+【注】证明列向量 b = 0，即证 b 的每个分量为 0，可证 $b^{T}b = 0$ ，这是证明向量为零向量的一种方法."
+80241103,880,线性代数,第四章 线性方程组,,3,基础题,选择题,,设 $A$ 是 $n$ 阶矩阵，若对任意的 $n$ 维列向量 $\alpha$ ，有 $A^{*}\alpha = 0$ ，则 $Ax = 0$ 的基础解系所含解向量的个数 $k$ 满足（）.,$k=0$,$k=1$,$k > 1$,$k=n$,"C.
+
+解 方程组解的判别,关键是讨论其秩.由已知,对任意n维列向量 $\alpha$ ,有 $A^{*}\alpha=0$ ,故 $A^{*}\alpha=0$ 的基础解系有n个,即 $n-\mathrm{r}(A^{*})=n$ ,故 $\mathrm{r}(A^{*})=0$ ,由 $\mathrm{r}(A)$ 与 $\mathrm{r}(A^{*})$ 的关系,知 $\mathrm{r}(A) ,所以Ax=0有 k=n-\mathrm{r}(A)>n-(n-1)=1 个基础解系,故选项C正确.$"
+80241104,880,线性代数,第四章 线性方程组,,4,基础题,选择题,,"设方程组 $\left\{\begin{aligned}\lambda x_{1}+x_{2}+\lambda^{2}x_{3}=0,\\ x_{1}+\lambda x_{2}+x_{3}=0,\\ x_{1}+x_{2}+\lambda x_{3}=0\end{aligned}\right.$的系数矩阵为, 若存在3阶矩阵, 使得 }AB=O, 则必有（）",$\lambda = -2$ 且 $|B| = 0$,$\lambda = -2$ 且 $|B|\neq 0$,$\lambda = 1$ 且 $|B| = 0$,$\lambda = 1$ 且 $|B|\neq 0$,"C.
+
+解 由 AB = O, 知 B 的每一个列向量都是 Ax = 0 的解.
+
+又由 $B \neq O$ ，知 Ax = 0 有非零解，从而 $|A| = \begin{vmatrix} \lambda & 1 & \lambda^{2} \\ 1 & \lambda & 1 \\ 1 & 1 & \lambda \end{vmatrix} = (\lambda - 1)^{2} = 0$ ，所以 $\lambda = 1$ .
+
+又若 $\left|B\right|\neq0$ , 则 B 可逆, 故 $ABB^{-1}=A=O$ , 与 $A\neq O$ 矛盾, 所以 $\left|B\right|=0$
+
+【注】由 $B \neq O$ 不能直接推得 $|B| \neq 0$ ，应注意矩阵不为零与行列式不为零的区别."
+80241105,880,线性代数,第四章 线性方程组,,5,基础题,选择题,,"设 $B = \begin{pmatrix} 1 & 2 & -1 \\ 2 & a & 4 \\ 3 & 5 & a \end{pmatrix} (a > 0)$ , $A$ 是 3 阶非零矩阵, 且 $BA^T = O, k_1, k_2$ 为任意常数, 则方程组 $AX = 0$ 的通解为 ( ).",$k_{1}\begin{pmatrix}1\\ 0\\ 0\end{pmatrix}$,$k_{1}\begin{pmatrix}1\\ 2\\ -1\end{pmatrix}+k_{2}\begin{pmatrix}0\\ -1\\ 6\end{pmatrix}$,$k_{1}\begin{pmatrix}1\\ 2\\ 3\end{pmatrix}$,$k_{1}\begin{pmatrix}1\\ 2\\ 3\end{pmatrix}+k_{2}\begin{pmatrix}0\\ 1\\ 1\end{pmatrix}.$,"解 由 $BA^{T}=O$ ，知 $AB^{T}=O$ ，故有
+
+$\mathrm{r} (\boldsymbol {A}) + \mathrm{r} (\boldsymbol {B} ^ {\mathrm{T}}) = \mathrm{r} (\boldsymbol {A}) + \mathrm{r} (\boldsymbol {B}) \leqslant 3.$
+
+又由 $A \neq O$ ，故 $r(A) \geqslant 1$ ，且 B 中有二阶子式 $\begin{vmatrix} 1 & -1 \\ 2 & 4 \end{vmatrix} \neq 0$ ，可知 $r(B) \geqslant 2$ ，故 $r(B) = 2, r(A) = 1$ 。由 $|B| = (a - 3)(a + 2) = 0$ ，得 $a = 3 (a > 0)$ 。故由
+
+$\pmb {B} ^ {\mathrm{T}} = \left( \begin{array}{c c c} 1 & 2 & 3 \\ 2 & 3 & 5 \\ - 1 & 4 & 3 \end{array} \right) \xrightarrow [ \text {列变换} ]{\text {初等}} \left( \begin{array}{c c c} 1 & 0 & 0 \\ 2 & - 1 & 0 \\ - 1 & 6 & 0 \end{array} \right)$
+
+及 $AB^{T}=O$ ，知 $B^{T}$ 的列向量是 AX=0 的解，于是 AX=0 的通解为 $k_{1}(1,2,-1)^{\mathrm{T}}+k_{2}(0,-1,6)^{\mathrm{T}}$ 。选项 B 正确。"
+80241106,880,线性代数,第四章 线性方程组,,6,基础题,选择题,,"设矩阵 $A_{m \times n}, B_{n \times m}$ , 则 ( ).","当 $m > n$ 时, $AB$ 必可逆","当 $m > n$ 时, 必有 $|AB| = 0$","当 n > m 时, 必有 $r(AB) < m$","当 $n > m$ 时, $ABx = 0$ 必有唯一解","B.
+
+解 对于选项 B, 由于 $r(AB) \leqslant r(A) \leqslant n < m$ , 而 AB 为 $m \times m$ 矩阵, 故必有 $|AB| = 0$ ."
+80241107,880,线性代数,第四章 线性方程组,,7,基础题,选择题,,"设矩阵 $A_{m \times n}, B_{n \times m}$ 满足 $AB = E$ , 其中 $E$ 是单位矩阵, $\alpha$ 与 $\beta$ 为非零列向量, 则下列选项中正确的是 ( ).","方程组 $AX = \alpha$ 有唯一解, 方程组 $BX = \beta$ 有唯一解","方程组 $AX = \alpha$ 有无穷多解, 方程组 $BX = \beta$ 有无穷多解","方程组 AX=0 仅有零解, 方程组 BX=0 仅有零解","方程组 $AX = \alpha$ 有解, 方程组 BX = 0 仅有零解","D.
+
+解 由 AB = E，知 $r(AB) = m$ 。又由 $r(A) \geqslant r(AB) = m$ ，且 $r(A) \leqslant m$ ，知 $r(A) = m$ ，
+
+即 A 的行向量组线性无关, 从而其延伸组必线性无关. 故 $r(A) = r(A, \alpha) = m$ .
+
+方程组 AX = $\alpha$ 必有解, 但是有唯一解, 还是有无穷多解, 不确定.
+
+同理可得 $r(B)=m$ ，即 B 的列向量组线性无关，BX=0 仅有零解.
+
+此时, $r(\boldsymbol{B},\boldsymbol{\beta})$ 有可能为 $m+1,\boldsymbol{BX}=\boldsymbol{\beta}$ 可能无解,从而排除选项 A,B,C.
+
+故选项 D 正确."
+80241108,880,线性代数,第四章 线性方程组,,8,基础题,选择题,,"设 $A^{T} = (\alpha_{1}, \alpha_{2}, \cdots, \alpha_{n-1})$ 是 $n \times (n-1)$ 矩阵, $r(A^{T}) = n - 1$ , $\beta_{1}, \beta_{2}$ 是与 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{n-1}$ 均正交的 n 维列向量, $\beta_{1} \neq \beta_{2}$ , $k$ 是任意常数, 则方程组 $AX = 0$ 的通解为().",$k\beta_{1}$,$k\beta_{2}$,$k(\beta_{1}-\beta_{2})$,$k(\beta_{1}-\beta_{2})$,"D.
+
+解 由已知, A 是 $(n-1) \times n$ 矩阵, 且 $\mathrm{r}(A) = \mathrm{r}(A^{\mathrm{T}}) = n-1$ , 故 AX = 0 的基础解系有 $n - \mathrm{r}(A) = 1$ 个向量.
+
+又因 $\beta_{1},\beta_{2}$ 与 $\alpha_{1},\alpha_{2},\cdots,\alpha_{n-1}$ 均正交，即 $\alpha_{i}^{T}\beta_{1}=0,\alpha_{i}^{T}\beta_{2}=0(i=1,2,\cdots,n-1)$ ，故
+
+$\boldsymbol {A} \boldsymbol {\beta} _ {j} = \left( \begin{array}{c} \boldsymbol {\alpha} _ {1} ^ {\mathrm{T}} \\ \boldsymbol {\alpha} _ {2} ^ {\mathrm{T}} \\ \vdots \\ \boldsymbol {\alpha} _ {n - 1} ^ {\mathrm{T}} \end{array} \right) \boldsymbol {\beta} _ {j} = \left( \begin{array}{c} 0 \\ 0 \\ \vdots \\ 0 \end{array} \right) (j = 1, 2),$
+
+即 $\beta_{1},\beta_{2}$ 是 AX=0 的两个不同解，从而 $\beta_{1}-\beta_{2}$ 是 AX=0 的非零解。故 AX=0 的通解为 $k(\boldsymbol{\beta}_{1}-\boldsymbol{\beta}_{2})$ 。选项 D 正确。
+
+由于 $\beta_{1},\beta_{2}$ 可能是零向量, $\beta_{1}+\beta_{2}$ 也可能是零向量,所以排除选项 A,B,C."
+80241109,880,线性代数,第四章 线性方程组,,9,基础题,选择题,,"设 A 是 $m \times s$ 矩阵, B 是 $s \times n$ 矩阵, 则方程组 ABX = 0 与 BX = 0 同解的充分必要条件是().",$r(A)=s$,$r(AB) = r(B)$,$r(A)=r(B)$,$r(A) = m$,"B.
+
+解 显然 BX = 0 的解是 ABX = 0 的解, 故只需找出 ABX = 0 的解是 BX = 0 的解的充分必要条件.
+
+对于选项 A, r(A) = s, 则 AX = 0 只有零解, 由 ABX = 0 必有 BX = 0, 即 ABX = 0 的解是 BX = 0 的解. 故选项 A 是充分条件, 但并非必要条件. 因为当 r(A) < s 时, ABX = 0 与 BX = 0 仍可以同解, 故排除选项 A.
+
+对于选项 B, 当 ABX = 0 与 BX = 0 同解时, 它们有相同的基础解系, 从而 r(AB) = r(B). 反之, 若 r(AB) = r(B), 则 ABX = 0 与 BX = 0 的基础解系中解向量的个数相同. 若 $\eta_{1}, \eta_{2}, \cdots, \eta_{t}$ 是 BX = 0 的基础解系, 由 BX = 0 的解必是 ABX = 0 的解, 知 $\eta_{1}, \eta_{2}, \cdots, \eta_{t}$ 是 ABX = 0 的线性无关解. 因此 $\eta_{1}, \eta_{2}, \cdots, \eta_{t}$ 必是 ABX = 0 的基础解系, 从而 ABX = 0 与 BX = 0 同解, 选项 B 正确.
+
+对于选项 C, 由 $r(A) = r(B)$ , 不能证得 $r(AB) = r(B)$ . 例如,
+
+$\boldsymbol {A} = \left( \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{array} \right), \quad \boldsymbol {B} = \left( \begin{array}{c c c} 0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right), \quad \boldsymbol {A B} = \left( \begin{array}{c c c} 0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{array} \right).$
+
+故排除选项 C.
+
+对于选项 D, 由 $r(A) = m$ , 不能证得 $r(AB) = r(B)$ . 例如,
+
+$\boldsymbol {A} = \left( \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 0 & 1 \end{array} \right), \quad \boldsymbol {B} = \left( \begin{array}{c c} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{array} \right), \quad \boldsymbol {A B} = \left( \begin{array}{c c} 1 & 0 \\ 0 & 0 \end{array} \right).$
+
+故排除选项 D."
+80241110,880,线性代数,第四章 线性方程组,,10,基础题,选择题,,"设 A 为 3 阶矩阵, $\alpha_{1}=(1,2,-2)^{T},\alpha_{2}=(2,1,-1)^{T},\alpha_{3}=(1,1,a)^{T}(a\neq-1)$ 是非齐次线性方程组 AX=b 的三个解, $A^{*}$ 是 A 的伴随矩阵, 则().",$AX = 0$ 与 $A^{*}X = 0$ 同解,"$A^{*}X=0$ 的解均是 AX=0 的解, 但二者不同解","$AX=0$ 的解均是 $A^{*}X=0$ 的解, 但二者不同解",$AX=0$ 与 $A^{*}X=0$ 没有非零公共解,"C.
+
+解 记 $\boldsymbol{B} = (\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3})$ ，则
+
+$\boldsymbol {B} = \left(\begin{array}{r r r}1&2&1\\2&1&1\\- 2&- 1&a\end{array}\right)\rightarrow \left(\begin{array}{r r r}1&2&1\\0&- 3&- 1\\0&3&a + 2\end{array}\right)\rightarrow \left(\begin{array}{r r r}1&2&1\\0&- 3&- 1\\0&0&a + 1\end{array}\right).$
+
+由 $a \neq -1$ ，知 $\mathrm{r}(B) = 3$ ，故 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性无关，从而 $\alpha_{1} - \alpha_{2}, \alpha_{2} - \alpha_{3}$ 是对应齐次线性方程组 $AX = 0$ 的两个线性无关解，于是 $\mathrm{r}(A) \leqslant 1$ ，但 $A \neq O$ ，故 $\mathrm{r}(A) \geqslant 1$ ，所以只能 $\mathrm{r}(A) = 1$ ，从而 $\mathrm{r}(A^{*}) = 0$ ， $A^{*} = O$ ，所以任意3维列向量均是 $A^{*}X = 0$ 的解。因此， $AX = 0$ 的解均是 $A^{*}X = 0$ 的解，选项C正确。选项B不正确，选项A也不正确。
+
+对于选项D.由 $AX = 0$ 的基础解系至少包含两个解向量，知 $AX = 0$ 有无穷多个非零解，从而 $AX = 0$ 与 $A^{*}X = 0$ 的公共解中有无穷多个非零解.选项D不正确.
+
+【注】若 A = O，则 $AX = b (b \neq 0)$ 无解，与已知条件矛盾，故 $A \neq O$ ."
+80241111,880,线性代数,第四章 线性方程组,,11,基础题,选择题,,"设有矩阵 $A_{n \times s}, B_{s \times n}$ , 且 $r(A) = s, r(B) = n, E_{n \times n}$ 为单位矩阵, 则下列齐次线性方程组中有非零解的是 ( ).",$\left( \begin{array}{cc}AB & O\\ E & A \end{array} \right)X = 0$,$\left( \begin{array}{ll}AB & O\\ E & B \end{array} \right)X = 0$,$\left( \begin{array}{cc}A & E\\ O & AB \end{array} \right)X = 0$,$\left( \begin{array}{ll}A & AB\\ E & B \end{array} \right)X = 0$,"D.
+
+解 由矩阵 $A_{n \times s}$ 且 $\mathrm{r}(\mathbf{A}) = s$ ，可知 $n \geqslant s$ ，由矩阵 $\mathbf{B}_{s \times n}$ 且 $\mathrm{r}(\mathbf{B}) = n$ 可知 $s \geqslant n$ ，故 $s = n$ 。所以 $\mathbf{A}, \mathbf{B}$ ， $\mathbf{AB}$ 均为 $n$ 阶可逆矩阵，因此有
+
+$\mathrm{r} \left( \begin{array}{c c} \boldsymbol {A B} & \boldsymbol {O} \\ \boldsymbol {E} & \boldsymbol {A} \end{array} \right) = \mathrm{r} (\boldsymbol {A B}) + \mathrm{r} (\boldsymbol {A}) = n + n = 2 n,$
+
+$\mathrm{r} \left( \begin{array}{c c} \boldsymbol {A B} & \boldsymbol {O} \\ \boldsymbol {E} & \boldsymbol {B} \end{array} \right) = \mathrm{r} (\boldsymbol {A B}) + \mathrm{r} (\boldsymbol {B}) = n + n = 2 n,$
+
+$\mathrm{r} \left( \begin{array}{c c} \boldsymbol {A} & \boldsymbol {E} \\ \boldsymbol {O} & \boldsymbol {A B} \end{array} \right) = \mathrm{r} (\boldsymbol {A}) + \mathrm{r} (\boldsymbol {A B}) = n + n = 2 n.$
+
+因初等变换不改变矩阵的秩,所以
+
+$\mathrm{r} \left( \begin{array}{c c} \boldsymbol {A} & \boldsymbol {A B} \\ \boldsymbol {E} & \boldsymbol {B} \end{array} \right) = \mathrm{r} \left( \begin{array}{c c} \boldsymbol {O} & \boldsymbol {O} \\ \boldsymbol {E} & \boldsymbol {B} \end{array} \right) = \mathrm{r} \left( \begin{array}{c c} \boldsymbol {O} & \boldsymbol {O} \\ \boldsymbol {E} & \boldsymbol {O} \end{array} \right) = n < 2 n.$
+
+故选项 D 中的方程组有非零解. 选项 D 正确."
+80241201,880,线性代数,第四章 线性方程组,,1,基础题,填空题,,"设方程组 $\left\{\begin{aligned}x_{1}+2x_{2}+x_{3}=3,\\ 2x_{1}+(k+4)x_{2}-5x_{3}=6, \\ -x_{1} -2x_{2}+kx_{3}=-3,\end{aligned}\right.$有无穷多解，则$k=\_\_\_\_$",,,,,"- 1 或 0.
+
+解 对非齐次线性方程组的增广矩阵 $\overline{A}$ 作初等行变换, 得
+
+$\overline {{\boldsymbol {A}}} = \left( \begin{array}{c c c c} 1 & 2 & 1 & 3 \\ 2 & k + 4 & - 5 & 6 \\ - 1 & - 2 & k & - 3 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c} 1 & 2 & 1 & 3 \\ 0 & k & - 7 & 0 \\ 0 & 0 & k + 1 & 0 \end{array} \right),$
+
+由方程组有无穷多解,知 $\mathrm{r}(\boldsymbol{A})=\mathrm{r}(\overline{\boldsymbol{A}})<3$ , 故 k=-1 或 k=0."
+80241202,880,线性代数,第四章 线性方程组,,2,基础题,填空题,,"设 $A = \begin{pmatrix} 1 & 2 & 1 \\ 2 & 3 & a + 2 \\ 1 & a & -2 \end{pmatrix}, \beta_{1} = (1, 3, 4)^{T}, \beta_{2} = (0, 1, 2)^{T}$ ，若方程组 $AX = \beta_{1}$ 有解，且 $AX = \beta_{2}$ 无解，则 $a = \_\_\_\_$.",,,,,"- 1.
+
+解 对 $(\boldsymbol{A},\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2})$ 作初等行变换,有
+
+$\left( \begin{array}{c c c c c} 1 & 2 & 1 & 1 & 0 \\ 2 & 3 & a + 2 & 3 & 1 \\ 1 & a & - 2 & 4 & 2 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c c} 1 & 2 & 1 & 1 & 0 \\ 0 & - 1 & a & 1 & 1 \\ 0 & a - 2 & - 3 & 3 & 2 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c c} 1 & 2 & 1 & 1 & 0 \\ 0 & 1 & - a & - 1 & - 1 \\ 0 & 0 & a ^ {2} - 2 a - 3 & a + 1 & a \end{array} \right),$
+
+依题设, 知 $\mathrm{r}(\mathbf{A}) = \mathrm{r}(\mathbf{A}, \boldsymbol{\beta}_{1})$ , 且 $\mathrm{r}(\mathbf{A}) \neq \mathrm{r}(\mathbf{A}, \boldsymbol{\beta}_{2})$ .
+
+当 $a^2 - 2a - 3 = (a + 1)(a - 3) \neq 0$ ，即 $a \neq -1$ 或 $a \neq 3$ 时，有
+
+$\mathrm{r} (\boldsymbol {A}) = 3, \quad \mathrm{r} (\boldsymbol {A}, \boldsymbol {\beta} _ {1}) = 3, \quad \mathrm{r} (\boldsymbol {A}, \boldsymbol {\beta} _ {2}) = 3,$
+
+从而 $AX = \beta_{1}$ 与 $AX = \beta_{2}$ 均有解，与题设不符，故 $a^{2} - 2a - 3 = 0$ ，得 a = -1 或 a = 3。
+
+当 a = -1 时， $r(A) = r(A, \beta_{1}) = 2, r(A, \beta_{2}) = 3, AX = \beta_{1}$ 有解， $AX = \beta_{2}$ 无解；
+
+当 $a = 3$ 时， $\mathrm{r}(\mathbf{A}) = 2,\mathrm{r}(\mathbf{A},\pmb{\beta}_1) = 3,\mathrm{r}(\mathbf{A},\pmb{\beta}_2) = 3,\mathbf{AX} = \pmb{\beta}_1$ 无解， $\mathbf{AX} = \pmb{\beta}_2$ 无解
+
+综上所述，a = -1."
+80241301,880,线性代数,第四章 线性方程组,,1,基础题,解答题,,"求方程组 $\left\{\begin{aligned}&2x_{1}-x_{2}+4x_{3}-3x_{4}=-4,\\ &x_{1}+x_{3}-x_{4}=-3,\\ &3x_{1}+x_{2}+x_{3}=1,\\ &7x_{1}+7x_{3}-3x_{4}=3\end{aligned}\right.$ 的通解.",,,,,"解 对增广矩阵 $\overline{A}$ 作初等行变换, 得
+
+$\overline {{\boldsymbol {A}}} = \left( \begin{array}{c c c c c} 2 & - 1 & 4 & - 3 & - 4 \\ 1 & 0 & 1 & - 1 & - 3 \\ 3 & 1 & 1 & 0 & 1 \\ 7 & 0 & 7 & - 3 & 3 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c c} \textcircled {1} & 0 & 1 & - 1 & - 3 \\ \overbrace {0} ^ {\textcircled {1}} & \textcircled {1} & - 2 & 1 & - 2 \\ 0 & 0 & 0 & \textcircled {2} & 1 2 \\ 0 & 0 & 0 & 0 & 0 \end{array} \right),$
+
+取 $x_{3}$ 为自由变量，令 $x_{3} = 0$ ，得非齐次线性方程组的一个特解为 $\pmb{x}^{*} = (3, -8,0,6)^{\mathrm{T}}$ ，令 $x_{3} = 1$ ，解得 $x_{4} = 0,x_{2} = 2,x_{1} = -1$ ，故 $(-1,2,1,0)^{\mathrm{T}}$ 为对应齐次线性方程组的基础解系，所求通解为
+
+$k(-1,2,1,0)^{\mathrm{T}}+(3,-8,0,6)^{\mathrm{T}}$ (k 为任意常数)."
+80241302,880,线性代数,第四章 线性方程组,,2,基础题,解答题,,"设方程组 $\left\{\begin{aligned}&2x_{1}+\lambda x_{2}-x_{3}=1,\\ &\lambda x_{1}-x_{2}+x_{3}=2,\\ &4x_{1}+5x_{2}-5x_{3}=-1,\end{aligned}\right.$ 问: 当 $\lambda$ 为何值时, 方程组无解、有唯一解、有无穷多解? 当有无穷多解时, 求其通解.",,,,,"解 已知方程组的系数矩阵 A 为 3 阶方阵, 可以通过行列式讨论参数 $\lambda$ , 确定其解的情况. 依题设, 有
+
+$| \mathbf {A} | = \left| \begin{array}{c c c} 2 & \lambda & - 1 \\ \lambda & - 1 & 1 \\ 4 & 5 & - 5 \end{array} \right| = (5 \lambda + 4) (\lambda - 1),$
+
+当 $\lambda \neq 1$ 且 $\lambda \neq -\frac{4}{5}$ 时， $|A| \neq 0$ ，方程组有唯一解.
+
+当 $\lambda = 1$ 时， $|A| = 0$ ，对增广矩阵 $(A \mid b)$ 作初等行变换，得
+
+$(\mathbf {A} \mid \mathbf {b}) = \left( \begin{array}{c c c c} 2 & 1 & - 1 & 1 \\ 1 & - 1 & 1 & 2 \\ 4 & 5 & - 5 & - 1 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c} 1 & - 1 & 1 & 2 \\ 0 & 1 & - 1 & - 1 \\ 0 & 0 & 0 & 0 \end{array} \right),$
+
+方程组有无穷多解，为 $k(0,1,1)^{\mathrm{T}}+(1,-1,0)^{\mathrm{T}}$ (k 为任意常数).
+
+当 $\lambda = -\frac{4}{5}$ 时，
+
+$(\mathbf {A} \mid \mathbf {b}) \longrightarrow \left( \begin{array}{c c c c} 1 0 & - 4 & - 5 & 5 \\ 4 & 5 & - 5 & - 1 0 \\ 4 & 5 & - 5 & - 1 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c} 1 0 & - 4 & - 5 & 5 \\ 4 & 5 & - 5 & - 1 0 \\ 0 & 0 & 0 & 9 \end{array} \right),$
+
+此时， $r(A)=2,r(A\mid b)=3$ ，方程组无解.
+
+【注】 含有参数的线性方程组解的讨论方法：
+
+① $A_{n \times n} x = b$ ，可利用 $|A|$ 讨论参数（当然也可利用初等行变换）。当 $|A| \neq 0$ 时，方程组有唯一解，用克拉默法则求其唯一解；当 $|A| = 0$ 时，确定参数，再利用增广矩阵施行初等行变换化为阶梯形进行判别，有解时，求出通解（应注意，当 $|A| = 0$ 时，方程组可能无解）。
+
+② $A_{m \times n} x = b (m \neq n)$ ，一般先利用初等行变换化增广矩阵为阶梯形，再讨论参数，确定其秩，从而求解。含参数方程组是常考题，要求熟练掌握。"
+80241303,880,线性代数,第四章 线性方程组,,3,基础题,解答题,,"设有方程组①: $\left\{\begin{aligned}x_{1}+x_{2}&=0,\\ x_{2}-x_{4}&=0\end{aligned}\right.$ 与方程组②: $\left\{\begin{aligned}x_{1}-x_{2}+x_{3}&=0,\\ x_{2}-x_{3}+x_{4}&=0.\end{aligned}\right.$ 求:
+(I) 方程组①与②的基础解系;
+(Ⅱ) 方程组①与②的非零公共解.",,,,,"解（Ⅰ）方程组 ① 的系数矩阵为 $A = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & -1 \end{pmatrix}$ ，可求得基础解系为
+
+$\boldsymbol {\alpha} _ {1} = (- 1, 1, 0, 1) ^ {\mathrm{T}}, \quad \boldsymbol {\alpha} _ {2} = (0, 0, 1, 0) ^ {\mathrm{T}}.$
+
+方程组 ② 的系数矩阵为 $\pmb{B} = \begin{pmatrix} 1 & -1 & 1 & 0 \\ 0 & 1 & -1 & 1 \end{pmatrix}$ , 解得基础解系为
+
+$\boldsymbol {\beta} _ {1} = (0, 1, 1, 0) ^ {\mathrm{T}}, \quad \boldsymbol {\beta} _ {2} = (- 1, - 1, 0, 1) ^ {\mathrm{T}}.$
+
+（Ⅱ）求方程组 ① 与 ② 的非零公共解，就是求 $\begin{pmatrix} A \\ B \end{pmatrix} x = 0$ 的非零解. 由
+
+$\binom {\boldsymbol {A}} {\boldsymbol {B}} = \left( \begin{array}{c c c c} 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & - 1 \\ 1 & - 1 & 1 & 0 \\ 0 & 1 & - 1 & 1 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c} 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & - 1 \\ 0 & - 2 & 1 & 0 \\ 0 & 0 & - 1 & 2 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c} 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & - 1 \\ 0 & 0 & 1 & - 2 \\ 0 & 0 & 0 & 0 \end{array} \right),$
+
+得基础解系 $\boldsymbol{\eta}=(-1,1,2,1)^{\mathrm{T}}$ ，故非零公共解为 $k(-1,1,2,1)^{\mathrm{T}}(k$ 是不为零的任意常数).
+
+【注】由（I）已求出方程组①与②的基础解系，可令 $k_{1}\alpha_{1}+k_{2}\alpha_{2}=l_{1}\beta_{1}+l_{2}\beta_{2}$ ，即解方程组
+
+$k _ {1} \boldsymbol {\alpha} _ {1} + k _ {2} \boldsymbol {\alpha} _ {2} - l _ {1} \boldsymbol {\beta} _ {1} - l _ {2} \boldsymbol {\beta} _ {2} = \mathbf {0},$
+
+故
+
+$\left\{ \begin{array}{l} - k _ {1} + l _ {2} = 0, \\ k _ {1} - l _ {1} + l _ {2} = 0, \\ k _ {2} - l _ {1} = 0, \\ k _ {1} - l _ {2} = 0, \end{array} \right.$
+
+解得 $l_{1} = k_{2} = 2k_{1} = 2l_{2}$ ，即
+
+$\begin{array}{r l} k _ {1} \boldsymbol {\alpha} _ {1} + k _ {2} \boldsymbol {\alpha} _ {2} & = k _ {1} \boldsymbol {\alpha} _ {1} + 2 k _ {1} \boldsymbol {\alpha} _ {2} = k _ {1} (\boldsymbol {\alpha} _ {1} + 2 \boldsymbol {\alpha} _ {2}) = l _ {1} \boldsymbol {\beta} _ {1} + l _ {2} \boldsymbol {\beta} _ {2} = 2 l _ {2} \boldsymbol {\beta} _ {1} + l _ {2} \boldsymbol {\beta} _ {2} \\ & = l _ {2} (2 \boldsymbol {\beta} _ {1} + \boldsymbol {\beta} _ {2}) = k (- 1, 1, 2, 1) ^ {\mathrm{T}} \quad (k \neq 0), \end{array}$
+
+其中，记 $k=l_{1}=k_{2}=2k_{1}=2l_{2}$"
+80241304,880,线性代数,第四章 线性方程组,,4,基础题,解答题,,"设有方程组 $(I): \begin{cases} x_{1} + x_{2} = 0, \\ x_{2} - x_{4} = 0 \end{cases}$ 与 $(II): Ax = 0$ ，其中 $(II)$ 的基础解系为 $\alpha_{1} = (-1, 2, 2, 1)^{T}$ ,
+$\alpha_{2}=(0,-1,-1,0)^{T}$ ,求方程组 $(I)$ 与 $(II)$ 的非零公共解.",,,,,"解方程组(I)的系数矩阵 $B=\begin{pmatrix}1&1&0&0\\0&1&0&-1\end{pmatrix}$ ，故方程组(I)的基础解系为 $\xi_{1}=(0,0,1,0)^{\mathrm{T}}$ ， $\xi_{2}=(-1,1,0,1)^{\mathrm{T}}$ ，通解为 $k_{1}\xi_{1}+k_{2}\xi_{2}=(-k_{2},k_{2},k_{1},k_{2})^{\mathrm{T}}(k_{1},k_{2}$ 为任意常数).
+
+由已知,方程组(Ⅱ)的通解为
+
+$l_{1}\alpha_{1}+l_{2}\alpha_{2}=(-l_{1},2l_{1}-l_{2},2l_{1}-l_{2},l_{1})^{\mathrm{T}}$ ( $l_{1},l_{2}$ 为任意常数),
+
+令 $(-k_{2}, k_{2}, k_{1}, k_{2})^{\mathrm{T}} = (-l_{1}, 2l_{1} - l_{2}, 2l_{1} - l_{2}, l_{1})^{\mathrm{T}}$ ，得 $l_{1} = k_{2}$ ， $l_{2} = 2k_{2} - k_{2} = k_{2}$ ， $k_{1} = k_{2}$ 。
+
+令 $k_{2}=k$ ，则方程组（Ⅰ）与（Ⅱ）的非零公共解为 $k(-1,1,1,1)^{\mathrm{T}}(k$ 为不为零的任意常数)."
+80241305,880,线性代数,第四章 线性方程组,,5,基础题,解答题,,"设有方程组②: $\left\{\begin{aligned}x_{1}+ax_{2}-x_{3}-x_{4}&=-5\\ bx_{2}-x_{3}-2x_{4}&=-11\\ x_{3}-2x_{4}&=-c+1\end{aligned}\right.$
+(I) 求方程组①的通解;
+(II) 问: 当 a, b, c 为何值时, 方程组①与②同解?",,,,,"解（Ⅰ）对方程组①的增广矩阵作初等行变换，得
+
+$\overline {{\boldsymbol {A}}} _ {1} = \left( \begin{array}{c c c c c} 1 & 0 & 0 & - 1 & - 2 \\ 0 & 1 & 0 & - 1 & - 4 \\ 0 & - 4 & - 1 & 6 & 2 1 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c c} 1 & 0 & 0 & - 1 & - 2 \\ 0 & 1 & 0 & - 1 & - 4 \\ 0 & 0 & 1 & - 2 & - 5 \end{array} \right),$
+
+解得方程组 ① 的通解为 $(x_{1}, x_{2}, x_{3}, x_{4})^{\mathrm{T}} = (-2, -4, -5, 0)^{\mathrm{T}} + k(1, 1, 2, 1)^{\mathrm{T}}$ ( $k$ 为任意常数).
+
+（Ⅱ）将方程组 ① 的通解 $x_{1} = -2 + k, x_{2} = -4 + k, x_{3} = -5 + 2k, x_{4} = k$ 代入方程组 ② 的第一个方程，得 $(-2 + k) + a(-4 + k) - (-5 + 2k) - k = -5$ ，由 $k$ 的任意性，可得 $a = 2$ . 同样将方程组 ① 的通解代入方程组 ② 的第二个方程，得
+
+$b (- 4 + k) - (- 5 + 2 k) - 2 k = - 1 1,$
+
+解得 b=4 。将方程组①的通解代入方程组②中的第三个方程，得 $(-5+2k)-2k=-c+1$ ，解得 c=6，故方程组②为
+
+$\left\{ \begin{array}{l} x _ {1} + 2 x _ {2} - x _ {3} - x _ {4} = - 5, \\ 4 x _ {2} - x _ {3} - 2 x _ {4} = - 1 1, \\ x _ {3} - 2 x _ {4} = - 5, \end{array} \right.$
+
+对其增广矩阵作初等行变换,得
+
+$\left( \begin{array}{c c c c c} 1 & 2 & - 1 & - 1 & - 5 \\ 0 & 4 & - 1 & - 2 & - 1 1 \\ 0 & 0 & 1 & - 2 & - 5 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c c} 1 & 0 & 0 & - 1 & - 2 \\ 0 & 1 & 0 & - 1 & - 4 \\ 0 & 0 & 1 & - 2 & - 5 \end{array} \right),$
+
+故方程组 ② 的通解为 $(x_{1}, x_{2}, x_{3}, x_{4})^{\mathrm{T}} = (-2, -4, -5, 0)^{\mathrm{T}} + k(1, 1, 2, 1)^{\mathrm{T}}$ ，与方程组 ① 的通解相同。综上所述，当 $a = 2, b = 4, c = 6$ 时，方程组 ① 与方程组 ② 同解。"
+80241306,880,线性代数,第四章 线性方程组,,6,基础题,解答题,,"设 $n$ 阶矩阵 $A$ 满足 $|A| = 0, A_{ij}$ 为 $|A|$ 的元素 $a_{ij}$ 对应的代数余子式, 且 $A_{11} \neq 0$ , 求方程组 $A^{*}x = 0$ 的基础解系和通解.",,,,,"解由 $\left|A\right|=0, A_{11} \neq 0$ ，得 $\mathrm{r}(A)=n-1$ ，故 $\mathrm{r}(A^{*})=1$ ，即 $A^{*}x=0$ 等价于方程
+
+$A _ {1 1} x _ {1} + A _ {2 1} x _ {2} + \dots + A _ {n 1} x _ {n} = 0.①$
+
+因 $A_{11} \neq 0$ ，故方程 ① 有下列线性无关的解，
+
+$\begin{array}{r l} & {\pmb {\alpha} _ {1} = (- A _ {2 1}, A _ {1 1}, 0, \dots , 0) ^ {\mathrm{T}},} \\ & {\pmb {\alpha} _ {2} = (- A _ {3 1}, 0, A _ {1 1}, 0, \dots , 0) ^ {\mathrm{T}},} \\ & {\qquad \vdots} \\ & {\pmb {\alpha} _ {n - 1} = (- A _ {n 1}, 0, \dots , 0, A _ {1 1}) ^ {\mathrm{T}},} \end{array}$
+
+解向量的个数为 $n - \mathrm{r}(\mathbf{A}^{*}) = n - 1$ ，故 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{n-1}$ 是原方程组的基础解系，通解为
+
+$k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{n-1}\alpha_{n-1}$ $(k_{1},k_{2},\cdots,k_{n-1}$ 为任意常数)."
+80241307,880,线性代数,第四章 线性方程组,,7,基础题,解答题,,"已知 $4 \times 3$ 矩阵 $A = (\alpha_{1}, \alpha_{2}, \alpha_{3})$ ，非齐次线性方程组 $Ax = \beta$ 的通解为 $(1, 2, -1)^{T} + k(1, -2, 3)^{T}$ ，k 为任意常数，令 $B = (\alpha_{1}, \alpha_{2}, \alpha_{3}, \beta + \alpha_{3})$ ，求方程组 $By = \alpha_{1} - \alpha_{2}$ 的通解.",,,,,"解 由 Ax = β 的通解结构及已知条件, 有 r(A) = r(α₁, α₂, α₃) = 3 - 1 = 2,
+
+$(\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}) \left( \begin{array}{c} 1 \\ 2 \\ - 1 \end{array} \right) = \pmb {\beta}, (\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}) \left( \begin{array}{c} 1 \\ - 2 \\ 3 \end{array} \right) = \mathbf {0},$
+
+即
+
+故
+
+$\begin{array}{r l} & {\pmb {\alpha} _ {1} + 2 \pmb {\alpha} _ {2} - \pmb {\alpha} _ {3} = \pmb {\beta}, \quad \pmb {\alpha} _ {1} - 2 \pmb {\alpha} _ {2} + 3 \pmb {\alpha} _ {3} = \pmb {0},} \\ & {\mathrm{r} (\pmb {B}) = \mathrm{r} (\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}, \pmb {\beta} + \pmb {\alpha} _ {3}) = \mathrm{r} (\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}, \pmb {\alpha} _ {1} + 2 \pmb {\alpha} _ {2})} \\ & {\frac {\text {初等}}{\text {列变换}} \mathrm{r} (\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}, \pmb {0}) = \mathrm{r} (\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}) = 2,} \end{array}$
+
+所以 $\mathbf{B}\mathbf{y} = \mathbf{0}$ 有 $4 - \mathrm{r}(\mathbf{B}) = 2$ 个基础解. 又
+
+$(\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}, \pmb {\beta} + \pmb {\alpha} _ {3}) \left( \begin{array}{c} 1 \\ - 2 \\ 3 \\ 0 \end{array} \right) = \pmb {\alpha} _ {1} - 2 \pmb {\alpha} _ {2} + 3 \pmb {\alpha} _ {3} = \mathbf {0},$
+
+$(\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}, \boldsymbol {\alpha} _ {1} + 2 \boldsymbol {\alpha} _ {2}) \left( \begin{array}{c} 1 \\ 2 \\ 0 \\ - 1 \end{array} \right) = \boldsymbol {\alpha} _ {1} + 2 \boldsymbol {\alpha} _ {2} - (\boldsymbol {\alpha} _ {1} + 2 \boldsymbol {\alpha} _ {2}) = \mathbf {0},$
+
+以及
+
+$(\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}, \boldsymbol {\beta} + \boldsymbol {\alpha} _ {3}) \left( \begin{array}{c} 1 \\ - 1 \\ 0 \\ 0 \end{array} \right) = \boldsymbol {\alpha} _ {1} - \boldsymbol {\alpha} _ {2},$
+
+故 $\mathbf{B}\mathbf{y} = \alpha_{1} - \alpha_{2}$ 的通解为
+
+$k _ {1} (1, - 2, 3, 0) ^ {\mathrm{T}} + k _ {2} (1, 2, 0, - 1) ^ {\mathrm{T}} + (1, - 1, 0, 0) ^ {\mathrm{T}} \quad (k _ {1}, k _ {2} \text {为任意常数}).$"
+80241308,880,线性代数,第四章 线性方程组,,8,基础题,解答题,,"设 $A$ 是 $5 \times 4$ 矩阵, $r(A) = 2$ , 已知 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 是非齐次线性方程组 $Ax = b$ 的三个解向量, 且 $\alpha_{1} + \alpha_{2} = (4,6, -8,4)^{T}, \alpha_{3} = (1,2, -1,1)^{T}$ , 又 $(0,1, -3,0)^{T}$ 是 $Ax = 0$ 的解, 求 $Ax = b$ 的通解.",,,,,"解 由已知条件及 Ax = b 的通解结构, 只需求 Ax = 0 的基础解系, 而基础解系有 $n - r(A) = 4 - 2 = 2$ 个, $(0,1,-3,0)^{\mathrm{T}}$ 是 Ax = 0 的一个解, 于是再求一个与 $(0,1,-3,0)^{\mathrm{T}}$ 线性无关的解即可. 注意
+
+到 $\alpha_{1}+\alpha_{2}-2\alpha_{3}$ 是 Ax=0 的解,事实上,
+
+$\mathbf {A} \left(\boldsymbol {\alpha} _ {1} + \boldsymbol {\alpha} _ {2} - 2 \boldsymbol {\alpha} _ {3}\right) = \mathbf {A} \boldsymbol {\alpha} _ {1} + \mathbf {A} \boldsymbol {\alpha} _ {2} - 2 \mathbf {A} \boldsymbol {\alpha} _ {3} = \mathbf {b} + \mathbf {b} - 2 \mathbf {b} = \mathbf {0},$
+
+且
+
+$\boldsymbol {\alpha} _ {1} + \boldsymbol {\alpha} _ {2} - 2 \boldsymbol {\alpha} _ {3} = (4, 6, - 8, 4) ^ {\mathrm{T}} - 2 (1, 2, - 1, 1) ^ {\mathrm{T}} = (2, 2, - 6, 2) ^ {\mathrm{T}},$
+
+又 $(2,2, - 6,2)^{\mathrm{T}}$ 与 $(0,1, - 3,0)^{\mathrm{T}}$ 线性无关(分量不成比例)，所以 $Ax = b$ 的通解为
+
+$k _ {1} \left( \begin{array}{r} 0 \\ 1 \\ - 3 \\ 0 \end{array} \right) + k _ {2} \left( \begin{array}{r} 2 \\ 2 \\ - 6 \\ 2 \end{array} \right) + \left( \begin{array}{r} 1 \\ 2 \\ - 1 \\ 1 \end{array} \right) \quad (k _ {1}, k _ {2} \text {为任意常数}).$
+
+【注】结论：设 $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$ 是 Ax=b 的 n 个解，当 $k_{1}+k_{2}+\cdots+k_{n}=1$ 时， $k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{n}\alpha_{n}$ 也是 Ax=b 的解."
+80242101,880,线性代数,第四章 线性方程组,,1,综合题,选择题,,"设 A 是 $m \times n$ 矩阵, $m < n$, 且 $A$ 的行向量组线性无关, $b_{1}, b_{2}$ 分别为 $m$ 维、$n$ 维非零列向量, 则下列选项中错误的是().",$A^T x = 0$ 只有零解,$A^T A x = 0$ 必有非零解,$Ax = b_{1}$ 必有无穷多解,$A^T x = b_2$ 必有唯一解,"D.
+
+解 由 $r(A)=A$ 的行秩 = A 的列秩，以及 A 的行向量组线性无关，可知 $r(A)=m$ .
+
+对于选项 A, $A^{T}$ 是 $n \times m$ 矩阵, $\mathrm{r}(A^{\mathrm{T}}) = \mathrm{r}(A) = m$ , 即 $A^{T}$ 的列向量组线性无关, 故 $A^{T}x = 0$ 只有零解.
+
+对于选项 B, $A^{T}A$ 是 $n \times n$ 矩阵, 由于 $\mathrm{r}(A^{T}A) \leqslant \mathrm{r}(A) = m < n$ , 故 $A^{T}Ax = 0$ 必有非零解.
+
+对于选项 C, A 是 $m \times n$ 矩阵, $\mathrm{r}(A) = m$ , 故 $\mathrm{r}(A) = \mathrm{r}(A \mid b_{1}) = m < n$ , 即 $Ax = b_{1}$ 必有无穷多解.
+对于选项 D, $A^{T}$ 是 $n \times m$ 矩阵, $A^{T}x = b_{2}$ 有唯一解 $\Leftrightarrow \mathrm{r}(A^{\mathrm{T}}) = \mathrm{r}(A^{\mathrm{T}} \mid b_{2}) = m$ , 但 $A^{T}$ 的列向量只有 m 个线性无关的 n 维向量 (m < n), 不能表示任意一个 n 维向量, 故 $A^{T}x = b_{2}$ 可能无解, 因此选 D."
+80242102,880,线性代数,第四章 线性方程组,,2,综合题,选择题,,设 A 是 $m \times n$ 矩阵，则非齐次线性方程组 Ax = b 有无穷多解的充分必要条件是().,$r(A:b) < n$,$Ax = 0$ 有非零解,$Ax = b$ 有两个不同解,$A$ 的列向量组线性相关,"C.
+
+解 Ax = b 有无穷多解 $\Leftrightarrow$ r(A) = r(A; b) < n.
+
+对于选项 A, r(A; b) < n $\Rightarrow$ r(A) = r(A; b).
+
+对于选项 B, Ax = 0 有非零解 $\Rightarrow Ax = b$ 有无穷多解, 因为 Ax = 0 有非零解 $\Leftrightarrow \mathrm{r}(A) < n$ , 但可能 $\mathrm{r}(A) \neq \mathrm{r}(A \mid b)$ , 即 Ax = b 可能无解.
+
+对于选项 C, 设 Ax = b 有两个不同解 $\alpha_{1}, \alpha_{2}$ ，则 $\alpha_{1} - \alpha_{2}$ 是 Ax = 0 的非零解 $\Rightarrow r(A) < n$ ，且 Ax = b 有解，即 $r(A) = r(A \mid b) < n$ ，故 Ax = b 有无穷多解。而当 Ax = b 有无穷多解时，肯定有两个不同解，故选项 C 正确。
+
+对于选项D, A的列向量组线性相关 $\Leftrightarrow Ax = 0$ 有非零解. 这是结论, 见《2027考研数学线性代数辅导讲义》. 而Ax = 0有非零解 $\Leftrightarrow Ax = b$ 有无穷多解(可能无解)."
+80242103,880,线性代数,第四章 线性方程组,,3,综合题,选择题,,"设 $A^{T} = (\alpha_{1}, \alpha_{2}, \cdots, \alpha_{n-1})$ 是 $n \times (n-1)$ 矩阵, $r(A^{T}) = n - 1, \beta_{1}, \beta_{2}$ 是与 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{n-1}$ 都正交的两个不同的 n 维列向量, k 是任意常数, 则方程组 Ax = 0 的通解为().",$k(\beta_{1}-\beta_{2})$,$k(\beta_{1}+\beta_{2})$,$k\beta_{1}$,$k\beta_{2}$,"A.
+
+解 由已知, $r(A)=r(A^{T})=n-1,Ax=0$ 的基础解系有 $n-r(A)=1$ 个向量.
+
+因为 $\beta_{1},\beta_{2}$ 与 $\alpha_{1},\alpha_{2},\cdots,\alpha_{n-1}$ 都正交，所以 $\alpha_{i}^{T}\cdot\beta_{1}=0,\alpha_{i}^{T}\cdot\beta_{2}=0(i=1,2,\cdots,n-1)$ ，从而
+
+$\boldsymbol {A} \boldsymbol {\beta} _ {j} = \left( \begin{array}{c} \boldsymbol {\alpha} _ {1} ^ {\mathrm{T}} \\ \boldsymbol {\alpha} _ {2} ^ {\mathrm{T}} \\ \vdots \\ \boldsymbol {\alpha} _ {n - 1} ^ {\mathrm{T}} \end{array} \right) \boldsymbol {\beta} _ {j} = \left( \begin{array}{c} 0 \\ 0 \\ \vdots \\ 0 \end{array} \right) (j = 1, 2),$
+
+由此可知 $\beta_{1}, \beta_{2}$ 是 Ax = 0 的两个不同解，故 $k(\beta_{1} - \beta_{2})$ 是 Ax = 0 的通解.
+
+由于 $\beta_{1}, \beta_{2}$ 可能是零向量，故排除选项 C, D；由于 $\beta_{1} + \beta_{2}$ 也可能是零向量，故排除选项 B."
+80242104,880,线性代数,第四章 线性方程组,,4,综合题,选择题,,"设 n 维实列向量 $\alpha$ 满足 $\alpha^{T}\alpha=2, A, B$ 均为 n 阶矩阵, E 为 n 阶单位矩阵, 且 $A(E-2\alpha\alpha^{T})=B$ , 则 ( ).",方程组 $BX = 0$ 与方程组 $(E - 2\alpha \alpha^T)X = 0$ 同解,方程组 $B^{T}X=0$ 与方程组 $(E-2\alpha\alpha^{T})X=0$ 同解,方程组 $BX=0$ 与方程组 $AX=0$ 同解,方程组 $B^{T}X=0$ 与方程组 $A^{T}X=0$ 同解,"D.
+
+解 由已知, $r(\alpha\alpha^{\mathrm{T}})=1$ ,故其特征值为2,0, $\cdots$ ,0,实对称矩阵 $E-2\alpha\alpha^{T}$ 的特征值为 $-3,1,\cdots,1$ ,故 $r(E-2\alpha\alpha^{\mathrm{T}})=n$ ,即 $E-2\alpha\alpha^{T}$ 可逆.
+
+由 $\boldsymbol{B} = \boldsymbol{A} (\boldsymbol{E} - 2\boldsymbol{\alpha}\boldsymbol{\alpha}^{\mathrm{T}})$ ，知 B 的列向量组可由 A 的列向量组线性表示.
+
+又由 $A = B(E - 2\alpha\alpha^{\mathrm{T}})^{-1}$ ，知 A 的列向量组可由 B 的列向量组线性表示，从而 B 的列向量组与 A 的列向量组等价。故 $B^{T}$ 的行向量组与 $A^{T}$ 的行向量组等价，所以 $B^{T}X = 0$ 与 $A^{T}X = 0$ 同解。选项 D 正确。
+
+由选项 D 正确, 知可排除选项 C. 由于 A 不一定可逆, 故可排除选项 A, B."
+80242105,880,线性代数,第四章 线性方程组,,5,综合题,选择题,,"设 A 是 n 阶实对称矩阵, B 是 n 阶实矩阵, 若对任意 n 维非零列向量 $\alpha$ , 都有 $\alpha^{T}(AB + B^{T}A)\alpha > 0$ , 则下列选项中正确的是().",方程组 $ABX = \alpha$ 有无穷多解,方程组 $ABX = \alpha$ 无解,方程组 $AX = \alpha$ 有唯一解,方程组 $AX = \alpha$ 无解,"C.
+
+解 依题设,有
+
+$\begin{array}{r l} \boldsymbol {\alpha} ^ {\mathrm{T}} (\boldsymbol {A B} + \boldsymbol {B} ^ {\mathrm{T}} \boldsymbol {A}) \boldsymbol {\alpha} & = \boldsymbol {\alpha} ^ {\mathrm{T}} \boldsymbol {A B} \boldsymbol {\alpha} + \boldsymbol {\alpha} ^ {\mathrm{T}} \boldsymbol {B} ^ {\mathrm{T}} \boldsymbol {A} \boldsymbol {\alpha} \\ & = (\boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {\alpha}) ^ {\mathrm{T}} (\boldsymbol {B} \boldsymbol {\alpha}) + (\boldsymbol {B} \boldsymbol {\alpha}) ^ {\mathrm{T}} (\boldsymbol {A} \boldsymbol {\alpha}) \\ & = (\boldsymbol {A} \boldsymbol {\alpha}) ^ {\mathrm{T}} (\boldsymbol {B} \boldsymbol {\alpha}) + (\boldsymbol {B} \boldsymbol {\alpha}) ^ {\mathrm{T}} (\boldsymbol {A} \boldsymbol {\alpha}) \\ & = 2 (\boldsymbol {A} \boldsymbol {\alpha}) ^ {\mathrm{T}} (\boldsymbol {B} \boldsymbol {\alpha}) > 0, \end{array}$
+
+即对 $\forall \alpha \neq 0$ ，有 $(A\alpha)^{\mathrm{T}}(B\alpha) > 0$ ，所以有 $A\alpha \neq 0, B\alpha \neq 0$ ，故 $A, B$ 均可逆，从而有
+
+$\mathrm{r} (\boldsymbol {A}) = \mathrm{r} (\boldsymbol {A}, \boldsymbol {\alpha}) = n, \quad \mathrm{r} (\boldsymbol {A B}) = \mathrm{r} (\boldsymbol {A B}, \boldsymbol {\alpha}) = n.$
+
+故 AX = $\alpha$ 有唯一解, ABX = $\alpha$ 有唯一解. 选项 C 正确.
+
+【注】 $(\boldsymbol{A}\boldsymbol{\alpha})^{\mathrm{T}}(\boldsymbol{B}\boldsymbol{\alpha})$ 为内积 $(\boldsymbol{A}\boldsymbol{\alpha},\boldsymbol{B}\boldsymbol{\alpha})$ ."
+80242106,880,线性代数,第四章 线性方程组,,6,综合题,选择题,,"设 A, B 均为 n 阶矩阵, $\alpha, \beta$ 均为 n 维列向量. 若 $\alpha$ 可由 A 的列向量线性表示, $(\alpha^{T}, \beta^{T})$ 不能由 $(A^{T}, B^{T})$ 的行向量线性表示, 则下列选项中正确的是().","$r(B,\beta)=r(B)$","$r(B,\beta) = r(B) + 1$","$r\left( \begin{array}{ll}A^T & B^T\\ \alpha^T & \beta^T \end{array} \right) = r(A^T,B^T) + 1$","$r[(A,\alpha),B^{T}] = r\left[(A^{T},B^{T})\binom{A}{B}\right]$","C.
+
+解 由 $\alpha$ 可由 A 的列向量线性表示, 知方程组 AX = $\alpha$ 有解.
+
+由 $(\pmb{\alpha}^{\mathrm{T}},\pmb{\beta}^{\mathrm{T}})$ 不能由 $(A^{\mathrm{T}},B^{\mathrm{T}})$ 的行向量线性表示，取转置后，知 $\binom{\pmb{\alpha}}{\pmb{\beta}}$ 不能由 $\binom{A}{B}$ 的列向量线性表示，即方程组 $\binom{A}{B}X = \binom{\pmb{\alpha}}{\pmb{\beta}}$ 无解.此时方程组 $BX = \pmb{\beta}$ 可能无解，也可能有解（当 $BX = \pmb{\beta}$ 的解与 $AX = \pmb{\alpha}$ 的解的交集为空集时， $\binom{A}{B}X = \binom{\pmb{\alpha}}{\pmb{\beta}}$ 无解），从而有
+
+$r(B,\boldsymbol{\beta})=r(B)+1\Leftrightarrow BX=\boldsymbol{\beta}$ 无解，
+
+$\mathrm{r} (\pmb {B}, \pmb {\beta}) = \mathrm{r} (\pmb {B}) \Leftrightarrow \pmb {B X} = \pmb {\beta} \text {有解},$
+
+故选项 A, B 不一定正确.
+
+对于选项 C, 由
+
+$\mathrm{r} \left( \begin{array}{c c} \boldsymbol {A} ^ {\mathrm{T}} & \boldsymbol {B} ^ {\mathrm{T}} \\ \boldsymbol {\alpha} ^ {\mathrm{T}} & \boldsymbol {\beta} ^ {\mathrm{T}} \end{array} \right) = \mathrm{r} \left( \begin{array}{c c} \boldsymbol {A} & \boldsymbol {\alpha} \\ \boldsymbol {B} & \boldsymbol {\beta} \end{array} \right), \quad \mathrm{r} (\boldsymbol {A} ^ {\mathrm{T}}, \boldsymbol {B} ^ {\mathrm{T}}) = \mathrm{r} \binom{\boldsymbol {A}}{\boldsymbol {B}},$
+
+知
+
+$\mathrm{r} \left( \begin{array}{c c} {\pmb {A}} & {\pmb {\alpha}} \\ {\pmb {B}} & {\pmb {\beta}} \end{array} \right) = \mathrm{r} \binom {\pmb {A}} {\pmb {B}} + 1 \Leftrightarrow \binom {\pmb {A}} {\pmb {B}} \pmb {X} = \binom {\pmb {\alpha}} {\pmb {\beta}} \text {无解}.$
+
+故选项 C 正确.
+
+对于选项 D, 可以取反例. 令 $A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$ , $B = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}$ , $\alpha = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$ , $\beta = \begin{pmatrix} 0 \\ 1 \end{pmatrix}$ , 则 $\alpha$ 可由 A 的列向量线性表示. 由
+
+$(\boldsymbol {\alpha} ^ {\mathrm{T}}, \boldsymbol {\beta} ^ {\mathrm{T}}) = (1, 0, 0, 1), \quad (\boldsymbol {A} ^ {\mathrm{T}}, \boldsymbol {B} ^ {\mathrm{T}}) = \left( \begin{array}{c c c c} 0 & 0 & 1 & 0 \\ 1 & 0 & 0 & 0 \end{array} \right),$
+
+知 $(\boldsymbol{\alpha}^{\mathrm{T}},\boldsymbol{\beta}^{\mathrm{T}})$ 不能由 $(A^{T},B^{T})$ 的行向量线性表示,反例满足题干要求.但是,
+
+$\mathrm{r} \big [ (\boldsymbol {A}, \boldsymbol {\alpha}), \boldsymbol {B} ^ {\mathrm{T}} \big ] = \mathrm{r} \left( \begin{array}{c c c c c} 0 & 1 & 1 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 \end{array} \right) = 1,$
+
+$\mathrm{r} \left[ \left(\boldsymbol {A} ^ {\mathrm{T}}, \boldsymbol {B} ^ {\mathrm{T}}\right) \binom {\boldsymbol {A}} {\boldsymbol {B}} \right] = \mathrm{r} \left[ \left(\boldsymbol {A} ^ {\mathrm{T}}, \boldsymbol {B} ^ {\mathrm{T}}\right) \left(\boldsymbol {A} ^ {\mathrm{T}}, \boldsymbol {B} ^ {\mathrm{T}}\right) ^ {\mathrm{T}} \right] = \mathrm{r} \left(\boldsymbol {A} ^ {\mathrm{T}}, \boldsymbol {B} ^ {\mathrm{T}}\right) = \mathrm{r} \left( \begin{array}{c c c c} 0 & 0 & 1 & 0 \\ 1 & 0 & 0 & 0 \end{array} \right) = 2,$
+
+二者不相等,故选项 D 错误.
+
+【注】① $AX=\alpha$ 无解 $\Leftrightarrow r(A,\alpha)\neq r(A)\Leftrightarrow r(A,\alpha)=r(A)+1.$
+
+$② \mathrm{r} (\boldsymbol {A}) = \mathrm{r} (\boldsymbol {A} ^ {\mathrm{T}}) = \mathrm{r} (\boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {A}) = \mathrm{r} (\boldsymbol {A} \boldsymbol {A} ^ {\mathrm{T}}).$"
+80242107,880,线性代数,第四章 线性方程组,,7,综合题,选择题,,"设 $f(x)$ 二阶可导, $f''(x) \neq 0$ , $(a, f(a)), (b, f(b)), (c, f(c))$ 为曲线 $y = f(x)$ 上三个不同的点, 则下面的方程组().
+$$\left\{ \begin{array}{l} x _ {1} + a x _ {2} + f (a) x _ {3} = f (b) \\ x _ {1} + b x _ {2} + f (b) x _ {3} = f (c) \\ x _ {1} + c x _ {2} + f (c) x _ {3} = f (a) \end{array} \right.$$",有唯一解,有无穷多解,无解,无法确定是否有解,"A.
+
+解 由于三个点不同,不妨设 a < b < c. 方程组的系数行列式记为 $|A|$ . 将 $|A|$ 的第2行 $\times(-1)$ 加到第3行, 再将第1行 $\times(-1)$ 加到第2行, 按 $|A|$ 的第1列展开, 有
+
+$\begin{array}{r l} \left| \boldsymbol {A} \right| & = \left| \begin{array}{c c c} 1 & a & f (a) \\ 1 & b & f (b) \\ 1 & c & f (c) \end{array} \right| = \left| \begin{array}{c c c} 1 & a & f (a) \\ 0 & b - a & f (b) - f (a) \\ 0 & c - b & f (c) - f (b) \end{array} \right| = \left| \begin{array}{c c} b - a & f (b) - f (a) \\ c - b & f (c) - f (b) \end{array} \right| \\ & = (b - a) [ f (c) - f (b) ] - (c - b) [ f (b) - f (a) ]. \end{array}$
+
+应用拉格朗日中值定理,有
+
+$\begin{array}{r l} \left| \mathbf {A} \right| & = (b - a) (c - b) f ^ {\prime} (\xi_ {2}) - (c - b) (b - a) f ^ {\prime} (\xi_ {1}) \\ & = (b - a) (c - b) \big [ f ^ {\prime} (\xi_ {2}) - f ^ {\prime} (\xi_ {1}) \big ], \end{array}$
+
+其中 $\xi_{1}$ 介于 a 与 b 之间， $\xi_{2}$ 介于 b 与 c 之间.
+
+由三个点不同，知 $(b - a)(c - b) \neq 0$ 。又由 $f''(x) \neq 0$ ，知 $f''(x) > 0$ 或 $f''(x) < 0$ ，从而 $f'(x)$ 严格单调，故 $f'(\xi_2) > f'(\xi_1)$ 或 $f'(\xi_2) < f'(\xi_1)$ 。所以 $|\mathbf{A}| \neq 0, r(\mathbf{A}) = 3$ 。方程组有唯一解。选项 A 正确。
+
+【注】由 $f''(x) \neq 0$ ，知 $f(a), f(b), f(c)$ 不同时为零。方程组为非齐次方程组。"
+80242108,880,线性代数,第四章 线性方程组,,8,综合题,选择题,,设 A 是 $m \times n$ 矩阵，则非齐次线性方程组 AX = b 有解的充分必要条件是().,$r(A) = r(A^T) = m$,$r(A) = r(A^T) = n$,$r(A^{T}) = r\binom{A^{T}}{b^{T}} = m$,$A^T X = 0$ 与 $\binom{A^T}{b^T} X = 0$ 同解,"D.
+
+解
+
+$A_{m\times n}X=b$ 有解 $\Leftrightarrow\mathrm{r}(A)=\mathrm{r}(A,b)$
+
+$\Leftrightarrow \mathrm{r} (\boldsymbol {A} ^ {\mathrm{T}}) = \mathrm{r} \left[ (\boldsymbol {A}, \boldsymbol {b}) ^ {\mathrm{T}} \right] = \mathrm{r} \binom {\boldsymbol {A} ^ {\mathrm{T}}} {\boldsymbol {b} ^ {\mathrm{T}}}$
+
+$\Leftrightarrow \mathbf{A}^{\mathrm{T}}\mathbf{X} = \mathbf{0}$ 与 $\left( \begin{array}{c}\mathbf{A}^{\mathrm{T}}\\ \mathbf{b}^{\mathrm{T}} \end{array} \right)\mathbf{X} = \mathbf{0}$ 的基础解的个数相等.
+
+因 $\binom{\boldsymbol{A}^{\mathrm{T}}}{\boldsymbol{b}^{\mathrm{T}}}\boldsymbol{X} = \boldsymbol{0}$ 的解必满足 $A^{\mathrm{T}}X = 0$ ，故 $A\boldsymbol {X} = \boldsymbol{b}$ 有解 $\Leftrightarrow A^{\mathrm{T}}X = 0$ 与 $\binom{A^{\mathrm{T}}}{b^{\mathrm{T}}}\boldsymbol {X} = \boldsymbol{0}$ 同解.故选项D正确.对于选项A，r(A) $= m$ (A行满秩)，则r(A) $= \mathrm{r}(A,b) = m.$ 故 $A\boldsymbol {X} = \boldsymbol{b}$ 有解，但 $A\boldsymbol {X} = \boldsymbol{b}$ 有解，未必有r(A) $= m.$ 故排除选项A.
+
+对于选项 B, AX = b 有解 $\Leftrightarrow$ r(A) = r(A, b), 但 r(A) 未必为 n. 故排除选项 B.
+
+对于选项 C, 由前面的推导知, AX = b 有解 $\Leftrightarrow \mathrm{r}(A^{\mathrm{T}}) = \mathrm{r}\begin{pmatrix} A^{T} \\ b^{T} \end{pmatrix}$ , 但秩未必为 m. 故排除选项 C."
+80242201,880,线性代数,第四章 线性方程组,,1,综合题,填空题,,"设 $\alpha_{1}, \alpha_{2}, \alpha_{3}, \beta$ 均为三维列向量， $A = (\beta - \alpha_{1} - 2\alpha_{2} - 3\alpha_{3}, \alpha_{1}, \alpha_{2}, \alpha_{3})$ ，则方程组 $Ax = \beta$ 的一个特解为 \_\_\_\_.",,,,,"$(1,1,2,3)^{\mathrm{T}}$ .
+
+解设 $\mathbf{A}\mathbf{x} = \pmb{\beta}$ 有特解 $\alpha^{*} = (x_{1},x_{2},x_{3},x_{4})^{\mathrm{T}}$ ，则
+
+$\begin{array}{r l} \mathbf {A} \boldsymbol {\alpha} ^ {*} & = (\boldsymbol {\beta} - \boldsymbol {\alpha} _ {1} - 2 \boldsymbol {\alpha} _ {2} - 3 \boldsymbol {\alpha} _ {3}, \boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) \left( \begin{array}{l} x _ {1} \\ x _ {2} \\ x _ {3} \\ x _ {4} \end{array} \right) \\ & = (\boldsymbol {\beta} - \boldsymbol {\alpha} _ {1} - 2 \boldsymbol {\alpha} _ {2} - 3 \boldsymbol {\alpha} _ {3}) x _ {1} + \boldsymbol {\alpha} _ {1} x _ {2} + \boldsymbol {\alpha} _ {2} x _ {3} + \boldsymbol {\alpha} _ {3} x _ {4} \\ & = \boldsymbol {\beta} x _ {1} + (x _ {2} - x _ {1}) \boldsymbol {\alpha} _ {1} + (x _ {3} - 2 x _ {1}) \boldsymbol {\alpha} _ {2} + (x _ {4} - 3 x _ {1}) \boldsymbol {\alpha} _ {3} = \boldsymbol {\beta}. \end{array}$
+
+取 $x_{1}=x_{2}=1, x_{3}=2x_{1}=2, x_{4}=3x_{1}=3$ 即可，故 Ax= $\beta$ 有一个特解为 $(1,1,2,3)^{\mathrm{T}}$ ."
+80242202,880,线性代数,第四章 线性方程组,,2,综合题,填空题,,"设 $A = \left(a_{ij}\right)_{3 \times 3}$ 为实矩阵，且 $A_{ij} = a_{ij}(\mathrm{i}, j=1,2,3)$ ，其中 $A_{ij}$ 为 $a_{ij}$ 的代数余子式， $a_{33} = 1$ ， $|A| = 1$ ，则方程组 $A\begin{pmatrix} x_{1} \\ x_{2} \\ x_{3} \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}$ 的解为 \_\_\_\_.",,,,,"$(x_{1},x_{2},x_{3})^{\mathrm{T}}=(0,0,1)^{\mathrm{T}}.$
+
+解 由已知, $A_{ij}=a_{ij}$ , 知 $A^{*}=A^{T}$ , 故
+
+$\left( \begin{array}{l} x _ {1} \\ x _ {2} \\ x _ {3} \end{array} \right) = \boldsymbol {A} ^ {- 1} \left( \begin{array}{l} 0 \\ 0 \\ 1 \end{array} \right) = \frac {\boldsymbol {A} ^ {*}}{| \boldsymbol {A} |} \left( \begin{array}{l} 0 \\ 0 \\ 1 \end{array} \right) = \boldsymbol {A} ^ {\mathrm{T}} \left( \begin{array}{l} 0 \\ 0 \\ 1 \end{array} \right) = \left( \begin{array}{l} a _ {3 1} \\ a _ {3 2} \\ 1 \end{array} \right).$
+
+又由 $|\mathbf{A}| = a_{31}A_{31} + a_{32}A_{32} + a_{33}A_{33} = a_{31}^2 +a_{32}^2 +1 = 1$ ，知 $a_{31} = a_{32} = 0$ ，所以 $(x_{1},x_{2},x_{3})^{\mathrm{T}} = (0,0,1)^{\mathrm{T}}.$"
+80242203,880,线性代数,第四章 线性方程组,,3,综合题,填空题,,"设 A 是 2 阶矩阵，线性方程组 $AX=\begin{pmatrix}3\\2\end{pmatrix}$ 的通解为 $k(-2,1)^{T}+(3,-4)^{T}$ . 若 $\beta=(5,-10)^{T}$ ，则 $\beta^{T}A\beta=$ \_\_\_\_.",,,,,"$- 15$.
+
+解 由已知 $AX = \begin{pmatrix} 3 \\ 2 \end{pmatrix}$ 的通解为
+
+$k \binom {- 2} {1} + \binom {3} {- 4} \stackrel {\text {记}} {=} k \xi + \eta ,$
+
+即有 $A\xi = 0, A\eta = \begin{pmatrix} 3 \\ 2 \end{pmatrix}$ . 将 $\beta$ 用 $\xi, \eta$ 线性表示, 再计算 $A\beta$ .
+
+设 $\beta = k_{1}\begin{pmatrix}-2\\1\end{pmatrix} + k_{2}\begin{pmatrix}3\\-4\end{pmatrix} = \begin{pmatrix}5\\-10\end{pmatrix}$ ，则
+
+$\left\{ \begin{array}{c} - 2 k _ {1} + 3 k _ {2} = 5, \\ k _ {1} - 4 k _ {2} = - 1 0, \end{array} \right.$
+
+解得 $k_{1} = 2, k_{2} = 3$ . 故
+
+$\boldsymbol {A} \boldsymbol {\beta} = \boldsymbol {A} (2 \xi + 3 \eta) = \mathbf {0} + 3 \boldsymbol {A} \eta = 3 \binom {3} {2} = \binom {9} {6},$
+
+从而
+
+$\pmb {\beta} ^ {\mathrm{T}} \pmb {A} \pmb {\beta} = (5, - 1 0) \binom {9} {6} = 5 \times 9 - 1 0 \times 6 = - 1 5.$"
+80242301,880,线性代数,第四章 线性方程组,,1,综合题,解答题,,"设 A 是 $m \times n$ 矩阵， $r(A) = n - 2$ ，非齐次线性方程组 Ax = b 的 3 个解向量 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 满足 $\alpha_{1} + \alpha_{2} = (1, 2, 3, 4)^{T}, \alpha_{2} + 2\alpha_{3} = (-2, 1, 5, 3)^{T}, 2\alpha_{3} + 3\alpha_{1} = (11, 5, -6, 7)^{T}$ ，求方程组 Ax = b 的通解.",,,,,"解 依题设, 找出 Ax = 0 的基础解及 Ax = b 的一个特解.
+
+由解的性质,知 $A\alpha_{1}=b$ , $A\alpha_{2}=b$ , 故 $A\left(\frac{\alpha_{1}+\alpha_{2}}{2}\right)=b$ , 取
+
+$\boldsymbol {\eta} ^ {*} = \frac {1}{2} (\boldsymbol {\alpha} _ {1} + \boldsymbol {\alpha} _ {2}) = \left(\frac {1}{2}, 1, \frac {3}{2}, 2\right) ^ {\mathrm{T}}$
+
+为 $Ax = b$ 的特解. 又 $A(\alpha_{1} + \alpha_{2}) = 2b, A(\alpha_{2} + 2\alpha_{3}) = 3b, A(2\alpha_{3} + 3\alpha_{1}) = 5b$ , 故
+
+$\mathbf {A} \left[ 3 (\boldsymbol {\alpha} _ {1} + \boldsymbol {\alpha} _ {2}) - 2 (\boldsymbol {\alpha} _ {2} + 2 \boldsymbol {\alpha} _ {3}) \right] = 6 \mathbf {b} - 6 \mathbf {b} = \mathbf {0},$
+
+$\mathbf {A} \left[ (2 \boldsymbol {\alpha} _ {3} + 3 \boldsymbol {\alpha} _ {1}) - (\boldsymbol {\alpha} _ {1} + \boldsymbol {\alpha} _ {2}) - (\boldsymbol {\alpha} _ {2} + 2 \boldsymbol {\alpha} _ {3}) \right] = 5 \mathbf {b} - 5 \mathbf {b} = \mathbf {0},$
+
+所以
+
+$\boldsymbol {\eta} _ {1} = 3 \left(\boldsymbol {\alpha} _ {1} + \boldsymbol {\alpha} _ {2}\right) - 2 \left(\boldsymbol {\alpha} _ {2} + 2 \boldsymbol {\alpha} _ {3}\right) = (7, 4, - 1, 6) ^ {\mathrm{T}},$
+
+$\boldsymbol {\eta} _ {2} = (2 \boldsymbol {\alpha} _ {3} + 3 \boldsymbol {\alpha} _ {1}) - (\boldsymbol {\alpha} _ {1} + \boldsymbol {\alpha} _ {2}) - (\boldsymbol {\alpha} _ {2} + 2 \boldsymbol {\alpha} _ {3}) = (1 2, 2, - 1 4, 0) ^ {\mathrm{T}}$
+
+为 Ax = 0 的解,且线性无关(不成比例).
+
+又 $r(A)=n-2$ ，故 $\eta_{1},\eta_{2}$ 是 Ax=0 的基础解系，所以 Ax=b 的通解为
+
+$k _ {1} (7, 4, - 1, 6) ^ {\mathrm{T}} + k _ {2} (1 2, 2, - 1 4, 0) ^ {\mathrm{T}} + \left(\frac {1}{2}, 1, \frac {3}{2}, 2\right) ^ {\mathrm{T}} \quad (k _ {1}, k _ {2} \text {为任意常数}).$"
+80242302,880,线性代数,第四章 线性方程组,,2,综合题,解答题,,"设 $A = (\alpha_{1}, \alpha_{2}, \alpha_{3}, \alpha_{4})$ 是 4 阶矩阵，非齐次线性方程组 $Ax = \beta$ 的通解为 $(1, 2, 2, 1)^{T} + k(1, -2, 4, 0)^{T}$ ，k 为任意常数，记 $B = (\alpha_{3}, \alpha_{2}, \alpha_{1}, \beta - \alpha_{4})$ .
+(I) 证明: $r(B)=2$ ;
+(II) 求方程组 $Bx = \alpha_{1} - \alpha_{2}$ 的通解.",,,,,"证（I）由 Ax = β 的解的结构，知 r(A) = r(α₁, α₂, α₃, α₄) = 3，并有
+
+$(\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}, \boldsymbol {\alpha} _ {4}) \left( \begin{array}{l} 1 \\ 2 \\ 2 \\ 1 \end{array} \right) = \boldsymbol {\beta}, \quad (\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}, \boldsymbol {\alpha} _ {4}) \left( \begin{array}{l} 1 \\ - 2 \\ 4 \\ 0 \end{array} \right) = \mathbf {0},$
+
+即
+
+$\begin{array}{r l} & {\pmb {\alpha} _ {1} + 2 \pmb {\alpha} _ {2} + 2 \pmb {\alpha} _ {3} + \pmb {\alpha} _ {4} = \pmb {\beta},} \\ & {\pmb {\alpha} _ {1} - 2 \pmb {\alpha} _ {2} + 4 \pmb {\alpha} _ {3} = \mathbf {0}.} \end{array}①$
+
+②
+
+由式 ①, 知 $\boldsymbol{B} = (\boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{1}, \boldsymbol{\beta} - \boldsymbol{\alpha}_{4}) = (\boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{1} + 2\boldsymbol{\alpha}_{2} + 2\boldsymbol{\alpha}_{3})$ , 又由式 ②, 知 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}$ 线性相关, 由于 $r(A) = 3$ , 故 $r(B) = r(\boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{1}) = 2$ .
+
+解（Ⅱ）由 $(\boldsymbol{\alpha}_{3},\boldsymbol{\alpha}_{2},\boldsymbol{\alpha}_{1},\boldsymbol{\beta}-\boldsymbol{\alpha}_{4})\begin{pmatrix}0\-1\\1\\0\end{pmatrix}=\boldsymbol{\alpha}_{1}-\boldsymbol{\alpha}_{2}$ ，知 $(0,-1,1,0)^{\mathrm{T}}$ 是 $Bx=\alpha_{1}-\alpha_{2}$ 的一个解。又由于
+
+$(\pmb {\alpha} _ {3}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {1}, \pmb {\alpha} _ {1} + 2 \pmb {\alpha} _ {2} + 2 \pmb {\alpha} _ {3}) \left( \begin{array}{c} {{4}} \\ {{- 2}} \\ {{1}} \\ {{0}} \end{array} \right) = 4 \pmb {\alpha} _ {3} - 2 \pmb {\alpha} _ {2} + \pmb {\alpha} _ {1} = \mathbf {0},$
+
+$(\boldsymbol {\alpha} _ {3}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {1} + 2 \boldsymbol {\alpha} _ {2} + 2 \boldsymbol {\alpha} _ {3}) \left( \begin{array}{c} 2 \\ - 4 \\ 0 \\ 1 \end{array} \right) = \boldsymbol {\alpha} _ {1} - 2 \boldsymbol {\alpha} _ {2} + 4 \boldsymbol {\alpha} _ {3} = \mathbf {0},$
+
+且 $(4, -2, 1, 0)^{\mathrm{T}}$ 与 $(2, -4, 0, 1)^{\mathrm{T}}$ 线性无关，故 $Bx = \alpha_{1} - \alpha_{2}$ 的通解为
+
+$(0, - 1, 1, 0) ^ {\mathrm{T}} + k _ {1} (4, - 2, 1, 0) ^ {\mathrm{T}} + k _ {2} (2, - 4, 0, 1) ^ {\mathrm{T}} \quad \left(k _ {1}, k _ {2} \text {为任意常数}\right).$"
+80242303,880,线性代数,第四章 线性方程组,,3,综合题,解答题,,"设 A 为 $3 \times 4$ 矩阵, $r(A) = 1$ , 若向量组 $\alpha_{1} = (1, 2, 0, 2)^{T}$ , $\alpha_{2} = (-1, -1, 1, a)^{T}$ , $\alpha_{3} = (1, -1, a, 5)^{T}$ , $\alpha_{4} = (2, a, -3, -5)^{T}$ 与方程组 Ax = 0 的基础解系等价, 求 Ax = 0 的通解.",,,,,"解 由 $\alpha_{1}, \alpha_{2}, \alpha_{3}, \alpha_{4}$ 与 $Ax = 0$ 的基础解系等价, 知 $\alpha_{1}, \alpha_{2}, \alpha_{3}, \alpha_{4}$ 必是 $Ax = 0$ 的解, 又由 $r(A) = 1$ , 知 $Ax = 0$ 有 $n - r(A) = 4 - 1 = 3$ 个线性无关的解向量, 故
+
+$\mathrm{r} (\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}, \pmb {\alpha} _ {4}) = 3,$
+
+其极大线性无关组是 Ax = 0 的基础解系.
+
+对 $(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\boldsymbol{\alpha}_{3},\boldsymbol{\alpha}_{4})$ 作初等行变换，有
+
+$(\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}, \pmb {\alpha} _ {4}) = \left( \begin{array}{c c c c} 1 & - 1 & 1 & 2 \\ 2 & - 1 & - 1 & a \\ 0 & 1 & a & - 3 \\ 2 & a & 5 & - 5 \end{array} \right) \longrightarrow \left( \begin{array}{c c c c} 1 & - 1 & 1 & 2 \\ 0 & 1 & - 3 & a - 4 \\ 0 & 0 & a + 3 & 1 - a \\ 0 & 0 & 0 & (1 - a) (a - 4) \end{array} \right).$
+
+当 $a = -3$ 时， $\alpha_{1}, \alpha_{2}, \alpha_{4}$ 是一个极大线性无关组，故 $Ax = 0$ 的通解为
+
+$k_{1}(1,2,0,2)^{\mathrm{T}}+k_{2}(-1,-1,1,-3)^{\mathrm{T}}+k_{3}(2,-3,-3,-5)^{\mathrm{T}}$ ( $k_{1},k_{2},k_{3}$ 为任意常数);
+
+当 a = 1 时， $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 是一个极大线性无关组，故 Ax = 0 的通解为
+
+$k _ {1} (1, 2, 0, 2) ^ {\mathrm{T}} + k _ {2} (- 1, - 1, 1, 1) ^ {\mathrm{T}} + k _ {3} (1, - 1, 1, 5) ^ {\mathrm{T}} \quad \left(k _ {1}, k _ {2}, k _ {3} \right.$
+
+当 $a = 4$ 时， $\alpha_{1},\alpha_{2},\alpha_{3}$ 是一个极大线性无关组，故 $Ax = 0$ 的通解为
+
+$k _ {1} (1, 2, 0, 2) ^ {\mathrm{T}} + k _ {2} (- 1, - 1, 1, 4) ^ {\mathrm{T}} + k _ {3} (1, - 1, 4, 5) ^ {\mathrm{T}} \quad \left(k _ {1}, k _ {2}, k _ {3} \text {为任意常数}\right).$"
+80242304,880,线性代数,第四章 线性方程组,,4,综合题,解答题,,"设 $A$ 是 3 阶方阵, $A = (a_{ij})_{3 \times 3}$ , 且 $a_{ij} = A_{ij} (i, j = 1, 2, 3)$ , 其中 $A_{ij}$ 为 $a_{ij}$ 的代数余子式, $a_{33} \neq 0$ , $b = (a_{13}, a_{23}, a_{33})^T$ , 求非齐次线性方程组 $Ax = b$ 的解.",,,,,"解 求抽象方程组 Ax = b 的通解,首先要讨论秩,从而确定解的情况.
+
+由已知， $\boldsymbol{b}=(a_{13},a_{23},a_{33})^{\mathrm{T}}$ 是A中的第3列，且 $a_{ij}=A_{ij}$ ，故
+
+$\mid \mathbf {A} \mid = a _ {1 3} A _ {1 3} + a _ {2 3} A _ {2 3} + a _ {3 3} A _ {3 3} = a _ {1 3} ^ {2} + a _ {2 3} ^ {2} + a _ {3 3} ^ {2} > 0 \quad (\text {因} a _ {3 3} \neq 0),$
+
+所以 $\mathrm{r}(\mathbf{A}) = 3$ ，即 $Ax = b$ 有唯一解 $x = A^{-1}b.$ 而 $A^{-1} = \frac{A^*}{|A|}$ 故
+
+$\boldsymbol {x} = \frac {1}{| \boldsymbol {A} |} \left( \begin{array}{l l l} A _ {1 1} & A _ {2 1} & A _ {3 1} \\ A _ {1 2} & A _ {2 2} & A _ {3 2} \\ A _ {1 3} & A _ {2 3} & A _ {3 3} \end{array} \right) \left( \begin{array}{l} a _ {1 3} \\ a _ {2 3} \\ a _ {3 3} \end{array} \right) = \frac {1}{| \boldsymbol {A} |} \left( \begin{array}{c} 0 \\ 0 \\ | \boldsymbol {A} | \end{array} \right) = \left( \begin{array}{l} 0 \\ 0 \\ 1 \end{array} \right).$"
+80242305,880,线性代数,第四章 线性方程组,,5,综合题,解答题,,"设 $A = \frac{1}{2} \begin{pmatrix} 1 & 2a & 1 \\ -1 & \sqrt{2} & 2b \\ \sqrt{2} & 2c & -\sqrt{2} \end{pmatrix}$ .
+(I) 当 A 是正交矩阵时, 求 a, b, c 的值;
+(II) 当 A 是正交矩阵时, 求方程组 $Ax=\begin{pmatrix}1\\ 1\\ 1\end{pmatrix}$ 的解.",,,,,"解（Ⅰ）A 是正交矩阵，则 A 的列向量为两两正交的单位向量，故
+
+$\left\{ \begin{array}{l} 2 a - \sqrt {2} + 2 \sqrt {2} c = 0, \\ 1 - 2 b - 2 = 0, \\ 2 a + 2 \sqrt {2} b - 2 \sqrt {2} c = 0, \end{array} \right.$
+
+解得 $a = \frac{1}{\sqrt{2}}, b = -\frac{1}{2}, c = 0$ ，此时 $\mathbf{A}$ 的列向量为单位向量.
+
+（Ⅱ）当A为正交矩阵时，
+
+$\begin{array}{r l} \boldsymbol {x} & = \boldsymbol {A} ^ {- 1} \left( \begin{array}{l} 1 \\ 1 \\ 1 \end{array} \right) = \boldsymbol {A} ^ {\mathrm{T}} \left( \begin{array}{l} 1 \\ 1 \\ 1 \end{array} \right) = \frac {1}{2} \left( \begin{array}{c c c} 1 & \sqrt {2} & 1 \\ - 1 & \sqrt {2} & - 1 \\ \sqrt {2} & 0 & - \sqrt {2} \end{array} \right) ^ {\mathrm{T}} \left( \begin{array}{l} 1 \\ 1 \\ 1 \end{array} \right) \\ & = \frac {1}{2} \left( \begin{array}{c c c} 1 & - 1 & \sqrt {2} \\ \sqrt {2} & \sqrt {2} & 0 \\ 1 & - 1 & - \sqrt {2} \end{array} \right) \left( \begin{array}{l} 1 \\ 1 \\ 1 \end{array} \right) = \frac {1}{\sqrt {2}} \left( \begin{array}{l} 1 \\ 2 \\ - 1 \end{array} \right). \end{array}$"
+80242306,880,线性代数,第四章 线性方程组,,6,综合题,解答题,,"设 A 是 3 阶矩阵, 向量 $\beta = (3, 3, 3)^{T}$ , 非齐次线性方程组 $Ax = \beta$ 的通解为 $k_{1}(1, 2, -2)^{T} + k_{2}(2, 1, 2)^{T} + (1, 1, 1)^{T}$ , $k_{1}, k_{2}$ 为任意常数.
+(I) 证明: 任意 3 维列向量 $\alpha$ 可由 A 的三个特征向量线性表示;
+(II) 若 $\alpha = (1,2,-1)^T$ , 求 $A\alpha$ .",,,,,"证（I）依题设， $(1,1,1)^{\mathrm{T}}$ 是 $Ax = \beta$ 的特解， $(1,2,-2)^{\mathrm{T}}, (2,1,2)^{\mathrm{T}}$ 是 $Ax = 0$ 的基础解系，故 $A\begin{pmatrix} 1 \\ 1 \\ 1 \\ 1 \end{pmatrix} = \begin{pmatrix} 3 \\ 3 \\ 3 \end{pmatrix} = 3\begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}$ ，所以 $\lambda_{1} = 3$ 是 $A$ 的特征值， $\alpha_{1} = (1,1,1)^{\mathrm{T}}$ 是 $A$ 的一个特征向量。因为
+
+$\mathbf {A} \left( \begin{array}{r} 1 \\ 2 \\ - 2 \end{array} \right) = \mathbf {0} = 0 \left( \begin{array}{r} 1 \\ 2 \\ - 2 \end{array} \right), \quad \mathbf {A} \left( \begin{array}{r} 2 \\ 1 \\ 2 \end{array} \right) = \mathbf {0} = 0 \cdot \left( \begin{array}{r} 2 \\ 1 \\ 2 \end{array} \right),$
+
+故 $\lambda_{2} = \lambda_{3} = 0$ 为 $\mathbf{A}$ 的特征值， $\pmb{\alpha}_{2} = (1,2, - 2)^{\mathrm{T}},\pmb{\alpha}_{3} = (2,1,2)^{\mathrm{T}}$ 是 $\mathbf{A}$ 的特征向量.而
+
+$\mid (\alpha_ {1}, \alpha_ {2}, \alpha_ {3}) \mid = \left| \begin{array}{c c c} 1 & 1 & 2 \\ 1 & 2 & 1 \\ 1 & - 2 & 2 \end{array} \right| = - 3 \neq 0,$
+
+故 $\alpha_{1},\alpha_{2},\alpha_{3}$ 为三个线性无关的3维列向量，即 $\alpha_{1},\alpha_{2},\alpha_{3}$ 可作为 $\mathbf{R}^3$ 的一组基，所以任意3维列向量 $\pmb{\alpha}$ 可由 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性表示.
+
+解（Ⅱ）由（Ⅰ）可设 $\alpha = x_{1}\alpha_{1} + x_{2}\alpha_{2} + x_{3}\alpha_{3}$ ，即 $x_{1}\begin{pmatrix}1\\ 1\\ 1\end{pmatrix} + x_{2}\begin{pmatrix}1\\ 2\\ -2\end{pmatrix} + x_{3}\begin{pmatrix}2\\ 1\\ 2\end{pmatrix} = \begin{pmatrix}1\\ 2\\ -1\end{pmatrix}$ ，解方程组
+
+$\left\{ \begin{array}{l} x _ {1} + x _ {2} + 2 x _ {3} = 1, \\ x _ {1} + 2 x _ {2} + x _ {3} = 2, \\ x _ {1} - 2 x _ {2} + 2 x _ {3} = - 1, \end{array} \right.$
+
+得唯一解 $(x_{1}, x_{2}, x_{3})^{\mathrm{T}} = \left(1, \frac{2}{3}, -\frac{1}{3}\right)^{\mathrm{T}}$ ，故
+
+$\begin{array}{r l} \mathbf {A} \boldsymbol {\alpha} & = \mathbf {A} (x _ {1} \boldsymbol {\alpha} _ {1} + x _ {2} \boldsymbol {\alpha} _ {2} + x _ {3} \boldsymbol {\alpha} _ {3}) \\ & = x _ {1} \mathbf {A} \boldsymbol {\alpha} _ {1} + x _ {2} \mathbf {A} \boldsymbol {\alpha} _ {2} + x _ {3} \mathbf {A} \boldsymbol {\alpha} _ {3} = 3 x _ {1} \left( \begin{array}{l} 1 \\ 1 \\ 1 \end{array} \right) = 3 \left( \begin{array}{l} 1 \\ 1 \\ 1 \end{array} \right) = \left( \begin{array}{l} 3 \\ 3 \\ 3 \end{array} \right). \end{array}$"
+80242307,880,线性代数,第四章 线性方程组,,7,综合题,解答题,,"设有 4 维列向量组 $a_1, a_2, a_3, a_4$ ，且 $a_1, a_2, a_3$ 线性无关， $a_4 = a_1 + a_2 + 2a_3$ ,
+$B=(a_{1}-a_{2},a_{2}+a_{3},-a_{1}+ka_{2}+a_{3})$ ，方程组 $Bx=a_{4}$ 有无穷多解.求:
+(I)k 的值;
+(Ⅱ) 方程组的通解.",,,,,"解（I）依题设，
+
+$\boldsymbol {B} = (\boldsymbol {\alpha} _ {1} - \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {2} + \boldsymbol {\alpha} _ {3}, - \boldsymbol {\alpha} _ {1} + k \boldsymbol {\alpha} _ {2} + \boldsymbol {\alpha} _ {3}) = (\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) \left( \begin{array}{c c c} 1 & 0 & - 1 \\ - 1 & 1 & k \\ 0 & 1 & 1 \end{array} \right).$
+
+由 $Bx = \alpha_{4}$ 有无穷多解，知 $r(B) < 3$ ，而 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性无关，故
+
+$\mathrm{r} (\boldsymbol {B}) = \mathrm{r} \left[ \left( \begin{array}{c c c} 1 & 0 & - 1 \\ - 1 & 1 & k \\ 0 & 1 & 1 \end{array} \right) \right] < 3,$
+
+从而 $\begin{vmatrix}1&0&-1\\ -1&1&k\\ 0&1&1\end{vmatrix}=0$ , 得 k=2.
+
+(Ⅱ) 由已知, 得
+
+$(\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) \left( \begin{array}{c c c} 1 & 0 & - 1 \\ - 1 & 1 & 2 \\ 0 & 1 & 1 \end{array} \right) \boldsymbol {x} = (\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) \left( \begin{array}{l} 1 \\ 1 \\ 2 \end{array} \right).$
+
+由 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性无关,知 $\begin{pmatrix}1&0&-1\-1&1&2\\0&1&1\end{pmatrix}x=\begin{vmatrix}1\\1\\2\end{vmatrix}$ ,解此非齐次线性方程组,得通解为
+
+$(1,2,0)^{\mathrm{T}}+k_{1}(1,-1,1)^{\mathrm{T}}$ ( $k_{1}$ 为任意常数)."
+80242308,880,线性代数,第四章 线性方程组,,8,综合题,解答题,,"设 $A = \begin{pmatrix} a - 3 & -1 & 2 \\ -1 & a - 3 & 2 \\ -1 & -1 & a \end{pmatrix}$ , 且 $r(E - A) = 1$ .
+(I) 求 a 的值;
+(II) 若非零列向量 $\alpha, \beta$ 满足 $(A - E)\alpha = \beta, (A^{2} - E)\alpha = 2\beta$ , 求所有满足题意的 $\alpha, \beta$ .",,,,,"解（Ⅰ）由已知，有
+
+$\begin{array}{r l}\mathbf {E} - \mathbf {A}&= \left(\begin{array}{c c c}4 - a&1&- 2\\1&4 - a&- 2\\1&1&1 - a\end{array}\right)\rightarrow \left(\begin{array}{c c c}1&1&1 - a\\1&4 - a&- 2\\4 - a&1&- 2\end{array}\right)\\&\rightarrow \left(\begin{array}{c c c}1&1&1 - a\\0&3 - a&a - 3\\0&a - 3&- (a - 3) (a - 2)\end{array}\right)\rightarrow \left(\begin{array}{c c c}1&1&1 - a\\0&3 - a&a - 3\\0&0&(a - 3) (3 - a)\end{array}\right).\end{array}$
+
+由 $\mathrm{r}(\boldsymbol{E}-\boldsymbol{A})=1$ , 得 a=3.
+
+（Ⅱ）由 $(A-E)\alpha=\beta,(A^{2}-E)\alpha=2\beta$ ，得 $A^{2}\alpha-\alpha=2(A\alpha-\alpha)$ ，即 $(A-E)^{2}\alpha=0$ ，故 $\alpha$ 为方程组 $(A-E)^{2}X=0$ 的非零解.
+
+由（I）知， $A=\begin{pmatrix}0&-1&2\\-1&0&2\\-1&-1&3\end{pmatrix}$ ，计算可得 $(A-E)^{2}=\begin{pmatrix}-1&-1&2\\-1&-1&2\\-1&-1&2\end{pmatrix}^{2}=O$ ，故 $\alpha$ 为任意非零列向量.
+记 $\boldsymbol{\alpha}=(k_{1},k_{2},k_{3})^{\mathrm{T}}$ （ $k_{1},k_{2},k_{3}$ 为不同时为零的常数），
+
+$\boldsymbol {\beta} = (\boldsymbol {A} - \boldsymbol {E}) \boldsymbol {\alpha} = \left( \begin{array}{l l l} - 1 & - 1 & 2 \\ - 1 & - 1 & 2 \\ - 1 & - 1 & 2 \end{array} \right) \left( \begin{array}{l} k _ {1} \\ k _ {2} \\ k _ {3} \end{array} \right) = (2 k _ {3} - k _ {2} - k _ {1}) \left( \begin{array}{l} 1 \\ 1 \\ 1 \end{array} \right),$
+
+故 $\boldsymbol{\alpha}=(k_{1},k_{2},k_{3})^{\mathrm{T}},\boldsymbol{\beta}=(2k_{3}-k_{2}-k_{1})\begin{pmatrix}1\\ 1\\ 1\end{pmatrix}$ ，其中 $k_{1},k_{2},k_{3}$ 不同时为零，且 $k_{1}+k_{2}\neq2k_{3}$ ."
+80242309,880,线性代数,第四章 线性方程组,,9,综合题,解答题,,"设 $A=\begin{pmatrix}-1 & 0 & 1 \\ -1 & 1 & a\end{pmatrix}, B=\begin{pmatrix}-1 & 1 \\ -1 & 1 \\ b & 2\end{pmatrix}.$
+(I) 若方程组 AX=0 的解均是方程组 $B^{T}X=0$ 的解, 但这两个方程组不同解, 求 a,b 的值;
+(II) 若方程组 AX=0 与方程组 $B^{T}X=0$ 有非零公共解, 求 a,b 的值, 并求全部非零公共解.",,,,,"解（I）由 A 有 2 阶非零子式 $\begin{vmatrix}-1 & 0 \\ -1 & 1\end{vmatrix}$ ，且 A 是 $2 \times 3$ 矩阵，知 $r(A) = 2$ ，从而 AX = 0 有 $3 - r(A) = 3 - 2 = 1$ 个基础解.
+
+由 AX = 0 的解均是 $B^{T}X = 0$ 的解，但这两个方程组不同解，知 $B^{T}X = 0$ 的基础解系中至少有两个解向量，故 $\mathrm{r}(B^{\mathrm{T}}) \leqslant 3 - 2 = 1$ . 又因 B 是非零矩阵，故 $\mathrm{r}(B^{\mathrm{T}}) = \mathrm{r}(B) \geqslant 1$ ，即 $\mathrm{r}(B^{\mathrm{T}}) = 1$ .
+
+由 $B^{T}=\begin{pmatrix}-1&-1&b\\1&1&2\end{pmatrix}\rightarrow\begin{pmatrix}-1&-1&b\\0&0&2+b\end{pmatrix}$ ，知 b=-2.
+
+由 $A=\begin{pmatrix}-1&0&1\-1&1&a\end{pmatrix}\rightarrow\begin{pmatrix}-1&0&1\\0&1&a-1\end{pmatrix}$ ，得 AX=0 的基础解为 $(x_{1},x_{2},x_{3})^{\mathrm{T}}=(1,1-a,1)^{\mathrm{T}}$ ，将其代入 $B^{T}X=0$ ，即 $-x_{1}-x_{2}-2x_{3}=0$ ，得 a=4。
+
+（Ⅱ）由题设，知方程组 $\left\{\begin{aligned}A X&=0,\\ B^{T}X&=0\end{aligned}\right.$ 有非零解，从而知 $\mathrm{r}\binom{A}{B^{T}}<3.$ 对 $\binom{A}{B^{T}}$ 作初等行变换，有
+
+$\binom {\boldsymbol {A}} {\boldsymbol {B} ^ {\mathrm{T}}} = \left(\begin{array}{c c c}- 1&0&1\- 1&1&a\- 1&- 1&b\\1&1&2\end{array}\right)\rightarrow \left(\begin{array}{c c c}- 1&0&1\\0&1&a - 1\\0&0&a + b - 2\\0&0&4 - a\end{array}\right),$
+
+故 $a+b-2=0,4-a=0$ , 解得a=4,b=-2.
+
+当 $a = 4, b = -2$ 时，有
+
+$\binom {\boldsymbol {A}} {\boldsymbol {B} ^ {\mathrm{T}}} \rightarrow \left(\begin{array}{c c c}- 1&0&1\\0&1&3\\0&0&0\\0&0&0\end{array}\right),$
+
+解得 $(x_{1}, x_{2}, x_{3})^{\mathrm{T}} = k(1, -3, 1)^{\mathrm{T}} (k \neq 0)$ 为全部非零公共解."
+80242310,880,线性代数,第四章 线性方程组,,10,综合题,解答题,,"设 $A = \begin{pmatrix} 2 & 0 & 0 & 2 \\ 1 & 1 & 0 & 3 \\ 0 & 1 & 3 & 5 \end{pmatrix}, B = \begin{pmatrix} 1 & 0 & 1 & 2 \\ 0 & 2 & 0 & 4 \\ 0 & -1 & a - 1 & a - 3 \end{pmatrix}, \alpha = \begin{pmatrix} 2 \\ 2 \\ 1 \end{pmatrix}, \beta = \begin{pmatrix} 1 \\ 2 \\ -1 \end{pmatrix}$ .
+(I) 证明: 方程组 $AX = \alpha$ 的解均是方程组 $BX = \beta$ 的解;
+(II) 若方程组 $AX = \alpha$ 与方程组 $BX = \beta$ 不同解, 求 a 的值.",,,,,"证（Ⅰ）对 $(\boldsymbol{A},\boldsymbol{\alpha})$ 作初等行变换，有
+
+$\begin{array}{r l}(\mathbf {A}, \boldsymbol {\alpha})&= \left(\begin{array}{c c c c c}2&0&0&2&2\\1&1&0&3&2\\0&1&3&5&1\end{array}\right)\rightarrow \left(\begin{array}{c c c c c}1&0&0&1&1\\1&1&0&3&2\\0&1&3&5&1\end{array}\right)\\&\rightarrow \left(\begin{array}{c c c c c}1&0&0&1&1\\0&1&0&2&1\\0&1&3&5&1\end{array}\right)\rightarrow \left(\begin{array}{c c c c c}1&0&0&1&1\\0&1&0&2&1\\0&0&1&1&0\end{array}\right).\end{array}$
+
+令 $x_{4}=1$ ，得 AX=0 的一个基础解系为 $(-1,-2,-1,1)^{\mathrm{T}}$ .
+令 $x_{4}=0$ ，得 $AX=\alpha$ 的一个特解为 $(1,1,0,0)^{\mathrm{T}}$ .
+
+故 $AX = \alpha$ 的通解为
+
+$k \left( \begin{array}{c} - 1 \\ - 2 \\ - 1 \\ 1 \end{array} \right) + \left( \begin{array}{c} 1 \\ 1 \\ 0 \\ 0 \end{array} \right) = \left( \begin{array}{c} - k + 1 \\ - 2 k + 1 \\ - k \\ k \end{array} \right).$
+
+计算
+
+$\begin{array}{r l} \boldsymbol {B} & \left( \begin{array}{c} - k + 1 \\ - 2 k + 1 \\ - k \\ k \end{array} \right) = \left( \begin{array}{c c c c} 1 & 0 & 1 & 2 \\ 0 & 2 & 0 & 4 \\ 0 & - 1 & a - 1 & a - 3 \end{array} \right) \left( \begin{array}{c} - k + 1 \\ - 2 k + 1 \\ - k \\ k \end{array} \right) \\ & = \left( \begin{array}{c} - k + 1 - k + 2 k \\ 2 (- 2 k + 1) + 4 k \\ - (- 2 k + 1) - (a - 1) k + (a - 3) k \end{array} \right) = \left( \begin{array}{c} 1 \\ 2 \\ - 1 \end{array} \right). \end{array}$
+
+故 AX = $\alpha$ 的解均是 BX = $\beta$ 的解.
+
+解（Ⅱ）由（Ⅰ）知， $AX=\alpha$ 的解均是 $BX=\beta$ 的解，但 $AX=\alpha$ 与 $BX=\beta$ 不同解，故 $AX=\alpha$ 的解集是 $BX=\beta$ 的解集的真子集，从而 AX=0 的解集是 BX=0 的解集的真子集.
+
+由（Ⅰ）知， $\mathrm{r}(\boldsymbol{A}) = 3$ ，故 $\mathrm{r}(\boldsymbol{B}) < 3$ 。又 B 有 2 阶非零子式 $\begin{vmatrix} 1 & 0 \\ 0 & 2 \end{vmatrix}$ ，所以 $\mathrm{r}(\boldsymbol{B}) \geqslant 2$ ，故 $\mathrm{r}(\boldsymbol{B}) = 2$ 。对 B 作初等行变换，有
+
+$\boldsymbol {B} = \left(\begin{array}{c c c c}1&0&1&2\\0&2&0&4\\0&- 1&a - 1&a - 3\end{array}\right)\rightarrow \left(\begin{array}{c c c c}1&0&1&2\\0&1&0&2\\0&- 1&a - 1&a - 3\end{array}\right)\rightarrow \left(\begin{array}{c c c c}1&0&1&2\\0&1&0&2\\0&0&a - 1&a - 1\end{array}\right).$
+
+由 $\mathrm{r}(\boldsymbol{B})=2$ , 知 a-1=0 , 即 a=1 ."
+80242311,880,线性代数,第四章 线性方程组,,11,综合题,解答题,,"设矩阵 $A = \begin{pmatrix} a & 1 & 1 \\ 0 & a - 1 & 0 \\ 1 & 1 & a \end{pmatrix}$ 不可逆, $\beta = \begin{pmatrix} b \\ 1 \\ 1 \end{pmatrix}$ . 已知方程组 $A^T X = 0$ 的解均是 $\beta^T X = 0$ 的解. 求:
+(I)a,b 的值;
+(II) 可逆矩阵 P，使得 $P^{-1}AP = \Lambda$ .",,,,,"解 (I) 由 $A^{\mathrm{T}}X = 0$ 的解均是 $\pmb{\beta}^{\mathrm{T}}\pmb{X} = 0$ 的解, 知 $A^{\mathrm{T}}X = 0$ 与 $\left\{ \begin{array}{l} A^{\mathrm{T}}X = 0, \\ \pmb{\beta}^{\mathrm{T}}X = 0 \end{array} \right.$ 同解. 故 $\mathrm{r}(A^{\mathrm{T}}) = \mathrm{r}\left[\binom{A^{\mathrm{T}}}{\pmb{\beta}^{\mathrm{T}}}\right]$ , 即 $\mathrm{r}(A) = \mathrm{r}(A, \pmb{\beta})$ . 对 $(A, \pmb{\beta})$ 作初等行变换, 有
+
+$\begin{array}{r l}(\boldsymbol {A}, \boldsymbol {\beta})&= \left(\begin{array}{c c c c}a&1&1&b\\0&a - 1&0&1\\1&1&a&1\end{array}\right)\rightarrow \left(\begin{array}{c c c c}1&1&a&1\\0&a - 1&0&1\\a&1&1&b\end{array}\right)\\&\rightarrow \left(\begin{array}{c c c c}1&1&a&1\\0&a - 1&0&1\\0&1 - a&1 - a ^ {2}&b - a\end{array}\right)\rightarrow \left(\begin{array}{c c c c}1&1&a&1\\0&a - 1&0&1\\0&0&1 - a ^ {2}&b - a + 1\end{array}\right).\end{array}$
+
+当 $a = 1$ 时， $\mathrm{r}(\mathbf{A}) = 1,\mathrm{r}(\mathbf{A},\pmb {\beta}) = 2$ ，故 $a = 1$ 舍去.
+
+当 $a = -1$ 时， $(\mathbf{A},\pmb {\beta})\rightarrow \left[ \begin{array}{ccc}1 & 1 & -1\\ 0 & -2 & 0\\ 0 & 0 & 0 \end{array} \right]$ $b + 2$
+
+故 b = -2，有 $\mathrm{r}(\mathbf{A}) = \mathrm{r}(\mathbf{A}, \boldsymbol{\beta}) = 2.$
+
+综上所述，a = -1, b = -2.
+
+（Ⅱ）由（Ⅰ）知， $A=\begin{pmatrix}-1&1&1\\0&-2&0\\1&1&-1\end{pmatrix}$ ，则由
+
+$\left| \lambda \boldsymbol {E} - \boldsymbol {A} \right| = \left| \begin{array}{c c c} {\lambda + 1} & {- 1} & {- 1} \\ {0} & {\lambda + 2} & {0} \\ {- 1} & {- 1} & {\lambda + 1} \end{array} \right| = \lambda (\lambda + 2) ^ {2} = 0,$
+
+得 A 的特征值为 $\lambda_{1}=0, \lambda_{2}=\lambda_{3}=-2.$
+
+由 $0E - A = \begin{pmatrix} 1 & -1 & -1 \\ 0 & 2 & 0 \\ -1 & -1 & 1 \end{pmatrix} \to \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix}$ , 得 $\alpha_{1} = (1,0,1)^{\mathrm{T}}$ .
+
+由 $-2\pmb{E} - \pmb{A} = \begin{bmatrix} -1 & -1 & -1\\ 0 & 0 & 0\\ -1 & -1 & -1 \end{bmatrix}\rightarrow \begin{bmatrix} 1 & 1 & 1\\ 0 & 0 & 0\\ 0 & 0 & 0 \end{bmatrix}$ ，得 $\pmb{\alpha}_{1} = (-1,1,0)^{\mathrm{T}},\pmb{\alpha}_{2} = (-1,0,1)^{\mathrm{T}}.$
+
+令 $\boldsymbol{P} = (\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}) = \begin{pmatrix} 1 & -1 & -1 \\ 0 & 1 & 0 \\ 1 & 0 & 1 \end{pmatrix}$ ，则 $P^{-1} A P = \begin{pmatrix} 0 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & -2 \end{pmatrix} = \Lambda$ ."
+80243301,880,线性代数,第四章 线性方程组,,1,拓展题,解答题,,设 A 是 $m \times n$ 矩阵，b 为 m 维列向量，证明: 线性方程组 $A^{T}Ax = A^{T}b$ 必有解.,,,,,"证 只要证明 $r(A^{T}A) = r(A^{T}A \mid A^{T}b)$ .
+
+记 $\boldsymbol{A} = (\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n})$ ，则
+
+$\begin{array}{r l} \mathrm{r} (\boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {A} \mid \boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {b}) & = \mathrm{r} (\boldsymbol {A} ^ {\mathrm{T}} (\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \dots , \boldsymbol {\alpha} _ {n}) \mid \boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {b}) \\ & = \mathrm{r} ((\boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {\alpha} _ {1}, \boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {\alpha} _ {2}, \dots , \boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {\alpha} _ {n}) \mid \boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {b}) = \mathrm{r} (\boldsymbol {A} ^ {\mathrm{T}} (\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \dots , \boldsymbol {\alpha} _ {n} \mid \boldsymbol {b})) \\ & \leqslant \mathrm{r} (\boldsymbol {A} ^ {\mathrm{T}}) = \mathrm{r} (\boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {A}). \end{array}$
+
+又 $r(A^{T}A \mid A^{T}b) \geqslant r(A^{T}A)$ ，故 $r(A^{T}A \mid A^{T}b) = r(A^{T}A)$ ，所以方程组 $A^{T}Ax = A^{T}b$ 必有解."
+80243302,880,线性代数,第四章 线性方程组,,2,拓展题,解答题,,"(I) 设实矩阵 $A_{m \times n}$ 的秩为 $m$ ，证明: 存在实矩阵 $B_{n \times m}$ 且 $r(B) = m$ ，使得 $AB = E$ ，其中 $E$ 为 $m$ 阶单位矩阵；
+(II) 若 $A=\begin{pmatrix}-1&0&1&-1\\1&-1&-1&-1\\0&1&0&1\end{pmatrix}$ ，求满足 $AB=E$ 且 $r(B)=3$ 的所有实矩阵 $B_{4\times3}$ .",,,,,"证 (I) 当 m = n 时, 取 $B = A^{-1}$ , 则有 AB = E.
+
+当 $m < n$ 时，由 $\mathrm{r}(\mathbf{A}) = m$ ，知 $\mathbf{A}$ 中存在 $m$ 个列，由这些列构成 $m$ 阶子式 $|\mathbf{A}_1| \neq 0$ ，则 $\mathbf{A}$ 可经过初等列变换化为使 $\mathbf{A}_1$ 位于 $\mathbf{A}$ 的前 $m$ 列，从而存在可逆矩阵 $\pmb{P}_{n \times n}$ ，使得
+
+$\mathbf {A} \mathbf {P} = (\mathbf {A} _ {1}, \mathbf {A} _ {2}),$
+
+其中 $A_{1}$ 为 m 阶可逆矩阵.
+
+令 $B = P \begin{pmatrix} A_{1}^{-1} \\ O \end{pmatrix}$ ，则 $\mathrm{r}(B) = \mathrm{r}(A_{1}^{-1}) = m$ ，且有
+
+$\mathbf {A} \mathbf {B} = (\mathbf {A} _ {1}, \mathbf {A} _ {2}) \binom {\mathbf {A} _ {1} ^ {- 1}} {\mathbf {O}} = \mathbf {E}.$
+
+解（Ⅱ）设 $E=(e_{1},e_{2},e_{3})$ ，其中 $e_{1},e_{2},e_{3}$ 为3维单位列向量， $B=(\beta_{1},\beta_{2},\beta_{3})$ ，其中 $\beta_{1},\beta_{2},\beta_{3}$ 为4维列向量。由AB=E，知 $A\beta_{1}=e_{1},A\beta_{2}=e_{2},A\beta_{3}=e_{3}$ 。
+
+对 $(A:E)$ 作初等行变换,有
+
+$\begin{array}{r l}(\mathbf {A} \vdots \mathbf {E})&= \left(\begin{array}{c c c c c c c}- 1&0&1&- 1&1&0&0\\1&- 1&- 1&- 1&0&1&0\\0&1&0&1&0&0&1\end{array}\right)\rightarrow \left(\begin{array}{c c c c c c c}- 1&0&1&- 1&1&0&0\\0&- 1&0&- 2&1&1&0\\0&1&0&1&0&0&1\end{array}\right)\\&\rightarrow \left(\begin{array}{c c c c c c c}- 1&0&1&- 1&1&0&0\\0&- 1&0&- 2&1&1&0\\0&0&0&- 1&1&1&1\end{array}\right)\rightarrow \left(\begin{array}{c c c c c c c}- 1&0&1&0&0&- 1&- 1\\0&- 1&0&0&- 1&- 1&- 2\\0&0&0&- 1&1&1&1\end{array}\right),\end{array}$
+
+解得
+
+$\boldsymbol {\beta} _ {1} = k _ {1} \left( \begin{array}{l} 1 \\ 0 \\ 1 \\ 0 \end{array} \right) + \left( \begin{array}{c} 0 \\ 1 \\ 0 \\ - 1 \end{array} \right), \quad \boldsymbol {\beta} _ {2} = k _ {2} \left( \begin{array}{l} 1 \\ 0 \\ 1 \\ 0 \end{array} \right) + \left( \begin{array}{c} 1 \\ 1 \\ 0 \\ - 1 \end{array} \right), \quad \boldsymbol {\beta} _ {3} = k _ {3} \left( \begin{array}{l} 1 \\ 0 \\ 1 \\ 0 \end{array} \right) + \left( \begin{array}{c} 1 \\ 2 \\ 0 \\ - 1 \end{array} \right),$
+
+其中， $k_{1}, k_{2}, k_{3}$ 为任意常数。故
+
+$\boldsymbol {B} = (\boldsymbol {\beta} _ {1}, \boldsymbol {\beta} _ {2}, \boldsymbol {\beta} _ {3}) = \left( \begin{array}{c c c} k _ {1} & k _ {2} + 1 & k _ {3} + 1 \\ 1 & 1 & 2 \\ k _ {1} & k _ {2} & k _ {3} \\ - 1 & - 1 & - 1 \end{array} \right).$"

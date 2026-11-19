@@ -1,0 +1,761 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+fd-0201,辅导讲义,线性代数,第二章 矩阵,,1,,,题型一 矩阵运算,"【例2.1】设 $\alpha, \beta$ 是三维列向量, $\beta^{T}$ 是 $\beta$ 的转置,
+
+如果 $\alpha\beta^{T}=\begin{bmatrix}1&-1&2\\ -2&2&-4\\ 3&-3&6\end{bmatrix}$ ，则 $\alpha^{T}\beta=$ ____.",,,,,"设 $\boldsymbol{\alpha}=(x_{1},x_{2},x_{3})^{\mathrm{T}},\boldsymbol{\beta}=(y_{1},y_{2},y_{3})^{\mathrm{T}}$ ，则
+
+$$
+\pmb {\alpha} \pmb {\beta} ^ {\mathrm{T}} = \left[ \begin{array}{l} x _ {1} \\ x _ {2} \\ x _ {3} \end{array} \right] (y _ {1}, y _ {2}, y _ {3}) = \left[ \begin{array}{l l l} x _ {1} y _ {1} & x _ {1} y _ {2} & x _ {1} y _ {3} \\ x _ {2} y _ {1} & x _ {2} y _ {2} & x _ {2} y _ {3} \\ x _ {3} y _ {1} & x _ {3} y _ {2} & x _ {3} y _ {3} \end{array} \right],
+$$
+
+而 $\boldsymbol{\alpha}^{\top}\boldsymbol{\beta}=(x_{1},x_{2},x_{3})\begin{bmatrix}y_{1}\\ y_{2}\\ y_{3}\end{bmatrix}=x_{1}y_{1}+x_{2}y_{2}+x_{3}y_{3}.$ 
+
+$$
+\boldsymbol {\alpha} ^ {T} \boldsymbol {\beta} = 1 + 2 + 6 = 9.
+$$"
+fd-0202,辅导讲义,线性代数,第二章 矩阵,,2,,,题型一 矩阵运算,【例2.2】已知 $\mathbf{A} = \begin{bmatrix} 2 & 6 & 4 \\ -1 & -3 & -2 \\ 2 & 6 & 4 \end{bmatrix}$ ，则 $\mathbf{A}^n =$ ____.,,,,,"由 $\mathbf{A} = \begin{bmatrix} 2 \\ -1 \\ 2 \end{bmatrix}(1,3,2)$ , 故
+
+$$
+\mathbf {A} ^ {2} = \left[ \begin{array}{l} 2 \\ - 1 \\ 2 \end{array} \right] (1, 3, 2) \left[ \begin{array}{l} 2 \\ - 1 \\ 2 \end{array} \right] (1, 3, 2).
+$$
+
+因(1,3,2) $\begin{bmatrix}2\\ -1\\ 2\end{bmatrix}=2+(-3)+4=3$ ，所以
+
+$$
+\mathbf {A} ^ {2} = 3 \left[ \begin{array}{l} 2 \\ - 1 \\ 2 \end{array} \right] (1, 3, 2) = 3 \mathbf {A}.
+$$
+
+那么 $A^{3}=A^{2}\cdot A=3A^{2}=3^{2}A$ ，归纳得 $A^{n}=3^{n-1}A$ .
+
+【评注】若秩 $r(A) = 1$ ，则 $\mathbf{A}$ 可分解为一个列向量与一个行向量的乘积，有 $A^2 = lA$ 之规律，从而 $A^n = l^{n - 1}A$ 
+
+$$
+\mathbf {A} = \left[ \begin{array}{l l l} a _ {1} b _ {1} & a _ {1} b _ {2} & a _ {1} b _ {3} \\ a _ {2} b _ {1} & a _ {2} b _ {2} & a _ {2} b _ {3} \\ a _ {3} b _ {1} & a _ {3} b _ {2} & a _ {3} b _ {3} \end{array} \right] = \left[ \begin{array}{l} a _ {1} \\ a _ {2} \\ a _ {3} \end{array} \right] (b _ {1}, b _ {2}, b _ {3}) = \pmb {\alpha} \pmb {\beta} ^ {\mathrm{T}},
+$$
+
+那么
+
+$$
+\boldsymbol {A} ^ {2} = (\boldsymbol {\alpha} \boldsymbol {\beta} ^ {\mathrm{T}}) (\boldsymbol {\alpha} \boldsymbol {\beta} ^ {\mathrm{T}}) = \boldsymbol {\alpha} (\boldsymbol {\beta} ^ {\mathrm{T}} \boldsymbol {\alpha}) \boldsymbol {\beta} ^ {\mathrm{T}} = l \boldsymbol {\alpha} \boldsymbol {\beta} ^ {\mathrm{T}} = l \boldsymbol {A},
+$$
+
+其中
+
+$$
+l = \boldsymbol {\beta} ^ {\mathrm{T}} \boldsymbol {\alpha} = \boldsymbol {\alpha} ^ {\mathrm{T}} \boldsymbol {\beta} = a _ {1} b _ {1} + a _ {2} b _ {2} + a _ {3} b _ {3} = \sum a _ {i i}.
+$$"
+fd-0203,辅导讲义,线性代数,第二章 矩阵,,3,,,题型一 矩阵运算,"【例2.3】若 $\mathbf{A} = \begin{bmatrix} 0 & 0 & 0 \\ 2 & 0 & 0 \\ 1 & 3 & 0 \end{bmatrix}$ , 则 $\mathbf{A}^2 = \_\_\_\_, \mathbf{A}^3 = \_\_\_\_.$",,,,,"由矩阵乘法,有
+
+$$
+\mathbf {A} ^ {2} = \left[ \begin{array}{l l l} 0 & 0 & 0 \\ 2 & 0 & 0 \\ 1 & 3 & 0 \end{array} \right] \left[ \begin{array}{l l l} 0 & 0 & 0 \\ 2 & 0 & 0 \\ 1 & 3 & 0 \end{array} \right] = \left[ \begin{array}{l l l} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 6 & 0 & 0 \end{array} \right],
+$$
+
+$$
+\mathbf {A} ^ {3} = \left[ \begin{array}{l l l} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 6 & 0 & 0 \end{array} \right] \left[ \begin{array}{l l l} 0 & 0 & 0 \\ 2 & 0 & 0 \\ 1 & 3 & 0 \end{array} \right] = \left[ \begin{array}{l l l} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{array} \right] = \mathbf {O}.
+$$
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/ee3af1793736cd24bdd6df4e4a60696216d55c59d2d4d98185226dfdf9667094.jpg)
+
+
+学习札记
+
+【评注】对这类四阶矩阵，有
+
+$$
+\pmb {B} = \left[ \begin{array}{c c c c} {0} & {1} & {2} & {3} \\ {0} & {0} & {4} & {5} \\ {0} & {0} & {0} & {6} \\ {0} & {0} & {0} & {0} \end{array} \right] ^ {3} = \left[ \begin{array}{c c c c} {0} & {0} & {0} & {2 4} \\ {0} & {0} & {0} & {0} \\ {0} & {0} & {0} & {0} \\ {0} & {0} & {0} & {0} \end{array} \right], \text {而} \pmb {B} ^ {4} = \pmb {O}, \pmb {B} ^ {2} = ?
+$$"
+fd-0204,辅导讲义,线性代数,第二章 矩阵,,4,,,题型一 矩阵运算,【例2.4】若 $\mathbf{A} = \begin{bmatrix} 1 & 2 & 3 \\ 0 & 1 & 4 \\ 0 & 0 & 1 \end{bmatrix}$ ，则 $\mathbf{A}^n =$ ____.,,,,,"以例2.3为背景,本题可把A分解为两个矩阵之和,即
+
+$$
+\mathbf {A} = \left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right] + \left[ \begin{array}{l l l} 0 & 2 & 3 \\ 0 & 0 & 4 \\ 0 & 0 & 0 \end{array} \right] = \mathbf {E} + \mathbf {B},
+$$
+
+那么
+
+$$
+\begin{array}{r l} & {\mathbf {A} ^ {n} = (\mathbf {E} + \mathbf {B}) ^ {n}} \\ & {\quad = \mathbf {E} ^ {n} + n \mathbf {E} ^ {n - 1} \mathbf {B} + \frac {n (n - 1)}{2} \mathbf {E} ^ {n - 2} \mathbf {B} ^ {2}} \\ & {\quad = \left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right] + n \left[ \begin{array}{l l l} 0 & 2 & 3 \\ 0 & 0 & 4 \\ 0 & 0 & 0 \end{array} \right] + \frac {n (n - 1)}{2} \left[ \begin{array}{l l l} 0 & 0 & 8 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{array} \right]} \\ & {\quad = \left[ \begin{array}{l l l} 1 & 2 n & 4 n ^ {2} - n \\ 0 & 1 & 4 n \\ 0 & 0 & 1 \end{array} \right].} \end{array}
+$$"
+fd-0205,辅导讲义,线性代数,第二章 矩阵,,5,,,题型一 矩阵运算,"【例2.5】已知 $\mathbf{A} = \begin{bmatrix} 2 & 0 & 1 \\ 0 & 3 & 0 \\ 2 & 0 & 2 \end{bmatrix}, \mathbf{B} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 0 \end{bmatrix}$ ，若 $X$ 满足 $AX + 2B = BA + 2X$ ，则 $X^4 =$ ____.",,,,,"由矩阵方程,有
+
+即
+
+$$
+\begin{array}{r l} & {\mathbf {A X} - 2 \mathbf {X} = \mathbf {B A} - 2 \mathbf {B},} \\ & {(\mathbf {A} - 2 \mathbf {E}) \mathbf {X} = \mathbf {B} (\mathbf {A} - 2 \mathbf {E}).} \end{array}
+$$
+
+因为 $\mathbf{A} - 2\mathbf{E} = \begin{bmatrix} 0 & 0 & 1\\ 0 & 1 & 0\\ 2 & 0 & 0 \end{bmatrix}$ 可逆，所以
+
+学习札记
+
+从而
+
+$$
+\boldsymbol {X} = (\boldsymbol {A} - 2 \boldsymbol {E}) ^ {- 1} \boldsymbol {B} (\boldsymbol {A} - 2 \boldsymbol {E}),
+$$
+
+$$
+\begin{array}{r l} & {\pmb {X} ^ {4} = (\pmb {A} - 2 \pmb {E}) ^ {- 1} \pmb {B} ^ {4} (\pmb {A} - 2 \pmb {E})} \\ & {\qquad = \left[ \begin{array}{l l l} {0} & {0} & {\frac {1}{2}} \\ {0} & {1} & {0} \\ {1} & {0} & {0} \end{array} \right] \left[ \begin{array}{l l l} {1} & {0} & {0} \\ {0} & {1} & {0} \\ {0} & {0} & {0} \end{array} \right] \left[ \begin{array}{l l l} {0} & {0} & {1} \\ {0} & {1} & {0} \\ {2} & {0} & {0} \end{array} \right] = \left[ \begin{array}{l l l} {0} & {0} & {0} \\ {0} & {1} & {0} \\ {0} & {0} & {1} \end{array} \right].} \end{array}
+$$
+
+【评注】若 $P^{-1}AP = B$ ，则 $(P^{-1}AP)(P^{-1}AP) = B^{2}$ ，即 $P^{-1}A^{2}P = B^{2}$ 。依此类推，得 $P^{-1}A^{n}P = B^{n}$ ，从而 $A^{n} = PB^{n}P^{-1}$ 。"
+fd-0206,辅导讲义,线性代数,第二章 矩阵,,6,,,题型一 矩阵运算,【练习】证明如果 $A^2 = AB$ ，则 $A^n = AB^{n-1}$ 。,,,,,
+fd-0207,辅导讲义,线性代数,第二章 矩阵,,1,,,题型二 特殊矩阵,"【例2.6】设 $n$ 阶矩阵 $\mathbf{A}$ 可逆，证明
+(1) $(A^{*})^{-1}=(A^{-1})^{*}$ ; 
+(2) $(A^{*})^{*}=|A|^{n-2}A\quad(n\geqslant3).$",,,,,"因 $AA^{*}=|A|E, |A|\neq0.$ 
+
+(1) 有 $\frac{1}{|\mathbf{A}|}\mathbf{A} \cdot \mathbf{A}^{*} = \mathbf{E} \Rightarrow (\mathbf{A}^{*})^{-1} = \frac{1}{|\mathbf{A}|}\mathbf{A}$ .
+
+① 
+
+$$
+\mathbf {A} ^ {- 1} \cdot (\mathbf {A} ^ {- 1}) ^ {*} = | \mathbf {A} ^ {- 1} | \mathbf {E} \Rightarrow (\mathbf {A} ^ {- 1}) ^ {*} = | \mathbf {A} ^ {- 1} | \mathbf {A} = \frac {1}{| \mathbf {A} |} \mathbf {A},\tag{②}
+$$
+
+①②得 $(\boldsymbol{A}^{*})^{-1}=(\boldsymbol{A}^{-1})^{*}$ .
+
+(2) 因 A 可逆, 有 $\left|A^{*}\right|=\left|A\right|^{n-1}\neq0$ , 知 $A^{*}$ 可逆.
+
+$$
+\begin{array}{r l} \mathbf {A} ^ {*} \cdot (\mathbf {A} ^ {*}) ^ {*} & = | \mathbf {A} ^ {*} | \mathbf {E} \Rightarrow (\mathbf {A} ^ {*}) ^ {*} = | \mathbf {A} ^ {*} | (\mathbf {A} ^ {*}) ^ {- 1} \\ & = | \mathbf {A} | ^ {n - 1} \cdot \frac {1}{| \mathbf {A} |} \mathbf {A} = | \mathbf {A} | ^ {n - 2} \mathbf {A}. \end{array}
+$$
+
+【评注】如 A 不可逆，则 $(A^{*})^{*}=O$ （当 $n\geqslant3$ ）；若 A 是二阶矩阵，则 $(A^{*})^{*}=A$ 。一手最快资料同步 VX：kys985121"
+fd-0208,辅导讲义,线性代数,第二章 矩阵,,2,,,题型二 特殊矩阵,"【例2.7】已知 A, B 均为 n 阶可逆矩阵，证明 $(AB)^{*} = B^{*}A^{*}$ .",,,,,"因 $AA^{*} = |A| E$ ，有
+
+$$
+(\mathbf {A B}) (\mathbf {A B}) ^ {*} = | \mathbf {A B} | \mathbf {E},
+$$
+
+由 A, B 可逆, 知 AB 可逆. 于是
+
+$$
+\begin{array}{r l} (\mathbf {A B}) ^ {*} & = | \mathbf {A B} | (\mathbf {A B}) ^ {- 1} = | \mathbf {A} | \cdot | \mathbf {B} | \cdot \mathbf {B} ^ {- 1} \mathbf {A} ^ {- 1} \\ & = | \mathbf {B} | \mathbf {B} ^ {- 1} \cdot | \mathbf {A} | \mathbf {A} ^ {- 1} = \mathbf {B} ^ {*} \mathbf {A} ^ {*}. \end{array}
+$$"
+fd-0209,辅导讲义,线性代数,第二章 矩阵,,3,,,题型二 特殊矩阵,"【例2.8】三阶矩阵 $\mathbf{A},\mathbf{B}$ 满足关系式 $\mathbf{A}^{*}\mathbf{BA} = (5\mathbf{A}^{*})^{*} + \mathbf{BA}$ ，且 $\mathbf{A} = \begin{bmatrix} 1 & & \\ & 2 & \\ & & 3 \end{bmatrix}$ ，则 $\mathbf{B} =$ ____.",,,,,"由 $(k\mathbf{A})^{*} = k^{n - 1}\mathbf{A}^{*},(\mathbf{A}^{*})^{*} = |\mathbf{A}|^{n - 2}\mathbf{A}$ $\Rightarrow (5\mathbf{A}^{*})^{*} = 5^{2}(\mathbf{A}^{*})^{*} = 150\mathbf{A}$ $\Rightarrow \mathbf{A}^{\star}\mathbf{B} = 150\mathbf{E} + \mathbf{B}$ $\Rightarrow \mathbf{AA}^{\star}\mathbf{B} = 150\mathbf{A} + \mathbf{AB}$ $\Rightarrow (6\mathbf{E} - \mathbf{A})\mathbf{B} = 150\mathbf{A},$ 
+
+$$
+\boldsymbol {B} = 1 5 0 (6 \boldsymbol {E} - \boldsymbol {A}) ^ {- 1} \boldsymbol {A} = 1 5 0 \left[ \begin{array}{l l l} 5 & & \\ & 4 & \\ & & 3 \end{array} \right] ^ {- 1} \left[ \begin{array}{l l l} 1 & & \\ & 2 & \\ & & 3 \end{array} \right] = \left[ \begin{array}{l l l} 3 0 & & \\ & 7 5 & \\ & & 1 5 0 \end{array} \right].
+$$"
+fd-0210,辅导讲义,线性代数,第二章 矩阵,,4,,,题型二 特殊矩阵,"【例2.9】设 $\mathbf{A}$ 是 $n$ 阶矩阵， $\mathbf{A}^*$ 是 $\mathbf{A}$ 的伴随矩阵，证明： $r(\mathbf{A}^*) = \begin{cases} n, & \text{若 } r(\mathbf{A}) = n, \\ 1, & \text{若 } r(\mathbf{A}) = n - 1, \\ 0, & \text{若 } r(\mathbf{A}) < n - 1. \end{cases}$",,,,,"若秩 $r(A) = n$ ，则 $|A| \neq 0$ ，由于 $AA^{*} = |A|E$ ，故 $|A^{*}| \neq 0$ ，所以秩 $r(A^{*}) = \dot{n}$ .
+
+若秩 $r(A) < n - 1$ ，则 $\mathbf{A}$ 中所有 $n - 1$ 阶子式均为0，即行列式 $|\mathbf{A}|$ 的所有代数余子式均为0，即 $\mathbf{A}^{*} = \mathbf{O}$ ，故 $r(\mathbf{A}^{*}) = 0$ 。
+
+若秩 $r(A) = n - 1$ ，则 $\left|A\right| = 0$ 且 $\mathbf{A}$ 中存在 $n - 1$ 阶子式不为0.那么，由 $\left|\mathbf{A}\right| = 0$ 有
+
+$$
+\mathbf {A} \mathbf {A} ^ {*} = | \mathbf {A} | \mathbf {E} = \mathbf {O},
+$$
+
+从而 $r(\mathbf{A}) + r(\mathbf{A}^{*})\leqslant n$ ，得 $r(\mathbf{A}^{*})\leqslant 1.$ 
+
+又因 $\pmb{A}$ 中有 $n - 1$ 阶子式非0，知有 $A_{ij} \neq 0$ ，即 $\mathbf{A}^{*} \neq \mathbf{O}$ ，得 $r(\mathbf{A}^{*}) \geqslant 1$ ，故 $r(\mathbf{A}^{*}) = 1$ ."
+fd-0211,辅导讲义,线性代数,第二章 矩阵,,5,,,题型二 特殊矩阵,"【练习】1（2005,3）设矩阵 $A=\left[a_{ij}\right]_{3\times3}$ 满足 $A^{*}=A^{T}$ ，其中 $A^{*}$ 为A的伴随矩阵， $A^{T}$ 为A的转置矩阵，若 $a_{11},a_{12},a_{13}$ 为三个相等的正数，则 $a_{11}$ 为",$\frac{\sqrt{3}}{3}.$,3,$\frac{1}{3}.$,$\sqrt{3}.$,
+fd-0212,辅导讲义,线性代数,第二章 矩阵,,6,,,题型二 特殊矩阵,"【练习】2 (2026,3) A 为三阶非零矩阵, $A^{*}$ 为 A 的伴随矩阵, 若 $A^{*} = -2A$ , 则 $A^{2} =$",$\begin{bmatrix}-4&\\ &-4&\\ &&-4\end{bmatrix}.$,$\begin{bmatrix}-4&\\ &-4&\\ &&4\end{bmatrix}.$,$\begin{bmatrix}-4&\\ &4&\\ &4\end{bmatrix}.$,$\begin{bmatrix}4&\\ &4&\\ &4\end{bmatrix}.$,
+fd-0213,辅导讲义,线性代数,第二章 矩阵,,7,,,题型二 特殊矩阵,【例2.10】若 $\mathbf{A} = \begin{bmatrix} 0 & 1 & 3\\ 1 & -1 & 0\\ -1 & 2 & 1 \end{bmatrix}$ ，则 $A^{-1} = \_$,,,,,"求逆是基础知识,不要忘记,不要麻痹大意.两个基本求法:
+
+(方法一) (用伴随矩阵) 求出 $A_{ij}$ 构造 $\mathbf{A}^{*}$ 
+
+$$
+\mathbf {A} ^ {*} = \left[ \begin{array}{c c c} - 1 & 5 & 3 \\ - 1 & 3 & 3 \\ 1 & - 1 & - 1 \end{array} \right],
+$$
+
+又
+
+$$
+| \mathbf {A} | = \left| \begin{array}{c c c} 0 & 1 & 3 \\ 1 & - 1 & 0 \\ - 1 & 2 & 1 \end{array} \right| = \left| \begin{array}{c c c} 1 & 1 & 3 \\ 0 & - 1 & 0 \\ 1 & 2 & 1 \end{array} \right| = 2,
+$$
+
+故
+
+$$
+\mathbf {A} ^ {- 1} = \frac {\mathbf {A} ^ {*}}{| \mathbf {A} |} = \frac {1}{2} \left[ \begin{array}{c c c} - 1 & 5 & 3 \\ - 1 & 3 & 3 \\ 1 & - 1 & - 1 \end{array} \right].
+$$
+
+(方法二) (用初等行变换求 $A^{-1}$ )
+
+$$
+\begin{array}{r l}\left[ \boldsymbol {A} \mid \boldsymbol {E} \right]&= \left[\begin{array}{c c c c c c}0&1&3&1&0&0\\1&- 1&0&0&1&0\\- 1&2&1&0&0&1\end{array}\right]\rightarrow \left[\begin{array}{c c c c c c}1&- 1&0&0&1&0\\0&1&3&1&0&0\\- 1&2&1&0&0&1\end{array}\right]\\&\rightarrow \left[\begin{array}{c c c c c c}1&- 1&0&0&1&0\\0&1&3&1&0&0\\0&1&1&0&1&1\end{array}\right]\rightarrow \left[\begin{array}{c c c c c c}1&- 1&0&0&1&0\\0&1&3&1&0&0\\0&0&- 2&- 1&1&1\end{array}\right]\\&\rightarrow \left[\begin{array}{c c c c c c}1&- 1&0&0&1&0\\0&1&3&1&0&0\\0&0&1&\frac {1}{2}&- \frac {1}{2}&- \frac {1}{2}\end{array}\right]\end{array}
+$$
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/3bf6f072125d3c58f92f83f46336a688d83a80135f56c90502824e7a17cb0238.jpg)
+
+
+$$
+\rightarrow \left[\begin{array}{c c c c c c}1&- 1&0&0&1&0\\0&1&0&- \frac {1}{2}&\frac {3}{2}&\frac {3}{2}\\0&0&1&\frac {1}{2}&- \frac {1}{2}&- \frac {1}{2}\end{array}\right]
+$$
+
+$$
+\rightarrow \left[\begin{array}{c c c c c c}1&0&0&- \frac {1}{2}&\frac {5}{2}&\frac {3}{2}\\0&1&0&- \frac {1}{2}&\frac {3}{2}&\frac {3}{2}\\0&0&1&\frac {1}{2}&- \frac {1}{2}&- \frac {1}{2}\end{array}\right],
+$$
+
+故
+
+$$
+\mathbf {A} ^ {- 1} = \frac {1}{2} \left[ \begin{array}{c c c} - 1 & 5 & 3 \\ - 1 & 3 & 3 \\ 1 & - 1 & - 1 \end{array} \right].
+$$
+
+【评注】（1）求代数余子式 $A_{ij} = (-1)^{i + j}M_{ij}$ 时，不要忘记正负号.
+
+$$
+\boldsymbol {A} ^ {*} = \left[ \begin{array}{l l l} A _ {1 1} & A _ {2 1} & A _ {3 1} \\ A _ {1 2} & A _ {2 2} & A _ {3 2} \\ A _ {1 3} & A _ {2 3} & A _ {3 3} \end{array} \right]
+$$
+
+求 $A^{-1}$ 时不要忘记除以 $|A|$ .
+
+(2) 用初等行变换求 $A^{-1}$ 的常规步骤：
+
+$$
+(A \quad E) \xrightarrow {\text {由上往下}} (\bigtriangledown \approx \approx) \xrightarrow {\text {由下往上}} (\backslash \times) \xrightarrow {\text {某行乘} k} (E \quad A ^ {- 1}).
+$$"
+fd-0214,辅导讲义,线性代数,第二章 矩阵,,8,,,题型二 特殊矩阵,"【例2.11】设 $\alpha, \beta$ 是相互正交的 n 维列向量，E 是 n 阶单位矩阵， $A = E + \alpha \beta^{T}$ ，则 $A^{-1} =$ ____ .",,,,,"令 $B = \alpha\beta^{T}$ ，则 $B^{2} = (\alpha\beta^{\mathrm{T}})(\alpha\beta^{\mathrm{T}}) = \alpha(\beta^{\mathrm{T}}\alpha)\beta^{\mathrm{T}} = O$ ，
+
+那么 $(\mathbf{A} - \mathbf{E})^2 = \mathbf{O}$ ，即 $A(2E - A) = E$ ，故
+
+$$
+\boldsymbol {A} ^ {- 1} = 2 \boldsymbol {E} - \boldsymbol {A} = \boldsymbol {E} - \boldsymbol {\alpha} \boldsymbol {\beta} ^ {\mathrm{T}}.
+$$"
+fd-0215,辅导讲义,线性代数,第二章 矩阵,,9,,,题型二 特殊矩阵,"【例2.12】（2000,2）设 $\mathbf{A} = \begin{bmatrix} 1 & 0 & 0 & 0\\ -2 & 3 & 0 & 0\\ 0 & -4 & 5 & 0\\ 0 & 0 & -6 & 7 \end{bmatrix},\mathbf{E}$ 为四阶单位矩阵，且 $\boldsymbol{B} = (\boldsymbol{E} + \boldsymbol{A})^{-1} (\boldsymbol{E} - \boldsymbol{A})$ ，则 $(\boldsymbol{E} + \boldsymbol{B})^{-1} =$ ____.",,,,,"对于 $(A+B)^{-1}$ 没有运算法则,通常用单位矩阵恒等变形的技巧化为乘积的形式.
+
+$$
+\begin{array}{r l} & {(\pmb {E} + \pmb {B}) ^ {- 1} = [ \pmb {E} + (\pmb {E} + \pmb {A}) ^ {- 1} (\pmb {E} - \pmb {A}) ] ^ {- 1}} \\ & {\qquad = [ (\pmb {E} + \pmb {A}) ^ {- 1} (\pmb {E} + \pmb {A}) + (\pmb {E} + \pmb {A}) ^ {- 1} (\pmb {E} - \pmb {A}) ] ^ {- 1}} \\ & {\qquad = [ (\pmb {E} + \pmb {A}) ^ {- 1} (\pmb {E} + \pmb {A} + \pmb {E} - \pmb {A}) ] ^ {- 1}} \\ & {\qquad = [ 2 (\pmb {E} + \pmb {A}) ^ {- 1} ] ^ {- 1}} \\ & {\qquad = \frac {1}{2} (\pmb {E} + \pmb {A}) = \left[ \begin{array}{c c c c} {1} & {0} & {0} & {0} \\ {- 1} & {2} & {0} & {0} \\ {0} & {- 2} & {3} & {0} \\ {0} & {0} & {- 3} & {4} \end{array} \right].} \end{array}
+$$
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/d9c06381d12fced9676503eebe44497cbc26c01ab1bb870fc223c2b07d86f003.jpg)
+
+
+学习札记"
+fd-0216,辅导讲义,线性代数,第二章 矩阵,,10,,,题型二 特殊矩阵,【例2.13】已知 A 是 n 阶对称矩阵，且 A 可逆，若 $(A - B)^{2} = E$ ，化简 $(E + A^{-1}B^{\mathrm{T}})^{\mathrm{T}}(E - BA^{-1})^{-1}$ .,,,,,"$$
+\begin{array}{r l} \text {   解   原式   } & = [ \boldsymbol {E} ^ {\mathrm{T}} + (\boldsymbol {A} ^ {- 1} \boldsymbol {B} ^ {\mathrm{T}}) ^ {\mathrm{T}} ] [ \boldsymbol {A} \boldsymbol {A} ^ {- 1} - \boldsymbol {B} \boldsymbol {A} ^ {- 1} ] ^ {- 1} \\ & = [ \boldsymbol {E} + (\boldsymbol {B} ^ {\mathrm{T}}) ^ {\mathrm{T}} (\boldsymbol {A} ^ {- 1}) ^ {\mathrm{T}} ] [ (\boldsymbol {A} - \boldsymbol {B}) \boldsymbol {A} ^ {- 1} ] ^ {- 1} \\ & = [ \boldsymbol {E} + \boldsymbol {B} (\boldsymbol {A} ^ {\mathrm{T}}) ^ {- 1} ] [ (\boldsymbol {A} ^ {- 1}) ^ {- 1} (\boldsymbol {A} - \boldsymbol {B}) ^ {- 1} ] \\ & = [ \boldsymbol {E} + \boldsymbol {B} \boldsymbol {A} ^ {- 1} ] [ \boldsymbol {A} (\boldsymbol {A} - \boldsymbol {B}) ^ {- 1} ] \\ & = (\boldsymbol {A} + \boldsymbol {B}) (\boldsymbol {A} - \boldsymbol {B}) ^ {- 1}. \end{array}
+$$
+
+又 $(A-B)^{2}=E$ ，故 $(A-B)^{-1}=A-B$ ，从而原式 $=(A+B)(A-B)$ ."
+fd-0217,辅导讲义,线性代数,第二章 矩阵,,11,,,题型二 特殊矩阵,"【例2.14】已知 A, B 均为 n 阶矩阵，且 A 与 E - AB 都是可逆矩阵，证明 E - BA 可逆.",,,,,"$$
+\begin{array}{r l} \text {证明} & | E - B A | = | A ^ {- 1} A - B A | = | (A ^ {- 1} - B) A | \\ & = | A ^ {- 1} - B | | A | = | A | | A ^ {- 1} - B | \\ & = | A (A ^ {- 1} - B) | = | E - A B | \neq 0, \end{array}
+$$
+
+故 E - BA 可逆."
+fd-0218,辅导讲义,线性代数,第二章 矩阵,,12,,,题型二 特殊矩阵,"【练习】设 A, B, C 均为 n 阶矩阵, E 为 n 阶单位矩阵, 若 $B = E + AB$ , $C = A + CA$ , 则 B - C =",$E$,$-E$,$A$,$-A$,
+fd-0219,辅导讲义,线性代数,第二章 矩阵,,13,,,题型二 特殊矩阵,"【例2.15】设 $\boldsymbol{\alpha}=(1,-2,1)^{\mathrm{T}},\boldsymbol{A}=\boldsymbol{E}+k\boldsymbol{\alpha}\boldsymbol{\alpha}^{\mathrm{T}}$ ，其中 $k\neq0$ 。如果 A 是正交矩阵，则 k= ____.",,,,,"$$
+\begin{array}{r l} (E + k \alpha \alpha^ {\mathrm{T}}) (E + k \alpha \alpha^ {\mathrm{T}}) ^ {\mathrm{T}} & = (E + k \alpha \alpha^ {\mathrm{T}}) (E + k \alpha \alpha^ {\mathrm{T}}) \\ & = E + k \alpha \alpha^ {\mathrm{T}} + k \alpha \alpha^ {\mathrm{T}} + k ^ {2} \alpha \alpha^ {\mathrm{T}} \alpha \alpha^ {\mathrm{T}}, \end{array}
+$$
+
+且
+
+$$
+\pmb {\alpha} ^ {\mathrm{T}} \pmb {\alpha} = (1, - 2, 1) \left[ \begin{array}{l} 1 \\ - 2 \\ 1 \end{array} \right] = 6,
+$$
+
+故 $\mathbf{A}\mathbf{A}^{\mathrm{T}} = \mathbf{E} + (2k + 6k^{2})\pmb {\alpha}\pmb {\alpha}^{\mathrm{T}} = \mathbf{E}\Leftrightarrow 2k + 6k^{2} = 0.$ 
+
+又 $k \neq 0$ ，故 $k = -\frac{1}{3}$"
+fd-0220,辅导讲义,线性代数,第二章 矩阵,,14,,,题型二 特殊矩阵,"【例2.16】（2004,4）设 $A = [a_{ij}]_{3 \times 3}$ 是正交矩阵，且 $a_{11} = 1, b = (1, 0, 0)^{\mathrm{T}}$ ，则线性方程组 Ax = b 的解是 ____.",,,,,"由正交矩阵的几何意义,列(行)向量均是单位向量,因 $a_{11}=1$ ,必有
+
+$$
+\mathbf {A} = \left[ \begin{array}{c c c} 1 & 0 & 0 \\ 0 & a _ {2 2} & a _ {2 3} \\ 0 & a _ {3 2} & a _ {3 3} \end{array} \right],
+$$
+
+即方程组 Ax = b 为
+
+$$
+\left\{ \begin{array}{l l} x _ {1} & = 1, \\ a _ {2 2} x _ {2} + a _ {2 3} x _ {3} = 0, \\ a _ {3 2} x _ {2} + a _ {3 3} x _ {3} = 0. \end{array} \right.
+$$
+
+由 A 可逆， $\begin{vmatrix}a_{22}&a_{23}\\ a_{32}&a_{33}\end{vmatrix}\neq0$ ，故有唯一解 $(1,0,0)^{\mathrm{T}}$ ."
+fd-0221,辅导讲义,线性代数,第二章 矩阵,,15,,,题型二 特殊矩阵,"【例2.17】设 A, B 均为 n 阶正交矩阵，且 $\left|A\right| + \left|B\right| = 0$ ，证明 $\left|A + B\right| = 0$ .",,,,,"$|\mathbf{A} + \mathbf{B}| = |\mathbf{E}\mathbf{A} + \mathbf{B}\mathbf{E}| = |(\mathbf{BB}^{\mathrm{T}})\mathbf{A} + \mathbf{B}(\mathbf{A}^{\mathrm{T}}\mathbf{A})|$ $= |\mathbf{B}(\mathbf{B}^{\mathrm{T}} + \mathbf{A}^{\mathrm{T}})\mathbf{A}| = |\mathbf{B}(\mathbf{A} + \mathbf{B})^{\mathrm{T}}\mathbf{A}|$ $= |\mathbf{B}|\cdot |(\mathbf{A} + \mathbf{B})^{\mathrm{T}}|\cdot |\mathbf{A}| = -|\mathbf{B}|^{2}\cdot |\mathbf{A} + \mathbf{B}|$ $= -|\mathbf{A} + \mathbf{B}|$ ，(注意对正交矩阵 $\pmb{B}$ ，有 $|\pmb {B}|^2 = 1)$ 
+
+所以 $\left|A+B\right|=0.$ 
+
+4. 行最简矩阵
+
+行阶梯矩阵
+
+① 如果矩阵中有零行(即这一行元素全是0)，则零行在矩阵的底部.
+
+② 每个非零行的主元(即该行最左边的第1个非零元), 它们的列指标随着行指标的递增而严格增大.
+
+例 $\begin{bmatrix} 2 & 1 & 3 \\ 0 & 0 & 0 \\ 0 & 0 & 5 \end{bmatrix}, \begin{bmatrix} 1 & 3 & -2 \\ 0 & 1 & 4 \\ 0 & 2 & 5 \end{bmatrix}$ 都不是行阶梯矩阵.
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/a96d2d63176ff452b13af6ada00a715c641d3296e5cb6af548cff94346989c63.jpg)
+
+
+学习札记
+
+例 $\begin{bmatrix} 1 & 2 & 0 & 3 \\ 0 & 1 & -1 & 5 \\ 0 & 0 & 0 & 6 \end{bmatrix}, \begin{bmatrix} 3 & 0 & 1 & -4 \\ 0 & 0 & 2 & 7 \\ 0 & 0 & 0 & 0 \end{bmatrix}$ 是行阶梯矩阵.
+
+
+一个行阶梯矩阵,如果还满足:
+
+非零行的主元都是1，且主元所在的列的其他元素都是0，则称其为行最简矩阵.
+
+$$
+\left[ \begin{array}{c c c c} 1 & 0 & 3 & 1 \\ 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right], \left[ \begin{array}{c c c c} 1 & 1 & 2 & 0 \\ 0 & 1 & 3 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right], \left[ \begin{array}{c c c c} 1 & - 1 & 0 & 0 \\ 0 & 2 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right]
+$$
+
+$$
+\text {例} \left[ \begin{array}{c c c c} {{1}} & {{0}} & {{- 1}} & {{0}} \\ {{0}} & {{1}} & {{2}} & {{0}} \\ {{0}} & {{0}} & {{0}} & {{1}} \end{array} \right], \left[ \begin{array}{c c c c} {{1}} & {{0}} & {{0}} & {{2}} \\ {{0}} & {{0}} & {{1}} & {{3}} \\ {{0}} & {{0}} & {{0}} & {{0}} \end{array} \right] \text {是行最简矩阵.}
+$$
+
+
+左乘行变换,右乘列变换.
+
+$$
+\boldsymbol {E} _ {i j} ^ {- 1} (k) = \boldsymbol {E} _ {i j} (- k); \boldsymbol {E} _ {i j} ^ {- 1} = \boldsymbol {E} _ {i j}; \boldsymbol {E} _ {i} ^ {- 1} (k) = \boldsymbol {E} _ {i} \left(\frac {1}{k}\right).
+$$
+
+初等矩阵的 $n$ 次方：
+
+$$
+\left[ \begin{array}{c c c} 1 & 0 & 0 \\ k & 1 & 0 \\ 0 & 0 & 1 \end{array} \right] ^ {n} = \left[ \begin{array}{c c c} 1 & 0 & 0 \\ n k & 1 & 0 \\ 0 & 0 & 1 \end{array} \right], \left[ \begin{array}{c c c} 1 & 0 & 0 \\ 0 & k & 0 \\ 0 & 0 & 1 \end{array} \right] ^ {n} = \left[ \begin{array}{c c c} 1 & 0 & 0 \\ 0 & k ^ {n} & 0 \\ 0 & 0 & 1 \end{array} \right],
+$$
+
+$$
+\left[ \begin{array}{c c c} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{array} \right] ^ {2 n} = \left[ \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right], \left[ \begin{array}{c c c} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{array} \right] ^ {2 n - 1} = \left[ \begin{array}{c c c} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{array} \right].
+$$"
+fd-0222,辅导讲义,线性代数,第二章 矩阵,,1,,,题型三 初等矩阵,"【例2.18】已知
+
+$\mathbf {A} = \left[ \begin{array}{l l l} a _ {1 1} & a _ {1 2} & a _ {1 3} \\ a _ {2 1} & a _ {2 2} & a _ {2 3} \\ a _ {3 1} & a _ {3 2} & a _ {3 3} \end{array} \right], \mathbf {B} = \left[ \begin{array}{c c c} a _ {1 1} & a _ {1 3} & a _ {1 2} \\ a _ {2 1} + 2 a _ {3 1} & a _ {2 3} + 2 a _ {3 3} & a _ {2 2} + 2 a _ {3 2} \\ a _ {3 1} & a _ {3 3} & a _ {3 2} \end{array} \right],$
+
+若 $A^{-1}=\begin{bmatrix}1&2&3\\ 0&4&5\\ 0&0&6\end{bmatrix}$ ，则 $B^{-1}=$ ____.",,,,,"A 经过行变换(第 3 行的 2 倍加至第 2 行) 和列变换(2、3 两列互换) 得到矩阵 B, 即
+
+$$
+\boldsymbol {B} = \left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{array} \right] \boldsymbol {A} \left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{array} \right],
+$$
+
+所以
+
+$$
+\begin{array}{r l} \mathbf {B} ^ {- 1} & = \left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{array} \right] ^ {- 1} \mathbf {A} ^ {- 1} \left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{array} \right] ^ {- 1} \\ & = \left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{array} \right] \left[ \begin{array}{l l l} 1 & 2 & 3 \\ 0 & 4 & 5 \\ 0 & 0 & 6 \end{array} \right] \left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & - 2 \\ 0 & 0 & 1 \end{array} \right] \\ & = \left[ \begin{array}{l l l} 1 & 2 & - 1 \\ 0 & 0 & 6 \\ 0 & 4 & - 3 \end{array} \right]. \end{array}
+$$"
+fd-0223,辅导讲义,线性代数,第二章 矩阵,,2,,,题型三 初等矩阵,"【例2.19】已知 A 是三阶矩阵, P 是三阶可逆矩阵, 且 $P^{-1}AP = \begin{bmatrix} 1 & & \\ & 3 & \\ & & 2 \end{bmatrix}$ , 若 $P = [\alpha_{1}, \alpha_{2}, \alpha_{3}], Q = [\alpha_{1}, \alpha_{1} + \alpha_{2}, -2\alpha_{3}]$ , 则 $Q^{-1}AQ =$",$\left[ \begin{array}{l l l} 1 & 2 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & - 2 \end{array} \right]. $,$\left[ \begin{array}{c c c} 1 & - 2 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 2 \end{array} \right].$,$\left[ \begin{array}{l l l} 1 & 0 & 0 \\ 2 & 3 & 0 \\ 0 & 0 & - 2 \end{array} \right].$,$\left[ \begin{array}{c c c} 1 & 0 & 0 \\ - 2 & 3 & 0 \\ 0 & 0 & 2 \end{array} \right].$,"由下标知矩阵 P 经两次列变换(第 1 列加至第 2 列; 第 3 列乘以 -2) 得到矩阵 Q. 即 一手最快资料同步VX: kys985121
+
+$$
+\boldsymbol {Q} = \boldsymbol {P} \left[ \begin{array}{l l l} 1 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right] \left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & - 2 \end{array} \right] = \boldsymbol {P P} _ {1} \boldsymbol {P} _ {2},
+$$
+
+那么
+
+$$
+\boldsymbol {Q} ^ {- 1} \boldsymbol {A} \boldsymbol {Q} = (\boldsymbol {P} \boldsymbol {P} _ {1} \boldsymbol {P} _ {2}) ^ {- 1} \boldsymbol {A} (\boldsymbol {P} \boldsymbol {P} _ {1} \boldsymbol {P} _ {2}) = \boldsymbol {P} _ {2} ^ {- 1} \boldsymbol {P} _ {1} ^ {- 1} \boldsymbol {P} ^ {- 1} \boldsymbol {A} \boldsymbol {P} \boldsymbol {P} _ {1} \boldsymbol {P} _ {2}
+$$
+
+$$
+= \left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & - \frac {1}{2} \end{array} \right] \left[ \begin{array}{l l l} 1 & - 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right] \left[ \begin{array}{l l l} 1 & & \\ & 3 & \\ & & 2 \end{array} \right] \left[ \begin{array}{l l l} 1 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right] \left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & - 2 \end{array} \right]
+$$
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/f5cb61e312ff962aeb7b4f1150e1f99b9e83637e820dfc535ccaceecc4bb5641.jpg)
+
+
+$$
+= \left[ \begin{array}{c c c} 1 & - 2 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 2 \end{array} \right].
+$$
+
+学习札记"
+fd-0224,辅导讲义,线性代数,第二章 矩阵,,3,,,题型三 初等矩阵,"【例2.20】已知三阶矩阵 A 可逆, 将 A 的第 2 列与第 3 列交换得矩阵 B, 把 B 的第 2 列乘以 -2 得矩阵 C, 则满足 $PA^{*} = C^{*}$ 的矩阵 P 为 ____.",,,,,"按已知,右乘初等矩阵为列变换,有
+
+$$
+\mathbf {A} \left[ \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{array} \right] = \mathbf {B}, \mathbf {B} \left[ \begin{array}{c c c} 1 & 0 & 0 \\ 0 & - 2 & 0 \\ 0 & 0 & 1 \end{array} \right] = \mathbf {C},
+$$
+
+于是
+
+$$
+\mathbf {A} \left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{array} \right] \left[ \begin{array}{c c c} 1 & 0 & 0 \\ 0 & - 2 & 0 \\ 0 & 0 & 1 \end{array} \right] = \mathbf {C},
+$$
+
+有
+
+$$
+2 \mid \mathbf {A} \mid = \mid \mathbf {C} \mid ,
+$$
+
+且
+
+$$
+\left[ \begin{array}{c c c} 1 & 0 & 0 \\ 0 & - 2 & 0 \\ 0 & 0 & 1 \end{array} \right] ^ {- 1} \left[ \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{array} \right] ^ {- 1} \frac {\boldsymbol {A} ^ {*}}{| \boldsymbol {A} |} = \frac {\boldsymbol {C} ^ {*}}{| \boldsymbol {C} |},
+$$
+
+故
+
+$$
+\boldsymbol {P} = 2 \left[ \begin{array}{c c c} 1 & 0 & 0 \\ 0 & - 2 & 0 \\ 0 & 0 & 1 \end{array} \right] ^ {- 1} \left[ \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{array} \right] ^ {- 1}
+$$
+
+$$
+= 2 \left[ \begin{array}{c c c} 1 & 0 & 0 \\ 0 & - \frac {1}{2} & 0 \\ 0 & 0 & 1 \end{array} \right] \left[ \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{array} \right] = \left[ \begin{array}{c c c} 2 & 0 & 0 \\ 0 & 0 & - 1 \\ 0 & 2 & 0 \end{array} \right].
+$$"
+fd-0225,辅导讲义,线性代数,第二章 矩阵,,4,,,题型三 初等矩阵,"【例2.21】$$
+\left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 2 & 1 \end{array} \right] ^ {2 0 1 0} \left[ \begin{array}{l l l} 1 & 2 & 3 \\ 2 & 3 & 4 \\ 3 & 4 & 5 \end{array} \right] \left[ \begin{array}{l l l} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{array} \right] ^ {2 0 1 1} = \underline {{\quad}}.
+$$",,,,,"因为
+
+$$
+\left[ \begin{array}{c c c} 1 & 2 & 3 \\ 2 & 3 & 4 \\ 3 & 4 & 5 \end{array} \right] \left[ \begin{array}{c c c} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{array} \right] = \left[ \begin{array}{c c c} 3 & 2 & 1 \\ 4 & 3 & 2 \\ 5 & 4 & 3 \end{array} \right],
+$$
+
+$$
+\left[ \begin{array}{c c c} 1 & 2 & 3 \\ 2 & 3 & 4 \\ 3 & 4 & 5 \end{array} \right] \left[ \begin{array}{c c c} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{array} \right] ^ {2} = \left[ \begin{array}{c c c} 1 & 2 & 3 \\ 2 & 3 & 4 \\ 3 & 4 & 5 \end{array} \right],
+$$
+
+学习札记
+
+所以
+
+$$
+\left[ \begin{array}{l l l} 1 & 2 & 3 \\ 2 & 3 & 4 \\ 3 & 4 & 5 \end{array} \right] \left[ \begin{array}{l l l} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{array} \right] ^ {2 0 1 1} = \left[ \begin{array}{l l l} 3 & 2 & 1 \\ 4 & 3 & 2 \\ 5 & 4 & 3 \end{array} \right].
+$$
+
+又因
+
+$$
+\left[ \begin{array}{c c c} {1} & {0} & {0} \\ {0} & {1} & {0} \\ {0} & {2} & {1} \end{array} \right] \left[ \begin{array}{c c c} {3} & {2} & {1} \\ {4} & {3} & {2} \\ {5} & {4} & {3} \end{array} \right] \stackrel {\text {记}} {=} \left[ \begin{array}{c c c} {1} & {0} & {0} \\ {0} & {1} & {0} \\ {0} & {2} & {1} \end{array} \right] \left[ \begin{array}{l} {\pmb {\alpha} _ {1}} \\ {\pmb {\alpha} _ {2}} \\ {\pmb {\alpha} _ {3}} \end{array} \right] = \left[ \begin{array}{l} {\pmb {\alpha} _ {1}} \\ {\pmb {\alpha} _ {2}} \\ {\pmb {\alpha} _ {3} + 2 \pmb {\alpha} _ {2}} \end{array} \right],
+$$
+
+则
+
+$$
+\left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 2 & 1 \end{array} \right] ^ {2} \left[ \begin{array}{l l l} 3 & 2 & 1 \\ 4 & 3 & 2 \\ 5 & 4 & 3 \end{array} \right] = \left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 2 & 1 \end{array} \right] \left[ \begin{array}{c} \boldsymbol {\alpha} _ {1} \\ \boldsymbol {\alpha} _ {2} \\ \boldsymbol {\alpha} _ {3} + 2 \boldsymbol {\alpha} _ {2} \end{array} \right] = \left[ \begin{array}{c} \boldsymbol {\alpha} _ {1} \\ \boldsymbol {\alpha} _ {2} \\ \boldsymbol {\alpha} _ {3} + 2 \boldsymbol {\alpha} _ {2} + 2 \boldsymbol {\alpha} _ {2} \end{array} \right],
+$$
+
+故
+
+$$
+\left[ \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 2 & 1 \end{array} \right] ^ {2 0 1 0} \left[ \begin{array}{c} \boldsymbol {\alpha} _ {1} \\ \boldsymbol {\alpha} _ {2} \\ \boldsymbol {\alpha} _ {3} \end{array} \right] = \left[ \begin{array}{c} \boldsymbol {\alpha} _ {1} \\ \boldsymbol {\alpha} _ {2} \\ \boldsymbol {\alpha} _ {3} + 2 0 1 0 (2 \boldsymbol {\alpha} _ {2}) \end{array} \right] = \left[ \begin{array}{c c c} 3 & 2 & 1 \\ 4 & 3 & 2 \\ 1 6 0 8 5 & 1 2 0 6 4 & 8 0 4 3 \end{array} \right].
+$$"
+fd-0226,辅导讲义,线性代数,第二章 矩阵,,5,,,题型三 初等矩阵,"【练习】1 (2026, $\frac{1}{2,3}$ ) * 已知 A = GH，其中 G = $\begin{bmatrix} 1 & 1 \\ 0 & -1 \\ -1 & 0 \\ -1 & -2 \end{bmatrix}$ ，H = $\begin{bmatrix}1 & 0 & -1 & 1 \\ 0 & 1 & 1 & -1\end{bmatrix}$ ，则 $A^{10}=$ ____.",,,,,
+fd-0227,辅导讲义,线性代数,第二章 矩阵,,6,,,题型三 初等矩阵,【练习】2 设矩阵 $\mathbf{A} = \begin{bmatrix} 1 & 0 & 1 \\ a & -1 & 1 \\ 0 & 2 & a \end{bmatrix}$ 与 $\mathbf{B} = \begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 0 \end{bmatrix}$ 等价，则 $a =$ ____.,,,,,
+fd-0228,辅导讲义,线性代数,第二章 矩阵,,1,,,题型四 分块矩阵,【例2.22】设 $\mathbf{A} = \begin{bmatrix} 3 & 1 & 0 & 0 \\ 0 & 3 & 0 & 0 \\ 0 & 0 & 3 & 9 \\ 0 & 0 & 1 & 3 \end{bmatrix}$ ，则 $\mathbf{A}^n =$ ____.,,,,,"由分块矩阵公式 $\begin{bmatrix} B & O \\ O & C \end{bmatrix}^n = \begin{bmatrix} B^n & O \\ O & C^n \end{bmatrix}$ , 我们只需分别算出 $\begin{bmatrix} 3 & 1 \\ 0 & 3 \end{bmatrix}$ 与 $\begin{bmatrix} 3 & 9 \\ 1 & 3 \end{bmatrix}$ 的 $n$ 次幂.
+
+由
+
+$$
+\left[ \begin{array}{l l} 3 & 1 \\ 0 & 3 \end{array} \right] = \left[ \begin{array}{l l} 3 & 0 \\ 0 & 3 \end{array} \right] + \left[ \begin{array}{l l} 0 & 1 \\ 0 & 0 \end{array} \right] = 3 E + B,
+$$
+
+故
+
+$$
+\begin{array}{r l} {\left[ \begin{array}{l l} {3} & {1} \\ {0} & {3} \end{array} \right] ^ {n}} & {= (3 E + B) ^ {n} = (3 E) ^ {n} + n (3 E) ^ {n - 1} B} \\ & {= \left[ \begin{array}{l l} {3 ^ {n}} & {0} \\ {0} & {3 ^ {n}} \end{array} \right] + n \bullet 3 ^ {n - 1} \left[ \begin{array}{l l} {0} & {1} \\ {0} & {0} \end{array} \right] = \left[ \begin{array}{l l} {3 ^ {n}} & {n \bullet 3 ^ {n - 1}} \\ {0} & {3 ^ {n}} \end{array} \right].} \end{array}
+$$
+
+而矩阵 $\begin{bmatrix} 3 & 9 \\ 1 & 3 \end{bmatrix}$ 的秩为1，有 $\begin{bmatrix} 3 & 9 \\ 1 & 3 \end{bmatrix}^n = 6^{n-1} \begin{bmatrix} 3 & 9 \\ 1 & 3 \end{bmatrix}$ ，从而
+
+$$
+\mathbf {A} ^ {n} = \left[ \begin{array}{c c c c} 3 ^ {n} & n \cdot 3 ^ {n - 1} & 0 & 0 \\ 0 & 3 ^ {n} & 0 & 0 \\ 0 & 0 & 3 \cdot 6 ^ {n - 1} & 9 \cdot 6 ^ {n - 1} \\ 0 & 0 & 6 ^ {n - 1} & 3 \cdot 6 ^ {n - 1} \end{array} \right].
+$$"
+fd-0229,辅导讲义,线性代数,第二章 矩阵,,2,,,题型四 分块矩阵,【例2.23】已知 $\mathbf{A}\mathbf{X} = \mathbf{B}$ ，其中 $\mathbf{A} = \begin{bmatrix} 1 & 3 & 3\\ 2 & 6 & 9\\ -1 & -3 & 3 \end{bmatrix}$ $\pmb {B} = \left[ \begin{array}{lll}2 & -1 & 1\\ 7 & 4 & -1\\ 4 & 13 & -7 \end{array} \right]$ ，则矩阵 $X =$ ____.,,,,,"若 A 可逆, 则 $X = A^{-1}B$ , 本题的 A 是不可逆的, 可转换为解非齐次线性方程组.
+
+设 $\pmb{X} = \begin{bmatrix} x_1 & y_1 & z_1 \\ x_2 & y_2 & z_2 \\ x_3 & y_3 & z_3 \end{bmatrix}$ ，则
+
+$$
+\left[ \begin{array}{c c c} 1 & 3 & 3 \\ 2 & 6 & 9 \\ - 1 & - 3 & 3 \end{array} \right] \left[ \begin{array}{c c c} x _ {1} & y _ {1} & z _ {1} \\ x _ {2} & y _ {2} & z _ {2} \\ x _ {3} & y _ {3} & z _ {3} \end{array} \right] = \left[ \begin{array}{c c c} 2 & - 1 & 1 \\ 7 & 4 & - 1 \\ 4 & 1 3 & - 7 \end{array} \right],
+$$
+
+即
+
+$$
+\boldsymbol {A} \boldsymbol {x} = \boldsymbol {\beta} _ {1}, \boldsymbol {A} \boldsymbol {y} = \boldsymbol {\beta} _ {2}, \boldsymbol {A} \boldsymbol {z} = \boldsymbol {\beta} _ {3},
+$$
+
+$$
+\left\{ \begin{array}{l} x _ {1} + 3 x _ {2} + 3 x _ {3} = 2, \\ 2 x _ {1} + 6 x _ {2} + 9 x _ {3} = 7, \\ - x _ {1} - 3 x _ {2} + 3 x _ {3} = 4, \end{array} \right. \quad \left\{ \begin{array}{l} y _ {1} + 3 y _ {2} + 3 y _ {3} = - 1, \\ 2 y _ {1} + 6 y _ {2} + 9 y _ {3} = 4, \\ - y _ {1} - 3 y _ {2} + 3 y _ {3} = 1 3, \end{array} \right. \quad \left\{ \begin{array}{l} z _ {1} + 3 z _ {2} + 3 z _ {3} = 1, \\ 2 z _ {1} + 6 z _ {2} + 9 z _ {3} = - 1, \\ - z _ {1} - 3 z _ {2} + 3 z _ {3} = - 7. \end{array} \right.
+$$
+
+这三个方程组的系数矩阵完全一样,区别仅在常数项,为了计算简捷,这三个方程组的高斯消元可同时进行,即
+
+$$
+\left[\begin{array}{c c c c c c}{1}&{3}&{3}&{2}&{- 1}&{1}\\{2}&{6}&{9}&{7}&{4}&{- 1}\\{- 1}&{- 3}&{3}&{4}&{1 3}&{- 7}\end{array}\right]\rightarrow \left[\begin{array}{c c c c c c}{1}&{3}&{0}&{- 1}&{- 7}&{4}\\{0}&{0}&{1}&{1}&{2}&{- 1}\\{0}&{0}&{0}&{0}&{0}&{0}\end{array}\right].
+$$
+
+从 $\left\{\begin{aligned}x_{1}+3x_{2}&=-1,\\ x_{3}&=1\end{aligned}\right.$ 解出 $\left\{\begin{aligned}x_{1}&=-3t-1,\\ x_{2}&=t,\\ x_{3}&=1.\end{aligned}\right.$ 
+
+类似地
+
+$$
+\left\{ \begin{array}{l} y _ {1} = - 3 u - 7, \\ y _ {2} = u, \\ y _ {3} = 2, \end{array} \right. \quad \left\{ \begin{array}{l} z _ {1} = - 3 v + 4, \\ z _ {2} = v, \\ z _ {3} = - 1, \end{array} \right.
+$$
+
+从而 $X=\begin{bmatrix}-3t-1&-3u-7&-3v+4\\ t&u&v\\ 1&2&-1\end{bmatrix},t,u,v$ 为任意常数."
+fd-0230,辅导讲义,线性代数,第二章 矩阵,,3,,,题型四 分块矩阵,"【例2.24】（2009，1）设 $\mathbf{A},\mathbf{B}$ 均为二阶矩阵， $\mathbf{A}^{\star},\mathbf{B}^{\star}$ 分别为 $\mathbf{A},\mathbf{B}$ 的伴随矩阵.若 $|\mathbf{A}| = 2,|\mathbf{B}| = 3$ ，则分块矩阵 $\left[ \begin{array}{ll}\mathbf{O} & \mathbf{A}\\ \mathbf{B} & \mathbf{O} \end{array} \right]$ 的伴随矩阵为",$\left[ \begin{array}{ll}\mathbf{O} & 3\mathbf{B}^{*}\\ 2\mathbf{A}^{*} & \mathbf{O} \end{array} \right].$,$\left[ \begin{array}{ll}\mathbf{O} & 2\mathbf{B}^{*}\\ 3\mathbf{A}^{*} & \mathbf{O} \end{array} \right].$,$\left[ \begin{array}{ll}\mathbf{O} & 3\mathbf{A}^{*}\\ 2\mathbf{B}^{*} & \mathbf{O} \end{array} \right].$,$\left[ \begin{array}{ll}\mathbf{O} & 2\mathbf{A}^{*}\\ 3\mathbf{B}^{*} & \mathbf{O} \end{array} \right].$,"由拉普拉斯展开式(1.10)有
+
+$$
+\left| \begin{array}{c c} {\pmb {O}} & {\pmb {A}} \\ {\pmb {B}} & {\pmb {O}} \end{array} \right| = (- 1) ^ {2 \times 2} | \pmb {A} | | \pmb {B} | = 6.
+$$
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/5aa4da3739a62cf299a03941cff7b61e9c8d6d5af0be17a19f56c5b3654432f0.jpg)
+
+
+学习札记
+
+那么，矩阵 $\begin{bmatrix} O & A \\ B & O \end{bmatrix}$ 可逆，从而
+
+$$
+\left[ \begin{array}{l l} \boldsymbol {O} & \boldsymbol {A} \\ \boldsymbol {B} & \boldsymbol {O} \end{array} \right] ^ {*} = \left| \begin{array}{l l} \boldsymbol {O} & \boldsymbol {A} \\ \boldsymbol {B} & \boldsymbol {O} \end{array} \right| \left[ \begin{array}{l l} \boldsymbol {O} & \boldsymbol {A} \\ \boldsymbol {B} & \boldsymbol {O} \end{array} \right] ^ {- 1} = 6 \left[ \begin{array}{l l} \boldsymbol {O} & \boldsymbol {B} ^ {- 1} \\ \boldsymbol {A} ^ {- 1} & \boldsymbol {O} \end{array} \right] = \left[ \begin{array}{l l} \boldsymbol {O} & 2 \boldsymbol {B} ^ {*} \\ 3 \boldsymbol {A} ^ {*} & \boldsymbol {O} \end{array} \right].
+$$
+
+所以应选(B).
+
+或设 $\begin{bmatrix}O&A\\ B&O\end{bmatrix}^{*}=\begin{bmatrix}X&Y\\ Z&W\end{bmatrix}$ ，则
+
+$$
+\left[ \begin{array}{l l} {\boldsymbol {O}} & {\boldsymbol {A}} \\ {\boldsymbol {B}} & {\boldsymbol {O}} \end{array} \right] \left[ \begin{array}{l l} {\boldsymbol {X}} & {\boldsymbol {Y}} \\ {\boldsymbol {Z}} & {\boldsymbol {W}} \end{array} \right] = \left| \begin{array}{l l} {\boldsymbol {O}} & {\boldsymbol {A}} \\ {\boldsymbol {B}} & {\boldsymbol {O}} \end{array} \right| \boldsymbol {E},
+$$
+
+$$
+\left[ \begin{array}{l l} \mathbf {X} & \mathbf {Y} \\ \mathbf {Z} & \mathbf {W} \end{array} \right] = 6 \left[ \begin{array}{l l} \mathbf {O} & \mathbf {A} \\ \mathbf {B} & \mathbf {O} \end{array} \right] ^ {- 1} = 6 \left[ \begin{array}{l l} \mathbf {O} & \mathbf {B} ^ {- 1} \\ \mathbf {A} ^ {- 1} & \mathbf {O} \end{array} \right] = \dots .
+$$
+
+【评注】本题考查的知识点有3个:一是用公式 $A^{*}=|A|A^{-1}$ 求伴随矩阵,二是行列式的拉普拉斯展开式,三是分块矩阵的求逆公式.这些都是线性代数中很重要的基础知识."
+fd-0231,辅导讲义,线性代数,第二章 矩阵,,4,,,题型四 分块矩阵,"【练习】1 $[A,B]\begin{bmatrix} E\\ E\end{bmatrix} = \_$ 
+
+$\begin{bmatrix} O & E \\ E & O \end{bmatrix}\begin{bmatrix} O & A \\ B & O \end{bmatrix} =$ 
+
+$\begin{bmatrix} E & -A \\ O & E \end{bmatrix} \begin{bmatrix} A & O \\ E & B \end{bmatrix} =$ 
+
+$\left[ \begin{array}{ll}\mathbf{E} & \mathbf{A}\\ \mathbf{B} & \mathbf{E} \end{array} \right]\left[ \begin{array}{ll}\mathbf{E} & \mathbf{O}\\ -\mathbf{B} & \mathbf{E} \end{array} \right] =$ 
+
+$[x^{\mathrm{T}},y^{\mathrm{T}}][A O] [x]$ $= \underline{\quad}$ 
+
+$\left[ \begin{array}{ll}\mathbf{O} & \mathbf{E}\\ \mathbf{E} & \mathbf{O} \end{array} \right]\left[ \begin{array}{ll}\mathbf{A} & \mathbf{B}\\ \mathbf{C} & \mathbf{D} \end{array} \right]\left[ \begin{array}{ll}\mathbf{O} & \mathbf{E}\\ \mathbf{E} & \mathbf{O} \end{array} \right] =$",,,,,
+fd-0232,辅导讲义,线性代数,第二章 矩阵,,5,,,题型四 分块矩阵,"【例2.25】设 $\pmb{H} = \begin{bmatrix} \pmb{A} & \pmb{C}\\ \pmb{O} & \pmb{B} \end{bmatrix}$ ，其中 $\pmb{A},\pmb{B}$ 分别是 $m$ 阶和 $n$ 阶可逆矩阵，证明矩阵 $\pmb{H}$ 可逆，并求其逆.",,,,,"因为 A, B 可逆, 由拉普拉斯展开式(1.9)有
+
+$$
+| \textbf {H} | = \left| \begin{array}{c c} {\textbf {A}} & {\textbf {C}} \\ {\textbf {O}} & {\textbf {B}} \end{array} \right| = | \textbf {A} | | \textbf {B} | \neq 0,
+$$
+
+所以矩阵 H 可逆.
+
+设 $H^{-1} = \begin{bmatrix} X & Y \\ Z & W \end{bmatrix}$ , 则 $\begin{bmatrix} A & C \\ O & B \end{bmatrix} \begin{bmatrix} X & Y \\ Z & W \end{bmatrix} = \begin{bmatrix} E_m & O \\ O & E_n \end{bmatrix}$ , 即
+
+$$
+\left\{ \begin{array}{l} A X + C Z = E, \\ A Y + C W = O, \\ B Z = O, \\ B W = E, \end{array} \right.
+$$
+
+解出
+
+$$
+\left\{ \begin{array}{l} \boldsymbol {X} = \boldsymbol {A} ^ {- 1}, \\ \boldsymbol {Y} = - \boldsymbol {A} ^ {- 1} \boldsymbol {C B} ^ {- 1}, \\ \boldsymbol {Z} = \boldsymbol {O}, \\ \boldsymbol {W} = \boldsymbol {B} ^ {- 1}, \end{array} \right.
+$$
+
+故
+
+$$
+\left[ \begin{array}{c c} \boldsymbol {A} & \boldsymbol {C} \\ \boldsymbol {O} & \boldsymbol {B} \end{array} \right] ^ {- 1} = \left[ \begin{array}{c c} \boldsymbol {A} ^ {- 1} & - \boldsymbol {A} ^ {- 1} \boldsymbol {C B} ^ {- 1} \\ \boldsymbol {O} & \boldsymbol {B} ^ {- 1} \end{array} \right].
+$$
+
+$[H,E]$ 如果作分块矩阵的初等行变换，
+
+$$
+\begin{array}{r l}{[ H, E ] = \left[\begin{array}{c c c c}A&C&E&O\\O&B&O&E\end{array}\right]\rightarrow \left[\begin{array}{c c c c}E&A ^ {- 1} C&A ^ {- 1}&O\\O&E&O&B ^ {- 1}\end{array}\right]}\\{\rightarrow \left[\begin{array}{c c c c}E&O&A ^ {- 1}&- A ^ {- 1} C B ^ {- 1}\\O&E&O&B ^ {- 1}\end{array}\right],}\end{array}
+$$
+
+注意 $\begin{bmatrix}A^{-1}&-A^{-1}CB^{-1}\\O&B^{-1}\end{bmatrix}\begin{bmatrix}A&C\\O&B\end{bmatrix}=\begin{bmatrix}E&O\\O&E\end{bmatrix}.$ 所以
+
+$$
+\left[ \begin{array}{c c} \mathbf {A} & \mathbf {C} \\ \mathbf {O} & \mathbf {B} \end{array} \right] ^ {- 1} = \left[ \begin{array}{c c} \mathbf {A} ^ {- 1} & - \mathbf {A} ^ {- 1} \mathbf {C B} ^ {- 1} \\ \mathbf {O} & \mathbf {B} ^ {- 1} \end{array} \right].
+$$
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/d46dec5073f0465733b97b172afff98524553460df8838fa18c85d8fbc9800f2.jpg)
+
+
+学习札记"
+fd-0233,辅导讲义,线性代数,第二章 矩阵,,6,,,题型四 分块矩阵,"【例2.26】设 $A$, $B$ 均为 $n$ 阶矩阵. 如果 $E-AB$ 可逆, 证明 $E-BA$ 可逆.",,,,,"因
+
+$$
+\left[ \begin{array}{l l} {\pmb {E}} & {\pmb {O}} \\ {- \pmb {A}} & {\pmb {E}} \end{array} \right] \left[ \begin{array}{l l} {\pmb {E}} & {\pmb {B}} \\ {\pmb {A}} & {\pmb {E}} \end{array} \right] = \left[ \begin{array}{l l} {\pmb {E}} & {\pmb {B}} \\ {\pmb {O}} & {\pmb {E} - \pmb {A B}} \end{array} \right],
+$$
+
+$$
+\left| \begin{array}{c c} {\pmb {E}} & {\pmb {O}} \\ {- \pmb {A}} & {\pmb {E}} \end{array} \right| \cdot \left| \begin{array}{c c} {\pmb {E}} & {\pmb {B}} \\ {\pmb {A}} & {\pmb {E}} \end{array} \right| = \left| \begin{array}{c c} {\pmb {E}} & {\pmb {B}} \\ {\pmb {O}} & {\pmb {E} - \pmb {A B}} \end{array} \right|,
+$$
+
+有
+
+$$
+\left| \begin{array}{c c} \boldsymbol {E} & \boldsymbol {B} \\ \boldsymbol {A} & \boldsymbol {E} \end{array} \right| = | \boldsymbol {E} - \boldsymbol {A B} |.
+$$
+
+又
+
+$$
+\left[ \begin{array}{c c} {\pmb {E}} & {\pmb {B}} \\ {\pmb {A}} & {\pmb {E}} \end{array} \right] \left[ \begin{array}{c c} {\pmb {E}} & {\pmb {O}} \\ {- \pmb {A}} & {\pmb {E}} \end{array} \right] = \left[ \begin{array}{c c} {\pmb {E} - \pmb {B A}} & {\pmb {B}} \\ {\pmb {O}} & {\pmb {E}} \end{array} \right],
+$$
+
+得
+
+$$
+\left| \begin{array}{c c} {\pmb {E}} & {\pmb {B}} \\ {\pmb {A}} & {\pmb {E}} \end{array} \right| = | \pmb {E} - \pmb {B A} |.
+$$
+
+所以 $|\mathbf{E} - \mathbf{AB}| = |\mathbf{E} - \mathbf{BA}|$ .
+
+因而， $E - BA$ 可逆.
+
+或反证法：
+
+如果 $|\mathbf{E} - \mathbf{BA}| = 0$ ，则 $(\mathbf{E} - \mathbf{BA})\mathbf{x} = \mathbf{0}$ 有非零解.
+
+设 $\pmb{\alpha} \neq \mathbf{0}, (\pmb{E} - \pmb{B}\pmb{A})\pmb{\alpha} = \mathbf{0}$ , 于是 $BA\pmb{\alpha} = \pmb{\alpha} \neq \mathbf{0}$ , 而且 $A\pmb{\alpha} \neq \mathbf{0}$ , 那么
+
+$$
+(E - A B) A \alpha = A \alpha - A B A \alpha = A \alpha - A \alpha = 0.
+$$
+
+从而 $A\alpha$ 是 $(E-AB)x=0$ 的非零解与 E-AB 可逆相矛盾.
+因而，E-BA 可逆.
+
+
+$r(A)=r\Leftrightarrow A$ 中存在 r 阶子式不为 0, $r+1$ (如果有) 阶子式全为 0. $r(AB) \leqslant \min(r(A), r(B))$ ，若 A 可逆，则 $r(AB) = r(B)$ ."
+fd-0234,辅导讲义,线性代数,第二章 矩阵,,1,,,题型五 秩的计算,【例2.27】已知 $\mathbf{A} = \begin{bmatrix} 1 & 2 & 5 \\ 2 & a & 7 \\ 1 & 3 & 2 \end{bmatrix}$ ，若 $r(\mathbf{A}) + r(\mathbf{A}^*) = 3$ ，则 $a =$,,,,,"由 $r(\mathbf{A}^{*}) = \begin{cases} n, & r(\mathbf{A}) = n, \\ 1, & r(\mathbf{A}) = n - 1, \\ 0, & r(\mathbf{A}) < n - 1 \end{cases}$ 知 $r(\mathbf{A}) + r(\mathbf{A}^{*}) = 3 \Leftrightarrow r(\mathbf{A}) = 2,$ 现 A 中有二阶子式 $\begin{vmatrix}1 & 2 \\ 1 & 3\end{vmatrix} \neq 0$ ，故 $r(A) = 2 \Leftrightarrow |A| = 0$ .
+
+由 $|\mathbf{A}| = 3(5 - a)$ ，所以 $a = 5$"
+fd-0235,辅导讲义,线性代数,第二章 矩阵,,2,,,题型五 秩的计算,"【例2.28】设 $\mathbf{A} = \begin{bmatrix} 2 & 3 & 4 \\ 6 & t & 2 \\ 4 & 6 & 3 \end{bmatrix}, \mathbf{B} = \begin{bmatrix} 1 \\ 3 \\ 0 \end{bmatrix} (2,3,4)$ ，若秩 $r(\mathbf{A} + \mathbf{A}\mathbf{B}) = 2$ ，则 $t =$ ____.",,,,,"由于 $r(\mathbf{A} + \mathbf{A}\mathbf{B}) = r[\mathbf{A}(\mathbf{E} + \mathbf{B})]$ ，又
+
+$$
+\boldsymbol {E} + \boldsymbol {B} = \boldsymbol {E} + \left[ \begin{array}{l} 1 \\ 3 \\ 0 \end{array} \right] (2, 3, 4) = \boldsymbol {E} + \left[ \begin{array}{l l l} 2 & 3 & 4 \\ 6 & 9 & 1 2 \\ 0 & 0 & 0 \end{array} \right] = \left[ \begin{array}{l l l} 3 & 3 & 4 \\ 6 & 1 0 & 1 2 \\ 0 & 0 & 1 \end{array} \right]
+$$
+
+是可逆矩阵，故 $r(\mathbf{A} + \mathbf{AB}) = r(\mathbf{A}) = 2.$ 
+
+对矩阵 A 作初等变换,有
+
+$$
+\mathbf {A} = \left[\begin{array}{c c c}2&3&4\\6&t&2\\4&6&3\end{array}\right]\rightarrow \left[\begin{array}{c c c}2&3&4\\0&t - 9&- 1 0\\0&0&- 5\end{array}\right],
+$$
+
+那么， $r(A)=2\Leftrightarrow t=9.$"
+fd-0236,辅导讲义,线性代数,第二章 矩阵,,3,,,题型五 秩的计算,【例2.29】$n$ 阶矩阵 $\mathbf{A} = \begin{bmatrix} a & 1 & 1 & \cdots & 1\\ 1 & a & 1 & \cdots & 1\\ 1 & 1 & a & \cdots & 1\\ \vdots & \vdots & \vdots & & \vdots \\ 1 & 1 & 1 & \cdots & a \end{bmatrix}$ 的秩 $=$ ____.,,,,,"（方法一） 经初等变换矩阵的秩不变.
+
+$$
+\mathbf {A} = \left[\begin{array}{c c c c c}a&1&1&\dots&1\\1&a&1&\dots&1\\1&1&a&\dots&1\\\vdots&\vdots&\vdots&&\vdots\\1&1&1&\dots&a\end{array}\right]\rightarrow \left[\begin{array}{c c c c c}a&1&1&\dots&1\\1 - a&a - 1&0&\dots&0\\1 - a&0&a - 1&\dots&0\\\vdots&\vdots&\vdots&&\vdots\\1 - a&0&0&\dots&a - 1\end{array}\right]
+$$
+
+$$
+\rightarrow \left[\begin{array}{c c c c c}a + n - 1&1&1&\dots&1\\0&a - 1&0&\dots&0\\0&0&a - 1&\dots&0\\\vdots&\vdots&\vdots&&\vdots\\0&0&0&\dots&a - 1\end{array}\right].
+$$
+
+若 $a \neq 1$ 且 $a \neq 1 - n$ , 则 $r(A) = n$ .
+
+若 $a = 1$ ，则 $r(A) = 1$ 
+
+若 $a = 1 - n$ ，则 $r(A) = n - 1.$ 
+
+(方法二) 用行列式.
+$$
+| \mathbf {A} | = \left| \begin{array}{c c c c c} a & 1 & 1 & \dots & 1 \\ 1 & a & 1 & \dots & 1 \\ 1 & 1 & a & \dots & 1 \\ \vdots & \vdots & \vdots & & \vdots \\ 1 & 1 & 1 & \dots & a \end{array} \right| = (a + n - 1) (a - 1) ^ {n - 1}.
+$$
+
+若 $a \neq 1$ 且 $a \neq 1 - n$ , 则 $|\mathbf{A}| \neq 0$ , 故 $r(\mathbf{A}) = n$ .
+
+若 a = 1，易见 $r(A) = 1$ .
+
+若 $a = 1 - n$ ，知 $n - 1$ 阶子式
+
+$$
+A _ {1 1} = \left| \begin{array}{c c c c} a & 1 & \dots & 1 \\ 1 & a & \dots & 1 \\ \vdots & \vdots & & \vdots \\ 1 & 1 & \dots & a \end{array} \right| = (a + n - 2) (a - 1) ^ {n - 2} \neq 0, | \mathbf {A} | = 0,
+$$
+
+故 $r(A)=n-1$ .
+
+(方法三) 用相似.
+
+因为 $\pmb{A}$ 是实对称矩阵， $\pmb{A} \sim \pmb{\Lambda}$ . 只要求出 $r(\pmb{\Lambda})$ 就知 $r(\pmb{A})$ ，为此由 $\pmb{A}$ 的特征值入手. 因为
+
+$$
+\begin{array}{r l} \mathbf {A} & = \left[ \begin{array}{c c c c c} a - 1 & & & & \\ & a - 1 & & & \\ & & a - 1 & & \\ & & & \ddots & \\ & & & & a - 1 \end{array} \right] + \left[ \begin{array}{c c c c c} 1 & 1 & 1 & \dots & 1 \\ 1 & 1 & 1 & \dots & 1 \\ 1 & 1 & 1 & \dots & 1 \\ \vdots & \vdots & \vdots & & \vdots \\ 1 & 1 & 1 & \dots & 1 \end{array} \right] \\ & = (a - 1) \mathbf {E} + \mathbf {B}, \end{array}
+$$
+
+而矩阵 $\pmb{B}$ 的秩为1，有
+
+$$
+\mid \lambda E - B \mid = \lambda^ {n} - n \lambda^ {n - 1},
+$$
+
+得到矩阵 B 的特征值是 $n,0,0,\cdots,0(n-1$ 个 $)$ ，因此矩阵 A 的特征值是 $n+a-1,a-1,a-1,\cdots,a-1$ .
+
+又因 A 是实对称矩阵, 故
+
+$$
+\mathbf {A} \sim \mathbf {\Lambda} = \left[ \begin{array}{c c c c} n + a - 1 & & & \\ & a - 1 & & \\ & & \ddots & \\ & & & a - 1 \end{array} \right],
+$$
+
+那么
+
+$$
+r (\mathbf {A}) = \left\{ \begin{array}{l l} n, & \text {若} a \neq 1 \text {且} a \neq 1 - n, \\ n - 1, & \text {若} a = 1 - n, \\ 1, & \text {若} a = 1. \end{array} \right.
+$$"
+fd-0237,辅导讲义,线性代数,第二章 矩阵,,4,,,题型五 秩的计算,"【例2.30】已知 $\mathbf{A} = \begin{bmatrix} 1 & 2 & -2 \\ 3 & a - 2 & 1 \\ 2 & -1 & a \end{bmatrix}, \mathbf{B}$ 是三阶非零矩阵，且 $AB = O$ ，证明 $r(A) = 2$ .",,,,,"因为 A 中有二阶子式 $\begin{vmatrix}1 & -2 \\ 3 & 1\end{vmatrix} \neq 0$ ，所以 $r(A) \geqslant 2.$ 
+
+① 
+
+又 $AB = O, B \neq O$ ，知 $Ax = 0$ 有非零解，有
+
+$$
+r (\mathbf {A}) <   3.\tag{②}
+$$
+
+由 ①② 得必有 $r(A) = 2$ .
+
+
+对于矩阵方程,经恒等变形之后有三种可能的形式:
+
+$$
+\mathbf {A} \mathbf {X} = \mathbf {B}; \mathbf {X} \mathbf {A} = \mathbf {B}; \mathbf {A} \mathbf {X} \mathbf {C} = \mathbf {B}.
+$$
+
+如果矩阵 A, C 是可逆的, 则依次有
+
+$$
+\boldsymbol {X} = \boldsymbol {A} ^ {- 1} \boldsymbol {B}; \quad \boldsymbol {X} = \boldsymbol {B} \boldsymbol {A} ^ {- 1}; \quad \boldsymbol {X} = \boldsymbol {A} ^ {- 1} \boldsymbol {B} \boldsymbol {C} ^ {- 1}.
+$$
+
+然后经计算就可求出 X.
+
+注意: $A^{-1}B$ 可以由 $[A\mid B]\rightarrow[E\mid A^{-1}B]$ 来求.
+
+因为矩阵乘法没有交换律,所以在恒等变形时,运算法则一定要正确."
+fd-0238,辅导讲义,线性代数,第二章 矩阵,,1,,,题型六 矩阵方程,"【例2.31】已知 $\mathbf{A},\mathbf{B}$ 均是三阶矩阵，矩阵 $\pmb{X}$ 满足
+
+$$
+\mathbf {A X A} - \mathbf {B X B} = \mathbf {B X A} - \mathbf {A X B} + \mathbf {E},
+$$
+
+其中 E 是三阶单位矩阵, 则 X =",$(A^{2}-B^{2})^{-1}$,$(A - B) ^ {- 1} (A + B) ^ {- 1}.$,$(\mathbf {A} + \mathbf {B}) ^ {- 1} (\mathbf {A} - \mathbf {B})$,"条件不足, 不能确定","据已知,有
+
+$$
+\mathbf {A X A} - \mathbf {B X A} + \mathbf {A X B} - \mathbf {B X B} = \mathbf {E},
+$$
+
+$$
+(A - B) X A + (A - B) X B = E,
+$$
+
+$$
+(\mathbf {A} - \mathbf {B}) \mathbf {X} (\mathbf {A} + \mathbf {B}) = \mathbf {E}.
+$$
+
+上式右端是单位矩阵,说明矩阵 A-B,A+B 均可逆,那么左乘 $(A-B)^{-1}$ ,右乘 $(A+B)^{-1}$ ,即知 $X=(A-B)^{-1}(A+B)^{-1}$ ,故应选(B)."
+fd-0239,辅导讲义,线性代数,第二章 矩阵,,2,,,题型六 矩阵方程,"【例2.32】（2000,1）设矩阵 A 的伴随矩阵
+$$
+\mathbf {A} ^ {*} = \left[ \begin{array}{c c c c} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 1 & 0 \\ 0 & - 3 & 0 & 8 \end{array} \right]
+$$
+
+且 $ABA^{-1} = BA^{-1} + 3E$ ，其中 $\pmb{E}$ 为四阶单位矩阵，求矩阵 $\pmb{B}$",,,,,"由 $|\mathbf{A}^{*}| = |\mathbf{A}|^{n - 1}$ , 有 $|\mathbf{A}|^3 = 8$ , 得 $|\mathbf{A}| = 2$ . 用 $\mathbf{A}$ 右乘矩阵方程的两端, 得
+
+$$
+\mathbf {A B} - \mathbf {B} = 3 \mathbf {A}.
+$$
+
+因为 $A^{*}A = AA^{*} = |A|E$ ，用 $A^{*}$ 左乘上式的两端，并将 $|A| = 2$ 代入，得 $(2E-A^{*})B=6E.$ 
+
+于是 $2E - A^{*}$ 是可逆矩阵，从而
+
+$$
+\pmb {B} = 6 (2 \pmb {E} - \pmb {A} ^ {*}) ^ {- 1}
+$$
+
+$$
+= 6 \left[ \begin{array}{l l l l} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ - 1 & 0 & 1 & 0 \\ 0 & 3 & 0 & - 6 \end{array} \right] ^ {- 1} = 6 \left[ \begin{array}{l l l l} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 1 & 0 \\ 0 & \frac {1}{2} & 0 & - \frac {1}{6} \end{array} \right] = \left[ \begin{array}{l l l l} 6 & 0 & 0 & 0 \\ 0 & 6 & 0 & 0 \\ 6 & 0 & 6 & 0 \\ 0 & 3 & 0 & - 1 \end{array} \right].
+$$"
+fd-0240,辅导讲义,线性代数,第二章 矩阵,,3,,,题型六 矩阵方程,"【练习】$(2015, \frac{2}{3})$ 设矩阵 $A = \begin{bmatrix} a & 1 & 0 \\ 1 & a & -1 \\ 0 & 1 & a \end{bmatrix}$ ，且 $A^{3} = O$ .
+
+(1) 求 a 的值；
+
+(2) 若矩阵 X 满足 $X - X A^{2} - A X + A X A^{2} = E$ ，其中 E 为三阶单位矩阵，求 X.",,,,,

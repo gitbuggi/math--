@@ -1366,8 +1366,8 @@ input,textarea,select{font-family:inherit}
             <input id="ghRepo" type="text" placeholder="如 math--">
           </div>
           <div class="edit-row">
-            <label>题库文件名</label>
-            <input id="ghPath" type="text" placeholder="如 question.csv">
+            <label>题库文件 / 清单</label>
+            <input id="ghPath" type="text" placeholder="question.csv 或 questions/_manifest.json">
           </div>
           <div class="edit-row">
             <label>进度文件名</label>
@@ -1710,6 +1710,271 @@ function saveGithubConfig(config) {
   updateQuestionsUI();
 }
 
+/* ============================================================
+   题库分片（按来源拆分）
+   ------------------------------------------------------------
+   githubConfig.path 填 "questions/_manifest.json" 时启用；
+   填 "question.csv" 则走原来的单文件逻辑，两者互不影响。
+   清单格式：{ "version":1, "parts":[ {"source":"880","file":"880.csv"}, ... ] }
+   ============================================================ */
+let questionParts = null;   // { dir, degraded, list:[{source, file, sha, text}] }
+
+function isPartsPath(p){
+  return /(^|\/)_manifest\.json$/i.test(String(p || "").trim());
+}
+function partsDirOf(p){
+  const s = String(p || "").trim().replace(/\\/g, "/").replace(/^\/+/, "");
+  return s.replace(/\/[^\/]*$/, "");
+}
+function stripBom(s){ return String(s == null ? "" : s).replace(/^\ufeff/, ""); }
+function normEol(s){ return stripBom(s).replace(/\r\n/g, "\n").replace(/\r/g, "\n"); }
+
+/* 4MB 的字符串用 encodeURIComponent 会卡好几秒，改为按 UTF-8 字节编码 */
+function toBase64Utf8(str){
+  const bytes = new TextEncoder().encode(String(str == null ? "" : str));
+  const CH = 0x8000;
+  let bin = "";
+  for(let i = 0; i < bytes.length; i += CH){
+    bin += String.fromCharCode.apply(null, bytes.subarray(i, i + CH));
+  }
+  return btoa(bin);
+}
+
+/* 限并发的 map（GitHub 不建议一次开太多请求） */
+async function mapLimit(items, limit, fn){
+  const out = new Array(items.length);
+  let next = 0;
+  const run = async () => {
+    while(true){
+      const i = next++;
+      if(i >= items.length) return;
+      out[i] = await fn(items[i], i);
+    }
+  };
+  const n = Math.max(1, Math.min(limit, items.length));
+  await Promise.all(Array.from({ length: n }, run));
+  return out;
+}
+
+/* 系列名 → 文件名前缀（与 split_questions.py 保持一致） */
+const PART_SERIES_SLUG = {
+  "真题":"zhenti", "张宇八套":"zhangyu8", "张宇四套":"zhangyu4",
+  "李林六套":"lilin6", "李林四套":"lilin4", "合工大超越":"chaoyue",
+  "合工大共创":"gongchuang", "欧几里得模考":"oujilide", "新东方模考":"xindongfang",
+  "880":"880", "严选题":"yanxuan", "XDF":"xdf", "辅导讲义":"fudao", "模拟卷":"moni"
+};
+function partSlug(source){
+  const s = String(source || "").trim();
+  let series = s, sub = "";
+  for(const sep of ["·", "・", "|", "/"]){
+    const i = s.indexOf(sep);
+    if(i > 0){ series = s.slice(0, i).trim(); sub = s.slice(i + 1).trim(); break; }
+  }
+  let base = PART_SERIES_SLUG[series] ||
+             series.replace(/[^0-9A-Za-z\-]/g, "-").replace(/-{2,}/g, "-").replace(/^-|-$/g, "").toLowerCase();
+  if(!base) base = "part";
+  const digits = (sub.match(/\d+/g) || []).join("");
+  if(sub && digits) base += "-" + (digits.length <= 2 ? ("0" + digits).slice(-2) : digits);
+  return base;
+}
+function uniquePartFile(source, list, chapterIndex){
+  const base = partSlug(source) + (chapterIndex ? "-c" + String(chapterIndex).padStart(2, "0") : "");
+  const used = new Set(list.map(p => String(p.file || "").toLowerCase()));
+  let name = base + ".csv", n = 2;
+  while(used.has(name.toLowerCase())){
+    name = base + "-" + n + ".csv";
+    n++;
+  }
+  return name;
+}
+
+/* 读清单 + 并行拉取所有分片；返回合并后的题目数组 */
+async function loadQuestionsFromParts(getFileContent, dir){
+  const manRes = await getFileContent(dir + "/_manifest.json");
+  if(manRes.error) return { error: manRes.error };
+
+  let man = null;
+  try{ man = JSON.parse(stripBom(manRes.content)); }catch(e){}
+  const parts = (man && Array.isArray(man.parts)) ? man.parts.filter(p => p && p.file) : [];
+  if(!parts.length) return { error: "清单里没有分片" };
+
+  const fetched = await mapLimit(parts, 10, async p => {
+    const path = dir + "/" + String(p.file).replace(/^\/+/, "");
+    const r = await getFileContent(path);
+    const meta = { source: String(p.source || ""), chapter: ("chapter" in p ? String(p.chapter == null ? "" : p.chapter) : undefined), file: p.file };
+    if(r.error) return Object.assign(meta, { error: r.error });
+    return Object.assign(meta, { sha: r.sha, text: r.content });
+  });
+
+  const ok = [], bad = [];
+  for(const f of fetched) (f.error ? bad : ok).push(f);
+
+  const qs = [];
+  for(const f of ok){
+    const arr = parseQuestionsCsv(stripBom(f.text || ""));
+    f.count = arr.length;
+    for(const q of arr) qs.push(q);
+  }
+
+  questionParts = {
+    dir,
+    degraded: bad.length > 0,
+    list: fetched.map(f => ({
+      source: f.source,
+      chapter: f.chapter,   /* undefined = 整来源分片；"" = 该来源里章节为空的那些题 */
+      file: f.file,
+      sha: f.sha || null,
+      text: f.error ? null : f.text,
+      count: f.count || 0
+    }))
+  };
+  return { questions: qs, failed: bad };
+}
+
+/* 取某个文件的当前 sha（写入冲突 / 新文件时用） */
+async function ghFileMeta(filePath){
+  if(!githubConfig) return null;
+  const { owner, repo, branch, token } = githubConfig;
+  try{
+    const res = await fetch(
+      `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}?ref=${encodeURIComponent(branch || "main")}`,
+      { headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github.v3+json" } }
+    );
+    if(!res.ok) return null;
+    const d = await res.json();
+    return { sha: d.sha };
+  }catch(e){ return null; }
+}
+
+/* 写单个文件；遇到 409/422（sha 过期）先重新取 sha 再试一次 */
+async function putGithubFile(filePath, text, sha, message){
+  if(!githubConfig) return null;
+  const { owner, repo, branch, token } = githubConfig;
+  const url = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
+
+  const send = async (useSha) => {
+    const body = { message: message || ("Update " + filePath), content: toBase64Utf8(text), branch: branch || "main" };
+    if(useSha) body.sha = useSha;
+    return await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Authorization": `Bearer ${token}`,
+        "Accept": "application/vnd.github.v3+json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    });
+  };
+
+  let res = await send(sha);
+  if(res.status === 409 || res.status === 422){
+    const meta = await ghFileMeta(filePath);
+    if(meta && meta.sha) res = await send(meta.sha);
+  }
+  if(!res.ok){
+    let msg = "HTTP " + res.status;
+    try{ const d = await res.json(); if(d && d.message) msg = d.message; }catch(e){}
+    throw new Error(msg);
+  }
+  const data = await res.json();
+  return (data && data.content && data.content.sha) || null;
+}
+
+/* 只把内容有变化的分片写回 GitHub */
+async function writeQuestionParts(){
+  const part = questionParts;
+  if(!part || !part.list) return false;
+  if(part.degraded){
+    toast("题库没有完整加载（有分片读取失败），已拒绝写入，避免覆盖数据");
+    return false;
+  }
+
+  /* 1. 按「来源」和「来源+章节」把内存里的题目分组 */
+  const bySource = new Map(), bySC = new Map();
+  for(const q of QS_ALL){
+    const s = q.source || "";
+    if(!bySource.has(s)) bySource.set(s, []);
+    bySource.get(s).push(q);
+    const k = s + "\u0000" + (q.chapter || "");
+    if(!bySC.has(k)) bySC.set(k, []);
+    bySC.get(k).push(q);
+  }
+  const rowsOf = p => (p.chapter === undefined)
+    ? (bySource.get(p.source) || [])
+    : (bySC.get(p.source + "\u0000" + p.chapter) || []);
+
+  /* 2. 逐片比对，只写有变化的 */
+  const dirty = [];
+  for(const p of part.list){
+    const rows = rowsOf(p);
+    const text = "\ufeff" + buildQuestionsCsv(rows);
+    if(p.text != null && normEol(p.text) === normEol(text)) continue;
+    /* 安全阀：原来有题、现在变 0，先问一声，防止误清空整片 */
+    if(p.text != null && p.count > 0 && rows.length === 0){
+      const name = p.source + (p.chapter ? " · " + p.chapter : "");
+      if(!confirm(`「${name}」原有 ${p.count} 道题，现在变成 0 道。\n确定要清空这个分片吗？`)){
+        toast("已取消写入");
+        return false;
+      }
+    }
+    dirty.push({ p, text, n: rows.length });
+  }
+
+  /* 3. 清单里没有的来源 / 章节 → 新建分片 */
+  const inManifest = new Set(part.list.map(p => p.source));
+  const wholeSources = new Set(part.list.filter(p => p.chapter === undefined).map(p => p.source));
+  const chapterSources = new Set(part.list.filter(p => p.chapter !== undefined).map(p => p.source));
+  const covered = new Set(part.list.filter(p => p.chapter !== undefined).map(p => p.source + "\u0000" + p.chapter));
+  const added = [];
+
+  for(const [src, rows] of bySource){
+    if(!src || inManifest.has(src)) continue;
+    added.push({ source: src, chapter: undefined, file: uniquePartFile(src, part.list.concat(added)), rows });
+  }
+  for(const [k, rows] of bySC){
+    const i = k.indexOf("\u0000");
+    const src = k.slice(0, i), ch = k.slice(i + 1);
+    if(!src) continue;
+    if(!chapterSources.has(src) || wholeSources.has(src) || covered.has(k)) continue;
+    const idx = part.list.concat(added).filter(p => p.source === src).length + 1;
+    added.push({ source: src, chapter: ch, file: uniquePartFile(src, part.list.concat(added), idx), rows });
+  }
+
+  if(!dirty.length && !added.length) return true;   // 没有任何变化
+
+  try{
+    for(const { p, text, n } of dirty){
+      p.sha = await putGithubFile(part.dir + "/" + p.file, text, p.sha, "Update questions: " + p.source);
+      p.text = text;
+      p.count = n;
+    }
+    if(added.length){
+      for(const a of added){
+        const text = "\ufeff" + buildQuestionsCsv(a.rows);
+        const sha = await putGithubFile(part.dir + "/" + a.file, text, null, "Add questions: " + a.source);
+        part.list.push({ source: a.source, chapter: a.chapter, file: a.file, sha, text, count: a.rows.length });
+      }
+      await writePartsManifest();
+    }
+  }catch(e){
+    toast("分片写入失败：" + (e.message || e));
+    return false;
+  }
+  return true;
+}
+
+/* 来源集合变化时重写清单（不写行数，避免每次编辑都动它） */
+async function writePartsManifest(){
+  const part = questionParts;
+  if(!part) return;
+  const man = { version: 1, parts: part.list.map(p => p.chapter === undefined
+    ? { source: p.source, file: p.file }
+    : { source: p.source, chapter: p.chapter, file: p.file }) };
+  const text = JSON.stringify(man, null, 2) + "\n";
+  const meta = await ghFileMeta(part.dir + "/_manifest.json");
+  await putGithubFile(part.dir + "/_manifest.json", text, meta && meta.sha, "Update questions manifest");
+}
+
 async function fetchFromGithub() {
   if (!githubConfig) return false;
   const { owner, repo, path, progressPath, branch, token } = githubConfig;
@@ -1746,13 +2011,23 @@ async function fetchFromGithub() {
     return { content, sha: data.sha };
   }
 
-  // --- 1. 拉取题库 ---
+  // --- 1. 拉取题库（支持「按来源拆分」的清单，也兼容原来的单文件） ---
   try {
-    const qRes = await getFileContent(path);
-    if (qRes.error) throw new Error(`题库拉取失败: ${qRes.error}`);
-    
-    githubConfig.sha = qRes.sha; 
-    const parsed = parseQuestionsCsv(qRes.content);
+    questionParts = null;
+    let parsed = [];
+    if(isPartsPath(path)){
+      const dir = partsDirOf(path);
+      const res = await loadQuestionsFromParts(getFileContent, dir);
+      if(res.error === 404) throw new Error(`没找到 ${path}，请先按指南拆分并上传 questions 目录`);
+      if(res.error) throw new Error(`题库清单读取失败: ${res.error}`);
+      parsed = res.questions || [];
+      if(res.failed && res.failed.length) toast(`有 ${res.failed.length} 个分片读取失败，已跳过`);
+    } else {
+      const qRes = await getFileContent(path);
+      if (qRes.error) throw new Error(`题库拉取失败: ${qRes.error}`);
+      githubConfig.sha = qRes.sha;
+      parsed = parseQuestionsCsv(qRes.content);
+    }
     if (parsed.length > 0) {
       QS_ALL = parsed;
       rebuildIndex();
@@ -1793,9 +2068,7 @@ async function writeToGithub(csvContent, isProgress = false) {
   
   if(!targetPath) return false;
 
-  const base64Content = btoa(encodeURIComponent(csvContent).replace(/%([0-9A-F]{2})/g, function(match, p1) {
-    return String.fromCharCode('0x' + p1);
-  }));
+  const base64Content = toBase64Utf8(csvContent);
 
   try {
     const body = {
@@ -2439,9 +2712,9 @@ function getSourcePrefix(source){
   return (source.replace(/[^\x00-\x7F]/g, "").slice(0, 3).toLowerCase() || "q");
 }
 
-function buildQuestionsCsv(){
+function buildQuestionsCsv(list){
 const rows = [["题号ID","来源","模块","章节","套卷","序号","难度","选填解","题型","题目内容","选项A","选项B","选项C","选项D","解析"]];
-  for(const q of QS_ALL){
+  for(const q of (Array.isArray(list) ? list : QS_ALL)){
     const g = q.groups || [];
     rows.push([
       q.id, q.source || "", q.module || "", q.chapter || "",
@@ -2517,6 +2790,10 @@ async function loadQuestionsFromBoundCsv(opts){
 }
 async function bindQuestionsFile(){
   if(!syncSupported){ toast("浏览器不支持自动写文件，请用 Chrome / Edge"); return; }
+  if(githubConfig && isPartsPath(githubConfig.path)){
+    toast("当前是分片模式（questions/_manifest.json），不支持再绑定本地单文件");
+    return;
+  }
   try{
     const arr = await window.showOpenFilePicker({
       types: [{ description: "题库 CSV", accept: { "text/csv": [".csv"] } }],
@@ -2541,6 +2818,13 @@ async function bindQuestionsFile(){
   }
 }
 async function writeQuestionsToBoundCsv(){
+  if(githubConfig && isPartsPath(githubConfig.path) && !questionParts){
+    toast("题库分片没有加载成功，已拒绝写入（避免覆盖云端数据）");
+    return false;
+  }
+  if(githubConfig && questionParts) {
+    return await writeQuestionParts();
+  }
   if(githubConfig) {
     return await writeToGithub("\ufeff" + buildQuestionsCsv(), false);
   }
@@ -3132,7 +3416,8 @@ function renderSetTree(){
 
   sources.forEach(source => {
     const papers = bySource[source];
-    const paperNames = Object.keys(papers);
+    /* 套卷按名称自然排序（拆分后加载顺序不再等于文件顺序，靠这里保证 2001→2026 不乱） */
+    const paperNames = Object.keys(papers).sort(naturalCompare);
     const total = paperNames.reduce((s, p) => s + papers[p], 0);
     const srcOpen = openOf("source", source);
 
@@ -5765,7 +6050,7 @@ function openEditModal(qid){
 }
 
 function openNewQuestionModal(){
-  if(!questionsHandle){ toast("请先在设置里绑定题库 CSV"); return; }
+  if(!questionsHandle && !githubConfig){ toast("请先在设置里绑定题库 CSV 或配置 GitHub"); return; }
   editingQid = null;
 
    fillEditModuleSelect();
@@ -6003,7 +6288,7 @@ async function saveEdit(){
 async function deleteEdit(){
   if(!editingQid){ toast("没有可删除的题目"); return; }
   if(!confirm("确定删除这道题吗？此操作不可恢复。")) return;
-  if(!questionsHandle){ toast("请先绑定题库 CSV"); return; }
+  if(!questionsHandle && !githubConfig){ toast("请先绑定题库 CSV 或配置 GitHub"); return; }
 
   const idx = QS_ALL.findIndex(q => q.id === editingQid);
   if(idx === -1){ toast("题目不存在"); return; }
@@ -6201,8 +6486,8 @@ $("#toggleAllNotesBtn").addEventListener("click", () => {
 function updateTopNewBtn(){
   const b = $("#topNewBtn");
   if(!b) return;
-  /* 只有绑定了题库 CSV 才显示 */
-  b.style.display = questionsHandle ? "" : "none";
+  /* 绑定本地题库 或 配置了 GitHub 才显示 */
+  b.style.display = (questionsHandle || githubConfig) ? "" : "none";
 }
 $("#topNewBtn").addEventListener("click", openNewQuestionModal);
 
@@ -6282,7 +6567,7 @@ if(store.session && !store.session.finished && Array.isArray(store.session.ids) 
     await fetchFromGithub();
   }
   const h = await loadQuestionsHandle();
-  if(h){
+  if(h && !questionParts){   /* 已按来源拆分时，不再用本地单文件覆盖云端题库 */
     questionsHandle = h;
     updateQuestionsUI();
     try{
@@ -6358,8 +6643,9 @@ $("#setGithubConfig").addEventListener("click", () => {
 $("#ghSaveBtn").addEventListener("click", () => {
   const owner = $("#ghOwner").value.trim();
   const repo = $("#ghRepo").value.trim();
-  const path = $("#ghPath").value.trim();
-  const progressPath = $("#ghProgressPath").value.trim();
+  /* 允许直接粘贴 Windows 路径，统一成正斜杠、去掉前导 / */
+  const path = $("#ghPath").value.trim().replace(/\\/g, "/").replace(/^\/+/, "");
+  const progressPath = $("#ghProgressPath").value.trim().replace(/\\/g, "/").replace(/^\/+/, "");
   const branch = $("#ghBranch").value.trim() || "main";
   const token = $("#ghToken").value.trim();
 

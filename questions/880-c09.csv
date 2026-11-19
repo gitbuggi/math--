@@ -1,0 +1,372 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+80211101,880,线性代数,第一章 行列式,,1,基础题,选择题,,行列式 $D = \begin{vmatrix} 3 & 0 & 4 & 0 \\ 2 & 2 & 2 & 2 \\ 0 & -7 & 0 & 0 \\ 5 & 3 & -2 & 2 \end{vmatrix}$ ，则 D 的第 4 行各元素的余子式之和 $M_{41} + M_{42} + M_{43} + M_{44} = (\quad)$ .,-28,28,14,-14,"A.
+
+解设元素 $a_{ij}$ 的代数余子式为 $A_{ij} = (-1)^{i + j}M_{ij}$ ，则
+
+$\begin{array}{r l} & M _ {4 1} + M _ {4 2} + M _ {4 3} + M _ {4 4} \\ & = - (- 1) ^ {4 + 1} M _ {4 1} + (- 1) ^ {4 + 2} M _ {4 2} + [ - (- 1) ^ {4 + 3} ] M _ {4 3} + (- 1) ^ {4 + 4} M _ {4 4} \\ & = - A _ {4 1} + A _ {4 2} - A _ {4 3} + A _ {4 4} \\ & = \left| \begin{array}{c c c c} 3 & 0 & 4 & 0 \\ 2 & 2 & 2 & 2 \\ 0 & - 7 & 0 & 0 \\ - 1 & 1 & - 1 & 1 \end{array} \right| = 7 \left| \begin{array}{c c c} 3 & 4 & 0 \\ 2 & 2 & 2 \\ - 1 & - 1 & 1 \end{array} \right| = - 2 8. \end{array}$
+
+【注】在 $D = \left| a_{ij} \right|_{n \times n}$ 中， $a_{ij}$ 的代数余子式 $A_{ij}$ 仅与 $a_{ij}$ 的位置有关，而与 $a_{ij}$ 的取值无关，即改变 D 中 $a_{ij}$ 的值， $A_{ij}$ 不变."
+80211102,880,线性代数,第一章 行列式,,2,基础题,选择题,,"设 $\beta_{1}, \beta_{2}, \alpha_{1}, \alpha_{2}, \alpha_{3}$ 均是 4 维列向量，且 $|A| = |(\beta_{1}, \alpha_{1}, \alpha_{2}, \alpha_{3})| = 1, |B| = |(\beta_{2}, \alpha_{1}, 3\alpha_{2}, \alpha_{3})| = 3$ ，则 $|A + B| = (\quad)$ .",15,16,31,32,"D.
+
+解 由题设,有矩阵 $A + B = (\beta_{1} + \beta_{2}, 2\alpha_{1}, 4\alpha_{2}, 2\alpha_{3})$ , 故
+
+$\begin{array}{r l} | \mathbf {A} + \mathbf {B} | & = | (\boldsymbol {\beta} _ {1} + \boldsymbol {\beta} _ {2}, 2 \boldsymbol {\alpha} _ {1}, 4 \boldsymbol {\alpha} _ {2}, 2 \boldsymbol {\alpha} _ {3}) | \\ & = 1 6 [ | (\boldsymbol {\beta} _ {1}, \boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) | + | (\boldsymbol {\beta} _ {2}, \boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) | ] \\ & = 1 6 [ | (\boldsymbol {\beta} _ {1}, \boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) | + \frac {1}{3} | (\boldsymbol {\beta} _ {2}, \boldsymbol {\alpha} _ {1}, 3 \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) | ] \\ & = 1 6 \times (1 + \frac {1}{3} \times 3) = 1 6 \times 2 = 3 2. \end{array}$"
+80211103,880,线性代数,第一章 行列式,,3,基础题,选择题,,设 3 阶矩阵 $A = \left(a_{ij}\right)_{3 \times 3}$ 满足 $A^T = kA^* (k > 0)$ ，若 $a_{11} = a_{12} = a_{13} = c > 0$ ，则 $c = (\quad)$ .,$\frac{\sqrt{3}}{3k}$,$\frac{\sqrt{3}k^{2}}{3}$,$\sqrt{3} k^2$,$\frac{\sqrt{3}}{k^{2}}$,"A.
+
+解 由 $|\mathbf{A}^*| = |\mathbf{A}|^{3-1} = |\mathbf{A}|^2, |\mathbf{A}^\mathrm{T}| = |k\mathbf{A}^*| = k^3 |\mathbf{A}^*|$ , $|\mathbf{A}^\mathrm{T}| = |\mathbf{A}|$ , 可知 $|\mathbf{A}| = k^3 |\mathbf{A}|^2$ , 故 $|\mathbf{A}| (k^3 |\mathbf{A}| - 1) = 0$ , 于是有 $|\mathbf{A}| = 0$ 或 $|\mathbf{A}| = \frac{1}{k^3}$ . 又 $\mathbf{A}^\mathrm{T} = k\mathbf{A}^*$ , 即 $a_{ji} = kA_{ji}$ , 故
+
+$| \textbf {A} | = a _ {1 1} A _ {1 1} + a _ {1 2} A _ {1 2} + a _ {1 3} A _ {1 3} = \frac {1}{k} (a _ {1 1} ^ {2} + a _ {1 2} ^ {2} + a _ {1 3} ^ {2}) = \frac {3 c ^ {2}}{k} \neq 0,$
+
+于是 $\frac{3c^2}{k} = \frac{1}{k^3}, c = \sqrt{\frac{1}{3k^2}} = \frac{\sqrt{3}}{3k}$ ，故选项A正确."
+80211201,880,线性代数,第一章 行列式,,1,基础题,填空题,,行列式 $\begin{vmatrix} k & 0 & -1 & 1 \\ 0 & k & 1 & -1 \\ -1 & 1 & k & 0 \\ 1 & -1 & 0 & k \end{vmatrix} =$ \_\_\_\_.,,,,,"$k^{2}(k^{2}-4)$ .
+
+解 将第 2,3,4 行加到第 1 行, 提取 k, 再用行列式性质, 有
+
+$\left| \begin{array}{c c c c} k & 0 & - 1 & 1 \\ 0 & k & 1 & - 1 \\ - 1 & 1 & k & 0 \\ 1 & - 1 & 0 & k \end{array} \right| = k \left| \begin{array}{c c c c} 1 & 1 & 1 & 1 \\ 0 & k & 1 & - 1 \\ - 1 & 1 & k & 0 \\ 1 & - 1 & 0 & k \end{array} \right| = k \left| \begin{array}{c c c c} 1 & 1 & 1 & 1 \\ 0 & k & 1 & - 1 \\ 0 & 2 & k + 1 & 1 \\ 0 & 0 & k & k \end{array} \right|$
+
+$= k ^ {2} \left| \begin{array}{c c c} k & 1 & - 1 \\ 2 & k + 1 & 1 \\ 0 & 1 & 1 \end{array} \right| = k ^ {2} \left| \begin{array}{c c c} k & 2 & - 1 \\ 2 & k & 1 \\ 0 & 0 & 1 \end{array} \right| = k ^ {2} (k ^ {2} - 4).$"
+80211202,880,线性代数,第一章 行列式,,2,基础题,填空题,,"若 $\begin{vmatrix}\lambda-a&-1&-1\\-1&\lambda-a&1\\-1&1&\lambda-a\end{vmatrix}=0,$ 则 $\lambda=$ \_\_\_\_.",,,,,"$a+1$ 或a-2.
+
+解由
+
+$\begin{array}{r l} \text {原式} & = \left| \begin{array}{c c c} \lambda - a - 1 & \lambda - a - 1 & 0 \\ - 1 & \lambda - a & 1 \\ - 1 & 1 & \lambda - a \end{array} \right| = \left| \begin{array}{c c c} \lambda - a - 1 & 0 & 0 \\ - 1 & \lambda - a + 1 & 1 \\ - 1 & 2 & \lambda - a \end{array} \right| \\ & = (\lambda - a - 1) [ (\lambda - a) ^ {2} + (\lambda - a) - 2 ] = 0, \end{array}$
+
+得 $\lambda = a + 1$ 或 $\lambda = a - 2$ ."
+80211203,880,线性代数,第一章 行列式,,3,基础题,填空题,,行列式 $D_{4}=\left|\begin{matrix}1&0&0&1\\ 0&2&0&1\\ 0&0&3&1\\ 1&1&1&4\end{matrix}\right|=$ \_\_\_\_.,,,,,"13.
+
+解 行列式为箭形(爪形)行列式,利用主对角线元素将第4行前3个元素化为零,即
+
+$\begin{array}{r l} D _ {4} & = \left| \begin{array}{c c c c} 1 & 0 & 0 & 1 \\ 0 & 2 & 0 & 1 \\ 0 & 0 & 3 & 1 \\ 1 & 1 & 1 & 4 \end{array} \right| = \left| \begin{array}{c c c c} 1 & 0 & 0 & 1 \\ 0 & 2 & 0 & 1 \\ 0 & 0 & 3 & 1 \\ 0 & 0 & 0 & 4 - 1 - \frac {1}{2} - \frac {1}{3} \end{array} \right| \\ & = 1 \times 2 \times 3 \times \left(4 - 1 - \frac {1}{2} - \frac {1}{3}\right) = 1 3. \end{array}$"
+80211204,880,线性代数,第一章 行列式,,4,基础题,填空题,,行列式 $D_{4}=\left|\begin{matrix}0&1&2&0\\ 1&0&0&2\\ 0&3&4&0\\ 3&0&0&4\end{matrix}\right|=$ \_\_\_\_.,,,,,"- 4.
+
+解 行列式为数字型行列式,每行(列)有2个元素为0,可以直接按一行(一列)展开计算,考虑到元素有规律,可以利用行列式的性质,交换第1,4行,再交换第2,4列,得
+
+$D _ {4} = - \left| \begin{array}{c c c c} 3 & 0 & 0 & 4 \\ 1 & 0 & 0 & 2 \\ 0 & 3 & 4 & 0 \\ 0 & 1 & 2 & 0 \end{array} \right| = \left| \begin{array}{c c c c} 3 & 4 & 0 & 0 \\ 1 & 2 & 0 & 0 \\ 0 & 0 & 4 & 3 \\ 0 & 0 & 2 & 1 \end{array} \right| = \left| \begin{array}{c c} 3 & 4 \\ 1 & 2 \end{array} \right| \left| \begin{array}{c c} 4 & 3 \\ 2 & 1 \end{array} \right| = - 4.$"
+80211205,880,线性代数,第一章 行列式,,5,基础题,填空题,,设 $f(x)=\left|\begin{matrix}x&-2x&1&2\\ 1&x&1&-1\\ 3&2&3x&1\\ 1&1&1&x\end{matrix}\right|$ ，则 $x^{3}$ 的系数为 \_\_\_\_.,,,,,"6.
+
+解 若按第 1 行展开, 只有 -2x 乘以其代数余子式会出现 $x^{3}$ 项, 故只要求出这一项即可. 因此, 有
+
+$\begin{array}{r l} (- 2 x) \cdot (- 1) ^ {1 + 2} & \left| \begin{array}{c c c} 1 & 1 & - 1 \\ 3 & 3 x & 1 \\ 1 & 1 & x \end{array} \right| = 2 x \left| \begin{array}{c c c} 1 & 0 & - 1 \\ 3 & 3 x - 3 & 1 \\ 1 & 0 & x \end{array} \right| = 2 x (3 x - 3) (x + 1) \\ & = 6 x ^ {3} - 6 x, \end{array}$
+
+故 $x^{3}$ 的系数为6."
+80211206,880,线性代数,第一章 行列式,,6,基础题,填空题,,"设 A 是 n 阶方阵, 且 $AA^{T}=E, |A|<0$ , 则 $|A+E|=$ \_\_\_\_.",,,,,"0.
+
+解 将 $A + E$ 变成矩阵乘积的形式, 即
+
+$\begin{array}{r l} \mid \boldsymbol {A} + \boldsymbol {E} \mid & = \mid \boldsymbol {A} + \boldsymbol {A} \boldsymbol {A} ^ {\mathrm{T}} \mid = \mid \boldsymbol {A} (\boldsymbol {E} + \boldsymbol {A} ^ {\mathrm{T}}) \mid = \mid \boldsymbol {A} \mid \mid \boldsymbol {E} + \boldsymbol {A} ^ {\mathrm{T}} \mid \\ & = \mid \boldsymbol {A} \mid \mid \boldsymbol {E} ^ {\mathrm{T}} + \boldsymbol {A} ^ {\mathrm{T}} \mid = \mid \boldsymbol {A} \mid \mid (\boldsymbol {E} + \boldsymbol {A}) ^ {\mathrm{T}} \mid = \mid \boldsymbol {A} \mid \mid \boldsymbol {E} + \boldsymbol {A} \mid , \end{array}$
+
+故 $(1-|A|)|A+E|=0$ . 由 $|A|<0$ , 知 $1-|A|>0$ , 所以 $|A+E|=0$ ."
+80211207,880,线性代数,第一章 行列式,,7,基础题,填空题,,"设 A 是 n 阶方阵, E 是 n 阶单位矩阵, 且 $A^{2} = A, A \neq E$ , 则 $|A| =$ \_\_\_\_.",,,,,"0.
+
+解法1 利用矩阵的秩.
+
+由 $A^{2}=A$ , 可知 $\boldsymbol{A}(\boldsymbol{A}-\boldsymbol{E})=\boldsymbol{O}$ , 故
+
+$\mathrm{r} (\mathbf {A}) + \mathrm{r} (\mathbf {A} - \mathbf {E}) \leqslant n.$
+
+又由 $A - E \neq O$ ，知 $r(A - E) \geqslant 1$ ，从而 $r(A) < n$ ，于是 $|A| = 0$ 。
+
+解法2 利用齐次线性方程组.
+
+由 $A(A-E)=O$ ，知 A-E 的列向量组是 Ax=0 的解。又由 $A-E\neq O$ ，知 Ax=0 有非零解，故 $|A|=0$ 。
+
+【注】结论:设 A,B 均为 n 阶方阵,且 AB = O,则:
+
+① $\mathrm{r}(\mathbf{A}) + \mathrm{r}(\mathbf{B}) \leqslant n;$
+
+② B 的列向量组是 Ax = 0 的解."
+80211208,880,线性代数,第一章 行列式,,8,基础题,填空题,,"设 A, B 均为 n 阶方阵, 且 $\left|A\right| = \left|B\right| = \left|A^{-1} + B\right| = 2$ , 则 $\left|A + B^{-1}\right| =$ \_\_\_\_.",,,,,"2.
+
+解
+
+$\begin{array}{r l} \mid \mathbf {A} + \mathbf {B} ^ {- 1} \mid & = \mid \mathbf {E A} + \mathbf {B} ^ {- 1} \mid = \mid \mathbf {B} ^ {- 1} \mathbf {B A} + \mathbf {B} ^ {- 1} \mid \\ & = \mid \mathbf {B} ^ {- 1} \mid \mid \mathbf {B A} + \mathbf {E} \mid = \mid \mathbf {B} ^ {- 1} \mid \mid \mathbf {B A} + \mathbf {A} ^ {- 1} \mathbf {A} \mid \\ & = \mid \mathbf {B} ^ {- 1} \mid \mid \mathbf {B} + \mathbf {A} ^ {- 1} \mid \mid \mathbf {A} \mid = \frac {1}{2} \times 2 \times 2 = 2. \end{array}$
+
+【注】求行列式 $\left|A \pm B\right|$ 时, 利用 E 作恒等变形化为矩阵积的行列式."
+80211209,880,线性代数,第一章 行列式,,9,基础题,填空题,,"设 $|A|=2,|B|=-2$ ，其中 A, B 均为 n 阶方阵，则 $\left|A^{-1}B^{*}-A^{*}B^{-1}\right|=$ \_\_\_\_.",,,,,"$(-4)^{n-1}$ .
+
+解 因为 $A^{*} = |A| A^{-1} = 2A^{-1}, B^{*} = |B| B^{-1} = -2B^{-1}$ ，所以
+
+$\begin{array}{r l} \mid A ^ {- 1} B ^ {*} - A ^ {*} B ^ {- 1} \mid & = \mid A ^ {- 1} \cdot (- 2 B ^ {- 1}) - 2 A ^ {- 1} B ^ {- 1} \mid \\ & = \mid - 4 A ^ {- 1} B ^ {- 1} \mid = (- 4) ^ {n} \mid A \mid^ {- 1} \cdot \mid B \mid^ {- 1} \\ & = (- 4) ^ {n} \cdot \frac {1}{2} \cdot \left(- \frac {1}{2}\right) = (- 4) ^ {n - 1}. \end{array}$"
+80211210,880,线性代数,第一章 行列式,,10,基础题,填空题,,"设 3 阶方阵 $A = (\alpha_{1}, \alpha_{2}, \alpha_{3}), B = (3\alpha_{1} - \alpha_{2}, 3\alpha_{2} - 2\alpha_{1}, 2\alpha_{3} - \alpha_{1} - 2\alpha_{2})$ ，且 $|B| = 14$ ，则 $|A| =$ \_\_\_\_.",,,,,"1.
+
+解 由 $\boldsymbol{B} = (\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}) \begin{pmatrix} 3 & -2 & -1 \\ -1 & 3 & -2 \\ 0 & 0 & 2 \end{pmatrix}$ ，知
+
+$| \textbf {B} | = | (\alpha_ {1}, \alpha_ {2}, \alpha_ {3}) | \left| \begin{array}{r r r} 3 & - 2 & - 1 \\ - 1 & 3 & - 2 \\ 0 & 0 & 2 \end{array} \right| = | \textbf {A} | \cdot 1 4 = 1 4,$
+
+故 $|A|=1$ ."
+80211211,880,线性代数,第一章 行列式,,11,基础题,填空题,,设 $A = \left(a_{ij}\right)_{n \times n}$ 为 n 阶方阵， $|A| = 1$ ，且 A 的每列元素之和均为 $k (k \neq 0)$ ，则 A 的代数余子式之和 $A_{11} + A_{12} + \cdots + A_{1n} =$ \_\_\_\_.,,,,,"$\frac{1}{k}.$
+
+解 依题意,由 $AA^{*}=|A|E$ , 得
+
+$\begin{array}{r l} & {\mid \textbf {A} \mid = \left| \begin{array}{c c c c} {k} & {k} & {\dots} & {k} \\ {a _ {2 1}} & {a _ {2 2}} & {\dots} & {a _ {2 n}} \\ {\vdots} & {\vdots} & & {\vdots} \\ {a _ {n 1}} & {a _ {n 2}} & {\dots} & {a _ {n n}} \end{array} \right| = k \left| \begin{array}{c c c c} {1} & {1} & {\dots} & {1} \\ {a _ {2 1}} & {a _ {2 2}} & {\dots} & {a _ {2 n}} \\ {\vdots} & {\vdots} & & {\vdots} \\ {a _ {n 1}} & {a _ {n 2}} & {\dots} & {a _ {n n}} \end{array} \right|} \\ & {\underline {{{\underline {{{\text {按第} 1 \text {行展开}}}}}}} k (A _ {1 1} + A _ {1 2} + \dots + A _ {1 n}) = 1,} \end{array}$
+
+故 $A_{11}+A_{12}+\cdots+A_{1n}=\frac{1}{k}.$"
+80211301,880,线性代数,第一章 行列式,,1,基础题,解答题,,计算 n 阶行列式 $D_{n}=\left|\begin{matrix}b&a&a&\cdots&a\\ a&b&a&\cdots&a\\\vdots&\vdots&\vdots&&\vdots\\ a&a&a&\cdots&b\end{matrix}\right|$ .,,,,,"解法1 $D_{n}$ 的各列元素之和相等, 用行加法, 有
+
+$\begin{array}{r l} D _ {n} & = \left| \begin{array}{c c c c c c} b + (n - 1) a & b + (n - 1) a & b + (n - 1) a & \dots & b + (n - 1) a \\ a & b & a & \dots & a \\ \vdots & \vdots & \vdots & & \vdots \\ a & a & a & \dots & b \end{array} \right| \\ & = [ b + (n - 1) a ] \left| \begin{array}{c c c c c} 1 & 1 & 1 & \dots & 1 \\ a & b & a & \dots & a \\ \vdots & \vdots & \vdots & & \vdots \\ a & a & a & \dots & b \end{array} \right| \end{array}$
+
+$= [ b + (n - 1) a ] \left| \begin{array}{c c c c c} 1 & 1 & 1 & \dots & 1 \\ 0 & b - a & 0 & \dots & 0 \\ \vdots & \vdots & \vdots & & \vdots \\ 0 & 0 & 0 & \dots & b - a \end{array} \right| = [ b + (n - 1) a ] (b - a) ^ {n - 1}.$
+
+解法2 $D_{n}$ 除主对角线上元素以外, 其余列元素均相同, 可用加边法, 有
+
+$D _ {n} = D _ {n + 1} = \left| \begin{array}{c c c c c} 1 & a & a & \dots & a \\ 0 & b & a & \dots & a \\ 0 & a & b & \dots & a \\ \vdots & \vdots & \vdots & & \vdots \\ 0 & a & a & \dots & b \end{array} \right| = \left| \begin{array}{c c c c c} 1 & a & a & \dots & a \\ - 1 & b - a & 0 & \dots & 0 \\ - 1 & 0 & b - a & \dots & 0 \\ \vdots & \vdots & \vdots & & \vdots \\ - 1 & 0 & 0 & \dots & b - a \end{array} \right|,$
+
+这是箭形行列式,故
+
+$D _ {n} = (b - a) ^ {n - 1} \cdot [ b + (n - 1) a ].$
+
+【注】当 $\lambda_{1},\lambda_{2},\cdots,\lambda_{n}$ 均不为零时，箭形行列式
+
+$D _ {n + 1} = \left| \begin{array}{c c c c c} \lambda_ {0} & a _ {1} & a _ {2} & \dots & a _ {n} \\ b _ {1} & \lambda_ {1} & 0 & \dots & 0 \\ b _ {2} & 0 & \lambda_ {2} & \dots & 0 \\ \vdots & \vdots & \vdots & & \vdots \\ b _ {n} & 0 & 0 & \dots & \lambda_ {n} \end{array} \right| = \left(\lambda_ {0} - \sum_ {i = 1} ^ {n} \frac {b _ {i} a _ {i}}{\lambda_ {i}}\right) \lambda_ {1} \lambda_ {2} \dots \lambda_ {n}.$
+
+本结论见《2027考研数学线性代数辅导讲义》."
+80211302,880,线性代数,第一章 行列式,,2,基础题,解答题,,计算 n 阶行列式 $D_{n}=\left|\begin{array}{cccccc}2 & -1 & 0 & \cdots & 0 & 0 \\ -1 & 2 & -1 & \cdots & 0 & 0 \\ 0 & -1 & 2 & \cdots & 0 & 0 \\ \vdots & \vdots & \vdots & & \vdots & \vdots \\ 0 & 0 & 0 & \cdots & 2 & -1 \\ 0 & 0 & 0 & \cdots & -1 & 2\end{array}\right|$ .,,,,,"解 $D_{n}$ 为三对角行列式,用递推法,将 $D_{n}$ 按第 1 行展开,得
+
+$D _ {n} = 2 D _ {n - 1} + (- 1) \times (- 1) ^ {1 + 2} \left| \begin{array}{c c c c c c} - 1 & - 1 & 0 & \dots & 0 & 0 \\ 0 & 2 & - 1 & \dots & 0 & 0 \\ 0 & - 1 & 2 & \dots & 0 & 0 \\ \vdots & \vdots & \vdots & & \vdots & \vdots \\ 0 & 0 & 0 & \dots & 2 & - 1 \\ 0 & 0 & 0 & \dots & - 1 & 2 \end{array} \right| = 2 D _ {n - 1} - D _ {n - 2},$
+
+即
+
+$\begin{array}{r l} D _ {n} - D _ {n - 1} & = D _ {n - 1} - D _ {n - 2} = D _ {n - 2} - D _ {n - 3} = \dots = D _ {2} - D _ {1} \\ & = \left| \begin{array}{c c} 2 & - 1 \\ - 1 & 2 \end{array} \right| - 2 = 1, \end{array}$
+
+故
+
+$\begin{array}{r l} D _ {n} & = D _ {n - 1} + 1 = (D _ {n - 2} + 1) + 1 = D _ {n - 2} + 2 = \dots = D _ {1} + (n - 1) \\ & = 2 + (n - 1) = n + 1. \end{array}$"
+80211303,880,线性代数,第一章 行列式,,3,基础题,解答题,,"计算 $n$ 阶行列式
+$$D _ {n} = \left| \begin{array}{c c c c c c} a _ {1} & b _ {1} & 0 & \dots & 0 & 0 \\ 0 & a _ {2} & b _ {2} & \dots & 0 & 0 \\ \vdots & \vdots & \vdots & & \vdots & \vdots \\ 0 & 0 & 0 & \dots & a _ {n - 1} & b _ {n - 1} \\ b _ {n} & 0 & 0 & \dots & 0 & a _ {n} \end{array} \right| + \left| \begin{array}{c c c c c c} a _ {1} & 0 & 0 & \dots & 0 & b _ {n} \\ b _ {1} & a _ {2} & 0 & \dots & 0 & 0 \\ 0 & b _ {2} & a _ {3} & \dots & 0 & 0 \\ \vdots & \vdots & \vdots & & \vdots & \vdots \\ 0 & 0 & 0 & \dots & a _ {n - 1} & 0 \\ 0 & 0 & 0 & \dots & b _ {n - 1} & a _ {n} \end{array} \right|,$$
+其中 $a_{i}, b_{i}$ 均不为0.",,,,,"解 记 $D_{n}=D_{1}+D_{2}.D_{1}$ 按第 1 列展开, 得
+
+$\begin{array}{r l} D _ {1} & = a _ {1} \left| \begin{array}{c c c c c c} a _ {2} & b _ {2} & 0 & \dots & 0 & 0 \\ 0 & a _ {3} & b _ {3} & \dots & 0 & 0 \\ \vdots & \vdots & \vdots & & \vdots & \vdots \\ 0 & 0 & 0 & \dots & a _ {n - 1} & b _ {n - 1} \\ 0 & 0 & 0 & \dots & 0 & a _ {n} \end{array} \right| + (- 1) ^ {n + 1} b _ {n} \left| \begin{array}{c c c c c c} b _ {1} & 0 & 0 & \dots & 0 & 0 \\ a _ {2} & b _ {2} & 0 & \dots & 0 & 0 \\ \vdots & \vdots & \vdots & & \vdots & \vdots \\ 0 & 0 & 0 & \dots & b _ {n - 2} & 0 \\ 0 & 0 & 0 & \dots & a _ {n - 1} & b _ {n - 1} \end{array} \right| \\ & = a _ {1} a _ {2} \dots a _ {n} + (- 1) ^ {n + 1} b _ {1} b _ {2} \dots b _ {n}. \end{array}$
+
+$D_{2}$ 是 $D_{1}$ 的转置行列式，故 $D_{2}=D_{1}=a_{1}a_{2}\cdots a_{n}+(-1)^{n+1}b_{1}b_{2}\cdots b_{n}$ ，所以
+
+$D _ {n} = 2 a _ {1} a _ {2} \dots a _ {n} + 2 (- 1) ^ {n + 1} b _ {1} b _ {2} \dots b _ {n}.$"
+80212101,880,线性代数,第一章 行列式,,1,综合题,选择题,,"设 A 是 3 阶可逆矩阵， $A^{-1}$ 的特征值为 3,2,1，则 $|A|$ 的代数余子式之和 $A_{11} + A_{22} + A_{33} = (\quad)$ .",$\frac{1}{6}$,$\frac{1}{3}$,$\frac{1}{2}$,1,"D.
+
+解 因为伴随矩阵 $A^{*}$ 的主对角线元素为 $A_{11}, A_{22}, A_{33}$ ，所以 $A_{11} + A_{22} + A_{33}$ 的值等于 $A^{*}$ 的 3 个特征值之和,故只需求 $A^{*}$ 的 3 个特征值.
+
+由 $\mathbf{A}^{-1}$ 的特征值为3,2,1，可知 $\mathbf{A}$ 的特征值为 $\frac{1}{3},\frac{1}{2},1$ ，则
+
+$| \textbf {A} | = \lambda_ {1} \lambda_ {2} \lambda_ {3} = \frac {1}{3} \times \frac {1}{2} \times 1 = \frac {1}{6},$
+
+故 $\mathbf{A}^{*}$ 的3个特征值分别为 $\frac{|A|}{\lambda_1} = \frac{1}{2}, \frac{|A|}{\lambda_2} = \frac{1}{3}, \frac{|A|}{\lambda_3} = \frac{1}{6}$ , 所以
+
+$A _ {1 1} + A _ {2 2} + A _ {3 3} = \frac {1}{2} + \frac {1}{3} + \frac {1}{6} = 1.$
+
+【注】结论:设 $\lambda_{1},\lambda_{2},\cdots,\lambda_{n}$ 为矩阵 A 的特征值,则:
+
+① $\left| A \right| = \lambda_{1} \lambda_{2} \cdots \lambda_{n};$
+
+② $a_{11} + a_{22} + \cdots + a_{mn} = \lambda_{1} + \lambda_{2} + \cdots + \lambda_{n};$
+
+③ $A^{-1}$ 的特征值为 $\frac{1}{\lambda_{1}}, \frac{1}{\lambda_{2}}, \cdots, \frac{1}{\lambda_{n}} (\lambda_{i} \neq 0; i = 1, 2, \cdots, n)$ ;
+
+④ $A^{*}$ 的特征值为 $\frac{|A|}{\lambda_{1}}, \frac{|A|}{\lambda_{2}}, \cdots, \frac{|A|}{\lambda_{n}} (\lambda_{i} \neq 0; i = 1, 2, \cdots, n)$ .
+
+本结论见《2027考研数学线性代数辅导讲义》."
+80212102,880,线性代数,第一章 行列式,,2,综合题,选择题,,$|A|=\left|\begin{matrix}0&0&0&1\\ 1&0&0&0\\ 0&1&0&0\\ 0&0&1&0\end{matrix}\right|$ 的所有代数余子式 $A_{ij}$ 之和 $\sum_{i=1}^{4}\sum_{j=1}^{4}A_{ij}=(\quad)$ .,4,-4,1,-1,"B.
+
+解 求 $\sum_{i=1}^{4}\sum_{j=1}^{4}A_{ij}$ ，只需求 $\boldsymbol{A}^{*}=(A_{ji})_{4\times4}$ ，由 $A^{*}=|A|A^{-1}$ ，可知先求 $|A|$ 和 $A^{-1}$ 。由分块矩阵求逆，得
+
+$\boldsymbol {A} ^ {- 1} = \left( \begin{array}{c c c c} 0 & 0 & 0 & 1 \\ \hdashline 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \end{array} \right) ^ {- 1} = \left( \begin{array}{c c c c} 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \end{array} \right).$
+
+又 $|\mathbf{A}| = (-1)^{4 + 1} = -1$ （按第1行展开），故
+
+$\begin{array}{r l} \mathbf {A} ^ {*} & = | \mathbf {A} | \mathbf {A} ^ {- 1} = - \mathbf {A} ^ {- 1} \\ & = \left( \begin{array}{c c c c} 0 & - 1 & 0 & 0 \\ 0 & 0 & - 1 & 0 \\ 0 & 0 & 0 & - 1 \\ - 1 & 0 & 0 & 0 \end{array} \right) = \left( \begin{array}{c c c c} A _ {1 1} & A _ {2 1} & A _ {3 1} & A _ {4 1} \\ A _ {1 2} & A _ {2 2} & A _ {3 2} & A _ {4 2} \\ A _ {1 3} & A _ {2 3} & A _ {3 3} & A _ {4 3} \\ A _ {1 4} & A _ {2 4} & A _ {3 4} & A _ {4 4} \end{array} \right), \end{array}$
+
+所以
+
+$\sum_ {i = 1} ^ {4} \sum_ {j = 1} ^ {4} A _ {i j} = (- 1) + (- 1) + (- 1) + (- 1) = - 4.$"
+80212103,880,线性代数,第一章 行列式,,3,综合题,选择题,,设 $A$ 是 3 阶方阵， $A^{*}$ 是 $A$ 的伴随矩阵， $|A| = \frac{1}{2}$ ，则 $\left|(2A)^{-1} - 2A^{*}\right| = (\quad)$ .,$\frac{1}{2}$,$-\frac{1}{2}$,$-\frac{1}{4}$,$\frac{1}{4}$,"C.
+
+解法1 由于 $A^{*} = |A|A^{-1} = \frac{1}{2} A^{-1}$ , 则
+
+$\begin{array}{r l} \mid (2 \mathbf {A}) ^ {- 1} - 2 \mathbf {A} ^ {*} \mid & = \left| \frac {1}{2} \mathbf {A} ^ {- 1} - 2 \cdot \frac {1}{2} \mathbf {A} ^ {- 1} \right| = \left| \frac {1}{2} \mathbf {A} ^ {- 1} - \mathbf {A} ^ {- 1} \right| \\ & = \left| - \frac {1}{2} \mathbf {A} ^ {- 1} \right| = \left(- \frac {1}{2}\right) ^ {3} \mid \mathbf {A} ^ {- 1} \mid \\ & = - \frac {1}{8} \mid \mathbf {A} \mid^ {- 1} = - \frac {1}{8} \times \left(\frac {1}{2}\right) ^ {- 1} = - \frac {1}{4}. \end{array}$
+
+解法2 由于 $A^{-1} = |A|^{-1}A^{*} = 2A^{*}$ , 则
+
+$\mid (2 \mathbf {A}) ^ {- 1} - 2 \mathbf {A} ^ {*} \mid = \left| \frac {1}{2} \cdot 2 \mathbf {A} ^ {*} - 2 \mathbf {A} ^ {*} \right| = \mid \mathbf {A} ^ {*} - 2 \mathbf {A} ^ {*} \mid$
+
+$= | - \boldsymbol {A} ^ {*} | = (- 1) ^ {3} | \boldsymbol {A} ^ {*} | = - | \boldsymbol {A} | ^ {3 - 1} = - \frac {1}{4}.$"
+80212104,880,线性代数,第一章 行列式,,4,综合题,选择题,,"设 $f(x) = \begin{vmatrix} 1 & x & x^2 & x^3 \\ 1 & 2 & 4 & 8 \\ 1 & -1 & 1 & -1 \\ 1 & 1 & 1 & 1 \end{vmatrix}$ ，则曲线 $y = f(x)$ 在 $(-1, 2)$ 内存在水平切线的条数为（）.",1,2,3,4,"B.
+
+解 依题设，
+
+$\begin{array}{r l} f (x) & = \left| \begin{array}{c c c c} 1 & x & x ^ {2} & x ^ {3} \\ 1 & 2 & 4 & 8 \\ 1 & - 1 & 1 & - 1 \\ 1 & 1 & 1 & 1 \end{array} \right| = \left| \begin{array}{c c c c} 1 & 1 & 1 & 1 \\ x & 2 & - 1 & 1 \\ x ^ {2} & 4 & 1 & 1 \\ x ^ {3} & 8 & - 1 & 1 \end{array} \right| \\ & = (2 - x) (- 1 - x) (1 - x) (- 1 - 2) (1 - 2) (1 + 1) \\ & = 6 (x ^ {2} - 1) (2 - x), \end{array}$
+
+故 $f(-1)=f(1)=f(2)=0$ 。由罗尔定理，知至少存在 $x_{1}\in(-1,1),x_{2}\in(1,2)$ ，使得 $f'(x_{1})=f'(x_{2})=0$ ，故 $y=f(x)$ 在 $(-1,2)$ 内至少有两条水平切线。
+
+又因为 $f(x)$ 为三次多项式, 所以 $y = f(x)$ 至多有两条水平切线. 选项 B 正确.
+
+【注】题目所给行列式的转置为范德蒙行列式."
+80212201,880,线性代数,第一章 行列式,,1,综合题,填空题,,"设 A, B 均为 n 阶方阵, $|A| = 6, |B| = 1$ , $C = \begin{pmatrix} A & 3A^{*} \\ \left(\frac{B}{2}\right)^{-1} & O \end{pmatrix}$ , 则 $|C| =$ \_\_\_\_ .",,,,,"$(-1)^{n}\cdot6^{2n-1}.$
+
+解
+
+$| \boldsymbol {C} | = \left| \begin{array}{c c} \boldsymbol {A} & 3 \boldsymbol {A} ^ {*} \\ \left(\frac {\boldsymbol {B}}{2}\right) ^ {- 1} & \boldsymbol {O} \end{array} \right| = (- 1) ^ {n \times n} \left| \left(\frac {\boldsymbol {B}}{2}\right) ^ {- 1} \right| | 3 \boldsymbol {A} ^ {*} |,$
+
+而
+
+$\left| \left(\frac {\pmb {B}}{2}\right) ^ {- 1} \right| = | 2 \pmb {B} ^ {- 1} | = 2 ^ {n} | \pmb {B} | ^ {- 1} = 2 ^ {n},$
+
+$\mid 3 \mathbf {A} ^ {*} \mid = 3 ^ {n} \mid \mathbf {A} ^ {*} \mid = 3 ^ {n} \cdot \mid \mathbf {A} \mid^ {n - 1} = 3 ^ {n} \cdot 6 ^ {n - 1},$
+
+故
+
+$| \boldsymbol {C} | = (- 1) ^ {n ^ {2}} 2 ^ {n} \cdot 3 ^ {n} \cdot 6 ^ {n - 1} = (- 1) ^ {n ^ {2}} \cdot 6 ^ {2 n - 1} = (- 1) ^ {n} \cdot 6 ^ {2 n - 1}.$"
+80212202,880,线性代数,第一章 行列式,,2,综合题,填空题,,"设 A, B 均为 3 阶方阵，且满足 $A^{2}B - A - B = E$ ，若 $A = \begin{pmatrix} 1 & 0 & 1 \\ 0 & 2 & 0 \\ -2 & 0 & 1 \end{pmatrix}$ ，则 $|B| =$ \_\_\_\_ .",,,,,"$\frac{1}{2}.$
+
+解 由已知 $A^2 B - A - B = E$ ，得 $(A^2 - E)B = A + E$ ，即 $(A + E)(A - E)B = A + E$ ，而 $A + E = \begin{pmatrix} 2 & 0 & 1 \\ 0 & 3 & 0 \\ -2 & 0 & 2 \end{pmatrix}$ ，可知 $A + E$ 可逆，故 $(A - E)B = E$ ，两边取行列式，得 $|A - E||B| = 1$ 。而
+
+$| \textbf {A} - \textbf {E} | = \left| \begin{array}{c c c} 0 & 0 & 1 \\ 0 & 1 & 0 \\ - 2 & 0 & 0 \end{array} \right| = 2,$
+
+故 $\left|B\right|=\frac{1}{2}.$"
+80212203,880,线性代数,第一章 行列式,,3,综合题,填空题,,"设 A 是 3 阶方阵, 且满足 $\left|A-E\right|=\left|A+2E\right|=\left|2A+3E\right|=0$ , 则 $\left|2A^{*}-3E\right|=$ \_\_\_\_.",,,,,"126.
+
+解 先求出 A 的特征值, 再求 $2A^{*}-3E$ 的特征值.
+
+由 $|\mathbf{A} - \mathbf{E}| = |(-1)(\mathbf{E} - \mathbf{A})| = (-1)^3 |\mathbf{E} - \mathbf{A}| = 0$ ，得 $|1\cdot \mathbf{E} - \mathbf{A}| = 0$ ，可知 $\lambda_1 = 1$ 是 $\mathbf{A}$ 的一个特征值.
+
+同理，由 $|\mathbf{A} + 2\mathbf{E}| = |2\mathbf{A} + 3\mathbf{E}| = 0$ ，得 $\mathbf{A}$ 的特征值 $\lambda_{2} = -2,\lambda_{3} = -\frac{3}{2}$ 故
+
+$|A|= \lambda_{1} \lambda_{2} \lambda_{3}=3 \neq 0$ (A 可逆),
+
+所以 $A^{*}$ 的特征值分别为 $\frac{|A|}{\lambda_{1}} = \frac{3}{1} = 3$ , $\frac{|A|}{\lambda_{2}} = \frac{3}{-2} = -\frac{3}{2}$ , $\frac{|A|}{\lambda_{3}} = -2$ , 于是 $2A^{*} - 3E$ 的特征值分别为
+
+$2 \times 3 - 3 = 3, 2 \times \left(- \frac {3}{2}\right) - 3 = - 6, 2 \times (- 2) - 3 = - 7,$
+
+所以 $\left|2A^{*}-3E\right|=3\times(-6)\times(-7)=126.$
+
+【注】设 A 的特征值为 $\lambda$ ，则 $f(A)$ 的特征值为 $f(\lambda)$ ，其中 $f(x)$ 为多项式."
+80212204,880,线性代数,第一章 行列式,,4,综合题,填空题,,"设 $A$ 是 3 阶方阵, $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性无关, 且 $A\alpha_{1} = \alpha_{1} + \alpha_{2}, A\alpha_{2} = \alpha_{2} + \alpha_{3}, A\alpha_{3} = \alpha_{3} + \alpha_{1}$ , 则 $|A| =$",,,,,"2.
+
+解法1 利用行列式的性质,由于 $A(\alpha_{1},\alpha_{2},\alpha_{3})=(\alpha_{1}+\alpha_{2},\alpha_{2}+\alpha_{3},\alpha_{3}+\alpha_{1})$ , 则
+
+$\begin{array}{r l} \mid \mathbf {A} \mid \mid (\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) \mid & = \mid (\boldsymbol {\alpha} _ {1} + \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {2} + \boldsymbol {\alpha} _ {3}, \boldsymbol {\alpha} _ {3} + \boldsymbol {\alpha} _ {1}) \mid \\ & = 2 \mid (\boldsymbol {\alpha} _ {1} + \boldsymbol {\alpha} _ {2} + \boldsymbol {\alpha} _ {3}, \boldsymbol {\alpha} _ {2} + \boldsymbol {\alpha} _ {3}, \boldsymbol {\alpha} _ {3} + \boldsymbol {\alpha} _ {1}) \mid \\ & = 2 \mid (\boldsymbol {\alpha} _ {1} + \boldsymbol {\alpha} _ {2} + \boldsymbol {\alpha} _ {3}, - \boldsymbol {\alpha} _ {1}, - \boldsymbol {\alpha} _ {2}) \mid \\ & = 2 \mid (\boldsymbol {\alpha} _ {3}, - \boldsymbol {\alpha} _ {1}, - \boldsymbol {\alpha} _ {2}) \mid = 2 \mid (\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) \mid . \end{array}$
+
+由于 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性无关，故 $\left|\alpha_{1},\alpha_{2},\alpha_{3}\right|\neq0$ ，所以 $\left|A\right|=2$
+
+解法2 利用矩阵的乘法及相似矩阵的性质.
+
+$\mathbf {A} (\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}) = (\pmb {\alpha} _ {1} + \pmb {\alpha} _ {2}, \pmb {\alpha} _ {2} + \pmb {\alpha} _ {3}, \pmb {\alpha} _ {3} + \pmb {\alpha} _ {1}) = (\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}) \left( \begin{array}{c c c} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{array} \right).$
+
+记 $P = (\alpha_{1},\alpha_{2},\alpha_{3})$ ，由已知， $\pmb{P}$ 可逆， $\pmb{B} = \begin{bmatrix} 1 & 0 & 1\\ 1 & 1 & 0\\ 0 & 1 & 1 \end{bmatrix}$ ，故 $AP = PB$ ，即 $P^{-1}AP = B$ ，所以
+
+$| \textbf {A} | = | \textbf {B} | = \left| \begin{array}{c c c} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{array} \right| = 2.$"
+80212205,880,线性代数,第一章 行列式,,5,综合题,填空题,,"设 $\alpha, \beta, \alpha_{1}, \alpha_{2}, \alpha_{3}$ 均为 4 维列向量, $A = (\alpha, \alpha_{1}, \alpha_{2}, \alpha_{3})$ , $B = (\beta, \alpha_{1}, \alpha_{2}, \alpha_{3})$ , 且 $|A| = 2$ , $|B| = 1$ , 则 $|A^{-1} + B^{-1}| =$ \_\_\_\_.",,,,,"12.
+
+解 先找出 $\left|A^{-1}+B^{-1}\right|$ 与 $\left|A+B\right|$ 的关系. 由 $\left|A\right|=2,\left|B\right|=1$ , 知 A 与 B 均可逆,
+
+$\begin{array}{r l} \mid \boldsymbol {A} ^ {- 1} + \boldsymbol {B} ^ {- 1} \mid & = \mid (\boldsymbol {E} + \boldsymbol {B} ^ {- 1} \boldsymbol {A}) \boldsymbol {A} ^ {- 1} \mid = \mid \boldsymbol {B} ^ {- 1} (\boldsymbol {B} + \boldsymbol {A}) \boldsymbol {A} ^ {- 1} \mid \\ & = \mid \boldsymbol {B} ^ {- 1} \mid \mid \boldsymbol {A} + \boldsymbol {B} \mid \mid \boldsymbol {A} ^ {- 1} \mid . \end{array}$
+
+又 $A + B = (\alpha + \beta, 2\alpha_{1}, 2\alpha_{2}, 2\alpha_{3})$ ，故
+
+$\begin{array}{r l} \mid \mathbf {A} + \mathbf {B} \mid & = \mid (\boldsymbol {\alpha} + \boldsymbol {\beta}, 2 \boldsymbol {\alpha} _ {1}, 2 \boldsymbol {\alpha} _ {2}, 2 \boldsymbol {\alpha} _ {3}) \mid \\ & = 2 ^ {3} \mid (\boldsymbol {\alpha} + \boldsymbol {\beta}, \boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) \mid \\ & = 8 (\mid (\boldsymbol {\alpha}, \boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) \mid + \mid (\boldsymbol {\beta}, \boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) \mid) \\ & = 8 \times (2 + 1) = 2 4. \end{array}$
+
+所以 $|\mathbf{A}^{-1} + \mathbf{B}^{-1}| = 1\times 24\times \frac{1}{2} = 12.$
+
+【注】 $\left|A^{-1}+B^{-1}\right|$ 没有公式直接计算,可通过恒等变形化为矩阵积的行列式."
+80212206,880,线性代数,第一章 行列式,,6,综合题,填空题,,设 n 阶行列式 $|A| = \begin{vmatrix} 0 & 1 & 0 & \cdots & 0 \\ 0 & 0 & 2 & \cdots & 0 \\ \vdots & \vdots & \vdots & & \vdots \\ 0 & 0 & 0 & \cdots & n-1 \\ n & 0 & 0 & \cdots & 0 \end{vmatrix}$ ，则 $|A|$ 的第 k 行元素的代数余子式之和 $A_{k1} + A_{k2} + \cdots + A_{kn} =$ \_\_\_\_.,,,,,"$\frac{(-1)^{n+1}n!}{k}.$
+
+解 对矩阵 A 分块, $A = \begin{pmatrix} O & B \\ C & O \end{pmatrix}$ , $C = (n)$ , $B = \begin{pmatrix} 1 & 0 & \cdots & 0 \\ 0 & 2 & \cdots & 0 \\ \vdots & \vdots & & \vdots \\ 0 & 0 & \cdots & n - 1 \end{pmatrix}$ , 则
+
+$\boldsymbol {A} ^ {- 1} = \left( \begin{array}{c c} \boldsymbol {O} & \boldsymbol {C} ^ {- 1} \\ \boldsymbol {B} ^ {- 1} & \boldsymbol {O} \end{array} \right) = \left( \begin{array}{c c c c c} 0 & 0 & \dots & 0 & \frac {1}{n} \\ 1 & 0 & \dots & 0 & 0 \\ 0 & \frac {1}{2} & \dots & 0 & 0 \\ \vdots & \vdots & & \vdots & \vdots \\ 0 & 0 & \dots & \frac {1}{n - 1} & 0 \end{array} \right).$
+
+行列式 $|\mathbf{A}|$ 按第1列展开，得 $|\mathbf{A}| = (-1)^{n + 1}n!$ . 又 $\mathbf{A}^{*} = |\mathbf{A}|\mathbf{A}^{-1}$ ，故
+
+$\left( \begin{array}{c c c c c} A _ {1 1} & \dots & A _ {k 1} & \dots & A _ {n 1} \\ A _ {1 2} & \dots & A _ {k 2} & \dots & A _ {n 2} \\ \vdots & & \vdots & & \vdots \\ A _ {1 n} & \dots & A _ {k n} & \dots & A _ {n n} \end{array} \right) = (- 1) ^ {n + 1} n! \left( \begin{array}{c c c c c} 0 & 0 & \dots & 0 & \frac {1}{n} \\ 1 & 0 & \dots & 0 & 0 \\ 0 & \frac {1}{2} & \dots & 0 & 0 \\ \vdots & \vdots & & \vdots & \vdots \\ 0 & 0 & \dots & \frac {1}{n - 1} & 0 \end{array} \right),$
+
+所以 $A_{k1} + A_{k2} + \cdots + A_{kn} = \frac{(-1)^{n+1} n!}{k}.$"
+80212301,880,线性代数,第一章 行列式,,1,综合题,解答题,,计算 n 阶行列式 $D_{n}=\left|\begin{matrix}b-a_{1}^{2}&-a_{1}a_{2}&\cdots&-a_{1}a_{n}\\ -a_{2}a_{1}&b-a_{2}^{2}&\cdots&-a_{2}a_{n}\\ \vdots&\vdots&&\vdots\\ -a_{n}a_{1}&-a_{n}a_{2}&\cdots&b-a_{n}^{2}\end{matrix}\right|$ .,,,,,"解 $D_{n}$ 除主对角线元素外, 第 i 行 $(i=1,2,\cdots,n)$ 元素分别是 $a_{1}, a_{2}, \cdots, a_{i-1}, a_{i+1}, \cdots, a_{n}$ 的倍数, 即 $(-a_{i})a_{1}, (-a_{i})a_{2}, \cdots, (-a_{i})a_{i-1}, (-a_{i})a_{i+1}, \cdots, (-a_{i})a_{n}$ .
+
+可考虑用加边法,有
+
+$D _ {n} = D _ {n + 1} = \left| \begin{array}{c c c c c} 1 & a _ {1} & a _ {2} & \dots & a _ {n} \\ 0 & b - a _ {1} ^ {2} & - a _ {1} a _ {2} & \dots & - a _ {1} a _ {n} \\ 0 & - a _ {2} a _ {1} & b - a _ {2} ^ {2} & \dots & - a _ {2} a _ {n} \\ \vdots & \vdots & \vdots & & \vdots \\ 0 & - a _ {n} a _ {1} & - a _ {n} a _ {2} & \dots & b - a _ {n} ^ {2} \end{array} \right| = \left| \begin{array}{c c c c c} 1 & a _ {1} & a _ {2} & \dots & a _ {n} \\ a _ {1} & b & 0 & \dots & 0 \\ a _ {2} & 0 & b & \dots & 0 \\ \vdots & \vdots & \vdots & & \vdots \\ a _ {n} & 0 & 0 & \dots & b \end{array} \right|,$
+
+这是箭形行列式,故 $D_{n}=b^{n-1}\left(b-\sum_{i=1}^{n}a_{i}^{2}\right)$ ."
+80212302,880,线性代数,第一章 行列式,,2,综合题,解答题,,计算 n 阶行列式 $D_{n}=\left|\begin{matrix}a+b_{1}&a&\cdots&a\\ a&a+b_{2}&\cdots&a\\\vdots&\vdots&&\vdots\\ a&a&\cdots&a+b_{n}\end{matrix}\right|(b_{i}\neq0)$ .,,,,,"解 $D_{n}$ 中除主对角线外, 各列元素分别相同, 用加边法, 有
+
+$D _ {n} = D _ {n + 1} = \left| \begin{array}{c c c c c} 1 & 0 & 0 & \dots & 0 \\ 1 & a + b _ {1} & a & \dots & a \\ 1 & a & a + b _ {2} & \dots & a \\ \vdots & \vdots & \vdots & & \vdots \\ 1 & a & a & \dots & a + b _ {n} \end{array} \right| = \left| \begin{array}{c c c c c} 1 & - a & - a & \dots & - a \\ 1 & b _ {1} & 0 & \dots & 0 \\ 1 & 0 & b _ {2} & \dots & 0 \\ \vdots & \vdots & \vdots & & \vdots \\ 1 & 0 & 0 & \dots & b _ {n} \end{array} \right|,$
+
+该行列式为箭形行列式,故可求得 $D_{n}=\left(1+\sum_{i=1}^{n}\frac{a}{b_{i}}\right)\prod_{j=1}^{n}b_{j}$ .
+
+【注】① 将行列式添加一行或一列,使其升阶后的行列式的值不变,这种方法称为“加边法”.
+
+②行列式除主对角线外，第 $i(i=1,2,\cdots,n)$ 行(列)元素分别与第 $j(j\neq i)$ 行(列)元素有倍数关系或相同，此类行列式的计算可采用“加边法”."
+80212303,880,线性代数,第一章 行列式,,3,综合题,解答题,,计算 n 阶行列式 $D_{n}=\left|\begin{array}{cccccc}a_{0}&-1&0&\cdots&0&0\\a_{1}&x&-1&\cdots&0&0\\a_{2}&0&x&\cdots&0&0\\\vdots&\vdots&\vdots&&\vdots&\vdots\\a_{n-2}&0&0&\cdots&x&-1\\a_{n-1}&0&0&\cdots&0&x\end{array}\right|$ .,,,,,"解 按第 n 行展开, 用递推法, 有
+
+$\begin{array}{r l} D _ {n} & = (- 1) ^ {n + 1} a _ {n - 1} \cdot (- 1) ^ {n - 1} + (- 1) ^ {n + n} \cdot x \cdot D _ {n - 1} = a _ {n - 1} + x D _ {n - 1} \\ & = a _ {n - 1} + a _ {n - 2} x + x ^ {2} D _ {n - 2} = \dots = a _ {0} x ^ {n - 1} + a _ {1} x ^ {n - 2} + \dots + a _ {n - 2} x + a _ {n - 1}. \end{array}$"
+80212304,880,线性代数,第一章 行列式,,4,综合题,解答题,,计算 n 阶行列式 $D_{n}=\left|\begin{matrix}a&b&0&\cdots&0&0\\ c&a&b&\cdots&0&0\\ 0&c&a&\cdots&0&0\\\vdots&\vdots&\vdots&&\vdots&\vdots\\ 0&0&0&\cdots&a&b\\ 0&0&0&\cdots&c&a\end{matrix}\right|(a^{2}-4bc\geqslant0).$,,,,,"解 三对角行列式,用递推法.
+
+按第 1 列展开, 得
+
+$D _ {n} = a D _ {n - 1} - b c D _ {n - 2},①$
+
+将式 ① 化为
+
+$D _ {n} - k D _ {n - 1} = \mu (D _ {n - 1} - k D _ {n - 2}),②$
+
+其中
+
+$k + \mu = a,$
+
+$k \mu = b c.③$
+
+令
+
+$D _ {n - i} - k D _ {n - i - 1} = \Delta_ {n - i} (i = 0, 1, 2, \dots , n - 2),④$
+
+则递推式 ② 为 $\Delta_{n} = \mu \Delta_{n - 1}$ , 反复利用这个递推式, 得
+
+$\Delta_ {n} = \mu \Delta_ {n - 1} = \mu^ {2} \Delta_ {n - 2} = \dots = \mu^ {n - 2} \Delta_ {2},⑤$
+
+将式 ④ 代入式 ⑤ 右端,由式 ③ 可得
+
+$\begin{array}{r l} \Delta_ {n} & = \mu^ {n - 2} (D _ {2} - k D _ {1}) = \mu^ {n - 2} (a ^ {2} - b c - k a) \\ & = \mu^ {n - 2} [ a ^ {2} - k \mu - (a - \mu) a ] = \mu^ {n - 2} \cdot \mu (a - k) = \mu^ {n}. \end{array}$
+
+扫码关注微信公众号【冲冲研岸】获取免费电子书PDF\+真题
+
+将式 ④ 取 $i = 0$ ，得 $D_{n} = \mu^{n} + kD_{n - 1}$ ，反复利用这个递推式，得
+
+$\begin{array}{r l} D _ {n} & = \mu^ {n} + k D _ {n - 1} = \mu^ {n} + k (\mu^ {n - 1} + k D _ {n - 2}) \\ & = \mu^ {n} + k \mu^ {n - 1} + k ^ {2} (\mu^ {n - 2} + k D _ {n - 3}) \\ & = \mu^ {n} + k \mu^ {n - 1} + k ^ {2} \mu^ {n - 2} + k ^ {3} D _ {n - 3} = \dots \\ & = \mu^ {n} + k \mu^ {n - 1} + k ^ {2} \mu^ {n - 2} + \dots + k ^ {n - 2} \mu^ {2} + k ^ {n - 1} D _ {1}, \end{array}$
+
+将 $D_{1} = a = k + \mu$ 代入上式，得
+
+$D _ {n} = \mu^ {n} + k \mu^ {n - 1} + k ^ {2} \mu^ {n - 2} + \dots + k ^ {n - 2} \mu^ {2} + k ^ {n - 1} \mu + k ^ {n},$
+
+故
+
+$D _ {n} = \left\{ \begin{array}{l l} \frac {\mu^ {n + 1} - k ^ {n + 1}}{\mu - k}, & k \neq \mu , \\ (n + 1) \mu^ {n}, & k = \mu . \end{array} \right.$
+
+由式 ③ 知 $\mu, k$ 是一元二次方程 $x^{2} - ax + bc = 0$ 两个根，故
+
+$\mu = \frac {a \pm \sqrt {a ^ {2} - 4 b c}}{2}, k = \frac {a \mp \sqrt {a ^ {2} - 4 b c}}{2}.$
+
+【注】此题推出了一般三对角行列式的结论."
+80213301,880,线性代数,第一章 行列式,,1,拓展题,解答题,,"设 $A = \begin{pmatrix} 3 & 2 & 2 \\ 0 & 1 & 1 \\ 0 & 0 & 3 \end{pmatrix}, B = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -1 \end{pmatrix}$ , 若矩阵 $X$ 满足 $AX + 2B = BA + 2X$ , 求 $X^2$ .",,,,,"解 $AX + 2B = BA + 2X$ 变形为 $(A - 2E)X = B(A - 2E)$ .
+
+由 $A - 2E = \begin{pmatrix} 1 & 2 & 2 \\ 0 & -1 & 1 \\ 0 & 0 & 1 \end{pmatrix}$ 可逆，知 $X = (A - 2E)^{-1}B(A - 2E)$ ，由此可得
+
+$\begin{array}{r l} \boldsymbol {X} ^ {2} & = (\boldsymbol {A} - 2 \boldsymbol {E}) ^ {- 1} \boldsymbol {B} ^ {2} (\boldsymbol {A} - 2 \boldsymbol {E}) \\ & = \left( \begin{array}{c c c} 1 & 2 & 2 \\ 0 & - 1 & 1 \\ 0 & 0 & 1 \end{array} \right) ^ {- 1} \left( \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1 \end{array} \right) \left( \begin{array}{c c c} 1 & 2 & 2 \\ 0 & - 1 & 1 \\ 0 & 0 & 1 \end{array} \right) \\ & = \left( \begin{array}{c c c} 1 & 2 & - 4 \\ 0 & - 1 & 1 \\ 0 & 0 & 1 \end{array} \right) \left( \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1 \end{array} \right) \left( \begin{array}{c c c} 1 & 2 & 2 \\ 0 & - 1 & 1 \\ 0 & 0 & 1 \end{array} \right) = \left( \begin{array}{c c c} 1 & 2 & - 2 \\ 0 & 0 & 1 \\ 0 & 0 & 1 \end{array} \right). \end{array}$"
+80213302,880,线性代数,第一章 行列式,,2,拓展题,解答题,,"设 A 为 3 阶非零实矩阵，且 $A^{T} = kA^{*}$ (k 为非零常数).
+(I) 证明: A 是可逆矩阵;
+(II) 求行列式 $\left|A^{-1}\right| + \left|\left(A^{*}\right)^{-1}\right|$ .",,,,,"证. (I) 因为 $\mathbf{A} \neq \mathbf{O}$ , 不妨设 $a_{11} \neq 0$ . 由 $\mathbf{A}^{\mathrm{T}} = k\mathbf{A}^{*}$ , 知 $a_{ji} = kA_{ji}$ .
+
+将 $|\mathbf{A}|$ 按第1行展开，得
+
+$| \textbf {A} | = a _ {1 1} A _ {1 1} + a _ {1 2} A _ {1 2} + a _ {1 3} A _ {1 3} = \frac {1}{k} (a _ {1 1} ^ {2} + a _ {1 2} ^ {2} + a _ {1 3} ^ {2}) \neq 0,$
+
+即 A 是可逆矩阵.
+
+解（Ⅱ）由 $AA^{*}=\frac{1}{k}AA^{T}=|A|E$ ，且
+
+$\left| \frac {1}{k} \mathbf {A} \mathbf {A} ^ {\mathrm{T}} \right| = \frac {1}{k ^ {3}} | \mathbf {A} | | \mathbf {A} ^ {\mathrm{T}} | = \frac {1}{k ^ {3}} | \mathbf {A} | ^ {2}, \quad | | \mathbf {A} | | \mathbf {E} | = | \mathbf {A} | ^ {3},$
+
+可知 $\frac{1}{k^3} |\mathbf{A}|^2 = |\mathbf{A}|^3$ ，整理得 $|\mathbf{A}|^2\left(\frac{1}{k^3} -|\mathbf{A}|\right) = 0.$ 又由（I）知 $|\mathbf{A}|\neq 0$ ，故
+
+$\mid \textbf {A} \mid = \frac {1}{k ^ {3}}, \quad \mid \textbf {A} ^ {- 1} \mid = \frac {1}{\mid \textbf {A} \mid} = k ^ {3}.$
+
+又由 $(\pmb{A}^{*})^{-1} = \frac{\pmb{A}}{|\pmb{A}|}$ ，知
+
+$\mid (\boldsymbol {A} ^ {*}) ^ {- 1} \mid = \left| \frac {\boldsymbol {A}}{\mid \boldsymbol {A} \mid} \right| = \frac {1}{\mid \boldsymbol {A} \mid^ {3}} \mid \boldsymbol {A} \mid = \frac {1}{\mid \boldsymbol {A} \mid^ {2}} = k ^ {6},$
+
+故 $|\mathbf{A}^{-1}| + (\mathbf{A}^{*})^{-1}| = k^{3} + k^{6}$"

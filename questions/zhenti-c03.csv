@@ -1,0 +1,222 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+zt-030905,真题,线性代数,第二章 矩阵,数三2009,5,选择题,,题型四 分块矩阵,"(5) 设 A, B 均为 2 阶方阵, $A^{*}$ , $B^{*}$ 分别为 A, B 的伴随矩阵. 若 $|A| = 2$ , $|B| = 3$ , 则分块矩阵 $\begin{pmatrix} O & A \\ B & O \end{pmatrix}$ 的伴随矩阵为 ( )",$\begin{pmatrix}O&3B^{*}\\2A^{*}&O\end{pmatrix}.$,$\begin{pmatrix}O&2B^{*}\\3A^{*}&O\end{pmatrix}.$,$\begin{pmatrix}O&3A^{*}\\2B^{*}&O\end{pmatrix}.$,$\begin{pmatrix}O&2A^{*}\\3B^{*}&O\end{pmatrix}.$,"答案 B.
+分析 本题主要考查伴随矩阵的概念,并且考查了将矩阵通过初等变换变成分块对角矩阵求行列式的技巧.
+伴随矩阵 行列式 $|A|$ 的各个元素的代数余子式 $A_{ij}$ 所构成的如下矩阵
+$$ \boldsymbol {A} ^ {*} = \left( \begin{array}{c c c c} A _ {1 1} & A _ {2 1} & \dots & A _ {n 1} \\ A _ {1 2} & A _ {2 2} & \dots & A _ {n 2} \\ \vdots & \vdots & & \vdots \\ A _ {1 n} & A _ {2 n} & \dots & A _ {n n} \end{array} \right), $$
+称为矩阵 A 的伴随矩阵.
+方阵与它的伴随矩阵的关系 $AA^{*}=A^{*}A=|A|E.$
+可逆矩阵与它的伴随矩阵的关系 若矩阵 A 可逆, 则 $A^{-1} = \frac{A^{*}}{|A|}$ .
+对本题而言,可设 $\begin{pmatrix}O&A\\B&O\end{pmatrix}$ 的逆矩阵为 $\begin{pmatrix}X_{1}&X_{2}\\X_{3}&X_{4}\end{pmatrix}$ ,通过解矩阵方程求解.
+解（法一）先求 $\begin{vmatrix} O & A \\ B & O \end{vmatrix}$ .
+记 $C = \begin{pmatrix} O & A \\ B & O \end{pmatrix}$ , $C$ 为4阶矩阵, $A$ 位于它的第1,2行和第3,4列, 可按照以下步骤把 $C$ 变为 $\begin{pmatrix} A & O \\ O & B \end{pmatrix}$ . 把 $C$ 的第3列与第1列对换, 第4列与第2列对换. 因此,
+$$ \left| \begin{array}{c c} {\pmb {O}} & {\pmb {A}} \\ {\pmb {B}} & {\pmb {O}} \end{array} \right| = (- 1) ^ {2} \left| \begin{array}{c c} {\pmb {A}} & {\pmb {O}} \\ {\pmb {O}} & {\pmb {B}} \end{array} \right| = | \pmb {A} | \cdot | \pmb {B} | = 6. $$
+$\begin{pmatrix}O&A\\B&O\end{pmatrix}$ 可逆.
+由可逆矩阵与其伴随矩阵的关系可知，
+$$ \left( \begin{array}{c c} \boldsymbol {O} & \boldsymbol {A} \\ \boldsymbol {B} & \boldsymbol {O} \end{array} \right) ^ {*} = \left| \begin{array}{c c} \boldsymbol {O} & \boldsymbol {A} \\ \boldsymbol {B} & \boldsymbol {O} \end{array} \right| \left( \begin{array}{c c} \boldsymbol {O} & \boldsymbol {A} \\ \boldsymbol {B} & \boldsymbol {O} \end{array} \right) ^ {- 1} = 6 \left( \begin{array}{c c} \boldsymbol {O} & \boldsymbol {A} \\ \boldsymbol {B} & \boldsymbol {O} \end{array} \right) ^ {- 1}. $$
+不妨设 $\begin{pmatrix}O&A\\B&O\end{pmatrix}^{-1}=\begin{pmatrix}X_{1}&X_{2}\\X_{3}&X_{4}\end{pmatrix}$ ，则
+$$ \left( \begin{array}{c c} \boldsymbol {O} & \boldsymbol {A} \\ \boldsymbol {B} & \boldsymbol {O} \end{array} \right) \left( \begin{array}{c c} \boldsymbol {X} _ {1} & \boldsymbol {X} _ {2} \\ \boldsymbol {X} _ {3} & \boldsymbol {X} _ {4} \end{array} \right) = \left( \begin{array}{c c} \boldsymbol {A} \boldsymbol {X} _ {3} & \boldsymbol {A} \boldsymbol {X} _ {4} \\ \boldsymbol {B} \boldsymbol {X} _ {1} & \boldsymbol {B} \boldsymbol {X} _ {2} \end{array} \right) = \left( \begin{array}{c c} \boldsymbol {E} & \boldsymbol {O} \\ \boldsymbol {O} & \boldsymbol {E} \end{array} \right). $$
+由于A,B均为可逆矩阵,故由 $AX_{4}=O$ , $BX_{1}=O$ 可知, $X_{1}=X_{4}=O$ ; 由 $AX_{3}=E$ , $BX_{2}=E$ 得, $X_{3}=A^{-1}$ , $X_{2}=B^{-1}$ . 因此,
+$$ \left( \begin{array}{c c} {\pmb {O}} & {\pmb {A}} \\ {\pmb {B}} & {\pmb {O}} \end{array} \right) ^ {- 1} = \left( \begin{array}{c c} {\pmb {O}} & {\pmb {B} ^ {- 1}} \\ {\pmb {A} ^ {- 1}} & {\pmb {O}} \end{array} \right). $$
+$$ \left( \begin{array}{c c} \boldsymbol {O} & \boldsymbol {A} \\ \boldsymbol {B} & \boldsymbol {O} \end{array} \right) ^ {*} = 6 \left( \begin{array}{c c} \boldsymbol {O} & \boldsymbol {B} ^ {- 1} \\ \boldsymbol {A} ^ {- 1} & \boldsymbol {O} \end{array} \right) = 6 \left( \begin{array}{c c} \boldsymbol {O} & \frac {\boldsymbol {B} ^ {*}}{| \boldsymbol {B} |} \\ \frac {\boldsymbol {A} ^ {*}}{| \boldsymbol {A} |} & \boldsymbol {O} \end{array} \right) = \left( \begin{array}{c c} \boldsymbol {O} & 2 \boldsymbol {B} ^ {*} \\ 3 \boldsymbol {A} ^ {*} & \boldsymbol {O} \end{array} \right). $$
+应选 B.
+(法二) 特殊值法.
+取 $A = \sqrt{2} E, B = \sqrt{3} E$ 满足 $|A| = 2, |B| = 3$ , 则 $A^{*} = |A|A^{-1} = \sqrt{2} E, B^{*} = |B|B^{-1} = \sqrt{3} E$ . 因此，
+$$ \begin{array}{r l} \left( \begin{array}{c c} \boldsymbol {O} & \boldsymbol {A} \\ \boldsymbol {B} & \boldsymbol {O} \end{array} \right) ^ {*} & = \left( \begin{array}{c c} \boldsymbol {O} & \sqrt {2} \boldsymbol {E} \\ \sqrt {3} \boldsymbol {E} & \boldsymbol {O} \end{array} \right) ^ {*} = \left| \begin{array}{c c} \boldsymbol {O} & \sqrt {2} \boldsymbol {E} \\ \sqrt {3} \boldsymbol {E} & \boldsymbol {O} \end{array} \right| \left( \begin{array}{c c} \boldsymbol {O} & \sqrt {2} \boldsymbol {E} \\ \sqrt {3} \boldsymbol {E} & \boldsymbol {O} \end{array} \right) ^ {- 1} = 6 \left( \begin{array}{c c} \boldsymbol {O} & \frac {1}{\sqrt {3}} \boldsymbol {E} \\ \frac {1}{\sqrt {2}} \boldsymbol {E} & \boldsymbol {O} \end{array} \right) \\ & = \left( \begin{array}{c c} \boldsymbol {O} & 2 \sqrt {3} \boldsymbol {E} \\ 3 \sqrt {2} \boldsymbol {E} & \boldsymbol {O} \end{array} \right) = \left( \begin{array}{c c} \boldsymbol {O} & 2 \boldsymbol {B} ^ {*} \\ 3 \boldsymbol {A} ^ {*} & \boldsymbol {O} \end{array} \right). \end{array} $$
+注 法二中用到了分块矩阵的求逆公式 对任意 $m$ 阶可逆矩阵 $\pmb{P}$ , $n$ 阶可逆矩阵 $\pmb{Q}$ , 有 $\left( \begin{array}{ll} \pmb{P} & \pmb{O} \\ \pmb{O} & \pmb{Q} \end{array} \right)^{-1} = \left( \begin{array}{ll} \pmb{P}^{-1} & \pmb{O} \\ \pmb{O} & \pmb{Q}^{-1} \end{array} \right)$ , $\left( \begin{array}{ll} \pmb{O} & \pmb{P} \\ \pmb{Q} & \pmb{O} \end{array} \right)^{-1} = \left( \begin{array}{ll} \pmb{O} & \pmb{Q}^{-1} \\ \pmb{P}^{-1} & \pmb{O} \end{array} \right)$ ."
+zt-030906,真题,线性代数,第二章 矩阵,数三2009,6,选择题,,题型一 矩阵运算,"(6) 设 A, P 均为 3 阶矩阵, $P^{T}$ 为 P 的转置矩阵, 且 $P^{T}AP = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 2 \end{pmatrix}$ . 若 $P = (\alpha_{1}, \alpha_{2}, \alpha_{3})$ , Q = ( $\alpha_{1} + \alpha_{2}, \alpha_{2}, \alpha_{3}$ ), 则 $Q^{T}AQ$ 为 ( )",$\begin{pmatrix}2&1&0\\1&1&0\\0&0&2\end{pmatrix}.$,$\begin{pmatrix}1&1&0\\1&2&0\\0&0&2\end{pmatrix}.$,$\begin{pmatrix}2&0&0\\0&1&0\\0&0&2\end{pmatrix}.$,$\begin{pmatrix}1&0&0\\0&2&0\\0&0&2\end{pmatrix}.$,"答案 A.
+分析 本题主要考查矩阵的初等变换与初等矩阵之间的对应关系. 本题的关键在于写出由 P 到 Q 的初等变换矩阵.
+对 $m \times n$ 矩阵 A 作一次初等行变换, 相当于在 A 的左边乘相应的 m 阶初等矩阵; 对 A 作一次初等列变换, 相当于在 A 的右边乘相应的 n 阶初等矩阵.
+初等行变换(列变换)与初等矩阵的对应关系
+
+| 初等行变换 | 初等矩阵表示 | 初等列变换 | 初等矩阵表示 |
+| --- | --- | --- | --- |
+| 对换第i行与第j行 | 左乘$E(i,j)$ | 对换第i列与第j列 | 右乘$E(i,j)$ |
+| 以数k≠0乘第i行 | 左乘$E(i(k))$ | 以数k≠0乘第i列 | 右乘$E(i(k))$ |
+| 以数k乘第j行加到第i行 | 左乘$E(ij(k))$ | 以数k乘第i列加到第j列 | 右乘$E(ij(k))$ |
+
+初等矩阵均可逆,其逆也是与其同一类型的初等矩阵.
+$$ \boldsymbol {E} (i, j) ^ {- 1} = \boldsymbol {E} (i, j), \quad \boldsymbol {E} (i (k)) ^ {- 1} = \boldsymbol {E} \left(i \left(\frac {1}{k}\right)\right), \quad \boldsymbol {E} (i j (k)) ^ {- 1} = \boldsymbol {E} (i j (- k)). $$
+解 由题设知, Q 为把 P 的第 2 列加到第 1 列的结果, 故 $Q = P \begin{pmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ . 从而
+$$ \begin{array}{r l} \boldsymbol {Q} ^ {\mathrm{T}} \boldsymbol {A} \boldsymbol {Q} & = \left( \begin{array}{l l l} 1 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right) \boldsymbol {P} ^ {\mathrm{T}} \boldsymbol {A} \boldsymbol {P} \left( \begin{array}{l l l} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right) = \left( \begin{array}{l l l} 1 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right) \left( \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 2 \end{array} \right) \left( \begin{array}{l l l} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right) \\ & = \left( \begin{array}{l l l} 2 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 2 \end{array} \right). \end{array} $$
+应选A."
+zt-031021,真题,线性代数,第二章 矩阵,数三2010,21,解答题,,题型二 特殊矩阵,"(21) ( 11 分)
+设 $A = \begin{pmatrix} 0 & -1 & 4 \\ -1 & 3 & a \\ 4 & a & 0 \end{pmatrix}$ ，正交矩阵 Q 使 $Q^{T}AQ$ 为对角矩阵，若 Q 的第 1 列为 $\frac{1}{\sqrt{6}}(1, 2, 1)^{\mathrm{T}}$ ，求 a, Q.",,,,,"分析 本题主要考查实对称矩阵的正交相似对角化.
+由于 $\pmb{A}$ 为实对称矩阵, 故正交矩阵 $\pmb{Q}$ 能将 $\pmb{A}$ 对角化意味着 $\pmb{Q}$ 的列向量均为 $\pmb{A}$ 的特征向量. 特别地, $\pmb{\alpha}_{1} = \frac{1}{\sqrt{6}} (1,2,1)^{\mathrm{T}}$ 为 $\pmb{A}$ 的特征向量. 利用特征向量的定义, 有 $A\pmb{\alpha}_{1} = k\pmb{\alpha}_{1}, k$ 为 $\pmb{\alpha}_{1}$ 对应的特征值, 由此来求 $a$ .
+解 由题设知, $\alpha_{1} = \frac{1}{\sqrt{6}} (1,2,1)^{\mathrm{T}}$ 为 $A$ 的一个特征向量. 不妨设 $\alpha_{1}$ 对应的特征值为 $k$ , 则
+$$ \boldsymbol {A} \boldsymbol {\alpha} _ {1} = \frac {1}{\sqrt {6}} \left( \begin{array}{c c c} 0 & - 1 & 4 \\ - 1 & 3 & a \\ 4 & a & 0 \end{array} \right) \left( \begin{array}{l} 1 \\ 2 \\ 1 \end{array} \right) = \frac {1}{\sqrt {6}} \left( \begin{array}{c} 2 \\ 5 + a \\ 4 + 2 a \end{array} \right) = \frac {k}{\sqrt {6}} \left( \begin{array}{l} 1 \\ 2 \\ 1 \end{array} \right). $$
+从而 $\left\{\begin{aligned}2&=k,\\ 5+a&=2k,\\ 4+a&=k,\end{aligned}\right.$ 解得a=-1,k=2.于是， $A=\left(\begin{array}{ccc}0&-1&4\\ -1&3&-1\\ 4&-1&0\end{array}\right)$
+计算 $\mathbf{A}$ 的特征多项式得
+$$ \mid \lambda E - A \mid = \left| \begin{array}{c c c} \lambda & 1 & - 4 \\ 1 & \lambda - 3 & 1 \\ - 4 & 1 & \lambda \end{array} \right| = (\lambda - 2) (\lambda - 5) (\lambda + 4). $$
+因此，A 的特征值为 2, 5, -4. $\alpha_{1}$ 是 A 的属于特征值 2 的特征向量.
+先求属于特征值 -4 的单位特征向量 $\alpha_{2}$ . 由特征向量的定义可知, $(-4E-A)x=0$ .
+$$ \begin{array}{r l} - 4 E - A & = \left( \begin{array}{c c c} - 4 & 1 & - 4 \\ 1 & - 7 & 1 \\ - 4 & 1 & - 4 \end{array} \right) \xrightarrow {r _ {3} - r _ {1}} \left( \begin{array}{c c c} - 4 & 1 & - 4 \\ 1 & - 7 & 1 \\ 0 & 0 & 0 \end{array} \right) \xrightarrow {r _ {1} + 4 r _ {2}} \left( \begin{array}{c c c} 0 & 1 & 0 \\ 1 & - 7 & 1 \\ 0 & 0 & 0 \end{array} \right) \\ & \xrightarrow {r _ {2} + 7 r _ {1} ^ {* *}} \left( \begin{array}{c c c} 1 & 0 & 1 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{array} \right). \end{array} $$
+由此可得 $\left\{ \begin{array}{l} x_{1} + x_{3} = 0, \\ x_{2} = 0, \end{array} \right.$ 故 $\pmb{\xi}_{2} = (-1,0,1)^{\mathrm{T}}$ 为该方程组的一个基础解系. 将 $\pmb{\xi}_{2}$ 单位化得 $\alpha_{2} = \frac{1}{\sqrt{2}} (-1,0,1)^{\mathrm{T}}$ .
+同理, 解 $(5E-A)x=0.$
+$$ \begin{array}{r l} 5 E - A & = \left( \begin{array}{c c c} 5 & 1 & - 4 \\ 1 & 2 & 1 \\ - 4 & 1 & 5 \end{array} \right) \xrightarrow {r _ {3} + r _ {1} - r _ {2}} \left( \begin{array}{c c c} 5 & 1 & - 4 \\ 1 & 2 & 1 \\ 0 & 0 & 0 \end{array} \right) \xrightarrow {r _ {1} - 5 r _ {2}} \left( \begin{array}{c c c} 0 & 1 & 1 \\ 1 & 2 & 1 \\ 0 & 0 & 0 \end{array} \right) \\ & \xrightarrow {r _ {2} - r _ {1} ^ {* *}} \left( \begin{array}{c c c} 1 & 1 & 0 \\ 0 & 1 & 1 \\ 0 & 0 & 0 \end{array} \right). \end{array} $$
+由此可得 $\left\{ \begin{array}{l} x_{1} + x_{2} = 0, \\ x_{2} + x_{3} = 0, \end{array} \right.$ 故 $\pmb{\xi}_{3} = (1, -1,1)^{\mathrm{T}}$ 为该方程组的一个基础解系. 将 $\pmb{\xi}_{3}$ 单位化得 $\alpha_{3} = \frac{1}{\sqrt{3}} (1, -1,1)^{\mathrm{T}}$ .
+或者也可以如下求 $\alpha_{3}$ .
+由于 $\alpha_{3}$ 与 $\alpha_{1}, \alpha_{2}$ 为属于不同特征值的特征向量, 故它们相互正交. 于是
+$$ \pmb {\alpha} _ {3} ^ {\mathrm{T}} \pmb {\alpha} _ {1} = 0, \quad \pmb {\alpha} _ {3} ^ {\mathrm{T}} \pmb {\alpha} _ {2} = 0. $$
+$\pmb{\alpha}_{3}$ 的坐标 $(x_{1}, x_{2}, x_{3})^{\mathrm{T}}$ 满足 $\left\{ \begin{array}{l} x_{1} + 2x_{2} + x_{3} = 0, \\ x_{1} - x_{3} = 0. \end{array} \right.$ 因此可得 $\pmb{\xi}_{3} = (1, -1, 1)^{\mathrm{T}}$ 为该方程组的一个基础解系. 将 $\pmb{\xi}_{3}$ 单位化得 $\pmb{\alpha}_{3} = \frac{1}{\sqrt{3}} (1, -1, 1)^{\mathrm{T}}$ .
+$$ \text {因此,} \pmb {Q} = (\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}) = \left( \begin{array}{c c c} {{\frac {1}{\sqrt {6}}}} & {{- \frac {1}{\sqrt {2}}}} & {{\frac {1}{\sqrt {3}}}} \\ {{\frac {2}{\sqrt {6}}}} & {{0}} & {{- \frac {1}{\sqrt {3}}}} \\ {{\frac {1}{\sqrt {6}}}} & {{\frac {1}{\sqrt {2}}}} & {{\frac {1}{\sqrt {3}}}} \end{array} \right), \pmb {Q} ^ {\mathrm{T}} \pmb {A} \pmb {Q} = \left( \begin{array}{c c c} {{2}} & {{0}} & {{0}} \\ {{0}} & {{- 4}} & {{0}} \\ {{0}} & {{0}} & {{5}} \end{array} \right). $$
+![image](images/zt-031021.jpg)
+综上所述， $a = -1$ ， $\pmb {Q} = \left( \begin{array}{ccc}\frac{1}{\sqrt{6}} & -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{3}}\\ \frac{2}{\sqrt{6}} & 0 & -\frac{1}{\sqrt{3}}\\ \frac{1}{\sqrt{6}} & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{3}} \end{array} \right),\pmb {Q}^{\mathrm{T}}\pmb {A}\pmb {Q} = \left( \begin{array}{ccc}2 & 0 & 0\\ 0 & -4 & 0\\ 0 & 0 & 5 \end{array} \right).$
+注 ①本题中所求的 Q 并不唯一.根据题意,我们只要求 Q 的列向量为矩阵 A 的特征向量,并且第一列为属于特征值 2 的特征向量.因此,Q 的第二列是属于特征值 -4 的特征向量还是属于特征值 5 的特征向量是不固定的.为了答案的准确性,在写答案时,我们在给出 Q 的同时,还应该写出相应的 $Q^{T}AQ$ .
+② 由于 Q 为正交矩阵, 故 $\alpha_{2}, \alpha_{3}$ 均与 $\alpha_{1}$ 正交, 即均满足方程 $x_{1} + 2x_{2} + x_{3} = 0$ , 但该方程的非零解却不全是 A 的特征向量. 通过解析我们知道, A 有三个不同的特征值 2, 5, -4. $\alpha_{1}$ 对应特征值 2. 由于 $\lambda_{2} \neq \lambda_{3}$ , 故 $\lambda_{2}$ 对应的特征向量 $\alpha_{2}$ 与 $\lambda_{3}$ 对应的特征向量 $\alpha_{3}$ 的线性组合并不全是 A 的特征向量. 但 $\alpha_{2}$ 与 $\alpha_{3}$ 的线性组合却全是方程 $x_{1} + 2x_{2} + x_{3} = 0$ 的解. 由此可知, 通过解方程 $x_{1} + 2x_{2} + x_{3} = 0$ , 得到的仅是 $\alpha_{2}$ 与 $\alpha_{3}$ 的线性组合, 并不能确定 $\alpha_{2}, \alpha_{3}$ .
+但是对3阶实对称矩阵A,若已知A的属于特征值 $\lambda_{1}$ 的特征向量 $(a,b,c)^{\mathrm{T}}$ ,并已知A的另一个特征值为二重特征值,则可以通过求满足方程 $ax_{1}+bx_{2}+cx_{3}=0$ 的解来得到另一个特征值的特征向量."
+zt-031105,真题,线性代数,第二章 矩阵,数三2011,5,选择题,,,"(5) 设 A 为 3 阶矩阵, 将 A 的第 2 列加到第 1 列得矩阵 B, 再交换 B 的第 2 行与第 3 行得单位矩阵. 记 $P_{1} = \begin{pmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ , $P_{2} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{pmatrix}$ , 则 A = ( )",$P_{1}P_{2}$ .,$P_{1}^{-1}P_{2}$ .,$P_{2}P_{1}$ .,$P_{2}P_{1}^{-1}$ .,"答案 D.
+分析 本题主要考查矩阵的初等变换与初等矩阵之间的对应关系. 对矩阵 A 作初等行(列)变换, 等价于对矩阵左(右)乘相应的初等矩阵.
+题设给出了由 A 作初等变换得到单位矩阵的步骤, 因此, 只需根据题给初等变换写出相应的初等矩阵表示, 便能得到一个关于 A 的表达式, 进而可以求得 A.
+解 将 A 的第 2 列加到第 1 列对应 A 右乘矩阵 $P_{1}$ ，得 $B = AP_{1}$ 。交换 B 的第 2 行与第 3 行对应 B 左乘矩阵 $P_{2}$ ，得 $E = P_{2}AP_{1}$ 。于是 $A = P_{2}^{-1}P_{1}^{-1}$ 。
+又因为 $P_{2}^{-1}=P_{2}$ ，所以 $A=P_{2}P_{1}^{-1}$ . 应选 D.
+注 ① 在对矩阵 A 作初等变换时,要分清楚初等行变换和初等列变换. 初等行变换对应的是左乘初等矩阵,而初等列变换对应的是右乘初等矩阵. 如果弄反了左乘和右乘的作用,那么就可能错选 B.
+② 注意: $P_{2}^{-1}=P_{2}=P_{2}^{T},P_{1}^{-1}\neq P_{1}.$"
+zt-031206,真题,线性代数,第二章 矩阵,数三2012,6,选择题,,,"(6) 设 A 为 3 阶矩阵, P 为 3 阶可逆矩阵, 且 $P^{-1}AP = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 2 \end{pmatrix}$ . 若 $P = (\alpha_{1}, \alpha_{2}, \alpha_{3})$ , $Q=(\alpha_{1}+\alpha_{2},\alpha_{2},\alpha_{3})$ ，则 $Q^{-1}AQ=(\quad)$",$\begin{pmatrix}1&0&0\\0&2&0\\0&0&1\end{pmatrix}.$,$\begin{pmatrix}1&0&0\\0&1&0\\0&0&2\end{pmatrix}.$,$\begin{pmatrix}2&0&0\\0&1&0\\0&0&2\end{pmatrix}.$,$\begin{pmatrix}2&0&0\\0&2&0\\0&0&1\end{pmatrix}.$,"答案 B.
+分析 本题主要考查矩阵的初等变换与矩阵乘法.
+Q 由 P 作初等变换得到, 故本题的解题关键在于写出该初等变换所对应的初等矩阵. 另一方面, 本题也可以从矩阵相似对角化的角度来考虑.
+解（法一）由题设知， $Q=P\begin{pmatrix}1&0&0\\1&1&0\\0&0&1\end{pmatrix}$ ，故 $Q^{-1}=\begin{pmatrix}1&0&0\\-1&1&0\\0&0&1\end{pmatrix}P^{-1}$ .从而 $Q^{-1}AQ=\begin{pmatrix}1&0&0\\-1&1&0\\0&0&1\end{pmatrix}P^{-1}AP\begin{pmatrix}1&0&0\\1&1&0\\0&0&1\end{pmatrix}$ $=\begin{pmatrix}1&0&0\\-1&1&0\\0&0&1\end{pmatrix}\begin{pmatrix}1&0&0\\0&1&0\\0&0&2\end{pmatrix}\begin{pmatrix}1&0&0\\1&1&0\\0&0&1\end{pmatrix}=\begin{pmatrix}1&0&0\\0&1&0\\0&0&2\end{pmatrix}.$
+应选B.
+（法二）由题设知，1,1,2是 $\pmb{A}$ 的特征值， $\alpha_{1},\alpha_{2},\alpha_{3}$ 分别是属于特征值1,1,2的特征向量，即 $A\alpha_{1} = \alpha_{1}, A\alpha_{2} = \alpha_{2}, A\alpha_{3} = 2\alpha_{3}.$
+从而 $A(\alpha_{1} + \alpha_{2}) = \alpha_{1} + \alpha_{2},\alpha_{1} + \alpha_{2}$ 也是 $\pmb{A}$ 的属于特征值1的一个特征向量.
+$$ \boldsymbol {A} \boldsymbol {Q} = \boldsymbol {A} (\boldsymbol {\alpha} _ {1} + \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) = (\boldsymbol {\alpha} _ {1} + \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {2}, 2 \boldsymbol {\alpha} _ {3}) = \boldsymbol {Q} \left( \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 2 \end{array} \right). $$
+又由于 Q 由 P 作初等变换得到, P 可逆, 故 Q 可逆. 于是 $Q^{-1}AQ = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 2 \end{pmatrix}$ . 应选 B.
+② 事实上,本题中的 A, $P^{-1}AP$ , $Q^{-1}AQ$ 两两相似,故它们应具有相同的迹,从而可以较快排除选项 C 和选项 D. 另一方面,由于四个选项中的矩阵均为对角矩阵,故 $Q^{-1}AQ$ 的对角元应分别为 Q 的列向量的相应特征值.由题设知, $\alpha_{2}$ 为属于特征值 1 的一个特征向量, $\alpha_{3}$ 为属于特征值 2 的一个特征向量,故可知应选 B."
+zt-031320,真题,线性代数,第二章 矩阵,数三2013,20,解答题,,,"(20) ( 11 分)
+设 $A=\begin{pmatrix}1&a\\1&0\end{pmatrix},B=\begin{pmatrix}0&1\\1&b\end{pmatrix}$ .当a,b为何值时,存在矩阵C使得$AC-CA=B$，并求所有矩阵C.",,,,,"分析 本题主要考查矩阵运算以及线性方程组的求解.
+设 C 的元素为未知数, 将求 a, b 转化为求线性方程组有解的条件.
+关于矩阵的迹,有这样一条性质:若 A,B 为同阶方阵,则 AB 的迹等于 BA 的迹.
+解（法一）设 $C = \begin{pmatrix} x_1 & x_2 \\ x_3 & x_4 \end{pmatrix}$ ，则由 $AC - CA = B$ 可得
+$$ \left( \begin{array}{c c} 1 & a \\ 1 & 0 \end{array} \right) \left( \begin{array}{c c} x _ {1} & x _ {2} \\ x _ {3} & x _ {4} \end{array} \right) - \left( \begin{array}{c c} x _ {1} & x _ {2} \\ x _ {3} & x _ {4} \end{array} \right) \left( \begin{array}{c c} 1 & a \\ 1 & 0 \end{array} \right) = \left( \begin{array}{c c} 0 & 1 \\ 1 & b \end{array} \right). $$
+写成线性方程组的形式：
+$$ \left\{ \begin{array}{l} - x _ {2} + a x _ {3} = 0, \\ - a x _ {1} + x _ {2} + a x _ {4} = 1, \\ x _ {1} - x _ {3} - x _ {4} = 1, \\ x _ {2} - a x _ {3} = b. \end{array} \right. $$
+记该线性方程组为 $Px = \beta, \beta = (0, 1, 1, b)^{\mathrm{T}}$ ，则 Px = $\beta$ 有解当且仅当 $r(P, \beta) = r(P)$ .
+$$ \begin{array}{r l} (\boldsymbol {P}, \boldsymbol {\beta}) & = \left( \begin{array}{c c c c c} 0 & - 1 & a & 0 & 0 \\ - a & 1 & 0 & a & 1 \\ 1 & 0 & - 1 & - 1 & 1 \\ 0 & 1 & - a & 0 & b \end{array} \right) \xrightarrow {r _ {2} + a r _ {3}} \left( \begin{array}{c c c c c} 0 & - 1 & a & 0 & 0 \\ 0 & 1 & - a & 0 & a + 1 \\ 1 & 0 & - 1 & - 1 & 1 \\ 0 & 1 & - a & 0 & b \end{array} \right) \\ & \xrightarrow {r _ {2} ^ {*} + r _ {1}} \left( \begin{array}{c c c c c} 0 & - 1 & a & 0 & 0 \\ 0 & 0 & 0 & 0 & a + 1 \\ 1 & 0 & - 1 & - 1 & 1 \\ 0 & 0 & 0 & 0 & b \end{array} \right) \to \left( \begin{array}{c c c c c} 1 & 0 & - 1 & - 1 & 1 \\ 0 & 1 & - a & 0 & 0 \\ 0 & 0 & 0 & 0 & a + 1 \\ 0 & 0 & 0 & 0 & b \end{array} \right). \end{array} $$
+$r_{2}^{*}$ 表示对 $r_{2}$ 作初等行变换后所得新的第二行. 由上可见, 若 $r(\boldsymbol{P}, \boldsymbol{\beta}) = r(\boldsymbol{P})$ , 则必有 $a + 1 = b = 0$ , 从而 a = -1, b = 0.
+当 $a = -1, b = 0$ 时，
+$$ (P, \beta) \rightarrow \left(\begin{array}{c c c c c}1&0&- 1&- 1&1\\0&1&1&0&0\\0&0&0&0&0\\0&0&0&0&0\end{array}\right), $$
+即 $\left\{ \begin{array}{l} x_{1} - x_{3} - x_{4} = 1, \\ x_{2} + x_{3} = 0. \end{array} \right.$ (1, 0, 0, 1) $^{\mathrm{T}}$ 和 (1, -1, 1, 0) $^{\mathrm{T}}$ 为该方程组对应的齐次线性方程组的一个基础解系. 又 (1, 0, 0, 0) $^{\mathrm{T}}$ 为 $Px = \beta$ 的一个特解, 故 $Px = \beta$ 的通解为
+$$ k _ {1} (1, 0, 0, 1) ^ {\mathrm{T}} + k _ {2} (1, - 1, 1, 0) ^ {\mathrm{T}} + (1, 0, 0, 0) ^ {\mathrm{T}}, $$
+其中 $k_{1}, k_{2}$ 为任意常数.
+因此, 当 a = -1, b = 0 时, 存在 C 使得 AC - CA = B. 此时的 C 形如 $\begin{pmatrix} k_{1} + k_{2} + 1 & -k_{2} \\ k_{2} & k_{1} \end{pmatrix}$ , 其中 $k_{1}, k_{2}$ 为任意常数.
+(法二) 由于 AC 的迹等于 CA 的迹, 故 AC - CA 的迹等于零. 因此 b = 0. $B = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ .
+设 $C = \begin{pmatrix} x_{1} & x_{2} \\ x_{3} & x_{4} \end{pmatrix}$ ，则由 AC - CA = B 可得
+$$ \left\{ \begin{array}{l} - x _ {2} + a x _ {3} = 0, \\ - a x _ {1} + x _ {2} + a x _ {4} = 1, \\ x _ {1} - x _ {3} - x _ {4} = 1, \\ x _ {2} - a x _ {3} = 0. \end{array} \right. $$
+将 $x_{2} = ax_{3}$ 代入 $-ax_{1} + x_{2} + ax_{4} = 1$ 可得 $-a(x_{1} - x_{3} - x_{4}) = 1.$ 与 $x_{1} - x_{3} - x_{4} = 1$ 比较得， $a = -1.$ 从而得， $a = -1, b = 0.$
+其余同法一.
+注 法二与法一实际上差别不大.法二中,在确定b=0后,通过设C的元素为未知数来求a的过程相对简单一点."
+zt-031705,真题,线性代数,第二章 矩阵,数三2017,5,选择题,,题型五 秩的计算,"(5) 设 $\alpha$ 为 n 维单位列向量, E 为 n 阶单位矩阵, 则 ( )",$E-\alpha\alpha^{T}$ 不可逆.,$E+\alpha\alpha^{T}$ 不可逆.,$E+2\alpha\alpha^{T}$ 不可逆.,$E-2\alpha\alpha^{T}$ 不可逆.,"答案 A.
+分析 本题主要考查矩阵可逆性的判断方法. 需要用到以下性质.
+(1) 矩阵 A 可逆 $\Leftrightarrow |A| \neq 0 \Leftrightarrow A$ 的特征值都不为零 $\Leftrightarrow Ax = 0$ 只有零解.
+(2) 设 $f(x)$ 为多项式, 若 $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$ 为 A 的特征值, 则 $f(\lambda_{1}), f(\lambda_{2}), \cdots, f(\lambda_{n})$ 为 $f(A)$ 的特征值.
+(3) 若 $r(A)=1$ ，则矩阵 A 的全部特征值为 $\mathrm{tr}(A),0,\cdots,0.$
+解（法一）由于 $\alpha$ 是 n 维单位列向量，故 $\mathrm{tr}(\boldsymbol{\alpha}\boldsymbol{\alpha}^{\mathrm{T}})=\boldsymbol{\alpha}^{\mathrm{T}}\boldsymbol{\alpha}=1$ 。因为 $\alpha$ 非零，所以 $r(\boldsymbol{\alpha}\boldsymbol{\alpha}^{\mathrm{T}})\geqslant1$ 。又由于 $r(\boldsymbol{\alpha}\boldsymbol{\alpha}^{\mathrm{T}})\leqslant r(\boldsymbol{\alpha})=1$ ，故 $r(\boldsymbol{\alpha}\boldsymbol{\alpha}^{\mathrm{T}})=1$ 。于是矩阵 $\alpha\alpha^{\mathrm{T}}$ 的全部特征值为 $1,0,\cdots,0$ ，从而 $E-\alpha\alpha^{\mathrm{T}}$ 的全部特征值为 $0,1,\cdots,1$ 。因此， $E-\alpha\alpha^{\mathrm{T}}$ 不可逆。应选 A.
+同理可得, $E+\alpha\alpha^{T}$ 的全部特征值为2,1, $\cdots$ ,1; $E+2\alpha\alpha^{T}$ 的全部特征值为3,1, $\cdots$ ,1; $E-2\alpha\alpha^{T}$ 的全部特征值为-1,1, $\cdots$ ,1.因此它们均可逆.
+(法二) 由于 $(\boldsymbol{\alpha}\boldsymbol{\alpha}^{\mathrm{T}})\boldsymbol{\alpha}=\boldsymbol{\alpha}(\boldsymbol{\alpha}^{\mathrm{T}}\boldsymbol{\alpha})=\boldsymbol{\alpha}$ ，故
+$$ \left(\boldsymbol {E} - \boldsymbol {\alpha} \boldsymbol {\alpha} ^ {\mathrm{T}}\right) \boldsymbol {\alpha} = \boldsymbol {\alpha} - \left(\boldsymbol {\alpha} \boldsymbol {\alpha} ^ {\mathrm{T}}\right) \boldsymbol {\alpha} = \boldsymbol {\alpha} - \boldsymbol {\alpha} = \mathbf {0} = 0 \boldsymbol {\alpha}. $$
+于是，0 是 $E - \alpha\alpha^{T}$ 的一个特征值（或 $(E - \alpha\alpha^{T})x = 0$ 有非零解 $\alpha$ ）。因此， $E - \alpha\alpha^{T}$ 不可逆。应选 A. （法三）排除法。
+令 $\boldsymbol{\alpha}=(1,0,\cdots,0)^{\mathrm{T}}$ ，则 $\alpha\alpha^{T}=\begin{pmatrix}1&&&&\\&0&&\\&&\ddots&&\\&&&0\end{pmatrix}.$
+可以验证, $E+\alpha\alpha^{T},E+2\alpha\alpha^{T},E-2\alpha\alpha^{T}$ 均可逆,从而可以排除选项B、C、D.因此,应选A."
+zt-031806,真题,线性代数,第二章 矩阵,数三2018,6,选择题,,,"(6) 设 A, B 为 n 阶矩阵, 记 $r(X)$ 为矩阵 X 的秩, $(X, Y)$ 表示分块矩阵, 则 ( )","$r(A,AB)=r(A).$","$r(A,BA)=r(A).$","$r(A,B)=\max\{r(A),r(B)\}.$","$r(A,B)=r(A^{\mathrm{T}},B^{\mathrm{T}}).$","答案 A.
+分析 本题主要考查矩阵的秩的概念.
+矩阵的秩 如果矩阵 A 有一个不为零的 r 阶子式 D, 且所有 $r + 1$ 阶子式 (若存在的话) 全部等于零, 那么数 r 称为矩阵 A 的秩, 记作 $r(A)$ .
+子式 在 $m \times n$ 矩阵 $\mathbf{A}$ 中, 任取 $k$ 行与 $k$ 列 $(k \leqslant m, k \leqslant n)$ , 位于这些行、列交叉处的 $k^2$ 个元素, 不改变它们在 $\mathbf{A}$ 中所处的位置次序而得的 $k$ 阶行列式, 称为矩阵 $\mathbf{A}$ 的 $k$ 阶子式.
+四个选项均涉及到分块矩阵的秩.关于分块矩阵的秩,我们有如下结论: $\max\left\{r(A),r(B)\right\}\leqslant r(A,B)\leqslant r(A)+r(B)$ .
+解 记 C = AB. 由于右乘矩阵表示对矩阵作列变换, 故 C 的列向量可由 A 的列向量线性表示. 于是, $r(A, C) = r(A, AB) = r(A)$ .
+因此,应选 A.
+下面分别说明选项 B、C、D 不正确.
+选项 B: $r(A,BA) \geqslant r(A)$ . 但是, $r(A,BA) = r(A)$ 并不成立.
+取 $A = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, B = \begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix}$ ，则 $BA = \begin{pmatrix} 1 & 0 \\ 1 & 0 \end{pmatrix}, (A, BA) = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 0 & 1 & 0 \end{pmatrix}$ . $r(A, BA) = 2$ ，但 $r(A) = 1$ .
+选项 C: $r(A,B) \geqslant \max\{r(A), r(B)\}$ . 但是, $r(A,B) = \max\{r(A), r(B)\}$ 并不成立.
+取 $A = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, B = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}$ ，则 $(A, B) = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \end{pmatrix}, r(A, B) = 2$ ，但 $r(A) = r(B) = 1$ .
+选项D:由于 $r(\boldsymbol{P})=r(\boldsymbol{P}^{\mathrm{T}})$ ，而 $(\boldsymbol{A},\boldsymbol{B})^{\mathrm{T}}=\begin{pmatrix}\boldsymbol{A}^{\mathrm{T}}\\\boldsymbol{B}^{\mathrm{T}}\end{pmatrix}$ ，故 $r(\boldsymbol{A},\boldsymbol{B})=r\begin{pmatrix}\boldsymbol{A}^{\mathrm{T}}\\\boldsymbol{B}^{\mathrm{T}}\end{pmatrix}$ .但是， $r(\boldsymbol{A},\boldsymbol{B})=r(\boldsymbol{A}^{\mathrm{T}},\boldsymbol{B}^{\mathrm{T}})$ 并不成立. 取 $A = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, B = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}$ ，则 $(A, B) = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \end{pmatrix}, (A^{\mathrm{T}}, B^{\mathrm{T}}) = \begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \end{pmatrix}. r(A, B) = 2,$ 但 $r(A^{T},B^{T})=1.$"
+zt-031905,真题,线性代数,第二章 矩阵,数三2019,5,选择题,,,"(5) 设 A 是 4 阶矩阵, $A^{*}$ 是 A 的伴随矩阵, 若线性方程组 Ax = 0 的基础解系中只有 2 个向量, 则 $r(A^{*}) = (\quad)$",0,1,2,3,"答案 A.
+分析 本题主要考查齐次线性方程组的系数矩阵的秩与解集的秩的关系以及伴随矩阵的秩.
+由 Ax = 0 的基础解系中的向量个数可知 A 的秩，从而可得 $A^{*}$ 的秩.
+$r(A)$ 和 $r(A^{*})$ 的关系 对于 $n(n \geqslant 2)$ 阶矩阵 A,
+$$ r (A ^ {*}) = \left\{ \begin{array}{l l} n, & r (A) = n, \\ 1, & r (A) = n - 1, \\ 0, & r (A) < n - 1. \end{array} \right. $$
+解 由于 Ax = 0 的基础解系中只含有 2 个向量，故 $r(A) = 4 - 2 = 2$ 。又因为 $r(A) = 2 < 4 - 1$ ，所以 $r(A^{*}) = 0$ 。
+因此，应选A."
+zt-032006,真题,线性代数,第二章 矩阵,数三2020,6,选择题,,,"(6) 设 $A$ 为 3 阶矩阵, $\alpha_{1}, \alpha_{2}$ 为 $A$ 的属于特征值 1 的线性无关的特征向量, $\alpha_{3}$ 为 $A$ 的属于特征值 -1 的特征向量, 则满足 $P^{-1}AP = \begin{pmatrix} 1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ 的可逆矩阵 $P$ 可为 ( )","$(\boldsymbol{\alpha}_{1}+\boldsymbol{\alpha}_{3},\boldsymbol{\alpha}_{2},-\boldsymbol{\alpha}_{3}).$","$(\boldsymbol{\alpha}_{1}+\boldsymbol{\alpha}_{2},\boldsymbol{\alpha}_{2},-\boldsymbol{\alpha}_{3}).$","$(\boldsymbol{\alpha}_{1}+\boldsymbol{\alpha}_{3},-\boldsymbol{\alpha}_{3},\boldsymbol{\alpha}_{2}).$","$(\boldsymbol{\alpha}_{1}+\boldsymbol{\alpha}_{2},-\boldsymbol{\alpha}_{3},\boldsymbol{\alpha}_{2}).$","答案 D.
+分析 本题主要考查特征值与特征向量的概念.
+所求可逆矩阵 P 的列向量应为 A 的线性无关的特征向量, 且分别对应特征值 1, -1, 1. 已知 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 为 A 的三个线性无关的特征向量, 可由此出发去寻找满足要求的 P.
+解 由于 $P^{-1}AP = \begin{pmatrix} 1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ , 故 $P$ 的列向量应分别为属于特征值 $1, -1, 1$ 的特征向量, 且第 1 列与第 3 列为属于特征值 1 的线性无关的特征向量.
+由已知条件, $\alpha_{3}$ 为A的属于特征值-1的特征向量,故P的第2列可取为 $k\alpha_{3}$ ,其中k为任意非零常数.
+由于 $\alpha_{1}, \alpha_{2}$ 为 A 的属于特征值 1 的线性无关的特征向量，且 $(\boldsymbol{\alpha}_{1} + \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{2}) = (\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}) \begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix}$ ，故 $\alpha_{1} + \alpha_{2}$ 也为 A 的属于特征值 1 的特征向量，且与 $\alpha_{2}$ 线性无关.
+因此， $P$ 可取为 $(\alpha_{1} + \alpha_{2}, - \alpha_{3},\alpha_{2})$ .应选D."
+zt-032107,真题,线性代数,第二章 矩阵,数三2021,7,选择题,,,"(7) 已知矩阵 $A = \begin{pmatrix} 1 & 0 & -1 \\ 2 & -1 & 1 \\ -1 & 2 & -5 \end{pmatrix}$ ，若存在下三角可逆矩阵 P 与上三角可逆矩阵 Q，使 PAQ 为对角矩阵，则 P, Q 可分别为（）","$\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},\begin{pmatrix}1&0&1\\0&1&3\\0&0&1\end{pmatrix}.$","$\begin{pmatrix}1&0&0\\2&-1&0\\-3&2&1\end{pmatrix},\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix}.$","$\begin{pmatrix} 1 & 0 & 0 \\ 2 & -1 & 0 \\ -3 & 2 & 1 \end{pmatrix}, \begin{pmatrix} 1 & 0 & 1 \\ 0 & 1 & 3 \\ 0 & 0 & 1 \end{pmatrix}$ .","$\begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 1 & 3 & 1 \end{pmatrix}, \begin{pmatrix} 1 & 2 & -3 \\ 0 & -1 & 2 \\ 0 & 0 & 1 \end{pmatrix}$ .","答案 C.
+分析 本题主要考查矩阵的初等变换.
+对矩阵左乘一个初等矩阵相当于对矩阵作一次初等行变换,左乘一个可逆矩阵相当于对矩阵作一系列初等行变换;对矩阵右乘一个初等矩阵相当于对矩阵作一次初等列变换,右乘一个可逆矩阵相当于对矩阵作一系列初等列变换.
+当已知矩阵 $\pmb{A}$ 通过初等变换化为对角矩阵 $\pmb{\Lambda}$ , 即存在可逆矩阵 $P, Q$ , 使得 $\pmb{\Lambda} = \pmb{PAQ}$ 时, 我们可以通过如下操作找到记录初等行变换的可逆矩阵 $P$ 与记录初等列变换的可逆矩阵 $Q$ .
+① 对 $(A, E)$ 作初等行变换. 当 $A$ 变成上三角矩阵 $U$ 时, $E$ 变成 $P$ , 即 $P(A, E) = (PA, P) = (U, P)$ .
+② 对 $\begin{pmatrix}U\\E\end{pmatrix}$ 作初等列变换. 当 U 变成对角矩阵 A 时, E 变成 Q, 即 $\begin{pmatrix}U\\E\end{pmatrix}Q=\begin{pmatrix}UQ\\Q\end{pmatrix}=\begin{pmatrix}A\\Q\end{pmatrix}.$
+解（法一）对 $(A,E)$ 作初等行变换.
+$$ \begin{array}{r l} (A, E) & = \left( \begin{array}{c c c c c c} 1 & 0 & - 1 & 1 & 0 & 0 \\ 2 & - 1 & 1 & 0 & 1 & 0 \\ - 1 & 2 & - 5 & 0 & 0 & 1 \end{array} \right) \xrightarrow {r _ {2} - 2 r _ {1}} \left( \begin{array}{c c c c c c} 1 & 0 & - 1 & 1 & 0 & 0 \\ 0 & - 1 & 3 & - 2 & 1 & 0 \\ 0 & 2 & - 6 & 1 & 0 & 1 \end{array} \right) \\ & \xrightarrow {r _ {2} ^ {*} \times (- 1)} \left( \begin{array}{c c c c c c} 1 & 0 & - 1 & 1 & 0 & 0 \\ 0 & 1 & - 3 & 2 & - 1 & 0 \\ 0 & 2 & - 6 & 1 & 0 & 1 \end{array} \right) \xrightarrow {r _ {3} ^ {*} - 2 r _ {2} ^ {* *}} \left( \begin{array}{c c c c c c} 1 & 0 & - 1 & 1 & 0 & 0 \\ 0 & 1 & - 3 & 2 & - 1 & 0 \\ 0 & 0 & 0 & - 3 & 2 & 1 \end{array} \right). \end{array} $$
+$(r_{i}^{*}$ 表示对第 i 行作初等行变换后所得新的第 i 行, 每作一次初等行变换, 加一个 *.)
+取 $P = \begin{pmatrix} 1 & 0 & 0 \\ 2 & -1 & 0 \\ -3 & 2 & 1 \end{pmatrix}$ .
+记 $U = \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & -3 \\ 0 & 0 & 0 \end{pmatrix}$ ，对 $\begin{pmatrix} U \\ E \end{pmatrix}$ 作初等列变换.
+$$ \binom {\boldsymbol {U}} {\boldsymbol {E}} = \left( \begin{array}{c c c} 1 & 0 & - 1 \\ 0 & 1 & - 3 \\ 0 & 0 & 0 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right) \xrightarrow {c _ {3} + c _ {1} + 3 c _ {2}} \left( \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 3 \\ 0 & 0 & 1 \end{array} \right). $$
+取 $Q = \begin{pmatrix} 1 & 0 & 1 \\ 0 & 1 & 3 \\ 0 & 0 & 1 \end{pmatrix}$
+此时, $PAQ = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix}$ 为对角矩阵.因此,应选C.
+(法二) 代入法.
+观察选项 A、B 发现,其中各有一个单位矩阵.
+由于左乘矩阵相当于对原矩阵作行变换,右乘矩阵相当于对原矩阵作列变换,故
+$$ \boldsymbol {A} \left( \begin{array}{l l l} 1 & 0 & 1 \\ 0 & 1 & 3 \\ 0 & 0 & 1 \end{array} \right) = \left( \begin{array}{r r r} 1 & 0 & - 1 \\ 2 & - 1 & 1 \\ - 1 & 2 & - 5 \end{array} \right) \left( \begin{array}{l l l} 1 & 0 & 1 \\ 0 & 1 & 3 \\ 0 & 0 & 1 \end{array} \right) $$
+的第一列为 A 的第一列, 即 $\begin{pmatrix}1\\2\\-1\end{pmatrix}$
+$$ \left( \begin{array}{r r r} 1 & 0 & 0 \\ 2 & - 1 & 0 \\ - 3 & 2 & 1 \end{array} \right) \boldsymbol {A} = \left( \begin{array}{r r r} 1 & 0 & 0 \\ 2 & - 1 & 0 \\ - 3 & 2 & 1 \end{array} \right) \left( \begin{array}{r r r} 1 & 0 & - 1 \\ 2 & - 1 & 1 \\ - 1 & 2 & - 5 \end{array} \right) $$
+的第一行为 A 的第一行, 即 $(1, 0, -1)$ , 而任何矩阵与单位矩阵相乘所得结果均为原矩阵, 于是选项 A、B 所给 P, Q 均不能使得 PAQ 为对角矩阵. 由此可排除选项 A、B.
+将选项 C 中的两个矩阵代入计算, 可得
+$$ \left( \begin{array}{r r r} 1 & 0 & 0 \\ 2 & - 1 & 0 \\ - 3 & 2 & 1 \end{array} \right) \left( \begin{array}{r r r} 1 & 0 & - 1 \\ 2 & - 1 & 1 \\ - 1 & 2 & - 5 \end{array} \right) \left( \begin{array}{r r r} 1 & 0 & 1 \\ 0 & 1 & 3 \\ 0 & 0 & 1 \end{array} \right) = \left( \begin{array}{r r r} 1 & 0 & 0 \\ 2 & - 1 & 0 \\ - 3 & 2 & 1 \end{array} \right) \left( \begin{array}{r r r} 1 & 0 & 0 \\ 2 & - 1 & 0 \\ - 1 & 2 & 0 \end{array} \right) = \left( \begin{array}{r r r} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{array} \right). $$
+由此可见选项 C 正确. 应选 C.
+简单计算可验证选项 D 不正确.
+$\begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 1 & 3 & 1 \end{pmatrix} A$ 的第一行、第二行与 $A$ 的第一行、第二行相同，即 $\begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 1 & 3 & 1 \end{pmatrix} A = \begin{pmatrix} 1 & 0 & -1 \\ 2 & -1 & 1 \\ * & * & * \end{pmatrix}$ 记为 $B, B$ 再右乘 $\begin{pmatrix} 1 & 2 & -3 \\ 0 & -1 & 2 \\ 0 & 0 & 1 \end{pmatrix}$ ，则新矩阵的第一列为 $\begin{pmatrix} 1 \\ 2 \\ * \end{pmatrix}$ . 于是，所得结果不是对角矩阵.
+拓展
+从行、列变换的角度计算矩阵乘积
+矩阵乘积 设 $A = (a_{ij})$ 是一个 $m \times s$ 矩阵, $B = (b_{ij})$ 是一个 $s \times n$ 矩阵, 那么规定矩阵
+$\pmb{A}$ 与矩阵 $\pmb{B}$ 的乘积是一个 $m\times n$ 矩阵 $\pmb {C} = (c_{ij})$ ，其中
+$$ c _ {i j} = a _ {i 1} b _ {1 j} + a _ {i 2} b _ {2 j} + \dots + a _ {i s} b _ {s j} = \sum_ {k = 1} ^ {s} a _ {i k} b _ {k j} (i = 1, 2, \dots , m; j = 1, 2, \dots , n), $$
+并把此乘积记作 C = AB.
+除了按照定义计算矩阵乘积外,我们也可以从行、列变换的角度来计算矩阵乘积. 在计算比较高阶的矩阵乘法时,这种方法比较方便.
+(1) 矩阵 A 右乘一个矩阵 Q 相当于对 A 作列变换.
+以3阶矩阵为例. 将3阶矩阵A写成列分块的形式 $A=(\alpha_{1},\alpha_{2},\alpha_{3})$ ，则A可以右乘一个 $3\times n$ 的矩阵 $Q=(q_{ij})$ .
+$$ \begin{array}{r l} A Q & = (\alpha_ {1}, \alpha_ {2}, \alpha_ {3}) \left( \begin{array}{c c c c} q _ {1 1} & q _ {1 2} & \dots & q _ {1 n} \\ q _ {2 1} & q _ {2 2} & \dots & q _ {2 n} \\ q _ {3 1} & q _ {3 2} & \dots & q _ {3 n} \end{array} \right) \\ & = (q _ {1 1} \alpha_ {1} + q _ {2 1} \alpha_ {2} + q _ {3 1} \alpha_ {3}, \dots , q _ {1 n} \alpha_ {1} + q _ {2 n} \alpha_ {2} + q _ {3 n} \alpha_ {3}) \end{array} $$
+本题选项 C 的计算中, $B = \begin{pmatrix} 1 & 0 & -1 \\ 2 & -1 & 1 \\ -1 & 2 & -5 \end{pmatrix} \begin{pmatrix} 1 & 0 & 1 \\ 0 & 1 & 3 \\ 0 & 0 & 1 \end{pmatrix}$ 的第一列、第二列与 $\begin{pmatrix}1&0&-1\\2&-1&1\\-1&2&-5\end{pmatrix}$ 的第一列、第二列相同，第三列 $=\begin{pmatrix}1\\2\\-1\end{pmatrix}+3\begin{pmatrix}0\\-1\\2\end{pmatrix}+\begin{pmatrix}-1\\1\\-5\end{pmatrix}=\begin{pmatrix}0\\0\\0\end{pmatrix}$ ，故 B = $\begin{pmatrix}1&0&0\\2&-1&0\\-1&2&0\end{pmatrix}.$
+(2) 矩阵 A 左乘一个矩阵 P 相当于对 A 作行变换.
+以3阶矩阵为例.将3阶矩阵A写成行分块的形式 $A=\begin{pmatrix}a_{1}^{\mathrm{T}}\\a_{2}^{\mathrm{T}}\\a_{3}^{\mathrm{T}}\end{pmatrix}$ ，则A可以左乘一个 $m\times3$ 的矩阵 $P=(p_{ij})$ .
+$$ \boldsymbol {P} \boldsymbol {A} = \left( \begin{array}{c c c} p _ {1 1} & p _ {1 2} & p _ {1 3} \\ p _ {2 1} & p _ {2 2} & p _ {2 3} \\ \vdots & \vdots & \vdots \\ p _ {m 1} & p _ {m 2} & p _ {m 3} \end{array} \right) \left( \begin{array}{l} \boldsymbol {a} _ {1} ^ {\mathrm{T}} \\ \boldsymbol {a} _ {2} ^ {\mathrm{T}} \\ \boldsymbol {a} _ {3} ^ {\mathrm{T}} \end{array} \right) = \left( \begin{array}{c} p _ {1 1} \boldsymbol {a} _ {1} ^ {\mathrm{T}} + p _ {1 2} \boldsymbol {a} _ {2} ^ {\mathrm{T}} + p _ {1 3} \boldsymbol {a} _ {3} ^ {\mathrm{T}} \\ p _ {2 1} \boldsymbol {a} _ {1} ^ {\mathrm{T}} + p _ {2 2} \boldsymbol {a} _ {2} ^ {\mathrm{T}} + p _ {2 3} \boldsymbol {a} _ {3} ^ {\mathrm{T}} \\ \vdots \\ p _ {m 1} \boldsymbol {a} _ {1} ^ {\mathrm{T}} + p _ {m 2} \boldsymbol {a} _ {2} ^ {\mathrm{T}} + p _ {m 3} \boldsymbol {a} _ {3} ^ {\mathrm{T}} \end{array} \right) $$
+本题选项 C 的计算中, $C = \begin{pmatrix} 1 & 0 & 0 \\ 2 & -1 & 0 \\ -3 & 2 & 1 \end{pmatrix} \begin{pmatrix} 1 & 0 & 0 \\ 2 & -1 & 0 \\ -1 & 2 & 0 \end{pmatrix}$ 的第一行与 $\begin{pmatrix} 1 & 0 & 0 \\ 2 & -1 & 0 \\ -1 & 2 & 0 \end{pmatrix}$ 的第一行相同, 第二行 $= 2 \times (1, 0, 0) - (2, -1, 0) = (0, 1, 0)$ , 第三行 $= (-3) \times (1, 0, 0) + 2 \times (2, -1, 0) + (-1, 2, 0) = (0, 0, 0)$ , 故 $C = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix}$ ."
+zt-032215,真题,线性代数,第二章 矩阵,数三2022,15,填空题,,,"(15) 设 A 为 3 阶矩阵, 交换 A 的第 2 行和第 3 行, 再将第 2 列的 -1 倍加到第 1 列, 得到矩阵 $\begin{pmatrix}-2&1&-1\\1&-1&0\\-1&0&0\end{pmatrix}$ , 则 $A^{-1}$ 的迹 $\mathrm{tr}(A^{-1})=$ ____.",,,,,"答案 应填 - 1.
+分析 本题主要考查矩阵运算,包括矩阵的初等变换与矩阵求逆等.
+写出条件中所给初等变换对应的初等矩阵,结合已知矩阵可以得到 $A^{-1}$ 的表达式,从而得到 $A^{-1}$ 的迹.
+解 交换第2行和第3行对应左乘初等矩阵 $P_{1} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{pmatrix}$ , 将第2列的-1倍加到第1列对应右乘初等矩阵 $P_{2} = \begin{pmatrix} 1 & 0 & 0 \\ -1 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ . 记 $B = \begin{pmatrix} -2 & 1 & -1 \\ 1 & -1 & 0 \\ -1 & 0 & 0 \end{pmatrix}$ . 于是, $P_{1}AP_{2} = B$ , 从而 $A = P_{1}^{-1}BP_{2}^{-1}$ . 由此可得, $A^{-1} = P_{2}B^{-1}P_{1}$ .
+下面利用初等行变换计算 $B^{-1}$ .
+$$ (\boldsymbol {B}, \boldsymbol {E}) = \left(\begin{array}{c c c c c c}- 2&1&- 1&1&0&0\\1&- 1&0&0&1&0\\- 1&0&0&0&0&1\end{array}\right)\rightarrow \left(\begin{array}{c c c c c c}1&0&0&0&0&- 1\\1&- 1&0&0&1&0\\- 2&1&- 1&1&0&0\end{array}\right) $$
+$$ \begin{array}{r l}&{\rightarrow \left(\begin{array}{c c c c c c}{1}&{0}&{0}&{0}&{0}&{- 1}\\{0}&{- 1}&{0}&{0}&{1}&{1}\\{0}&{1}&{- 1}&{1}&{0}&{- 2}\end{array}\right)\rightarrow \left(\begin{array}{c c c c c c}{1}&{0}&{0}&{0}&{0}&{- 1}\\{0}&{- 1}&{0}&{0}&{1}&{1}\\{0}&{0}&{- 1}&{1}&{1}&{- 1}\end{array}\right)}\\&{\rightarrow \left(\begin{array}{c c c c c c}{1}&{0}&{0}&{0}&{0}&{- 1}\\{0}&{1}&{0}&{0}&{- 1}&{- 1}\\{0}&{0}&{1}&{- 1}&{- 1}&{1}\end{array}\right).}\end{array} $$
+于是, $B^{-1}=\begin{pmatrix}0&0&-1\\0&-1&-1\\-1&-1&1\end{pmatrix}.$
+因此，
+$$ \boldsymbol {A} ^ {- 1} = \boldsymbol {P} _ {2} \boldsymbol {B} ^ {- 1} \boldsymbol {P} _ {1} = \left( \begin{array}{l l l} 1 & 0 & 0 \\ - 1 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right) \left( \begin{array}{l l l} 0 & 0 & - 1 \\ 0 & - 1 & - 1 \\ - 1 & - 1 & 1 \end{array} \right) \left( \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{array} \right) = \left( \begin{array}{l l l} 0 & - 1 & 0 \\ 0 & 0 & - 1 \\ - 1 & 1 & - 1 \end{array} \right). $$
+进一步可得 $\operatorname{tr}(\mathbf{A}^{-1}) = -1$ ."
+zt-032305,真题,线性代数,第二章 矩阵,数三2023,5,选择题,,,"(5) 设 A, B 为 n 阶可逆矩阵, E 为 n 阶单位矩阵, $M^{*}$ 为矩阵 M 的伴随矩阵, 则 $\begin{pmatrix} A & E \\ O & B \end{pmatrix}^{*} = (\quad)$",$\begin{pmatrix} |A|B^{*} & -B^{*}A^{*} \\ O & |B|A^{*} \end{pmatrix}$ .,$\begin{pmatrix} |B|A^{*} & -A^{*}B^{*} \\ O & |A|B^{*} \end{pmatrix}$ .,$\begin{pmatrix} |B|A^{*} & -B^{*}A^{*} \\ O & |A|B^{*} \end{pmatrix}$ .,$\begin{pmatrix} |A|B^{*} & -A^{*}B^{*} \\ O & |B|A^{*} \end{pmatrix}$ .,"答案 B.
+分析 本题主要考查伴随矩阵的计算.
+我们可以考虑利用 $\begin{pmatrix} A & E \\ O & B \end{pmatrix}^{*} = \begin{vmatrix} A & E \\ O & B \end{vmatrix}\begin{pmatrix} A & E \\ O & B \end{pmatrix}^{-1}$ 来计算 $\begin{pmatrix} A & E \\ O & B \end{pmatrix}^{*}$ .
+注意到 $\begin{pmatrix}A&E\\O&B\end{pmatrix}$ 为分块上三角矩阵,行列式为 $|A||B|$ ,故我们也可以利用
+$$ \left( \begin{array}{c c} {\boldsymbol {A}} & {\boldsymbol {E}} \\ {\boldsymbol {O}} & {\boldsymbol {B}} \end{array} \right) \left( \begin{array}{c c} {\boldsymbol {A}} & {\boldsymbol {E}} \\ {\boldsymbol {O}} & {\boldsymbol {B}} \end{array} \right) ^ {*} = | \boldsymbol {A} | | \boldsymbol {B} | \boldsymbol {E} _ {2 n} $$
+来排除错误选项.
+解（法一）由于A,B都可逆,故可以作初等行变换来求 $\begin{pmatrix}A&E\\O&B\end{pmatrix}^{-1}$ .
+$$ \left( \begin{array}{c c c c} \boldsymbol {A} & \boldsymbol {E} & \boldsymbol {E} & \boldsymbol {O} \\ \boldsymbol {O} & \boldsymbol {B} & \boldsymbol {O} & \boldsymbol {E} \end{array} \right) \xrightarrow {\textcircled {1}} \left( \begin{array}{c c c c} \boldsymbol {E} & \boldsymbol {A} ^ {- 1} & \boldsymbol {A} ^ {- 1} & \boldsymbol {O} \\ \boldsymbol {O} & \boldsymbol {E} & \boldsymbol {O} & \boldsymbol {B} ^ {- 1} \end{array} \right) \xrightarrow {\textcircled {2}} \left( \begin{array}{c c c c} \boldsymbol {E} & \boldsymbol {O} & \boldsymbol {A} ^ {- 1} & - \boldsymbol {A} ^ {- 1} \boldsymbol {B} ^ {- 1} \\ \boldsymbol {O} & \boldsymbol {E} & \boldsymbol {O} & \boldsymbol {B} ^ {- 1} \end{array} \right), $$
+其中操作 ① 对应左乘可逆矩阵 $\begin{pmatrix} A^{-1} & O \\ O & B^{-1} \end{pmatrix}$ , 操作 ② 对应左乘可逆矩阵 $\begin{pmatrix} E & -A^{-1} \\ O & E \end{pmatrix}$ . 于是, $\begin{pmatrix} A & E \\ O & B \end{pmatrix}^{-1} = \begin{pmatrix} A^{-1} & -A^{-1}B^{-1} \\ O & B^{-1} \end{pmatrix}$ .
+对于任意 $n$ 阶方阵 $\pmb{M}$ ，都有 $MM^{*} = |M|E$ ，从而当 $\pmb{M}$ 可逆时， $M^{*} = |M|M^{-1}$ .又因为 $\left| \begin{array}{ll}\pmb {A} & \pmb {E}\\ \pmb {O} & \pmb {B} \end{array} \right| = |\pmb {A}||\pmb {B}|$ ，所以
+$$ \left( \begin{array}{c c} \boldsymbol {A} & \boldsymbol {E} \\ \boldsymbol {O} & \boldsymbol {B} \end{array} \right) ^ {*} = \left| \begin{array}{c c} \boldsymbol {A} & \boldsymbol {E} \\ \boldsymbol {O} & \boldsymbol {B} \end{array} \right| \left( \begin{array}{c c} \boldsymbol {A} & \boldsymbol {E} \\ \boldsymbol {O} & \boldsymbol {B} \end{array} \right) ^ {- 1} = | \boldsymbol {A} | | \boldsymbol {B} | \left( \begin{array}{c c} \boldsymbol {A} ^ {- 1} & - \boldsymbol {A} ^ {- 1} \boldsymbol {B} ^ {- 1} \\ \boldsymbol {O} & \boldsymbol {B} ^ {- 1} \end{array} \right) = \left( \begin{array}{c c} | \boldsymbol {B} | \boldsymbol {A} ^ {*} & - \boldsymbol {A} ^ {*} \boldsymbol {B} ^ {*} \\ \boldsymbol {O} & | \boldsymbol {A} | \boldsymbol {B} ^ {*} \end{array} \right). $$
+因此,应选 B.
+也可以如下计算 $\begin{pmatrix}A&E\\O&B\end{pmatrix}^{-1}.$
+设 $\begin{pmatrix}A&E\\O&B\end{pmatrix}^{-1}=\begin{pmatrix}X_{1}&X_{2}\\X_{3}&X_{4}\end{pmatrix}$ ，则
+$$ \left( \begin{array}{c c} \boldsymbol {A} & \boldsymbol {E} \\ \boldsymbol {O} & \boldsymbol {B} \end{array} \right) \left( \begin{array}{c c} \boldsymbol {X} _ {1} & \boldsymbol {X} _ {2} \\ \boldsymbol {X} _ {3} & \boldsymbol {X} _ {4} \end{array} \right) = \left( \begin{array}{c c} \boldsymbol {A} \boldsymbol {X} _ {1} + \boldsymbol {X} _ {3} & \boldsymbol {A} \boldsymbol {X} _ {2} + \boldsymbol {X} _ {4} \\ \boldsymbol {B} \boldsymbol {X} _ {3} & \boldsymbol {B} \boldsymbol {X} _ {4} \end{array} \right) = \left( \begin{array}{c c} \boldsymbol {E} & \boldsymbol {O} \\ \boldsymbol {O} & \boldsymbol {E} \end{array} \right). $$
+于是， $\left\{ \begin{array}{l}A X_{1} + X_{3} = E,\\ A X_{2} + X_{4} = O,\\ B X_{3} = O,\\ B X_{4} = E. \end{array} \right.$ 由 $A,B$ 均为可逆矩阵可得 $\left\{ \begin{array}{l}X_1 = A^{-1},\\ X_2 = -A^{-1}B^{-1},\\ X_3 = O,\\ X_4 = B^{-1}. \end{array} \right.$ 从而
+$$ \left( \begin{array}{c c} {\boldsymbol {A}} & {\boldsymbol {E}} \\ {\boldsymbol {O}} & {\boldsymbol {B}} \end{array} \right) ^ {- 1} = \left( \begin{array}{c c} {\boldsymbol {A} ^ {- 1}} & {- \boldsymbol {A} ^ {- 1} \boldsymbol {B} ^ {- 1}} \\ {\boldsymbol {O}} & {\boldsymbol {B} ^ {- 1}} \end{array} \right) $$
+（法二）分别记选项 A、B、C、D 中的矩阵为 $M_{1}, M_{2}, M_{3}, M_{4}$ ，记 $\begin{pmatrix} A & E \\ O & B \end{pmatrix} = M$ 。考虑 $M_{i}M (i = 1, 2, 3, 4)$ 。若 $M_{i} = M^{*}$ ，则 $M_{i}M = |A| |B| E_{2n}$ 。
+观察可得 $M_{1}M$ 与 $M_{4}M$ 的“第一列”均为 $\begin{pmatrix}|A|B^{*}A\\O\end{pmatrix}$ ，故
+$$ \pmb {M} _ {1} \pmb {M} \neq | \pmb {A} | | \pmb {B} | \pmb {E} _ {2 n}, \quad \pmb {M} _ {4} \pmb {M} \neq | \pmb {A} | | \pmb {B} | \pmb {E} _ {2 n}. $$
+选项 A、D 均不正确.
+又因为
+$$ \left( \begin{array}{c c} {\mid B \mid A ^ {*}} & {- B ^ {*} A ^ {*}} \\ {O} & {\mid A \mid B ^ {*}} \end{array} \right) \left( \begin{array}{c c} {A} & {E} \\ {O} & {B} \end{array} \right) = \left( \begin{array}{c c} {\mid A \mid \mid B \mid E} & {\mid B \mid A ^ {*} - B ^ {*} A ^ {*} B} \\ {O} & {\mid A \mid \mid B \mid E} \end{array} \right) \neq \mid A \mid \mid B \mid E _ {2 n}, $$
+$$ \left( \begin{array}{c c} {| B | A ^ {*}} & {- A ^ {*} B ^ {*}} \\ {O} & {| A | B ^ {*}} \end{array} \right) \left( \begin{array}{c c} {A} & {E} \\ {O} & {B} \end{array} \right) = \left( \begin{array}{c c} {| A | | B | E} & {| B | A ^ {*} - A ^ {*} B ^ {*} B} \\ {O} & {| A | | B | E} \end{array} \right) = | A | | B | E _ {2 n}, $$
+所以选项 C 不正确,选项 B 正确.应选 B."

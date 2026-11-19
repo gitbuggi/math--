@@ -1,0 +1,332 @@
+{
+  "version": 1,
+  "parts": [
+    {
+      "source": "880",
+      "file": "880-c01.csv",
+      "chapter": "第一章 函数、极限、连续"
+    },
+    {
+      "source": "880",
+      "file": "880-c02.csv",
+      "chapter": "第二章 一元函数微分学"
+    },
+    {
+      "source": "880",
+      "file": "880-c03.csv",
+      "chapter": "第三章 一元函数积分学"
+    },
+    {
+      "source": "880",
+      "file": "880-c04.csv",
+      "chapter": "第五章 多元函数微分学"
+    },
+    {
+      "source": "880",
+      "file": "880-c05.csv",
+      "chapter": "第六章 二重积分"
+    },
+    {
+      "source": "880",
+      "file": "880-c06.csv",
+      "chapter": "第四章 微分方程"
+    },
+    {
+      "source": "880",
+      "file": "880-c07.csv",
+      "chapter": "第八章 数三专题"
+    },
+    {
+      "source": "880",
+      "file": "880-c08.csv",
+      "chapter": "第七章 无穷级数"
+    },
+    {
+      "source": "880",
+      "file": "880-c09.csv",
+      "chapter": "第一章 行列式"
+    },
+    {
+      "source": "880",
+      "file": "880-c10.csv",
+      "chapter": "第二章 矩阵"
+    },
+    {
+      "source": "880",
+      "file": "880-c11.csv",
+      "chapter": "第三章 向量"
+    },
+    {
+      "source": "880",
+      "file": "880-c12.csv",
+      "chapter": "第四章 线性方程组"
+    },
+    {
+      "source": "880",
+      "file": "880-c13.csv",
+      "chapter": "第五章 相似矩阵"
+    },
+    {
+      "source": "880",
+      "file": "880-c14.csv",
+      "chapter": "第六章 二次型"
+    },
+    {
+      "source": "880",
+      "file": "880-c15.csv",
+      "chapter": "第一章 随机事件及其概率"
+    },
+    {
+      "source": "880",
+      "file": "880-c16.csv",
+      "chapter": "第二章 随机变量及其分布"
+    },
+    {
+      "source": "880",
+      "file": "880-c17.csv",
+      "chapter": "第三章 多维随机变量及其分布"
+    },
+    {
+      "source": "880",
+      "file": "880-c18.csv",
+      "chapter": "第四章 随机变量的数字特征"
+    },
+    {
+      "source": "880",
+      "file": "880-c19.csv",
+      "chapter": "第五章 大数定律与中心极限定理"
+    },
+    {
+      "source": "880",
+      "file": "880-c20.csv",
+      "chapter": "第六章 统计量分布与数字特征"
+    },
+    {
+      "source": "880",
+      "file": "880-c21.csv",
+      "chapter": "第七章 参数估计"
+    },
+    {
+      "source": "严选题",
+      "file": "yanxuan.csv"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c01.csv",
+      "chapter": "第一章 函数、极限、连续"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c02.csv",
+      "chapter": "第二章 一元函数微分学"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c03.csv",
+      "chapter": "第三章 一元函数积分学"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c04.csv",
+      "chapter": "第四章 微分方程"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c05.csv",
+      "chapter": "第五章 多元函数微分学"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c06.csv",
+      "chapter": "第六章 二重积分"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c07.csv",
+      "chapter": "第七章 无穷级数"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c08.csv",
+      "chapter": "第一章 随机事件及其概率"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c09.csv",
+      "chapter": "第二章 随机变量及其分布"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c10.csv",
+      "chapter": "第三章 多维随机变量及其分布"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c11.csv",
+      "chapter": "第四章 随机变量的数字特征"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c12.csv",
+      "chapter": "第五章 大数定律与中心极限定理"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c13.csv",
+      "chapter": "第六章 统计量分布与数字特征"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c14.csv",
+      "chapter": "第七章 参数估计"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c15.csv",
+      "chapter": "第一章 行列式"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c16.csv",
+      "chapter": "第二章 矩阵"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c17.csv",
+      "chapter": "第三章 向量"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c18.csv",
+      "chapter": "第四章 线性方程组"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c19.csv",
+      "chapter": "第五章 相似矩阵"
+    },
+    {
+      "source": "辅导讲义",
+      "file": "fudao-c20.csv",
+      "chapter": "第六章 二次型"
+    },
+    {
+      "source": "XDF",
+      "file": "xdf.csv"
+    },
+    {
+      "source": "模拟卷",
+      "file": "moni.csv"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c01.csv",
+      "chapter": "第一章 函数、极限、连续"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c02.csv",
+      "chapter": "第三章 一元函数积分学"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c03.csv",
+      "chapter": "第二章 矩阵"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c04.csv",
+      "chapter": "第一章 随机事件及其概率"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c05.csv",
+      "chapter": "第三章 多维随机变量及其分布"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c06.csv",
+      "chapter": "第五章 多元函数微分学"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c07.csv",
+      "chapter": "第七章 无穷级数"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c08.csv",
+      "chapter": "第八章 数三专题"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c09.csv",
+      "chapter": "第五章 相似矩阵"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c10.csv",
+      "chapter": "第四章 随机变量的数字特征"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c11.csv",
+      "chapter": "第六章 二重积分"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c12.csv",
+      "chapter": "第二章 一元函数微分学"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c13.csv",
+      "chapter": "第三章 向量"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c14.csv",
+      "chapter": "第六章 二次型"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c15.csv",
+      "chapter": "第四章 微分方程"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c16.csv",
+      "chapter": "第二章 随机变量及其分布"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c17.csv",
+      "chapter": "第一章 行列式"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c18.csv",
+      "chapter": "第四章 线性方程组"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c19.csv",
+      "chapter": "第六章 统计量分布与数字特征"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c20.csv",
+      "chapter": "第七章 参数估计"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c21.csv",
+      "chapter": "第五章 大数定律与中心极限定理"
+    },
+    {
+      "source": "真题",
+      "file": "zhenti-c22.csv",
+      "chapter": ""
+    }
+  ]
+}

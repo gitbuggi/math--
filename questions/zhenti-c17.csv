@@ -1,0 +1,208 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+zt-031013,真题,线性代数,第一章 行列式,数三2010,13,填空题,,题型二 抽象型行列式,"(13) 设 A, B 为 3 阶矩阵, 且 $\left|A\right|=3,\left|B\right|=2,\left|A^{-1}+B\right|=2$ , 则 $\left|A+B^{-1}\right|=$ ____.",,,,,"答案 应填 3.
+分析 本题主要考查行列式的运算.
+矩阵的逆矩阵的行列式 若矩阵 A 可逆, 则 $\left|A^{-1}\right|=\frac{1}{\left|A\right|}$ .
+矩阵的乘积的行列式 $|\mathbf{A}\mathbf{B}| = |\mathbf{A}|\cdot |\mathbf{B}|$
+由于 A 和 B 均不是具体的矩阵, 故我们应利用已知的 $\left|A\right|$ , $\left|B\right|$ 和 $\left|A^{-1} + B\right|$ 来构造 $\left|A + B^{-1}\right|$ .
+解 由于 A, B 的行列式均不为零, 故它们均可逆. 因为
+$$ \boldsymbol {A} \left(\boldsymbol {A} ^ {- 1} + \boldsymbol {B}\right) \boldsymbol {B} ^ {- 1} = \boldsymbol {B} ^ {- 1} + \boldsymbol {A} = \boldsymbol {A} + \boldsymbol {B} ^ {- 1}, $$
+所以
+$$ \left| \boldsymbol {A} + \boldsymbol {B} ^ {- 1} \right| = \left| \boldsymbol {A} \right| \cdot \left| \boldsymbol {A} ^ {- 1} + \boldsymbol {B} \right| \cdot \left| \boldsymbol {B} ^ {- 1} \right| \overset{\left| \boldsymbol {B} ^ {- 1} \right| = \frac {1}{\left| \boldsymbol {B} \right|}}{=} 3 \times 2 \times \frac {1}{2} = 3. $$"
+zt-031213,真题,线性代数,第一章 行列式,数三2012,13,填空题,,,"(13) 设 A 为 3 阶矩阵, $|A| = 3$ , $A^{*}$ 为 A 的伴随矩阵, 若交换 A 的第 1 行与第 2 行得矩阵 B, 则 $|BA^{*}| =$ ____.",,,,,"答案 应填 - 27.
+分析 本题主要考查矩阵的初等变换与伴随矩阵等知识点.
+解（法一）由于 B 为交换 A 的第 1 行与第 2 行所得, 故 $B = E(1, 2)A$ . 从而
+$$ \boldsymbol {B} \boldsymbol {A} ^ {*} = \boldsymbol {E} (1, 2) \boldsymbol {A} \boldsymbol {A} ^ {*} = \boldsymbol {E} (1, 2) | \boldsymbol {A} | \boldsymbol {E} = 3 \boldsymbol {E} (1, 2). $$
+因此，
+$$ \mid \boldsymbol {B} \boldsymbol {A} ^ {*} \mid = \mid 3 \boldsymbol {E} (1, 2) \mid = 3 ^ {3} \left| \begin{array}{l l l} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{array} \right| = - 2 7. $$
+(法二) 由于 $AA^{*} = |A|E$ ，故当 A 为 3 阶矩阵时，
+$$ \left| \boldsymbol {A} \right| \cdot \left| \boldsymbol {A} ^ {*} \right| = \left| \boldsymbol {A} \boldsymbol {A} ^ {*} \right| = \left| \begin{array}{c c c} \left| \boldsymbol {A} \right| & 0 & 0 \\ 0 & \left| \boldsymbol {A} \right| & 0 \\ 0 & 0 & \left| \boldsymbol {A} \right| \end{array} \right| = \left| \boldsymbol {A} \right| ^ {3}. $$
+从而 $|\mathbf{A}^{*}| = |\mathbf{A}|^{2}$ .
+另一方面,由于 B 为交换 A 的第 1 行与第 2 行所得矩阵,故 $\left|B\right|=-\left|A\right|$ . 因此,
+$$ \mid \boldsymbol {B} \boldsymbol {A} ^ {*} \mid = \mid \boldsymbol {B} \mid \cdot \mid \boldsymbol {A} ^ {*} \mid = - \mid \boldsymbol {A} \mid \cdot \mid \boldsymbol {A} \mid^ {2} = - 2 7. $$"
+zt-031313,真题,线性代数,第一章 行列式,数三2013,13,填空题,,,"(13) 设 $A = (a_{ij})$ 是 3 阶非零矩阵， $|A|$ 为 A 的行列式， $A_{ij}$ 为 $a_{ij}$ 的代数余子式。若 $a_{ij} + A_{ij} = 0$ （i, j = 1, 2, 3），则 $|A| =$ ____ 。",,,,,"答案 应填 - 1.
+分析 本题主要考查矩阵的行列式与代数余子式以及伴随矩阵的关系.
+若 $A = (a_{ij})_{n \times n}$ ，则 $|A| = \sum_{k=1}^{n} a_{ik} A_{ik} (i = 1, 2, \cdots, n)$ ，其中 $A_{ik}$ 为元素 $a_{ik}$ 的代数余子式；另一方面， $|AA^{*}| = |A|^{n}$ .
+解 首先,由题设可知
+$$ \boldsymbol {A} ^ {*} = \left( \begin{array}{l l l} A _ {1 1} & A _ {2 1} & A _ {3 1} \\ A _ {1 2} & A _ {2 2} & A _ {3 2} \\ A _ {1 3} & A _ {2 3} & A _ {3 3} \end{array} \right) \overset{a _ {i j} + A _ {i j} = 0}{=} \left( \begin{array}{l l l} - a _ {1 1} & - a _ {2 1} & - a _ {3 1} \\ - a _ {1 2} & - a _ {2 2} & - a _ {3 2} \\ - a _ {1 3} & - a _ {2 3} & - a _ {3 3} \end{array} \right) = - \boldsymbol {A} ^ {\mathrm{T}}, $$
+故 $|\mathbf{A}|^3 = |\mathbf{AA}^*| = |- \mathbf{AA}^\mathrm{T}| = -|\mathbf{A}|^2.$ 因此可以得到 $|\mathbf{A}| = 0$ ，或 $|\mathbf{A}| = -1.$
+另一方面,由于 A 为非零矩阵,故不妨假设 $a_{11} \neq 0$ ,则
+$$ \mid \boldsymbol {A} \mid = a _ {1 1} A _ {1 1} + a _ {1 2} A _ {1 2} + a _ {1 3} A _ {1 3} = - \left(a _ {1 1} ^ {2} + a _ {1 2} ^ {2} + a _ {1 3} ^ {2}\right) < 0. $$
+因此， $|A| = -1.$
+注 本题需要分两步计算 $|A|$ , 才能得到结果. 若缺少其中一步, 则不能完全确定 $|A|$ 的值.
+拓展
+本题属于与伴随矩阵相关的问题. 利用本题的方法, 你能解2005年数学三的这道试题吗? 
+【例】设矩阵 $A = (a_{ij})_{3 \times 3}$ 满足 $A^{*} = A^{\mathrm{T}}$ , 其中 $A^{*}$ 为 $A$ 的伴随矩阵, $A^{\mathrm{T}}$ 为 $A$ 的转置矩阵. 若$a_{11},a_{12},a_{13}$ 为三个相等的正数,则 $a_{11}$ 为 ____. (原题为选择题)
+提示 由 $A^{*} = A^{\mathrm{T}}$ 可得 $|\mathbf{A}| = 0$ 或 $|\mathbf{A}| = 1$ . 答案为 $\frac{\sqrt{3}}{3}$ ."
+zt-031405,真题,线性代数,第一章 行列式,数三2014,5,选择题,,题型一 具体型行列式,(5) 行列式 $\begin{vmatrix}0 & a & b & 0 \\ a & 0 & 0 & b \\ 0 & c & d & 0 \\ c & 0 & 0 & d\end{vmatrix}=()$,$(ad-bc)^{2}$ .,$-(ad-bc)^{2}$ .,$a^{2}d^{2}-b^{2}c^{2}$ .,$b^{2}c^{2}-a^{2}d^{2}$,"答案 B.
+分析 本题主要考查按行(列)展开计算行列式.
+求本题中的行列式,较快的解法是利用初等变换将原行列式与分块矩阵的行列式建立联系后进行计算. 若矩阵 P 能写成分块上三角矩阵的形式 $P = \begin{pmatrix} A & C \\ O & B \end{pmatrix}$ ，则 $|P| = \begin{vmatrix} A & C \\ O & B \end{vmatrix} = |A| \cdot |B|$ . 特别地, 对分块对角矩阵 $\Lambda = \begin{pmatrix} A & O \\ O & B \end{pmatrix}$ ，有 $|\Lambda| = \begin{vmatrix} A & O \\ O & B \end{vmatrix} = |A| \cdot |B|$ .
+解（法一）对原行列式作初等变换.根据行列式的性质,交换两行或两列,所得新行列式为原行列式的负值.
+$$ \left| \begin{array}{c c c c} 0 & a & b & 0 \\ a & 0 & 0 & b \\ 0 & c & d & 0 \\ c & 0 & 0 & d \end{array} \right| = - \left| \begin{array}{c c c c} 0 & a & b & 0 \\ 0 & c & d & 0 \\ a & 0 & 0 & b \\ c & 0 & 0 & d \end{array} \right| = \left| \begin{array}{c c c c} a & 0 & b & 0 \\ c & 0 & d & 0 \\ 0 & a & 0 & b \\ 0 & c & 0 & d \end{array} \right| = - \left| \begin{array}{c c c c} a & b & 0 & 0 \\ c & d & 0 & 0 \\ 0 & 0 & a & b \\ 0 & 0 & c & d \end{array} \right| = - (a d - b c) ^ {2}. $$
+应选 B.
+(法二) 按第一行展开.
+$$ \left| \begin{array}{c c c c} 0 & a & b & 0 \\ a & 0 & 0 & b \\ 0 & c & d & 0 \\ c & 0 & 0 & d \end{array} \right| = (- a) \left| \begin{array}{c c c} a & 0 & b \\ 0 & d & 0 \\ c & 0 & d \end{array} \right| + b \left| \begin{array}{c c c} a & 0 & b \\ 0 & c & 0 \\ c & 0 & d \end{array} \right| = - a ^ {2} d ^ {2} + a b c d + a b c d - b ^ {2} c ^ {2} = - (a d - b c) ^ {2}. $$
+应选B.
+注 两种方法比较,法一比较简捷.这种将原行列式变成与分块矩阵有关的行列式的做法,是行列式计算中应当掌握的技巧.
+拓展
+我们总结一下行列式的计算方法.
+1. 按行(列)展开计算.
+按行(列)展开定理 行列式等于它的任一行(列)的各元素与其对应的代数余子式的乘积之和,即
+$$ D = a _ {i 1} A _ {i 1} + a _ {i 2} A _ {i 2} + \dots + a _ {i n} A _ {i n} (i = 1, 2, \dots , n) $$
+或
+$$ D = a _ {1 j} A _ {1 j} + a _ {2 j} A _ {2 j} + \dots + a _ {n j} A _ {n j} (j = 1, 2, \dots , n). $$
+2. 利用初等变换, 将行列式化为较简单的形式, 然后计算. 例如上三角形式.
+行列式的基本性质
+(1) 行列式与它的转置行列式相等, 即 $\left|A\right| = \left|A^{T}\right|$ .
+(2) 交换行列式的两行(列), 行列式变号.
+推论 若行列式有两行(列)完全相同,则此行列式为零.
+(3) 行列式的某一行(列)中所有的元素都乘以同一个数 $k$ , 则所得新行列式为原行列式的 $k$ 倍.
+推论 若 $n$ 阶行列式 $|A|$ 的每行(或每列)均乘以 $k$ , 则所得新行列式等于 $k^n |A|$ .
+推论 行列式中某一行(列)的所有元素的公因子可以提到行列式记号的外面.
+(4) 若行列式中有两行（列）元素成比例, 则此行列式为零.
+(5) 若行列式的某一行(列)的元素都是两数之和,例如第 $i$ 行的元素都是两数之和,即
+$$ D = \left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ \vdots & \vdots & & \vdots \\ a _ {i 1} + a _ {i 1} ^ {\prime} & a _ {i 2} + a _ {i 2} ^ {\prime} & \dots & a _ {i n} + a _ {i n} ^ {\prime} \\ \vdots & \vdots & & \vdots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right|, $$
+则 D 等于下面两个行列式之和, 即
+$$ D = \left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ \vdots & \vdots & & \vdots \\ a _ {i 1} & a _ {i 2} & \dots & a _ {i n} \\ \vdots & \vdots & & \vdots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right| + \left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ \vdots & \vdots & & \vdots \\ a _ {i 1} ^ {\prime} & a _ {i 2} ^ {\prime} & \dots & a _ {i n} ^ {\prime} \\ \vdots & \vdots & & \vdots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right| $$
+(6) 把行列式的某一行(列)的各元素乘同一个数后加到另一行(列)对应的元素上去, 行列式不变.
+下面我们介绍一类特殊的行列式的计算方法. 此类行列式的特点是各行(或各列)元素之和相等. 对此类行列式, 可以考虑将各列都加到第一列(或各行都加到第一行), 然后提取公因子.
+【例】行列式
+$$ \left| \begin{array}{c c c c} 1 & - 1 & 1 & x - 1 \\ 1 & - 1 & x + 1 & - 1 \\ 1 & x - 1 & 1 & - 1 \\ x + 1 & - 1 & 1 & - 1 \end{array} \right| = $$
+(1989年数学三试题)
+解
+$$ \left| \begin{array}{c c c c} 1 & - 1 & 1 & x - 1 \\ 1 & - 1 & x + 1 & - 1 \\ 1 & x - 1 & 1 & - 1 \\ x + 1 & - 1 & 1 & - 1 \end{array} \right| \underline {{\underline {{c _ {1} + c _ {2} + c _ {3} + c _ {4}}}}} \left| \begin{array}{c c c c} x & - 1 & 1 & x - 1 \\ x & - 1 & x + 1 & - 1 \\ x & x - 1 & 1 & - 1 \\ x & - 1 & 1 & - 1 \end{array} \right| $$
+$$ = x \left| \begin{array}{c c c c} 1 & - 1 & 1 & x - 1 \\ 1 & - 1 & x + 1 & - 1 \\ 1 & x - 1 & 1 & - 1 \\ 1 & - 1 & 1 & - 1 \end{array} \right| \frac {c _ {2} + c _ {1}}{c _ {4} + c _ {1}} x \left| \begin{array}{c c c c} 1 & 0 & 0 & x \\ 1 & 0 & x & 0 \\ 1 & x & 0 & 0 \\ 1 & 0 & 0 & 0 \end{array} \right| = x ^ {4}. $$
+3. 数学归纳法. 这种方法对于证明题十分方便. 如果是计算题, 那么就需要先计算几个低阶行列式的值, 归纳总结规律, 推测一般表达式, 然后用数学归纳法证明.
+4. 递推式法. 写出行列式所满足的递推表达式, 利用该递推表达式进行计算.
+递推式法适用于三对角线型行列式.
+三对角线型行列式 $D_{n}=$ $\begin{vmatrix}a & b & & & \\ c & a & b & & \\ & \ddots & \ddots & \ddots & \\ & & c & a & b \\ & & & c & a\end{vmatrix}_{n\times n}$
+的计算方法
+按第一行展开得 $D_{n} = aD_{n - 1} - bcD_{n - 2}$ 将该式转化为 $D_{n} - \alpha D_{n - 1} = \beta (D_{n - 1} - \alpha D_{n - 2})$ ，其中 $\alpha$ ， $\beta$ 满足 $\alpha +\beta = a,\alpha \beta = bc.$
+于是,可以得到递推关系 $D_{n}-\alpha D_{n-1}=d_{n}$ .
+$$ d _ {n} = \beta d _ {n - 1} = \dots = \beta^ {n - 2} (D _ {2} - \alpha D _ {1}) = \beta^ {n}. $$
+因此，
+$$ \begin{array}{r l} D _ {n} & = \beta^ {n} + \alpha D _ {n - 1} = \beta^ {n} + \alpha \beta^ {n - 1} + \alpha^ {2} D _ {n - 2} = \dots = \beta^ {n} + \alpha \beta^ {n - 1} + \alpha^ {2} \beta^ {n - 2} + \dots + \alpha^ {n - 1} D _ {1} \\ & = \beta^ {n} + \alpha \beta^ {n - 1} + \alpha^ {2} \beta^ {n - 2} + \dots + \alpha^ {n - 1} (\alpha + \beta) = \beta^ {n} + \alpha \beta^ {n - 1} + \alpha^ {2} \beta^ {n - 2} + \dots + \alpha^ {n - 1} \beta + \alpha^ {n} \end{array} $$
+$$ = \left\{ \begin{array}{l l} \frac {\alpha^ {n + 1} - \beta^ {n + 1}}{\alpha - \beta}, & \alpha \neq \beta , \\ \frac {(n + 1) a ^ {n}}{2 ^ {n}}, & \alpha = \beta . \end{array} \right. $$
+5. 特殊行列式. 例如范德蒙德行列式.
+形如 $V_{n} = \left| \begin{array}{cccc} 1 & 1 & \cdots & 1 \\ x_{1} & x_{2} & \cdots & x_{n} \\ x_{1}^{2} & x_{2}^{2} & \cdots & x_{n}^{2} \\ \vdots & \vdots & & \vdots \\ x_{1}^{n-1} & x_{2}^{n-1} & \cdots & x_{n}^{n-1} \end{array} \right|$ 的 n 阶行列式被称为范德蒙德行列式，
+$$ V _ {n} = \prod_ {n \geqslant i > j \geqslant 1} (x _ {i} - x _ {j}). $$
+不难发现, 若存在 $x_{i}=x_{j}(i\neq j)$ ，则 $V_{n}=0$ ，否则 $V_{n}\neq0$ . 【例】设 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 均为 3 维列向量，记矩阵 $A=(\alpha_{1},\alpha_{2},\alpha_{3}),\quad B=(\alpha_{1}+\alpha_{2}+\alpha_{3},\alpha_{1}+2\alpha_{2}+4\alpha_{3},\alpha_{1}+3\alpha_{2}+9\alpha_{3})$ . 如果 $|A|=1$ ，那么 $|B|=$ ____。（2005年数学二试题）
+提示 B 由 A 右乘矩阵 $\begin{pmatrix}1 & 1 & 1 \\ 1 & 2 & 3 \\ 1 & 4 & 9\end{pmatrix}$ 所得, 而该矩阵的行列式为范德蒙德行列式, 故可以利用范德蒙德行列式的计算公式求解. 答案为 2."
+zt-031513,真题,线性代数,第一章 行列式,数三2015,13,填空题,,题型二 抽象型行列式,"(13) 设 3 阶矩阵 A 的特征值为 2, -2, 1, $B = A^{2} - A + E$ , 其中 E 为 3 阶单位矩阵, 则行列式 $|B| =$ ____.",,,,,"答案 应填21.
+分析 本题主要考查矩阵多项式的特征值与矩阵的特征值的关系以及矩阵的行列式与其特征值的关系.
+根据条件,我们能由 A 的特征值求出 B 的特征值,从而利用 $\left|B\right|=\lambda_{1}\lambda_{2}\lambda_{3}(\lambda_{1},\lambda_{2},\lambda_{3}$ 为 B 的特征值) 得到 $\left|B\right|$ .
+解（法一）由于 A 有 3 个不同的特征值, 故 A 有 3 个线性无关的特征向量, 从而存在可逆矩阵 P 使得 $P^{-1}AP = \begin{pmatrix} 2 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ . 于是
+$$ \boldsymbol {A} = \boldsymbol {P} \left( \begin{array}{c c c} 2 & 0 & 0 \\ 0 & - 2 & 0 \\ 0 & 0 & 1 \end{array} \right) \boldsymbol {P} ^ {- 1}, \quad \boldsymbol {A} ^ {2} = \boldsymbol {P} \left( \begin{array}{c c c} 2 ^ {2} & 0 & 0 \\ 0 & (- 2) ^ {2} & 0 \\ 0 & 0 & 1 ^ {2} \end{array} \right) \boldsymbol {P} ^ {- 1}, $$
+$$ \boldsymbol {B} = \boldsymbol {P} \left( \begin{array}{c c c} 2 ^ {2} - 2 + 1 & 0 & 0 \\ 0 & (- 2) ^ {2} - (- 2) + 1 & 0 \\ 0 & 0 & 1 ^ {2} - 1 + 1 \end{array} \right) \boldsymbol {P} ^ {- 1} = \boldsymbol {P} \left( \begin{array}{c c c} 3 & 0 & 0 \\ 0 & 7 & 0 \\ 0 & 0 & 1 \end{array} \right) \boldsymbol {P} ^ {- 1}. $$
+因此， $|\pmb {B}| = 21\cdot |\pmb {P}|\cdot |\pmb{P}^{-1}| = 21.$
+(法二) 设 $\alpha$ 为矩阵 A 的属于特征值 $\lambda$ 的特征向量, 即 $A\alpha = \lambda\alpha$ , 则
+$$ \boldsymbol {B} \boldsymbol {\alpha} = (\boldsymbol {A} ^ {2} - \boldsymbol {A} + \boldsymbol {E}) \boldsymbol {\alpha} = (\lambda^ {2} - \lambda + 1) \boldsymbol {\alpha}. $$
+由上可见,若 $\alpha$ 为 A 的属于特征值 $\lambda$ 的特征向量,则 $\alpha$ 为 B 的属于特征值 $\lambda^{2}-\lambda+1$ 的特征向量. A 的 3 个线性无关的特征向量也是 B 的 3 个线性无关的特征向量, 对应的特征值为 $\lambda^{2}-\lambda+1$ ( $\lambda=2,-2,1$ ). 由此可求得 B 的特征值为 3,7,1.
+因此， $|B|=3\times7\times1=21.$
+注 法一用到了如下结论.
+(1) 若 n 阶矩阵 A 具有 n 个不同的特征值, 则 A 能相似对角化.
+(2) 若 n 阶矩阵 A 能相似对角化, 即存在可逆矩阵 P, 使得 $P^{-1}AP = \Lambda$ , $\Lambda$ 为对角矩阵, 则 $A = P\Lambda P^{-1}$ , $A^{k} = P\Lambda^{k}P^{-1}$ .
+拓展
+下面我们总结一下抽象行列式的计算方法.
+1. 利用行列式的性质.
+除了行列式的6条基本性质外,还可以应用以下结论.
+(1) 若 A 为 n 阶矩阵, 则 $\left|\lambda A\right| = \lambda^{n}\left|A\right|$ .
+(2) 若 A, B 均为 n 阶矩阵, 则 $\left|AB\right| = \left|A\right| \cdot \left|B\right|$ .
+(3) 若 A 为 n 阶矩阵, 则 $\left|A^{*}\right|=\left|A\right|^{n-1}$ .
+(4) 若 A 为 n 阶可逆矩阵, 则 $\left|A^{-1}\right|=\frac{1}{\left|A\right|}$ .
+(5) 若 A, B 相似, 则 $\left|A\right| = \left|B\right|$ .
+2. 利用特征值.
+若 n 阶矩阵 A 有 n 个特征值 $\lambda_{i}(i=1,2,\cdots,n,$ 含重根 $)$ ，则 $|A|=\prod_{i=1}^{n}\lambda_{i}$ ."
+zt-031613,真题,线性代数,第一章 行列式,数三2016,13,填空题,,题型一 具体型行列式,(13) 行列式 $\begin{vmatrix}\lambda & -1 & 0 & 0 \\ 0 & \lambda & -1 & 0 \\ 0 & 0 & \lambda & -1 \\ 4 & 3 & 2 & \lambda + 1\end{vmatrix} =$ ____.,,,,,"答案 应填 $\lambda^4 +\lambda^3 +2\lambda^2 +3\lambda +4.$
+分析 本题主要考查行列式的计算. 可以选择零元素比较多的行或列, 然后按该行或该列展开计算.
+解（法一）按第一列展开.
+$$ \begin{array}{r l} \left| \begin{array}{c c c c} \lambda & - 1 & 0 & 0 \\ 0 & \lambda & - 1 & 0 \\ 0 & 0 & \lambda & - 1 \\ 4 & 3 & 2 & \lambda + 1 \end{array} \right| & = \lambda \left| \begin{array}{c c c} \lambda & - 1 & 0 \\ 0 & \lambda & - 1 \\ 3 & 2 & \lambda + 1 \end{array} \right| - 4 \left| \begin{array}{c c c} - 1 & 0 & 0 \\ \lambda & - 1 & 0 \\ 0 & \lambda & - 1 \end{array} \right| \\ & = \lambda \left(\lambda \left| \begin{array}{c c} \lambda & - 1 \\ 2 & \lambda + 1 \end{array} \right| + 3 \left| \begin{array}{c c} - 1 & 0 \\ \lambda & - 1 \end{array} \right|\right) - 4 \times (- 1) ^ {3} \\ & = \lambda [ \lambda (\lambda^ {2} + \lambda + 2) + 3 ] + 4 \\ & = \lambda^ {4} + \lambda^ {3} + 2 \lambda^ {2} + 3 \lambda + 4. \end{array} $$
+(法二) 利用行列式的性质.
+$$ \left| \begin{array}{c c c c} \lambda & - 1 & 0 & 0 \\ 0 & \lambda & - 1 & 0 \\ 0 & 0 & \lambda & - 1 \\ 4 & 3 & 2 & \lambda + 1 \end{array} \right| \overset{c _ {1} + \lambda c _ {2}}{=} \left| \begin{array}{c c c c} 0 & - 1 & 0 & 0 \\ \lambda^ {2} & \lambda & - 1 & 0 \\ 0 & 0 & \lambda & - 1 \\ 4 + 3 \lambda & 3 & 2 & \lambda + 1 \end{array} \right| $$
+$$ \frac {c _ {1} + \lambda^ {2} c _ {3}}{} \left| \begin{array}{c c c c} 0 & - 1 & 0 & 0 \\ 0 & \lambda & - 1 & 0 \\ \lambda^ {3} & 0 & \lambda & - 1 \\ 4 + 3 \lambda + 2 \lambda^ {2} & 3 & 2 & \lambda + 1 \end{array} \right| $$
+$$ \begin{array}{r l} & \underline {{\underline {{c _ {1} + \lambda^ {3} c _ {4}}}}} \left| \begin{array}{c c c c} 0 & - 1 & 0 & 0 \\ 0 & \lambda & - 1 & 0 \\ 0 & 0 & \lambda & - 1 \\ 4 + 3 \lambda + 2 \lambda^ {2} + \lambda^ {3} (\lambda + 1) & 3 & 2 & \lambda + 1 \end{array} \right| \\ & = (- 1) ^ {4 + 1} [ 4 + 3 \lambda + 2 \lambda^ {2} + \lambda^ {3} (\lambda + 1) ] (- 1) ^ {3} \\ & = \lambda^ {4} + \lambda^ {3} + 2 \lambda^ {2} + 3 \lambda + 4. \end{array} $$
+注 在利用按行(列)展开定理计算行列式时,要注意
+$$ D = a _ {i 1} A _ {i 1} + a _ {i 2} A _ {i 2} + \dots + a _ {i n} A _ {i n} (i = 1, 2, \dots , n) $$
+中的 $A_{ij}$ 是元素 $a_{ij}$ 的代数余子式, 而不是余子式.
+在 n 阶行列式中, 把元素 $a_{ij}$ 所在的第 i 行和第 j 列划去后, 留下来的 n-1 阶行列式叫做元素 $a_{ij}$ 的余子式, 记作 $M_{ij}$ , 而 $a_{ij}$ 的代数余子式 $A_{ij}=(-1)^{i+j}M_{ij}$ ."
+zt-031813,真题,线性代数,第一章 行列式,数三2018,13,填空题,,,"(13) 设 A 为 3 阶矩阵, $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 是线性无关的向量组. 若 $A\alpha_{1} = \alpha_{1} + \alpha_{2}, A\alpha_{2} = \alpha_{2} + \alpha_{3}, A\alpha_{3} = \alpha_{1} + \alpha_{3}$ , 则 $|A| =$ ____ .",,,,,"答案 应填2.
+分析 本题主要考查行列式的计算.
+矩阵的逆矩阵的行列式 若矩阵 A 可逆, 则 $\left|A^{-1}\right|=\frac{1}{\left|A\right|}$ .
+矩阵的乘积的行列式 $|\mathbf{A}\mathbf{B}| = |\mathbf{A}|\cdot |\mathbf{B}|$
+由已知条件,可以得到一个与矩阵 A 相似的矩阵 B. 利用相似的矩阵具有相同的行列式这一性质,通过计算 $|B|$ , 可以得到 $|A|$ .
+解 记 $P = (\alpha_{1}, \alpha_{2}, \alpha_{3})$ . 由于 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性无关, 故 P 可逆. 由题设可知,
+$$ \boldsymbol {A} \boldsymbol {P} = \boldsymbol {A} (\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) = (\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) \left( \begin{array}{l l l} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{array} \right) = \boldsymbol {P} \left( \begin{array}{l l l} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{array} \right). $$
+记 $B = \begin{pmatrix} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{pmatrix}$ . 于是, $A = PBP^{-1}$ .
+因此，
+$$ \mid \boldsymbol {A} \mid = \mid \boldsymbol {P} \mid \cdot \mid \boldsymbol {B} \mid \cdot \mid \boldsymbol {P} ^ {- 1} \mid = \mid \boldsymbol {B} \mid = \left| \begin{array}{c c c} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{array} \right| = 2. $$"
+zt-032013,真题,线性代数,第一章 行列式,数三2020,13,填空题,,,(13) 行列式 $\left|\begin{array}{cccc}a & 0 & -1 & 1 \\ 0 & a & 1 & -1 \\ -1 & 1 & a & 0 \\ 1 & -1 & 0 & a\end{array}\right| =$ ____.,,,,,"答案 应填 $a^{4}-4a^{2}$ .
+分析 本题主要考查行列式的计算.
+本题中的行列式为分块行列式,可以考虑将其化为分块上三角行列式,然后利用 $\begin{vmatrix} A & C \\ O & B \end{vmatrix} = |A||B|$ 计算所求行列式.
+解（法一）利用行列式的性质对所求行列式进行转化.
+若 a = 0，则将第二行加到第一行可得零行，从而行列式为 0.
+若 $a \neq 0$ ，则
+$$ \begin{array}{r l} & \left| \begin{array}{c c c c} a & 0 & - 1 & 1 \\ 0 & a & 1 & - 1 \\ - 1 & 1 & a & 0 \\ 1 & - 1 & 0 & a \end{array} \right| \overset{r _ {4} + r _ {3}}{=} \left| \begin{array}{c c c c} a & 0 & - 1 & 1 \\ 0 & a & 1 & - 1 \\ - 1 & 1 & a & 0 \\ 0 & 0 & a & a \end{array} \right| \overset{r _ {3} + \frac {1}{a} r _ {1}}{=} \left| \begin{array}{c c c c} a & 0 & - 1 & 1 \\ 0 & a & 1 & - 1 \\ 0 & 1 & a - \frac {1}{a} & \frac {1}{a} \\ 0 & 0 & a & a \end{array} \right| \\ & \overset{r _ {3} - \frac {1}{a} r _ {2}}{=} \left| \begin{array}{c c c c} a & 0 & - 1 & 1 \\ 0 & a & 1 & - 1 \\ 0 & 0 & a - \frac {2}{a} & \frac {2}{a} \\ 0 & 0 & a & a \end{array} \right| = \left| \begin{array}{c c} a & 0 \\ 0 & a \end{array} \right|. \left| \begin{array}{c c} a - \frac {2}{a} & \frac {2}{a} \\ a & a \end{array} \right| \\ & = a ^ {2} \left[ \left(a - \frac {2}{a}\right) a - 2 \right] = a ^ {2} (a ^ {2} - 4) = a ^ {4} - 4 a ^ {2}. \end{array} $$
+不论是哪种情况,所求行列式均为 $a^{4}-4a^{2}$ .
+（法二）注意到所求行列式的各行元素之和均为 $a$ ，故可将各列均加到第1列，然后计算行列式.
+$$ \left| \begin{array}{c c c c} a & 0 & - 1 & 1 \\ 0 & a & 1 & - 1 \\ - 1 & 1 & a & 0 \\ 1 & - 1 & 0 & a \end{array} \right| \overset{c _ {1} + c _ {2} + c _ {3} + c _ {4}}{=} \left| \begin{array}{c c c c} a & 0 & - 1 & 1 \\ a & a & 1 & - 1 \\ a & 1 & a & 0 \\ a & - 1 & 0 & a \end{array} \right| = a \left| \begin{array}{c c c c} 1 & 0 & - 1 & 1 \\ 1 & a & 1 & - 1 \\ 1 & 1 & a & 0 \\ 1 & - 1 & 0 & a \end{array} \right| $$
+$$ \begin{array}{r l} & {\frac {c _ {3} + c _ {1}}{c _ {4} - c _ {1}} a \left| \begin{array}{c c c c} {1} & {0} & {0} & {0} \\ {1} & {a} & {2} & {- 2} \\ {1} & {1} & {a + 1} & {- 1} \\ {1} & {- 1} & {1} & {a - 1} \end{array} \right| \overset{c _ {3} + c _ {4}}{=} a \left| \begin{array}{c c c c} {1} & {0} & {0} & {0} \\ {1} & {a} & {0} & {- 2} \\ {1} & {1} & {a} & {- 1} \\ {1} & {- 1} & {a} & {a - 1} \end{array} \right|} \\ & {\overset{\text {按第一行展开}}{=} a \left\{a [ a (a - 1) + a ] - 2 (a + a) \right\} = a (a ^ {3} - 4 a)} \\ & {= a ^ {4} - 4 a ^ {2}.} \end{array} $$
+拓展
+分块对角矩阵
+设 $\pmb{A}$ 为 $n$ 阶方阵, 若 $\pmb{A}$ 的分块矩阵只有在对角线上有非零子块, 其余子块都为零矩阵, 且在对角线上的子块都是方阵, 即
+$$ \boldsymbol {A} = \left( \begin{array}{c c c c} \boldsymbol {A} _ {1} & & & \boldsymbol {O} \\ & \boldsymbol {A} _ {2} & & \\ & & \ddots & \\ \boldsymbol {O} & & & \boldsymbol {A} _ {s} \end{array} \right), $$
+其中 $A_{i}(i=1,2,\cdots,s)$ 都是方阵，则称 A 为分块对角矩阵.
+分块对角矩阵的行列式满足下述性质.
+$$ \left| \boldsymbol {A} \right| = \left| \boldsymbol {A} _ {1} \right| \cdot \left| \boldsymbol {A} _ {2} \right| \dots \left| \boldsymbol {A} _ {s} \right|. $$
+若 $|\mathbf{A}_i| \neq 0 (i = 1,2,\dots,s)$ , 则 $|\mathbf{A}| \neq 0$ , 并有
+$$ \boldsymbol {A} ^ {- 1} = \left( \begin{array}{c c c c} \boldsymbol {A} _ {1} ^ {- 1} & & & \boldsymbol {O} \\ & \boldsymbol {A} _ {2} ^ {- 1} & & \\ & & \ddots & \\ \boldsymbol {O} & & & \boldsymbol {A} _ {s} ^ {- 1} \end{array} \right). $$"
+zt-032115,真题,线性代数,第一章 行列式,数三2021,15,填空题,,,(15) 多项式 $f(x) = \begin{vmatrix} x & x & 1 & 2x \\ 1 & x & 2 & -1 \\ 2 & 1 & x & 1 \\ 2 & -1 & 1 & x \end{vmatrix}$ 中 $x^{3}$ 项的系数为 ____.,,,,,"答案 应填 - 5.
+分析 本题主要考查行列式的概念.
+行列式的概念
+(1) 逆序数 $n$ 个不同元素排成一列, 称为这 $n$ 个元素的排列. 一般地, 规定由小到大为标准次序. 在 $n$ 个元素的任一排列中, 当某一对元素的先后次序与标准次序不同时, 称为构成一个逆序. 一个排列中所有逆序的总数称为这个排列的逆序数.
+(2) 排列的奇偶性 逆序数为奇数的排列叫做奇排列, 逆序数为偶数的排列叫做偶排列.
+一个排列中的任意两个元素对换,排列改变奇偶性.
+(3) n 阶行列式 $D = \left| \begin{array}{ccc} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & & \vdots \\ a_{n1} & a_{n2} & \cdots & a_{nn} \end{array} \right|$ ，简记作 $\det(a_{ij})$ ，其中 $a_{ij}$ 为行列式 D 的 $(i, j)$ 元.
+n 阶行列式的值是所有取自不同行不同列的 n 个元素的乘积 $a_{1j_{1}}a_{2j_{2}}\cdots a_{nj_{n}}$ 的代数和，这里 $j_{1}j_{2}\cdots j_{n}$ 是 $1,2,\cdots,n$ 的一个排列。当 $j_{1}j_{2}\cdots j_{n}$ 是偶排列时，该项的前面带正号；当 $j_{1}j_{2}\cdots j_{n}$ 是奇排列时，该项的前面带负号，即
+$$ \left| \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ a _ {2 1} & a _ {2 2} & \dots & a _ {2 n} \\ \vdots & \vdots & & \vdots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right| = \sum_ {j _ {1} j _ {2} \dots j _ {n}} (- 1) ^ {\tau (j _ {1} j _ {2} \dots j _ {n})} a _ {1 j _ {1}} a _ {2 j _ {2}} \dots a _ {n j _ {n}}. $$
+这里 $\sum$ 表示对所有 $n$ 阶排列求和. 上式称为 $n$ 阶行列式的完全展开式.
+解 由于所给行列式的元素均为常数或 x 的倍数, 故根据行列式的定义, 要出现 $x^{3}$ 项, 必须从不同行、不同列中取出 3 个含 x 的项相乘.
+将行列式记为 $\det(a_{ij})$ .
+① $a_{11}=x$ 不能取. 若取 $a_{11}$ ，则第一行中的x与2x不能取. 于是，剩下的2个含x的元素必来自主对角线上的3个x. 无论从 $a_{22},a_{33},a_{44}$ 中取哪两个，第四个元素都只能来自主对角线，从而这种取法最终将得到 $x^{4}$ ，而不是 $x^{3}$ .
+$$ \left| \begin{array}{c c c c} \underline {{x}} & x & 1 & 2 x \\ 1 & \underline {{x}} & 2 & - 1 \\ 2 & 1 & \underline {{x}} & 1 \\ 2 & - 1 & 1 & \underline {{x}} \end{array} \right|. $$
+② 由于 $x^3$ 项必来自于不同列的含 $x$ 元素的乘积, 故确定 $a_{11}$ 不取后, $x$ 必来自后三列, 而第三列中仅 $a_{33} = x$ , 从而必取.
+下面分情况讨论.
+（1）若第二列中取 $a_{12} = x$ ，则组合应为 $a_{12}a_{21}a_{33}a_{44}$ .该组合对应排列2,1,3,4，逆序数为1.于是，所得 $x^{3}$ 项为 $(-1)^{1}\cdot 1\cdot x^{3} = -x^{3}$
+(2) 若第二列中取 $a_{22} = x$ ，则组合应为 $a_{14}a_{22}a_{33}a_{41}$ . 该组合对应排列 4,2,3,1，逆序数为 5. 于是，所得 $x^3$ 项为 $(-1)^5 \cdot 2 \cdot 2x^3 = -4x^3$ .
+$$ \left| \begin{array}{c c c c} x & \underline {{x}} & 1 & 2 x \\ \underline {{1}} & x & 2 & - 1 \\ 2 & 1 & \underline {{x}} & 1 \\ 2 & - 1 & 1 & \underline {{x}} \end{array} \right|, \quad \left| \begin{array}{c c c c} x & x & 1 & 2 \underline {{x}} \\ 1 & \underline {{x}} & 2 & - 1 \\ 2 & 1 & \underline {{x}} & 1 \\ \underline {{2}} & - 1 & 1 & x \end{array} \right| $$
+因此， $f(x)$ 的 $x^{3}$ 项为 $-x^{3} - 4x^{3} = -5x^{3}, x^{3}$ 的系数为-5.
+拓展
+2016年的数农数三中有一道同类题.
+【例】多项式 $f(x)=\left|\begin{matrix}1&2&3&x\\ 1&2&x&3\\ 1&x&2&3\\ x&1&2&x\end{matrix}\right|$ 中 $x^{4}$ 与 $x^{3}$ 的系数依次为( )
+(A)-1,-1. (B) 1,-1. (C)-1,1. (D) 1,1.
+答案 B.
+解 将原行列式记为 $\det(a_{ij})$ .
+要得到 $x^4$ ，必须取 $a_{14}a_{23}a_{32}a_{41}$ ，而排列4321的逆序数为6，故 $x^4$ 的系数为1.
+要得到 $x^{3}$ ，则必然不能取 $a_{14}$ 和 $a_{41}$ .
+若取 $a_{14}$ , 则不能取 $a_{44}$ . 于是, 要从 $a_{23}, a_{32}, a_{41}$ 中取 2 个 $x$ . 不管选择哪两个, 根据元素来自不同行不同列的要求, 第四个元素都必须来自副对角线, 从而得到 $x^4$ .
+同理可分析得不能取 $a_{41}$ .
+因此,要得到 $x^{3}$ , 必须取 $a_{11}a_{23}a_{32}a_{44}$ , 而排列 1324 的逆序数为 1, 故 $x^{3}$ 的系数为 -1. 综上所述, 应选 B."
+zt-032315,真题,线性代数,第一章 行列式,数三2023,15,填空题,,,"(15) 已知线性方程组 $\left\{\begin{aligned} ax_{1} + x_{3} &= 1, \\ x_{1} + ax_{2} + x_{3} &= 0, \\ x_{1} + 2x_{2} + ax_{3} &= 0, \\ ax_{1} + bx_{2} &= 2\end{aligned}\right.$ 有解，其中 a, b 为常数。若 $\left|\begin{matrix}a & 0 & 1 \\ 1 & a & 1 \\ 1 & 2 & a\end{matrix}\right| = 4$ ，则
+$\left| \begin{array}{ccc}1 & a & 1\\ 1 & 2 & a\\ a & b & 0 \end{array} \right| = \_$",,,,,"答案 应填8.
+分析 本题主要考查线性方程组.
+由非齐次线性方程组有解的条件可知题设方程组的系数矩阵的秩等于增广矩阵的秩. 该方程组的系数矩阵为 $4 \times 3$ 矩阵, 增广矩阵为 4 阶矩阵, 结合已知行列式可得到系数矩阵的秩, 进一步可得增广矩阵的秩, 从而求得未知行列式.
+本题也可以利用克拉默法则求解.
+注意到已知行列式为前三个方程构成的方程组的系数矩阵行列式,而未知行列式为后三个方程构成的方程组的系数矩阵行列式.由原方程组有解可知前面的两个方程组有公共解,从而由克拉默法则可以确定未知行列式的值.
+解（法一）记方程组 $\left\{ \begin{array}{l}ax_{1} + x_{3} = 1,\\ x_{1} + ax_{2} + x_{3} = 0,\\ x_{1} + 2x_{2} + ax_{3} = 0,\\ ax_{1} + bx_{2} = 2 \end{array} \right.$ 的系数矩阵为 $A$ ，增广矩阵为 $(A,b)$ ，则
+$$ (A, b) = \left( \begin{array}{c c c c} a & 0 & 1 & 1 \\ 1 & a & 1 & 0 \\ 1 & 2 & a & 0 \\ a & b & 0 & 2 \end{array} \right). $$
+由方程组有解可知 $r(A) = r(A, b)$ . 因为 $\mathbf{A}$ 为 $4 \times 3$ 矩阵, 所以 $r(A) \leqslant 3$ , 从而 $r(A) = r(A, b) \leqslant 3$ , 进一步可得 $|A, b| = 0$ . 于是,
+$$ 0 = \left| \begin{array}{c c c c} {a} & {0} & {1} & {1} \\ {1} & {a} & {1} & {0} \\ {1} & {2} & {a} & {0} \\ {a} & {b} & {0} & {2} \end{array} \right| \overset{\text {按第四列展开}}{=} - \left| \begin{array}{c c c} {1} & {a} & {1} \\ {1} & {2} & {a} \\ {a} & {b} & {0} \end{array} \right| + 2 \left| \begin{array}{c c c} {a} & {0} & {1} \\ {1} & {a} & {1} \\ {1} & {2} & {a} \end{array} \right| = - \left| \begin{array}{c c c} {1} & {a} & {1} \\ {1} & {2} & {a} \\ {a} & {b} & {0} \end{array} \right| + 8. $$
+因此， $\begin{vmatrix}1&a&1\\ 1&2&a\\ a&b&0\end{vmatrix}=8.$
+(法二) 记方程组 $\left\{\begin{aligned} ax_{1} + x_{3} &= 1, \\ x_{1} + ax_{2} + x_{3} &= 0, \\ x_{1} + 2x_{2} + ax_{3} &= 0, \\ ax_{1} + bx_{2} &= 2\end{aligned}\right.$ 的系数矩阵为 A，增广矩阵为 $(A, b)$ . 由方程组有解可 $r(A) = r(A, b)$ .
+注意到 $\begin{vmatrix}a&0&1\\1&a&1\\1&2&a\end{vmatrix}=4$ 为 A 的一个 3 阶非零子式, 故 $r(A)\geqslant3$ . 又因为 A 为 $4\times3$ 矩阵, 所以 $r(A)\leqslant3$ , 从而 $r(A)=3$ .
+由 $r(A) = r(A, b)$ 可得, $r(A, b) = 3$ . 于是 $r(A) = r(A, b) = 3$ , 该方程组有唯一解.
+考虑方程组 I: $\left\{\begin{aligned} ax_{1} + x_{3} &= 1, \\ x_{1} + ax_{2} + x_{3} &= 0, \\ x_{1} + 2x_{2} + ax_{3} &= 0\end{aligned}\right.$ 和方程组 II: $\left\{\begin{aligned} x_{1} + ax_{2} + x_{3} &= 0, \\ x_{1} + 2x_{2} + ax_{3} &= 0, \\ ax_{1} + bx_{2} &= 2.\end{aligned}\right.$ 由原方程组有唯一解可知方程组 I 和方程组 II 有唯一公共解.
+由于方程组Ⅰ的系数矩阵行列式等于4,故由克拉默法则知其仅有唯一解,进一步可得其增广矩阵的秩为3,行向量组线性无关.由此可知方程组Ⅱ的增广矩阵 $\begin{pmatrix}1&a&1&0\\1&2&a&0\\a&b&0&2\end{pmatrix}$ 的前两行线性无关.又因为该增广矩阵的第三行为 $(a,b,0,2)$ ,最后一个元素非零,所以第三行与前两行线性无关.于是,方程组Ⅱ的增广矩阵的秩为3.由方程组Ⅱ有解可知,其系数矩阵的秩也为3,从而行列式非零.
+记该公共解为 $(x_{1},x_{2},x_{3})^{\mathrm{T}},\left| \begin{array}{lll}a & 0 & 1\\ 1 & a & 1\\ 1 & 2 & a \end{array} \right| = A_{1} = 4,\left| \begin{array}{lll}1 & a & 1\\ 1 & 2 & a\\ a & b & 0 \end{array} \right| = A_{2}\neq 0.$
+对方程组I使用克拉默法则可得 $x_{1} = \frac{\left|\begin{array}{ccc}1 & 0 & 1\\ 0 & a & 1\\ 0 & 2 & a\end{array}\right|}{A_1} = \frac{\left|\begin{array}{ccc}1 & 0 & 1\\ 0 & a & 1\\ 0 & 2 & a\end{array}\right|}{4}$ ，对方程组II使用克拉默法则可得 $x_{1} = \frac{\left|\begin{array}{ccc}0 & a & 1\\ 0 & 2 & a\\ 2 & b & 0\end{array}\right|}{A_2}$ .由此可得
+$$ x _ {1} = \frac {\left| \begin{array}{l l} a & 1 \\ 2 & a \end{array} \right|}{4} = \frac {2 \left| \begin{array}{l l} a & 1 \\ 2 & a \end{array} \right|}{A _ {2}}.\tag{1} $$
+若 $\left| \begin{array}{ll}a & 1\\ 2 & a \end{array} \right| = 0$ ，则 $a = \pm \sqrt{2}$ .但将 $a = \pm \sqrt{2}$ 代入 $\left| \begin{array}{lll}a & 0 & 1\\ 1 & a & 1\\ 1 & 2 & a \end{array} \right|$ 所得行列式并不等于4，故 $\left| \begin{array}{ll}a & 1\\ 2 & a \end{array} \right|\neq$ 0.因此，由(1）式可得 $A_{2} = 8$ ，即 $\left| \begin{array}{lll}1 & a & 1\\ 1 & 2 & a\\ a & b & 0 \end{array} \right| = 8.$
+注 本题也可以通过 $\begin{vmatrix} a & 0 & 1 \\ 1 & a & 1 \\ 1 & 2 & a \end{vmatrix} = 4$ 解得 a = 2 或 a = -1. 再利用 $r(A) = r(A, b)$ 得到, 当 a = 2 时, b = -4, 当 a = -1 时, $b = \frac{7}{2}$ . 将这两种情况代入 $\begin{vmatrix} 1 & a & 1 \\ 1 & 2 & a \\ a & b & 0 \end{vmatrix}$ 均可得到所求行列式等于 8. 但这种解法的计算量较大, 就不在这里具体写出, 感兴趣的同学可以自己计算一下. 我们解题时还是应该根据题目条件的特点, 选择比较合适的方法计算."

@@ -1,0 +1,359 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+zt-030921,真题,线性代数,第六章 二次型,数三2009,21,解答题,,题型二 标准型、规范型,"(21) ( 11 分)
+设二次型
+$$ f (x _ {1}, x _ {2}, x _ {3}) = a x _ {1} ^ {2} + a x _ {2} ^ {2} + (a - 1) x _ {3} ^ {2} + 2 x _ {1} x _ {3} - 2 x _ {2} x _ {3}. $$
+（Ⅰ）求二次型f的矩阵的所有特征值；
+（Ⅱ）若二次型f的规范形为 $y_{1}^{2}+y_{2}^{2}$ ，求a的值.",,,,,"分析 本题主要考查二次型的矩阵表示,以及二次型的规范形等概念.
+二次型 含有 n 个变量 $x_{1}, x_{2}, \cdots, x_{n}$ 的二次齐次函数
+$$ f \left(x _ {1}, x _ {2}, \dots , x _ {n}\right) = a _ {1 1} x _ {1} ^ {2} + a _ {2 2} x _ {2} ^ {2} + \dots + a _ {n n} x _ {n} ^ {2} + 2 a _ {1 2} x _ {1} x _ {2} + 2 a _ {1 3} x _ {1} x _ {3} + \dots + 2 a _ {n - 1, n} x _ {n - 1} x _ {n} $$
+称为二次型,其可以表示为 $f=x^{T}Ax$ ,其中
+$$ \boldsymbol {A} = \left( \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ a _ {2 1} & a _ {2 2} & \dots & a _ {2 n} \\ \vdots & \vdots & & \vdots \\ a _ {n 1} & a _ {n 2} & \dots & a _ {n n} \end{array} \right), \quad \boldsymbol {x} = \left( \begin{array}{c} x _ {1} \\ x _ {2} \\ \vdots \\ x _ {n} \end{array} \right). $$
+A 为对称矩阵.
+若存在可逆线性变换,使二次型只含平方项,则这种只含平方项的二次型,称为二次型的标准形.若二次型的标准形的系数只能取1,-1或0,则该标准形称为规范形.
+解（I）二次型 $f$ 的矩阵为 $\mathbf{A} = \begin{pmatrix} a & 0 & 1 \\ 0 & a & -1 \\ 1 & -1 & a - 1 \end{pmatrix}$ .
+计算 A 的特征多项式 $\left|\lambda E-A\right|$ ，得
+$$ \begin{array}{r l} {\mid \lambda E - A \mid =} & {\left| \begin{array}{c c c} {\lambda - a} & {0} & {- 1} \\ {0} & {\lambda - a} & {1} \\ {- 1} & {1} & {\lambda - a + 1} \end{array} \right| \overset{\text {按第一行展开}}{=} (\lambda - a) [ (\lambda - a) (\lambda - a + 1) - 1 ] - (\lambda - a)} \\ & {= (\lambda - a) [ (\lambda - a) ^ {2} + (\lambda - a) - 2 ] = (\lambda - a) (\lambda - a + 2) (\lambda - a - 1).} \end{array} $$
+因此，A 的特征值为 a, a - 2, $a + 1$ .
+（Ⅱ）由f的规范形为 $y_{1}^{2}+y_{2}^{2}$ 知，A的特征值有两个正数，一个为零.0为最小的特征值.由于a-2<a<a+1，故可知a-2=0，即a=2.
+注 实对称矩阵的特征值是它对应的二次型在正交变换下的标准形的系数,而不是规范形的系数.因此,f的规范形为 $y_{1}^{2}+y_{2}^{2}$ 并不能说明A的特征值为1,1,0,只能说明A有两个正特征值,一个零特征值.
+![image](images/zt-030921.jpg)"
+zt-031113,真题,线性代数,第六章 二次型,数三2011,13,填空题,,,"(13) 设二次型 $f(x_{1},x_{2},x_{3})=x^{T}Ax$ 的秩为1，A的各行元素之和为3，则f在正交变换x=Qy下的标准形为____。",,,,,"答案 应填 $3y_{1}^{2}$ .
+分析 本题主要考查二次型在正交变换下的标准形.
+若二次型所对应的对称矩阵的全部非零特征值为 $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{r}$ ，其中 r 为二次型的秩，即所对应的对称矩阵的秩，则二次型在正交变换 x = Qy 下的标准形为 $\lambda_{1}y_{1}^{2} + \lambda_{2}y_{2}^{2} + \cdots + \lambda_{r}y_{r}^{2}$ .
+因此本题的关键是求出 A 的非零特征值.
+解 设矩阵 $A = \begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{pmatrix}$ . 由已知条件知 $\left\{\begin{aligned}&a_{11}+a_{12}+a_{13}=3,\\&a_{21}+a_{22}+a_{23}=3,\\&a_{31}+a_{32}+a_{33}=3,\end{aligned}\right.$ 即 $\left(\begin{array}{ccc}a_{11}&a_{12}&a_{13}\\a_{21}&a_{22}&a_{23}\\a_{31}&a_{32}&a_{33}\end{array}\right)\left(\begin{array}{l}1\\1\\1\end{array}\right)=3\left(\begin{array}{l}1\\1\\1\end{array}\right).$
+于是3是A的特征值.又因为 $r(A)=1$ ,且实对称矩阵A相似于以其特征值为主对角元的对角矩阵,所以0是A的2重特征值.因此,A的所有特征值为3,0,0,f在正交变换x=Qy下的标准形为 $3y_{1}^{2}$ .
+注 由于本题仅已知 A 的秩为 1, 故本题答案也可以写为 $3y_{2}^{2}$ 或 $3y_{3}^{2}$ .
+拓展
+1. 利用正交变换将二次型化为标准形
+利用正交变换 x = Py 将二次型 $x^{T}Ax$ 化为标准形与利用正交矩阵 P 把实对称矩阵 A 化为对角矩阵的过程一致. 此时, 矩阵 A 既相似于对角矩阵, 又合同于对角矩阵, 二次型的标准形的系数为 A 的特征值.
+2. 将实对称矩阵 A 正交相似对角化的一般步骤
+① 求 A 的特征值, 即计算 $\left|\lambda E - A\right|$ 的零点.
+② 求 A 的特征向量, 即计算 $(\lambda E - A)x = 0$ 的基础解系.
+③ 将所得特征向量规范正交化,必要时可进行施密特(Schmidt)正交化.一种可能需要进行施密特正交化的情况:特征值有重根.
+④构造正交矩阵 $P=(\alpha_{1},\alpha_{2},\cdots,\alpha_{n})$ ，则 $P^{-1}AP$ 为对角矩阵， $\alpha_{i}$ 为属于第i个主对角元的特征向量."
+zt-031221,真题,线性代数,第六章 二次型,数三2012,21,解答题,,,"(21) ( 11 分)
+已知 $A = \begin{pmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \\ -1 & 0 & a \\ 0 & a & -1 \end{pmatrix}$ ，二次型 $f(x_{1}, x_{2}, x_{3}) = \boldsymbol{x}^{\mathrm{T}}(\boldsymbol{A}^{\mathrm{T}}\boldsymbol{A})\boldsymbol{x}$ 的秩为 2.
+（I）求实数 $a$ 的值； 
+（Ⅱ）求正交变换 $\pmb {x} = \pmb{Q}\pmb{y}$ 将 $f$ 化为标准形.",,,,,"分析 本题主要考查将二次型化为标准形.
+本题第（I）问要求 $a$ 的值.这可以从二次型 $f$ 非满秩出发来求解，因为 $f$ 非满秩等价于对应的实对称矩阵 $\mathbf{A}^{\mathrm{T}}\mathbf{A}$ 非满秩.
+第(Ⅱ)问要求将f化为标准形的正交变换.由于对实对称矩阵来说,将它对角化的正交矩阵的列向量也是它的特征向量,故第(Ⅱ)问实际上是要我们求出 $A^{T}A$ 的特征向量.
+解 (I) (法一) 二次型 $f$ 的秩等于它所对应的实对称矩阵 $\mathbf{A}^{\mathrm{T}}\mathbf{A}$ 的秩, 于是 $r(\mathbf{A}^{\mathrm{T}}\mathbf{A}) = 2$ .
+$$ r \left(\boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {A}\right) = r (\boldsymbol {A}) $$
+由于 $A^{T}A$ 与 A 的列数相等, 故证明 $r(A^{T}A)=r(A)$ 只需要证明 $A^{T}Ax=0$ 与 Ax=0 同解. 若 x 满足 Ax=0, 则 $A^{T}(Ax)=0$ , 即 $(A^{T}A)x=0$ .
+另一方面, 若 x 满足 $(A^{\mathrm{T}}A)x=0$ , 则 $x^{\mathrm{T}}(A^{\mathrm{T}}A)x=0$ , 即 $(Ax)^{\mathrm{T}}(Ax)=0$ . 由于 $\alpha^{T}\alpha=0$ 当且仅当 $\alpha=0$ , 故 Ax=0.
+因此， $r(A)=r(A^{T}A)=2.$
+我们可以对 A 作初等行变换, 求得 $r(A)=2$ 时的 a 的值.
+$$ \boldsymbol {A} = \left( \begin{array}{c c c} 1 & 0 & 1 \\ 0 & 1 & 1 \\ - 1 & 0 & a \\ 0 & a & - 1 \end{array} \right) \xrightarrow [ r _ {4} - a r _ {2} ]{r _ {3} + r _ {1}} \left( \begin{array}{c c c} 1 & 0 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & a + 1 \\ 0 & 0 & - a - 1 \end{array} \right) \xrightarrow {r _ {4} ^ {*} + r _ {3} ^ {*}} \left( \begin{array}{c c c} 1 & 0 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & a + 1 \\ 0 & 0 & 0 \end{array} \right). $$
+由此可见,仅当 $a + 1 = 0$ 时, $r(A) = 2$ , 故 a = -1.
+(法二) 由于 $r(A^{T}A)=2$ ，而 $A^{T}A$ 为 $3 \times 3$ 矩阵，故 $\left|A^{T}A\right|=0$ .
+$$ \boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {A} = \left( \begin{array}{c c c c} 1 & 0 & - 1 & 0 \\ 0 & 1 & 0 & a \\ 1 & 1 & a & - 1 \end{array} \right) \left( \begin{array}{c c c} 1 & 0 & 1 \\ 0 & 1 & 1 \\ - 1 & 0 & a \\ 0 & a & - 1 \end{array} \right) = \left( \begin{array}{c c c} 2 & 0 & 1 - a \\ 0 & 1 + a ^ {2} & 1 - a \\ 1 - a & 1 - a & 3 + a ^ {2} \end{array} \right). $$
+求得 $|\mathbf{A}^{\mathrm{T}}\mathbf{A}| = (a^{2} + 3)(a + 1)^{2}$ . 因此, 由 $|\mathbf{A}^{\mathrm{T}}\mathbf{A}| = 0$ 可得 $a = -1$ .
+（Ⅱ）由第（Ⅰ）问可得， $A^{T}A=\begin{pmatrix}2&0&2\\0&2&2\\2&2&4\end{pmatrix}$ ，从而 $A^{T}A$ 的特征多项式为
+$$ \left| \lambda \boldsymbol {E} - \boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {A} \right| = \left| \begin{array}{c c c} \lambda - 2 & 0 & - 2 \\ 0 & \lambda - 2 & - 2 \\ - 2 & - 2 & \lambda - 4 \end{array} \right| = \lambda (\lambda - 2) (\lambda - 6). $$
+$A^{T}A$ 的特征值为 6,2,0.
+下面分别计算属于特征值 6,2,0 的特征向量.
+当 $\lambda = 6$ 时，
+$$ \begin{array}{r l}6 \boldsymbol {E} - \boldsymbol {A} ^ {\mathrm{T}} \boldsymbol {A}&= \left(\begin{array}{c c c}4&0&- 2\\0&4&- 2\\- 2&- 2&2\end{array}\right)\rightarrow \left(\begin{array}{c c c}2&0&- 1\\0&2&- 1\\1&1&- 1\end{array}\right) \xrightarrow {r _ {3} - r _ {2}} \left(\begin{array}{c c c}2&0&- 1\\0&2&- 1\\1&- 1&0\end{array}\right)\\&\xrightarrow {r _ {2} - r _ {1} + 2 r _ {3} ^ {*}} \left(\begin{array}{c c c}2&0&- 1\\1&- 1&0\\0&0&0\end{array}\right),\end{array} $$
+得 $\left\{\begin{aligned}2x_{1}-x_{3}&=0,\\ x_{1}-x_{2}&=0.\end{aligned}\right.$ 解得该方程组的一个基础解系 $\boldsymbol{\xi}_{1}=(1,1,2)^{\mathrm{T}}.$
+当 $\lambda = 2$ 时，
+$$ 2 \pmb {E} - \pmb {A} ^ {\mathrm{T}} \pmb {A} = \left(\begin{array}{c c c}0&0&- 2\\0&0&- 2\\- 2&- 2&- 2\end{array}\right)\rightarrow \left(\begin{array}{c c c}1&1&1\\0&0&1\\0&0&1\end{array}\right) \xrightarrow [ r _ {3} - r _ {2} ]{r _ {1} - r _ {2}} \left(\begin{array}{c c c}1&1&0\\0&0&1\\0&0&0\end{array}\right), $$
+得 $\left\{\begin{aligned}x_{1}+x_{2}&=0,\\ x_{3}&=0.\end{aligned}\right.$ 解得该方程组的一个基础解系 $\boldsymbol{\xi}_{2}=(-1,1,0)^{\mathrm{T}}.$
+当 $\lambda = 0$ 时，
+$$ 0 \pmb {E} - \pmb {A} ^ {\mathrm{T}} \pmb {A} = \left(\begin{array}{c c c}{- 2}&{0}&{- 2}\\{0}&{- 2}&{- 2}\\{- 2}&{- 2}&{- 4}\end{array}\right)\rightarrow \left(\begin{array}{c c c}{1}&{0}&{1}\\{0}&{1}&{1}\\{1}&{1}&{2}\end{array}\right) \xrightarrow {r _ {3} - r _ {1} - r _ {2}} \left(\begin{array}{c c c}{1}&{0}&{1}\\{0}&{1}&{1}\\{0}&{0}&{0}\end{array}\right), $$
+得 $\left\{\begin{aligned}x_{1}+x_{3}&=0,\\ x_{2}+x_{3}&=0.\end{aligned}\right.$ 解得该方程组的一个基础解系 $\boldsymbol{\xi}_{3}=(-1,-1,1)^{\mathrm{T}}.$
+由于实对称矩阵属于不同特征值的特征向量相互正交, 故 $\xi_{1}, \xi_{2}, \xi_{3}$ 相互正交. 将 $\xi_{1}, \xi_{2}, \xi_{3}$ 单位化, 得
+$$ \boldsymbol {\alpha} _ {1} = \frac {1}{\sqrt {6}} \left( \begin{array}{l} 1 \\ 1 \\ 2 \end{array} \right), \quad \boldsymbol {\alpha} _ {2} = \frac {1}{\sqrt {2}} \left( \begin{array}{c} - 1 \\ 1 \\ 0 \end{array} \right), \quad \boldsymbol {\alpha} _ {3} = \frac {1}{\sqrt {3}} \left( \begin{array}{l} - 1 \\ - 1 \\ 1 \end{array} \right). $$
+取 $\boldsymbol{Q} = (\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3})$ ，则 Q 为正交矩阵，且 $\boldsymbol{Q}^{\mathrm{T}}(\boldsymbol{A}^{\mathrm{T}}\boldsymbol{A})\boldsymbol{Q} = \begin{pmatrix} 6 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 0 \end{pmatrix}$ .
+因此，当 $Q = \begin{pmatrix} \frac{1}{\sqrt{6}} & -\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{3}} \\ \frac{1}{\sqrt{6}} & \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{3}} \\ \frac{2}{\sqrt{6}} & 0 & \frac{1}{\sqrt{3}} \end{pmatrix}$ 时，正交变换 x = Qy 将二次型 $f(x_{1}, x_{2}, x_{3})$ 变成标准
+形 $f = 6y_{1}^{2} + 2y_{2}^{2}$
+注 ① 法一中利用了 $r(\mathbf{A}^{\mathrm{T}}\mathbf{A}) = r(\mathbf{A})$ ，从而使我们只需要对 $\mathbf{A}$ 作初等行变换就能得到 $a$ 的值，在计算上比法二要简单。这是一个在教材上出现过的结论，见同济大学《线性代数》（第六版）第102页。这说明，掌握并熟练运用教材中出现过的常用结论，对我们解题很有帮助。
+② 正交矩阵需满足列向量两两正交,且均为单位向量.在求得 $A^{T}A$ 的特征向量后,虽然这三个特征向量两两正交,但它们所组成的矩阵不一定是正交矩阵,因此需要将它们单位化."
+zt-031321,真题,线性代数,第六章 二次型,数三2013,21,解答题,,,"(21)(11分)
+设二次型 $f(x_{1},x_{2},x_{3}) = 2(a_{1}x_{1} + a_{2}x_{2} + a_{3}x_{3})^{2} + (b_{1}x_{1} + b_{2}x_{2} + b_{3}x_{3})^{2}$ ，记
+$$ \boldsymbol {\alpha} = \left( \begin{array}{l} a _ {1} \\ a _ {2} \\ a _ {3} \end{array} \right), \quad \boldsymbol {\beta} = \left( \begin{array}{l} b _ {1} \\ b _ {2} \\ b _ {3} \end{array} \right). $$
+(Ⅰ)证明二次型f对应的矩阵为 $2\alpha\alpha^{T}+\beta\beta^{T}$ ;
+(Ⅱ) 若 $\alpha, \beta$ 正交且均为单位向量, 证明 f 在正交变换下的标准形为 $2y_{1}^{2} + y_{2}^{2}$ .",,,,,"分析 本题主要考查对二次型以及正交变换的理解.
+一个二次型对应着一个对称矩阵. 若对称矩阵 A 满足 $f = x^{T}Ax$ ，则称 A 为二次型 f 对应的矩阵. 二次型 f 在正交变换下的标准形的各项系数为 A 的特征值.
+证（I）记 $x=(x_{1},x_{2},x_{3})^{\mathrm{T}}$ ，f对应的矩阵为A，A为对称矩阵，则
+$$ a _ {1} x _ {1} + a _ {2} x _ {2} + a _ {3} x _ {3} = \boldsymbol {x} ^ {\mathrm{T}} \boldsymbol {\alpha} = \boldsymbol {\alpha} ^ {\mathrm{T}} \boldsymbol {x}, \quad b _ {1} x _ {1} + b _ {2} x _ {2} + b _ {3} x _ {3} = \boldsymbol {x} ^ {\mathrm{T}} \boldsymbol {\beta} = \boldsymbol {\beta} ^ {\mathrm{T}} \boldsymbol {x}. $$
+$$ f \left(x _ {1}, x _ {2}, x _ {3}\right) = 2 \left(\boldsymbol {x} ^ {\mathrm{T}} \boldsymbol {\alpha}\right) \left(\boldsymbol {\alpha} ^ {\mathrm{T}} \boldsymbol {x}\right) + \left(\boldsymbol {x} ^ {\mathrm{T}} \boldsymbol {\beta}\right) \left(\boldsymbol {\beta} ^ {\mathrm{T}} \boldsymbol {x}\right) = \boldsymbol {x} ^ {\mathrm{T}} \left(2 \boldsymbol {\alpha} \boldsymbol {\alpha} ^ {\mathrm{T}} + \boldsymbol {\beta} \boldsymbol {\beta} ^ {\mathrm{T}}\right) \boldsymbol {x}. $$
+又由于 $(2\alpha \alpha^{\mathrm{T}} + \beta \beta^{\mathrm{T}})^{\mathrm{T}} = 2\alpha \alpha^{\mathrm{T}} + \beta \beta^{\mathrm{T}}$ ，故 $2\alpha \alpha^{\mathrm{T}} + \beta \beta^{\mathrm{T}}$ 是对称矩阵.于是 $2\alpha \alpha^{\mathrm{T}} + \beta \beta^{\mathrm{T}}$ 为所求 $\mathbf{A}$
+(Ⅱ)(法一)由 $A = 2\alpha\alpha^{T} + \beta\beta^{T}$ 且 $\alpha$ 与 $\beta$ 相互正交 ( $\alpha^{T}\beta = 0, \beta^{T}\alpha = 0$ ) 得，
+$$ \boldsymbol {A} \boldsymbol {\alpha} = (2 \boldsymbol {\alpha} \boldsymbol {\alpha} ^ {\mathrm{T}} + \boldsymbol {\beta} \boldsymbol {\beta} ^ {\mathrm{T}}) \boldsymbol {\alpha} = 2 \boldsymbol {\alpha}, \quad \boldsymbol {A} \boldsymbol {\beta} = (2 \boldsymbol {\alpha} \boldsymbol {\alpha} ^ {\mathrm{T}} + \boldsymbol {\beta} \boldsymbol {\beta} ^ {\mathrm{T}}) \boldsymbol {\beta} = \boldsymbol {\beta}. $$
+因此，2,1均为A的特征值，而 $\alpha,\beta$ 分别为属于特征值2,1的特征向量.
+下面还需确定 A 的另一个特征值.
+考虑 A 的秩.
+由于对任何非零 n 维列向量 $\alpha, \beta$ ，矩阵 $\beta\alpha^{T}$ 的秩均为 1，故
+$$ r (\boldsymbol {A}) = r (2 \boldsymbol {\alpha} \boldsymbol {\alpha} ^ {\mathrm{T}} + \boldsymbol {\beta} \boldsymbol {\beta} ^ {\mathrm{T}}) \leqslant r (2 \boldsymbol {\alpha} \boldsymbol {\alpha} ^ {\mathrm{T}}) + r (\boldsymbol {\beta} \boldsymbol {\beta} ^ {\mathrm{T}}) = 2. $$
+于是，A 不满秩，0 也是 A 的一个特征值.
+因此,存在正交矩阵P使得 $P^{T}AP=\begin{pmatrix}2&0&0\\0&1&0\\0&0&0\end{pmatrix}$ .f在正交变换x=Py下的标准形为 $f=2y_{1}^{2}+y_{2}^{2}$ .
+(法二) 取 $\gamma$ 为与 $\alpha, \beta$ 均正交的单位向量, 可取 $\gamma = \frac{\alpha \times \beta}{\|\alpha \times \beta\|} (\alpha \times \beta$ 为向量 $\alpha, \beta$ 的向量积, $\| \alpha \times \beta \|$ 为向量 $\alpha \times \beta$ 的模), 则 $P = (\alpha, \beta, \gamma)$ 为正交矩阵.
+$$ \boldsymbol {P} ^ {\mathrm{T}} \boldsymbol {A} \boldsymbol {P} = \left( \begin{array}{l} \boldsymbol {\alpha} ^ {\mathrm{T}} \\ \boldsymbol {\beta} ^ {\mathrm{T}} \\ \boldsymbol {\gamma} ^ {\mathrm{T}} \end{array} \right) (2 \boldsymbol {\alpha} \boldsymbol {\alpha} ^ {\mathrm{T}} + \boldsymbol {\beta} \boldsymbol {\beta} ^ {\mathrm{T}}) (\boldsymbol {\alpha}, \boldsymbol {\beta}, \boldsymbol {\gamma}) = \left( \begin{array}{l} 2 \boldsymbol {\alpha} ^ {\mathrm{T}} \boldsymbol {\alpha} \boldsymbol {\alpha} ^ {\mathrm{T}} + \boldsymbol {\alpha} ^ {\mathrm{T}} \boldsymbol {\beta} \boldsymbol {\beta} ^ {\mathrm{T}} \\ 2 \boldsymbol {\beta} ^ {\mathrm{T}} \boldsymbol {\alpha} \boldsymbol {\alpha} ^ {\mathrm{T}} + \boldsymbol {\beta} ^ {\mathrm{T}} \boldsymbol {\beta} \boldsymbol {\beta} ^ {\mathrm{T}} \\ 2 \boldsymbol {\gamma} ^ {\mathrm{T}} \boldsymbol {\alpha} \boldsymbol {\alpha} ^ {\mathrm{T}} + \boldsymbol {\gamma} ^ {\mathrm{T}} \boldsymbol {\beta} \boldsymbol {\beta} ^ {\mathrm{T}} \end{array} \right) (\boldsymbol {\alpha}, \boldsymbol {\beta}, \boldsymbol {\gamma}). $$
+由于 $\alpha, \beta, \gamma$ 相互正交，且均为单位向量，故 $\alpha^{T}\beta = \beta^{T}\alpha = \gamma^{T}\alpha = \gamma^{T}\beta = 0, \alpha^{T}\alpha = \beta^{T}\beta = 1.$
+$$ \boldsymbol {P} ^ {\mathrm{T}} \boldsymbol {A} \boldsymbol {P} = \left( \begin{array}{c} 2 \boldsymbol {\alpha} ^ {\mathrm{T}} \\ \boldsymbol {\beta} ^ {\mathrm{T}} \\ \boldsymbol {0} \end{array} \right) (\boldsymbol {\alpha}, \boldsymbol {\beta}, \boldsymbol {\gamma}) = \left( \begin{array}{c c c} 2 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{array} \right). $$
+因此，f 在正交变换 x = Py 下的标准形为 $f = 2y_{1}^{2} + y_{2}^{2}$ .
+注 ①法一中,用到了“对任何非零n维列向量 $\alpha,\beta$ ,矩阵 $\beta\alpha^{T}$ 的秩均为1”这一结论.
+下面简单说明该结论.记 $\boldsymbol{\beta}=(b_{1},b_{2},\cdots,b_{n})^{\mathrm{T}}$ ，则 $\boldsymbol{\beta}\boldsymbol{\alpha}^{\mathrm{T}}=\begin{pmatrix}b_{1}\boldsymbol{\alpha}^{\mathrm{T}}\\b_{2}\boldsymbol{\alpha}^{\mathrm{T}}\\\vdots\\b_{n}\boldsymbol{\alpha}^{\mathrm{T}}\end{pmatrix}$ .由于 $\alpha,\beta$ 均为非零向量,故 $r(\boldsymbol{\beta}\boldsymbol{\alpha}^{\mathrm{T}})=r(\boldsymbol{\alpha}^{\mathrm{T}})=1$ .
+② 将 f 的各项展开, 再写出 f 对应的对称矩阵的做法, 计算量较大, 不能算是一种好办法."
+zt-031413,真题,线性代数,第六章 二次型,数三2014,13,填空题,,,"(13) 设二次型 $f(x_{1}, x_{2}, x_{3}) = x_{1}^{2} - x_{2}^{2} + 2ax_{1}x_{3} + 4x_{2}x_{3}$ 的负惯性指数为 1，则 a 的取值范围是 ____.",,,,,"答案 应填[-2,2].
+分析 本题主要考查二次型的正、负惯性指数的计算.
+二次型的负惯性指数与标准形有关,因此本题既可以利用配方法来解,又可以利用讨论二次型所对应的对称矩阵的正、负特征值的个数来解.
+解（法一）用配方法将原二次型化为标准形.
+$$ \begin{array}{r l} f (x _ {1}, x _ {2}, x _ {3}) & = (x _ {1} + a x _ {3}) ^ {2} - a ^ {2} x _ {3} ^ {2} - (x _ {2} - 2 x _ {3}) ^ {2} + 4 x _ {3} ^ {2} \\ & = (x _ {1} + a x _ {3}) ^ {2} - (x _ {2} - 2 x _ {3}) ^ {2} + (4 - a ^ {2}) x _ {3} ^ {2}. \end{array} $$
+因此, 若二次型 $f(x_{1}, x_{2}, x_{3})$ 的负惯性指数为 1, 则 $4 - a^{2} \geqslant 0$ , 即 $a \in [-2, 2]$ . (法二) 写出二次型 $f(x_{1}, x_{2}, x_{3})$ 对应的对称矩阵 A.
+$$ \boldsymbol {A} = \left( \begin{array}{c c c} 1 & 0 & a \\ 0 & - 1 & 2 \\ a & 2 & 0 \end{array} \right). $$
+计算 A 的行列式得， $|A| = a^{2} - 4$ .
+A 的迹等于零,说明 A 的特征值之和为零.
+下面我们证明, 当 3 阶非零实对称矩阵 A 的迹为零时, A 的负惯性指数为 1 等价于 $\left|A\right| \leqslant 0$ . 当 3 阶非零实对称矩阵 A 的迹为零时, 由 A 的负惯性指数为 1 可知, A 的特征值可能为两正、一负, 或者一正、一零、一负. 在这两种情形下, $\left|A\right| \leqslant 0$ .
+若 A 为 3 阶非零实对称矩阵, 且 $\left|A\right| \leqslant 0$ , 则 A 的特征值的符号有五种可能: (1) 两正、一负; (2) 一正、一零、一负; (3) 两零、一负; (4) 三负; (5) 全为零. 两个零特征值、一个负特征值和三个负特征值的情形与 A 的迹为零矛盾. 特征值全为零的情形与 A 是非零实对称矩阵矛盾, 因为若 A 的特征值全为零, 则 A 相似于零矩阵, 从而 A 为零矩阵. 因此, A 的特征值仅可能为两正、一负, 或一正、一零、一负. 在这两种情形下, A 的负惯性指数都为 1.
+综上所述，A 的负惯性指数为 1 等价于 $\left|A\right| \leqslant 0$ ，即 $a \in [-2, 2]$ .
+注 利用实对称矩阵的特征值来讨论其所对应的二次型的正、负惯性指数, 是一个常用方法. 但是对本题而言, 使用这种方法会遇到一定的困难. 这是因为, A 的特征多项式的零点较难直接求出, 所以需要从别的角度来解题.
+对形式较简单的二次型来说,用配方法求正、负惯性指数是比较简便的方法.
+拓展
+下面我们给出求二次型的正、负惯性指数的两种常用方法.
+(1) 特征值法. 计算二次型对应的实对称矩阵的特征值, 正特征值的个数为正惯性指数, 负特征值的个数为负惯性指数.
+(2) 配方法.
+情形1:二次型含平方项.
+若二次型中含有某变量的平方,则先集中处理含该变量的项,对含该变量的项配方,直至全部配成完全平方,再利用同样的方法处理含其他变量的项.
+例如： $f = x_{1}^{2} + 2x_{2}^{2} + 6x_{3}^{2} + 2x_{1}x_{2} - 2x_{1}x_{3} + 2x_{2}x_{3}$ 可如下配方.
+$$ f = \left(x _ {1} + x _ {2} - x _ {3}\right) ^ {2} + x _ {2} ^ {2} + 5 x _ {3} ^ {2} + 4 x _ {2} x _ {3} = \left(x _ {1} + x _ {2} - x _ {3}\right) ^ {2} + \left(x _ {2} + 2 x _ {3}\right) ^ {2} + x _ {3} ^ {2}. $$
+情形 2: 二次型不含平方项.
+若二次型中只含有混合项,则先选取其中一个,利用平方差公式将混合项转化为平方项,再进行配方.
+例如： $f = x_{1}x_{2}$ . 令 $x_{1} = y_{1} + y_{2}$ ， $x_{2} = y_{1} - y_{2}$ ，则 f 可化为 $y_{1}^{2} - y_{2}^{2}$ .
+任何二次型都可以利用上述两种方法进行配方. 不过, 配方法常用于较简单的二次型.
+![image](images/zt-031413.jpg)"
+zt-031506,真题,线性代数,第六章 二次型,数三2015,6,选择题,,,"(6) 设二次型 $f(x_{1}, x_{2}, x_{3})$ 在正交变换 x = Py 下的标准形为 $2y_{1}^{2} + y_{2}^{2} - y_{3}^{2}$ ，其中 $P = (e_{1}, e_{2}, e_{3})$ 。若 $Q = (e_{1}, -e_{3}, e_{2})$ ，则 $f(x_{1}, x_{2}, x_{3})$ 在正交变换 x = Qy 下的标准形为（）",$2y_{1}^{2} - y_{2}^{2} + y_{3}^{2}$ .,$2y_{1}^{2} + y_{2}^{2} - y_{3}^{2}$ .,$2y_{1}^{2} - y_{2}^{2} - y_{3}^{2}$ .,$2y_{1}^{2} + y_{2}^{2} + y_{3}^{2}$ .,"答案 A.
+分析 本题主要考查二次型的标准形的概念以及矩阵的初等变换.
+根据题意得,二次型f对应的对称矩阵A满足 $P^{T}AP=\begin{pmatrix}2&0&0\\0&1&0\\0&0&-1\end{pmatrix}$ .利用P与Q的关系,可以直接求出 $Q^{T}AQ$ .
+此外,我们也可以求出 Q 的列向量所对应的 A 的特征值,从而得到所求标准形.
+解（法一）设 $f=x^{T}Ax$ ，则由题设知，
+$$ f = (\boldsymbol {P} \mathbf {y}) ^ {\mathrm{T}} \boldsymbol {A} (\boldsymbol {P} \mathbf {y}) = \mathbf {y} ^ {\mathrm{T}} \boldsymbol {P} ^ {\mathrm{T}} \boldsymbol {A} \boldsymbol {P} \mathbf {y} = 2 y _ {1} ^ {2} + y _ {2} ^ {2} - y _ {3} ^ {2}. $$
+从而 $P^{T}AP=\begin{pmatrix}2&0&0\\0&1&0\\0&0&-1\end{pmatrix}$
+又由于 $\boldsymbol{Q} = (\boldsymbol{e}_{1}, -\boldsymbol{e}_{3}, \boldsymbol{e}_{2}) = (\boldsymbol{e}_{1}, \boldsymbol{e}_{2}, \boldsymbol{e}_{3}) \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0 \end{pmatrix} = \boldsymbol{P} \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0 \end{pmatrix}$ ，故
+$$ \begin{array}{l} f = \boldsymbol {x} ^ {\mathrm{T}} \boldsymbol {A} \boldsymbol {x} = (\boldsymbol {Q} \boldsymbol {y}) ^ {\mathrm{T}} \boldsymbol {A} (\boldsymbol {Q} \boldsymbol {y}) = \boldsymbol {y} ^ {\mathrm{T}} \boldsymbol {Q} ^ {\mathrm{T}} \boldsymbol {A} \boldsymbol {Q} \boldsymbol {y} = \boldsymbol {y} ^ {\mathrm{T}} \left( \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & - 1 & 0 \end{array} \right) ^ {\mathrm{T}} \boldsymbol {P} ^ {\mathrm{T}} \boldsymbol {A} \boldsymbol {P} \left( \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & - 1 & 0 \end{array} \right) \boldsymbol {y} \\ = \boldsymbol {y} ^ {\mathrm{T}} \left( \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 0 & - 1 \\ 0 & 1 & 0 \end{array} \right) \left( \begin{array}{c c c} 2 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & - 1 \end{array} \right) \left( \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & - 1 & 0 \end{array} \right) \boldsymbol {y} \\ = \boldsymbol {y} ^ {\mathrm{T}} \left( \begin{array}{c c c} 2 & 0 & 0 \\ 0 & - 1 & 0 \\ 0 & 0 & 1 \end{array} \right) \boldsymbol {y} = 2 y _ {1} ^ {2} - y _ {2} ^ {2} + y _ {3} ^ {2}. \end{array} $$
+因此， $f(x_{1},x_{2},x_{3})$ 在 x=Qy 的标准形为 $f=2y_{1}^{2}-y_{2}^{2}+y_{3}^{2}$ . 应选 A.
+（法二）由题设知，二次型 $f(x_{1},x_{2},x_{3})$ 在正交变换x=Py下的标准形为 $f=2y_{1}^{2}+y_{2}^{2}-y_{3}^{2}$ .因此，该二次型所对应的对称矩阵A的特征值为2,1,-1，而 $e_{1},e_{2},e_{3}$ 分别为属于特征值2,1,-1的特征向量.
+若 $\boldsymbol{Q}=(\boldsymbol{e}_{1},-\boldsymbol{e}_{3},\boldsymbol{e}_{2})$ ，则由 $\boldsymbol{A}(-\boldsymbol{e}_{3})=-\boldsymbol{A}\boldsymbol{e}_{3}=-(-\boldsymbol{e}_{3})$ 可知 $-e_{3}$ 也为属于特征值 -1 的特征向量，故 $Q^{T}AQ=\begin{pmatrix}2&0&0\\0&-1&0\\0&0&1\end{pmatrix}.f(x_{1},x_{2},x_{3})$ 在 x=Qy 下的标准形为 $f=2y_{1}^{2}-y_{2}^{2}+y_{3}^{2}$ . 应选 A.
+注 本题也可以按照如下方式得到矩阵 P 与 Q 的关系.
+Q 是先将 P 的第 2 列与第 3 列交换, 再将第 2 列乘以 -1 得到的, 可用初等矩阵表示为
+$$ \boldsymbol {Q} = \boldsymbol {P} \left( \begin{array}{l l l} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{array} \right) \left( \begin{array}{c c c} 1 & 0 & 0 \\ 0 & - 1 & 0 \\ 0 & 0 & 1 \end{array} \right) = \boldsymbol {P} \left( \begin{array}{c c c} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & - 1 & 0 \end{array} \right). $$"
+zt-031606,真题,线性代数,第六章 二次型,数三2016,6,选择题,,,"(6) 设二次型 $f(x_{1}, x_{2}, x_{3}) = a(x_{1}^{2} + x_{2}^{2} + x_{3}^{2}) + 2x_{1}x_{2} + 2x_{2}x_{3} + 2x_{1}x_{3}$ 的正、负惯性指数分别为 1, 2，则",$a > 1$.,$a < -2$.,$-1<a<2$,$a = 1$ 或 $a = -2$.,"答案 C.
+分析 本题主要考查二次型的正、负惯性指数的计算.此类题可以通过求二次型对应的对称矩阵的特征值来判断.
+实对称矩阵 A 为正定的充分必要条件为下列任一条件.
+(1) $A$ 的特征值全为正；
+(2) A 的各阶顺序主子式都为正, 即 $a_{11} > 0$ , $\begin{vmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{vmatrix} > 0, \cdots, \begin{vmatrix} a_{11} & \cdots & a_{1n} \\ \vdots & & \vdots \\ a_{n1} & \cdots & a_{nn} \end{vmatrix} > 0.$
+解（法一）f对应的对称矩阵为 $A=\begin{pmatrix}a&1&1\\1&a&1\\1&1&a\end{pmatrix}$ . A正交相似于一个对角矩阵,该矩阵的主对角元为A的特征值.
+计算 A 的特征多项式, 得
+$$ \begin{array}{r l} {\mid \lambda E - A \mid = \left| \begin{array}{c c c} {\lambda - a} & {- 1} & {- 1} \\ {- 1} & {\lambda - a} & {- 1} \\ {- 1} & {- 1} & {\lambda - a} \end{array} \right| \overset{c _ {2} - c _ {3}}{=} \left| \begin{array}{c c c} {\lambda - a} & {0} & {- 1} \\ {- 1} & {\lambda - a + 1} & {- 1} \\ {- 1} & {- (\lambda - a + 1)} & {\lambda - a} \end{array} \right|} \\ {\overset{\text {按第一行展开}}{=} (\lambda - a) (\lambda - a + 1) (\lambda - a - 1) - 2 (\lambda - a + 1)} \\ {= (\lambda - a + 1) ^ {2} (\lambda - a - 2).} \end{array} $$
+因此，A 的特征值为 a - 1, a - 1, $a + 2$ .
+由于 $a + 2 > a - 1$ ，故若 $f$ 的正、负惯性指数分别为1,2，则 $\left\{ \begin{array}{ll}a - 1 < 0,\\ a + 2 > 0. \end{array} \right.$ 解得 $-2 < a < 1.$ 应选C.（法二）如法一，写出 $\pmb{A}$
+由于二次型 $f$ 的正、负惯性指数分别为1,2，故 $\pmb{A}$ 的特征值有一个为正值，两个为负值，从而 $|\pmb {A}| > 0.$
+计算 A 的行列式.
+$$ | \textbf {A} | = \left| \begin{array}{c c c} a & 1 & 1 \\ 1 & a & 1 \\ 1 & 1 & a \end{array} \right| = (a - 1) ^ {2} (a + 2). $$
+由于 $\left|A\right|>0$ , 故 $a+2>0$ , 即 a>-2 。由此可以排除选项 B 和选项 D。
+另一方面, 若 $a > 1$ , 则 $a > 0$ , $a^2 - 1 > 0$ , $|A| > 0$ , $A$ 的各阶顺序主子式皆为正. 由正定矩阵的判别法可知, $A$ 为正定矩阵, 从而 $f$ 的正惯性指数为 3. 这与 $f$ 的正、负惯性指数分别为 1, 2 矛盾, 故可排除选项 A.
+因此,应选 C.
+注 从计算上看,法二的解法比法一方便,但这种解法需要对二次型及其相关概念(例如正定二次型)有较好的理解."
+zt-031721,真题,线性代数,第六章 二次型,数三2017,21,解答题,,,"(21) ( 11 分)
+设二次型 $f(x_{1},x_{2},x_{3})=2x_{1}^{2}-x_{2}^{2}+ax_{3}^{2}+2x_{1}x_{2}-8x_{1}x_{3}+2x_{2}x_{3}$ 在正交变换 $x=Qy$ 下的标准形为 $\lambda_{1}y_{1}^{2}+\lambda_{2}y_{2}^{2}$ ，求 $a$ 的值及一个正交矩阵 $Q$.",,,,,"分析 本题主要考查实对称矩阵的相似对角化.
+本题中给出了某实二次型的标准形,由该标准形可知,该二次型所对应的实对称矩阵有一个零特征值,从而行列式为零.由此可求得 a 的值.
+由于实二次型在正交变换下的标准形的系数为该二次型对应的对称矩阵的特征值,故求正交矩阵 Q 可以转化为求对称矩阵的特征向量.
+解 记二次型 $f$ 对应的实对称矩阵为 $\mathbf{A}$ , 则
+$$ \boldsymbol {A} = \left( \begin{array}{c c c} 2 & 1 & - 4 \\ 1 & - 1 & 1 \\ - 4 & 1 & a \end{array} \right). $$
+由于 f 在正交变换 x = Qy 下的标准形为 $\lambda_{1}y_{1}^{2} + \lambda_{2}y_{2}^{2}$ ，故 A 的特征值为 $\lambda_{1}, \lambda_{2}, 0$ 。从而 $|A| = 0$ 。计算 A 的行列式得
+$$ \mid A \mid = - 3 a + 6. $$
+因此， $a = 2$ ， $\pmb {A} = \left( \begin{array}{ccc}2 & 1 & -4\\ 1 & -1 & 1\\ -4 & 1 & 2 \end{array} \right).$
+计算 A 的特征多项式得
+$$ | \lambda E - A | = \left| \begin{array}{c c c} \lambda - 2 & - 1 & 4 \\ - 1 & \lambda + 1 & - 1 \\ 4 & - 1 & \lambda - 2 \end{array} \right| \overset{r _ {1} - r _ {3}}{=} \left| \begin{array}{c c c} \lambda - 6 & 0 & 6 - \lambda \\ - 1 & \lambda + 1 & - 1 \\ 4 & - 1 & \lambda - 2 \end{array} \right| $$
+$$ \underline {{{\underline {{{c _ {3} + c _ {1}}}}}}} \left| \begin{array}{c c c} \lambda - 6 & 0 & 0 \\ - 1 & \lambda + 1 & - 2 \\ 4 & - 1 & \lambda + 2 \end{array} \right| = \lambda (\lambda - 6) (\lambda + 3). $$
+于是，A 的 3 个特征值分别为 6, -3, 0.
+当 $\lambda = 6$ 时，
+$$ \begin{array}{r l} 6 \boldsymbol {E} - \boldsymbol {A} & = \left( \begin{array}{c c c} 4 & - 1 & 4 \\ - 1 & 7 & - 1 \\ 4 & - 1 & 4 \end{array} \right) \xrightarrow {r _ {3} - r _ {1}} \left( \begin{array}{c c c} 4 & - 1 & 4 \\ - 1 & 7 & - 1 \\ 0 & 0 & 0 \end{array} \right) \xrightarrow {r _ {1} + 4 r _ {2}} \left( \begin{array}{c c c} 0 & 1 & 0 \\ - 1 & 7 & - 1 \\ 0 & 0 & 0 \end{array} \right) \\ & \xrightarrow {r _ {2} - 7 r _ {1} ^ {* *}} \left( \begin{array}{c c c} 0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 0 & 0 \end{array} \right). \end{array} $$
+因此， $\boldsymbol{\eta}_{1}=(-1,0,1)^{\mathrm{T}}$ 为 $(6E-A)x=0$ 的一个基础解系.
+当 $\lambda = -3$ 时，
+$$ \begin{array}{r l} - 3 \boldsymbol {E} - \boldsymbol {A} & = \left( \begin{array}{c c c} - 5 & - 1 & 4 \\ - 1 & - 2 & - 1 \\ 4 & - 1 & - 5 \end{array} \right) \xrightarrow [ r _ {3} ^ {*} - r _ {2} ]{r _ {3} + r _ {1}} \left( \begin{array}{c c c} - 5 & - 1 & 4 \\ - 1 & - 2 & - 1 \\ 0 & 0 & 0 \end{array} \right) \xrightarrow [ r _ {2} \times (- 1) ]{r _ {1} - 5 r _ {2}} \left( \begin{array}{c c c} 0 & 9 & 9 \\ 1 & 2 & 1 \\ 0 & 0 & 0 \end{array} \right) \\ & \xrightarrow [ r _ {2} ^ {*} - r _ {1} ^ {* *} ]{r _ {1} ^ {*} \times \frac {1}{9}} \left( \begin{array}{c c c} 0 & 1 & 1 \\ 1 & 1 & 0 \\ 0 & 0 & 0 \end{array} \right). \end{array} $$
+因此， $\boldsymbol{\eta}_{2}=(1,-1,1)^{\mathrm{T}}$ 为 $(-3\boldsymbol{E}-\boldsymbol{A})\boldsymbol{x}=\boldsymbol{0}$ 的一个基础解系.
+当 $\lambda = 0$ 时，
+$$ \begin{array}{r l} 0 \boldsymbol {E} - \boldsymbol {A} & = \left( \begin{array}{c c c} - 2 & - 1 & 4 \\ - 1 & 1 & - 1 \\ 4 & - 1 & - 2 \end{array} \right) \xrightarrow [ r _ {3} ^ {*} + 2 r _ {2} ]{r _ {3} + r _ {1}} \left( \begin{array}{c c c} - 2 & - 1 & 4 \\ - 1 & 1 & - 1 \\ 0 & 0 & 0 \end{array} \right) \xrightarrow [ r _ {1} ^ {*} \times (- \frac {1}{3}) ]{r _ {1} - 2 r _ {2}} \left( \begin{array}{c c c} 0 & 1 & - 2 \\ - 1 & 1 & - 1 \\ 0 & 0 & 0 \end{array} \right) \\ & \xrightarrow {r _ {2} \times (- 1) + r _ {1} ^ {* *}} \left( \begin{array}{c c c} 0 & 1 & - 2 \\ 1 & 0 & - 1 \\ 0 & 0 & 0 \end{array} \right). \end{array} $$
+因此， $\boldsymbol{\eta}_{3}=(1,2,1)^{\mathrm{T}}$ 为 $(0\boldsymbol{E}-\boldsymbol{A})\boldsymbol{x}=\boldsymbol{0}$ 的一个基础解系.
+由于实对称矩阵对应于不同特征值的特征向量相互正交,故只需将所得特征向量单位化.
+将 $\eta_{1},\eta_{2},\eta_{3}$ 分别单位化,作为 Q 的列向量,得正交矩阵 $Q=\begin{pmatrix}-\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{3}}&\frac{1}{\sqrt{6}}\\0&-\frac{1}{\sqrt{3}}&\frac{2}{\sqrt{6}}\\\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{3}}&\frac{1}{\sqrt{6}}\end{pmatrix}$ ,且 $Q^{T}AQ=$
+$\begin{pmatrix}6&0&0\\0&-3&0\\0&0&0\end{pmatrix}$ ，即f在正交变换 $x=Qy$ 下的标准形为 $f=6y_{1}^{2}-3y_{2}^{2}$ .
+注 得到 A 的三个线性无关的特征向量后,要注意将它们单位正交化,使得这三个特征向量组成的矩阵为正交矩阵.在本题中,由于 A 是实对称矩阵,三个特征值互异,其对应的特征向量已经相互正交,故只需要进行单位化.
+拓展
+施密特(Schmidt) 正交规范化
+设向量组 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{m}$ 线性无关. 先将它们正交化.
+$$ \boldsymbol {\beta} _ {1} = \boldsymbol {\alpha} _ {1}, $$
+$$ \boldsymbol {\beta} _ {2} = \boldsymbol {\alpha} _ {2} - \frac {\left(\boldsymbol {\alpha} _ {2} , \boldsymbol {\beta} _ {1}\right)}{\left(\boldsymbol {\beta} _ {1} , \boldsymbol {\beta} _ {1}\right)} \boldsymbol {\beta} _ {1}, $$
+$$ \boldsymbol {\beta} _ {m} = \boldsymbol {\alpha} _ {m} - \frac {(\boldsymbol {\alpha} _ {m} , \boldsymbol {\beta} _ {1})}{(\boldsymbol {\beta} _ {1} , \boldsymbol {\beta} _ {1})} \boldsymbol {\beta} _ {1} - \frac {(\boldsymbol {\alpha} _ {m} , \boldsymbol {\beta} _ {2})}{(\boldsymbol {\beta} _ {2} , \boldsymbol {\beta} _ {2})} \boldsymbol {\beta} _ {2} - \dots - \frac {(\boldsymbol {\alpha} _ {m} , \boldsymbol {\beta} _ {m - 1})}{(\boldsymbol {\beta} _ {m - 1} , \boldsymbol {\beta} _ {m - 1})} \boldsymbol {\beta} _ {m - 1}, $$
+则 $\beta_{1},\beta_{2},\cdots,\beta_{m}$ 两两正交.
+再将 $\beta_{1},\beta_{2},\cdots,\beta_{m}$ 单位化，
+$$ \varepsilon_ {1} = \frac {\boldsymbol {\beta} _ {1}}{\| \boldsymbol {\beta} _ {1} \|}, \quad \varepsilon_ {2} = \frac {\boldsymbol {\beta} _ {2}}{\| \boldsymbol {\beta} _ {2} \|}, \quad \dots , \quad \varepsilon_ {m} = \frac {\boldsymbol {\beta} _ {m}}{\| \boldsymbol {\beta} _ {m} \|}, $$
+则 $\varepsilon_{1},\varepsilon_{2},\cdots,\varepsilon_{m}$ 是正交规范向量组(即两两正交且均是单位向量)."
+zt-031820,真题,线性代数,第六章 二次型,数三2018,20,解答题,,,"(20)(11分)
+设实二次型 $f(x_{1},x_{2},x_{3})=(x_{1}-x_{2}+x_{3})^{2}+(x_{2}+x_{3})^{2}+(x_{1}+ax_{3})^{2}$ ，其中a是参数.
+(I) 求 $f(x_{1}, x_{2}, x_{3}) = 0$ 的解；
+(Ⅱ) 求 $f(x_{1}, x_{2}, x_{3})$ 的规范形.",,,,,"分析 本题综合考查了线性方程组与二次型.
+已知二次型 $f(x_{1},x_{2},x_{3})$ 可写为三个平方式之和，故 $f(x_{1},x_{2},x_{3})=0$ 当且仅当这三个平方式均为零，故第（I）问可以转化为齐次线性方程组的问题.
+第(Ⅱ)问要求f的规范形.要注意讨论f的秩,从而确定规范形中的系数.
+解 (I) $f(x_{1},x_{2},x_{3}) = 0$ 当且仅当 $\left\{ \begin{array}{l} x_{1} - x_{2} + x_{3} = 0, \\ x_{2} + x_{3} = 0, \\ x_{1} + ax_{3} = 0. \end{array} \right.$
+记 A 为该方程组的系数矩阵. 对 A 作初等行变换.
+$$ \boldsymbol {A} = \left( \begin{array}{c c c} 1 & - 1 & 1 \\ 0 & 1 & 1 \\ 1 & 0 & a \end{array} \right) \xrightarrow {r _ {3} - r _ {1}} \left( \begin{array}{c c c} 1 & - 1 & 1 \\ 0 & 1 & 1 \\ 0 & 1 & a - 1 \end{array} \right) \xrightarrow [ r _ {3} ^ {*} - r _ {2} ]{r _ {1} + r _ {2}} \left( \begin{array}{c c c} 1 & 0 & 2 \\ 0 & 1 & 1 \\ 0 & 0 & a - 2 \end{array} \right). $$
+$(r_{i}^{*}$ 表示对第 i 行作初等行变换后所得新的第 i 行, 每作一次初等行变换, 加一个 *.)
+当 $a \neq 2$ 时, $r(A) = 3$ , 方程组只有零解.
+当 $a = 2$ 时， $r(A) = 2$ . 方程组的基础解系仅包含一个向量. 取 $x_{3}$ 为自由变元，令 $x_{3} = 1$ ，解得 $(x_{1}, x_{2}, x_{3})^{\mathrm{T}} = (-2, -1, 1)^{\mathrm{T}}$ 为该方程组的一个基础解系.
+因此, 当 $a \neq 2$ 时, $f(x_{1}, x_{2}, x_{3}) = 0$ 的解为 $(x_{1}, x_{2}, x_{3})^{\mathrm{T}} = (0, 0, 0)^{\mathrm{T}}$ ; 当 a = 2 时, $f(x_{1}, x_{2}, x_{3}) = 0$ 的解为 $(x_{1}, x_{2}, x_{3})^{\mathrm{T}} = k(-2, -1, 1)^{\mathrm{T}}$ , 其中 k 为任意常数.
+(Ⅱ) 由 $f(x_{1},x_{2},x_{3})$ 的表达式知, $f(x_{1},x_{2},x_{3})\geqslant0.$
+当 $a \neq 2$ 时, 由第 (I) 问可知, $f(x_{1}, x_{2}, x_{3}) = 0$ 只有零解, $f$ 为正定二次型. 因此, 当 $a \neq 2$ 时, $f$ 的规范形为 $f = y_{1}^{2} + y_{2}^{2} + y_{3}^{2}$ .
+当 a = 2 时, f 不满秩.
+$$ \begin{array}{r l} f (x _ {1}, x _ {2}, x _ {3}) & = (x _ {1} - x _ {2} + x _ {3}) ^ {2} + (x _ {2} + x _ {3}) ^ {2} + (x _ {1} + 2 x _ {3}) ^ {2} \\ & = 2 x _ {1} ^ {2} + 2 x _ {2} ^ {2} + 6 x _ {3} ^ {2} - 2 x _ {1} x _ {2} + 6 x _ {1} x _ {3}. \end{array} $$
+记 $f$ 对应的对称矩阵为 $\pmb{B} = \left( \begin{array}{ccc}2 & -1 & 3\\ -1 & 2 & 0\\ 3 & 0 & 6 \end{array} \right).$
+下面用三种方法求 f 的规范形.
+（法一）由 $f(x_{1},x_{2},x_{3})\geqslant 0$ 可知 $f$ 的负惯性指数为0（否则，若规范形有负系数，不妨设规范形为 $f = y_1^2 +y_2^2 -y_3^2$ ，取 $(y_{1},y_{2},y_{3}) = (0,0,1)$ ，则 $f(y_{1},y_{2},y_{3}) = -1 < 0,$ 矛盾).由于 $\pmb{B}$ 的秩等于 $f$ 的正、负惯性指数之和，故 $f$ 的正惯性指数等于 $r(B)$
+计算 $|\pmb{B}|$ 得 $|\pmb{B}| = 0$ ，故 $r(\pmb{B})\leqslant 2.$ 又因为 $\pmb{B}$ 有一个2阶子式 $\left| \begin{array}{cc}2 & -1\\ -1 & 2 \end{array} \right| = 3\neq 0,$ 所以 $r(\pmb {B})\geqslant 2.$ 因此， $r(\pmb {B}) = 2$ ：
+综上所述，f 的正惯性指数为 2，负惯性指数为 0。f 的规范形为 $f = z_{1}^{2} + z_{2}^{2}$ 。
+(法二) 计算 B 的特征值, 从而得到 f 的正、负惯性指数.
+计算 B 的特征多项式.
+$$ \mid \lambda E - B \mid = \left| \begin{array}{c c c} \lambda - 2 & 1 & - 3 \\ 1 & \lambda - 2 & 0 \\ - 3 & 0 & \lambda - 6 \end{array} \right| = \lambda (\lambda^ {2} - 1 0 \lambda + 1 8). $$
+解 $\lambda^{2}-10\lambda+18=0$ 可得 $\lambda_{1,2}=\frac{10\pm\sqrt{100-72}}{2}=5\pm\sqrt{7}$ . 由于 $5+\sqrt{7}>0,5-\sqrt{7}>0$ , 故 f 有两个正特征值, 一个零特征值, 从而 f 的正惯性指数为 2, 负惯性指数为 0.
+因此， $f$ 的规范形为 $f = z_1^2 +z_2^2.$
+(法三) 配方法.
+$$ \begin{array}{r l} f (x _ {1}, x _ {2}, x _ {3}) & = 2 x _ {1} ^ {2} + 2 x _ {2} ^ {2} + 6 x _ {3} ^ {2} - 2 x _ {1} x _ {2} + 6 x _ {1} x _ {3} = 2 (x _ {1} ^ {2} - x _ {1} x _ {2} + 3 x _ {1} x _ {3}) + 2 x _ {2} ^ {2} + 6 x _ {3} ^ {2} \\ & = 2 \left(x _ {1} - \frac {x _ {2}}{2} + \frac {3}{2} x _ {3}\right) ^ {2} + \frac {3}{2} x _ {2} ^ {2} - \frac {9}{2} x _ {3} ^ {2} + 3 x _ {2} x _ {3} + 6 x _ {3} ^ {2} \\ & = 2 \left(x _ {1} - \frac {x _ {2}}{2} + \frac {3}{2} x _ {3}\right) ^ {2} + \frac {3}{2} (x _ {2} + x _ {3}) ^ {2}. \end{array} $$
+令 $\left\{\begin{aligned}z_{1}&=\sqrt{2}\left(x_{1}-\frac{x_{2}}{2}+\frac{3}{2}x_{3}\right),\\ z_{2}&=\sqrt{\frac{3}{2}}\left(x_{2}+x_{3}\right),\\ z_{3}&=x_{3},\end{aligned}\right.$ 则 $f(z_{1},z_{2},z_{3})=z_{1}^{2}+z_{2}^{2}.$
+因此， $f$ 的规范形为 $f = z_1^2 +z_2^2.$
+注 求 $f$ 的规范形时, 不能忽略 $a = 2$ 时的情况. 由第 (I) 问可知, 当 $a = 2$ 时, 线性变换 $\left\{ \begin{array}{l} y_{1} = x_{1} - x_{2} + x_{3}, \\ y_{2} = x_{2} + x_{3}, \\ y_{3} = x_{1} + 2x_{3} \end{array} \right.$ 不是可逆线性变换. 因此, 二次型 $f$ 并不合同于 $f = y_{1}^{2} + y_{2}^{2} + y_{3}^{2}$ , 不能将其规范形写为 $f = y_{1}^{2} + y_{2}^{2} + y_{3}^{2}$ ."
+zt-031906,真题,线性代数,第六章 二次型,数三2019,6,选择题,,,"(6) 设 A 是 3 阶实对称矩阵, E 是 3 阶单位矩阵. 若 $A^{2} + A = 2E$ , 且 $|A| = 4$ , 则二次型 $x^{T}Ax$ 的规范形为 ( )",$y_{1}^{2}+y_{2}^{2}+y_{3}^{2}.$,$y_{1}^{2}+y_{2}^{2}-y_{3}^{2}.$,$y_{1}^{2}-y_{2}^{2}-y_{3}^{2}.$,$-y_{1}^{2}-y_{2}^{2}-y_{3}^{2}.$,"答案 C.
+分析 本题主要考查二次型的规范形的计算.
+由已知条件可推知 A 的特征值，而二次型在正交变换下的标准形的系数为其对应的实对称矩阵的特征值，从而可知该二次型的规范形.
+解 设 $\lambda$ 为 A 的一个特征值, $\alpha$ 为属于特征值 $\lambda$ 的特征向量.
+由 $A^2 + A = 2E$ 可得 $(\lambda^2 + \lambda - 2)\alpha = 0$ . 由于 $\alpha$ 为非零向量, 故 $\lambda^2 + \lambda - 2 = 0$ . 解得 $\lambda = 1$ 或 $\lambda = -2$ . $A$ 的特征值只能取 1 和 -2.
+又因为 $|A| = 4$ ，所以 $\mathbf{A}$ 的特征值应为 $-2, -2, 1$ 。因此，二次型 $\pmb{x}^{\mathrm{T}}\pmb{A}\pmb{x}$ 的正惯性指数为 1，负惯性指数为 2。四个选项中，只有 $y_{1}^{2} - y_{2}^{2} - y_{3}^{2}$ 满足该性质。应选 C."
+zt-032020,真题,线性代数,第六章 二次型,数三2020,20,解答题,,,"(20) ( 11 分)
+设二次型 $f(x_{1},x_{2}) = x_{1}^{2} - 4x_{1}x_{2} + 4x_{2}^{2}$ 经正交变换 $\begin{pmatrix} x_1 \\ x_2 \end{pmatrix} = Q\begin{pmatrix} y_1 \\ y_2 \end{pmatrix}$ 化为二次型 $g(y_{1},y_{2}) = ay_{1}^{2} + 4y_{1}y_{2} + by_{2}^{2}$ , 其中 $a \geqslant b$ .
+(I) 求 $a, b$ 的值;
+(Ⅱ) 求正交矩阵 $Q$.",,,,,"分析 本题主要考查正交变换以及正交相似对角化.
+第(Ⅰ)问要确定参数a,b的值,可利用正交变换也为相似变换这一点,由二次型对应的矩阵A,B相似来寻找关系.
+第(Ⅱ)问要求正交矩阵Q,可分别将A,B相似对角化,再计算将A化成B的正交矩阵.
+解（I）写出二次型 $f(x_{1},x_{2})=x_{1}^{2}-4x_{1}x_{2}+4x_{2}^{2}$ 对应的矩阵A，二次型 $g(y_{1},y_{2})=ay_{1}^{2}+4y_{1}y_{2}+by_{2}^{2}$ 对应的矩阵B.
+$$ \boldsymbol {A} = \left( \begin{array}{c c} 1 & - 2 \\ - 2 & 4 \end{array} \right), \quad \boldsymbol {B} = \left( \begin{array}{c c} a & 2 \\ 2 & b \end{array} \right). $$
+由于正交变换也是相似变换,故A与B相似.又因为相似的矩阵具有相同的迹与行列式,所以
+$$ \left\{ \begin{array}{l} a + b = 5, \\ a b = 4. \end{array} \right. $$
+由 $a \geqslant b$ 可确定 $\left\{ \begin{array}{l} a = 4, \\ b = 1. \end{array} \right.$
+（Ⅱ）由第（Ⅰ）问可知， $A=\begin{pmatrix}1&-2\\-2&4\end{pmatrix},B=\begin{pmatrix}4&2\\2&1\end{pmatrix}.$
+计算 A 和 B 的特征多项式可得 $\left|\lambda E-A\right|=\left|\begin{matrix}\lambda-1&2\\2&\lambda-4\end{matrix}\right|=\lambda(\lambda-5)$ . 于是 A 和 B 的特征值为 5 和 0. 分别计算 A, B 的特征向量.
+计算 A 的属于特征值 5 的特征向量.
+考虑 $(5E-A)x=0.$
+$$ 5 \pmb {E} - \pmb {A} = \left(\begin{array}{c c}4&2\\2&1\end{array}\right)\rightarrow \left(\begin{array}{c c}2&1\\0&0\end{array}\right). $$
+于是, $r(5E-A)=1$ ,求得 $\xi_{1}=(-1,2)^{\mathrm{T}}$ 为 $(5E-A)x=0$ 的一个基础解系. $(-1,2)^{\mathrm{T}}$ 为A的属于特征值5的一个特征向量.
+计算 A 的属于特征值 0 的特征向量.
+考虑 $(0E-A)x=0.$
+$$ - \boldsymbol {A} = \left(\begin{array}{c c}- 1&2\\2&- 4\end{array}\right)\rightarrow \left(\begin{array}{c c}- 1&2\\0&0\end{array}\right). $$
+于是, $r(0E-A)=1$ ,求得 $\boldsymbol{\xi}_{2}=(2,1)^{\mathrm{T}}$ 为 $(0E-A)x=0$ 的一个基础解系. $(2,1)^{\mathrm{T}}$ 为A的属于特征值0的一个特征向量.
+取 $P_{1}=\begin{pmatrix}-1&2\\2&1\end{pmatrix}$ ，则 $P_{1}^{-1}AP_{1}=\begin{pmatrix}5&0\\0&0\end{pmatrix}$ .
+计算 B 的属于特征值 5 的特征向量.
+考虑 $(5E-B)x=0.$
+$$ 5 \pmb {E} - \pmb {B} = \left(\begin{array}{c c}1&- 2\\- 2&4\end{array}\right)\rightarrow \left(\begin{array}{c c}1&- 2\\0&0\end{array}\right). $$
+于是, $r(5E-B)=1$ ,求得 $\boldsymbol{\eta}_{1}=(2,1)^{\mathrm{T}}$ 为 $(5E-B)x=0$ 的一个基础解系. $(2,1)^{\mathrm{T}}$ 为B的属于特征值5的一个特征向量.
+计算 B 的属于特征值 0 的特征向量.
+考虑 $(0E-B)x=0.$
+$$ - \boldsymbol {B} = \left(\begin{array}{c c}- 4&- 2\\- 2&- 1\end{array}\right)\rightarrow \left(\begin{array}{c c}2&1\\0&0\end{array}\right). $$
+于是, $r(0E-B)=1$ ,求得 $\boldsymbol{\eta}_{2}=(-1,2)^{\mathrm{T}}$ 为 $(0E-B)x=0$ 的一个基础解系. $(-1,2)^{\mathrm{T}}$ 为B的属于特征值0的一个特征向量.
+取 $P_{2}=\begin{pmatrix}2&-1\\1&2\end{pmatrix}$ ，则 $P_{2}^{-1}BP_{2}=\begin{pmatrix}5&0\\0&0\end{pmatrix}$ .
+由于 $B = P_{2}P_{1}^{-1}AP_{1}P_{2}^{-1}$ ，故取 $Q = P_{1}P_{2}^{-1}$ ，则 $Q^{-1}AQ = B$ .
+计算得 $P_{2}^{-1} = \frac{1}{5}\begin{pmatrix} 2 & 1 \\ -1 & 2 \end{pmatrix}$ ，则 $Q = \frac{1}{5}\begin{pmatrix} -1 & 2 \\ 2 & 1 \end{pmatrix}\begin{pmatrix} 2 & 1 \\ -1 & 2 \end{pmatrix} = \begin{pmatrix} -\frac{4}{5} & \frac{3}{5} \\ \frac{3}{5} & \frac{4}{5} \end{pmatrix}$ 。并且，Q 已经是正交矩阵，无需再单位正交化。
+因此, $Q=\begin{pmatrix}-\frac{4}{5}&\frac{3}{5}\\\frac{3}{5}&\frac{4}{5}\end{pmatrix},f(x_{1},x_{2})$ 经过正交变换 $\begin{pmatrix}x_{1}\\x_{2}\end{pmatrix}=Q\begin{pmatrix}y_{1}\\y_{2}\end{pmatrix}$ 化为二次型 $g(y_{1},y_{2})$ ."
+zt-032105,真题,线性代数,第六章 二次型,数三2021,5,选择题,,,"(5) 二次型 $f(x_{1}, x_{2}, x_{3}) = (x_{1} + x_{2})^{2} + (x_{2} + x_{3})^{2} - (x_{3} - x_{1})^{2}$ 的正惯性指数与负惯性指数依次为( )","2,0.","1,1.","2,1.","1,2.","答案 B.
+分析 本题主要考查二次型的正、负惯性指数.
+惯性定理 设二次型 $f = x^{T}Ax$ 的秩为 r，且有两个可逆变换 x = Cy 及 x = Pz，使
+$$ f = k _ {1} y _ {1} ^ {2} + k _ {2} y _ {2} ^ {2} + \dots + k _ {r} y _ {r} ^ {2} \quad (k _ {i} \neq 0) $$
+及
+$$ f = \lambda_ {1} z _ {1} ^ {2} + \lambda_ {2} z _ {2} ^ {2} + \dots + \lambda_ {r} z _ {r} ^ {2} \quad (\lambda_ {i} \neq 0), $$
+则 $k_{1}, k_{2}, \cdots, k_{r}$ 中正数的个数与 $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{r}$ 中正数的个数相等.
+二次型的标准形中正系数的个数称为二次型的正惯性指数,负系数的个数称为负惯性指数.二次型通过可逆线性变换可化为标准形,在此过程中,二次型的正、负惯性指数不变.
+解（法一）令 $\left\{ \begin{array}{l} y_{1} = x_{1} + x_{2}, \\ y_{2} = x_{2} + x_{3}, \\ y_{3} = x_{3}, \end{array} \right.$ 则 $x_{3} - x_{1} = y_{2} - y_{1}$ ，且该变换为可逆线性变换。在该变换下，二次型 $f(x_{1}, x_{2}, x_{3})$ 化为
+$$ g \left(y _ {1}, y _ {2}, y _ {3}\right) = y _ {1} ^ {2} + y _ {2} ^ {2} - \left(y _ {2} - y _ {1}\right) ^ {2} = 2 y _ {1} y _ {2}. $$
+再令 $\left\{\begin{aligned}y_{1}&=z_{1}+z_{2},\\ y_{2}&=z_{1}-z_{2},\\ y_{3}&=z_{3},\end{aligned}\right.$ 则 $g(y_{1},y_{2},y_{3})$ 化为
+$$ h \left(z _ {1}, z _ {2}, z _ {3}\right) = 2 \left(z _ {1} + z _ {2}\right) \left(z _ {1} - z _ {2}\right) = 2 z _ {1} ^ {2} - 2 z _ {2} ^ {2}. $$
+因此， $f(x_{1},x_{2},x_{3})$ 的一个标准形为 $2z_{1}^{2}-2z_{2}^{2}$ ，其正、负惯性指数分别为1,1.应选B.
+(法二) 将 $f(x_{1}, x_{2}, x_{3})$ 展开可得
+$$ f \left(x _ {1}, x _ {2}, x _ {3}\right) = 2 x _ {2} ^ {2} + 2 x _ {1} x _ {2} + 2 x _ {2} x _ {3} + 2 x _ {1} x _ {3}. $$
+该二次型对应的矩阵为 $A = \begin{pmatrix} 0 & 1 & 1 \\ 1 & 2 & 1 \\ 1 & 1 & 0 \end{pmatrix}$ . 不难发现, A 的第二行为第一行与第三行的和, 故 $r(A) \leqslant 2$ . 又因为 A 有一个 2 阶非零子式 $\begin{vmatrix} 0 & 1 \\ 1 & 2 \end{vmatrix}$ , 所以 $r(A) \geqslant 2$ . 于是, $r(A) = 2$ .
+由于二次型的正、负惯性指数之和等于其对应矩阵的秩,而选项 C、D 的两数之和均为 3,故可排除选项 C、D.
+另一方面,若f的负惯性指数为0,则f非负,即对任意 $(x_{1},x_{2},x_{3})$ ,均有 $f(x_{1},x_{2},x_{3})\geqslant0$ .但是, $f(1,0,-1)=1+1-4<0$ ,矛盾.因此,选项A不正确.
+根据排除法,应选 B.
+拓展
+正、负惯性指数是二次型中的重要概念.
+下面我们给出求二次型的正、负惯性指数的两种常用方法.
+① 特征值法. 计算二次型对应的实对称矩阵的特征值, 正特征值的个数为正惯性指数, 负特征值的个数为负惯性指数.
+② 配方法.
+情形1:二次型含平方项.
+若二次型中含有某变量的平方,则先集中处理含该变量的项,对含该变量的项配方,直至全部配成完全平方,再利用同样的方法处理含其他变量的项.
+例如： $f = x_{1}^{2} + 2x_{2}^{2} + 6x_{3}^{2} + 2x_{1}x_{2} - 2x_{1}x_{3} + 2x_{2}x_{3}$ 可如下配方.
+$$ f = \left(x _ {1} + x _ {2} - x _ {3}\right) ^ {2} + x _ {2} ^ {2} + 5 x _ {3} ^ {2} + 4 x _ {2} x _ {3} = \left(x _ {1} + x _ {2} - x _ {3}\right) ^ {2} + \left(x _ {2} + 2 x _ {3}\right) ^ {2} + x _ {3} ^ {2}. $$
+情形2:二次型不含平方项.
+若二次型中只含有混合项,则先选取其中一个,利用平方差公式将混合项转化为平方项,再进行配方.
+例如： $f = x_{1}x_{2}$ . 令 $x_{1} = y_{1} + y_{2}$ ， $x_{2} = y_{1} - y_{2}$ ，则 f 可化为 $y_{1}^{2} - y_{2}^{2}$ .
+任何二次型都可以利用上述两种方法进行配方. 不过, 配方法常用于较简单的二次型. 下面是历年数三中的一些同类题.
+【例】二次型 $f(x_{1},x_{2},x_{3})=x_{1}^{2}+3x_{2}^{2}+x_{3}^{2}+2x_{1}x_{2}+2x_{1}x_{3}+2x_{2}x_{3}$ ，则f的正惯性指数为____。(2011年数学二试题)
+答案 2.
+【例】设二次型 $f(x_{1},x_{2},x_{3})=x_{1}^{2}-x_{2}^{2}+2ax_{1}x_{3}+4x_{2}x_{3}$ 的负惯性指数为1，则a的取值范围是____。（2014年数学一、二、三试题）
+答案 [-2, 2].
+【例】设二次型 $f(x_{1},x_{2},x_{3})=a(x_{1}^{2}+x_{2}^{2}+x_{3}^{2})+2x_{1}x_{2}+2x_{2}x_{3}+2x_{1}x_{3}$ 的正、负惯性指数分别为1,2，则( )（2016年数学二、三试题） (A)a>1. (B)a<-2. (C)-2<a<1. (D)a=1或a=-2. 答案 C
+答案 C."
+zt-032221,真题,线性代数,第六章 二次型,数三2022,21,解答题,,,"(21) ( 12 分)
+已知二次型 $f(x_{1},x_{2},x_{3}) = 3x_{1}^{2} + 4x_{2}^{2} + 3x_{3}^{2} + 2x_{1}x_{3}.$
+（I）求正交变换 $x = Qy$ 将 $f(x_{1}, x_{2}, x_{3})$ 化为标准形；
+（Ⅱ）证明： $\min_{x\neq0}\frac{f(x)}{x^{T}x}=2.$",,,,,"分析 本题主要考查二次型在正交变换下的标准形及其应用.
+第（Ⅰ）问较常规，写出f对应的对称矩阵A，计算A的一组线性无关的特征向量并单位正交化即可.
+注意到
+$$ \boldsymbol {x} ^ {\mathrm{T}} \boldsymbol {x} = (\boldsymbol {Q} \boldsymbol {y}) ^ {\mathrm{T}} \boldsymbol {Q} \boldsymbol {y} = \boldsymbol {y} ^ {\mathrm{T}} \boldsymbol {Q} ^ {\mathrm{T}} \boldsymbol {Q} \boldsymbol {y} \frac {\boldsymbol {Q} ^ {\mathrm{T}} \boldsymbol {Q} = \boldsymbol {E}}{\boldsymbol {y} ^ {\mathrm{T}} \boldsymbol {y}}, $$
+即正交变换并不改变向量的长度,故可以利用第(Ⅰ)问所得标准形讨论 $\frac{f(x)}{x^{T}x}$ 的值.
+解（I）由 $f$ 的表达式可得 $f$ 对应的矩阵 $\mathbf{A} = \begin{pmatrix} 3 & 0 & 1 \\ 0 & 4 & 0 \\ 1 & 0 & 3 \end{pmatrix}$ .
+计算 A 的特征多项式.
+$$ \left| \lambda E - A \right| = \left| \begin{array}{c c c} \lambda - 3 & 0 & - 1 \\ 0 & \lambda - 4 & 0 \\ - 1 & 0 & \lambda - 3 \end{array} \right| = (\lambda - 4) [ (\lambda - 3) ^ {2} - 1 ] = (\lambda - 4) ^ {2} (\lambda - 2). $$
+A 的特征值为 4,4,2.
+分别计算 A 的属于特征值 4 和 2 的特征向量.
+考虑 $(4E-A)x=0.$
+$$ 4 \boldsymbol {E} - \boldsymbol {A} = \left(\begin{array}{c c c}1&0&- 1\\0&0&0\\- 1&0&1\end{array}\right)\rightarrow \left(\begin{array}{c c c}1&0&- 1\\0&0&0\\0&0&0\end{array}\right). $$
+$\pmb{\xi}_{1}=\begin{pmatrix}1\\0\\1\end{pmatrix}$ 和 $\pmb{\xi}_{2}=\begin{pmatrix}0\\1\\0\end{pmatrix}$ 为 A 的属于特征值 4 的两个线性无关的特征向量.
+考虑 $(2E-A)x=0.$
+$$ 2 E - A = \left(\begin{array}{c c c}{- 1}&{0}&{- 1}\\{0}&{- 2}&{0}\\{- 1}&{0}&{- 1}\end{array}\right)\rightarrow \left(\begin{array}{c c c}{1}&{0}&{1}\\{0}&{1}&{0}\\{0}&{0}&{0}\end{array}\right). $$
+$\xi_{3}=\begin{pmatrix}-1\\0\\1\end{pmatrix}$ 为A的属于特征值2的一个特征向量.
+由于 $\xi_{1},\xi_{2},\xi_{3}$ 相互正交, 故只需将它们各自单位化即可得一组相互正交的单位特征向量.
+$$ \boldsymbol {\varepsilon} _ {1} = \frac {\boldsymbol {\xi} _ {1}}{\| \boldsymbol {\xi} _ {1} \|} = \frac {1}{\sqrt {2}} \left( \begin{array}{l} 1 \\ 0 \\ 1 \end{array} \right), \quad \boldsymbol {\varepsilon} _ {2} = \frac {\boldsymbol {\xi} _ {2}}{\| \boldsymbol {\xi} _ {2} \|} = \left( \begin{array}{l} 0 \\ 1 \\ 0 \end{array} \right), \quad \boldsymbol {\varepsilon} _ {3} = \frac {\boldsymbol {\xi} _ {3}}{\| \boldsymbol {\xi} _ {3} \|} = \frac {1}{\sqrt {2}} \left( \begin{array}{l} - 1 \\ 0 \\ 1 \end{array} \right). $$
+令 $Q = (\varepsilon_{1}, \varepsilon_{2}, \varepsilon_{3})$ ，可得 $Q^{-1}AQ = Q^{T}AQ = \begin{pmatrix} 4 & 0 & 0 \\ 0 & 4 & 0 \\ 0 & 0 & 2 \end{pmatrix}$ ，即正交变换 x = Qy 将二次型 f 化为标准形 $4y_{1}^{2} + 4y_{2}^{2} + 2y_{3}^{2}$ .
+（Ⅱ）由第（Ⅰ）问可知，在正交变换 x = Qy 下， $f(x_{1}, x_{2}, x_{3})$ 的标准形为 $4y_{1}^{2} + 4y_{2}^{2} + 2y_{3}^{2}$ . 又因为
+$$ \boldsymbol {x} ^ {\mathrm{T}} \boldsymbol {x} = (\boldsymbol {Q} \boldsymbol {y}) ^ {\mathrm{T}} \boldsymbol {Q} \boldsymbol {y} = \boldsymbol {y} ^ {\mathrm{T}} \boldsymbol {Q} ^ {\mathrm{T}} \boldsymbol {Q} \boldsymbol {y} \frac {\boldsymbol {Q} ^ {\mathrm{T}} \boldsymbol {Q} = \boldsymbol {E}}{\text { }} \boldsymbol {y} ^ {\mathrm{T}} \boldsymbol {y} = y _ {1} ^ {2} + y _ {2} ^ {2} + y _ {3} ^ {2}, $$
+所以对 $x \neq 0$ ,
+$$ \frac {f (\boldsymbol {x})}{\boldsymbol {x} ^ {\mathrm{T}} \boldsymbol {x}} \overset{\boldsymbol {x} = \boldsymbol {Q y}}{=} \frac {4 y _ {1} ^ {2} + 4 y _ {2} ^ {2} + 2 y _ {3} ^ {2}}{y _ {1} ^ {2} + y _ {2} ^ {2} + y _ {3} ^ {2}} \geqslant \frac {2 y _ {1} ^ {2} + 2 y _ {2} ^ {2} + 2 y _ {3} ^ {2}}{y _ {1} ^ {2} + y _ {2} ^ {2} + y _ {3} ^ {2}} = 2. $$
+取 $y_{0}$ 满足 $y_{1}=y_{2}=0,y_{3}\neq0,x_{0}=Qy_{0}$ ，即 $x_{0}=y_{3}\varepsilon_{3}$ 时，可得 $\frac{f(x_{0})}{x_{0}^{T}x_{0}}=2.$
+因此, $\min_{x\neq0}\frac{f(x)}{x^{T}x}=2.$
+注 实际上,由第(Ⅱ)问的方法,我们还可以得到 $\max_{x\neq0}\frac{f(x)}{x^{T}x}=4.$ 对 $x\neq0$ ,
+$$ \frac {f (\boldsymbol {x})}{\boldsymbol {x} ^ {\mathrm{T}} \boldsymbol {x}} \overset{\boldsymbol {x} = Q \boldsymbol {y}}{=} \frac {4 y _ {1} ^ {2} + 4 y _ {2} ^ {2} + 2 y _ {3} ^ {2}}{y _ {1} ^ {2} + y _ {2} ^ {2} + y _ {3} ^ {2}} \leqslant \frac {4 y _ {1} ^ {2} + 4 y _ {2} ^ {2} + 4 y _ {3} ^ {2}}{y _ {1} ^ {2} + y _ {2} ^ {2} + y _ {3} ^ {2}} = 4. $$
+取 $y_{1}$ 满足 $y_{1}, y_{2}$ 不全为零, $y_{3} = 0, x_{1} = Qy_{1}$ , 即 $x_{1} = y_{1}\varepsilon_{1} + y_{2}\varepsilon_{2}$ 时, 可得 $\frac{f(x_{1})}{x_{1}^{T}x_{1}} = 4$ ."
+zt-032306,真题,线性代数,第六章 二次型,数三2023,6,选择题,,,"(6) 二次型 $f(x_{1}, x_{2}, x_{3}) = (x_{1} + x_{2})^{2} + (x_{1} + x_{3})^{2} - 4(x_{2} - x_{3})^{2}$ 的规范形为( )",$y_{1}^{2}+y_{2}^{2}.$,$y_{1}^{2}-y_{2}^{2}.$,$y_{1}^{2}+y_{2}^{2}-4y_{3}^{2}.$,$y_{1}^{2}+y_{2}^{2}-y_{3}^{2}.$,"答案 B.
+分析 本题主要考查二次型的规范形.
+要求二次型的规范形,可以计算二次型的正、负惯性指数.本题可以写出二次型对应的对称矩阵并分析其特征值,也可以直接将二次型化为标准形.
+解（法一）将 $f(x_{1},x_{2},x_{3})$ 展开可得
+$$ f \left(x _ {1}, x _ {2}, x _ {3}\right) = 2 x _ {1} ^ {2} - 3 x _ {2} ^ {2} - 3 x _ {3} ^ {2} + 2 x _ {1} x _ {2} + 2 x _ {1} x _ {3} + 8 x _ {2} x _ {3}. $$
+该二次型对应的矩阵为 $A = \begin{pmatrix} 2 & 1 & 1 \\ 1 & -3 & 4 \\ 1 & 4 & -3 \end{pmatrix}$ .
+计算可得
+$$ | \boldsymbol {A} | = \left| \begin{array}{c c c} 2 & 1 & 1 \\ 1 & - 3 & 4 \\ 1 & 4 & - 3 \end{array} \right| \stackrel {r _ {2} + r _ {3}} {=} \left| \begin{array}{c c c} 2 & 1 & 1 \\ 2 & 1 & 1 \\ 1 & 4 & - 3 \end{array} \right| = 0. $$
+由于 $\left|A\right|=0$ , 故 A 有零特征值, 从而 $r(A)\leqslant2$ , f 的正、负惯性指数之和不超过 2.
+若 $f$ 的负惯性指数为0，则 $f$ 非负，即对任意 $(x_{1},x_{2},x_{3})$ ，均有 $f(x_{1},x_{2},x_{3})\geqslant 0.$ 但是， $f(0,0,1) = 0 + 1 - 4 = -3 < 0$ ，矛盾.同理，若 $f$ 的正惯性指数为0，则 $f$ 非正，即对任意 $(x_{1},x_{2},x_{3})$ ，均有 $f(x_{1},x_{2},x_{3})\leqslant 0.$ 但是， $f(1,0,0) = 1 + 1 - 0 = 2 > 0,$ 矛盾
+由于 $f$ 的正、负惯性指数之和不超过2，而正、负惯性指数又均大于0，故其正、负惯性指数均为1.应选B.
+(法二) 记 $\left\{\begin{aligned}y_{1}&=x_{1}+x_{2},\\ y_{2}&=x_{1}+x_{3},\\ y_{3}&=x_{2}-x_{3},\end{aligned}\right.$ $P=\left(\begin{matrix}1&1&0\\ 1&0&1\\ 0&1&-1\end{matrix}\right)$ ，则 $\left(\begin{matrix}y_{1}\\ y_{2}\\ y_{3}\end{matrix}\right)=P\left(\begin{matrix}x_{1}\\ x_{2}\\ x_{3}\end{matrix}\right)$ .
+记 $\pmb{\Lambda} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -4 \end{pmatrix}$ , 则由 $f(x_{1}, x_{2}, x_{3}) = (x_{1} + x_{2})^{2} + (x_{1} + x_{3})^{2} - 4(x_{2} - x_{3})^{2}$ 可知,
+$$ f (x _ {1}, x _ {2}, x _ {3}) = y ^ {\mathrm{T}} \Lambda y \stackrel {y = P x} {=} x ^ {\mathrm{T}} P ^ {\mathrm{T}} \Lambda P x. $$
+于是, $A=P^{T}\Lambda P$ 为二次型 $f(x_{1},x_{2},x_{3})$ 对应的对称矩阵.
+又因为 $|\pmb{P}| = \left| \begin{array}{ccc}1 & 1 & 0\\ 1 & 0 & 1\\ 0 & 1 & -1 \end{array} \right| = 0$ ，所以 $|\pmb {A}| = 0$ ，从而 $\pmb{A}$ 有零特征值.
+其余同法一.
+（法三）令 $\left\{ \begin{array}{l} y_{1} = x_{1} + x_{2}, \\ y_{2} = x_{1} + x_{3}, \\ y_{3} = x_{3}, \end{array} \right.$ 则 $x_{2} - x_{3} = y_{1} - y_{2}$ ，且该变换为可逆线性变换。在该变换下，二次型 $f(x_{1}, x_{2}, x_{3})$ 化为
+$$ \begin{array}{r l} g (y _ {1}, y _ {2}, y _ {3}) & = y _ {1} ^ {2} + y _ {2} ^ {2} - 4 (y _ {1} - y _ {2}) ^ {2} = - 3 y _ {1} ^ {2} - 3 y _ {2} ^ {2} + 8 y _ {1} y _ {2} \\ & = - 3 y _ {1} ^ {2} + 3 \cdot \frac {8}{3} y _ {1} y _ {2} - 3 y _ {2} ^ {2} = - 3 \left(y _ {1} - \frac {4}{3} y _ {2}\right) ^ {2} - 3 y _ {2} ^ {2} + \frac {1 6}{3} y _ {2} ^ {2} \\ & = - 3 \left(y _ {1} - \frac {4}{3} y _ {2}\right) ^ {2} + \frac {7}{3} y _ {2} ^ {2}. \end{array} $$
+再令 $\left\{\begin{aligned}z_{1}&=y_{1}-\frac{4}{3}y_{2},\\ z_{2}&=y_{2},\\ z_{3}&=y_{3},\end{aligned}\right.$ 该变换为可逆线性变换.在该变换下,二次型 $g(y_{1},y_{2},y_{3})$ 化为 $h(z_{1},z_{2},z_{3})=-3z_{1}^{2}+\frac{7}{3}z_{2}^{2}.$
+因此， $f(x_{1},x_{2},x_{3})$ 的一个标准形为 $-3z_1^2 +\frac{7}{3} z_2^2$ ，其正、负惯性指数均为1.应选B.
+注 本题的法二运用线性变换把二次型改写成了平方和的形式,然而需要注意的是,这个线性变换并不可逆,故而这个平方和形式并不是原二次型的标准形.
+本题与2021年数学一、二、三试题中的一道选择题非常相似. 大家可以将下面这道题留作练习.
+【例】二次型 $f(x_{1},x_{2},x_{3})=(x_{1}+x_{2})^{2}+(x_{2}+x_{3})^{2}-(x_{3}-x_{1})^{2}$ 的正惯性指数与负惯性指数依次为( )（2021年数学一、二、三试题） (A) 2,0. (B) 1,1. (C) 2,1. (D) 1,2.
+答案 B."

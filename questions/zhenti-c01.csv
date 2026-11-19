@@ -1,0 +1,644 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+zt-030901,真题,微积分,第一章 函数、极限、连续,数三2009,1,选择题,,题型九 讨论连续性及间断点类型,(1) 函数 $f(x)=\frac{x-x^{3}}{\sin\pi x}$ 的可去间断点的个数为( ),1,2,3,无穷多个.,"答案 C.
+分析 本题主要考查间断点的概念与极限运算.
+间断点的定义 设函数 $f(x)$ 在点 $x_0$ 的去心邻域内有定义. 若 $f(x)$ 满足下列情形之一,
+- 在 $x = x_0$ 没有定义；
+- 在 $x = x_0$ 有定义, $\lim\limits_{x \to x_0} f(x)$ 不存在或者 $\lim\limits_{x \to x_0} f(x)$ 存在但 $\lim\limits_{x \to x_0} f(x) \neq f(x_0)$ , 则称 $f(x)$ 在 $x = x_0$ 不连续, $x_0$ 为 $f(x)$ 的间断点.
+间断点的分类
+
+| 类型 | 定义 | 相关概念 |
+| --- | --- | --- |
+| 第一类间断点 | $f(x_{0}^{-})$与$f(x_{0}^{+})$均存在 | 可去间断点、跳跃间断点 |
+| 第二类间断点 | $f(x_{0}^{-}),f(x_{0}^{+})$至少有一个不存在 | 无穷间断点、振荡间断点 |
+
+![image](images/zt-030901.jpg)
+![image](images/zt-030901-2.jpg)
+![image](images/zt-030901-3.jpg)
+![image](images/zt-030901-4.jpg)
+(a)(c)(b)(d)
+- 可去间断点满足 $f(x_0^-) = f(x_0^+)$ . 例如: $f(x) = \frac{x^2 - 1}{x - 1}$ . $x = 1$ 为 $f(x)$ 的可去间断点, 如图 (a).
+- 跳跃间断点满足 $f(x_{0}^{-}) \neq f(x_{0}^{+})$ . 例如: $f(x) = \begin{cases} 1, & x \leqslant 0, \\ 2, & x > 0. \end{cases}$ $x = 0$ 为 $f(x)$ 的跳跃间断点, 如图 (b).
+- 无穷间断点满足 $f(x_{0}^{-}), f(x_{0}^{+})$ 至少有一个为 $\infty$ . 例如: $f(x) = \tan x. x = \pm \frac{\pi}{2}$ 为 $f(x)$ 的无穷间断点, 如图(c). 注意: $\tan x$ 在 $x = \pm \frac{\pi}{2}$ 的左、右极限不相等. $\lim\limits_{x \to (\pm \frac{\pi}{2})^{-}} \tan x = +\infty, \lim\limits_{x \to (\pm \frac{\pi}{2})^{+}} \tan x = -\infty.$
+- 振荡间断点满足在该间断点附近,函数值在某个区间内变动无限多次.例如: $f(x)=\sin\frac{1}{x}$ . x=0 为 $f(x)$ 的振荡间断点,如图(d).
+解 因为当 k 为整数时, $\sin k\pi = 0$ , 所以 $f(x)$ 在 x = k (k 为整数) 时无定义, 在其余点连续. 当 $k - k^{3} \neq 0$ 时, 即 $k \neq 0, \pm 1$ 时,
+$$ \lim\limits_ {x \rightarrow k} \frac {x - x ^ {3}}{\sin \pi x} = \infty . $$
+$x = k$ 为 $f(x)$ 的无穷间断点.
+当 $k - k^3 = 0$ 时，即 $k = 0, \pm 1$ 时， $\lim\limits_{x \to k} f(x)$ 为 $\frac{0}{0}$ 型未定式极限，可用洛必达法则求极限.
+$$ \lim\limits_ {x \to 0} {\frac {x - x ^ {3}}{\sin \pi x}} {\overset {\text {洛必达}} {=}} \lim\limits_ {x \to 0} {\frac {1 - 3 x ^ {2}}{\pi \cos \pi x}} = {\frac {1}{\pi}}, $$
+$$ \lim\limits_ {x \to 1} {\frac {x - x ^ {3}}{\sin \pi x}} {\overset {\text {洛必达}} {=}} \lim\limits_ {x \to 1} {\frac {1 - 3 x ^ {2}}{\pi \cos \pi x}} = {\frac {- 2}{- \pi}} = {\frac {2}{\pi}}, $$
+$$ \lim\limits_ {x \to - 1} {\frac {x - x ^ {3}}{\sin \pi x}} {\overset {\text {洛必达}} {=}} \lim\limits_ {x \to - 1} {\frac {1 - 3 x ^ {2}}{\pi \cos \pi x}} = {\frac {- 2}{- \pi}} = {\frac {2}{\pi}}. $$
+因此， $f(x)$ 共有3个可去间断点， $x = 0$ ， $\pm 1.$ 应选C.
+
+注 ① 解题时要注意题目要求.本题要求的是可去间断点的个数,而不是间断点或无穷间断点的个数.要注意从无穷多个间断点中找出极限可能存在的点,也就是使分子 $x-x^{3}\rightarrow0$ 的点.若要求间断点或无穷间断点的个数,则答案为无穷多个.
+② 也可以使用等价无穷小替换计算 $\lim\limits_{x\to 0}\frac{x - x^3}{\sin\pi x}.$
+$$ \lim\limits_ {x \to 0} \frac {x - x ^ {3}}{\sin \pi x} \overset{\sin \pi x \sim \pi x}{=} \lim\limits_ {x \to 0} \frac {1 - x ^ {2}}{\pi} = \frac {1}{\pi}. $$
+注意: 当 $x \to 1$ 或 $x \to -1$ 时, $\sin \pi x$ 与 $\pi x$ 不是等价无穷小量. 下面的计算是错误的.
+$$ \lim\limits_ {x \rightarrow 1} \frac {x - x ^ {3}}{\sin \pi x} \overset{\sin \pi x \sim \pi x}{=} \lim\limits_ {x \rightarrow 1} \frac {1 - x ^ {2}}{\pi} = 0, \quad \lim\limits_ {x \rightarrow - 1} \frac {x - x ^ {3}}{\sin \pi x} \overset{\sin \pi x \sim \pi x}{=} \lim\limits_ {x \rightarrow - 1} \frac {1 - x ^ {2}}{\pi} = 0. $$
+事实上,写出 $\sin \pi x$ 在 $x = \pm 1$ 处的一阶泰勒公式,可得
+$$ \sin \pi x = \pi \cos \pi \cdot (x - 1) + o (x - 1), \quad \sin \pi x = \pi \cos (- \pi) \cdot (x + 1) + o (x + 1). $$
+当 $x \to 1$ 时, $\sin \pi x \sim -\pi (x - 1)$ ; 当 $x \to -1$ 时, $\sin \pi x \sim -\pi (x + 1)$ ."
+zt-030902,真题,微积分,第一章 函数、极限、连续,数三2009,2,选择题,,题型八 无穷小量阶的比较,"(2) 当 $x \to 0$ 时, $f(x) = x - \sin ax$ 与 $g(x) = x^2 \ln (1 - bx)$ 是等价无穷小量, 则","$a = 1, b = -\frac{1}{6}$ .","$a = 1, b = \frac{1}{6}$ .","$a = -1, b = -\frac{1}{6}$ .","$a = -1, b = \frac{1}{6}$ .","答案 A.
+分析 本题主要考查等价无穷小量的概念,应从等价无穷小量的定义出发求解. 下面我们回顾一下无穷小量的定义与无穷小量的比较. 无穷小量的定义 若函数 $f(x)$ 当 $x\to x_{0}$ （或 $x\to\infty$ ）时的极限为零，则称函数 $f(x)$ 为当 $x\to$
+$x_0$ (或 $x \to \infty$ ) 时的无穷小量.
+记 $\alpha$ 和 $\beta$ 为同一个自变量的变化过程中的无穷小量, 且 $\alpha \neq 0$ , $\lim \frac{\beta}{\alpha}$ 为这个变化过程中的极限. 若 $\lim \frac{\beta}{\alpha} = 1$ , 则称 $\beta$ 与 $\alpha$ 是等价无穷小量, 记作 $\alpha \sim \beta$ . 若 $\lim \frac{\beta}{\alpha}$ 等于非零常数 $c$ , 则称 $\alpha$ 与 $\beta$ 是同阶无穷小量. 同阶无穷小量不一定是等价无穷小量. 请大家注意它们的区别.
+当 $x \to 0$ 时, 常见的等价无穷小量如下. (1) $\sin x \sim x$ , (2) $\tan x \sim x$ , (3) $1 - \cos x \sim \frac{x^2}{2}$ , (4) $\arcsin x \sim x$ , (5) $\arctan x \sim x$ , (6) $(1 + x)^{\alpha} - 1 \sim \alpha x (\alpha \neq 0)$ , (7) $e^x - 1 \sim x$ , (8) $a^x - 1 \sim x \ln a$ , (9) $\ln (1 + x) \sim x$ ,
+(10) $\log_{a}(1+x)\overset{\text{换底公式}}{=}\frac{\ln(1+x)}{\ln a}\sim\frac{x}{\ln a}$ ，其中a>0且 $a\neq1$ .
+解 由于 $x \to 0$ 时, $f(x)$ 与 $g(x)$ 是等价无穷小量, 故
+$$ \begin{array}{r l} & 1 = \lim\limits_ {x \to 0} \frac {f (x)}{g (x)} = \lim\limits_ {x \to 0} \frac {x - \sin a x}{x ^ {2} \ln (1 - b x)} \overset{\ln (1 - b x) \sim (- b x)}{=} \lim\limits_ {x \to 0} \frac {x - \sin a x}{- b x ^ {3}} \\ & \overset{\text {洛必达}}{=} \lim\limits_ {x \to 0} \frac {1 - a \cos a x}{- 3 b x ^ {2}} = I _ {1}. \end{array} $$
+由于 $\lim\limits_{x\to0}(-3bx^{2})=0$ ，故若 $I_{1}$ 存在，则 $\lim\limits_{x\to0}(1-a\cos ax)=0$ ，从而a=1。
+代入 $a = 1$ ，得
+$$ I _ {1} = \lim\limits_ {x \to 0} \frac {1 - \cos x}{- 3 b x ^ {2}} \overset{1 - \cos x \sim \frac {x ^ {2}}{2}}{=} \lim\limits_ {x \to 0} \frac {\frac {x ^ {2}}{2}}{- 3 b x ^ {2}} = - \frac {1}{6 b}. $$
+当 $b = -\frac{1}{6}$ 时， $I_{1}$ 存在且等于1.
+因此, 当 $a = 1, b = -\frac{1}{6}$ 时, $\lim\limits_{x \to 0} \frac{f(x)}{g(x)} = 1$ , $f(x)$ 与 $g(x)$ 是 $x \to 0$ 时的等价无穷小量. 应选 A."
+zt-030909,真题,微积分,第一章 函数、极限、连续,数三2009,9,填空题,,题型四 函数极限,(9) $\lim\limits_{x\to 0}\frac{\mathrm{e} - \mathrm{e}^{\cos x}}{\sqrt[3]{1 + x^2} - 1} =$,,,,,"答案 应填 $\frac{3}{2}e$ .
+分析 本题主要考查未定式极限的计算. 一般可利用等价无穷小替换、泰勒公式或洛必达法则来计算未定式极限. 本题中的极限是 $\frac{0}{0}$ 型.
+解 (法一)
+(法二)
+$$ \begin{array}{r l} & {\underset {x \to 0} {\lim} \frac {\mathrm{e} - \mathrm{e} ^ {\cos x}}{\sqrt [ 3 ]{1 + x ^ {2}} - 1} \overset{(1 + x) ^ {\alpha} - 1 \sim \alpha x}{=} \underset {x \to 0} {\lim} \frac {\mathrm{e} - \mathrm{e} ^ {\cos x}}{\frac {1}{3} x ^ {2}} \overset{\text {洛必达}}{=} \underset {x \to 0} {\lim} \frac {\mathrm{e} ^ {\cos x} \cdot \sin x}{\frac {2}{3} x}} \\ & {\qquad = \underset {x \to 0} {\lim} \frac {3}{2} \mathrm{e} ^ {\cos x} = \frac {3}{2} \mathrm{e}.} \\ & {\underset {x \to 0} {\lim} \frac {\mathrm{e} - \mathrm{e} ^ {\cos x}}{\sqrt [ 3 ]{1 + x ^ {2}} - 1} \overset{(1 + x) ^ {\alpha} - 1 \sim \alpha x}{=} \underset {x \to 0} {\lim} \frac {\mathrm{e} (1 - \mathrm{e} ^ {\cos x - 1})}{\frac {1}{3} x ^ {2}}} \\ & {\qquad \overset{\mathrm{e} ^ {\cos x - 1} - 1 \sim \cos x - 1}{=} \underset {x \to 0} {\lim} \frac {\mathrm{e} [ - (\cos x - 1) ]}{\frac {1}{3} x ^ {2}}} \\ & {\qquad \overset{1 - \cos x \sim \frac {1}{2} x ^ {2}}{=} \underset {x \to 0} {\lim} \frac {\frac {1}{2} \mathrm{e} x ^ {2}}{\frac {1}{3} x ^ {2}} = \frac {3}{2} \mathrm{e}.} \end{array} $$
+$$ \begin{array}{r l} & {\text {(法三)} \quad \lim\limits_ {x \to 0} \frac {\mathrm{e} - \mathrm{e} ^ {\cos x}}{\sqrt [ 3 ]{1 + x ^ {2}} - 1} = \lim\limits_ {x \to 0} \frac {\mathrm{e} ^ {1} - \mathrm{e} ^ {\cos x}}{\frac {1}{3} x ^ {2}}} \\ & {\qquad \frac {\text {拉格朗日}}{\text {中值定值}} \lim\limits_ {x \to 0} \frac {\mathrm{e} ^ {\xi_ {x}} (1 - \cos x)}{\frac {1}{3} x ^ {2}} (\xi_ {x} \text {在} 1 \text {与} \cos x \text {之间}, \text {当} x \to 0 \text {时}, \xi_ {x} \to 1)} \\ & {\qquad = \lim\limits_ {x \to 0} \mathrm{e} \cdot \frac {\frac {1}{2} x ^ {2}}{\frac {1}{3} x ^ {2}} = \frac {3}{2} \mathrm{e}.} \\ & {\text {(法四)} \quad \lim\limits_ {x \to 0} \frac {\mathrm{e} - \mathrm{e} ^ {\cos x}}{\sqrt [ 3 ]{1 + x ^ {2}} - 1} \overset{\text {洛必达}}{=} \lim\limits_ {x \to 0} \frac {\mathrm{e} ^ {\cos x} \cdot \sin x}{\frac {1}{3} (1 + x ^ {2}) ^ {- \frac {2}{3}} \cdot 2 x} = \lim\limits_ {x \to 0} \frac {3}{2} (1 + x ^ {2}) ^ {\frac {2}{3}} \cdot \frac {\mathrm{e} ^ {\cos x} \cdot \sin x}{x}} \\ & {\qquad = \frac {3}{2} \times 1 \times \mathrm{e} = \frac {3}{2} \mathrm{e}.} \end{array} $$
+拓展
+
+| 未定式 | 条件 | 结论 |
+| --- | --- | --- |
+| $\frac{0}{0}$型 | 设(1)$\lim\limits_{x \to a} f(x) = 0$且$\lim\limits_{x \to a} F(x) = 0$;(2)在点a的某去心邻域内,$f'(x)$及$F'(x)$都存在且$F'(x) \neq 0$;(3)$\lim\limits_{x \to a} \frac{f'(x)}{F'(x)}$存在(或为无穷大) | 则$\lim\limits_{x \to a} \frac{f(x)}{F(x)} = \lim\limits_{x \to a} \frac{f'(x)}{F'(x)}$ |
+| $\frac{\infty}{\infty}$型 | 设(1)$\lim\limits_{x \to a} f(x) = \infty$且$\lim\limits_{x \to a} F(x) = \infty$;(2)在点a的某去心邻域内,$f'(x)$及$F'(x)$都存在且$F'(x) \neq 0$;(3)$\lim\limits_{x \to a} \frac{f'(x)}{F'(x)}$存在(或为无穷大) |  |
+| $\frac{*}{\infty}$型 | 设(1)$\lim\limits_{x \to a} F(x) = \infty$(不要求$\lim\limits_{x \to a} f(x) = \infty$);(2)在点a的某去心邻域内,$f'(x)$及$F'(x)$都存在且$F'(x) \neq 0$;(3)$\lim\limits_{x \to a} \frac{f'(x)}{F'(x)}$存在(或为无穷大) |  |
+| 1a可以等于$\infty$.2$\frac{*}{\infty}$型洛必达法则不用考虑分子的极限情况. |  |  |"
+zt-031001,真题,微积分,第一章 函数、极限、连续,数三2010,1,选择题,,题型七 极限求参,"(1) 若 $\lim\limits_{x\to0}\left[\frac{1}{x}-\left(\frac{1}{x}-a\right)e^{x}\right]=1$ , 则 a 等于( )",0,1,2,3,"答案 C.
+分析 本题主要考查根据极限求未知参数. 对此类问题, 可以先求极限, 在求极限的过程中讨论参数的取值.
+解（法一）由于
+$$ \lim\limits_ {x \to 0} \left[ \frac {1}{x} - \left(\frac {1}{x} - a\right) \mathrm{e} ^ {x} \right] = \lim\limits_ {x \to 0} \frac {1 - (1 - a x) \mathrm{e} ^ {x}}{x} \stackrel {\text {洛必达}} {=} \lim\limits_ {x \to 0} \frac {a \mathrm{e} ^ {x} - (1 - a x) \mathrm{e} ^ {x}}{1} = a - 1, $$
+故由已知条件知 a - 1 = 1. 因此，a = 2. 应选 C.
+(法二) 由于当 $x \to 0$ 时, $\mathrm{e}^x - 1 \sim x$ , 故
+$$ \lim\limits_ {x \rightarrow 0} \left[ \frac {1}{x} - \left(\frac {1}{x} - a\right) \mathrm{e} ^ {x} \right] = \lim\limits_ {x \rightarrow 0} \left(\frac {1 - \mathrm{e} ^ {x}}{x} + a \mathrm{e} ^ {x}\right) = - 1 + a = 1. $$
+解得 a = 2. 应选 C.
+注 法二利用的是极限四则运算法则中的加法法则. 若 $\lim\limits_{x\to x_0}f(x)$ ， $\lim\limits_{x\to x_0}g(x)$ 均存在，则 $\lim\limits_{x\to x_0}[f(x)+g(x)]=\lim\limits_{x\to x_0}f(x)+\lim\limits_{x\to x_0}g(x)$ . 但若按以下方式解题，则是错误的. $\lim\limits_{x\to0}\left[\frac{1}{x}-\left(\frac{1}{x}-a\right)e^{x}\right]=\lim\limits_{x\to0}\left[\frac{1}{x}-\left(\frac{1}{x}-a\right)\right]=a.$
+上述过程不满足极限的四则运算法则."
+zt-031004,真题,微积分,第一章 函数、极限、连续,数三2010,4,选择题,,题型八 无穷小量阶的比较,"(4) 设 $f(x)=\ln^{10}x$ , $g(x)=x$ , $h(x)=\mathrm{e}^{\frac{x}{10}}$ , 则当 x 充分大时有 ( )",$g(x)<h(x)<f(x).$,$h(x)<g(x)<f(x).$,$f(x)<g(x)<h(x).$,$g(x)<f(x)<h(x).$,"答案 C.
+分析 本题主要考查无穷大量的比较.
+$f(x), g(x), h(x)$ 均为当 $x \to +\infty$ 时的无穷大量, 比较当 x 充分大时的各函数的大小, 可以通过比较当 $x \to +\infty$ 时, 各函数比值的极限来实现.
+设 $f_{1}(x)$ ， $f_{2}(x)>0$ ，若 $\lim\limits_{x\to+\infty}\frac{f_{1}(x)}{f_{2}(x)}<1$ ，即 $\lim\limits_{x\to+\infty}\frac{f_{1}(x)-f_{2}(x)}{f_{2}(x)}<0$ ，则由极限的局部保号性可知，当x充分大时， $f_{1}(x)<f_{2}(x)$ ；同理，若 $\lim\limits_{x\to+\infty}\frac{f_{1}(x)}{f_{2}(x)}>1$ ，则当x充分大时， $f_{1}(x)>f_{2}(x)$ ；若 $\lim\limits_{x\to+\infty}\frac{f_{1}(x)}{f_{2}(x)}=1$ ，则需根据具体情况来判断.
+此外,我们也可以通过考虑两个函数的差与0的大小来判断.
+解（法一）由于
+$$ \lim\limits_ {x \to + \infty} \frac {h (x)}{g (x)} = \lim\limits_ {x \to + \infty} \frac {\mathrm{e} ^ {\frac {x}{1 0}}}{x} \stackrel {\text {洛必达}} {=} \lim\limits_ {x \to + \infty} \frac {\frac {1}{1 0} \mathrm{e} ^ {\frac {x}{1 0}}}{1} = + \infty , $$
+故当 x 充分大时， $h(x) > g(x)$ .
+又由于
+$$ \lim\limits_ {x \to + \infty} {\frac {g (x)}{f (x)}} = \lim\limits_ {x \to + \infty} {\frac {x}{\ln^ {1 0} x}} {\overset {\text {洛必达}} {=}} \lim\limits_ {x \to + \infty} {\frac {x}{1 0 \ln^ {9} x}} {\overset {\text {洛必达}} {=}} \dots {\overset {\text {洛必达}} {=}} \lim\limits_ {x \to + \infty} {\frac {x}{1 0 !}} = + \infty , $$
+故当 x 充分大时， $g(x) > f(x)$ .
+综上所述,当 x 充分大时, $h(x) > g(x) > f(x)$ . 应选 C.
+（法二）令 $H(x) = h(x) - g(x) = \mathrm{e}^{\frac{x}{10}} - x$ ，则 $H^{\prime}(x) = \frac{1}{10}\mathrm{e}^{\frac{x}{10}} - 1.$ 由于当 $x\geqslant 100$ 时， $\frac{1}{10}\mathrm{e}^{\frac{x}{10}} - 1\geqslant$ $\frac{1}{10}\mathrm{e}^{10} - 1 > 0$ ，故 $H(x)$ 在[100， $+\infty$ )上为单调增加函数，从而当 $x\geqslant 100$ 时，
+$$ h (x) - g (x) \geqslant h (1 0 0) - g (1 0 0) = \mathrm{e} ^ {1 0} - 1 0 0 \geqslant 2 ^ {1 0} - 1 0 0 > 0. $$
+令 $F(x) = x^{\frac{1}{10}} - \ln x$ ，则 $F'(x) = \frac{1}{10} x^{-\frac{9}{10}} - \frac{1}{x} = \frac{1}{10x} (x^{\frac{1}{10}} - 10)$ . 由于当 $x > 10^{10}$ 时， $F'(x) > 0$ ，故 $F(x)$ 在 $[10^{10}, +\infty)$ 上为单调增加函数，从而当 $x > 10^{100}$ 时， $F(x) \geqslant F(10^{100}) = 10^{10} - 100\ln 10 > 0$ ，即 $x^{\frac{1}{10}} > \ln x$ . 因此， $x > \ln^{10}x$ .
+综上所述,当 x 充分大时, $h(x) > g(x) > f(x)$ . 应选 C.
+注 ① 设 $\alpha, \beta, \gamma$ 为任意正常数, 则 $\lim\limits_{x \to +\infty} \frac{\mathrm{e}^{\gamma x}}{x^{\beta}} = +\infty$ , $\lim\limits_{x \to +\infty} \frac{x^{\beta}}{\ln^{\alpha} x} = +\infty$ . 这说明当 $x \to +\infty$ 时, $\mathrm{e}^{\gamma x}$ 是比 $x^{\beta}$ 高阶的无穷大量, $x^{\beta}$ 是比 $\ln^{\alpha} x$ 高阶的无穷大量.
+② 本题不适合使用特殊值法. 只有当 $x$ 充分大的时候, 即从某一个数开始, 这三个函数的大小关系才保持不变, 但这个界需要通过计算才能确定. 因此, 当用特殊值时, 若选取的特殊值不够大, 则可能无法排除错误选项."
+zt-031015,真题,微积分,第一章 函数、极限、连续,数三2010,15,解答题,,题型四 函数极限,(15) ( 10 分) 求极限 $\lim\limits_{x\to+\infty}\left(x^{\frac{1}{x}}-1\right)^{\frac{1}{\ln x}}$ .,,,,,"分析 本题主要考查 $0^{0}$ 型未定式极限的计算.
+由于 $\lim\limits_{x\to +\infty}x^{\frac{1}{x}} = \lim\limits_{x\to +\infty}\mathrm{e}^{\frac{\ln x}{x}} = \mathrm{e}^{\lim\limits_{x\to +\infty}\frac{\ln x}{x}}$ 洛必达 $\mathrm{e}^{\lim\limits_{x\to +\infty}\frac{1}{x}} = 1$ ，故所求极限为 $0^{0}$ 型极限.一般将表达式改写
+成指数形式或取对数,将极限转化为 $\infty \cdot 0$ 型或 $\frac{\infty}{\infty}$ 型未定式.
+解（法一）记 $y = (x^{\frac{1}{x}} - 1)^{\frac{1}{\ln x}}$ ，则
+$$ \ln y = \frac {\ln (x ^ {\frac {1}{x}} - 1)}{\ln x}. $$
+利用洛必达法则计算 $\lim\limits_{x\to +\infty}\ln y$ 得，
+$$ \begin{array}{r l} & {\underset {x \to + \infty} {\lim} \frac {\ln (x ^ {\frac {1}{x}} - 1)}{\ln x} = \underset {x \to + \infty} {\lim} \frac {\ln (\mathrm{e} ^ {\frac {\ln x}{x}} - 1)}{\ln x} \overset {\text {洛必达}} {=} \underset {x \to + \infty} {\lim} \frac {\mathrm{e} ^ {\frac {\ln x}{x}} \cdot \frac {1 - \ln x}{x ^ {2}}}{\frac {1}{x} (\mathrm{e} ^ {\frac {\ln x}{x}} - 1)} \overset {\underset {x \to + \infty} {\lim} \mathrm{e} ^ {\frac {\ln x}{x}} = 1} {\underset {x \to + \infty} {\lim}} \frac {\frac {1 - \ln x}{x}}{\frac {\ln x}{x}}} \\ & {\qquad = \underset {x \to + \infty} {\lim} \frac {1 - \ln x}{\ln x} = \underset {x \to + \infty} {\lim} \left(\frac {1}{\ln x} - 1\right) = - 1.} \end{array} $$
+因此,原极限 $=e^{-1}$ .
+或者也可以这样计算.
+$$ \begin{array}{r l} & {\underset {x \to + \infty} {\lim} \frac {\ln (x ^ {\frac {1}{x}} - 1)}{\ln x} = \underset {x \to + \infty} {\lim} \frac {\ln (\mathrm{e} ^ {\frac {\ln x}{x}} - 1)}{\ln x} \overset {\text {洛必达}} {=} \underset {x \to + \infty} {\lim} \frac {\mathrm{e} ^ {\frac {\ln x}{x}} \cdot \frac {1 - \ln x}{x ^ {2}}}{\frac {1}{x} (\mathrm{e} ^ {\frac {\ln x}{x}} - 1)} \overset {\underset {x \to + \infty} {\lim} \mathrm{e} ^ {\frac {\ln x}{x}} = 1} {=} \underset {x \to + \infty} {\lim} \frac {\frac {1 - \ln x}{x}}{\mathrm{e} ^ {\frac {\ln x}{x}} - 1}} \\ & {\quad \overset {\text {洛必达}} {=} \underset {x \to + \infty} {\lim} \frac {\frac {- 2 + \ln x}{x ^ {2}}}{\mathrm{e} ^ {\frac {\ln x}{x}} \cdot \frac {1 - \ln x}{x ^ {2}}} = \underset {x \to + \infty} {\lim} \frac {- 2 + \ln x}{1 - \ln x} = - 1.} \end{array} $$
+（法二）注意到 $\lim\limits_{u\to 0^{+}}\frac{\ln(e^u - 1)}{\ln u}\overset{\text{洛必达}}{=}\lim\limits_{u\to 0^{+}}\frac{ue^u}{e^u - 1}\overset{e^u - 1\sim u}{=}\lim\limits_{u\to 0^{+}}\frac{ue^u}{u} = 1$ ，故
+$$ \begin{array}{r l} & {\underset {x \to + \infty} {\lim} \frac {\ln (x ^ {\frac {1}{x}} - 1)}{\ln x} = \underset {x \to + \infty} {\lim} \frac {\ln (\mathrm{e} ^ {\frac {\ln x}{x}} - 1)}{\ln x} = \underset {x \to + \infty} {\lim} \frac {\frac {\ln (\mathrm{e} ^ {\frac {\ln x}{x}} - 1)}{\ln \frac {\ln x}{x}} \cdot \ln \frac {\ln x}{x}}{\ln x}} \\ & {\qquad = \underset {x \to + \infty} {\lim} \frac {\ln \frac {\ln x}{x}}{\ln x} = \underset {x \to + \infty} {\lim} \frac {\ln \ln x - \ln x}{\ln x}} \\ & {\qquad \underline {{{{\underline {{{{\text {洛必达}}}}}}}}} \underset {x \to + \infty} {\lim} \left(\frac {1}{\ln x} - 1\right) = - 1.} \end{array} $$
+因此,原极限 $=e^{-1}$ .
+注 ① 在法一的过程中, 当 $e^{\frac{\ln x}{x}}$ 作为一个因子时, 我们可以先计算 $\lim\limits_{x\to+\infty}e^{\frac{\ln x}{x}}$ . 这是利用极限的四则运算法则: 当 $\lim A, \lim B$ 均存在时, $\lim(AB)=\lim A \cdot \lim B$ .
+②法二中蕴含了一个结论.若 $f(x)$ 和 $g(x)$ 为 $x\to x_{0}$ （或 $\infty$ ）时的等价无穷小量，且均大于零，则 $\ln f(x)$ 和 $\ln g(x)$ 为 $x\to x_{0}$ （或 $\infty$ ）时的等价无穷大量.事实上，由于
+$$ \begin{array}{r l} & {\underset {x \to x _ {0}} {\lim} \frac {\ln f (x)}{\ln g (x)} - 1 = \underset {x \to x _ {0}} {\lim} \frac {\ln f (x) - \ln g (x)}{\ln g (x)} = \underset {x \to x _ {0}} {\lim} \frac {\ln \frac {f (x)}{g (x)}}{\ln g (x)} = 0,} \\ & {\text {故} \underset {x \to x _ {0}} {\lim} \frac {\ln f (x)}{\ln g (x)} = 1.} \end{array} $$"
+zt-031101,真题,微积分,第一章 函数、极限、连续,数三2011,1,选择题,,,"(1) 已知当 $x \to 0$ 时, 函数 $f(x) = 3\sin x - \sin 3x$ 与 $cx^{k}$ 是等价无穷小量, 则","k = 1, c = 4.","k = 1, c = -4.","k = 3, c = 4.","k = 3, c = -4.","答案 C.
+分析 本题主要考查等价无穷小量的定义.
+由题设,根据等价无穷小量的定义,我们有 $\lim\limits_{x\to0}\frac{f(x)}{cx^{k}}=1$ ,由此可解出k,c.
+解 由题设知, $c \neq 0$ , $k > 0$ . 记 $I = \lim\limits_{x \to 0} \frac{f(x)}{cx^k}$ , 则由等价无穷小量的定义知, $I = 1$ .
+由于 $\sin x = x - \frac{1}{3!} x^3 + o(x^3)$ ，故 $\sin 3x = 3x - \frac{1}{3!} (3x)^3 + o(x^3)$ . 因此，
+$$ 1 = \lim\limits_ {x \rightarrow 0} \frac {3 \sin x - \sin 3 x}{c x ^ {k}} = \lim\limits_ {x \rightarrow 0} \frac {3 x - \frac {1}{2} x ^ {3} - 3 x + \frac {2 7}{6} x ^ {3} + o (x ^ {3})}{c x ^ {k}} = \lim\limits_ {x \rightarrow 0} \frac {4 x ^ {3} + o (x ^ {3})}{c x ^ {k}}. $$
+下面讨论使 $\lim\limits_{x\to0}\frac{4x^{3}+o(x^{3})}{cx^{k}}=1$ 成立的k,c的值.
+由于
+$$ I = \frac {4}{c} \lim\limits_ {x \rightarrow 0} \frac {x ^ {3}}{x ^ {k}} \left[ 1 + \frac {o (x ^ {3})}{4 x ^ {3}} \right] = \frac {4}{c} \lim\limits_ {x \rightarrow 0} \frac {x ^ {3}}{x ^ {k}}, $$
+故当 $c \neq 0, k < 3$ 时， $I = 0$ ；当 $c \neq 0, k > 3$ 时， $I = \infty$ ；只有当 $c \neq 0, k = 3$ 时， $I = \frac{4}{c} = 1$ . 因此， $k = 3, c = 4$ . 应选 C.
+拓展
+常见的等价无穷小量
+当 $x \to 0$ 时，
+(1) $\sin x \sim x$ , (2) $\tan x \sim x$ , (3) $1 - \cos x \sim \frac{x^2}{2}$ ,
+(4) $\arcsin x \sim x$ , (5) $\arctan x \sim x$ , (6) $(1 + x)^{\alpha} - 1 \sim \alpha x (\alpha \neq 0)$ ,
+(7) $e^{x}-1\sim x,$ (8) $a^{x}-1\sim x\ln a,$ (9) $\ln(1+x)\sim x,$
+(10) $\log_{a}(1+x)\overset{\text{换底公式}}{=}\frac{\ln(1+x)}{\ln a}\sim\frac{x}{\ln a}$ ，其中a>0且 $a\neq1$ .
+等价无穷小量的复合形式
+若 $u \to u_0$ 时， $f(u) \sim g(u)$ ，且 $\lim\limits_{x \to 0} \varphi(x) = u_0$ ，在 $x_0$ 的某一去心邻域内 $\varphi(x) \neq u_0$ ，则由复合函数的极限法则知， $\lim\limits_{x\to x_{0}}\frac{f(\varphi(x))}{g(\varphi(x))}=\lim\limits_{u\to u_{0}}\frac{f(u)}{g(u)}=1$ ，即当 $x\to x_{0}$ 时， $f(\varphi(x))\sim g(\varphi(x))$ . 特别地，当 $u_{0}=0,x\to x_{0}$ 时，有 (1) $\sin\varphi(x)\sim\varphi(x)$ ，(2) $\tan\varphi(x)\sim\varphi(x)$ ，(3) $1-\cos\varphi(x)\sim\frac{\varphi^{2}(x)}{2}$ , (4) $\arcsin\varphi(x)\sim\varphi(x)$ ，(5) $\arctan\varphi(x)\sim\varphi(x)$ ，(6) $[1+\varphi(x)]^{\alpha}-1\sim\alpha\varphi(x)(\alpha\neq0)$ , (7) $e^{\varphi(x)}-1\sim\varphi(x)$ ，(8) $a^{\varphi(x)}-1\sim\varphi(x)\ln a$ ，(9) $\ln[1+\varphi(x)]\sim\varphi(x)$ , (10) $\log_{a}[1+\varphi(x)]=\frac{\ln[1+\varphi(x)]}{\ln a}\sim\frac{\varphi(x)}{\ln a}$ ，其中a>0且 $a\neq1$ ."
+zt-031115,真题,微积分,第一章 函数、极限、连续,数三2011,15,解答题,,,"(15) ( 10 分)
+求极限 $\lim\limits_{x\to0}\frac{\sqrt{1+2\sin x}-x-1}{x\ln(1+x)}$ .",,,,,"分析 本题主要考查未定式极限的计算.
+本题中的极限为 $\frac{0}{0}$ 型, 可以先利用等价无穷小替换化简极限式, 再利用洛必达法则等方法计算.
+解（法一）利用等价无穷小替换和洛必达法则.
+$$ \begin{array}{r l} & {\underset {x \to 0} {\lim} \frac {\sqrt {1 + 2 \sin x} - x - 1}{x \ln (1 + x)} \underset {x \to 0} {\overset {\ln (1 + x) \sim x} {=}} \underset {x \to 0} {\lim} \frac {\sqrt {1 + 2 \sin x} - x - 1}{x ^ {2}}} \\ & {\quad \underset {x \to 0} {\overset {\text {洛必达}} {=}} \underset {x \to 0} {\lim} \frac {(1 + 2 \sin x) ^ {- \frac {1}{2}} \cdot \cos x - 1}{2 x}} \\ & {\quad \underset {x \to 0} {\overset {\text {洛必达}} {=}} \underset {x \to 0} {\lim} \frac {- \frac {1}{2} (1 + 2 \sin x) ^ {- \frac {3}{2}} \cdot 2 \cos^ {2} x - (1 + 2 \sin x) ^ {- \frac {1}{2}} \cdot \sin x}{2}} \\ & {\quad = \frac {- \frac {1}{2} \times 1 \times 2 - 0}{2} = - \frac {1}{2}.} \end{array} $$
+(法二) 利用分子有理化对极限式进行转化.
+$$ \begin{array}{r l} {\underset {x \to 0} {\lim} \frac {\sqrt {1 + 2 \sin x} - x - 1}{x \ln (1 + x)} \overset{\ln (1 + x) \sim x}{=} \underset {x \to 0} {\lim} \frac {\sqrt {1 + 2 \sin x} - x - 1}{x ^ {2}}} \\ & {\overset{\text {分子有理化}}{=} \underset {x \to 0} {\lim} \frac {1 + 2 \sin x - (x + 1) ^ {2}}{x ^ {2} (\sqrt {1 + 2 \sin x} + x + 1)} = \underset {x \to 0} {\lim} \frac {2 \sin x - x ^ {2} - 2 x}{2 x ^ {2}}} \\ & {\overset{\sin x = x - \frac {x ^ {3}}{3 !} + o (x ^ {3})}{=} \underset {x \to 0} {\lim} \frac {- x ^ {2} - \frac {x ^ {3}}{3} + o (x ^ {3})}{2 x ^ {2}} = - \frac {1}{2}.} \end{array} $$
+(法三) 当 $x \to 0$ 时, $(1 + x)^{\alpha}$ 的二阶泰勒公式为 $(1 + x)^{\alpha} = 1 + \alpha x + \frac{\alpha(\alpha - 1)}{2} x^{2} + o(x^{2})$ . 由于 $x \to 0$ 时, $\sin x \to 0$ , 故
+$$ (1 + 2 \sin x) ^ {\frac {1}{2}} = 1 + \sin x - \frac {1}{2} \sin^ {2} x + o (4 \sin^ {2} x) = 1 + \sin x - \frac {1}{2} \sin^ {2} x + o (x ^ {2}), $$
+这里 $o(4\sin^2 x) = o(x^2)$ 是因为 $\sin^2 x$ 与 $x^2$ 是 $x \to 0$ 时的等价无穷小量. 因此，
+$$ \begin{array}{r l} \lim\limits_ {x \to 0} \frac {\sqrt {1 + 2 \sin x} - x - 1}{x \ln (1 + x)} & \overset{\ln (1 + x) \sim x}{=} \lim\limits_ {x \to 0} \frac {\sqrt {1 + 2 \sin x} - x - 1}{x ^ {2}} \\ & = \lim\limits_ {x \to 0} \frac {1 + \sin x - \frac {1}{2} \sin^ {2} x + o (x ^ {2}) - x - 1}{x ^ {2}} = \lim\limits_ {x \to 0} \frac {\sin x - x - \frac {1}{2} \sin^ {2} x}{x ^ {2}} \\ & = \lim\limits_ {x \to 0} \left(\frac {\sin x - x}{x ^ {2}} - \frac {\sin^ {2} x}{2 x ^ {2}}\right) = \lim\limits_ {x \to 0} \frac {\sin x - x}{x ^ {2}} - \frac {1}{2} \end{array} $$
+$$ \frac {\sin x = x - \frac {x ^ {3}}{3 !} + o (x ^ {3})}{\lim\limits_ {x \rightarrow 0} \frac {- \frac {x ^ {3}}{6} + o (x ^ {3})}{x ^ {2}} - \frac {1}{2} = 0 - \frac {1}{2} = - \frac {1}{2}.} $$
+注 法三利用的是极限四则运算法则中的加法法则. 若 $\lim\limits_{x\to x_{0}}f(x)$ ， $\lim\limits_{x\to x_{0}}g(x)$ 均存在，则 $\lim\limits_{x\to x_{0}}[f(x)+g(x)]=\lim\limits_{x\to x_{0}}f(x)+\lim\limits_{x\to x_{0}}g(x)$ . 若按以下方式解题，虽能得到正确结果，但是过程是错误的.
+$$ \lim\limits_ {x \to 0} \frac {\sin x - x - \frac {1}{2} \sin^ {2} x}{x ^ {2}} = \lim\limits_ {x \to 0} \frac {x - x - \frac {1}{2} x ^ {2}}{x ^ {2}} = - \frac {1}{2}. $$
+上述过程不满足极限的四则运算法则.
+拓展
+函数极限的四则运算法则
+在自变量同一变化过程中, 若 $\lim f(x)=A,\lim g(x)=B$ , 则
+(1) $\lim [f(x)\pm g(x)] = \lim f(x)\pm \lim g(x) = A\pm B.$
+(2) $\lim [f(x)\cdot g(x)] = \lim f(x)\cdot \lim g(x) = A\cdot B$ ，特别地， $\lim [Cf(x)] = C\cdot \lim f(x) = C\cdot A,$ 其中 $C$ 为常数.
+(3) 若 $B \neq 0$ , 则
+$$ \lim \frac {f (x)}{g (x)} = \frac {\lim f (x)}{\lim g (x)} = \frac {A}{B}. $$
+数列极限的四则运算法则与函数极限的四则运算法则类似.
+注意事项
+- 只有当 $\lim f(x), \lim g(x)$ 均存在时，才有 $\lim [f(x) \pm g(x)] = \lim f(x) \pm \lim g(x)$ . 若有一个不存在，则不能使用该式计算 $f(x) \pm g(x)$ 的极限.
+例如下面的计算过程是错误的.
+$$ \lim\limits_ {x \rightarrow 0} \left(\frac {1}{x} - \frac {1}{x ^ {2}}\right) = \lim\limits_ {x \rightarrow 0} \frac {1}{x} - \lim\limits_ {x \rightarrow 0} \frac {1}{x ^ {2}} = \infty - \infty = 0.\tag{×} $$
+事实上， $\lim\limits_{x\to 0}\left(\frac{1}{x} -\frac{1}{x^2}\right) = \lim\limits_{x\to 0}\frac{x - 1}{x^2} = \infty .$
+- 只有当 $\lim f(x), \lim g(x)$ 均存在时，才有 $\lim [f(x) \cdot g(x)] = \lim f(x) \cdot \lim g(x)$ . 若有一个不存在，则不能使用该式计算 $f(x) \cdot g(x)$ 的极限.
+例如下面的计算过程是错误的.
+$$ \lim\limits_ {x \rightarrow 0} x \sin \frac {1}{x} = \lim\limits_ {x \rightarrow 0} x \cdot \lim\limits_ {x \rightarrow 0} \sin \frac {1}{x} = 0.\tag{×} $$
+由于 $\lim\limits_{x\to 0}\sin \frac{1}{x}$ 不存在，故上式中第一个等号不符合极限运算法则. 正确的做法应为，由于函数 $x$ 为 $x \to 0$ 时的无穷小量, 且 $\sin \frac{1}{x}$ 有界, 故由有界函数与无穷小量的乘积仍为无穷小量可知, $\lim\limits_{x \to 0} x \sin \frac{1}{x} = 0$ .
+- 只有当 $\lim f(x), \lim g(x)$ 均存在, 且 $\lim g(x) \neq 0$ 时, 才有 $\lim \frac{f(x)}{g(x)} = \frac{\lim f(x)}{\lim g(x)}$ . 若有一个不存在, 或者 $\lim g(x) = 0$ , 则不能使用该式计算 $\frac{f(x)}{g(x)}$ 的极限.
+例如下面的计算过程是错误的.
+$$ \lim\limits_ {x \rightarrow + \infty} \frac {\sqrt {x}}{x} = \frac {\lim\limits_ {x \rightarrow + \infty} \sqrt {x}}{\lim\limits_ {x \rightarrow + \infty} x} = \frac {\infty}{\infty} = 1.\tag{×} $$
+事实上， $\lim\limits_{x\to+\infty}\frac{\sqrt{x}}{x}=\lim\limits_{x\to+\infty}\frac{1}{\sqrt{x}}=0.$"
+zt-031209,真题,微积分,第一章 函数、极限、连续,数三2012,9,填空题,,,(9) $\lim\limits_{x\to \frac{\pi}{4}}(\tan x)^{\frac{1}{\cos x - \sin x}} = \_$ .,,,,,"答案 应填 $\mathrm{e}^{-\sqrt{2}}$
+分析 本题主要考查 $1^{\infty}$ 型未定式极限的计算.
+解（法一）取对数和利用洛必达法则.
+$$ \lim\limits_ {x \to \frac {\pi}{4}} (\tan x) ^ {\frac {1}{\cos x - \sin x}} = \lim\limits_ {x \to \frac {\pi}{4}} \mathrm{e} ^ {\frac {\ln (\tan x)}{\cos x - \sin x}} = \mathrm{e} ^ {\lim\limits_ {x \to \frac {\pi}{4}} \frac {\ln (\tan x)}{\cos x - \sin x}} \stackrel {\text {洛必达}} {=} \mathrm{e} ^ {\lim\limits_ {x \to \frac {\pi}{4}} \frac {\frac {1}{\tan x} \cdot \sec^ {2} x}{- \sin x - \cos x}} = \mathrm{e} ^ {\frac {1 \times 2}{- \sqrt {2}}} = \mathrm{e} ^ {- \sqrt {2}}. $$
+(法二) 取对数和利用等价无穷小替换.
+$$ \begin{array}{r l} \lim\limits_ {x \to \frac {\pi}{4}} (\tan x) ^ {\frac {1}{\cos x - \sin x}} & = \lim\limits_ {x \to \frac {\pi}{4}} \mathrm{e} ^ {\frac {\ln (\tan x)}{\cos x - \sin x}} = \mathrm{e} ^ {\lim\limits_ {x \to \frac {\pi}{4}} \frac {\ln (\tan x)}{\cos x - \sin x}} = \mathrm{e} ^ {\lim\limits_ {x \to \frac {\pi}{4}} \frac {\ln (1 + \tan x - 1)}{\cos x - \sin x}} \\ & = \mathrm{e} ^ {\lim\limits_ {x \to \frac {\pi}{4}} \frac {1}{- \cos x}} = \mathrm{e} ^ {- \sqrt {2}}. \end{array} $$
+(法三) 凑重要极限.
+$$ \lim\limits_ {x \to \frac {\pi}{4}} (\tan x) ^ {\frac {1}{\cos x - \sin x}} = \lim\limits_ {x \to \frac {\pi}{4}} (1 + \tan x - 1) ^ {\frac {1}{\cos x - \sin x}} = \lim\limits_ {x \to \frac {\pi}{4}} (1 + \tan x - 1) ^ {\frac {1}{\tan x - 1} \cdot \frac {\tan x - 1}{\cos x - \sin x}}. $$
+由于
+$$ \lim\limits_ {x \to \frac {\pi}{4}} \frac {\tan x - 1}{\cos x - \sin x} = \lim\limits_ {x \to \frac {\pi}{4}} \frac {\tan x - 1}{- \cos x (\tan x - 1)} = \lim\limits_ {x \to \frac {\pi}{4}} \left(- \frac {1}{\cos x}\right) = - \sqrt {2}, $$
+故原极限等于 $e^{-\sqrt{2}}$ .
+注 不要将答案写为 $-\sqrt{2}$ ."
+zt-031215,真题,微积分,第一章 函数、极限、连续,数三2012,15,解答题,,,"(15) ( 10 分)
+求极限 $\lim\limits_{x\to0}\frac{e^{x^{2}}-e^{2-2\cos x}}{x^{4}}.$",,,,,"分析 本题主要考查 $\frac{0}{0}$ 型未定式极限的计算.
+本题中表达式的分母次数较高,若多次使用洛必达法则,则会使分子的表达式较复杂,故直接利用洛必达法则计算不是较好的方法.
+解 (法一)
+$$ \begin{array}{r l} \lim\limits_ {x \to 0} \frac {\mathrm{e} ^ {x ^ {2}} - \mathrm{e} ^ {2 - 2 \cos x}}{x ^ {4}} & = \lim\limits_ {x \to 0} \mathrm{e} ^ {x ^ {2}} \cdot \frac {1 - \mathrm{e} ^ {2 - 2 \cos x - x ^ {2}}}{x ^ {4}} \\ & \frac {\mathrm{e} ^ {2 - 2 \cos x - x ^ {2}} - 1 \sim 2 - 2 \cos x - x ^ {2}}{\lim\limits_ {x \to 0} (2 - 2 \cos x - x ^ {2}) = 0} \lim\limits_ {x \to 0} 1 \cdot \frac {- (2 - 2 \cos x - x ^ {2})}{x ^ {4}} \\ & = \lim\limits_ {x \to 0} \frac {x ^ {2} - 2 + 2 \left[ 1 - \frac {x ^ {2}}{2 !} + \frac {x ^ {4}}{4 !} + o (x ^ {4}) \right]}{x ^ {4}} = \lim\limits_ {x \to 0} \frac {\frac {1}{1 2} x ^ {4}}{x ^ {4}} = \frac {1}{1 2}. \end{array} $$
+$$ \begin{array}{r l} (\text {法二}) \lim\limits_ {x \to 0} \frac {\mathrm{e} ^ {x ^ {2}} - \mathrm{e} ^ {2 - 2 \cos x}}{x ^ {4}} & \overset{\text {拉格朗日}}{\underset{ \text {中值定值} }{=}} \lim\limits_ {x \to 0} \mathrm{e} ^ {\xi_ {x}} \cdot \frac {x ^ {2} - (2 - 2 \cos x)}{x ^ {4}} \\ & = \lim\limits_ {x \to 0} \frac {x ^ {2} - (2 - 2 \cos x)}{x ^ {4}} \overset{\text {同法一}}{\underset{ \text {同法一} }{=}} \frac {1}{1 2}. \end{array} $$
+$\xi_{x}$ 在 $x^{2}$ 与 $2 - 2\cos x$ 之间，当 $x \to 0$ 时， $\xi_{x} \to 0$ .
+拓展
+利用泰勒公式计算极限
+利用泰勒公式计算极限时,将函数展开到几阶是一个重要问题.下面我们结合例子谈谈如何解决这一问题.
+以 $\lim\limits_{x\to 0}\frac{f(x)}{x^n}$ 为例.若 $\lim\limits_{x\to 0}f(x) = 0$ ，则 $\lim\limits_{x\to 0}\frac{f(x)}{x^n}$ 是 $\frac{0}{0}$ 型未定式
+设 $f(x)$ 在x=0处的n阶泰勒公式为
+$$ f (x) = a _ {0} + a _ {1} x + a _ {2} x ^ {2} + \dots + a _ {n} x ^ {n} + o \left(x ^ {n}\right), $$
+则
+$$ \lim\limits_ {x \rightarrow 0} \frac {f (x)}{x ^ {n}} = \lim\limits_ {x \rightarrow 0} \frac {a _ {0} + a _ {1} x + a _ {2} x ^ {2} + \cdots + a _ {n} x ^ {n} + o \left(x ^ {n}\right)}{x ^ {n}}. $$
+当且仅当 $a_{0}=a_{1}=\cdots=a_{n-1}=0$ 时，
+$$ \lim\limits_ {x \rightarrow 0} \frac {f (x)}{x ^ {n}} = \lim\limits_ {x \rightarrow 0} \frac {a _ {n} x ^ {n} + o \left(x ^ {n}\right)}{x ^ {n}} = a _ {n}. $$
+若 $a_{1}, a_{2}, \cdots, a_{n-1}$ 中有一个不为零，则 $\lim\limits_{x \to 0} \frac{f(x)}{x^{n}}$ 不存在.
+由此可以看出,若极限式的分母中 x 的次数为 n,则可将 $f(x)$ 展开到 n 阶.
+对于更一般的情况,例如 $\lim\limits_{x\to0}\frac{f(x)}{g(x)}$ ,一般可利用等价无穷小替换等方法将极限式转化为 $\lim\limits_{x\to0}\frac{f(x)}{x^{n}}$ 的形式,再利用泰勒公式计算极限.
+常用的泰勒公式
+$$ \mathrm{e} ^ {x} = 1 + x + \frac {x ^ {2}}{2 !} + o (x ^ {2}), $$
+$$ \sin x = x - \frac {x ^ {3}}{3 !} + o (x ^ {3}), $$
+$$ \frac {1}{1 + x} = 1 - x + x ^ {2} + o \left(x ^ {2}\right), $$
+$$ \cos x = 1 - \frac {x ^ {2}}{2 !} + o (x ^ {2}), $$
+$$ \ln (1 + x) = x - \frac {x ^ {2}}{2} + o \left(x ^ {2}\right), $$
+$$ \arctan x = x - \frac {x ^ {3}}{3} + o (x ^ {3}). $$"
+zt-031301,真题,微积分,第一章 函数、极限、连续,数三2013,1,选择题,,,"(1) 当 $x \to 0$ 时, 用“ $o(x)$ ”表示比 x 高阶的无穷小量, 则下列式子中错误的是",$x \cdot o(x^{2}) = o(x^{3})$ .,$o(x) \cdot o(x^{2}) = o(x^{3})$ .,$o(x^{2}) + o(x^{2}) = o(x^{2})$ .,$o(x) + o(x^{2}) = o(x^{2})$ .,"答案 D.
+分析 本题主要考查无穷小量的比较以及 $o(\cdot)$ 符号的含义.
+设 $\alpha, \beta$ 为同一个极限过程的无穷小量, 若 $\lim \frac{\beta}{\alpha} = 0$ , 则称 $\beta$ 是 $\alpha$ 的高阶无穷小量, 记作 $\beta = o(\alpha)$ .
+因此,要考察四个选项中的式子是否正确,可通过计算等式两端的无穷小量的比值的极限来确定.
+解 由于
+$$ \lim\limits_ {x \to 0} \frac {x \cdot o (x ^ {2})}{x ^ {3}} = \lim\limits_ {x \to 0} \frac {o (x ^ {2})}{x ^ {2}} = 0, $$
+$$ \lim\limits_ {x \rightarrow 0} \frac {o (x) \cdot o \left(x ^ {2}\right)}{x ^ {3}} = \lim\limits_ {x \rightarrow 0} \frac {o (x)}{x} \cdot \lim\limits_ {x \rightarrow 0} \frac {o \left(x ^ {2}\right)}{x ^ {2}} = 0, $$
+$$ \lim\limits_ {x \rightarrow 0} \frac {o (x ^ {2}) + o (x ^ {2})}{x ^ {2}} = \lim\limits_ {x \rightarrow 0} \frac {o (x ^ {2})}{x ^ {2}} + \lim\limits_ {x \rightarrow 0} \frac {o (x ^ {2})}{x ^ {2}} = 0 + 0 = 0, $$
+故选项 A、B、C 均正确. 应选 D.
+对选项 D, 若令 $f(x)=x^{2}$ , $g(x)=x^{3}$ , 则当 $x\to0$ 时, $x^{2}+x^{3}$ 形如 $o(x)+o(x^{2})$ , 但 $\lim\limits_{x\to0}\frac{x^{2}+x^{3}}{x^{2}}=1$ . 因此, 当 $x\to0$ 时, $x^{2}+x^{3}$ 不是 $x^{2}$ 的高阶无穷小量.
+注 ① 若将选项 D 改为 $o(x) + o(x^{2}) = o(x)$ ，则该等式正确。这是因为 $\lim\limits_{x\to0}\frac{o(x)+o(x^{2})}{x}=\lim\limits_{x\to0}\frac{o(x)}{x}+\lim\limits_{x\to0}\frac{o(x^{2})}{x^{2}}\cdot x=0+0=0.$
+②一般地,若 $\alpha, \beta > 0$ , 则 $o(x^{\alpha}) \cdot o(x^{\beta}) = o(x^{\alpha + \beta})$ . 若 $\alpha \geqslant \beta > 0$ , 则 $o(x^{\alpha}) + o(x^{\beta}) = o(x^{\beta})$ ."
+zt-031315,真题,微积分,第一章 函数、极限、连续,数三2013,15,解答题,,,"(15) ( 10 分)
+当 $x \to 0$ 时, $1 - \cos x \cdot \cos 2x \cdot \cos 3x$ 与 $ax^{n}$ 为等价无穷小量, 求 n 与 a 的值.",,,,,"分析 本题综合考查了等价无穷小量的定义和 $\frac{0}{0}$ 型未定式极限. 这两个概念是紧密相关的. 若两个 $x \to 0$ 时的无穷小量为等价无穷小量, 则它们的比在 $x \to 0$ 时趋于 1 , 对应着一个 $\frac{0}{0}$ 型未定式极限. 我们通过分析其对应的未定式极限来求 $n$ 与 $a$ 的值.
+解 记 $I = \lim\limits_{x \to 0} \frac{1 - \cos x \cos 2x \cos 3x}{ax^{n}}$ . 由题设, I = 1.
+(法一) 分别考虑 $\cos x, \cos 2x, \cos 3x$ 的二阶泰勒公式，
+$$ \begin{array}{l} \cos x = 1 - \frac {1}{2} x ^ {2} + o (x ^ {2}), \\ \cos 2 x = 1 - \frac {1}{2} (2 x) ^ {2} + o ((2 x) ^ {2}) = 1 - 2 x ^ {2} + o (x ^ {2}), \\ \cos 3 x = 1 - \frac {1}{2} (3 x) ^ {2} + o ((3 x) ^ {2}) = 1 - \frac {9}{2} x ^ {2} + o (x ^ {2}). \end{array} $$
+由于 $o(x^{2})\cdot x^{n}$ 仍为 $o(x^{2})(n\geqslant 0)$ ，故
+$$ \begin{array}{r l} \cos x \cos 2 x \cos 3 x & = \left(1 - \frac {1}{2} x ^ {2}\right) (1 - 2 x ^ {2}) \left(1 - \frac {9}{2} x ^ {2}\right) + o (x ^ {2}) \\ & = 1 - \frac {1}{2} x ^ {2} - 2 x ^ {2} - \frac {9}{2} x ^ {2} + o (x ^ {2}). \end{array} $$
+代入 $I$ ，得
+$$ \begin{array}{r l} I & = \lim\limits_ {x \to 0} \frac {1 - \left[ 1 - \frac {1}{2} x ^ {2} - 2 x ^ {2} - \frac {9}{2} x ^ {2} + o (x ^ {2}) \right]}{a x ^ {n}} \\ & = \lim\limits_ {x \to 0} \frac {\frac {1}{2} x ^ {2} + 2 x ^ {2} + \frac {9}{2} x ^ {2} + o (x ^ {2})}{a x ^ {n}} = \lim\limits_ {x \to 0} \frac {7 x ^ {2} + o (x ^ {2})}{a x ^ {n}}. \end{array} $$
+由于
+$$ \lim\limits_ {x \rightarrow 0} \frac {7 x ^ {2} + o (x ^ {2})}{a x ^ {n}} = \frac {7}{a} \lim\limits_ {x \rightarrow 0} \frac {x ^ {2}}{x ^ {n}} \left[ 1 + \frac {o (x ^ {2})}{7 x ^ {2}} \right] = \frac {7}{a} \lim\limits_ {x \rightarrow 0} \frac {x ^ {2}}{x ^ {n}}, $$
+故当 $n > 2$ 时， $\lim\limits_{x\to 0}\frac{7x^2 + o(x^2)}{ax^n} = \infty$ ；当 $n < 2$ 时， $\lim\limits_{x\to 0}\frac{7x^2 + o(x^2)}{ax^n} = 0$ ；而当 $n = 2$ 时， $\lim\limits_{x\to 0}\frac{7x^2 + o(x^2)}{ax^2} = \frac{7}{a}$ . 因此，由 $I = 1$ 得， $\frac{7}{a} = 1, a = 7$ .
+综上所述， $n = 2$ ， $a = 7$
+（法二）我们先利用三角函数的积化和差公式将 $\cos x \cos 2x \cos 3x$ 作恒等变形, 然后再利用洛必达法则来计算 I.
+由积化和差公式,我们有
+$$ \begin{array}{r l} \cos x \cos 2 x \cos 3 x & = \frac {1}{2} (\cos 4 x + \cos 2 x) \cos 2 x = \frac {1}{2} \cos 4 x \cos 2 x + \frac {1}{2} \cos^ {2} 2 x \\ & = \frac {1}{4} (\cos 6 x + \cos 2 x) + \frac {1}{4} \cos 4 x + \frac {1}{4} \\ & = \frac {1}{4} (1 + \cos 2 x + \cos 4 x + \cos 6 x). \end{array} $$
+从而，
+$$ I = \lim\limits_ {x \to 0} \frac {\frac {3}{4} - \frac {1}{4} (\cos 2 x + \cos 4 x + \cos 6 x)}{a x ^ {n}} \stackrel {\text {洛必达}} {=} \lim\limits_ {x \to 0} \frac {\frac {1}{4} (2 \sin 2 x + 4 \sin 4 x + 6 \sin 6 x)}{n a x ^ {n - 1}}. $$
+由于 $\lim\limits_{x\to 0}(2\sin 2x + 4\sin 4x + 6\sin 6x) = 0$ ，而 $I = 1$ ，故 $\lim\limits_{x\to 0}nax^{n - 1} = 0$ ，于是 $n > 1.$ 否则当 $n\leqslant 1$ 时， $I = 0,$ 与 $I = 1$ 矛盾.
+当 n > 1 时, 继续使用洛必达法则可得,
+$$ I \overset{\text {洛必达}}{=} \lim\limits_ {x \to 0} \frac {\cos 2 x + 4 \cos 4 x + 9 \cos 6 x}{n (n - 1) a x ^ {n - 2}} = \lim\limits_ {x \to 0} \frac {1 4}{n (n - 1) a x ^ {n - 2}}. $$
+若 $I$ 存在且等于1, 则 $n - 2 = 0$ . 否则当 $n - 2 < 0$ 时, $I = 0$ ; 当 $n - 2 > 0$ 时, $I = \infty$ . 当 $n = 2$ 时, $I = \frac{14}{2a} = 1$ , $a = 7$ .
+综上所述， $n = 2, a = 7$
+(法三) 使用添项、减项的技巧对 I 进行恒等变形.
+$$ \begin{array}{r l} I & = \lim\limits_ {x \to 0} \frac {1 - \cos x + \cos x - \cos x \cos 2 x + \cos x \cos 2 x - \cos x \cos 2 x \cos 3 x}{a x ^ {n}} \\ & = \lim\limits_ {x \to 0} \left[ \frac {1 - \cos x}{a x ^ {n}} + \frac {\cos x (1 - \cos 2 x)}{a x ^ {n}} + \frac {\cos x \cos 2 x (1 - \cos 3 x)}{a x ^ {n}} \right]. \end{array} $$
+分别考虑 $\lim\limits_{x\to 0}\frac{1 - \cos x}{ax^n},\lim\limits_{x\to 0}\frac{\cos x(1 - \cos 2x)}{ax^n},\lim\limits_{x\to 0}\frac{\cos x\cos 2x(1 - \cos 3x)}{ax^n}.$
+由于当 $x \to 0$ 时, $\cos x \to 1, 1 - \cos x \sim \frac{x^2}{2}$ , 故这三个极限均仅当 $n = 2$ 时存在且不为零. 当 $n > 2$ 时, 极限为 $\infty$ ; 当 $n < 2$ 时, 极限为零.
+当 n = 2 时，
+$$ \begin{array}{r l} & \lim\limits_ {x \to 0} \frac {1 - \cos x}{a x ^ {2}} \overset{1 - \cos x \sim \frac {x ^ {2}}{2}}{=} \frac {1}{2 a}, \quad \lim\limits_ {x \to 0} \frac {\cos x (1 - \cos 2 x)}{a x ^ {2}} \overset{1 - \cos 2 x \sim \frac {(2 x) ^ {2}}{2}}{=} \frac {2}{a}, \\ & \lim\limits_ {x \to 0} \frac {\cos x \cos 2 x (1 - \cos 3 x)}{a x ^ {2}} \overset{1 - \cos 3 x \sim \frac {(3 x) ^ {2}}{2}}{=} \frac {9}{2 a}. \\ & I = \frac {1}{2 a} + \frac {2}{a} + \frac {9}{2 a} = \frac {7}{a} = 1. \end{array} $$
+因此， $n = 2$ ， $a = 7$
+注 1 - cos xcos 2xcos 3x 的恒等变形不止一种,因此本题在计算上还有其他途径,这里就不一一展示了.有兴趣的读者可以自己尝试一下,并选择最简捷的方法."
+zt-031401,真题,微积分,第一章 函数、极限、连续,数三2014,1,选择题,,题型三 极限的概念、性质及存在准则,"(1) $\lim\limits_{n\to\infty}a_n=a$ , 且 $a\neq0$ , 则当 n 充分大时有()",$\left|a_{n}\right|>\frac{\left|a\right|}{2}.$,$\left|a_{n}\right|<\frac{\left|a\right|}{2}.$,$a_{n}>a-\frac{1}{n}.$,$a_{n}<a+\frac{1}{n}.$,"答案 A.
+分析 本题主要考查对数列极限的定义的理解.
+数列极限 设 $\{x_{n}\}$ 为一数列, 若存在常数 $a$ , 对于任意给定的正数 $\varepsilon$ , 总存在正整数 $N$ , 使得当 $n > N$ 时, 不等式 $|x_{n} - a| < \varepsilon$ 都成立, 则称常数 $a$ 是数列 $\{x_{n}\}$ 的极限, 或者称数列 $\{x_{n}\}$ 收敛于 $a$ , 记为 $\lim x_{n} = a$ .
+解 由三角不等式 $|a| - |b| \leqslant |a - b| \leqslant |a| + |b|$ 可知， $|a_n| - |a| \leqslant |a_n - a|$ . 又由 $\lim\limits_{n \to \infty} a_n = a$ 知，对于任意给定的正数 $\varepsilon$ ，总存在正整数 $N$ ，使得当 $n > N$ 时，不等式 $|a_n - a| < \varepsilon$ 都成立. 因此，当 $n > N$ 时， $|a_n| - |a| \leqslant |a_n - a| < \varepsilon, \lim\limits_{n \to \infty} |a_n| = |a| > 0$ . 由极限的定义可知，给定 $\varepsilon = \frac{|a|}{2} > 0$ ，当 $n$ 充分大时，有 $|a_n| - |a| < \frac{|a|}{2}$ ，故 $|a_n| > \frac{|a|}{2}$ . 从而选项 A 正确，选项 B 不正确. 应选 A.
+下面我们举例说明选项 C、D 不正确.
+令 $a_{n} = 1 - \frac{1}{n}$ 则 $a = 1$ ，可知选项C不正确；令 $a_{n} = 1 + \frac{1}{n}$ 则 $a = 1$ ，可知选项D不正确.
+注 若 $a = 0$ ，则选项A也不正确.事实上，令 $a_{n}\equiv 0$ ，可知选项A不正确"
+zt-031403,真题,微积分,第一章 函数、极限、连续,数三2014,3,选择题,,题型七 极限求参,"(3) 设 $p(x)=a+bx+cx^{2}+dx^{3}$ . 当 $x\to0$ 时, 若 $p(x)-\tan x$ 是比 $x^{3}$ 高阶的无穷小量, 则下列选项中错误的是 ( )",a=0.,b=1.,c=0.,$d=\frac{1}{6}.$,"答案 D.
+分析 本题主要考查无穷小量的阶的比较以及 $\frac{0}{0}$ 型未定式极限的计算. 本题可以利用泰勒公式或洛必达法则求解.
+解（法一）写出 $\tan x$ 在 $x = 0$ 处的三阶泰勒公式.
+$$ \tan x = (\tan x) ^ {\prime} \left| _ {x = 0} \cdot x + \frac {1}{2 !} (\tan x) ^ {\prime \prime} \right| _ {x = 0} \cdot x ^ {2} + \frac {1}{3 !} (\tan x) ^ {\prime \prime \prime} \left| _ {x = 0} \cdot x ^ {3} + o (x ^ {3}) \right. $$
+又由于
+$$ (\tan x) ^ {\prime} = \sec^ {2} x, (\tan x) ^ {\prime \prime} = 2 \sec x \cdot \sec x \tan x = 2 \sec^ {2} x \tan x, $$
+故
+$$ \tan x = x + \frac {1}{3} x ^ {3} + o (x ^ {3}). $$
+由题设知，
+$$ p (x) - \tan x = a + (b - 1) x + c x ^ {2} + \left(d - \frac {1}{3}\right) x ^ {3} + o \left(x ^ {3}\right) = o \left(x ^ {3}\right). $$
+从而
+$$ a = 0, \quad b - 1 = 0, \quad c = 0, \quad d - \frac {1}{3} = 0. $$
+因此，
+$$ a = 0, \quad b = 1, \quad c = 0, \quad d = \frac {1}{3}. $$
+从而选项 D 不正确. 应选 D.
+(法二) 由已知条件知
+$0 = \lim\limits_{x\to 0}\frac{(a + bx + cx^2 + dx^3) - \tan x}{x^3}$ （分母趋于零，故分子也趋于零，从而 $a = 0$ ） $= \lim\limits_{x\to 0}\frac{bx + cx^2 + dx^3 - \tan x}{x^3}$ 洛必达 $\lim\limits_{x\to 0}\frac{b + 2cx + 3dx^2 - \sec^2x}{3x^2}$ （分母趋于零，故分子也趋于零，从而 $b = 1$ ）洛必达 $\lim\limits_{x\to 0}\frac{2c + 6dx - 2\sec^2x\tan x}{6x}$ （同上可知 $c = 0$ 洛必达 $\lim\limits_{x\to 0}\frac{6d - 4\sec^2x\tan^2x - 2\sec^4x}{6} = \frac{6d - 2}{6}.$
+或者在得到 c = 0 后, 利用等价无穷小替换 $\tan x \sim x$ , 得
+$$ \text {式} = \lim\limits_ {x \to 0} \frac {6 d x - 2 \sec^ {2} x \tan x}{6 x} = d - \lim\limits_ {x \to 0} \frac {2 \sec^ {2} x \tan x}{6 x} = d - \frac {1}{3}. $$
+解得 $d=\frac{1}{3}$ .
+因此, $a=0,b=1,c=0,d=\frac{1}{3}$ .应选D.
+注 ① 法一中, 我们通过泰勒中值定理来计算 $\tan x$ 的三阶泰勒公式, 即 $f(x) = f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \frac{f'''(x_0)}{3!}(x - x_0)^3 + o((x - x_0)^3)$ .
+② 法二中,每一次使用洛必达法则前,都需要检查分子、分母的极限是否均趋于零. 由此可以确定部分参数的取值,并且简化表达式."
+zt-031415,真题,微积分,第一章 函数、极限、连续,数三2014,15,解答题,,,"(15) ( 10 分)
+求极限 $\lim\limits_{x\to+\infty}\frac{\int_{1}^{x}\left[t^{2}\left(\mathrm{e}^{\frac{1}{t}}-1\right)-t\right]\mathrm{d}t}{x^{2}\ln\left(1+\frac{1}{x}\right)}$ .",,,,,"分析 本题主要考查 $\frac{\infty}{\infty}$ 型未定式极限的计算与变限积分的求导公式.
+本题中要求的极限表达式较复杂,应先利用等价无穷小替换化简再计算.
+解 由于 $\mathrm{e}^x$ 在 $x = 0$ 处的带拉格朗日余项的2阶泰勒公式为 $\mathrm{e}^x = 1 + x + \frac{x^2}{2} +\frac{\mathrm{e}^{\theta x}}{3!} x^3$ ，其中 $0 < \theta < 1$ ，故当 $x > 0$ 时， $\mathrm{e}^x >1 + x + \frac{x^2}{2}$ .于是， $\mathrm{e}^{\frac{1}{t}} - 1 > \frac{1}{t} +\frac{1}{2t^2} (t > 0)$
+$$ t ^ {2} (\mathrm{e} ^ {\frac {1}{t}} - 1) - t > t ^ {2} \left(\frac {1}{t} + \frac {1}{2 t ^ {2}}\right) - t = \frac {1}{2}. $$
+从而 $\int_{1}^{+\infty}\left[t^{2}(\mathrm{e}^{\frac{1}{t}} - 1) - t\right]\mathrm{d}t\to +\infty .$
+另一方面，
+$$ \lim\limits_ {x \rightarrow + \infty} \left[ x ^ {2} \ln \left(1 + \frac {1}{x}\right)\right] \frac {\ln \left(1 + \frac {1}{x}\right) \sim \frac {1}{x}}{\text { }} \lim\limits_ {x \rightarrow + \infty} x = + \infty . $$
+因此,原极限为 $\frac{\infty}{\infty}$ 型未定式.
+当 $x \to +\infty$ 时, $\frac{1}{x} \to 0, \ln(1 + \frac{1}{x}) \sim \frac{1}{x}$ , 故
+$$ \begin{array}{r l} {\underset {x \to + \infty} {\lim} \frac {\int_ {1} ^ {x} \left[ t ^ {2} (\mathrm{e} ^ {\frac {1}{t}} - 1) - t \right] \mathrm{d} t}{x ^ {2} \ln \left(1 + \frac {1}{x}\right)} \overset{\ln \left(1 + \frac {1}{x}\right) \sim \frac {1}{x}}{=} \underset {x \to + \infty} {\lim} \frac {\int_ {1} ^ {x} \left[ t ^ {2} (\mathrm{e} ^ {\frac {1}{t}} - 1) - t \right] \mathrm{d} t}{x}} \\ & {\overset{\text {洛必达}}{=} \underset {x \to + \infty} {\lim} \frac {x ^ {2} (\mathrm{e} ^ {\frac {1}{x}} - 1) - x}{1} = \underset {x \to + \infty} {\lim} \frac {\mathrm{e} ^ {\frac {1}{x}} - 1 - \frac {1}{x}}{\frac {1}{x ^ {2}}}} \\ & {\overset{u = \frac {1}{x}}{=} \underset {u \to 0 ^ {+}} {\lim} \frac {\mathrm{e} ^ {u} - u - 1}{u ^ {2}} \overset{\text {洛必达}}{=} \underset {u \to 0 ^ {+}} {\lim} \frac {\mathrm{e} ^ {u} - 1}{2 u}} \\ & {\overset{\mathrm{e} ^ {u} - 1 \sim u}{=} \underset {u \to 0 ^ {+}} {\lim} \frac {u}{2 u} = \frac {1}{2}.} \end{array} $$
+因此,原极限= $\frac{1}{2}$ .
+将原极限化简为 $\lim\limits_{x\to +\infty}\left[x^2 (\mathrm{e}^{\frac{1}{x}} - 1) - x\right]$ 后，也可以用泰勒公式来求该极限
+当 $x \to +\infty$ 时, $\frac{1}{x} \to 0^{+}$ . 由 $\mathbf{e}^u$ 在 $u = 0$ 处的泰勒公式得,
+$$ \mathrm{e} ^ {\frac {1}{x}} = 1 + \frac {1}{x} + \frac {1}{2 !} \cdot \frac {1}{x ^ {2}} + o \left(\frac {1}{x ^ {2}}\right). $$
+从而，
+$$ \begin{array}{r l} \lim\limits_ {x \to + \infty} [ x ^ {2} (\mathrm{e} ^ {\frac {1}{x}} - 1) - x ] & = \lim\limits_ {x \to + \infty} \left\{x ^ {2} \left[ \frac {1}{x} + \frac {1}{2 !} \cdot \frac {1}{x ^ {2}} + o \left(\frac {1}{x ^ {2}}\right) \right] - x \right\} \\ & = \lim\limits_ {x \to + \infty} \left[ \frac {1}{2} + x ^ {2} \cdot o \left(\frac {1}{x ^ {2}}\right) \right] = \frac {1}{2}. \end{array} $$
+注 ① 在求未定式极限时,应先判断该未定式极限的类型,再进行计算.
+② 本题要求的极限表达式较复杂,在处理时切忌不做任何简化便直接使用洛必达法则进行计算."
+zt-031501,真题,微积分,第一章 函数、极限、连续,数三2015,1,选择题,,题型三 极限的概念、性质及存在准则,(1) 设 $\{x_{n}\}$ 是数列. 下列命题中不正确的是 ( ),若 $\lim\limits_{n\to\infty}x_n=a$ ，则 $\lim\limits_{n\to\infty}x_{2n}=\lim\limits_{n\to\infty}x_{2n+1}=a.$,若 $\lim\limits_{n\to\infty}x_{2n}=\lim\limits_{n\to\infty}x_{2n+1}=a$ ，则 $\lim\limits_{n\to\infty}x_n=a.$,"若 $\lim\limits_{n\to\infty}x_n = a$ , 则 $\lim\limits_{n\to\infty}x_{3n} = \lim\limits_{n\to\infty}x_{3n+1} = a.$",若 $\lim\limits_{n\to\infty}x_{3n}=\lim\limits_{n\to\infty}x_{3n+1}=a$ ，则 $\lim\limits_{n\to\infty}x_n=a.$,"答案 D.
+分析 本题主要考查数列收敛与其子数列收敛的关系. 数列 $\{x_{n}\}$ 收敛于a当且仅当它的任一子数列收敛于a.
+解 令 $x_{k} = \left\{ \begin{array}{ll}0, & k = 3n 或 3n + 1,\\ 1, & k = 3n + 2, \end{array} \right.$ $n$ 为正整数，则 $\lim\limits_{n\to \infty}x_{3n} = \lim\limits_{n\to \infty}x_{3n + 1} = 0,\lim\limits_{n\to \infty}x_{3n + 2} = 1,$ 从而 $\lim\limits_{n\to \infty}x_n$ 不存在，故选项D不正确.应选D.
+若一个数列收敛于 a，则它的任一子数列也收敛于 a，故选项 A、C 均正确.
+若 $\lim\limits_{n\to \infty}x_{2n} = \lim\limits_{n\to \infty}x_{2n + 1} = a$ ，则由数列极限的定义可知，对任意给定的 $\varepsilon >0$ ，存在正整数 $N_{1},N_{2}$ ，使得
+$$ \left| x _ {2 n} - a \right| < \varepsilon , n > N _ {1}, \quad \left| x _ {2 n + 1} - a \right| < \varepsilon , n > N _ {2}. $$
+令 $N = \max \{2N_{1}, 2N_{2} + 1\}$ , 则当 $n > N$ 时, $|x_{n} - a| < \varepsilon$ . 由数列极限的定义可知 $\lim\limits_{n \to \infty} x_{n} = a$ , 故选项 B 正确.
+注 ①由选项B可以得出结论: $\lim\limits_{n\to\infty}x_n=a$ 等价于 $\lim\limits_{n\to\infty}x_{2n}=\lim\limits_{n\to\infty}x_{2n+1}=a.$ 因此,如果我们要证明一个数列极限存在,可以试着证明其奇数项子数列和偶数项子数列的极限都存在且相等.
+② 与选项 B 中结论的证明类似, 我们可以得到, $\lim\limits_{n\to\infty}x_n=a$ 等价于 $\lim\limits_{n\to\infty}x_{3n}=\lim\limits_{n\to\infty}x_{3n+1}=$ $\lim\limits_{n\to\infty}x_{3n+2}=a.$"
+zt-031509,真题,微积分,第一章 函数、极限、连续,数三2015,9,填空题,,,(9) $\lim\limits_{x\to 0}\frac{\ln(\cos x)}{x^2} =$,,,,,"答案 应填 $-\frac{1}{2}$ .
+分析 本题主要考查 $\frac{0}{0}$ 型未定式极限的计算. 可利用洛必达法则或等价无穷小替换.
+解（法一）利用洛必达法则.
+$$ \lim\limits_ {x \to 0} {\frac {\ln (\cos x)}{x ^ {2}}} {\overset {\text {洛必达}} {=}} \lim\limits_ {x \to 0} {\frac {{\frac {1}{\cos x}} \cdot (- \sin x)}{2 x}} = \lim\limits_ {x \to 0} \left(- {\frac {\sin x}{2 x}}\right) = - {\frac {1}{2}}. $$
+(法二) 利用等价无穷小替换.
+当 $x \to 0$ 时, $\cos x - 1 \to 0$ , $\ln (1 + \cos x - 1) \sim \cos x - 1$ , 于是
+$$ \lim\limits_ {x \rightarrow 0} \frac {\ln (\cos x)}{x ^ {2}} = \lim\limits_ {x \rightarrow 0} \frac {\ln (1 + \cos x - 1)}{x ^ {2}} = \lim\limits_ {x \rightarrow 0} \frac {\cos x - 1}{x ^ {2}} \overset{1 - \cos x \sim \frac {1}{2} x ^ {2}}{=} \lim\limits_ {x \rightarrow 0} \frac {- \frac {1}{2} x ^ {2}}{x ^ {2}} = - \frac {1}{2}. $$"
+zt-031515,真题,微积分,第一章 函数、极限、连续,数三2015,15,解答题,,题型七 极限求参,"(15) ( 10 分)
+设函数 $f(x) = x + a\ln (1 + x) + bx\sin x$ , $g(x) = kx^3$ . 若 $f(x)$ 与 $g(x)$ 在 $x \to 0$ 时是等价无穷小, 求 $a, b, k$ 的值.",,,,,"分析 本题主要考查等价无穷小量的定义与未定式极限的计算.
+我们通过讨论极限 $\lim\limits_{x\to0}\frac{f(x)}{g(x)}$ 来求a,b,k的值.
+解（法一）首先, $k\neq0$ .
+由于 $g(x)$ 中 x 的次数为 3, 故可考虑写出 $f(x)$ 在 x = 0 处的 3 阶泰勒公式. 由
+$$ \ln (1 + x) = x - \frac {x ^ {2}}{2} + \frac {x ^ {3}}{3} + o (x ^ {3}), \quad \sin x = x - \frac {x ^ {3}}{3 !} + o (x ^ {3}), $$
+可得
+$$ f (x) = x + a x - \frac {a x ^ {2}}{2} + \frac {a x ^ {3}}{3} + b x ^ {2} + o \left(x ^ {3}\right) = (a + 1) x + \left(b - \frac {a}{2}\right) x ^ {2} + \frac {a}{3} x ^ {3} + o \left(x ^ {3}\right). $$
+记 $I = \lim\limits_{x\to 0}\frac{f(x)}{g(x)} = \lim\limits_{x\to 0}\frac{(a + 1)x + \left(b - \frac{a}{2}\right)x^2 + \frac{a}{3}x^3 + o(x^3)}{kx^3}$ . 由等价无穷小量的定义知 $I = 1$ . 于是, $\left\{ \begin{array}{l} a + 1 = 0, \\ b - \frac{a}{2} = 0, \end{array} \right.$ 否则 $I = \infty$ . 解得 $a = -1, b = -\frac{1}{2}$ . 又因为 $I = 1$ , 所以 $\frac{a}{3} = k, k = -\frac{1}{3}$ . 综上所述, $a = -1, b = -\frac{1}{2}, k = -\frac{1}{3}$ .
+(法二) 记 $I = \lim\limits_{x \to 0} \frac{f(x)}{g(x)}$ . 由等价无穷小量的定义知 I = 1. 下面使用洛必达法则来讨论 I.
+首先, $k\neq0$ .当 $k\neq0$ 时, $\lim\limits_{x\to0}\frac{f(x)}{g(x)}$ 是 $\frac{0}{0}$ 型未定式.由洛必达法则得,
+$$ I = \lim\limits_ {x \to 0} \frac {x + a \ln (1 + x) + b x \sin x}{k x ^ {3}} \stackrel {\text {洛必达}} {=} \lim\limits_ {x \to 0} \frac {1 + \frac {a}{1 + x} + b \sin x + b x \cos x}{3 k x ^ {2}}.\tag{1} $$
+由于
+$$ \lim\limits_ {x \rightarrow 0} \left(1 + \frac {a}{1 + x} + b \sin x + b x \cos x\right) = 1 + a, $$
+故若 $1 + a \neq 0$ ，则 $I = \infty$ ，与题设矛盾。因此， $a = -1$ 。
+代入 a = -1，继续对(1)式使用洛必达法则，
+$$ \text {(1)式} \overset{\text {洛必达}}{=} \lim\limits_ {x \to 0} \frac {\frac {1}{(1 + x) ^ {2}} + b \cos x + b \cos x - b x \sin x}{6 k x}.\tag{2} $$
+由于
+$$ \lim\limits_ {x \to 0} \left[ \frac {1}{(1 + x) ^ {2}} + 2 b \cos x - b x \sin x \right] = 1 + 2 b, $$
+故若 $1 + 2b \neq 0$ ，则 $I = \infty$ ，与题设矛盾。因此， $\dot{b} = -\frac{1}{2}$ 。
+代入 $b = -\frac{1}{2}$ , 继续对(2)式使用洛必达法则,
+(2) 式 $\overset{洛必达}{=} \lim\limits_{x \to 0} \frac{-\frac{2}{(1 + x)^{3}} + \sin x + \frac{1}{2} \sin x + \frac{1}{2} x \cos x}{6k} = \frac{-2}{6k} = 1.$ 因此， $k=-\frac{1}{3}.$
+综上所述， $a = -1, b = -\frac{1}{2}, k = -\frac{1}{3}.$
+注 ① 在法一中, 由 $\sin x = x - \frac{x^3}{3!} + o(x^3)$ 可得 $bx\sin x = bx^2 - \frac{bx^4}{3!} + o(x^4)$ . 注意到 $-\frac{bx^4}{3!}$ 也是 $x^3$ 的高阶无穷小量, 因此在写 $f(x)$ 的 3 阶泰勒公式时, 并没有出现 $-\frac{bx^4}{3!}$ 这一项.
+② 注意: 在乘除法中可使用等价无穷小替换, 但在加减法中, 等价无穷小替换要慎用.
+在乘除法中可以使用等价无穷小替换是因为,若当 $x \rightarrow a$ 时, $f(x) \sim g(x)$ , 则
+$$ \lim\limits_ {x \rightarrow a} P (x) f (x) = \lim\limits_ {x \rightarrow a} \left[ P (x) g (x) \cdot \frac {f (x)}{g (x)} \right] = \lim\limits_ {x \rightarrow a} P (x) g (x) \cdot \lim\limits_ {x \rightarrow a} \frac {f (x)}{g (x)} = \lim\limits_ {x \rightarrow a} P (x) g (x). $$
+若如下使用等价无穷小替换 $\ln(1+x)\sim x(x\rightarrow0)$ , $\sin x\sim x(x\rightarrow0)$ ,
+$$ \lim\limits_ {x \rightarrow 0} \frac {f (x)}{g (x)} = \lim\limits_ {x \rightarrow 0} \frac {x + a \ln (1 + x) + b x \sin x}{k x ^ {3}} = \lim\limits_ {x \rightarrow 0} \frac {x + a x + b x ^ {2}}{k x ^ {3}}, $$
+则会得到仅当 $a = -1, b = 0$ 时，上式的极限存在，且等于零。这与 $\lim\limits_{x \to 0} \frac{f(x)}{g(x)} = 1$ 矛盾。"
+zt-031609,真题,微积分,第一章 函数、极限、连续,数三2016,9,填空题,,题型七 极限求参,(9) 已知函数 $f(x)$ 满足 $\lim\limits_{x\to0}\frac{\sqrt{1+f(x)\sin2x}-1}{e^{3x}-1}=2$ ，则 $\lim\limits_{x\to0}f(x)=$ ____.,,,,,"答案 应填6.
+分析 本题主要考查函数极限的计算.
+本题主要利用等价无穷小替换 $\mathrm{e}^x - 1 \sim x (x \to 0)$ , 以及 $(1 + x)^\alpha - 1 \sim \alpha x, \alpha \neq 0 (x \to 0)$ 来求解.
+解（法一）由极限的四则运算法则知，
+$$ \lim\limits_ {x \rightarrow 0} (\sqrt {1 + f (x) \sin 2 x} - 1) = \lim\limits_ {x \rightarrow 0} \frac {\sqrt {1 + f (x) \sin 2 x} - 1}{\mathrm{e} ^ {3 x} - 1} \cdot \lim\limits_ {x \rightarrow 0} (\mathrm{e} ^ {3 x} - 1) = 2 \times 0 = 0. $$
+从而 $\lim\limits_{x\to 0}\sqrt{1 + f(x)\sin 2x} = 1$ ，故 $\lim\limits_{x\to 0}f(x)\sin 2x = \lim\limits_{x\to 0}\left[(\sqrt{1 + f(x)\sin 2x})^2 -1\right] = 0.$ 于是，当 $x\to 0$ 时， $\sqrt{1 + f(x)\sin 2x} -1\sim \frac{1}{2} f(x)\sin 2x.$
+因此，
+$$ \begin{array}{r l} 2 & = \lim\limits_ {x \to 0} \frac {\sqrt {1 + f (x) \sin 2 x} - 1}{e ^ {3 x} - 1} \overset{e ^ {3 x} - 1 \sim 3 x}{=} \lim\limits_ {x \to 0} \frac {\frac {1}{2} f (x) \sin 2 x}{3 x} \\ & = \frac {1}{3} \lim\limits_ {x \to 0} \frac {f (x) \sin 2 x}{2 x} \overset{\sin x \sim x}{=} \frac {1}{3} \lim\limits_ {x \to 0} f (x), \end{array} $$
+即 $\lim\limits_{x\to 0}f(x) = 6.$
+（法二）同法一可得 $\lim\limits_{x\to 0}f(x)\sin 2x = 0.$ 于是 $\lim\limits_{x\to 0}\sqrt{1 + f(x)\sin 2x} +1 = 2.$ 从而
+$$ \begin{array}{r l} & {2 = \lim\limits_ {x \to 0} \frac {\sqrt {1 + f (x) \sin 2 x} - 1}{\mathrm{e} ^ {3 x} - 1} \underline {{{{\underline {{{{\text { 分子有理化}}}}}}}}} \lim\limits_ {x \to 0} \frac {f (x) \sin 2 x}{\left[ \sqrt {1 + f (x) \sin 2 x} + 1 \right] (\mathrm{e} ^ {3 x} - 1)}} \\ & {\quad = \lim\limits_ {x \to 0} \frac {f (x) \sin 2 x}{2 (\mathrm{e} ^ {3 x} - 1)} = \lim\limits_ {x \to 0} \frac {f (x) \cdot 2 x}{2 \cdot 3 x} = \frac {1}{3} \lim\limits_ {x \to 0} f (x),} \end{array} $$
+即 $\lim\limits_{x\to0}f(x)=6.$
+注 在没证明 $\lim\limits_{x\to 0}f(x)\sin 2x = 0$ 之前，不能直接利用等价无穷小替换 $(1 + x)^{\alpha} - 1\sim \alpha x,$ $\alpha \neq 0(x\to 0)$ 得到 $\sqrt{1 + f(x)\sin 2x} -1\sim \frac{1}{2} f(x)\sin 2x.$"
+zt-031610,真题,微积分,第一章 函数、极限、连续,数三2016,10,填空题,,题型五 数列极限,(10) 极限 $\lim\limits_{n\to\infty}\frac{1}{n^{2}}\left(\sin\frac{1}{n}+2\sin\frac{2}{n}+\cdots+n\sin\frac{n}{n}\right)=$ ____.,,,,,"答案 应填 $\sin 1 - \cos 1$ .
+分析 本题主要考查利用定积分的定义求极限.
+解此类题的基本方法为通过恒等变形将原极限凑成某个函数的定积分的形式.
+解 将原表达式作恒等变形, 得
+$$ \frac {1}{n ^ {2}} \left(\sin \frac {1}{n} + 2 \sin \frac {2}{n} + \dots + n \sin \frac {n}{n}\right) = \frac {1}{n} \left(\frac {1}{n} \sin \frac {1}{n} + \frac {2}{n} \sin \frac {2}{n} + \dots + \frac {n}{n} \sin \frac {n}{n}\right). $$
+因此，
+$$ \begin{array}{r l} \text {原极限} & = \lim\limits_ {n \to \infty} \left(\frac {1}{n} \sum_ {i = 1} ^ {n} \frac {i}{n} \sin \frac {i}{n}\right) = \int_ {0} ^ {1} x \sin x \mathrm{d} x = \int_ {0} ^ {1} x \mathrm{d} (- \cos x) \\ & = - x \cos x \Big | _ {0} ^ {1} + \int_ {0} ^ {1} \cos x \mathrm{d} x = \sin 1 - \cos 1. \end{array} $$"
+zt-031615,真题,微积分,第一章 函数、极限、连续,数三2016,15,解答题,,题型四 函数极限,"(15) ( 10 分)
+求极限 $\lim\limits_{x\to0}\left(\cos2x+2x\sin x\right)^{\frac{1}{x^{4}}}$ .",,,,,"分析 本题主要考查未定式极限的计算.
+题中函数是一个幂指函数,既可以凑重要极限来解,也可以取对数来解.
+解 记原极限为 $I$ .
+(法一) 凑重要极限 $\lim\limits_{x\to0}(1+x)^{\frac{1}{x}}=e.$
+由于 $x \to 0$ 时, $\cos 2x + 2x\sin x - 1 \to 0$ , 故 $\lim\limits_{x \to 0} (1 + \cos 2x + 2x\sin x - 1)^{\frac{1}{\cos 2x + 2x\sin x - 1}} = e$ .
+$$ I = \lim\limits_ {x \rightarrow 0} (1 + \cos 2 x + 2 x \sin x - 1) ^ {\frac {1}{\cos 2 x + 2 x \sin x - 1} \cdot \frac {\cos 2 x + 2 x \sin x - 1}{x ^ {4}}}. $$
+下面求 $\lim\limits_{x\to0}\frac{\cos2x+2x\sin x-1}{x^{4}}.$
+$$ \begin{array}{r l}\lim\limits_ {x \rightarrow 0} \frac {\cos 2 x + 2 x \sin x - 1}{x ^ {4}}&\overset{\cos 2 x - 1 = - 2 \sin^ {2} x}{=} \lim\limits_ {x \rightarrow 0} \frac {2 x \sin x - 2 \sin^ {2} x}{x ^ {4}} = \lim\limits_ {x \rightarrow 0} \frac {2 \sin x (x - \sin x)}{x ^ {4}}\\&\overset{\sin x \sim x}{=} 2 \lim\limits_ {x \rightarrow 0} \frac {x - \sin x}{x ^ {3}} = 2 \lim\limits_ {x \rightarrow 0} \frac {x - x + \frac {x ^ {3}}{3 !} - o (x ^ {3})}{x ^ {3}} = \frac {1}{3}.\end{array} $$
+因此， $I = e^{\frac{1}{3}}$ .
+下面我们用另外两种方法计算 $\lim\limits_{x\to 0}\frac{\cos 2x + 2x\sin x - 1}{x^4}.$
+(1) 利用泰勒公式.
+$$ \lim\limits_ {x \rightarrow 0} \frac {\cos 2 x + 2 x \sin x - 1}{x ^ {4}} = \lim\limits_ {x \rightarrow 0} \frac {1 - \frac {(2 x) ^ {2}}{2 !} + \frac {(2 x) ^ {4}}{4 !} + o (x ^ {4}) + 2 x \left[ x - \frac {x ^ {3}}{3 !} + o (x ^ {3}) \right] - 1}{x ^ {4}} $$
+![image](images/zt-031615.jpg)
+$$ = \lim\limits_ {x \rightarrow 0} \frac {\frac {1}{3} x ^ {4} + o (x ^ {4})}{x ^ {4}} = \frac {1}{3}. $$
+(2) 利用洛必达法则.
+$$ \begin{array}{r l} {\underset {x \to 0} {\lim} \frac {\cos 2 x + 2 x \sin x - 1}{x ^ {4}}} & {\overset {\text {洛必达}} {=} \underset {x \to 0} {\lim} \frac {- \sin 2 x + \sin x + x \cos x}{2 x ^ {3}}} \\ & {\overset {\text {洛必达}} {=} \underset {x \to 0} {\lim} \frac {- 2 \cos 2 x + 2 \cos x - x \sin x}{6 x ^ {2}}} \\ & {\overset {\text {洛必达}} {=} \underset {x \to 0} {\lim} \frac {4 \sin 2 x - 3 \sin x - x \cos x}{1 2 x}} \\ & {\overset {\text {洛必达}} {=} \underset {x \to 0} {\lim} \frac {8 \cos 2 x - 4 \cos x + x \sin x}{1 2} = \frac {1}{3}.} \end{array} $$
+（法二）因为 $\lim\limits_{x\to 0}(\cos 2x + 2x\sin x) = 1$ ，从而我们可以对 $\cos 2x + 2x\sin x$ 取对数，所以 $I = \mathrm{e}^{\lim\limits_{x\to 0}\frac{\ln(\cos 2x + 2x\sin x)}{x^4}}.$
+下面求 $\lim\limits_{x\to0}\frac{\ln(\cos2x+2x\sin x)}{x^{4}}.$
+$$ \begin{array}{r l}\lim\limits_ {x \rightarrow 0} \frac {\ln (\cos 2 x + 2 x \sin x)}{x ^ {4}}&\overset{\text {洛必达}}{=} \lim\limits_ {x \rightarrow 0} \frac {\frac {1}{\cos 2 x + 2 x \sin x} \cdot (- 2 \sin 2 x + 2 \sin x + 2 x \cos x)}{4 x ^ {3}}\\&= - \frac {1}{2} \lim\limits_ {x \rightarrow 0} \frac {\sin 2 x - \sin x - x \cos x}{x ^ {3}}\\&= - \frac {1}{2} \lim\limits_ {x \rightarrow 0} \frac {2 x - \frac {(2 x) ^ {3}}{3 !} + o (x ^ {3}) - x + \frac {x ^ {3}}{3 !} - o (x ^ {3}) - x [ 1 - \frac {1}{2} x ^ {2} + o (x ^ {2}) ]}{x ^ {3}}\\&= - \frac {1}{2} \lim\limits_ {x \rightarrow 0} \frac {\left(- \frac {8}{6} + \frac {1}{6} + \frac {1}{2}\right) x ^ {3} + o (x ^ {3})}{x ^ {3}} = \frac {1}{3}.\end{array} $$
+因此， $I = e^{\frac{1}{3}}$
+注 在计算未定式极限时,应尽可能利用各种方法,如恒等变形、泰勒公式或者等价无穷小替换,来简化计算,提高解题速度."
+zt-031701,真题,微积分,第一章 函数、极限、连续,数三2017,1,选择题,,,"(1) 若函数 $f(x)=\left\{\begin{aligned}&\frac{1-\cos\sqrt{x}}{ax},&x>0,\\&b,&x\leqslant0\end{aligned}\right.$ 在 x=0 处连续，则（）",$ab=\frac{1}{2}.$,$ab=-\frac{1}{2}.$,$ab=0$.,$ab=2$.,"答案 A.
+分析 本题主要考查函数的连续性的定义以及分段函数的连续性. 函数 $f(x)$ 在 $x_{0}$ 处连续,等价于 $\lim\limits_{x\to x_{0}^{+}}f(x)=\lim\limits_{x\to x_{0}^{-}}f(x)=f(x_{0})$ . 根据该性质列出等式求解即可.
+解 $f(x)$ 是分段函数.代入 $f(x)$ 在 $(-\infty,0]$ 和 $(0, +\infty)$ 上的表达式，分别计算 $\lim\limits_{x\to 0^{-}}f(x)$ ， $\lim\limits_{x\to 0^{+}}f(x)$ .
+$$ \lim\limits_ {x \to 0 ^ {-}} f (x) = f (0) = b, $$
+$$ \lim\limits_ {x \rightarrow 0 ^ {+}} f (x) = \lim\limits_ {x \rightarrow 0 ^ {+}} \frac {1 - \cos \sqrt {x}}{a x} \overset{1 - \cos \sqrt {x} \sim \frac {1}{2} (\sqrt {x}) ^ {2}}{=} \lim\limits_ {x \rightarrow 0 ^ {+}} \frac {\frac {x}{2}}{a x} = \frac {1}{2 a}. $$
+因此， $b=\frac{1}{2a}$ ，即 $ab=\frac{1}{2}$ . 应选 A.
+拓展
+1. 分段函数的连续性
+讨论分段函数的连续性时,一般先判断函数在每个分界点处的极限是否存在,若不存在,则在该点不连续;若存在,则再判断该极限是否等于该点的函数值,若相等,则在该点连续,否则不连续.
+【例】下列函数在其定义域内连续的是( )（1987年数学三试题） (A) $f(x)=\ln x+\sin x.$ (B) $f(x)=\left\{\begin{aligned}\sin x,&x\leqslant0,\\\cos x,&x>0.\end{aligned}\right.$ (C) $f(x)=\left\{\begin{aligned}x+1,&x<0,\\ 0,&x=0,\\ x-1,&x>0.\end{aligned}\right.$ (D) $f(x)=\left\{\begin{aligned}\frac{1}{\sqrt{|x|}},&x\neq0,\\ 0,&x=0.\end{aligned}\right.$
+答案 A.
+2. 分段函数的可导性
+设函数 $g(x)$ ， $h(x)$ 在 $x = x_0$ 处可导，分段函数 $f(x) = \begin{cases} g(x), & x < x_0, \\ h(x), & x \geqslant x_0 \end{cases}$ 在 $x = x_0$ 处连续，则 $f_{-}^{\prime}(x_0) = g^{\prime}(x_0)$ ， $f_{+}^{\prime}(x_0) = h^{\prime}(x_0)$ . 特别地，若 $g^{\prime}(x_0) = h^{\prime}(x_0)$ ，则 $f(x)$ 在 $x_0$ 处可导，且 $f^{\prime}(x_0) = g^{\prime}(x_0) = h^{\prime}(x_0)$ .
+事实上，由 $f(x)$ 在 $x = x_0$ 处连续知， $g(x_0) = h(x_0) = f(x_0)$ . 于是，
+$$ f _ {-} ^ {\prime} (x _ {0}) = \lim\limits_ {x \rightarrow x _ {0} ^ {-}} \frac {f (x) - f (x _ {0})}{x - x _ {0}} = \lim\limits_ {x \rightarrow x _ {0} ^ {-}} \frac {g (x) - g (x _ {0})}{x - x _ {0}} = g _ {-} ^ {\prime} (x _ {0}) = g ^ {\prime} (x _ {0}), $$
+$$ f _ {+} ^ {\prime} \left(x _ {0}\right) = \lim\limits_ {x \rightarrow x _ {0} ^ {+}} \frac {f (x) - f \left(x _ {0}\right)}{x - x _ {0}} = \lim\limits_ {x \rightarrow x _ {0} ^ {+}} \frac {h (x) - h \left(x _ {0}\right)}{x - x _ {0}} = h _ {+} ^ {\prime} \left(x _ {0}\right) = h ^ {\prime} \left(x _ {0}\right). $$
+【例】设 $f(x)=\left\{\begin{aligned}&\frac{1}{3}x^{3}+x^{2}+\frac{5}{3},&x\geqslant1,\\&x^{2}+x+1,&x<1,\end{aligned}\right.$ 则 $f'(1)=$ ____.
+答案 3.
+注意: 若分段函数 $f(x)$ 在 $x = x_{0}$ 处不连续, 则不能利用上述方法求左、右导数或导数, 否则会导致错误. 例如 $f(x) = \begin{cases} \sin x, & x > 0, \\ e^{x}, & x \leqslant 0. \end{cases}$ . 若按上述方法, 则有 $f_{+}^{\prime}(0) \stackrel{\text{错}}{=} (\sin x)'|_{x=0} = \cos x|_{x=0} = 1$ . 但事实上, $f_{+}^{\prime}(0) = \lim\limits_{x \to 0^{+}} \frac{f(x) - f(0)}{x} = \lim\limits_{x \to 0^{+}} \frac{\sin x - 1}{x} = -\infty$ .
+3. 分段函数的原函数
+求分段函数的原函数,一般先求函数在每一段区间上的原函数,然后根据原函数的连续性确定常数.
+【例】已知函数 $f(x) = \begin{cases} 2(x - 1), & x < 1, \\ \ln x, & x \geqslant 1, \end{cases}$ 则 $f(x)$ 的一个原函数是（）（2016年数学一、二试题）
+(A) $F(x) = \begin{cases} (x - 1)^2, & x < 1, \\ x(\ln x - 1), & x \geqslant 1. \end{cases}$ (B) $F(x) = \begin{cases} (x - 1)^2, & x < 1, \\ x(\ln x + 1) - 1, & x \geqslant 1. \end{cases}$ (C) $F(x) = \begin{cases} (x - 1)^2, & x < 1, \\ x(\ln x + 1) + 1, & x \geqslant 1. \end{cases}$ (D) $F(x) = \begin{cases} (x - 1)^2, & x < 1, \\ x(\ln x - 1) + 1, & x \geqslant 1. \end{cases}$
+答案 D.
+4. 分段函数的定积分
+求分段函数的定积分时,一般先判断积分上、下限是否属于同一区间,若属于同一区间,则直接积分;若不属于同一区间,则利用定积分对区间的可加性将逐段积分的结果相加即可. 【例】设 $f(x)=\left\{\begin{aligned}&xe^{x^{2}},&-\frac{1}{2}\leqslant x<\frac{1}{2},\\ &-1,&x\geqslant\frac{1}{2},\end{aligned}\right.$ 则 $\int_{\frac{1}{2}}^{2}f(x-1)\mathrm{d}x=$ ____.(2004年数学三试题) 答案 $-\frac{1}{2}.$
+提示 先作变量代换 t = x - 1，得 $\int_{\frac{1}{2}}^{2} f(x - 1) \, dx = \int_{-\frac{1}{2}}^{1} f(t) \, dt$ ，再以 $\frac{1}{2}$ 为分界点，逐段积分后相加即可."
+zt-031704,真题,微积分,第一章 函数、极限、连续,数三2017,4,选择题,,题型七 极限求参,"(4) 若级数 $\sum_{n=2}^{\infty}\left[\sin\frac{1}{n}-k\ln\left(1-\frac{1}{n}\right)\right]$ 收敛, 则 $k=(\quad)$",1,2,-1,-2,"答案 C.
+分析 本题主要考查利用泰勒公式来判断任意项级数的敛散性以及正项级数的比较审敛法.
+本题中的级数是一个任意项级数,随着参数 k 的变化,一般项的正、负性也发生变化.根据一般项的特点,我们可以利用泰勒公式来讨论该级数的敛散性.
+解 考虑 $\sin\frac{1}{n}$ 和 $\ln\left(1-\frac{1}{n}\right)$ 的泰勒公式.
+$$ \sin \frac {1}{n} = \frac {1}{n} - \frac {1}{6 n ^ {3}} + o \left(\frac {1}{n ^ {3}}\right), \quad \ln \left(1 - \frac {1}{n}\right) = - \frac {1}{n} - \frac {1}{2 n ^ {2}} + o \left(\frac {1}{n ^ {2}}\right). $$
+于是，
+$$ \sin \frac {1}{n} - k \ln \left(1 - \frac {1}{n}\right) = \frac {1}{n} + \frac {k}{n} + \frac {k}{2 n ^ {2}} + o \left(\frac {1}{n ^ {2}}\right). $$
+当 n 充分大时, $\sin\frac{1}{n}-k\ln\left(1-\frac{1}{n}\right)=\frac{1}{n}+\frac{k}{n}+\frac{k}{2n^{2}}+o\left(\frac{1}{n^{2}}\right)$ 不变号. 又因为舍去级数的有限项不影响级数的敛散性, 所以可以对级数 $\sum_{n=2}^{\infty}\left[\sin\frac{1}{n}-k\ln\left(1-\frac{1}{n}\right)\right]$ 使用极限形式的比较审敛法. 当 $k \neq -1$ 时,
+$$ \lim\limits_ {n \to \infty} \frac {\sin \frac {1}{n} - k \ln \left(1 - \frac {1}{n}\right)}{\frac {1}{n}} = \lim\limits_ {n \to \infty} \frac {\frac {1}{n} + \frac {k}{n} + \frac {k}{2 n ^ {2}} + o \left(\frac {1}{n ^ {2}}\right)}{\frac {1}{n}} = 1 + k, $$
+而 $\sum_{n=1}^{\infty} \frac{1}{n}$ 发散, 故由极限形式的比较审敛法知, 原级数发散.
+当 $k = -1$ 时， $\sum_{n = 2}^{\infty} - \left[\sin \frac{1}{n} - k\ln \left(1 - \frac{1}{n}\right)\right]$ 为正项级数，且
+$$ \lim\limits_ {n \rightarrow \infty} \frac {- \left[ \sin \frac {1}{n} + \ln \left(1 - \frac {1}{n}\right)\right]}{\frac {1}{n ^ {2}}} = \lim\limits_ {n \rightarrow \infty} \frac {\frac {1}{2 n ^ {2}} + o \left(\frac {1}{n ^ {2}}\right)}{\frac {1}{n ^ {2}}} = \frac {1}{2}, $$
+而 $\sum_{n=1}^{\infty} \frac{1}{n^2}$ 收敛, 故由极限形式的比较审敛法知, 原级数收敛.
+级数 $\sum_{n=2}^{\infty}\left[\sin\frac{1}{n}-k\ln\left(1-\frac{1}{n}\right)\right]$ 收敛等价于 $k = -1$ .
+因此,应选 C."
+zt-031715,真题,微积分,第一章 函数、极限、连续,数三2017,15,解答题,,题型四 函数极限,"(15) ( 10 分)
+求 $\lim\limits_{x\to0^{+}}\frac{\int_{0}^{x}\sqrt{x-t}e^{t}dt}{\sqrt{x^{3}}}$ .",,,,,"分析 本题主要考查未定式极限的计算以及变限积分的导数计算.
+原极限是一个 $\frac{0}{0}$ 型未定式极限, 故可以考虑使用洛必达法则计算.
+分子 $\int_0^x\sqrt{x - t}\mathrm{e}^t\mathrm{d}t$ 是一个变限积分，其中 $t$ 为积分变量， $x$ 为参变量，积分限与被积函数中均包含参变量 $x$ ，且被积函数中的参变量较难与积分变量分离，因此不能直接利用变限积分的求导公式计算导数.
+可以考虑作变量代换 u = x - t，将含有 x 的部分提到积分号外，从而可以利用求导的乘法法则来计算该变限积分的导数.
+此外,也可以利用如下形式的积分中值定理将原极限进行恒等变形,进而求解.
+积分中值定理 若 $f(x), g(x)$ 在 $[a, b]$ 上连续，且 $g(x)$ 在 $[a, b]$ 上不变号，则
+$$ \int_ {a} ^ {b} f (x) g (x) \mathrm{d} x = f (\xi) \int_ {a} ^ {b} g (x) \mathrm{d} x, $$
+其中 $\xi \in [a, b]$ .
+解（法一）令 u = x - t，则 $t = x - u, du = -dt$ ,
+$$ \int_ {0} ^ {x} \sqrt {x - t} \mathrm{e} ^ {t} \mathrm{d} t = - \int_ {x} ^ {0} \sqrt {u} \mathrm{e} ^ {x - u} \mathrm{d} u = \mathrm{e} ^ {x} \int_ {0} ^ {x} \sqrt {u} \mathrm{e} ^ {- u} \mathrm{d} u. $$
+于是，
+$$ \lim\limits_ {x \to 0 ^ {+}} \frac {\mathrm{e} ^ {x} \int_ {0} ^ {x} \sqrt {u} \mathrm{e} ^ {- u} \mathrm{d} u}{\sqrt {x ^ {3}}} \overset{\lim\limits_ {x \to 0 ^ {+}} \mathrm{e} ^ {x} = 1}{=} \lim\limits_ {x \to 0 ^ {+}} \frac {\int_ {0} ^ {x} \sqrt {u} \mathrm{e} ^ {- u} \mathrm{d} u}{\sqrt {x ^ {3}}} \overset{\text {洛必达}}{=} \lim\limits_ {x \to 0 ^ {+}} \frac {\sqrt {x} \mathrm{e} ^ {- x}}{\frac {3}{2} \sqrt {x}} = \frac {2}{3}. $$
+因此,原极限= $\frac{2}{3}$ .
+(法二) 由于 $e^{t}$ 和 $\sqrt{x-t}$ 均为关于 t 的连续函数, 且 $\sqrt{x-t}$ 在 $[0,x]$ 上不变号, 故由积分中值定理可得, 存在 $\xi_{x} \in [0,x]$ , 使得
+$$ \int_ {0} ^ {x} \sqrt {x - t} \mathrm{e} ^ {t} \mathrm{d} t = \mathrm{e} ^ {\xi_ {x}} \int_ {0} ^ {x} \sqrt {x - t} \mathrm{d} t. $$
+因此，
+$$ \begin{array}{r l} \lim\limits_ {x \to 0 ^ {+}} \frac {\int_ {0} ^ {x} \sqrt {x - t} \mathrm{e} ^ {t} \mathrm{d} t}{\sqrt {x ^ {3}}} & = \lim\limits_ {x \to 0 ^ {+}} \frac {\mathrm{e} ^ {\xi_ {x}} \int_ {0} ^ {x} \sqrt {x - t} \mathrm{d} t}{\sqrt {x ^ {3}}} = \lim\limits_ {0 \leqslant \xi_ {x} \leqslant x} \mathrm{e} ^ {\xi_ {x}} \cdot \lim\limits_ {x \to 0 ^ {+}} \frac {- \left. \frac {2}{3} (x - t) ^ {\frac {3}{2}} \right| _ {0} ^ {x}}{\sqrt {x ^ {3}}} \\ & = 1 \cdot \lim\limits_ {x \to 0 ^ {+}} \frac {\frac {2}{3} x ^ {\frac {3}{2}}}{\sqrt {x ^ {3}}} = \frac {2}{3}. \end{array} $$
+注 本题中的 $\int_{0}^{x}\sqrt{x - t}\mathrm{e}^{t}\mathrm{d}t$ 是以 $x$ 为参变量（ $x$ 在积分过程中是常量）的变限积分，并且被积函数中的参变量与积分变量不能“分离”。这里的“分离”指的是被积函数能写成 $f_{1}(x)g(t) + f_{2}(x)h(t)$ 的形式。对于此类积分，一般可以考虑利用变量代换把被积函数写成 $f_{1}(x)g(t) + f_{2}(x)h(t)$ 的形式。"
+zt-031717,真题,微积分,第一章 函数、极限、连续,数三2017,17,解答题,,题型五 数列极限,(17) 求 $\lim\limits_{n\to\infty}\sum_{k=1}^{n}\frac{k}{n^{2}}\ln\left(1+\frac{k}{n}\right)$ .,,,,,"分析 本题主要考查利用定积分的定义求 n 项和的极限.
+一般可以先提出因子 $\frac{b - a}{n}$ , 将和式表示为连续函数 $f(x)$ 在区间 $[a, b]$ 上的定积分. 再根据和式确定被积函数与积分上、下限, 得
+$$ \lim\limits_ {n \to \infty} \sum_ {i = 1} ^ {n} f \left(a + i \cdot \frac {b - a}{n}\right) \cdot \frac {b - a}{n} = \int_ {a} ^ {b} f (x) \mathrm{d} x. $$
+解 根据定积分的定义,提出因子 $\frac{1}{n}$ ,可得
+$$ \begin{array}{r l} {\underset {n \to \infty} {\lim} \sum_ {k = 1} ^ {n} \frac {k}{n ^ {2}} \mathrm{ln} \left(1 + \frac {k}{n}\right) = \underset {n \to \infty} {\lim} \sum_ {k = 1} ^ {n} \frac {k}{n} \mathrm{ln} \left(1 + \frac {k}{n}\right) \cdot \frac {1}{n} = \int_ {0} ^ {1} x \mathrm{ln} (1 + x) \mathrm{d} x} \\ & {\quad = \frac {1}{2} \int_ {0} ^ {1} \mathrm{ln} (1 + x) \mathrm{d} (x ^ {2}) \stackrel {\text {分部积分}} {=} \frac {x ^ {2}}{2} \mathrm{ln} (1 + x) \Big | _ {0} ^ {1} - \frac {1}{2} \int_ {0} ^ {1} \frac {x ^ {2}}{1 + x} \mathrm{d} x} \\ & {\quad = \frac {\mathrm{ln} 2}{2} - \frac {1}{2} \int_ {0} ^ {1} \frac {x ^ {2} - 1 + 1}{1 + x} \mathrm{d} x = \frac {\mathrm{ln} 2}{2} - \frac {1}{2} \int_ {0} ^ {1} \left(x - 1 + \frac {1}{1 + x}\right) \mathrm{d} x} \\ & {\quad = \frac {\mathrm{ln} 2}{2} - \frac {1}{2} \left[ \frac {x ^ {2}}{2} - x + \mathrm{ln} (1 + x) \right] \Big | _ {0} ^ {1} = \frac {1}{4}.} \end{array} $$
+因此,原极限= $\frac{1}{4}$ .
+拓展
+利用定积分的定义求极限
+(1) $\lim\limits_{n\to\infty}\frac{1}{n^{2}}\left(\sin\frac{1}{n}+2\sin\frac{2}{n}+\cdots+n\sin\frac{n}{n}\right)$ ; (2016年数学三试题)
+(2) $\lim\limits_{n\to \infty}n\left(\frac{1}{1 + n^2} +\frac{1}{2^2 + n^2} +\dots +\frac{1}{n^2 + n^2}\right)$ ; (2012年数学二试题)
+(3) $\lim\limits_{n\to\infty}\frac{1}{n}\left(\sqrt{1+\cos\frac{\pi}{n}}+\sqrt{1+\cos\frac{2\pi}{n}}+\cdots+\sqrt{1+\cos\frac{n\pi}{n}}\right)$ ; (2002年数学二试题)
+(4) $\lim\limits_{n\to\infty}\ln\sqrt[n]{\left(1+\frac{1}{n}\right)^2\left(1+\frac{2}{n}\right)^2\cdots\left(1+\frac{n}{n}\right)^2}$ ; (改编自2004年数学二试题)
+(5) $\lim\limits_{n\to\infty}\left(\frac{\sin\frac{\pi}{n}}{n+1}+\frac{\sin\frac{2\pi}{n}}{n+\frac{1}{2}}+\cdots+\frac{\sin\pi}{n+\frac{1}{n}}\right)$ . (1998年数学一试题)
+答案 (1) $\sin 1 - \cos 1$ ; (2) $\frac{\pi}{4}$ ; (3) $\frac{2\sqrt{2}}{\pi}$ ; (4) $4\ln 2 - 2$ ; (5) $\frac{2}{\pi}$ .
+提示 第(4)题不能直接利用定积分的定义求极限,需要先通过取对数,把n项乘积转化为n项和式,再利用定积分的定义求极限.
+第(5)题也不能直接利用定积分的定义求极限, 需要先对所求的 n 项和进行放缩 (即 $\sum_{i=1}^{n}\frac{\sin\frac{i\pi}{n}}{n+1}\leqslant\sum_{i=1}^{n}\frac{\sin\frac{i\pi}{n}}{n+\frac{1}{i}}\leqslant\sum_{i=1}^{n}\frac{\sin\frac{i\pi}{n}}{n}$ ), 再利用定积分的定义以及夹逼准则求极限."
+zt-031815,真题,微积分,第一章 函数、极限、连续,数三2018,15,解答题,,,"(15) ( 10 分)
+已知实数 $a, b$ 满足 $\lim\limits_{x \to +\infty} [(ax + b) e^{\frac{1}{x}} - x] = 2$ , 求 $a, b$ .",,,,,"分析 本题主要考查极限中未知参数的确定.
+本题中,已知含有参数a,b的 $\infty-\infty$ 型未定式极限为2,要求其中的参数a,b的值,可以先计算该未定式的极限,再根据极限存在并等于2的条件确定a,b的值.
+本题中的未定式极限的计算,可以通过变量代换,将 $\infty - \infty$ 型未定式转化为 $\frac{0}{0}$ 型未定式,再使
+用洛必达法则计算;也可以利用泰勒公式计算.
+解（法一）令 $t = \frac{1}{x}$ ，则
+$$ \lim\limits_ {x \rightarrow + \infty} [ (a x + b) \mathrm{e} ^ {\frac {1}{x}} - x ] = \lim\limits_ {t \rightarrow 0 ^ {+}} \left[\left(\frac {a}{t} + b\right) \mathrm{e} ^ {t} - \frac {1}{t} \right] = \lim\limits_ {t \rightarrow 0 ^ {+}} \frac {(a + b t) \mathrm{e} ^ {t} - 1}{t} = 2. $$
+由于 $t \to 0^{+}$ , 而 $\lim\limits_{t \to 0^{+}} \frac{(a + bt) e^{t} - 1}{t} = 2$ , 故 $\lim\limits_{t \to 0^{+}} [ (a + bt) e^{t} - 1] = a - 1 = 0$ . 于是, $a = 1$ .
+将 $a = 1$ 代入 $\lim\limits_{t\to 0^{+}}\frac{(a + bt)\mathrm{e}^t - 1}{t}$ ，可得
+$$ \begin{array}{r l} \lim\limits_ {t \to 0 ^ {+}} \frac {(a + b t) \mathrm{e} ^ {t} - 1}{t} & = \lim\limits_ {t \to 0 ^ {+}} \frac {(1 + b t) \mathrm{e} ^ {t} - 1}{t} \overset{\text {洛必达}}{=} \lim\limits_ {t \to 0 ^ {+}} [ (1 + b t) \mathrm{e} ^ {t} + b \mathrm{e} ^ {t} ] \\ & = \lim\limits_ {t \to 0 ^ {+}} (1 + b + b t) \mathrm{e} ^ {t} = 1 + b = 2. \end{array} $$
+于是，b = 1.
+因此，a = 1, b = 1.
+(法二) 利用泰勒公式.
+当 $x \to +\infty$ 时， $\frac{1}{x} \to 0^{+}$ . 于是， $\mathrm{e}^{\frac{1}{x}} = 1 + \frac{1}{x} + o\left(\frac{1}{x}\right)$ .
+$$ \begin{array}{r l} \lim\limits_ {x \to + \infty} [ (a x + b) e ^ {\frac {1}{x}} - x ] & = \lim\limits_ {x \to + \infty} \left\{(a x + b) \left[ 1 + \frac {1}{x} + o \left(\frac {1}{x}\right) \right] - x \right\} \\ & = \lim\limits_ {x \to + \infty} \left[ a x + b + a + \frac {b}{x} + o (1) + o \left(\frac {1}{x}\right) - x \right] \\ & = \lim\limits_ {x \to + \infty} [ (a - 1) x + a + b ]. \end{array} $$
+当且仅当 $\left\{\begin{aligned}a-1&=0,\\ a+b&=2,\end{aligned}\right.$ 即 $\left\{\begin{aligned}a&=1,\\ b&=1\end{aligned}\right.$ 时， $\lim\limits_{x\to+\infty}\left[(a-1)x+a+b\right]=2.$
+因此，a = 1, b = 1."
+zt-031819,真题,微积分,第一章 函数、极限、连续,数三2018,19,解答题,,题型六 递推关系,"(19) ( 10 分)
+设数列 $\{x_{n}\}$ 满足: $x_{1} > 0, x_{n} e^{x_{n+1}} = e^{x_{n}} - 1 (n = 1, 2, \cdots)$ . 证明 $\{x_{n}\}$ 收敛, 并求 $\lim\limits_{n \to \infty} x_{n}$ .",,,,,"分析 本题综合考查了利用导数判断函数的单调性以及利用单调有界准则证明数列极限的存在性.
+本题中, 数列 $\{x_{n}\}$ 由递推关系式给出, 证明 $\{x_{n}\}$ 的单调性或有界性时, 可以使用数学归纳法.
+解 由 $x_{n}\mathrm{e}^{x_{n + 1}} = \mathrm{e}^{x_n} - 1(n = 1,2,\dots)$ 可得，
+$$ x _ {n + 1} = \ln \left(\frac {\mathrm{e} ^ {x _ {n}} - 1}{x _ {n}}\right). $$
+先用数学归纳法证明对所有的正整数 n, 都有 $x_{n} > 0$ .
+首先, $x_{1}>0.$
+假设当 $n = k$ 时， $x_{k} > 0$ . 注意到当 $x > 0$ 时， $\mathrm{e}^{x} - 1 > x$ ，从而 $\frac{\mathrm{e}^x - 1}{x} > 1$ . 于是，
+$$ x _ {k + 1} = \ln \left(\frac {\mathrm{e} ^ {x _ {k}} - 1}{x _ {k}}\right) > \ln 1 = 0. $$
+由数学归纳法可知,对所有的正整数 n,都有 $x_{n} > 0$ .
+因此,数列 $\{x_{n}\}$ 有下界.
+下面用两种方法证明数列 $\{x_{n}\}$ 单调减少,即 $x_{n+1}<x_{n}(n=1,2,\cdots)$ .
+(法一) 由 $x_{n}\mathrm{e}^{x_{n + 1}} = \mathrm{e}^{x_n} - 1$ 可知，
+$$ \mathrm{e} ^ {x _ {n + 1}} = \frac {\mathrm{e} ^ {x _ {n}} - 1}{x _ {n}} = \frac {\mathrm{e} ^ {x _ {n}} - \mathrm{e} ^ {0}}{x _ {n} - 0} \frac {\text {拉格朗日}}{\text {中值定理}} \mathrm{e} ^ {\xi_ {n}}, $$
+其中 $\xi_{n}\in(0,x_{n})$ .
+由于 $\mathrm{e}^x$ 单调增加，故由 $\mathrm{e}^{x_{n + 1}} = \mathrm{e}^{\xi_n} < \mathrm{e}^{x_n}$ 可得 $x_{n + 1} < x_n$ ，即数列 $\{x_{n}\}$ 单调减少.
+(法二) $x_{n + 1} - x_n = \ln \left(\frac{\mathrm{e}^{x_n} - 1}{x_n}\right) - x_n = \ln \left(\frac{\mathrm{e}^{x_n} - 1}{x_n\mathrm{e}^{x_n}}\right).$
+记 $f(x)=\mathrm{e}^{x}-1-x\mathrm{e}^{x}$ ，则 $f'(x)=\mathrm{e}^{x}-\mathrm{e}^{x}-x\mathrm{e}^{x}=-x\mathrm{e}^{x}$
+当 $x > 0$ 时， $f'(x) < 0, f(x)$ 在 $[0, +\infty)$ 上单调减少，于是， $f(x) < f(0) = 0.$ 从而，当 $x > 0$ 时，
+$$ \frac {\mathrm{e} ^ {x} - 1}{x \mathrm{e} ^ {x}} - 1 = \frac {\mathrm{e} ^ {x} - 1 - x \mathrm{e} ^ {x}}{x \mathrm{e} ^ {x}} < 0, $$
+即 $\frac{\mathrm{e}^x - 1}{xe^x} < 1.$
+又因为对所有的正整数 $n$ ，都有 $x_{n} > 0$ ，所以 $\ln \left(\frac{\mathrm{e}^{x_n} - 1}{x_n\mathrm{e}^{x_n}}\right) < \ln 1 = 0,$ 即 $x_{n + 1} - x_n < 0.$ 因此，数列 $\{x_{n}\}$ 单调减少.
+由单调有界准则可知,数列 $\{x_{n}\}$ 收敛.由于对所有的正整数n,都有 $x_{n}>0$ ,故 $\lim\limits_{n\to\infty}x_{n}=a\geqslant0$ . 对 $x_{n}e^{x_{n+1}} = e^{x_{n}} - 1$ 两端同时令 $n \to \infty$ ，可得 $ae^{a} = e^{a} - 1$ .
+由前面的结果可知, $x = 0$ 是 $f(x) = \mathrm{e}^{x} - 1 - x\mathrm{e}^{x}$ 在 $[0, +\infty)$ 上的唯一零点. 因此, $a = 0$ , 即 $\lim\limits_{n\to \infty}x_n = 0$ ."
+zt-031901,真题,微积分,第一章 函数、极限、连续,数三2019,1,选择题,,,"(1) 当 $x \to 0$ 时, 若 $x - \tan x$ 与 $x^{k}$ 是同阶无穷小, 则 $k = ( )$",1,2,3,4,"答案 C.
+分析 本题主要考查同阶无穷小的定义以及极限计算.
+由 $x - \tan x$ 与 $x^k$ 是同阶无穷小这一条件可得 $\lim\limits_{x\to 0}\frac{x - \tan x}{x^k}$ 为一非零常数，从而可确定 $k$ 的值.
+解 首先，由于当 $x \to 0$ 时， $x - \tan x \to 0$ ，而 $\lim\limits_{x \to 0} \frac{x - \tan x}{x^k}$ 为非零常数，故 $k > 0$ .
+下面用两种方法讨论 $\lim\limits_{x\to0}\frac{x-\tan x}{x^{k}}.$
+(法一) 由于 $\tan x = x + \frac{x^3}{3} + o(x^3)$ , 故
+$$ \lim\limits_ {x \to 0} \frac {x - \tan x}{x ^ {k}} = \lim\limits_ {x \to 0} \frac {- \frac {x ^ {3}}{3} + o (x ^ {3})}{x ^ {k}}. $$
+当 $k > 3$ 时，该极限为 $\infty$ ；当 $0 < k < 3$ 时，该极限为 $0$ ；当 $k = 3$ 时，该极限为 $-\frac{1}{3}$ 。于是， $x - \tan x$ 与 $x^3$ 是同阶无穷小， $k = 3$ 。 因此，应选 C.
+（法二）利用洛必达法则讨论 $\lim\limits_{x\to 0}\frac{x - \tan x}{x^k}.$
+$$ \lim\limits_ {x \to 0} \frac {x - \tan x}{x ^ {k}} \stackrel {\text {洛必达}} {=} \lim\limits_ {x \to 0} \frac {1 - \sec^ {2} x}{k x ^ {k - 1}} = \lim\limits_ {x \to 0} \frac {- \tan^ {2} x}{k x ^ {k - 1}} \stackrel {\tan x \sim x} {=} \lim\limits_ {x \to 0} \frac {- x ^ {2}}{k x ^ {k - 1}}. $$
+当 $k > 3$ 时，该极限为 $\infty$ ；当 $0 < k < 3$ 时，该极限为 $0$ ；当 $k = 3$ 时，该极限为 $-\frac{1}{3}$ 。于是， $x - \tan x$ 与 $x^3$ 是同阶无穷小， $k = 3$ 。 因此，应选 C."
+zt-031909,真题,微积分,第一章 函数、极限、连续,数三2019,9,填空题,,,(9) $\lim\limits_{n\to\infty}\left[\frac{1}{1\cdot2}+\frac{1}{2\cdot3}+\cdots+\frac{1}{n(n+1)}\right]^{n}=$ ____.,,,,,"答案 应填 $e^{-1}$ .
+分析 本题主要考查极限计算.
+本题中的极限，可先利用裂项相消化简 $\frac{1}{1\cdot2}+\frac{1}{2\cdot3}+\cdots+\frac{1}{n(n+1)}$ ，再利用重要极限 $\lim\limits_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}=e$ 计算.
+解 注意到 $\frac{1}{n(n + 1)} = \frac{1}{n} -\frac{1}{n + 1}$ ，故
+$$ \frac {1}{1 \cdot 2} + \frac {1}{2 \cdot 3} + \dots + \frac {1}{n (n + 1)} = 1 - \frac {1}{2} + \frac {1}{2} - \frac {1}{3} + \dots + \frac {1}{n} - \frac {1}{n + 1} = 1 - \frac {1}{n + 1}. $$
+因此，
+$$ \text {原极限} = \lim\limits_ {n \to \infty} \left(1 - \frac {1}{n + 1}\right) ^ {n} = \lim\limits_ {n \to \infty} \left(1 - \frac {1}{n + 1}\right) ^ {- (n + 1) \cdot \frac {n}{- (n + 1)}} = \mathrm{e} ^ {- 1}. $$"
+zt-032002,真题,微积分,第一章 函数、极限、连续,数三2020,2,选择题,,,(2) 函数 $f(x)=\frac{\mathrm{e}^{\frac{1}{x-1}}\ln\left|1+x\right|}{\left(\mathrm{e}^{x}-1\right)(x-2)}$ 的第二类间断点的个数为( ),1,2,3,4,"答案 C.
+分析 本题主要考查间断点的定义与类型.
+若 $x_0$ 为 $f(x)$ 的第二类间断点，则 $f(x_0^-), f(x_0^+)$ 至少有一个不存在。因此，要找函数 $f(x)$ 的第二类间断点，关键在于计算间断点处的左、右极限。
+解 从 $f(x)$ 的表达式可以看出, $x = -1, x = 0, x = 1, x = 2$ 为 $f(x)$ 的间断点. 下面分别计算这些点处的左、右极限.
+$$ \lim\limits_ {x \rightarrow - 1} f (x) = \lim\limits_ {x \rightarrow - 1} \frac {\mathrm{e} ^ {\frac {1}{x - 1}} \ln | 1 + x |}{(\mathrm{e} ^ {x} - 1) (x - 2)} = \frac {\mathrm{e} ^ {- \frac {1}{2}}}{(\mathrm{e} ^ {- 1} - 1) \cdot (- 3)} \lim\limits_ {x \rightarrow - 1} \ln | 1 + x | = \infty . $$
+$$ \lim\limits_ {x \rightarrow 0} f (x) = \lim\limits_ {x \rightarrow 0} \frac {\mathrm{e} ^ {\frac {1}{x - 1}} \ln | 1 + x |}{(\mathrm{e} ^ {x} - 1) (x - 2)} = \frac {\mathrm{e} ^ {- 1}}{- 2} \lim\limits_ {x \rightarrow 0} \frac {\ln | 1 + x |}{\mathrm{e} ^ {x} - 1} \frac {\ln | 1 + x | \sim x}{\mathrm{e} ^ {x} - 1 \sim x} - \frac {1}{2 \mathrm{e}} \lim\limits_ {x \rightarrow 0} \frac {x}{x} = - \frac {1}{2 \mathrm{e}}. $$
+$$ \lim\limits_ {x \rightarrow 1 ^ {+}} f (x) = \lim\limits_ {x \rightarrow 1 ^ {+}} \frac {\mathrm{e} ^ {\frac {1}{x - 1}} \ln | 1 + x |}{(\mathrm{e} ^ {x} - 1) (x - 2)} = - \frac {\ln 2}{\mathrm{e} - 1} \lim\limits_ {x \rightarrow 1 ^ {+}} \mathrm{e} ^ {\frac {1}{x - 1}} = \infty . $$
+$$ \lim\limits_ {x \rightarrow 2} f (x) = \lim\limits_ {x \rightarrow 2} \frac {\mathrm{e} ^ {\frac {1}{x - 1}} \ln | 1 + x |}{(\mathrm{e} ^ {x} - 1) (x - 2)} = \frac {\mathrm{eln} 3}{\mathrm{e} ^ {2} - 1} \lim\limits_ {x \rightarrow 2} \frac {1}{x - 2} = \infty . $$
+因此, $x = -1, x = 1$ 和 $x = 2$ 均为 $f(x)$ 的无穷间断点, 从而也是第二类间断点. $f(x)$ 共有3个第二类间断点. 应选C.
+注 由于 $\lim\limits_{u\to -\infty}\mathrm{e}^u = 0$ ，故 $\lim\limits_{x\to 1^{-}}f(x) = \lim\limits_{x\to 1^{-}}\frac{\mathrm{e}^{\frac{1}{x - 1}}\ln |1 + x|}{(\mathrm{e}^x - 1)(x - 2)} = -\frac{\ln 2}{\mathrm{e} - 1}\lim\limits_{x\to 1^{-}}\mathrm{e}^{\frac{1}{x - 1}} = 0.$"
+zt-032003,真题,微积分,第一章 函数、极限、连续,数三2020,3,选择题,,,"(3) 设奇函数 $f(x)$ 在 $(-∞, +∞)$ 上具有连续导数，则 ( )",$\int_{0}^{x}\left[\cos f(t)+f'(t)\right]dt$ 是奇函数.,$\int_{0}^{x}\left[\cos f(t)+f'(t)\right]dt$ 是偶函数.,$\int_{0}^{x}\left[\cos f'(t)+f(t)\right]dt$ 是奇函数.,$\int_{0}^{x}\left[\cos f'(t)+f(t)\right]dt$ 是偶函数.,"答案 A.
+分析 本题主要考查变限积分、导函数与函数的奇偶性.
+(1) 奇函数的导函数是偶函数; 偶函数的导函数是奇函数.
+(2) 若 $f(x)$ 是奇函数, $F(x)$ 是 $f(x)$ 的一个原函数, 则 $F(x)$ 是偶函数; 若 $f(x)$ 是偶函数, $F(x)$ 是 $f(x)$ 的一个原函数, 且 $F(0) = 0$ , 则 $F(x)$ 是奇函数.
+解 由于 $f(x)$ 是奇函数, 故 $\cos f(x)$ 是偶函数, $f'(x)$ 是偶函数, 从而 $\cos f(x) + f'(x)$ 也是偶函数. $F(x) = \int_{0}^{x} [\cos f(t) + f'(t)] \mathrm{d}t$ 是 $\cos f(x) + f'(x)$ 的一个原函数, 且 $F(0) = 0$ . 因此, $F(x)$ 是奇函数. 应选 A.
+下面说明其余选项均不正确.
+取 $f(x)=x$ ，则 $\cos f(x)=\cos x,f'(x)=1,\cos f'(x)=\cos 1.$
+$\int_{0}^{x}\left[\cos t+1\right]dt=\sin x+x$ 是奇函数,故选项B不正确.
+$\int_0^x [\cos 1 + t]\mathrm{d}t = \cos 1\cdot x + \frac{x^2}{2}$ ，既不是奇函数，也不是偶函数，故选项C、D不正确.
+注 下面说明当 $f(x)$ 是奇函数时, $\cos f(x)$ 是偶函数.
+$$ \cos f (- x) = \cos [ - f (x) ] = \cos f (x). $$"
+zt-032015,真题,微积分,第一章 函数、极限、连续,数三2020,15,解答题,,,"(15) ( 10 分)
+已知 $a, b$ 为常数，若 $\left(1 + \frac{1}{n}\right)^n - e$ 与 $\frac{b}{n^a}$ 在 $n \to \infty$ 时是等价无穷小，求 $a, b$ .",,,,,"分析 本题主要考查等价无穷小的定义以及极限计算.
+题设给出了等价无穷小这一条件,由此可得 $\lim\limits_{n\to\infty}\frac{\left(1+\frac{1}{n}\right)^n-e}{\frac{b}{n^a}}=1.$ 利用这一点来确定a,b.
+解 由 $\left(1 + \frac{1}{n}\right)^n - e$ 与 $\frac{b}{n^a}$ 在 $n \to \infty$ 时是等价无穷小可知, $a > 0, b \neq 0$ . 并且,
+$$ \begin{array}{r l} \lim\limits_ {n \to \infty} \frac {\left(1 + \frac {1}{n}\right) ^ {n} - e}{\frac {b}{n ^ {a}}} & = \lim\limits_ {n \to \infty} \frac {e ^ {n \ln (1 + \frac {1}{n})} - e}{\frac {b}{n ^ {a}}} = \lim\limits_ {n \to \infty} \frac {e ^ {\left[ e ^ {n \ln (1 + \frac {1}{n}) - 1} - 1 \right]}}{\frac {b}{n ^ {a}}} \\ & \overset{e ^ {n \ln (1 + \frac {1}{n}) - 1} - 1 \sim n \ln (1 + \frac {1}{n}) - 1}{=} e \lim\limits_ {n \to \infty} \frac {n \ln \left(1 + \frac {1}{n}\right) - 1}{\frac {b}{n ^ {a}}} \\ & \overset{t = \frac {1}{n}}{=} e \lim\limits_ {t \to 0 ^ {+}} \frac {\frac {\ln (1 + t)}{t} - 1}{b t ^ {a}} = e \lim\limits_ {t \to 0 ^ {+}} \frac {\ln (1 + t) - t}{b t ^ {a + 1}} \\ & \overset{\ln (1 + t) = t - \frac {t ^ {2}}{2} + o (t ^ {2})}{=} e \lim\limits_ {t \to 0 ^ {+}} \frac {- \frac {t ^ {2}}{2} + o (t ^ {2})}{b t ^ {a + 1}} = 1. \end{array} $$
+当 $a < 1$ 时， $\lim\limits_{t \to 0^{+}} \frac{-\frac{t^2}{2} + o(t^2)}{bt^{a + 1}} = 0$ ；当 $a > 1$ 时， $\lim\limits_{t \to 0^{+}} \frac{-\frac{t^2}{2} + o(t^2)}{bt^{a + 1}} = \infty$ ；当且仅当 $a = 1$ 时， $\lim\limits_{t \to 0^{+}} \frac{-\frac{t^2}{2} + o(t^2)}{bt^2}$ 为非零常数。此时， $\mathrm{e}\lim\limits_{t \to 0^{+}} \frac{-\frac{t^2}{2} + o(t^2)}{bt^2} = -\frac{\mathrm{e}}{2} \cdot \frac{1}{b} = 1$ 。解得 $b = -\frac{\mathrm{e}}{2}$ 。
+因此, $a=1,b=-\frac{e}{2}.$"
+zt-032101,真题,微积分,第一章 函数、极限、连续,数三2021,1,选择题,,,"(1) 当 $x \to 0$ 时, $\int_{0}^{x^{2}} (\mathrm{e}^{t^{3}} - 1) \, \mathrm{d}t$ 是 $x^{7}$ 的 ( )",低阶无穷小.,等价无穷小.,高阶无穷小.,同阶但非等价无穷小.,"答案 C.
+分析 本题主要考查无穷小量的阶的比较.
+(1) 若 $\lim\limits_{\alpha}\frac{\beta}{\alpha}=0$ ，则称 $\beta$ 是比 $\alpha$ 高阶的无穷小量，记作 $\beta=o(\alpha)$ .
+(2) 若 $\lim \frac{\beta}{\alpha} = \infty$ ，则称 $\beta$ 是比 $\alpha$ 低阶的无穷小量.
+(3) 若 $\lim\limits_{\alpha}\frac{\beta}{\alpha}=c\neq0$ ，则称 $\beta$ 与 $\alpha$ 是同阶无穷小量.
+(4) 若 $\lim\limits_{\alpha^{k}}\frac{\beta}{\alpha^{k}}=c\neq0,k>0$ ，则称 $\beta$ 是关于 $\alpha$ 的 k 阶无穷小量.
+(5) 若 $\lim\limits_{\alpha\to0}\frac{\beta}{\alpha}=1$ ，则称 $\beta$ 与 $\alpha$ 是等价无穷小量，记作 $\alpha\sim\beta$ 。同阶无穷小量不一定是等价无穷小量。
+解 计算 $\lim\limits_{x\to 0}\frac{\int_0^{x^2}(\mathrm{e}^{t^3} - 1)\mathrm{d}t}{x^7}$ 来比较这两个无穷小量的阶.
+$$ \lim\limits_ {x \to 0} \frac {\int_ {0} ^ {x ^ {2}} (\mathrm{e} ^ {t ^ {3}} - 1) \mathrm{d} t}{x ^ {7}} \stackrel {\text {洛必达}} {=} \lim\limits_ {x \to 0} \frac {(\mathrm{e} ^ {x ^ {6}} - 1) \cdot 2 x}{7 x ^ {6}} \stackrel {\mathrm{e} ^ {x ^ {6}} - 1 \sim x ^ {6}} {=} \lim\limits_ {x \to 0} \frac {x ^ {6} \cdot 2 x}{7 x ^ {6}} = 0. $$
+因此， $\int_0^{x^2}(\mathrm{e}^{t^3} - 1)\mathrm{d}t$ 是 $x^{7}$ 的高阶无穷小.应选C."
+zt-032117,真题,微积分,第一章 函数、极限、连续,数三2021,17,解答题,,,"(17)(10分)
+已知 $\lim\limits_{x\to 0}\left[\alpha \arctan{\frac{1}{x}} + (1 + |x|)^{\frac{1}{x}}\right]$ 存在，求 $\alpha$ 的值.",,,,,"分析 本题主要考查确定极限中的参数.
+本题中,需要注意极限的左、右之分.分别计算 $\alpha\arctan\frac{1}{x},(1+|x|)^{\frac{1}{x}}$ 在 x=0 处的左、右极限,然后根据原极限存在确定 $\alpha$ 的值.
+解 分别计算 $\lim\limits_{x\to 0^{-}}\left[\alpha \arctan{\frac{1}{x}} + (1 + |x|)^{\frac{1}{x}}\right]$ 和 $\lim\limits_{x\to 0^{+}}\left[\alpha \arctan{\frac{1}{x}} + (1 + |x|)^{\frac{1}{x}}\right].$
+$$ \begin{array}{r l} \lim\limits_ {x \to 0 ^ {-}} \left[ \alpha \arctan \frac {1}{x} + (1 + | x |) ^ {\frac {1}{x}} \right] & = \lim\limits_ {x \to 0 ^ {-}} \alpha \arctan \frac {1}{x} + \lim\limits_ {x \to 0 ^ {-}} (1 + | x |) ^ {\frac {1}{x}} \\ & = - \frac {\pi}{2} \alpha + \lim\limits_ {x \to 0 ^ {-}} (1 - x) ^ {\frac {1}{x}} \\ & = - \frac {\pi}{2} \alpha + \lim\limits_ {x \to 0 ^ {-}} (1 - x) ^ {- \frac {1}{x} \cdot (- 1)} \\ & = - \frac {\pi}{2} \alpha + \frac {1}{e}. \end{array} $$
+$$ \begin{array}{r l} \lim\limits_ {x \to 0 ^ {+}} \left[ \alpha \arctan \frac {1}{x} + (1 + | x |) ^ {\frac {1}{x}} \right] & = \lim\limits_ {x \to 0 ^ {+}} \alpha \arctan \frac {1}{x} + \lim\limits_ {x \to 0 ^ {+}} (1 + | x |) ^ {\frac {1}{x}} \\ & = \frac {\pi}{2} \alpha + \lim\limits_ {x \to 0 ^ {+}} (1 + x) ^ {\frac {1}{x}} \\ & = \frac {\pi}{2} \alpha + e. \end{array} $$
+由于极限 $\lim\limits_{x\to 0}\left[\alpha \arctan{\frac{1}{x}} + (1 + |x|)^{\frac{1}{x}}\right]$ 存在，故
+$$ - \frac {\pi}{2} \alpha + \frac {1}{e} = \frac {\pi}{2} \alpha + e. $$
+解得 $\alpha = \frac{1}{\pi} \left( \frac{1}{e} - e \right)$ .
+拓展
+2000 年数学一试题中,也有一道类似的试题. 大家可以留作练习.
+【例】求 $\lim\limits_{x\to0}\left(\frac{2+\mathrm{e}^{\frac{1}{x}}}{1+\mathrm{e}^{\frac{4}{x}}}+\frac{\sin x}{|x|}\right)$ .(2000年数学一试题)
+答案 1."
+zt-032201,真题,微积分,第一章 函数、极限、连续,数三2022,1,选择题,,,"(1) 当 $x \to 0$ 时, $\alpha(x), \beta(x)$ 是非零无穷小量, 给出以下四个命题: 
+① 若 $\alpha(x) \sim \beta(x)$ , 则 $\alpha^2(x) \sim \beta^2(x)$ ; 
+② 若 $\alpha^2(x) \sim \beta^2(x)$ , 则 $\alpha(x) \sim \beta(x)$ ; 
+③ 若 $\alpha(x) \sim \beta(x)$ , 则 $\alpha(x) - \beta(x) = o(\alpha(x))$ ;
+④ 若 $\alpha(x) - \beta(x) = o(\alpha(x))$ , 则 $\alpha(x) \sim \beta(x)$ . 
+其中所有真命题的序号是( )",①③.,①④.,①③④.,②③④.,"答案 C.
+分析 本题主要考查无穷小量的概念.
+四个命题均与无穷小量等价这个概念有关.
+当 $x \to 0$ 时, $\alpha(x) \sim \beta(x)$ 意味着 $\lim\limits_{x \to 0} \frac{\alpha(x)}{\beta(x)} = 1, o(\alpha(x))$ 满足 $\lim\limits_{x \to 0} \frac{o(\alpha(x))}{\alpha(x)} = 0$ .
+解 依次分析四个命题.
+若 $\alpha(x) \sim \beta(x)$ , 则 $\lim\limits_{x \to 0} \frac{\alpha(x)}{\beta(x)} = 1$ , 从而 $\lim\limits_{x \to 0} \frac{\alpha^2(x)}{\beta^2(x)} = 1$ , 即 $\alpha^2(x) \sim \beta^2(x)$ . 命题 ① 是真命题. 由 $\alpha^2(x) \sim \beta^2(x)$ 并不能得到 $\alpha(x) \sim \beta(x)$ . 考虑 $\beta(x) = -\alpha(x)$ , 则 $\lim\limits_{x \to 0} \frac{\alpha^2(x)}{\beta^2(x)} = \lim\limits_{x \to 0} \frac{\alpha^2(x)}{\alpha^2(x)} = 1$ , 即 $\alpha^2(x) \sim \beta^2(x)$ , 但 $\lim\limits_{x \to 0} \frac{\alpha(x)}{\beta(x)} = \lim\limits_{x \to 0} \frac{\alpha(x)}{-\alpha(x)} = -1, \alpha(x)$ 与 $\beta(x)$ 只是同阶但并不等价的无穷小量. 命题 ② 不是真命题.
+要说明 $\alpha(x) - \beta(x) = o(\alpha(x))$ ，只需说明 $\lim\limits_{x \to 0} \frac{\alpha(x) - \beta(x)}{\alpha(x)} = 0$ .
+$$ \lim\limits_ {x \rightarrow 0} \frac {\alpha (x) - \beta (x)}{\alpha (x)} = 1 - \lim\limits_ {x \rightarrow 0} \frac {\beta (x)}{\alpha (x)} \frac {\alpha (x) - \beta (x)}{1 - 1} = 0. $$
+命题 ③ 是真命题.
+要说明 $\alpha(x) \sim \beta(x)$ , 只需说明 $\lim\limits_{x \to 0} \frac{\beta(x)}{\alpha(x)} = 1$ .
+$$ \lim\limits_ {x \rightarrow 0} \frac {\beta (x)}{\alpha (x)} = \lim\limits_ {x \rightarrow 0} \frac {\alpha (x) - [ \alpha (x) - \beta (x) ]}{\alpha (x)} = 1 - \lim\limits_ {x \rightarrow 0} \frac {\alpha (x) - \beta (x)}{\alpha (x)} = 1 - 0 = 1. $$
+命题 ④ 是真命题.
+综上所述,应选 C.
+注 考查无穷小量的比较以及 $o(\cdot)$ 符号含义的题目,历年数三当中出现较少,在2013年数三数三中有一道考查 $o(\cdot)$ 符号含义的题目.
+【例】当 $x \to 0$ 时，用“ $o(x)$ ”表示比 $x$ 高阶的无穷小量，则下列式子中错误的是（）(2013年数学三试题)
+(A) $x \cdot o(x^2) = o(x^3)$ .
+(B) $o(x) \cdot o(x^2) = o(x^3)$ .
+(C) $o(x^2) + o(x^2) = o(x^2)$ .
+(D) $o(x) + o(x^2) = o(x^2)$ .
+答案 D."
+zt-032202,真题,微积分,第一章 函数、极限、连续,数三2022,2,选择题,,,"(2) 已知 $a_{n} = \sqrt[n]{n} - \frac{(-1)^{n}}{n} (n = 1, 2, \cdots)$ ，则 $\{a_{n}\}$ （）","有最大值, 有最小值.","有最大值, 没有最小值.","没有最大值, 有最小值.","没有最大值, 没有最小值.","答案 A.
+分析 本题主要考查数列极限的性质.
+数列 $\{a_{n}\}$ 具有极限1，且存在比1大的项 $a_1 = 2$ ，比1小的项 $a_2 = \sqrt{2} -\frac{1}{2}$ .由极限的定义可说明 $\{a_n\}$ 必能取得最大值和最小值.
+若要分析得到数列 $\{a_{n}\}$ 的最大值和最小值在何处取得, 则可以将数列分为奇数项子列与偶数项子列分别讨论. 这两个子列均有 $\sqrt[n]{n}$ 这一部分, 可以先将数列问题转化为函数问题, 通过分析函数 $x^{\frac{1}{x}}$ 的性质来分析 $\sqrt[n]{n}$ 的性质, 并分别讨论 $\{a_{n}\}$ 的奇数项子列和偶数项子列的最值.
+解（法一） $\lim\limits_{n\to\infty}a_n=\lim\limits_{n\to\infty}\left[\sqrt[n]{n}-\frac{(-1)^n}{n}\right]=1$ 。由极限的定义可知，在1的附近，例如区间(0.99,1.01)内，聚集了 $\{a_{n}\}$ 除有限项以外的所有项，即存在正整数N，对n>N, $a_{n}\in(0.99,1.01)$ 。注意到 $a_{1}=2>1.01,a_{2}=\sqrt{2}-\frac{1}{2}<0.99$ ，故 $a_{1},a_{2}$ 为落在该区间外的有限项中的两项。 $\{a_{n}\}$ 的最值必在没有落入该区间内的有限项中取得。
+因此， $\{a_{n}\}$ 必能取得最大值，也能取得最小值，且最大值不小于 $a_{1}$ ，最小值不大于 $a_{2}$ 。应选 A.
+(法二) 由 $a_{n}$ 的表达式可知, $a_{n} = \begin{cases} \sqrt[n]{n} + \frac{1}{n}, & n = 2k - 1, \\ \sqrt[n]{n} - \frac{1}{n}, & n = 2k, \end{cases}$ $k = 1, 2, \cdots$ .
+考虑数列 $\{b_n\}$ , 其中 $b_n = \sqrt[n]{n}$ .
+令 $f(x) = x^{\frac{1}{x}}(x > 0)$ ，则 $f(x) = \mathrm{e}^{\frac{1}{x}\ln x}$ . 记 $g(x) = \frac{\ln x}{x}$ . 由于 $\mathrm{e}^u$ 关于 $u$ 单调增加，故 $g(x)$ 的最大值对应 $f(x)$ 的最大值.
+$g'(x) = \frac{1 - \ln x}{x^2}$ . 当 $0 < x < e$ 时, $g'(x) > 0$ , $g(x)$ 单调增加; 当 $x > e$ 时, $g'(x) < 0$ , $g(x)$ 单调减少. 于是, $x = e$ 为 $g(x)$ 的极大值点, 也是最大值点. 从而 $x = e$ 也是 $f(x)$ 的最大值点.
+当 $n \geqslant 3$ 时, $\{b_n\}$ 单调减少. 于是, 数列 $\left\{\sqrt[n]{n} + \frac{1}{n}\right\}_{n=2k-1}^{\infty}$ 从 $n = 3$ 开始单调减少, 数列 $\left\{\sqrt[n]{n} + \frac{1}{n}\right\}_{n=2k}^{\infty}$ 从 $n = 2$ 开始单调减少.
+$a_{1} = 1 + 1 = 2, a_{3} = \sqrt[3]{3} + \frac{1}{3}$ . 注意到 $\sqrt[3]{\frac{27}{9}} < \sqrt[3]{\frac{27}{8}} = \frac{3}{2}$ , 故 $a_{3} < \frac{3}{2} + \frac{1}{3} < 2$ , 从而, $a_{1} = 2$ 为 $\left\{\sqrt[n]{n} + \frac{1}{n}\right\}_{n=2k-1}^{\infty}$ 的最大值, 该数列单调减少趋于 1, 取不到最小值.
+考虑数列 $\left\{\sqrt[n]{n} - \frac{1}{n}\right\}_{n=2k}^{\infty}$ .
+令 $h(x) = x^{\frac{1}{x}} - \frac{1}{x}$ , 则 $h'(x) = \left(\mathrm{e}^{\frac{\ln x}{x}} - \frac{1}{x}\right)' = \mathrm{e}^{\frac{\ln x}{x}} \cdot \frac{1 - \ln x}{x^{2}} + \frac{1}{x^{2}} = \frac{1}{x^{2}} \left[x^{\frac{1}{x}}(1 - \ln x) + 1\right]$ .
+当 $x$ 充分大时, $h'(x) < 0, h(x)$ 单调减少, 且 $\lim\limits_{x \to +\infty} h(x) = 1$ . 事实上, 由于 $8 > 7.84 = (2.8)^{2} > \mathrm{e}^{2}$ , $x^{\frac{1}{x}} > 1 (x > 1), 1 - \ln 8 < 1 - \ln e^{2} = -1$ , 故 $h'(8) < 0$ . 于是, 当 $n \geqslant 4$ 时, $\{a_{2n}\}$ 单调减少, 且 $a_{2n}$ 均大于 1.
+另一方面, $a_{2n} = \sqrt[2n]{2n} - \frac{1}{2n} < \sqrt[2n]{2n} + \frac{1}{2n} < \sqrt{2} + \frac{1}{2} < 2$ .
+于是, $\{a_{2n}\}$ 的最大值小于 2. $a_{2} = \sqrt{2} - \frac{1}{2} < 1, a_{4} = \sqrt[4]{4} - \frac{1}{4} = \sqrt{2} - \frac{1}{4} > a_{2}$ , $a_{6} = \sqrt[6]{6} - \frac{1}{6} = \sqrt[3]{\sqrt{6}} - \frac{1}{6} > \sqrt[3]{2} - \frac{1}{6} > \sqrt[4]{2} - \frac{1}{6} > 1$ .
+因此, $a_{2}$ 为 $\left\{\sqrt[n]{n} - \frac{1}{n}\right\}_{n=2k}^{\infty}$ 的最小值.
+综上所述, $a_{1}$ 为 $\{a_{n}\}$ 的最大值, $a_{2}$ 为 $\{a_{n}\}$ 的最小值. 应选 A.
+注 像这种数列是否存在最值的问题,我们其实还可以进一步衍生.
+对于有极限的数列,如果能找到比极限值大的项,那么它就有最大值,如果能找到比极限值小的项,那么它就有最小值,最大值与最小值必然存在其一,不可能都不存在.
+基于这一想法,我们可以对本题做如下改编.
+已知 $a_{n} = \sqrt[n]{n} -\frac{(-1)^{n}}{2n} (n = 1,2,\dots)$ ，则 $\{a_n\}$ （
+这样一来,就找不到比极限值1更小的项,从而取不到最小值,只能取到最大值.应选B.
+拓展
+极限计算中的常用结论
+(1) $\lim\limits_{n\to \infty}x^n = \left\{ \begin{array}{ll}0, & |x| < 1,\\ \infty , & |x| > 1. \end{array} \right.$
+(2) $\lim\limits_{x\to \infty}\frac{a_0x^n + a_1x^{n - 1} + \cdots + a_n}{b_0x^m + b_1x^{m - 1} + \cdots + b_m} = \left\{ \begin{array}{ll}\infty , & n > m,\\ \frac{a_0}{b_0}, & n = m,\\ 0, & n < m, \end{array} \right.$ 其中 $a_0,b_0$ 均不为零.
+(3) $\lim\limits_{n\to \infty}\sqrt[n]{a} = 1,a > 0;\lim\limits_{n\to \infty}\sqrt[n]{n} = 1.$
+(4) 当 $a > 1$ 时, $\lim\limits_{x \to +\infty} a^x = +\infty$ , $\lim\limits_{x \to -\infty} a^x = 0$ ; 当 $0 < a < 1$ 时, $\lim\limits_{x \to +\infty} a^x = 0$ , $\lim\limits_{x \to -\infty} a^x = +\infty$ ."
+zt-032211,真题,微积分,第一章 函数、极限、连续,数三2022,11,填空题,,,(11) $\lim\limits_{x\to 0}\left(\frac{1 + e^x}{2}\right)^{\cot x} = \underline{\quad}$ .,,,,,"答案 应填 $\sqrt{e}$ .
+分析 本题主要考查极限计算.
+$\left(\frac{1 + \mathrm{e}^x}{2}\right)^{\cot x}$ 为幂指函数，且所求极限为 $1^{\infty}$ 型未定式，故可以采用取对数再计算极限的方法.
+解 取对数再求极限.
+$$ \lim\limits_ {x \rightarrow 0} \left(\frac {1 + e ^ {x}}{2}\right) ^ {\cot x} = \lim\limits_ {x \rightarrow 0} e ^ {\cot x \ln \frac {1 + e ^ {x}}{2}} = e ^ {\lim\limits_ {x \rightarrow 0} \cot x \ln \frac {1 + e ^ {x}}{2}}. $$
+下面计算 $\lim\limits_{x\to0}\cot x\ln\frac{1+e^{x}}{2}$ .
+$$ \begin{array}{r l} \lim\limits_ {x \to 0} \cot x \ln \frac {1 + e ^ {x}}{2} & = \lim\limits_ {x \to 0} \frac {\ln \frac {1 + e ^ {x}}{2}}{\tan x} \overset{\tan x \sim x}{=} \lim\limits_ {x \to 0} \frac {\ln \left(1 + \frac {e ^ {x} - 1}{2}\right)}{x} \\ & \overset{\ln \left(1 + \frac {e ^ {x} - 1}{2}\right) \sim \frac {e ^ {x} - 1}{2}}{=} \lim\limits_ {x \to 0} \frac {e ^ {x} - 1}{2 x} \overset{e ^ {x} - 1 \sim x}{=} \lim\limits_ {x \to 0} \frac {x}{2 x} \\ & = \frac {1}{2}. \end{array} $$
+因此,原极限 $= e^{\frac{1}{2}} = \sqrt{e}$ ."
+zt-032311,真题,微积分,第一章 函数、极限、连续,数三2023,11,填空题,,,(11) $\lim\limits_{x\to \infty}x^2\left(2 - x\sin \frac{1}{x} -\cos \frac{1}{x}\right) = \_$ .,,,,,"答案 应填 $\frac{2}{3}$ .
+分析 本题主要考查未定式极限的计算.
+根据函数特点,可以考虑利用泰勒公式.
+解 考虑 $\sin x, \cos x$ 在 $x = 0$ 处的泰勒公式. 当 $x \to \infty$ 时, $\frac{1}{x} \to 0$ ,
+$$ \sin \frac {1}{x} = \frac {1}{x} - \frac {1}{6 x ^ {3}} + o \left(\frac {1}{x ^ {3}}\right), $$
+$$ \cos \frac {1}{x} = 1 - \frac {1}{2 x ^ {2}} + o \left(\frac {1}{x ^ {2}}\right). $$
+于是，
+$$ \begin{array}{r l} x ^ {2} \left(2 - x \sin \frac {1}{x} - \cos \frac {1}{x}\right) & = x ^ {2} \left[ 2 - 1 + \frac {1}{6 x ^ {2}} - 1 + \frac {1}{2 x ^ {2}} + o \left(\frac {1}{x ^ {2}}\right) \right] \\ & = x ^ {2} \left[ \frac {2}{3 x ^ {2}} + o \left(\frac {1}{x ^ {2}}\right) \right] = \frac {2}{3} + o (1). \end{array} $$
+因此，
+$$ \lim\limits_ {x \to \infty} x ^ {2} \left(2 - x \sin {\frac {1}{x}} - \cos {\frac {1}{x}}\right) = \frac {2}{3}. $$"

@@ -1,0 +1,267 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+80311101,880,概率论,第一章 随机事件及其概率,,1,基础题,选择题,,"设当事件 A 与 B 同时发生时, 事件 C 必发生, 则 ( ).",$P(C) = P(AB)$,$P(C) = P(A \cup B)$,$P(C) \leqslant P(A) + P(B) - 1$,$P(C) \geqslant P(A) + P(B) - 1$,"D.
+
+解 依题设, $AB \subset C$ ,故
+
+$1 \geqslant P (A \cup B) = P (A) + P (B) - P (A B) \geqslant P (A) + P (B) - P (C),$
+
+即 $P(C) \geqslant P(A) + P(B) - 1.$
+
+仅由 $AB \subset C$ ，不能推出 $P(C) = P(AB)$ 和 $P(C) = P(A \cup B)$ ."
+80311102,880,概率论,第一章 随机事件及其概率,,2,基础题,选择题,,对任意两个事件 A 和 B，若 $P(AB)=0$ ，则（）.,$P(A)P(B)=0$,$P(A-B)=P(A)$,$\overline{AB} = \varnothing$,AB = ∅,"B.
+
+解 由 $P(AB)=0$ ，得 $P(A-B)=P(A)-P(AB)=P(A)$ ."
+80311103,880,概率论,第一章 随机事件及其概率,,3,基础题,选择题,,"设 $P(A) > 0, P(B) > 0, P(A \mid B) = P(A)$ ，则下列选项中错误的是（）.",$A$ 与 $B$ 互不相容,A 与 B 相容,$P(B \mid A) = P(B)$,$P(\overline{A} \mid \overline{B}) = P(\overline{A})$,"A.
+
+解 由 $P(A \mid B) = P(A)$ 知, A, B 相互独立, 故选项 C 正确, $\overline{A}$ 与 $\overline{B}$ 也相互独立, 选项 D 正确. 因 $P(A) > 0, P(B) > 0$ , 且 A, B 相互独立, 知 A, B 必不互不相容, 即相容, 故选项 B 正确.
+
+【注】① 若 $P(A) > 0, P(B) > 0$ ，则当 A, B 独立时，有 $AB \neq \varnothing$ ，即 A, B 相容。当 AB = $\varnothing$ 时，有 A 与 B 不独立（见《2027 考研数学概率论辅导讲义》）。
+
+简单地说,在 $P(A)>0, P(B)>0$ 的条件下,A,B 相互独立与 A,B 互不相容不能同时成立.
+
+② 若 A, B 相互独立且其概率均大于零, 则
+
+$P (B \mid A) = P (B) \Leftrightarrow P (\overline {{B}} \mid A) = P (\overline {{B}}) \Leftrightarrow P (\overline {{A}} \mid B) = P (\overline {{A}}) \Leftrightarrow P (\overline {{A}} \mid \overline {{B}}) = P (\overline {{A}}).$"
+80311104,880,概率论,第一章 随机事件及其概率,,4,基础题,选择题,,"设 A, B, C 是三个相互独立的随机事件, 且 $0 < P(C) < 1$ , 则下列四对事件中不相互独立的是().",$\overline{A\cup B}$ 与 $C$,$\overline{AC}$ 与 $\overline{C}$,$\overline{A - B}$ 与 $\overline{C}$,$\overline{AB}$ 与 $\overline{C}$,"B.
+
+解 由 A, B, C 相互独立, 知 $\overline{AB}$ 与 $\overline{C}$ 相互独立, $\overline{A \cup B}$ 与 C 相互独立, $\overline{A - B}$ 与 $\overline{C}$ 相互独立, 故排除选项 A, C, D.
+
+【注】事件 A, B, C 相互独立，“不重叠分组，各自运算后仍独立”（见《2027 考研数学概率论辅导讲义》）."
+80311105,880,概率论,第一章 随机事件及其概率,,5,基础题,选择题,,"设 $0 < P(A) < 1, 0 < P(B) < 1$ 且 $P(A \mid B) + P(\overline{A} \mid \overline{B}) = 1$ , 则 ( ).",$A$ 与 $B$ 互不相容,A 与 B 相互独立,A 与 B 对立,A 与 B 不相互独立,"B.
+
+解 由 $1 - P(\overline{A} \mid \overline{B}) = P(A \mid \overline{B})$ ，知 $P(A \mid B) = P(A \mid \overline{B})$ ，即
+
+$\frac {P (A B)}{P (B)} = \frac {P (A \overline {{B}})}{P (\overline {{B}})} = \frac {P (A) - P (A B)}{1 - P (B)},$
+
+故可得 $P(AB)=P(A)P(B)$ ，即 A, B 相互独立."
+80311106,880,概率论,第一章 随机事件及其概率,,6,基础题,选择题,,"设 A, B 为任意两个事件，且 $A \subset B$ ， $P(B) > 0$ ，则下列选项中正确的是（）.",$P(A) < P(A \mid B)$,$P(A) \leqslant P(A \mid B)$,$P(A) > P(A \mid B)$,$P(A) \geqslant P(A \mid B)$,"B.
+
+解 由 $A \subset B$ , 得 $AB = A, P(B) \leqslant 1$ , 故
+
+$P (A \mid B) = \frac {P (A B)}{P (B)} = \frac {P (A)}{P (B)} \geqslant P (A),$
+
+选项 B 正确. 当 $P(B)=1$ 时, 选项 A 不正确; 当 $P(B)<1$ 时, 选项 C, D 不正确."
+80311107,880,概率论,第一章 随机事件及其概率,,7,基础题,选择题,,"设 A, B 是两个随机事件，且 $0 < P(A) < 1, P(B) > 0, P(B \mid A) = P(B \mid \overline{A})$ ，则下列选项中正确的是（）.",$P(A \mid B) = P(\overline{A} \mid B)$,$P(A \mid B) \neq P(\overline{A} \mid B)$,$P(AB)=P(A)P(B)$,$P(AB) \neq P(A)P(B)$,"C.
+
+解 由 $P(B \mid A) = P(B \mid \overline{A})$ ，得
+
+$\frac {P (A B)}{P (A)} = \frac {P (B \overline {{{A}}})}{P (\overline {{{A}}})} = \frac {P (B) - P (A B)}{1 - P (A)},$
+
+故 $P(AB) = P(A)P(B)$ , 此时, $A, B$ 相互独立, 所以
+
+$P (A \mid B) = P (A), \quad P (\overline {{A}} \mid B) = P (\overline {{A}}).$
+
+由于 $0 < P(A) < 1$ ，所以选项 A, B 不一定成立."
+80311201,880,概率论,第一章 随机事件及其概率,,1,基础题,填空题,,"设 $P(A \mid B) = P(B \mid A) = \frac{1}{2}$ , $P(A) = \frac{1}{3}$ ，则 $P(A \cup B) =$ \_\_\_\_.",,,,,"$\frac{1}{2}.$
+
+解 由已知, 得
+
+$P (A B) = P (A) P (B \mid A) = \frac {1}{3} \times \frac {1}{2} = \frac {1}{6},$
+
+又由 $P(AB) = P(B)P(A\mid B)$ ，知 $P(B) = \frac{1}{3}$ 故
+
+$P (A \cup B) = P (A) + P (B) - P (A B) = \frac {1}{3} + \frac {1}{3} - \frac {1}{6} = \frac {1}{2}.$"
+80311202,880,概率论,第一章 随机事件及其概率,,2,基础题,填空题,,"已知事件 A，B 相互独立且互不相容，则 $\min\{P(A), P(B)\} =$ \_\_\_\_ .",,,,,"0.
+
+解 由已知， $P(A) \geqslant 0, \quad P(B) \geqslant 0, \quad P(AB) = P(A)P(B) = 0,$ 故 $P(A), P(B)$ 中至少有一个为 0，所以 $\min\{P(A), P(B)\}=0.$"
+80311203,880,概率论,第一章 随机事件及其概率,,3,基础题,填空题,,"设事件 A, B, C 满足 $P(A) = P(B) = P(C) = \frac{1}{4}$ , $P(AB) = P(BC) = 0$ , $P(AC) = \frac{1}{8}$ ，则 A, B, C 三个事件中至少出现一个的概率为 \_\_\_\_.",,,,,"$\frac{5}{8}.$
+
+解 由 $ABC \subset AB$ ，知 $P(ABC) \leqslant P(AB) = 0$ ，所以 $P(ABC) = 0$ ，故所求概率为
+
+$\begin{array}{r l} P (A \cup B \cup C) & = P (A) + P (B) + P (C) - P (A B) - P (A C) - P (B C) + P (A B C) \\ & = \frac {1}{4} + \frac {1}{4} + \frac {1}{4} - 0 - \frac {1}{8} - 0 + 0 = \frac {5}{8}. \end{array}$"
+80311204,880,概率论,第一章 随机事件及其概率,,4,基础题,填空题,,"设 $P(A)=0.1, P(B \mid A)=0.9, P(B \mid \overline{A})=0.2$ ，则 $P(A \mid B)=$ \_\_\_\_.",,,,,"$\frac{1}{3}$ .
+
+解 由条件概率公式,有 $P(A \mid B) = \frac{P(AB)}{P(B)} = \frac{P(A)P(B \mid A)}{P(B)}$ . 又
+
+$\begin{array}{r l} P (B) & = P (A B \cup \overline {{{A}}} B) = P (A B) + P (\overline {{{A}}} B) \\ & = P (A) P (B \mid A) + P (\overline {{{A}}}) P (B \mid \overline {{{A}}}) \\ & = 0. 1 \times 0. 9 + (1 - 0. 1) \times 0. 2 = 0. 2 7, \end{array}$
+
+故 $P(A\mid B) = \frac{1}{3}.$
+
+【注】 $B=\Omega\cdot B=(A+\overline{A})B=AB+\overline{A}B,\Omega$ 表示全集，且 AB 与 $\overline{A}B$ 互不相容."
+80311205,880,概率论,第一章 随机事件及其概率,,5,基础题,填空题,,"设 A, B 为随机事件, 且 $P(\overline{A}) = 0.3, P(B) = 0.4, P(A - B) = 0.5$ , 则 $P(B \mid A \cup \overline{B}) =$ \_\_\_\_.",,,,,"$\frac{1}{4}.$
+
+解 由条件概率公式,有
+
+$\begin{array}{r l} P (B \mid A \cup \overline {{B}}) & = \frac {P (B \cap (A \cup \overline {{B}}))}{P (A \cup \overline {{B}})} = \frac {P ((A B) \cup (B \overline {{B}}))}{P (A \cup \overline {{B}})} \\ & = \frac {P (A B)}{P (A \cup \overline {{B}})} = \frac {P (A) - P (A \overline {{B}})}{P (A) + P (\overline {{B}}) - P (A \overline {{B}})} \\ & = \frac {P (A) - P (A - B)}{P (A) + P (\overline {{B}}) - P (A - B)} = \frac {0 . 2}{0 . 8} = \frac {1}{4}. \end{array}$"
+80311206,880,概率论,第一章 随机事件及其概率,,6,基础题,填空题,,"设在三次独立重复试验中, 事件 A 发生的概率相等, 若已知 A 至少出现一次的概率为 $\frac{19}{27}$ , 则 A 在一次试验中发生的概率为 \_\_\_\_.",,,,,"$\frac{1}{3}.$
+
+解 依题设,本题为伯努利概型.
+
+设每次试验中事件 A 发生的概率为 p，事件 A 发生的次数为 $k(k=0,1,\cdots,n)$ ，则 A 至少发生一次的概率 $P\{k\geqslant1\}=1-(1-p)^{n}$ ，解得 $p=1-\sqrt[n]{1-P\{k\geqslant1\}}$ .
+
+由已知， $P\{k\geqslant 1\} = \frac{19}{27},n = 3$ ，故 $p = 1 - \sqrt[3]{1 - \frac{19}{27}} = \frac{1}{3}.$"
+80311207,880,概率论,第一章 随机事件及其概率,,7,基础题,填空题,,"在区间 $(0,1)$ 内任取两个数 x,y，则 $xy \leqslant \frac{2}{9}$ 的概率为 \_\_\_\_.",,,,,"$\frac{2}{9}\left(1+\ln\frac{9}{2}\right)$ .
+
+解设事件
+
+$\begin{array}{r l} A & = \left\{(x, y) \mid x y \leqslant \frac {2}{9}, 0 < x < 1, 0 < y < 1 \right\}, \\ D & = \{(x, y) \mid 0 < x < 1, 0 < y < 1 \}, \end{array}$
+
+则事件 A 的样本位于区域 $D_{1}$ 中, 如图 15-1 中阴影部分所示, 由几何概型公式, 得
+
+![Image](images/80311207.jpg)
+
+$P (A) = \frac {S _ {D _ {1}}}{S _ {D}} = \frac {2}{9} \times 1 + \int_ {\frac {2}{9}} ^ {1} \frac {2}{9 x} \mathrm{d} x = \frac {2}{9} \left(1 + \ln \frac {9}{2}\right).$
+
+图15-1"
+80311208,880,概率论,第一章 随机事件及其概率,,8,基础题,填空题,,"某人向同一目标独立重复射击, 每次射击命中目标的概率为 $p (0 < p < 1)$ , 则此人第 6 次射击恰好第 2 次命中目标的概率为 \_\_\_\_.",,,,,"$5p^{2}(1-p)^{4}$ .
+
+解 依题设, 可知第 6 次射击命中且前 5 次射击恰好命中 1 次, 故前 5 次射击中恰有 1 次命中的概率为 $C_{5}^{1}p(1-p)^{4}=5p(1-p)^{4}$ , 第 6 次射击恰好第 2 次命中的概率为 $p\cdot5p(1-p)^{4}=5p^{2}(1-p)^{4}$ ."
+80311301,880,概率论,第一章 随机事件及其概率,,1,基础题,解答题,,"对某一目标依次进行了三次独立的射击, 设第一、第二、第三次射击命中的概率分别为 0.4, 0.5 和 0.7, 求:
+(I)三次射击中恰好有一次命中的概率;
+(Ⅱ)三次射击中至少有一次命中的概率.",,,,,"解 设 $A_{i}=\{第 i 次命中\}(i=1,2,3)$ ，B 为恰有一次命中，C 为至少有一次命中，则
+
+$B = A _ {1} \overline {{A}} _ {2} \overline {{A}} _ {3} \cup \overline {{A}} _ {1} A _ {2} \overline {{A}} _ {3} \cup \overline {{A}} _ {1} \overline {{A}} _ {2} A _ {3}, C = A _ {1} \cup A _ {2} \cup A _ {3}.$
+
+（Ⅰ）由已知， $A_{1},A_{2},A_{3}$ 相互独立且互不相容，故
+
+(Ⅱ)
+
+$\begin{array}{r l} P (B) & = P (A _ {1} \overline {{A}} _ {2} \overline {{A}} _ {3}) + P (\overline {{A}} _ {1} A _ {2} \overline {{A}} _ {3}) + P (\overline {{A}} _ {1} \overline {{A}} _ {2} A _ {3}) \\ & = P (A _ {1}) P (\overline {{A}} _ {2}) P (\overline {{A}} _ {3}) + P (\overline {{A}} _ {1}) P (A _ {2}) P (\overline {{A}} _ {3}) + P (\overline {{A}} _ {1}) P (\overline {{A}} _ {2}) P (A _ {3}) \\ & = 0. 4 \times 0. 5 \times 0. 3 + 0. 6 \times 0. 5 \times 0. 3 + 0. 6 \times 0. 5 \times 0. 7 = 0. 3 6. \\ & P (C) = P (A _ {1} \cup A _ {2} \cup A _ {3}) = 1 - P (\overline {{A _ {1} \cup A _ {2} \cup A _ {3}}}) \\ & = 1 - P (\overline {{A}} _ {1} \overline {{A}} _ {2} \overline {{A}} _ {3}) = 1 - P (\overline {{A}} _ {1}) P (\overline {{A}} _ {2}) P (\overline {{A}} _ {3}) \\ & = 1 - 0. 6 \times 0. 5 \times 0. 3 = 0. 9 1. \end{array}$"
+80311302,880,概率论,第一章 随机事件及其概率,,2,基础题,解答题,,"有三个盒子, 第一个盒子中有 3 个黑球、1 个白球, 第二个盒子中有 2 个黑球、3 个白球, 第三个盒子中有 3 个黑球、2 个白球.
+(I) 任取一个盒子, 再从该盒子中取出一个球, 求这个球是白球的概率;
+(II) 已知取出的是白球, 求此球属于第三个盒子的概率.",,,,,"解（Ⅰ）设 $A = \{$ 取出的是白球 $\}$ , $B_{i} = \{$ 取到第 i 只盒子 $\}$ , i = 1, 2, 3.
+
+依题设, $P(B_{i})=\frac{1}{3}$ ,由全概率公式,得
+
+$P (A) = \sum_ {i = 1} ^ {3} P (B _ {i}) P (A \mid B _ {i}) = \frac {1}{3} \times \left(\frac {1}{4} + \frac {3}{5} + \frac {2}{5}\right) = \frac {5}{1 2}.$
+
+(Ⅱ) 由(Ⅰ)及贝叶斯公式, 得
+
+$P (B _ {3} \mid A) = \frac {P (B _ {3}) P (A \mid B _ {3})}{P (A)} = \frac {\frac {1}{3} \times \frac {2}{5}}{\frac {5}{1 2}} = \frac {8}{2 5}.$"
+80312101,880,概率论,第一章 随机事件及其概率,,1,综合题,选择题,,设某人毫无准备地参加一项测验，其中有 5 道是非题，他随机地选择“是”或“非”，则该人至少答对 1 题的概率为（）.,$\frac{1}{5}$,$\frac{1}{32}$,$\frac{5}{32}$,$\frac{31}{32}$,"D.
+
+解 设 $A_{i}=\{第 i 题答对\}$ ，则 $P(A_{i})=\frac{1}{2}(i=1,2,\cdots,5)$ ，由于是随机选择，故
+
+$P \left(\bigcup_ {i = 1} ^ {5} A _ {i}\right) = 1 - P \left(\bigcap_ {i = 1} ^ {5} \overline {{{A}}} _ {i}\right) = 1 - \prod_ {i = 1} ^ {5} P (\overline {{{A}}} _ {i}) = 1 - \left(\frac {1}{2}\right) ^ {5} = \frac {3 1}{3 2}.$"
+80312102,880,概率论,第一章 随机事件及其概率,,2,综合题,选择题,,"有一根长为 L 的木棒, 将其任意折成三段, 记事件 $A = \{$ 中间一段为三段中的最长者 $\}$ , 则 $P(A) =$ ( ).",$\frac{1}{2}$,$\frac{1}{3}$,$\frac{1}{4}$,$\frac{2}{3}$,"B.
+
+## 解 此题是几何概型问题.
+
+设折得的三段长度依次为 $x, L - x - y, y$，则样本空间为
+
+$\Omega = \{(x, y) \mid 0 \leqslant x \leqslant L, 0 \leqslant y \leqslant L, 0 \leqslant x + y \leqslant L \}.$
+
+事件 A 相应的子区域 $\Omega_{1}$ 应满足
+
+$\begin{array}{l} 0 < x < L - x - y, \\ 0 < y < L - x - y, \end{array}$
+
+即
+
+![Image](images/80312102.jpg)
+
+$\Omega_ {1} = \left\{(x, y) \mid 0 < y < L - 2 x, 0 < y < \frac {1}{2} (L - x) \right\},$
+
+如图 15-2 所示, 可知 $\Omega$ 的面积为 $\frac{1}{2}L^{2}, \Omega_{1}$ 的面积为 $\frac{1}{6}L^{2}$ , 故 $P(A)=\frac{\frac{1}{6}L^{2}}{\frac{1}{2}L^{2}}=\frac{1}{3}$ .
+
+图15-2"
+80312201,880,概率论,第一章 随机事件及其概率,,1,综合题,填空题,,设甲、乙两人独立地对同一目标射击一次，其命中率分别为 0.5 和 0.4，已知目标被命中，则它是乙射中的概率为 \_\_\_\_.,,,,,"$\frac{4}{7}.$
+
+解 设 $A = \{$ 甲射击一次命中目标 $\}$ , $B = \{$ 乙射击一次命中目标 $\}$ , 由已知, 所求概率为
+
+$P (B \mid A \cup B) = \frac {P (B (A \cup B))}{P (A \cup B)} = \frac {P (B)}{P (A \cup B)},$
+
+其中 $A \cup B$ 表示目标被命中. 又
+
+$\begin{array}{r l} P (A \cup B) & = P (A) + P (B) - P (A B) \\ & = P (A) + P (B) - P (A) P (B) \\ & = 0. 5 + 0. 4 - 0. 5 \times 0. 4 = 0. 7, \end{array}$
+
+故 $P(B\mid A\cup B) = \frac{0.4}{0.7} = \frac{4}{7}.$"
+80312202,880,概率论,第一章 随机事件及其概率,,2,综合题,填空题,,"设 $P(A)=0.5, P(B)=0.7$ ，则 $P(A \cup B)$ 的最大值与最小值分别是 \_\_\_\_.",,,,,"1,0.7.
+
+解 由于 $P(A) + P(B) = 0.5 + 0.7 > 1$ ，此时 $AB \neq \emptyset$ ，所以 $P(AB)$ 的最小值为 0.2，故 $P(A \cup B)$ 的最大值为 1。又当 $A \subset B$ 或 $A \supset B$ ，会使 $A \cup B$ 最小，本题应取 $A \subset B$ ，故 $P(A \cup B) = P(B) = 0.7$ 为最小值。"
+80312203,880,概率论,第一章 随机事件及其概率,,3,综合题,填空题,,"设 A, B 是两个随机事件， $0 < P(B) < 1$ , $AB = \overline{A}\overline{B}$ ，则 $P(\overline{A} \mid B) + P(A \mid \overline{B}) =$ \_\_\_\_.",,,,,"2.
+
+解由 $AB = \overline{A}\overline{B}$ ，知 $(AB)(\overline{A}\overline{B}) = A\overline{A} B\overline{B} = \varnothing$ ，而 $(AB)(\overline{A}\overline{B}) = AB = \overline{A}\overline{B}$ ，所以 $\overline{A}\overline{B} = \varnothing$ .又由对偶律 $\overline{A}\overline{B} = \overline{A}\cup \overline{B} = \varnothing$ ，故 $A\cup B = \Omega (\Omega$ 表示全集)，从而 $A$ 与 $B$ 为对立事件（因 $AB = \varnothing$ )，于是 $A = \overline{B},\overline{A} = B$ ，故
+
+$P (\overline {{{A}}} \mid B) + P (A \mid \overline {{{B}}}) = 2.$"
+80312204,880,概率论,第一章 随机事件及其概率,,4,综合题,填空题,,设进行一系列独立试验，每次试验成功的概率均为 $p$ ，则在试验成功 2 次之前已经失败 3 次的概率为 \_\_\_\_.,,,,,"$4p^{2}(1-p)^{3}$ .
+
+解 令 $A = \{$ 试验成功 2 次之前已经失败 3 次 $\}, A_{5} = \{$ 第 5 次试验成功 $\}, B_{3} = \{$ 试验 4 次失败 3 次 $\}$ . 依题设, $A_{5}$ 与 $B_{3}$ 独立, 且 $A = A_{5}B_{3}$ , 而
+
+故
+
+$\begin{array}{l} {P (B _ {3}) = C _ {4} ^ {1} p (1 - p) ^ {3} = 4 p (1 - p) ^ {3}, \quad P (A _ {5}) = p,} \\ {P (A) = P (A _ {5} B _ {3}) = P (A _ {5}) \bullet P (B _ {3}) = 4 p ^ {2} (1 - p) ^ {3}.} \end{array}$"
+80312205,880,概率论,第一章 随机事件及其概率,,5,综合题,填空题,,"已知 10 部手机中有 7 个合格品和 3 个次品, 每次任取一个作测试, 测试后不放回, 直到将 3 个次品都找到为止, 则需要测试 7 次的概率为 \_\_\_\_.",,,,,"$\frac{2}{15}.$
+
+解 用古典概型计算.
+
+测试 7 次, 就是从 10 部手机中不放回地抽取 7 部, 故基本事件总数为 $A_{10}^{7}$ .
+
+设 $A = \{7$ 次测试后3个次品都已找到 $\}$ ，故存在两种情况：第一种情况是在前6次测试中有2次找到次品，而在第7次测试时找到最后一个次品；第二种情况是前7次测试均为合格品，最后剩下的3个就是次品.所以 $A$ 所包含的基本事件数为 $\mathrm{C}_6^2\cdot \mathrm{C}_4^4\cdot \mathrm{A}_7^4\cdot 3! + \mathrm{C}_7^7\cdot 7!$ ，故
+
+$P (A) = \frac {\mathrm{C} _ {6} ^ {2} \cdot \mathrm{C} _ {4} ^ {4} \cdot \mathrm{A} _ {7} ^ {4} \cdot 3 ! + \mathrm{C} _ {7} ^ {7} \cdot 7 !}{\mathrm{A} _ {1 0} ^ {7}} = \frac {2}{1 5}.$"
+80312206,880,概率论,第一章 随机事件及其概率,,6,综合题,填空题,,在 n 重伯努利试验中，事件 A 发生的概率为 p，则事件 A 发生奇数次的概率为 \_\_\_\_.,,,,,"$\frac{1}{2}[1-(1-2p)^{n}]$ .
+
+解 设 $A_{1}=\{n$ 次试验中 A 出现奇数次 $\}, A_{2}=\{n$ 次试验中 A 出现偶数次 $\}$ ，则
+
+$P \left(A _ {1}\right) = C _ {n} ^ {1} p q ^ {n - 1} + C _ {n} ^ {3} p ^ {3} q ^ {n - 3} + C _ {n} ^ {5} p ^ {5} q ^ {n - 5} + \dots ,$
+
+$P (A _ {2}) = \mathrm{C} _ {n} ^ {0} p ^ {0} q ^ {n} + \mathrm{C} _ {n} ^ {2} p ^ {2} q ^ {n - 2} + \mathrm{C} _ {n} ^ {4} p ^ {4} q ^ {n - 4} + \dots ,$
+
+其中 $q = 1 - p$ ，故
+
+$P (A _ {1}) + P (A _ {2}) = (p + q) ^ {n} = 1,$
+
+$P (A _ {2}) - P (A _ {1}) = (q - p) ^ {n} = (1 - 2 p) ^ {n},$
+
+两式相减, 得所求概率为 $P(A_{1}) = \frac{1}{2} [1 - (1 - 2p)^{n}]$ ."
+80312301,880,概率论,第一章 随机事件及其概率,,1,综合题,解答题,,"设甲盒中有 4 个红球和 2 个白球，乙盒中有 2 个红球和 4 个白球，掷一枚均匀的硬币，若正面出现，则从甲盒中任取一球，若反面出现，则从乙盒中任取一球，设每次取出的球观看颜色后放回原盒中.
+(I) 若前两次都取得红球, 求第三次也取得红球的概率;
+(Ⅱ) 若前两次都取得红球, 求红球都来自甲盒的概率.",,,,,"解（Ⅰ）设 $A_{i}=\{第 i 次取得红球\}(i=1,2,3)$ , $B_{j}=\{第 j 次掷硬币出现正面\}(j=1,2,3)$ .
+
+依题设, 易知 $B_{j}$ 为第 j 次从甲盒中取球. 将“掷一次硬币, 再由硬币出现的结果从相应的盒中取出”看作一次试验, 则每次试验是重复的, 且相互独立, 所以它们的结果 $A_{1}, A_{2}, A_{3}$ 是相互独立的, 且 $P(A_{i}) = P(A_{1})(i = 1, 2, 3)$ , 故所求概率为
+
+$P (A _ {3} \mid A _ {1} A _ {2}) = P (A _ {3}) = P (A _ {1}).$
+
+又由全概率公式,得
+
+$P (A _ {1}) = P (B _ {1}) P (A _ {1} \mid B _ {1}) + P (\overline {{B _ {1}}}) P (A _ {1} \mid \overline {{B _ {1}}}) = \frac {1}{2} \times \frac {4}{6} + \frac {1}{2} \times \frac {2}{6} = \frac {1}{2},$
+
+故 $P(A_{3} \mid A_{1}A_{2}) = \frac{1}{2}.$
+
+（Ⅱ）由于两次试验是独立重复的，所以 $A_{1}B_{1}$ 与 $A_{2}B_{2}$ 是相互独立的，且
+
+$P (A _ {2} B _ {2}) = P (A _ {1} B _ {1}) = P (B _ {1}) P (A _ {1} \mid B _ {1}) = \frac {1}{2} \times \frac {4}{6} = \frac {1}{3}.$
+
+由条件概率公式, 得
+
+$P (B _ {1} B _ {2} \mid A _ {1} A _ {2}) = \frac {P (A _ {1} A _ {2} B _ {1} B _ {2})}{P (A _ {1} A _ {2})} = \frac {P (A _ {1} B _ {1}) P (A _ {2} B _ {2})}{P (A _ {1}) P (A _ {2})} = \frac {\left(\frac {1}{3}\right) ^ {2}}{\left(\frac {1}{2}\right) ^ {2}} = \frac {4}{9}.$"
+80312302,880,概率论,第一章 随机事件及其概率,,2,综合题,解答题,,"设一批产品中有 15% 的次品, 进行独立重复抽样检验, 若抽取 20 个样品, 则抽出的 20 个样品中, 可能性最大的次品数是多少? 并求其概率.",,,,,"解 设 $X = \{$ 抽取 20 个样品中的次品数 $\}$ ，则 $X \sim B(20, 0.15)$ 。所求问题是，当 k 为多少时， $P\{X = k\} = C_{20}^{k} \times 0.15^{k} \times (1 - 0.15)^{20 - k} (k = 0, 1, \cdots, 20)$ 最大。
+
+设当 $k = k_{0}$ 时， $P\{x = k\}$ 最大，则有
+
+$P \{X = k _ {0} \} \geqslant P \{X = k _ {0} - 1 \}, \quad P \{X = k _ {0} \} \geqslant P \{X = k _ {0} + 1 \},$
+
+考虑任意两项的比值，
+
+$\frac {P \{X = k \}}{P \{X = k - 1 \}} = \frac {\mathrm{C} _ {2 0} ^ {k} \times 0 . 1 5 ^ {k} \times 0 . 8 5 ^ {2 0 - k}}{\mathrm{C} _ {2 0} ^ {k - 1} \times 0 . 1 5 ^ {k - 1} \times 0 . 8 5 ^ {2 0 - k + 1}} = \frac {(2 0 - k + 1) \times 0 . 1 5}{0 . 8 5 \times k},$
+
+则 $P\{X = k\} \geqslant P\{X = k - 1\}$ , 当且仅当 $k \leqslant (20 + 1) \times 0.15 = 3.15$ .
+
+同理， $P\{X = k\} \geqslant P\{X = k + 1\}$ ，当且仅当 $k \geqslant (20 + 1) \times 0.15 - 1 = 2.15$ ，故当 $P\{X = k\}$ 最大时， $k = 3$ ，且 $P\{X = 3\} = \mathrm{C}_{20}^{3} \times 0.15^{3} \times 0.85^{17} \approx 0.2428$ .
+
+【注】本题是求二项分布中最大可能目标数,一般结论是:若 $X\sim B(n,p)$ ,如果 $(n+1)p$ 不是整数,则当 $k=\left[(n+1)p\right]$ (向下取整)时, $P\{X=k\}$ 取得最大值;如果 $(n+1)p$ 是整数,则当 $k=(n+1)p$ 或 $k=(n+1)p-1$ 时, $P\{X=k\}$ 取得最大值.
+
+如本题, $\left[(20+1)\times0.15\right]=[3.15]=3.$"
+80313301,880,概率论,第一章 随机事件及其概率,,1,拓展题,解答题,,"设事件 A, B 相互独立, A, C 互不相容, 且 $P(A) = 0.4, P(B) = 0.3, P(C) = 0.4, P(B \mid C) = 0.2$ , 求下列概率:
+(I) $P(A \cup B)$ ;
+(II) $P(C|A\cup B);$
+(III) $P(AB|\overline{C}).$",,,,,"解 (I)
+
+$\begin{array}{r l} P (A \bigcup B) & = P (A) + P (B) - P (A B) = P (A) + P (B) - P (A) P (B) \\ & = 0. 4 + 0. 3 - 0. 4 \times 0. 3 = 0. 5 8. \end{array}$
+
+(Ⅱ)
+
+$\begin{array}{r l} P (C \mid A \cup B) & = \frac {P [ C (A \cup B) ]}{P (A \cup B)} = \frac {P (B C)}{P (A \cup B)} \\ & = \frac {P (C) P (B \mid C)}{P (A \cup B)} = \frac {0 . 4 \times 0 . 2}{0 . 5 8} \approx 0. 1 3 8. \end{array}$
+
+(Ⅲ)
+
+$P (A B \mid \overline {{C}}) = \frac {P (A B \overline {{C}})}{P (\overline {{C}})} = \frac {P (A B)}{1 - P (C)} = \frac {P (A) P (B)}{1 - P (C)} = \frac {0 . 4 \times 0 . 3}{1 - 0 . 4} = 0. 2.$"
+80313302,880,概率论,第一章 随机事件及其概率,,2,拓展题,解答题,,"从 $1,2,\cdots,n$ 这 $n$ 个数中任意相继不放回地取出两个数，求取出的第二个数比第一个数大的概率.",,,,,"解 令 $A_{i} = \{\text{第一次取出的数为 } i\} (i = 1,2,\dots,n), B = \{\text{取出的第二个数比第一个数大}\}$ , 则 $A_{1}, A_{2}, \dots, A_{n}$ 构成一个完备事件组.
+
+由于在 $A_{i}$ 发生的条件下, 第二个数只能取到余下的 n-1 个数之一, 且只有它取到后 n-i 个数时, B 才发生, 故 $P(B \mid A_{i}) = \frac{n-i}{n-1} (i = 1, 2, \cdots, n)$ .
+
+又 $P(A_{i})=\frac{1}{n}(i=1,2,\cdots,n)$ ，由全概率公式，有
+
+$\begin{array}{r l} P (B) & = \sum_ {i = 1} ^ {n} P (A _ {i}) P (B \mid A _ {i}) = \sum_ {i = 1} ^ {n} \frac {1}{n} \cdot \frac {n - i}{n - 1} \\ & = \frac {1}{n (n - 1)} [ (n - 1) + (n - 2) + \dots + 1 + 0 ] = \frac {1}{n (n - 1)} \cdot \frac {n (n - 1)}{2} = \frac {1}{2}. \end{array}$
+
+【注】由于此题所求事件较复杂,故不易直接用古典概型计算,但通过全概率公式求得的结果与直觉是吻合的."

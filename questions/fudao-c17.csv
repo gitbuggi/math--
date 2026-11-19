@@ -1,0 +1,870 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+fd-0301,辅导讲义,线性代数,第三章 向量,,1,,,题型一 相关、无关,【例3.1】下列向量组中，线性无关的是,"$(1,2,3,4)^{\mathrm{T}},(2,3,4,5)^{\mathrm{T}},(0,0,0,0)^{\mathrm{T}}$ .","$(1,2,-1)^{\mathrm{T}},(3,5,6)^{\mathrm{T}},(0,7,9)^{\mathrm{T}},(1,0,2)^{\mathrm{T}}$ .","$(a,1,2,3)^{\mathrm{T}},(b,1,2,3)^{\mathrm{T}},(c,3,4,5)^{\mathrm{T}},(d,0,0,0)^{\mathrm{T}}$ .","$(a,1,b,0,0)^{\mathrm{T}},(c,0,d,6,0)^{\mathrm{T}},(a,0,c,5,6)^{\mathrm{T}}$ .","（A）中有零向量必线性相关.因为
+
+$$
+0 \pmb {\alpha} _ {1} + 0 \pmb {\alpha} _ {2} + \pmb {\alpha} _ {3} = \mathbf {0},
+$$
+
+系数 0,0,1 不全为 0.
+
+(B) 是 4 个三维向量必线性相关. 根据定理 3.1 的推论 $2:n+1$ 个 $n$ 维向量必线性相关.
+
+(C) 是 4 个四维向量可用行列式(定理 3.1 的推论 1). 由于
+
+$$
+\left| \begin{array}{c c c c} a & b & c & d \\ 1 & 1 & 3 & 0 \\ 2 & 2 & 4 & 0 \\ 3 & 3 & 5 & 0 \end{array} \right| = - d \left| \begin{array}{c c c} 1 & 1 & 3 \\ 2 & 2 & 4 \\ 3 & 3 & 5 \end{array} \right| = 0,
+$$
+
+从而线性相关.
+
+(D) 中, 因为 $\begin{vmatrix}1 & 0 & 0 \\ 0 & 6 & 5 \\ 0 & 0 & 6\end{vmatrix} \neq 0$ , 知 $(1,0,0)^{\mathrm{T}}, (0,6,0)^{\mathrm{T}}, (0,5,6)^{\mathrm{T}}$ 线性无关,
+那么其延伸组 $(a,1,b,0,0)^{\mathrm{T}},(c,0,d,6,0)^{\mathrm{T}},(a,0,c,5,6)^{\mathrm{T}}$ 必线性无关."
+fd-0302,辅导讲义,线性代数,第三章 向量,,2,,,题型一 相关、无关,"【例3.2】若 $\pmb{\alpha}_{1} = (1,3,4, - 2)^{\mathrm{T}},\pmb{\alpha}_{2} = (2,1,3,t)^{\mathrm{T}},\pmb{\alpha}_{3} = (3, - 1,$ $2,0)^{\mathrm{T}}$ 线性相关，则 $t = \_$ .",,,,,"设 $x_{1}\pmb{\alpha}_{1} + x_{2}\pmb{\alpha}_{2} + x_{3}\pmb{\alpha}_{3} = \mathbf{0}$ , 按分量写出, 即有
+
+$$
+\left\{ \begin{array}{r l} x _ {1} + 2 x _ {2} + 3 x _ {3} & = 0, \\ 3 x _ {1} + x _ {2} - x _ {3} & = 0, \\ 4 x _ {1} + 3 x _ {2} + 2 x _ {3} & = 0, \\ - 2 x _ {1} + t x _ {2} & = 0. \end{array} \right.
+$$
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/c8f3940158552620bb4db11413a955316f176373b9b51c80a223240385bf8231.jpg)
+
+
+对系数矩阵 $[\pmb{\alpha}_1,\pmb{\alpha}_2,\pmb{\alpha}_3]$ 作初等行变换，有
+
+$$
+\left[\begin{array}{c c c}1&2&3\\3&1&- 1\\4&3&2\\- 2&t&0\end{array}\right]\rightarrow \left[\begin{array}{c c c}1&2&3\\0&1&2\\0&0&6 - 2 (t + 4)\\0&0&0\end{array}\right].
+$$
+
+学习札记
+
+$\alpha_{1},\alpha_{2},\alpha_{3}$ 线性相关 $\Leftrightarrow[\alpha_{1},\alpha_{2},\alpha_{3}] \begin{bmatrix}x_{1}\\ x_{2}\\ x_{3}\end{bmatrix}=0$ 有非零解 $\Leftrightarrow$ 秩 $r(\alpha_{1},\alpha_{2},\alpha_{3})<3,$ 
+
+故 $6 - 2(t + 4) = 0$ ，即 $t = -1$"
+fd-0303,辅导讲义,线性代数,第三章 向量,,3,,,题型一 相关、无关,"【例3.3】若 $\pmb{\alpha}_{1} = (1,2,3,1)^{\mathrm{T}},\pmb{\alpha}_{2} = (1,1,2, - 1)^{\mathrm{T}},\pmb{\alpha}_{3} = (2,6,a,$ $5)^{\mathrm{T}},\pmb{\alpha}_{4} = (3,4,7, - 1)^{\mathrm{T}}$ 线性相关，则 $a = \_$ .",,,,,"4个四维向量可用行列式,有
+
+$$
+\begin{array}{r l} \mid \boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}, \boldsymbol {\alpha} _ {4} \mid & = \left| \begin{array}{c c c c} 1 & 1 & 2 & 3 \\ 2 & 1 & 6 & 4 \\ 3 & 2 & a & 7 \\ 1 & - 1 & 5 & - 1 \end{array} \right| = \left| \begin{array}{c c c c} 1 & 1 & 2 & 3 \\ 0 & - 1 & 2 & - 2 \\ 0 & - 1 & a - 6 & - 2 \\ 0 & - 2 & 3 & - 4 \end{array} \right| \\ & = \left| \begin{array}{c c c} - 1 & 2 & - 2 \\ - 1 & a - 6 & - 2 \\ - 2 & 3 & - 4 \end{array} \right| = 0. \end{array}
+$$
+
+说明 $\forall a, \alpha_{1}, \alpha_{2}, \alpha_{3}, \alpha_{4}$ 恒线性相关.
+
+【评注】例3.2和例3.3处理手法的差异，前者 $s$ 个 $n$ 维向量适合转换为齐次方程组来分析，后者 $n$ 个 $n$ 维向量利用行列式简便.
+
+
+若向量的坐标没有给出,通常用定义法或用秩的理论来分析判断论证,也要有反证法的构思.
+
+(1) 用定义法证 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 线性无关的框图是：
+
+设 $k_{1}\alpha_{1} + k_{2}\alpha_{2} + \cdots + k_{s}\alpha_{s} = 0$ 
+
+↓ 恒等变形
+    ∥ 同乘
+    重组
+
+$$
+k _ {1} = 0, k _ {2} = 0, \dots , k _ {s} = 0.
+$$
+
+$\Leftrightarrow\left[\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{s}\right]\begin{bmatrix}x_{1}\\ x_{2}\\ \vdots\\ x_{s}\end{bmatrix}=0$ 只有零解
+
+$\Leftrightarrow$ 秩 $r(\alpha_{1},\alpha_{2},\cdots,\alpha_{s})=s.$ 
+
+要注意公式： $r(A) = A$ 的列秩 $= A$ 的行秩，
+
+$$
+r (\mathbf {A B}) \leqslant \min (r (\mathbf {A}), r (\mathbf {B})).
+$$
+
+若 A 可逆，则 $r(\mathbf{AB}) = r(\mathbf{B}), r(\mathbf{BA}) = r(\mathbf{B})$ .
+
+若 A 是 $m \times n$ 矩阵，且 $r(A) = n$ ，则 $r(AB) = r(B)$ .
+
+若 A 是 $m \times n$ 矩阵, B 是 $n \times s$ 矩阵且 AB = O, 则 $r(A) + r(B) \leqslant n$ .
+(3) 反证法."
+fd-0304,辅导讲义,线性代数,第三章 向量,,4,,,题型一 相关、无关,"【例3.4】已知 $n$ 维向量 $\pmb{\alpha}_{1},\pmb{\alpha}_{2},\pmb{\alpha}_{3}$ 线性无关，证明 $3\pmb{\alpha}_{1} + 2\pmb{\alpha}_{2},\pmb{\alpha}_{2} - \pmb{\alpha}_{3},4\pmb{\alpha}_{3} - 5\pmb{\alpha}_{1}$ 线性无关.",,,,,"（方法一）（用定义，重组）设
+
+$$
+k _ {1} (3 \pmb {\alpha} _ {1} + 2 \pmb {\alpha} _ {2}) + k _ {2} (\pmb {\alpha} _ {2} - \pmb {\alpha} _ {3}) + k _ {3} (4 \pmb {\alpha} _ {3} - 5 \pmb {\alpha} _ {1}) = \mathbf {0},\tag{①}
+$$
+
+即 $(3k_{1} - 5k_{3})\pmb{\alpha}_{1} + (2k_{1} + k_{2})\pmb{\alpha}_{2} + (-k_{2} + 4k_{3})\pmb{\alpha}_{3} = \mathbf{0}$ .
+
+② 
+
+由于 $\pmb{\alpha}_{1},\pmb{\alpha}_{2},\pmb{\alpha}_{3}$ 线性无关，故
+
+$$
+\left\{ \begin{array}{l} 3 k _ {1} - 5 k _ {3} = 0, \\ 2 k _ {1} + k _ {2} = 0, \\ - k _ {2} + 4 k _ {3} = 0. \end{array} \right.\tag{③}
+$$
+
+因为 $\begin{vmatrix}3&0&-5\\2&1&0\\0&-1&4\end{vmatrix}=22\neq0$ ,齐次方程组③只有零解
+
+$$
+k _ {1} = 0, k _ {2} = 0, k _ {3} = 0.
+$$
+
+故向量组 $3\alpha_{1} + 2\alpha_{2}, \alpha_{2} - \alpha_{3}, 4\alpha_{3} - 5\alpha_{1}$ 线性无关.
+
+(方法二) (用秩) 令 $\beta_{1}=3\alpha_{1}+2\alpha_{2},\beta_{2}=\alpha_{2}-\alpha_{3},\beta_{3}=4\alpha_{3}-5\alpha_{1}$ ，则
+
+$$
+\left[ \boldsymbol {\beta} _ {1}, \boldsymbol {\beta} _ {2}, \boldsymbol {\beta} _ {3} \right] = \left[ \boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3} \right] \left[ \begin{array}{c c c} 3 & 0 & - 5 \\ 2 & 1 & 0 \\ 0 & - 1 & 4 \end{array} \right].
+$$
+
+因为矩阵 $\begin{bmatrix} 3 & 0 & -5 \\ 2 & 1 & 0 \\ 0 & -1 & 4 \end{bmatrix}$ 可逆，所以 $r(\pmb{\beta}_1, \pmb{\beta}_2, \pmb{\beta}_3) = r(\pmb{\alpha}_1, \pmb{\alpha}_2, \pmb{\alpha}_3) = 3$ ，即 $\pmb{\beta}_1$ ， $\pmb{\beta}_2, \pmb{\beta}_3$ 线性无关，亦即 $3\pmb{\alpha}_1 + 2\pmb{\alpha}_2, \pmb{\alpha}_2 - \pmb{\alpha}_3, 4\pmb{\alpha}_3 - 5\pmb{\alpha}_1$ 线性无关."
+fd-0305,辅导讲义,线性代数,第三章 向量,,5,,,题型一 相关、无关,"【例3.5】设 A 是 n 阶矩阵， $\alpha$ 是 n 维列向量，若 $A^{m-1}\alpha \neq 0, A^{m}\alpha = 0$ ，证明向量组 $\alpha, A\alpha, A^{2}\alpha, \cdots, A^{m-1}\alpha$ 线性无关.",,,,,"（方法一）（用定义，同乘）设
+
+$$
+k _ {1} \boldsymbol {\alpha} + k _ {2} \mathbf {A} \boldsymbol {\alpha} + k _ {3} \mathbf {A} ^ {2} \boldsymbol {\alpha} + \dots + k _ {m} \mathbf {A} ^ {m - 1} \boldsymbol {\alpha} = \mathbf {0},
+$$
+
+学习札记
+
+① 
+
+由 $A^{m}\alpha = 0$ 知 $A^{m+1}\alpha = 0, A^{m+2}\alpha = 0, \cdots$ ，用 $A^{m-1}$ 左乘①式两端，并把 $A^{m}\alpha = 0, A^{m+1}\alpha = 0, A^{m+2}\alpha = 0, \cdots$ 代入，
+
+$$
+k _ {1} \mathbf {A} ^ {m - 1} \boldsymbol {\alpha} = \mathbf {0}.\tag{②}
+$$
+
+因为 $A^{m-1}\alpha \neq 0$ ，故 $k_{1} = 0$ 。
+
+把 $k_{1} = 0$ 代入 ① 式，有
+
+$$
+k _ {2} \mathbf {A} \boldsymbol {\alpha} + k _ {3} \mathbf {A} ^ {2} \boldsymbol {\alpha} + \dots + k _ {m} \mathbf {A} ^ {m - 1} \boldsymbol {\alpha} = \mathbf {0}.
+$$
+
+同理用 $A^{m - 2}$ 左乘上式，可知
+
+$$
+k _ {2} \mathbf {A} ^ {m - 1} \boldsymbol {\alpha} = \mathbf {0},
+$$
+
+从而 $k_{2} = 0$ 
+
+类似可得 $k_{3}=0,\cdots,k_{m}=0$ ，所以 $\alpha,A\alpha,A^{2}\alpha,\cdots,A^{m-1}\alpha$ 线性无关.
+
+（方法二）（反证法）如果 $\alpha, A\alpha, \cdots, A^{m-1}\alpha$ 线性相关，则有不全为 0 的 $k_{1}, k_{2}, \cdots, k_{m}$ 使得
+
+$$
+k _ {1} \boldsymbol {\alpha} + k _ {2} \mathbf {A} \boldsymbol {\alpha} + \dots + k _ {m} \mathbf {A} ^ {m - 1} \boldsymbol {\alpha} = \mathbf {0}.\tag{③}
+$$
+
+设 $k_{1}, k_{2}, \cdots, k_{m}$ 中第一个不为 0 的是 $k_{p}$ （即 $k_{1} = k_{2} = \cdots = k_{p-1} = 0, k_{p} \neq 0, p \geqslant 1$ ），于是 ③ 式化为
+
+$$
+k _ {p} \mathbf {A} ^ {p - 1} \boldsymbol {\alpha} + \dots + k _ {m} \mathbf {A} ^ {m - 1} \boldsymbol {\alpha} = \mathbf {0}.\tag{④}
+$$
+
+用 $A^{m-p}$ 乘④并把 $A^{m}\alpha = 0, A^{m+1}\alpha = 0, \cdots$ 代入，就有 $k_{p}A^{m-1}\alpha = 0$ . 又因 $A^{m-1}\alpha \neq 0$ ，那么 $k_{p} = 0$ ，与假设矛盾. 故 $\alpha, A\alpha, A^{2}\alpha, \cdots, A^{m-1}\alpha$ 线性无关. 展示新知"
+fd-0306,辅导讲义,线性代数,第三章 向量,,6,,,题型一 相关、无关,"【例3.6】设 $\mathbf{A}$ 是 $n$ 阶矩阵， $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 是 $n$ 维列向量，若 $A\alpha_{1} = \alpha_{1} \neq 0, A\alpha_{2} = \alpha_{1} + \alpha_{2}, A\alpha_{3} = \alpha_{2} + \alpha_{3}$ ，证明向量组 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性无关.",,,,,"（用定义，同乘）设
+
+$$
+k _ {1} \pmb {\alpha} _ {1} + k _ {2} \pmb {\alpha} _ {2} + k _ {3} \pmb {\alpha} _ {3} = \mathbf {0},\tag{①}
+$$
+
+由于 $(\mathbf{A} - \mathbf{E})\pmb{\alpha}_1 = \mathbf{0}, (\mathbf{A} - \mathbf{E})\pmb{\alpha}_2 = \pmb{\alpha}_1, (\mathbf{A} - \mathbf{E})\pmb{\alpha}_3 = \pmb{\alpha}_2$ ，用 $\mathbf{A} - \mathbf{E}$ 左乘 ① 式两端，得
+
+$$
+k _ {2} \boldsymbol {\alpha} _ {1} + k _ {3} \boldsymbol {\alpha} _ {2} = \mathbf {0}.\tag{②}
+$$
+
+再用 A-E 左乘 ② 式两端, 有
+
+$$
+k _ {3} \boldsymbol {\alpha} _ {1} = \mathbf {0}.
+$$
+
+因为 $\alpha_{1} \neq 0$ ，故 $k_{3} = 0$ 。把 $k_{3} = 0$ 代入②得 $k_{2} = 0$ ，再把 $k_{2} = 0, k_{3} = 0$ 代入①得 $k_{1} = 0$ 。
+
+因此，向量组 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性无关."
+fd-0307,辅导讲义,线性代数,第三章 向量,,7,,,题型一 相关、无关,"【例3.7】（2008， $^{2}_{3,4}$ ）设A为三阶矩阵， $\alpha_{1},\alpha_{2}$ 为A的分别属于特征值-1,1的特征向量，向量 $\alpha_{3}$ 满足 $A\alpha_{3}=\alpha_{2}+\alpha_{3}$ ，证明 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性无关.",,,,,"$$
+\mathbf {A} \boldsymbol {\alpha} _ {1} = - \boldsymbol {\alpha} _ {1}, \mathbf {A} \boldsymbol {\alpha} _ {2} = \boldsymbol {\alpha} _ {2}.
+$$
+
+设
+
+$$
+k _ {1} \pmb {\alpha} _ {1} + k _ {2} \pmb {\alpha} _ {2} + k _ {3} \pmb {\alpha} _ {3} = \mathbf {0},\tag{①}
+$$
+
+用 A 左乘 ① 得
+
+$$
+- k _ {1} \pmb {\alpha} _ {1} + k _ {2} \pmb {\alpha} _ {2} + k _ {3} (\pmb {\alpha} _ {2} + \pmb {\alpha} _ {3}) = \mathbf {0},\tag{②}
+$$
+
+① - ② 得
+
+$$
+2 k _ {1} \pmb {\alpha} _ {1} - k _ {3} \pmb {\alpha} _ {2} = \mathbf {0}.
+$$
+
+因为 $\pmb{\alpha}_{1},\pmb{\alpha}_{2}$ 是不同特征值的特征向量， $\pmb{\alpha}_{1},\pmb{\alpha}_{2}$ 线性无关，故 $k_{1} = 0, k_{3} = 0$ 。代入(1)得 $k_{2}\pmb{\alpha}_{2} = \mathbf{0}$ 。又因 $\pmb{\alpha}_{2}$ 是特征向量， $\pmb{\alpha}_{2} \neq \mathbf{0}$ ，从而 $k_{2} = 0$ 。因此， $\pmb{\alpha}_{1},\pmb{\alpha}_{2},\pmb{\alpha}_{3}$ 线性无关。
+
+（方法二）（反证法）因为 $\alpha_{1}, \alpha_{2}$ 是矩阵 A 不同特征值的特征向量，所以它们线性无关。那么如果 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性相关，则
+
+$$
+\boldsymbol {\alpha} _ {3} = k _ {1} \boldsymbol {\alpha} _ {1} + k _ {2} \boldsymbol {\alpha} _ {2}.\tag{③}
+$$
+
+用 A 左乘 ③ 式两端，并把 $A\alpha_{1} = -\alpha_{1}, A\alpha_{2} = \alpha_{2}, A\alpha_{3} = \alpha_{2} + \alpha_{3}$ 代入得
+
+$$
+\pmb {\alpha} _ {2} + \pmb {\alpha} _ {3} = - k _ {1} \pmb {\alpha} _ {1} + k _ {2} \pmb {\alpha} _ {2}.\tag{④}
+$$
+
+④ - ③ 得 $\pmb{\alpha}_{2} = -2k_{1}\pmb{\alpha}_{1}$ , 与 $\pmb{\alpha}_{1}, \pmb{\alpha}_{2}$ 线性无关相矛盾."
+fd-0308,辅导讲义,线性代数,第三章 向量,,8,,,题型一 相关、无关,"【例3.8】设 A 是 $m \times n$ 矩阵，秩 $r(A) = n, \alpha_{1}, \alpha_{2}, \alpha_{3}$ 是 n 维线性无关的列向量。证明 $A\alpha_{1}, A\alpha_{2}, A\alpha_{3}$ 线性无关。",,,,,"（方法一）（用定义）设
+
+即
+
+$$
+\begin{array}{l} k _ {1} \mathbf {A} \boldsymbol {\alpha} _ {1} + k _ {2} \mathbf {A} \boldsymbol {\alpha} _ {2} + k _ {3} \mathbf {A} \boldsymbol {\alpha} _ {3} = \mathbf {0}, \\ \mathbf {A} (k _ {1} \boldsymbol {\alpha} _ {1} + k _ {2} \boldsymbol {\alpha} _ {2} + k _ {3} \boldsymbol {\alpha} _ {3}) = \mathbf {0}. \end{array}\tag{①}
+$$
+
+因 $r(A) = n, Ax = 0$ 只有零解，故
+
+$$
+k _ {1} \boldsymbol {\alpha} _ {1} + k _ {2} \boldsymbol {\alpha} _ {2} + k _ {3} \boldsymbol {\alpha} _ {3} = \mathbf {0}.\tag{②}
+$$
+
+由 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性无关，从而 $k_{1}=0,k_{2}=0,k_{3}=0$ ，所以 $A\alpha_{1},A\alpha_{2},A\alpha_{3}$ 线性无关.
+
+(方法二) (用秩)
+
+$$
+(A \alpha_ {1}, A \alpha_ {2}, A \alpha_ {3}) = A (\alpha_ {1}, \alpha_ {2}, \alpha_ {3}).
+$$
+
+因 A 是 $m \times n$ 矩阵, $r(A) = n$ ,
+
+$$
+r \left(\mathbf {A} \boldsymbol {\alpha} _ {1}, \mathbf {A} \boldsymbol {\alpha} _ {2}, \mathbf {A} \boldsymbol {\alpha} _ {3}\right) = r \left[ \mathbf {A} \left(\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}\right) \right] = r \left(\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}\right) = 3.
+$$
+
+$\therefore A\alpha_{1}, A\alpha_{2}, A\alpha_{3}$ 线性无关."
+fd-0309,辅导讲义,线性代数,第三章 向量,,9,,,题型一 相关、无关,"【例3.9】设四维列向量 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性无关，且与四维非零列向量 $\beta_{1}, \beta_{2}$ 均正交，证明 (1) $\beta_{1}, \beta_{2}$ 线性相关；(2) $\alpha_{1}, \alpha_{2}, \alpha_{3}, \beta_{1}$ 线性无关.",,,,,"(1)(用秩) 构造矩阵
+
+$$
+\mathbf {A} = \left[ \begin{array}{l} \boldsymbol {\alpha} _ {1} ^ {\mathrm{T}} \\ \boldsymbol {\alpha} _ {2} ^ {\mathrm{T}} \\ \boldsymbol {\alpha} _ {3} ^ {\mathrm{T}} \end{array} \right],
+$$
+
+则矩阵 $\mathbf{A}$ 是秩为3的 $3\times 4$ 矩阵.由于
+
+$$
+\mathbf {A} \pmb {\beta} _ {i} = \left[ \begin{array}{l} \pmb {\alpha} _ {1} ^ {\mathrm{T}} \\ \pmb {\alpha} _ {2} ^ {\mathrm{T}} \\ \pmb {\alpha} _ {3} ^ {\mathrm{T}} \end{array} \right] \pmb {\beta} _ {i} = \left[ \begin{array}{l} 0 \\ 0 \\ 0 \end{array} \right], i = 1, 2,
+$$
+
+所以 $\pmb{\beta}_{1},\pmb{\beta}_{2}$ 均是齐次方程组 $Ax = 0$ 的解，于是
+
+$$
+r (\pmb {\beta} _ {1}, \pmb {\beta} _ {2}) \leqslant n - r (\mathbf {A}) = 4 - 3 = 1,
+$$
+
+从而 $\beta_{1}, \beta_{2}$ 线性相关.
+
+(2)(用定义)设
+
+$$
+k _ {1} \boldsymbol {\alpha} _ {1} + k _ {2} \boldsymbol {\alpha} _ {2} + k _ {3} \boldsymbol {\alpha} _ {3} + k \boldsymbol {\beta} _ {1} = \mathbf {0},\tag{①}
+$$
+
+用 $\pmb{\beta}_{1}^{\mathrm{T}}$ 左乘 ①，又 $\pmb{\beta}_{1}^{\mathrm{T}}\pmb{\alpha}_{i}=0(i=1,2,3)$ ，有 $k\pmb{\beta}_{1}^{\mathrm{T}}\pmb{\beta}_{1}=0$ 。而 $\pmb{\beta}_{1}^{\mathrm{T}}\pmb{\beta}_{1}\neq0$ ，故必有 $k=0$ 。把 $k=0$ 代入 ① 得
+
+$$
+k _ {1} \pmb {\alpha} _ {1} + k _ {2} \pmb {\alpha} _ {2} + k _ {3} \pmb {\alpha} _ {3} = \mathbf {0},
+$$
+
+因 $\pmb{\alpha}_{1},\pmb{\alpha}_{2},\pmb{\alpha}_{3}$ 线性无关，故必有
+
+$$
+k _ {1} = 0, k _ {2} = 0, k _ {3} = 0,
+$$
+
+所以 $\alpha_{1},\alpha_{2},\alpha_{3},\beta_{1}$ 必线性无关."
+fd-0310,辅导讲义,线性代数,第三章 向量,,10,,,题型一 相关、无关,"【练习】1 已知 $\lambda_{1}, \lambda_{2}$ 是矩阵 $A$ 不同的特征值, $\alpha_{1}, \alpha_{2}$ 是特征值 $\lambda_{1}$ 的线性无关的特征向量, $\beta$ 是特征值 $\lambda_{2}$ 的特征向量. 证明 $\alpha_{1}, \alpha_{2}, \beta$ 线性无关.",,,,,
+fd-0311,辅导讲义,线性代数,第三章 向量,,11,,,题型一 相关、无关,"【练习】2 证明: 如果 $\beta_{1}, \beta_{2}, \beta_{3}$ 可由 $\alpha_{1}, \alpha_{2}$ 线性表示, 则 $\beta_{1}, \beta_{2}, \beta_{3}$ 必线性相关.",,,,,
+fd-0312,辅导讲义,线性代数,第三章 向量,,12,,,题型一 相关、无关,"【练习】3 已知 $A = [\alpha_{1}, \alpha_{2}, \cdots, \alpha_{m}]$ , $B = [\beta_{1}, \beta_{2}, \cdots, \beta_{m}]$ 且 PA = B，其中 P 是可逆矩阵，若 $\alpha_{1}, \alpha_{3}, \alpha_{5}$ 线性相（无）关，则 $\beta_{1}, \beta_{3}, \beta_{5}$ 线性相（无）关。",,,,,
+fd-0313,辅导讲义,线性代数,第三章 向量,,13,,,题型一 相关、无关,"【例3.10】已知向量组 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性无关，向量组 $\alpha_{1} + a\alpha_{2}, \alpha_{1} + 2\alpha_{2} + \alpha_{3}, a\alpha_{1} - \alpha_{3}$ 线性相关，则 a = ____.",,,,,"令
+
+$$
+\boldsymbol {\beta} _ {1} = \boldsymbol {\alpha} _ {1} + a \boldsymbol {\alpha} _ {2}, \boldsymbol {\beta} _ {2} = \boldsymbol {\alpha} _ {1} + 2 \boldsymbol {\alpha} _ {2} + \boldsymbol {\alpha} _ {3}, \boldsymbol {\beta} _ {3} = a \boldsymbol {\alpha} _ {1} - \boldsymbol {\alpha} _ {3},
+$$
+
+有
+
+$$
+[ \pmb {\beta} _ {1}, \pmb {\beta} _ {2}, \pmb {\beta} _ {3} ] = [ \pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3} ] \left[ \begin{array}{c c c} 1 & 1 & a \\ a & 2 & 0 \\ 0 & 1 & - 1 \end{array} \right],
+$$
+
+从而
+
+$$
+\left| \begin{array}{c c c} 1 & 1 & a \\ a & 2 & 0 \\ 0 & 1 & - 1 \end{array} \right| = \left| \begin{array}{c c c} 1 & a + 1 & a \\ a & 2 & 0 \\ 0 & 0 & - 1 \end{array} \right| = a ^ {2} + a - 2 = 0,
+$$
+
+故 a = 1 或 a = -2.
+
+或用定义法. 如
+
+$$
+k _ {1} \left(\boldsymbol {\alpha} _ {1} + a \boldsymbol {\alpha} _ {2}\right) + k _ {2} \left(\boldsymbol {\alpha} _ {1} + 2 \boldsymbol {\alpha} _ {2} + \boldsymbol {\alpha} _ {3}\right) + k _ {3} \left(a \boldsymbol {\alpha} _ {1} - \boldsymbol {\alpha} _ {3}\right) = \mathbf {0},\tag{①}
+$$
+
+$$
+\mathfrak {I} \left(k _ {1} + k _ {2} + a k _ {3}\right) \boldsymbol {\alpha} _ {1} + \left(a k _ {1} + 2 k _ {2}\right) \boldsymbol {\alpha} _ {2} + \left(k _ {2} - k _ {3}\right) \boldsymbol {\alpha} _ {3} = \mathbf {0}.\tag{②}
+$$
+
+由 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性无关.从而
+
+$$
+\left\{ \begin{array}{c} k _ {1} + k _ {2} + a k _ {3} = 0, \\ a k _ {1} + 2 k _ {2} = 0, \\ k _ {2} - k _ {3} = 0, \end{array} \right.\tag{③}
+$$
+
+因 $k_{1}, k_{2}, k_{3}$ 不全为0，即 ③ 必有非零解，故
+
+$$
+\left| \begin{array}{c c c} 1 & 1 & a \\ a & 2 & 0 \\ 0 & 1 & - 1 \end{array} \right| = a ^ {2} + a - 2 = 0,
+$$
+
+故 $a = 1$ 或 $a = -2$ .
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/1fcb4cb2b373db4a28cf9e6610427cd48ae2b86deb93d5d9edcc49b44bd83a03.jpg)"
+fd-0314,辅导讲义,线性代数,第三章 向量,,14,,,题型一 相关、无关,"【例3.11】已知向量组 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性无关，则下列向量组中，线性无关的是","$\alpha_ {1} + \alpha_ {2}, \alpha_ {2} + \alpha_ {3}, \alpha_ {3} + \alpha_ {1}. $","$\alpha_ {1} + \alpha_ {2}, \alpha_ {2} + 2 \alpha_ {3}, \alpha_ {1} + 2 \alpha_ {2} + \alpha_ {3}, \alpha_ {1} - \alpha_ {2} + 5 \alpha_ {3}.$","$\alpha_ {1} + 2 \alpha_ {2}, 2 \alpha_ {2} + 3 \alpha_ {3}, 3 \alpha_ {3} - \alpha_ {1}.$","$\alpha_ {1} + \alpha_ {2} - \alpha_ {3}, 2 \alpha_ {1} + 3 \alpha_ {2} + 1 2 \alpha_ {3}, 3 \alpha_ {1} + 5 \alpha_ {2} + 2 5 \alpha_ {3}. $","用秩. (A) $[\pmb{\alpha}_{1} + \pmb{\alpha}_{2}, \pmb{\alpha}_{2} + \pmb{\alpha}_{3}, \pmb{\alpha}_{3} + \pmb{\alpha}_{1}] = [\pmb{\alpha}_{1}, \pmb{\alpha}_{2}, \pmb{\alpha}_{3}] \begin{bmatrix} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix}$ ,
+
+因 $\begin{vmatrix}1&0&1\\ 1&1&0\\ 0&1&1\end{vmatrix}\neq0$ ,于是
+
+$$
+r (\pmb {\alpha} _ {1} + \pmb {\alpha} _ {2}, \pmb {\alpha} _ {2} + \pmb {\alpha} _ {3}, \pmb {\alpha} _ {3} + \pmb {\alpha} _ {1}) = r (\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}) = 3.
+$$
+
+所以(A)必线性无关.
+
+利用观察法易见(B)中是4个向量,而这4个向量均是三维向量,立即知(B)必线性相关.
+
+观察到
+
+$$
+(\pmb {\alpha} _ {1} + 2 \pmb {\alpha} _ {2}) - (2 \pmb {\alpha} _ {2} + 3 \pmb {\alpha} _ {3}) + (3 \pmb {\alpha} _ {3} - \pmb {\alpha} _ {1}) = \mathbf {0},
+$$
+
+按线性相关定义,知(C)必相关.
+
+关于(D)请用秩来判断.
+
+【评注】 向量组的线性相关(无关)是一抽象概念,在理解时要仔细分辨“有一组”与“任一组”,许多错误往往发生在此.
+
+对于向量组 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ ，恒有 $0\alpha_{1} + 0\alpha_{2} + \cdots + 0\alpha_{s} = 0$ ，向量组 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 是否线性相关，其实就是问除上述情况外，还能否再找到一组数，使得 $k_{1}\alpha_{1} + k_{2}\alpha_{2} + \cdots + k_{s}\alpha_{s} = 0$ 仍能成立？如若可以（即有一组不全为零的 $k_{1}, k_{2}, \cdots, k_{s}$ ），则向量组线性相关，如若不行（即对任一组不全为 0 的数恒有 $k_{1}\alpha_{1} + k_{2}\alpha_{2} + \cdots + k_{s}\alpha_{s} \neq 0$ ），则向量组线性无关。
+
+
+定义 3.2 对 n 维向量 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 和 $\beta$ ，若存在实数 $k_{1}, k_{2}, \cdots, k_{s}$ 使得
+
+$$
+k _ {1} \boldsymbol {\alpha} _ {1} + k _ {2} \boldsymbol {\alpha} _ {2} + \dots + k _ {s} \boldsymbol {\alpha} _ {s} = \boldsymbol {\beta},
+$$
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/62cb54640cacefb20a01d98254e0fd9e8f6aacd0c5f6d3a62f259fce5a335d28.jpg)
+
+
+则称 $\beta$ 是 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 的线性组合，或者说 $\beta$ 可由 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 线性表出（示）.
+
+$$
+\boldsymbol {\alpha} _ {1} = (1, 0) ^ {\mathrm{T}}, \boldsymbol {\alpha} _ {2} = (2, 1) ^ {\mathrm{T}}, \boldsymbol {\alpha} _ {3} = (1, - 1) ^ {\mathrm{T}}, \boldsymbol {\beta} = (3, 2) ^ {\mathrm{T}}
+$$
+
+$$
+\boldsymbol {\beta} = - \alpha_ {1} + 2 \alpha_ {2} + 0 \alpha_ {3} = 2 \alpha_ {1} + \alpha_ {2} - \alpha_ {3} = 5 \alpha_ {1} + 0 \alpha_ {2} - 2 \alpha_ {3} = \dots ,
+$$
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/c17f677dfccc1225df638fe5e5dcc8d6fb72a75597749d164cb0db18cc881502.jpg)
+
+
+即 $\beta$ 可由 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性表出，且表示法不唯一.
+
+又如 $\pmb{\alpha}_{1} = (1,0)^{\mathrm{T}},\pmb{\alpha}_{2} = (2,0)^{\mathrm{T}},\pmb{\beta} = (0,3)^{\mathrm{T}}$ ，那么无论 $k_{1},k_{2}$ 取何值，恒有 $k_{1}\pmb{\alpha}_{1} + k_{2}\pmb{\alpha}_{2}\neq \pmb {\beta}$ ，即 $\pmb{\beta}$ 不能由 $\pmb{\alpha}_{1},\pmb{\alpha}_{2}$ 线性表出.
+
+定义 3.3 设有两个 n 维向量组 (Ⅰ) $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ ; (Ⅱ) $\beta_{1}, \beta_{2}, \cdots, \beta_{t}$ .
+
+如果（Ⅰ）中每个向量 $\alpha_{i}(i=1,2,\cdots,s)$ 都可由（Ⅱ）中的向量 $\beta_{1},\beta_{2},\cdots,\beta_{t}$ 线性表出，则称向量组（Ⅰ）可由向量组（Ⅱ）线性表出.
+
+如果(I)(II)这两个向量组可以互相线性表出,则称这两个向量组等价.
+
+例如，已知向量组 $\pmb{\alpha}_{1} = (1,0,0)^{\mathrm{T}},\pmb{\alpha}_{2} = (0,1,0)^{\mathrm{T}},\pmb{\alpha}_{3} = (0,0,1)^{\mathrm{T}}$ 与 $\pmb {\beta}_{1} = (1,1,1)^{\mathrm{T}},\pmb {\beta}_{2} = (1,1,0)^{\mathrm{T}},\pmb {\beta}_{3} = (1,0,0)^{\mathrm{T}}.$ 
+
+由 $\pmb{\beta}_{1} = \pmb{\alpha}_{1} + \pmb{\alpha}_{2} + \pmb{\alpha}_{3},\pmb{\beta}_{2} = \pmb{\alpha}_{1} + \pmb{\alpha}_{2},\pmb{\beta}_{3} = \pmb{\alpha}_{1},$ 
+
+$$
+\alpha_ {1} = \beta_ {3}, \alpha_ {2} = \beta_ {2} - \beta_ {3}, \alpha_ {3} = \beta_ {1} - \beta_ {2},
+$$
+
+知向量组 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 与 $\beta_{1}, \beta_{2}, \beta_{3}$ 可互相线性表出，所以 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 与 $\beta_{1}, \beta_{2}, \beta_{3}$ 是等价向量组.
+
+定理 3.4 向量 $\beta$ 可由向量组 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 线性表出
+
+$\Leftrightarrow$ 非齐次线性方程组 $\left[\alpha_{1},\alpha_{2},\cdots,\alpha_{s}\right]\begin{bmatrix}x_{1}\\ x_{2}\\ \vdots \\ x_{s}\end{bmatrix}=\beta$ 有解
+
+$\Leftrightarrow$ 秩 $r[\alpha_{1},\alpha_{2},\cdots,\alpha_{s}]=r[\alpha_{1},\alpha_{2},\cdots,\alpha_{s},\beta].$ 
+
+定理 3.5 如果 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s} (s \geqslant 2)$ 线性相关，则其中必有一个向量可用其余的向量线性表出；反之，若有一个向量可用其余的 s-1 个向量线性表出，则这 s 个向量必线性相关.
+
+定理 3.6 如果 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 线性无关， $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}, \beta$ 线性相关，则 $\beta$ 可由 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 线性表出，且表示法唯一.
+
+定理 3.7 如果向量组 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 可由向量组 $\beta_{1}, \beta_{2}, \cdots, \beta_{t}$ 线性表出，而且 s > t，那么 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 线性相关。即如果多数向量能用少数向量线性表出，那么多数向量一定线性相关。
+
+推论 如果 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 线性无关，且它可由 $\beta_{1}, \beta_{2}, \cdots, \beta_{t}$ 线性表出，则 $s \leqslant t$ ."
+fd-0315,辅导讲义,线性代数,第三章 向量,,1,,,题型二 线性表示,"【例3.12】设 $\pmb{\alpha}_{1} = (1,2,0)^{\mathrm{T}},\pmb{\alpha}_{2} = (1,a + 2, - 3a)^{\mathrm{T}},\pmb{\alpha}_{3} = (-1,$ $-b - 2,a + 2b)^{\mathrm{T}},\pmb {\beta} = (1,3, - 3)^{\mathrm{T}}.$ 当 $a,b$ 为何值时，
+
+(1) $\beta$ 不能由 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性表示；
+
+(2) $\beta$ 可由 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性表示，并写出表示式.",,,,,"设 $x_{1}\alpha_{1} + x_{2}\alpha_{2} + x_{3}\alpha_{3} = \beta,$ 
+
+按分量写出，有 $\left\{\begin{aligned}x_{1}+\quad&x_{2}-\quad&x_{3}=1,\\ 2x_{1}+(a+2)x_{2}-(b+2)x_{3}=3,\\ -3ax_{2}+(a+2b)x_{3}=-3.\end{aligned}\right.$ 
+
+对于 $\overline{A} = [\alpha_{1}, \alpha_{2}, \alpha_{3}, \beta]$ 作初等行变换，
+
+$$
+\overline {{{\mathbf {A}}}} = \left[\begin{array}{c c c c}1&1&- 1&1\\2&a + 2&- b - 2&3\\0&- 3 a&a + 2 b&- 3\end{array}\right]\rightarrow \left[\begin{array}{c c c c}1&1&- 1&1\\0&a&- b&1\\0&0&a - b&0\end{array}\right].
+$$
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/f31c01451c0ecfae647ee4b250fdd4574a00e8f17701abe1c287454f81eeed19.jpg)
+
+
+学习札记
+
+(1) 当 a = 0, b 为任意实数.
+
+$$
+\overline {{{A}}} \rightarrow \left[\begin{array}{c c c c}1&1&- 1&1\\0&0&- b&1\\0&0&- b&0\end{array}\right]\rightarrow \left[\begin{array}{c c c c}1&1&- 1&1\\0&0&- b&1\\0&0&0&- 1\end{array}\right],
+$$
+
+由于 $r(A) \neq r(\overline{A})$ ，故方程组无解。因此， $\pmb{\beta}$ 不能由 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性表示。（2）当 $a \neq b$ ，且 $a \neq 0$ ，方程组有唯一解，
+
+$$
+x _ {3} = 0, x _ {2} = \frac {1}{a}, x _ {1} = 1 - \frac {1}{a}.
+$$
+
+$$
+\boldsymbol {\beta} = \left(1 - \frac {1}{a}\right) \boldsymbol {\alpha} _ {1} + \frac {1}{a} \boldsymbol {\alpha} _ {2}.
+$$
+
+当 $a = b \neq 0$ 
+
+$$
+\overline {{{\boldsymbol {A}}}} \rightarrow \left[\begin{array}{c c c c}1&1&- 1&1\\0&a&- a&1\\0&0&0&0\end{array}\right]\rightarrow \left[\begin{array}{c c c c}1&0&0&1 - \frac {1}{a}\\0&1&- 1&\frac {1}{a}\\0&0&0&0\end{array}\right]
+$$
+
+令 $x_{3} = t \Rightarrow x_{1} = 1 - \frac{1}{a}, x_{2} = \frac{1}{a} + t.$ 
+
+故 $\boldsymbol{\beta}=\left(1-\frac{1}{a}\right)\boldsymbol{\alpha}_{1}+\left(t+\frac{1}{a}\right)\boldsymbol{\alpha}_{2}+t\boldsymbol{\alpha}_{3}$ t 为任意实数."
+fd-0316,辅导讲义,线性代数,第三章 向量,,2,,,题型二 线性表示,"【例3.13】（2005,2）确定常数 a，使向量组 $\boldsymbol{\alpha}_{1}=(1,1,a)^{\mathrm{T}},\boldsymbol{\alpha}_{2}=(1,a,1)^{\mathrm{T}},\boldsymbol{\alpha}_{3}=(a,1,1)^{\mathrm{T}}$ 可由向量组 $\boldsymbol{\beta}_{1}=(1,1,a)^{\mathrm{T}},\boldsymbol{\beta}_{2}=(-2,a,4)^{\mathrm{T}}$ ， $\boldsymbol{\beta}_{3}=(-2,a,a)^{\mathrm{T}}$ 线性表示，但向量组 $\beta_{1},\beta_{2},\beta_{3}$ 不能由向量组 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性表示.",,,,,"（方法一）因为 $\alpha_{1},\alpha_{2},\alpha_{3}$ 可由 $\beta_{1},\beta_{2},\beta_{3}$ 线性表出，有 $r(\alpha_1,\alpha_2,\alpha_3)\leqslant r(\beta_1,\beta_2,\beta_3).$ 
+
+又因为 $\pmb{\beta}_{1},\pmb{\beta}_{2},\pmb{\beta}_{3}$ 不能由 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性表出，故必有
+
+$$
+r (\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}) <   r (\boldsymbol {\beta} _ {1}, \boldsymbol {\beta} _ {2}, \boldsymbol {\beta} _ {3}).
+$$
+
+由于 $r(\pmb{\beta}_1, \pmb{\beta}_2, \pmb{\beta}_3) \leqslant 3$ ，故 $r(\pmb{\alpha}_1, \pmb{\alpha}_2, \pmb{\alpha}_3) < 3$ ，于是
+
+$$
+| \pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3} | = \left| \begin{array}{c c c} 1 & 1 & a \\ 1 & a & 1 \\ a & 1 & 1 \end{array} \right| = - (a + 2) (a - 1) ^ {2} = 0,
+$$
+
+所以 a = 1 或 a = -2.
+
+若 $a = 1$ ，有 $\pmb{\alpha}_{1} = \pmb{\alpha}_{2} = \pmb{\alpha}_{3} = \pmb{\beta}_{1}$ ，即 $\pmb{\alpha}_{1},\pmb{\alpha}_{2},\pmb{\alpha}_{3}$ 可由 $\pmb{\beta}_{1},\pmb{\beta}_{2},\pmb{\beta}_{3}$ 线性表出，
+
+若 $a = -2$ ，易见
+
+$$
+r (\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}) = r \left[ \begin{array}{c c c} 1 & 1 & - 2 \\ 1 & - 2 & 1 \\ - 2 & 1 & 1 \end{array} \right] = 2,
+$$
+
+$$
+r (\pmb {\beta} _ {1}, \pmb {\beta} _ {2}, \pmb {\beta} _ {3}) = r \left[ \begin{array}{c c c} 1 & - 2 & - 2 \\ 1 & - 2 & - 2 \\ - 2 & 4 & - 2 \end{array} \right] = 2,
+$$
+
+n维向量
+
+与 $r(\pmb{\alpha}_1, \pmb{\alpha}_2, \pmb{\alpha}_3) < r(\pmb{\beta}_1, \pmb{\beta}_2, \pmb{\beta}_3)$ 相矛盾.
+
+所以 a = 1 为所求.
+
+(方法二) $\alpha_{1},\alpha_{2},\alpha_{3}$ 可由 $\beta_{1},\beta_{2},\beta_{3}$ 线性表出，即三个方程组
+
+$$
+x _ {1 j} \pmb {\beta} _ {1} + x _ {2 j} \pmb {\beta} _ {2} + x _ {3 j} \pmb {\beta} _ {3} = \pmb {\alpha} _ {j}, (j = 1, 2, 3)
+$$
+
+同时有解."
+fd-0317,辅导讲义,线性代数,第三章 向量,,3,,,题型二 线性表示,"【例3.14】已知 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}, \beta_{1}, \beta_{2}, \cdots, \beta_{s-1}$ 都是 n 维向量，下列命题中错误的是
+
+学习札记","如果 $\begin{bmatrix}\alpha_{1}\\ \beta_{1}\end{bmatrix},\begin{bmatrix}\alpha_{2}\\ \beta_{2}\end{bmatrix},\cdots,\begin{bmatrix}\alpha_{s-1}\\ \beta_{s-1}\end{bmatrix}$ 线性相关，则 $\alpha_{1},\alpha_{2},\cdots,\alpha_{s-1},\alpha_{s}$ 线性相关.","如果秩 $r(\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{s}, \boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \cdots, \boldsymbol{\beta}_{s-1}) = r(\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \cdots, \boldsymbol{\beta}_{s-1})$ ，则 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 线性相关.","如果 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 线性相关，且 $\alpha_{s}$ 不能由 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s-1}$ 线性表出，则 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s-1}$ 线性相关.","如果 $\alpha_{s}$ 不能由 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s-1}$ 线性表出，则 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 线性无关.","当 $\alpha_{s}$ 不能由 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s-1}$ 线性表出时，并不能保证每一个向量 $\boldsymbol{\alpha}_{i} (i = 1, 2, \cdots, s-1)$ 都不能用其余的向量线性表出。例如， $\boldsymbol{\alpha}_{1} = (1, 0, 0)^{\mathrm{T}}, \boldsymbol{\alpha}_{2} = (2, 0, 0)^{\mathrm{T}}, \boldsymbol{\alpha}_{3} = (0, 0, 3)^{\mathrm{T}}$ ，虽然 $\alpha_{3}$ 不能由 $\alpha_{1}, \alpha_{2}$ 线性表出，但 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 是线性相关的。所以（D）不正确。
+
+关于(A)，由 $\begin{bmatrix}\alpha_{1}\\ \beta_{1}\end{bmatrix},\begin{bmatrix}\alpha_{2}\\ \beta_{2}\end{bmatrix},\cdots,\begin{bmatrix}\alpha_{s-1}\\ \beta_{s-1}\end{bmatrix}$ 线性相关 $\xrightarrow{定理3.3}\alpha_{1},\alpha_{2},\cdots,\alpha_{s-1}$ 线性相关 $\xrightarrow{定理3.2}\alpha_{1},\alpha_{2},\cdots,\alpha_{s-1},\alpha_{s}$ 线性相关.
+
+关于(B), $r(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{s})\leqslant r(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{s},\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2},\cdots,\boldsymbol{\beta}_{s-1})$ $=r(\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2},\cdots,\boldsymbol{\beta}_{s-1})\leqslant s-1<s.$ 
+
+或者，由 $r(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{s},\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2},\cdots,\boldsymbol{\beta}_{s-1})=r(\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2},\cdots,\boldsymbol{\beta}_{s-1})$ 知 $\alpha_{1},\alpha_{2},\cdots,\alpha_{s}$ 可由 $\beta_{1},\beta_{2},\cdots,\beta_{s-1}$ 线性表出，据定理 3.7 亦知 $\alpha_{1},\alpha_{2},\cdots,\alpha_{s}$ 线性相关.
+
+对于(C)，由于 $\alpha_{1},\alpha_{2},\cdots,\alpha_{s}$ 线性相关，故存在不全为0的 $k_{1},k_{2},\cdots,k_{s}$ 使得 $k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{s}\alpha_{s}=0$ 。此时必有 $k_{s}=0$ ，否则 $\alpha_{s}$ 可由 $\alpha_{1},\cdots,\alpha_{s-1}$ 线性表出。于是 $k_{1},k_{2},\cdots,k_{s-1}$ 不全为0，而 $k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{s-1}\alpha_{s-1}=0$ ，即 $\alpha_{1},\alpha_{2},\cdots,\alpha_{s-1}$ 必线性相关。"
+fd-0318,辅导讲义,线性代数,第三章 向量,,4,,,题型二 线性表示,"【例3.15】（1992,1）设向量组 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性相关，向量组 $\alpha_{2}, \alpha_{3}, \alpha_{4}$ 线性无关，问
+
+(1) $\alpha_{1}$ 能否由 $\alpha_{2}, \alpha_{3}$ 线性表出?证明你的结论;
+
+(2) $\alpha_{1}$ 能否由 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性表出?证明你的结论.",,,,,"(1) $\alpha_{1}$ 能由 $\alpha_{2}, \alpha_{3}$ 线性表出.
+
+（方法一）因为已知向量组 $\alpha_{2},\alpha_{3},\alpha_{4}$ 线性无关，那么它的部分组 $\alpha_{2}$ ， $\alpha_{3}$ 线性无关(定理3.2).又因 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性相关，故 $\alpha_{1}$ 可以由 $\alpha_{2},\alpha_{3}$ 线性表出(定理3.6).
+
+（方法二）因为向量组 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性相关，故存在不全为零的数 $k_{1},k_{2},$ $k_{3}$ ，使得 $k_{1}\pmb{\alpha}_{1} + k_{2}\pmb{\alpha}_{2} + k_{3}\pmb{\alpha}_{3} = \mathbf{0}$ ，其中必有 $k_{1}\neq 0.$ 否则，若 $k_{1} = 0$ ，则 $k_{2},k_{3}$ 不全为零，使 $k_{2}\pmb{\alpha}_{2} + k_{3}\pmb{\alpha}_{3} = \mathbf{0}$ ，即 $\pmb{\alpha}_{2},\pmb{\alpha}_{3}$ 线性相关，进而向量组 $\pmb{\alpha}_{2},\pmb{\alpha}_{3},\pmb{\alpha}_{4}$ 线性相关(定理3.2)，与已知矛盾.于是 $k_{1}\neq 0$ ，由此有 $\pmb{\alpha}_{1} = -\frac{k_{2}}{k_{1}}\pmb{\alpha}_{2} - \frac{k_{3}}{k_{1}}\pmb{\alpha}_{3}$ ，即 $\pmb{\alpha}_{1}$ 可由 $\pmb{\alpha}_{2},\pmb{\alpha}_{3}$ 线性表出.
+
+(2) $\alpha_{4}$ 不能由 $\alpha_{1},\alpha_{2},\alpha_{3}$ 线性表出.
+
+(方法一) (反证法) 若 $\alpha_{4}$ 能由 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性表出, 设
+
+$$
+\boldsymbol {\alpha} _ {4} = k _ {1} \boldsymbol {\alpha} _ {1} + k _ {2} \boldsymbol {\alpha} _ {2} + k _ {3} \boldsymbol {\alpha} _ {3}.
+$$
+
+由(1)知, $\alpha_{1}=l_{2}\alpha_{2}+l_{3}\alpha_{3}$ ，代入上式整理，得到
+
+$$
+\boldsymbol {\alpha} _ {4} = \left(k _ {1} l _ {2} + k _ {2}\right) \boldsymbol {\alpha} _ {2} + \left(k _ {1} l _ {3} + k _ {3}\right) \boldsymbol {\alpha} _ {3},
+$$
+
+即 $\alpha_{4}$ 可由 $\alpha_{2}, \alpha_{3}$ 线性表出，从而 $\alpha_{2}, \alpha_{3}, \alpha_{4}$ 线性相关（定理 3.5），与已知矛盾。因此， $\alpha_{4}$ 不能由 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性表出。
+
+（方法二）考查方程组 $x_{1}\pmb{\alpha}_{1} + x_{2}\pmb{\alpha}_{2} + x_{3}\pmb{\alpha}_{3} = \pmb{\alpha}_{4}$ ，因为 $\pmb{\alpha}_{1},\pmb{\alpha}_{2},\pmb{\alpha}_{3}$ 线性相关，故系数矩阵的秩 $r(\mathbf{A}) = r(\pmb{\alpha}_1,\pmb{\alpha}_2,\pmb{\alpha}_3) < 3.$ 又因 $\pmb{\alpha}_{2},\pmb{\alpha}_{3},\pmb{\alpha}_{4}$ 线性无关，故增广矩阵的秩 $r(\pmb{\alpha}_1,\pmb{\alpha}_2,\pmb{\alpha}_3,\pmb{\alpha}_4)\geqslant 3.$ 于是 $r(\mathbf{A})\neq r(\overline{\mathbf{A}})$ ，方程组无解，因此， $\pmb{\alpha}_{4}$ 不能由 $\pmb{\alpha}_{1},\pmb{\alpha}_{2},\pmb{\alpha}_{3}$ 线性表出."
+fd-0319,辅导讲义,线性代数,第三章 向量,,5,,,题型二 线性表示,"【例3.16】设向量 $\beta$ 可以由向量组 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{m}$ 线性表出，但 $\beta$ 不能由向量组 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{m-1}$ 线性表出。判断
+
+(1) $\alpha_{m}$ 能否由 $\alpha_{1}, \cdots, \alpha_{m-1}, \beta$ 线性表出，为什么？
+
+(2) $\alpha_{m}$ 能否由 $\alpha_{1}, \cdots, \alpha_{m-1}$ 线性表出，为什么？",,,,,"(1) $\alpha_{m}$ 可以由 $\alpha_{1},\cdots,\alpha_{m-1},\beta$ 线性表出.
+
+因为 $\beta$ 可以由 $\alpha_{1},\cdots,\alpha_{m}$ 线性表出，故可设
+
+$$
+\boldsymbol {\beta} = l _ {1} \boldsymbol {\alpha} _ {1} + \dots + l _ {m - 1} \boldsymbol {\alpha} _ {m - 1} + l _ {m} \boldsymbol {\alpha} _ {m}.\tag{①}
+$$
+
+此时必有 $l_{m} \neq 0$ ，否则 $\beta$ 可以由 $\alpha_{1}, \cdots, \alpha_{m-1}$ 线性表出，与已知矛盾。那么
+
+$$
+\boldsymbol {\alpha} _ {m} = \frac {1}{l _ {m}} (\boldsymbol {\beta} - l _ {1} \boldsymbol {\alpha} _ {1} - \dots - l _ {m - 1} \boldsymbol {\alpha} _ {m - 1}),
+$$
+
+即 $\alpha_{m}$ 可以由 $\alpha_{1},\cdots,\alpha_{m-1},\beta$ 线性表出.
+
+(2) $\alpha_{m}$ 不能由 $\alpha_{1},\cdots,\alpha_{m-1}$ 线性表出.
+
+如果 $\alpha_{m}$ 可以由 $\alpha_{1},\cdots,\alpha_{m-1}$ 线性表出，可设
+
+$$
+\boldsymbol {\alpha} _ {m} = k _ {1} \boldsymbol {\alpha} _ {1} + k _ {2} \boldsymbol {\alpha} _ {2} + \dots + k _ {m - 1} \boldsymbol {\alpha} _ {m - 1}.\tag{②}
+$$
+
+将 ② 代入 ①, 整理得
+
+$$
+\boldsymbol {\beta} = \left(l _ {1} + l _ {m} k _ {1}\right) \boldsymbol {\alpha} _ {1} + \left(l _ {2} + l _ {m} k _ {2}\right) \boldsymbol {\alpha} _ {2} + \dots + \left(l _ {m - 1} + l _ {m} k _ {m - 1}\right) \boldsymbol {\alpha} _ {m - 1}.
+$$
+
+说明 $\beta$ 可以由 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{m-1}$ 线性表出，与已知矛盾。故 $\alpha_{m}$ 不能由 $\alpha_{1}, \cdots, \alpha_{m-1}$ 线性表出。
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/506f8b4525e54ba072106538f5acfd693766d66eaa34c8a8e8b964b5055e925a.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/cbde4ce645061253cb255a366b5b95b54d93397f802267f383e8112bd622bbbe.jpg)
+
+
+或者 由 $\beta$ 可由 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{m}$ 线性表出，有
+
+$$
+r \left(\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \dots , \boldsymbol {\alpha} _ {m}\right) = r \left(\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \dots , \boldsymbol {\alpha} _ {m}, \boldsymbol {\beta}\right)\tag{③}
+$$
+
+学习札记
+
+而 $\beta$ 不能由 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{m-1}$ 线性表出，有
+
+$$
+r \left(\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \dots , \boldsymbol {\alpha} _ {m - 1}\right) + 1 = r \left(\boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \dots , \boldsymbol {\alpha} _ {m - 1}, \boldsymbol {\beta}\right)\tag{④}
+$$
+
+那么 $r(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{m})\leqslant r(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{m-1})+1$ $=\cdots$ 
+
+
+定义 3.4 在向量组 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 中，若存在 r 个向量 $\alpha_{i_{1}}, \alpha_{i_{2}}, \cdots, \alpha_{i_{r}}$ 线性无关，再加进任一个向量 $\alpha_{j} (j = 1, 2, \cdots, s)$ ，向量组 $\alpha_{i_{1}}, \alpha_{i_{2}}, \cdots, \alpha_{i_{r}}, \alpha_{j}$ 就线性相关，则称 $\alpha_{i_{1}}, \alpha_{i_{2}}, \cdots, \alpha_{i_{r}}$ 是向量组 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 的一个极大线性无关组.
+
+定义 3.5 向量组 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 的极大线性无关组中所含向量的个数 r 称为这个向量组的秩.
+
+例如向量组 $\alpha_{1}=\begin{bmatrix}1\\0\end{bmatrix},\alpha_{2}=\begin{bmatrix}0\\0\end{bmatrix},\alpha_{3}=\begin{bmatrix}1\\1\end{bmatrix},\alpha_{4}=\begin{bmatrix}2\\0\end{bmatrix},\alpha_{5}=\begin{bmatrix}0\\1\end{bmatrix},\alpha_{6}=\begin{bmatrix}3\\5\end{bmatrix}$ 中， $\alpha_{1},\alpha_{3}$ 线性无关，再添加向量组中的任一个向量 $\alpha_{j}$ ，向量组 $\alpha_{1},\alpha_{3},\alpha_{j}$ 必线性相关，所以 $\alpha_{1},\alpha_{3}$ 是向量组 $\alpha_{1},\alpha_{2},\cdots,\alpha_{6}$ 的一个极大线性无关组。因此，向量组的秩 $r(\alpha_{1},\alpha_{2},\cdots,\alpha_{6})=2$ 。
+
+注意向量组的极大线性无关组一般情况下不唯一.例如 $\alpha_{1},\alpha_{5}$ 也是极大线性无关组.
+
+定理 3.8 设 $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}$ 可由 $\beta_{1}, \beta_{2}, \cdots, \beta_{t}$ 线性表出，则 $r(\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}) \leqslant r(\beta_{1}, \beta_{2}, \cdots, \beta_{t})$ .
+
+推论 如果(I)(II)是两个等价的向量组,则 $r(\mathrm{I})=r(\mathrm{II})$ ."
+fd-0320,辅导讲义,线性代数,第三章 向量,,1,,,题型三 秩、极大无关组,"【例3.17】已知 $\pmb{\alpha}_{1} = (1,1,4,2)^{\mathrm{T}},\pmb{\alpha}_{2} = (1, - 1, - 2,4)^{\mathrm{T}},\pmb{\alpha}_{3} =$ $(-3,1,a, - 10)^{\mathrm{T}},\pmb{\alpha}_{4} = (1,3,10,0)^{\mathrm{T}}$ ，求向量组 $\pmb{\alpha}_{1},\pmb{\alpha}_{2},\pmb{\alpha}_{3},\pmb{\alpha}_{4}$ 的秩，求其一个极大线性无关组，并将其余向量用该极大线性无关组线性表出.",,,,,"对 $[\alpha_{1},\alpha_{2},\alpha_{3},\alpha_{4}]$ 作初等行变换，
+
+$$
+\begin{array}{r l}\left[ \boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\alpha} _ {3}, \boldsymbol {\alpha} _ {4} \right]&= \left[\begin{array}{c c c c}1&1&- 3&1\\1&- 1&1&3\\4&- 2&a&1 0\\2&4&- 1 0&0\end{array}\right]\rightarrow \left[\begin{array}{c c c c}1&1&- 3&1\\0&- 2&4&2\\0&- 6&a + 1 2&6\\0&2&- 4&- 2\end{array}\right]\\&\rightarrow \left[\begin{array}{c c c c}1&0&- 1&2\\0&1&- 2&- 1\\0&0&a&0\\0&0&0&0\end{array}\right] = [ \boldsymbol {\beta} _ {1}, \boldsymbol {\beta} _ {2}, \boldsymbol {\beta} _ {3}, \boldsymbol {\beta} _ {4} ].\end{array}
+$$
+
+$$
+\alpha_ {4} = 2 \alpha_ {1} - \alpha_ {2}.
+$$
+
+当 $a = 0$ 时， $r(\alpha_{1}, \alpha_{2}, \alpha_{3}, \alpha_{4}) = 2$ ，极大无关组： $\alpha_{1}, \alpha_{2}$ .
+
+$$
+\pmb {\alpha} _ {3} = - \pmb {\alpha} _ {1} - 2 \pmb {\alpha} _ {2}, \pmb {\alpha} _ {4} = 2 \pmb {\alpha} _ {1} - \pmb {\alpha} _ {2}.
+$$
+
+【评注】 当 $a \neq 0$ 时，
+
+$\beta_{4}=\begin{bmatrix}2\\-1\\0\\0\end{bmatrix}=2\begin{bmatrix}1\\0\\0\\0\end{bmatrix}-\begin{bmatrix}0\\1\\0\\0\end{bmatrix}=2\beta_{1}-\beta_{2}$ ，于是 $\alpha_{4}=2\alpha_{1}-\alpha_{2}$"
+fd-0321,辅导讲义,线性代数,第三章 向量,,2,,,题型三 秩、极大无关组,"【例3.18】已知 n 维向量 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性无关，若
+
+$$
+\begin{array}{l} \pmb {\beta} _ {1} = (k + 1) \pmb {\alpha} _ {1} + \pmb {\alpha} _ {2} + \pmb {\alpha} _ {3}, \\ \pmb {\beta} _ {2} = 3 \pmb {\alpha} _ {1} + (k + 3) \pmb {\alpha} _ {2} + 3 \pmb {\alpha} _ {3}, \\ \pmb {\beta} _ {3} = 5 \pmb {\alpha} _ {1} + 5 \pmb {\alpha} _ {2} + (k + 5) \pmb {\alpha} _ {3}. \end{array}
+$$
+
+若 $\pmb{\beta}_{1},\pmb{\beta}_{2},\pmb{\beta}_{3}$ 线性相关，求向量组 $\pmb{\beta}_{1},\pmb{\beta}_{2},\pmb{\beta}_{3}$ 的一个极大线性无关组，并将其余向量用该极大线性无关组线性表出.",,,,,"记 $A = [\alpha_{1}, \alpha_{2}, \alpha_{3}]$ . 因 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性无关, 有
+
+$$
+r (\mathbf {A}) = r (\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3}) = 3,
+$$
+
+于是 A 列满秩. 由 $\left[\beta_{1},\beta_{2},\beta_{3}\right]=\left[\alpha_{1},\alpha_{2},\alpha_{3}\right]\begin{bmatrix}k+1&3&5\\ 1&k+3&5\\ 1&3&k+5\end{bmatrix}$ ，且 $\beta_{1},\beta_{2},\beta_{3}$ 线性相关. 从而
+
+$$
+r (\pmb {\beta} _ {1}, \pmb {\beta} _ {2}, \pmb {\beta} _ {3}) = r \left[ \begin{array}{c c c} k + 1 & 3 & 5 \\ 1 & k + 3 & 5 \\ 1 & 3 & k + 5 \end{array} \right] <   3,
+$$
+
+$$
+\mathbf {C} = \left[\begin{array}{c c c}k + 1&3&5\\1&k + 3&5\\1&3&k + 5\end{array}\right]\rightarrow \left[\begin{array}{c c c}k + 1&3&5\\- k&k&0\\- k&0&k\end{array}\right].
+$$
+
+当 k = 0 时， $r(\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{3}) = 1$ ，极大无关组： $\beta_{1}$ ，而 $\beta_{2} = 3\beta_{1}, \beta_{3} = 5\beta_{1}$ .
+当 $k \neq 0$ 时，
+
+$$
+\boldsymbol {C} \rightarrow \left[\begin{array}{c c c}k + 1&3&5\\- 1&1&0\\- 1&0&1\end{array}\right]\rightarrow \left[\begin{array}{c c c}k + 9&0&0\\- 1&1&0\\- 1&0&1\end{array}\right].
+$$
+
+若 $k = -9$ ，则 $r(\pmb{\beta}_1,\pmb{\beta}_2,\pmb{\beta}_3) = 2$ ，极大无关组： $\pmb{\beta}_2,\pmb{\beta}_3$ ，而 $\pmb{\beta}_{1} = -\pmb{\beta}_{2} - \pmb{\beta}_{3}$ 
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/298d6a60e021b8aea0a24da247f8fdd0395547d3e03d34a061a20f1fc3d2ff3a.jpg)
+
+
+
+(1) $r(\mathrm{I})=r(\mathrm{II})=r(\mathrm{I},\mathrm{II})\Leftrightarrow$ 向量组(I)(II)等价.
+
+(2) $r(\mathrm{I})=r(\mathrm{II})$ 且(I)可由(II)线性表出 $\Leftrightarrow$ 向量组(I)(II)等价."
+fd-0322,辅导讲义,线性代数,第三章 向量,,1,,,题型四 向量组等价,"【例3.19】已知向量组（I） $\boldsymbol{\alpha}_{1}=(1,1,a)^{\mathrm{T}},\boldsymbol{\alpha}_{2}=(1,a,1)^{\mathrm{T}}$ 和（II） $\boldsymbol{\beta}_{1}=(a,1,1)^{\mathrm{T}},\boldsymbol{\beta}_{2}=(4,1,-5)^{\mathrm{T}}$ 等价，则 $a=$ ____.",,,,,"明显地 $\beta_{1}, \beta_{2}$ 线性无关. 于是 $r(\Pi) = 2$ .
+
+又因（I）与（Ⅱ）等价，有 $r(\mathrm{I}) = r(\mathrm{II}) = r(\mathrm{I},\mathrm{II}) = 2.$ 
+
+$$
+\left[ \boldsymbol {\alpha} _ {1}, \boldsymbol {\alpha} _ {2}, \boldsymbol {\beta} _ {1}, \boldsymbol {\beta} _ {2} \right] = \left[\begin{array}{c c c c}1&1&a&4\\1&a&1&1\\a&1&1&- 5\end{array}\right]\rightarrow \left[\begin{array}{c c c c}1&1&a&4\\0&a - 1&1 - a&- 3\\0&0&a ^ {2} + a - 2&4 a + 8\end{array}\right],
+$$
+
+那么 $\left\{\begin{aligned}a-1&\neq0,\\ a^{2}+a-2&=0,\\ 4a+8&=0,\end{aligned}\right.$ 所以a=-2."
+fd-0323,辅导讲义,线性代数,第三章 向量,,2,,,题型四 向量组等价,"【练习】1 (2013, $\frac{1}{2,3}$ ) 设 A, B, C 均为 n 阶矩阵，若 AB = C 且 B 可逆，则",矩阵 C 的行向量与矩阵 A 的行向量等价.,矩阵 C 的列向量与矩阵 A 的列向量等价.,矩阵 C 的行向量与矩阵 B 的行向量等价.,矩阵 C 的列向量与矩阵 B 的列向量等价.,
+fd-0324,辅导讲义,线性代数,第三章 向量,,3,,,题型四 向量组等价,"【练习】2 $(2022, \frac{1}{2}, 3)$ 设 $\pmb{\alpha}_{1} = \begin{bmatrix} \lambda \\ 1 \\ 1 \end{bmatrix}, \pmb{\alpha}_{2} = \begin{bmatrix} 1 \\ \lambda \\ 1 \end{bmatrix}, \pmb{\alpha}_{3} = \begin{bmatrix} 1 \\ 1 \\ \lambda \end{bmatrix}, \pmb{\alpha}_{4} = \begin{bmatrix} 1 \\ \lambda \\ \lambda^{2} \end{bmatrix}$ . 若
+
+向量组 $\pmb{\alpha}_{1},\pmb{\alpha}_{2},\pmb{\alpha}_{3}$ 与 $\pmb{\alpha}_{1},\pmb{\alpha}_{2},\pmb{\alpha}_{4}$ 等价，则 $\lambda$ 的取值范围是","$\{0,1\}$ .","$\{\lambda\mid\lambda\in\mathbf{R},\lambda\neq-2\}$ .","$\{\lambda\mid\lambda\in\mathbf{R},\lambda\neq-1,\lambda\neq-2\}$ .","$\{\lambda\mid\lambda\in\mathbf{R},\lambda\neq-1\}$ .",
+fd-0325,辅导讲义,线性代数,第三章 向量,,1,,,题型五 矩阵秩的证明,"【例3.20】设 $\mathbf{A}$ 是 $m\times n$ 矩阵， $\pmb{B}$ 是 $n\times s$ 矩阵，证明秩
+
+$$
+r (\mathbf {A B}) \leqslant \min (r (\mathbf {A}), r (\mathbf {B})).
+$$",,,,,"（方法一） 对于齐次方程组
+
+$$
+(\mathrm{I}) A B x = 0 \text {与} (\mathrm{II}) B x = 0,
+$$
+
+若 $\alpha$ 是方程组(Ⅱ)的任一个解,则由
+
+$$
+(A B) \alpha = A (B \alpha) = A 0 = 0
+$$
+
+知 $\alpha$ 是方程组（Ⅰ）的解. 因此方程组（Ⅱ）的解集合是方程组（Ⅰ）的解集合的子集合. 又因（Ⅰ）的解向量的秩为 $s - r(\mathbf{A}\mathbf{B})$ ，（Ⅱ）的解向量的秩为 $s - r(\mathbf{B})$ ，故有
+
+$$
+s - r (\pmb {B}) \leqslant s - r (\pmb {A B}),
+$$
+
+即 $r(\mathbf{AB})\leqslant r(\mathbf{B}).$ 
+
+另一方面， $r(\mathbf{AB}) = r((\mathbf{AB})^{\mathrm{T}}) = r(\mathbf{B}^{\mathrm{T}}\mathbf{A}^{\mathrm{T}})\leqslant r(\mathbf{A}^{\mathrm{T}}) = r(\mathbf{A}).$ 
+
+命题得证.
+
+(方法二) 记 AB = C，并对 A, C 按列分块，有
+
+$$
+\left[ \alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n} \right] \left[ \begin{array}{c c c c} b _ {1 1} & b _ {1 2} & \dots & b _ {1 s} \\ b _ {2 1} & b _ {2 2} & \dots & b _ {2 s} \\ \vdots & \vdots & & \vdots \\ b _ {n 1} & b _ {n 2} & \dots & b _ {n s} \end{array} \right] = \left[ \gamma_ {1}, \gamma_ {2}, \dots , \gamma_ {s} \right],
+$$
+
+说明 AB 的列向量 $\gamma_{i}(i=1,2,\cdots,s)$ 可由 A 的列向量 $\alpha_{1},\alpha_{2},\cdots,\alpha_{s}$ 线性表
+
+出,因此据定理 3.8 与 3.9 有
+
+$$
+r (\mathbf {A B}) = r \left(\gamma_ {1}, \gamma_ {2}, \dots , \gamma_ {s}\right) \leqslant r \left(\alpha_ {1}, \alpha_ {2}, \dots , \alpha_ {n}\right) = r (\mathbf {A}).
+$$
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-20/621c611d-18e3-4c2f-a0fe-99362199ad14/ffb258d29f5d1135097b286218ba8095108675c1538e1b797de59576b50eb6a3.jpg)
+
+
+学习札记
+
+类似地, 对 B 与 C 分别按行分块, 有
+
+$$
+\left[ \begin{array}{c c c c} a _ {1 1} & a _ {1 2} & \dots & a _ {1 n} \\ a _ {2 1} & a _ {2 2} & \dots & a _ {2 n} \\ \vdots & \vdots & & \vdots \\ a _ {m 1} & a _ {m 2} & \dots & a _ {m n} \end{array} \right] \left[ \begin{array}{c} \boldsymbol {\beta} _ {1} \\ \boldsymbol {\beta} _ {2} \\ \vdots \\ \boldsymbol {\beta} _ {n} \end{array} \right] = \left[ \begin{array}{c} \boldsymbol {\delta} _ {1} \\ \boldsymbol {\delta} _ {2} \\ \vdots \\ \boldsymbol {\delta} _ {m} \end{array} \right],
+$$
+
+说明 AB 的行向量 $\boldsymbol{\delta}_{j}(j=1,2,\cdots,m)$ 可由 B 的行向量 $\beta_{1},\beta_{2},\cdots,\beta_{n}$ 线性表出，因此
+
+$$
+r (\mathbf {A B}) = r (\pmb {\delta} _ {1}, \pmb {\delta} _ {2}, \dots , \pmb {\delta} _ {m}) \leqslant r (\pmb {\beta} _ {1}, \pmb {\beta} _ {2}, \dots , \pmb {\beta} _ {n}) = r (\mathbf {B}).
+$$
+
+特别地, 若 A 可逆, 则 $r(\mathbf{AB}) = r(\mathbf{B})$ ."
+fd-0326,辅导讲义,线性代数,第三章 向量,,2,,,题型五 矩阵秩的证明,"【例3.21】证明：
+(1) $r(A+B)\leqslant r(A,B)\leqslant r$
+(2) $r \left[ \begin{array}{l l} \mathbf{A} & \mathbf{B} \\ \mathbf{O} & \mathbf{B} \end{array} \right] = r(\mathbf{A}) + r(\mathbf{B}). $",,,,,"（1）由 $(\pmb {A},\pmb {B})\begin{bmatrix} \pmb {E}\\ \pmb {E} \end{bmatrix} = \pmb {A} + \pmb {B}$ ，于是
+
+$$
+r (\mathbf {A} + \mathbf {B}) \leqslant r (\mathbf {A}, \mathbf {B}).
+$$
+
+又 $(\pmb {E},\pmb {E})\begin{bmatrix} \pmb {A} & \pmb {O}\\ \pmb {O} & \pmb {B} \end{bmatrix} = (\pmb {A},\pmb {B})$ ，于是
+
+$$
+r (\mathbf {A}, \mathbf {B}) \leqslant r {\left[ \begin{array}{l l} {\mathbf {A}} & {\mathbf {O}} \\ {\mathbf {O}} & {\mathbf {B}} \end{array} \right]} = r (\mathbf {A}) + r (\mathbf {B}).
+$$
+
+(2) 因 $\begin{bmatrix} E & -E \\ O & E \end{bmatrix} \begin{bmatrix} A & B \\ O & B \end{bmatrix} = \begin{bmatrix} A & O \\ O & B \end{bmatrix}$ ，又 $\begin{bmatrix} E & -E \\ O & E \end{bmatrix}$ 可逆，所以
+
+$$
+r \left[ \begin{array}{l l} \mathbf {A} & \mathbf {B} \\ \mathbf {O} & \mathbf {B} \end{array} \right] = r \left[ \begin{array}{l l} \mathbf {A} & \mathbf {O} \\ \mathbf {O} & \mathbf {B} \end{array} \right] = r (\mathbf {A}) + r (\mathbf {B}).
+$$"
+fd-0327,辅导讲义,线性代数,第三章 向量,,3,,,题型五 矩阵秩的证明,"【例3.22】设 $\pmb{A},\pmb{B}$ 是 $n$ 阶矩阵，证明$r (\mathbf {A}) + r (\mathbf {B}) \leqslant r (\mathbf {A B}) + n.$",,,,,"因 $\begin{bmatrix} E & O \\ O & AB \end{bmatrix}$ 行 $\begin{bmatrix} E & O \\ A & AB \end{bmatrix}$ 列 $\begin{bmatrix} E & -B \\ A & O \end{bmatrix}$ 行、列 $\begin{bmatrix} A & O \\ E & B \end{bmatrix}$ , 有
+
+$$
+r \left[ \begin{array}{c c} \boldsymbol {E} & \boldsymbol {O} \\ \boldsymbol {O} & \boldsymbol {A B} \end{array} \right] = r \left[ \begin{array}{c c} \boldsymbol {A} & \boldsymbol {O} \\ \boldsymbol {E} & \boldsymbol {B} \end{array} \right].
+$$
+
+由 $r(A) + r(B) \leqslant r\begin{bmatrix} A & O \\ E & B \end{bmatrix}, r\begin{bmatrix} E & O \\ O & AB \end{bmatrix} = r(E) + r(AB) = r(AB) + n,$ $\therefore r(A) + r(B) \leqslant r(AB) + n.$ 
+
+【评注】 $\begin{bmatrix} E & O \\ A & E \end{bmatrix} \begin{bmatrix} E & O \\ O & AB \end{bmatrix} = \begin{bmatrix} E & O \\ A & AB \end{bmatrix}$ ,
+
+$$
+\left[ \begin{array}{c c} \boldsymbol {E} & \boldsymbol {O} \\ \boldsymbol {A} & \boldsymbol {A B} \end{array} \right] \left[ \begin{array}{c c} \boldsymbol {E} & - \boldsymbol {B} \\ \boldsymbol {O} & \boldsymbol {E} \end{array} \right] = \left[ \begin{array}{c c} \boldsymbol {E} & - \boldsymbol {B} \\ \boldsymbol {A} & \boldsymbol {O} \end{array} \right],
+$$
+
+$$
+\left[ \begin{array}{l l} \boldsymbol {O} & \boldsymbol {E} \\ \boldsymbol {E} & \boldsymbol {O} \end{array} \right] \left[ \begin{array}{l l} \boldsymbol {E} & - \boldsymbol {B} \\ \boldsymbol {A} & \boldsymbol {O} \end{array} \right] \left[ \begin{array}{l l} \boldsymbol {E} & \boldsymbol {O} \\ \boldsymbol {O} & - \boldsymbol {E} \end{array} \right] = \left[ \begin{array}{l l} \boldsymbol {A} & \boldsymbol {O} \\ \boldsymbol {E} & \boldsymbol {B} \end{array} \right].
+$$"
+fd-0328,辅导讲义,线性代数,第三章 向量,,4,,,题型五 矩阵秩的证明,"【例3.23】（2008,1）设 $A = \alpha\alpha^{T} + \beta\beta^{T}, \alpha, \beta$ 是三维列向量， $\alpha^{T}$ 为 $\alpha$ 的转置， $\beta^{T}$ 为 $\beta$ 的转置。证明
+
+(1) 秩 $r(A) \leqslant 2$ ;
+
+(2) 若 $\alpha, \beta$ 线性相关，则 $r(A) < 2$ .",,,,,"（1）由于 $\alpha, \beta$ 均是列向量，故 $\alpha\alpha^{T}, \beta\beta^{T}$ 是三阶矩阵，且有 $r(\alpha\alpha^{T}) \leqslant r(\alpha) \leqslant 1, r(\beta\beta^{T}) \leqslant r(\beta) \leqslant 1$ ，从而
+
+$$
+r (\mathbf {A}) = r \left(\boldsymbol {\alpha} \boldsymbol {\alpha} ^ {\mathrm{T}} + \boldsymbol {\beta} \boldsymbol {\beta} ^ {\mathrm{T}}\right) \leqslant r \left(\boldsymbol {\alpha} \boldsymbol {\alpha} ^ {\mathrm{T}}\right) + r \left(\boldsymbol {\beta} \boldsymbol {\beta} ^ {\mathrm{T}}\right) \leqslant 2.
+$$
+
+(2) 若 $\alpha, \beta$ 线性相关, 不妨设 $\beta = k\alpha$ , 则
+
+$$
+\begin{array}{r l} r (\mathbf {A}) & = r [ \pmb {\alpha} \pmb {\alpha} ^ {\mathrm{T}} + (k \pmb {\alpha}) (k \pmb {\alpha}) ^ {\mathrm{T}} ] = r [ (1 + k ^ {2}) \pmb {\alpha} \pmb {\alpha} ^ {\mathrm{T}} ] \\ & = r (\pmb {\alpha} \pmb {\alpha} ^ {\mathrm{T}}) \leqslant 1 <   2. \end{array}
+$$"
+fd-0329,辅导讲义,线性代数,第三章 向量,,5,,,题型五 矩阵秩的证明,"【练习】1（2018， $^{1}_{2,3}$ ）设A,B为n阶矩阵，记 $r(X)$ 为矩阵X的秩，$(X Y)$ 表示分块矩阵, 则",$r(\mathbf{A}\quad\mathbf{AB})=r(\mathbf{A}).$,$r(\mathbf{A}\quad\mathbf{BA})=r(\mathbf{A}).$,"$r(\mathbf{A} \quad \mathbf{B}) = \max\{r(\mathbf{A}), r(\mathbf{B})\}$ .",$r(\mathbf{A} \quad \mathbf{B}) = r(\mathbf{A}^{\mathrm{T}} \quad \mathbf{B}^{\mathrm{T}})$ .,
+fd-0330,辅导讲义,线性代数,第三章 向量,,6,,,题型五 矩阵秩的证明,"【练习2】（2021,1）证明 $r\begin{bmatrix} \mathbf{A} & \mathbf{O}\\ \mathbf{BA} & \mathbf{A}^{\mathrm{T}} \end{bmatrix} = 2r(\mathbf{A}).$",,,,,
+fd-0331,辅导讲义,线性代数,第三章 向量,,1,,,题型六 向量空间,"【例3.24】（2003,1）从 $R^{2}$ 的基 $\alpha_{1}=\begin{bmatrix}1\\ 0\end{bmatrix},\alpha_{2}=\begin{bmatrix}1\\ -1\end{bmatrix}$ 到基 $\beta_{1}=\begin{bmatrix}1\\ 1\end{bmatrix},$ $\beta_{2}=\begin{bmatrix}1\\ 2\end{bmatrix}$ 的过渡矩阵为 ____.",,,,,"据已知，有 $\left\{ \begin{array}{l} \boldsymbol{\beta}_{1} = 2\boldsymbol{\alpha}_{1} - \boldsymbol{\alpha}_{2}, \\ \boldsymbol{\beta}_{2} = 3\boldsymbol{\alpha}_{1} - 2\boldsymbol{\alpha}_{2}, \end{array} \right.$ 那么，按式(3.1)知，过渡矩阵为 $C = \left[ \begin{array}{cc} 2 & 3 \\ -1 & -2 \end{array} \right].$ 或由式(3.2)有 $[\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}] = [\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}]C$ ，即 $C = [\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}]^{-1}[\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}]$ ，所以 $C = \left[ \begin{array}{cc} 1 & 1 \\ 0 & -1 \end{array} \right]^{-1}\left[ \begin{array}{cc} 1 & 1 \\ 1 & 2 \end{array} \right] = \left[ \begin{array}{cc} 1 & 1 \\ 0 & -1 \end{array} \right]\left[ \begin{array}{cc} 1 & 1 \\ 1 & 2 \end{array} \right] = \left[ \begin{array}{cc} 2 & 3 \\ -1 & -2 \end{array} \right].$"
+fd-0332,辅导讲义,线性代数,第三章 向量,,2,,,题型六 向量空间,"【例3.25】已知 $\boldsymbol{\alpha}_{1}=(1,2,1)^{\mathrm{T}},\boldsymbol{\alpha}_{2}=(2,3,3)^{\mathrm{T}},\boldsymbol{\alpha}_{3}=(3,7,1)^{\mathrm{T}}$ 与 $\boldsymbol{\beta}_{1}=(2,1,1)^{\mathrm{T}},\boldsymbol{\beta}_{2}=(5,2,2)^{\mathrm{T}},\boldsymbol{\beta}_{3}=(1,3,4)^{\mathrm{T}}$ 是 $R^{3}$ 的两组基，那么，在这两组基下有相同坐标的向量是 ____.",,,,,"设向量 $\gamma$ 在这两组基下有相同的坐标 $(x_{1}, x_{2}, x_{3})^{\mathrm{T}}$ ，即
+
+$$
+\boldsymbol {\gamma} = x _ {1} \boldsymbol {\alpha} _ {1} + x _ {2} \boldsymbol {\alpha} _ {2} + x _ {3} \boldsymbol {\alpha} _ {3} = x _ {1} \boldsymbol {\beta} _ {1} + x _ {2} \boldsymbol {\beta} _ {2} + x _ {3} \boldsymbol {\beta} _ {3},
+$$
+
+$$
+x _ {1} (\pmb {\alpha} _ {1} - \pmb {\beta} _ {1}) + x _ {2} (\pmb {\alpha} _ {2} - \pmb {\beta} _ {2}) + x _ {3} (\pmb {\alpha} _ {3} - \pmb {\beta} _ {3}) = \mathbf {0}.
+$$
+
+把坐标代入,并整理得
+
+$$
+\left\{ \begin{array}{c} - x _ {1} - 3 x _ {2} + 2 x _ {3} = 0, \\ x _ {1} + x _ {2} + 4 x _ {3} = 0, \\ x _ {2} - 3 x _ {3} = 0, \end{array} \right.
+$$
+
+解出 $x_{1} = -7t, x_{2} = 3t, x_{3} = t$ ，所以
+
+$\pmb{\gamma} = -7t(1,2,1)^{\mathrm{T}} + 3t(2,3,3)^{\mathrm{T}} + t(3,7,1)^{\mathrm{T}} = (2t,2t,3t)^{\mathrm{T}}, t$ 为任意常数."
+fd-0333,辅导讲义,线性代数,第三章 向量,,3,,,题型六 向量空间,"【例3.26】已知 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 和 $\beta_{1}, \beta_{2}, \beta_{3}$ 是 $R^{3}$ 的两组基，由基 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 到基 $\beta_{1}, \beta_{2}, \beta_{3}$ 的过渡矩阵是 C. 其中 $C = \begin{bmatrix} 0 & 1 & 1 \\ -1 & -3 & -2 \\ 2 & 4 & 4 \end{bmatrix}$ ，而 $\beta_{1} = (0,1,1)^{\mathrm{T}}, \beta_{2} = (-1,1,0)^{\mathrm{T}}, \beta_{3} = (1,2,1)^{\mathrm{T}}$ .
+
+(1) 求基 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ ;
+
+(2) 求向量 $\boldsymbol{\gamma}=(9,6,5)^{\mathrm{T}}$ 在基 $\alpha_{1},\alpha_{2},\alpha_{3}$ 下的坐标；
+
+(3) 若向量 $\delta$ 在基 $\beta_{1}, \beta_{2}, \beta_{3}$ 下的坐标是 $(1, -3, 5)^{\mathrm{T}}$ ，求 $\delta$ 在基 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 下的坐标.",,,,,"（1）按定义， $[\pmb{\beta}_1,\pmb{\beta}_2,\pmb{\beta}_3] = [\pmb{\alpha}_1,\pmb{\alpha}_2,\pmb{\alpha}_3]\pmb{C}$ ，于是
+
+$$
+\begin{array}{r l} {[ \pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\alpha} _ {3} ] = [ \pmb {\beta} _ {1}, \pmb {\beta} _ {2}, \pmb {\beta} _ {3} ] C ^ {- 1}} \\ & {= \left[ \begin{array}{c c c} 0 & - 1 & 1 \\ 1 & 1 & 2 \\ 1 & 0 & 1 \end{array} \right] \left[ \begin{array}{c c c} 0 & 1 & 1 \\ - 1 & - 3 & - 2 \\ 2 & 4 & 4 \end{array} \right] ^ {- 1} = \left[ \begin{array}{c c c} 1 & 2 & 1 \\ 0 & 1 & 1 \\ - 1 & 1 & 1 \end{array} \right],} \end{array}
+$$
+
+所以 $\boldsymbol{\alpha}_{1}=(1,0,-1)^{\mathrm{T}},\boldsymbol{\alpha}_{2}=(2,1,1)^{\mathrm{T}},\boldsymbol{\alpha}_{3}=(1,1,1)^{\mathrm{T}}.$ 
+
+学习札记
+
+(2) 设 $x_{1}\alpha_{1} + x_{2}\alpha_{2} + x_{3}\alpha_{3} = \gamma,$ 
+
+$$
+\left[\begin{array}{c c c c}1&2&1&9\\0&1&1&6\\- 1&1&1&5\end{array}\right]\rightarrow \left[\begin{array}{c c c c}1&0&0&1\\0&1&0&2\\0&0&1&4\end{array}\right],
+$$
+
+故向量 $\gamma$ 在基 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 下的坐标是 $(1,2,4)^{\mathrm{T}}$ .
+
+(3) 由基 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 到基 $\beta_{1}, \beta_{2}, \beta_{3}$ 的坐标变换公式为 x = Cy，有
+
+$$
+\left[ \begin{array}{l} x _ {1} \\ x _ {2} \\ x _ {3} \end{array} \right] = \left[ \begin{array}{c c c} 0 & 1 & 1 \\ - 1 & - 3 & - 2 \\ 2 & 4 & 4 \end{array} \right] \left[ \begin{array}{l} 1 \\ - 3 \\ 5 \end{array} \right] = \left[ \begin{array}{l} 2 \\ - 2 \\ 1 0 \end{array} \right],
+$$
+
+即向量 $\delta$ 在基 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 下的坐标为 $(2, -2, 10)^{\mathrm{T}}$ ."
+fd-0334,辅导讲义,线性代数,第三章 向量,,4,,,题型六 向量空间,"【例3.27】设 $\boldsymbol{\alpha}_{1}=(1,2,-a)^{\mathrm{T}},\boldsymbol{\alpha}_{2}=(1,1,2)^{\mathrm{T}},\boldsymbol{\beta}_{1}=(a,5,10)^{\mathrm{T}}$ ， $\boldsymbol{\beta}_{2}=(4,a,1)^{\mathrm{T}}$ 。若 $\alpha_{1},\alpha_{2},\beta_{1},\beta_{2}$ 生成的向量空间 $L(\alpha_{1},\alpha_{2},\beta_{1},\beta_{2})$ ，维数是 2。(1) 求 a；
+
+(2) 证明 $\alpha_{1}, \alpha_{2}$ 和 $\beta_{1}, \beta_{2}$ 都是 $L(\alpha_{1}, \alpha_{2}, \beta_{1}, \beta_{2})$ 的基，并求由基 $\alpha_{1}, \alpha_{2}$ 到 $\beta_{1}, \beta_{2}$ 的过渡矩阵.",,,,,"$L(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2})$ 是二维向量空间 $\Leftrightarrow$ 秩 $r(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2})=2.$ 
+
+(1) 对 $(\alpha_{1},\alpha_{2},\beta_{1},\beta_{2})$ 作初等行变换
+
+$$
+\left[\begin{array}{c c c c}1&1&a&4\\2&1&5&a\\- a&2&1 0&1\end{array}\right]\rightarrow \left[\begin{array}{c c c c}1&0&5 - a&a - 4\\0&1&2 a - 5&8 - a\\0&0&- (a + 4) (a - 5)&(a + 3) (a - 5)\end{array}\right].
+$$
+
+由 $\left\{\begin{aligned}(a+4)(a-5)&=0\\ (a+3)(a-5)&=0\end{aligned}\right.$ ，故a=5.
+
+(2) 因 $\boldsymbol{\alpha}_{1}=(1,2,-5)^{\mathrm{T}},\boldsymbol{\alpha}_{2}=(1,1,2)^{\mathrm{T}}$ 线性无关. 又 $r(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2})=2$ , 那么 $\beta_{1},\beta_{2}$ 必可由 $\alpha_{1},\alpha_{2}$ 线性表出.
+
+那么 $\forall \gamma = k_{1}\pmb{\alpha}_{1} + k_{2}\pmb{\alpha}_{2} + l_{1}\pmb{\beta}_{1} + l_{2}\pmb{\beta}_{2}\in L(\pmb{\alpha}_{1},\pmb{\alpha}_{2},\pmb{\beta}_{1},\pmb{\beta}_{2})$ 必可由 $\pmb{\alpha}_{1},\pmb{\alpha}_{2}$ 线性表出.所以 $\pmb{\alpha}_{1},\pmb{\alpha}_{2}$ 是生成向量空间 $L(\pmb{\alpha}_{1},\pmb{\alpha}_{2},\pmb{\beta}_{1},\pmb{\beta}_{2})$ 的基.类似地 $\pmb{\beta}_{1} = (5,5,10)^{\mathrm{T}},\pmb{\beta}_{2} = (4,5,1)^{\mathrm{T}}$ 也是生成的向量空间的基.
+
+将 $a = 5$ 代入 $(\pmb{\alpha}_1, \pmb{\alpha}_2, \pmb{\beta}_1, \pmb{\beta}_2)$ 
+
+$$
+(\pmb {\alpha} _ {1}, \pmb {\alpha} _ {2}, \pmb {\beta} _ {1}, \pmb {\beta} _ {2}) \rightarrow \left[\begin{array}{c c c c}1&0&0&1\\&1&5&3\\&&&0\end{array}\right],
+$$
+
+即 $\pmb{\beta}_{1} = 5\pmb{\alpha}_{2},\pmb{\beta}_{2} = \pmb{\alpha}_{1} + 3\pmb{\alpha}_{2}$ ，所以由基 $\pmb{\alpha}_{1},\pmb{\alpha}_{2}$ 到基 $\pmb{\beta}_{1},\pmb{\beta}_{2}$ 的过渡矩阵
+
+$$
+\boldsymbol {C} = \left[ \begin{array}{c c} 0 & 1 \\ 5 & 3 \end{array} \right].
+$$"

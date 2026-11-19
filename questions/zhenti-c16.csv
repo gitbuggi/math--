@@ -1,0 +1,133 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+zt-031007,真题,概率论,第二章 随机变量及其分布,数三2010,7,选择题,,题型一 分布函数的概念与性质,"(7) 设随机变量 $X$ 的分布函数 $F(x) = \begin{cases} 0, & x < 0, \\ \frac{1}{2}, & 0 \leqslant x < 1, \\ 1 - \mathrm{e}^{-x}, & x \geqslant 1, \end{cases}$ 则 $P\{X = 1\} = (\quad)$",0,$\frac{1}{2}$ .,$\frac{1}{2} - \mathrm{e}^{-1}$ .,$1 - \mathrm{e}^{-1}$ .,"答案 C.
+分析 本题主要考查分布函数的概念以及随机事件概率的计算.
+若 $X$ 的分布函数为 $F(x)$ , 则对任意的数 $a$ , 都有 $P\{X < a\} = F(a^{-})$ , $P\{X = a\} = P\{X \leqslant a\} - P\{X < a\} = F(a) - F(a^{-})$ .
+解 $P\{X = 1\} = P\{X \leqslant 1\} - P\{X < 1\} = F(1) - F(1^{-}) = 1 - e^{-1} - \frac{1}{2} = \frac{1}{2} - e^{-1}$ . 应选 C.
+注 对连续型随机变量 X, 由于 $F(a) = F(a^{-})$ , 故对任意的数 a, 都有 $P\{X = a\} = F(a) - F(a^{-}) = 0$ . 但本题中的随机变量不是连续型随机变量, x = 1 是 $F(x)$ 的间断点. 计算 x = 1 处的概率时, 应使用 $P\{X = 1\} = P\{X \leqslant 1\} - P\{x < 1\}$ ."
+zt-031008,真题,概率论,第二章 随机变量及其分布,数三2010,8,选择题,,题型一 分布函数的概念与性质,"(8) 设 $f_{1}(x)$ 为标准正态分布的概率密度, $f_{2}(x)$ 为 $[-1,3]$ 上均匀分布的概率密度, 若 $f(x)=\left\{\begin{aligned}&af_{1}(x),&x\leqslant0,\\&bf_{2}(x),&x>0\end{aligned}\right.$ $(a>0,b>0)$ 为概率密度,则a,b应满足()",$2a+3b=4$ .,$3a+2b=4$ .,$a+b=1$ .,$a+b=2$ .,"答案 A.
+分析 本题主要考查连续型随机变量的概率密度的性质,即
+(1) $f(x) \geqslant 0;$
+(2) $\int_{-\infty}^{+\infty}f(x)\mathrm{d}x=1.$
+本题中 a > 0, b > 0, 故 $f(x)$ 满足性质(1). 因此我们可以利用性质(2)来计算.
+解 由于标准正态分布的概率密度的图形关于 y 轴对称, 故 $\int_{0}^{+\infty} f_{1}(x) \, dx = \int_{-\infty}^{0} f_{1}(x) \, dx = \frac{1}{2}$ . 又由题设知, $f_{2}(x) = \begin{cases} \frac{1}{4}, & -1 \leqslant x \leqslant 3, \\ 0, & \text{其他.} \end{cases}$ 由于 $f(x)$ 为概率密度, 故
+$$ 1 = \int_ {- \infty} ^ {+ \infty} f (x) \mathrm{d} x = \int_ {- \infty} ^ {0} a f _ {1} (x) \mathrm{d} x + \int_ {0} ^ {+ \infty} b f _ {2} (x) \mathrm{d} x = \frac {1}{2} a + \int_ {0} ^ {3} \frac {b}{4} \mathrm{d} x = \frac {1}{2} a + \frac {3}{4} b, $$
+即 $\frac{1}{2} a + \frac{3}{4} b = 1$ ，从而 $2a + 3b = 4.$ 应选A.
+拓展
+1. 分布函数 $F(x)$ 具有以下性质.
+(1) $F(x)$ 不减；
+(2) $F(x)$ 右连续；
+(3) $0 \leqslant F(x) \leqslant 1$ ;
+(4) $\lim\limits_{x\to -\infty}F(x) = 0,\lim\limits_{x\to +\infty}F(x) = 1.$
+反过来可以证明,若函数 $F(x)$ 满足上述性质,则它必是某个随机变量的分布函数.
+2. 概率密度 $f(x)$ 具有以下性质.
+(1) $f(x) \geqslant 0;$
+(2) $\int_{-\infty}^{+\infty} f(x) \, \mathrm{d}x = 1$ .
+反过来可以证明,若函数 $f(x)$ 满足上述性质,则它必是某个随机变量的概率密度.
+## 二、填空题"
+zt-031107,真题,概率论,第二章 随机变量及其分布,数三2011,7,选择题,,,"(7) 设 $F_{1}(x)$ 与 $F_{2}(x)$ 为两个分布函数, 其相应的概率密度 $f_{1}(x)$ 与 $f_{2}(x)$ 是连续函数, 则必为概率密度的是 ( )",$f_{1}(x)f_{2}(x)$ .,$2f_{2}(x)F_{1}(x)$ .,$f_{1}(x)F_{2}(x)$ .,$f_{1}(x)F_{2}(x)+f_{2}(x)F_{1}(x)$ .,"答案 D.
+分析 本题主要考查分布函数和概率密度的性质.
+解 由分布函数和概率密度的性质知, $f_{1}(x)F_{2}(x)+f_{2}(x)F_{1}(x)\geqslant0$ ,且
+$$ \begin{array}{r l} \int_ {- \infty} ^ {+ \infty} [ f _ {1} (x) F _ {2} (x) + f _ {2} (x) F _ {1} (x) ] \mathrm{d} x & = \int_ {- \infty} ^ {+ \infty} [ F _ {1} (x) F _ {2} (x) ] ^ {\prime} \mathrm{d} x \\ & = F _ {1} (+ \infty) F _ {2} (+ \infty) - F _ {1} (- \infty) F _ {2} (- \infty) \\ & = 1 - 0 = 1. \end{array} $$
+因此， $f_{1}(x)F_{2}(x) + f_{2}(x)F_{1}(x)$ 为概率密度.应选D."
+zt-031307,真题,概率论,第二章 随机变量及其分布,数三2013,7,选择题,,,"(7) 设 $X_{1}, X_{2}, X_{3}$ 是随机变量，且 $X_{1} \sim N(0,1), X_{2} \sim N(0,2^{2}), X_{3} \sim N(5,3^{2}), p_{i} = P\{-2 \leqslant X_{i} \leqslant 2\}$ $(i = 1, 2, 3)$ ，则（）",$p_{1} > p_{2} > p_{3}$ .,$p_{2} > p_{1} > p_{3}$ .,$p_{3} > p_{1} > p_{2}$ .,$p_{1} > p_{3} > p_{2}$ .,"答案 A.
+分析 本题主要考查正态分布的性质以及与正态分布有关的事件的概率大小比较.
+我们可以先将正态分布化为标准正态分布,然后利用标准正态分布的概率密度 $\varphi(x)$ 的奇偶性 $(\varphi(x)=\varphi(-x))$ 和单调性(在 $(-∞,0]$ 上单调增加,在 $[0,+∞)$ 上单调减少) 来比较大小.
+解 由 $X_{2} \sim N(0,2^{2})$ , $X_{3} \sim N(5,3^{2})$ 知, $\frac{X_{2}}{2} \sim N(0,1)$ , $\frac{X_{3}-5}{3} \sim N(0,1)$ . 于是,
+$$ p _ {1} = P \{- 2 \leqslant X _ {1} \leqslant 2 \} = \Phi (2) - \Phi (- 2) = 1 - \Phi (- 2) - \Phi (- 2) = 1 - 2 \Phi (- 2), $$
+$$ p _ {2} = P \{- 2 \leqslant X _ {2} \leqslant 2 \} = P \{- 1 \leqslant \frac {X _ {2}}{2} \leqslant 1 \} = \Phi (1) - \Phi (- 1) = 1 - 2 \Phi (- 1), $$
+$$ p _ {3} = P \{- 2 \leqslant X _ {3} \leqslant 2 \} = P \left\{- \frac {7}{3} \leqslant \frac {X _ {3} - 5}{3} \leqslant - 1 \right\} = \Phi (- 1) - \Phi \left(- \frac {7}{3}\right). $$
+由于 $\Phi(-1) > \Phi(-2)$ ，故 $p_{1} > p_{2}$ .
+设标准正态分布的概率密度为 $\varphi(x)$ , 则 $\varphi(x)$ 为偶函数, 且在 $(- \infty, 0]$ 上单调增加 (如图所示). 又由于 $p_2 = \int_{-1}^{1} \varphi(x) \mathrm{d}x$ , $p_3 = \int_{-\frac{7}{3}}^{-1} \varphi(x) \mathrm{d}x$ , 而 $\varphi(x)$ 在 $(-1, 1)$ 上的取值都大于 $\varphi(x)$ 在$\left(-\frac{7}{3}, -1\right)$ 上的取值，且积分区间的长度满足 $|1 - (-1)| > \left|-1 - \left(-\frac{7}{3}\right)\right|$ ，故 $p_2 > p_3$ 综上所述， $p_1 > p_2 > p_3$ 。应选A.
+![image](images/zt-031307.jpg)
+拓展
+1. 若连续型随机变量 X 的概率密度为
+$$ f (x) = \frac {1}{\sqrt {2 \pi} \sigma} \mathrm{e} ^ {- \frac {(x - \mu) ^ {2}}{2 \sigma^ {2}}}, \quad - \infty < x < + \infty , $$
+其中 $\mu, \sigma (\sigma > 0)$ 为常数，则称随机变量 $X$ 服从参数为 $\mu, \sigma$ 的正态分布，记为 $X \sim N(\mu, \sigma^2)$ . 特别地，当 $\mu = 0, \sigma = 1$ 时，称随机变量 $X$ 服从标准正态分布，其概率密度和分布函数分别记为 $\varphi(x), \Phi(x)$ ，即
+$$ \varphi (x) = \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {x ^ {2}}{2}}, \quad \Phi (x) = \frac {1}{\sqrt {2 \pi}} \int_ {- \infty} ^ {x} \mathrm{e} ^ {- \frac {t ^ {2}}{2}} \mathrm{d} t. $$
+2. 标准正态分布 $N(0,1)$ 的分布函数 $\Phi(x)$ 与概率密度 $\varphi(x)$ 的性质.
+(1) $\varphi(-x)=\varphi(x)$ ，即 $\varphi(x)$ 是偶函数.
+(2) $\varphi(x)$ 在 $(- \infty, 0]$ 上单调增加，在 $[0, +\infty)$ 上单调减少，在 $x = 0$ 处取最大值 $\frac{1}{\sqrt{2\pi}}$ .
+(3) $(1, \varphi(1)), (-1, \varphi(-1))$ 是曲线 $y = \varphi(x)$ 的两个拐点，其中 $\varphi(1) = \varphi(-1) = \frac{1}{\sqrt{2\pi}} e^{-\frac{1}{2}}$ .
+(4) $\lim\limits_{x\to\infty}\varphi(x)=0$ , 即 x 轴是曲线 $y=\varphi(x)$ 的水平渐近线.
+(5) $\Phi(x)=1-\Phi(-x)$ .特别地, $\Phi(0)=\frac{1}{2}$ .
+(6) 对于任意实数 $a > 0$ , 有 $P\{|X| \leqslant a\} = 2\Phi(a) - 1 = 1 - 2\Phi(-a)$ .
+(1) 若 $X \sim N(\mu, \sigma^2)$ , 则 $aX + b \sim N(a\mu + b, a^2\sigma^2)$ , 其中 $a \neq 0$ . 特别地, $\frac{X - \mu}{\sigma} \sim N(0, 1)$ .
+(2) 若 $X_{1} \sim N(\mu_{1}, \sigma_{1}^{2})$ , $X_{2} \sim N(\mu_{2}, \sigma_{2}^{2})$ , 且 $X_{1}$ 与 $X_{2}$ 相互独立, 则
+$$ a X _ {1} + b X _ {2} \sim N (a \mu_ {1} + b \mu_ {2}, a ^ {2} \sigma_ {1} ^ {2} + b ^ {2} \sigma_ {2} ^ {2}). $$"
+zt-031807,真题,概率论,第二章 随机变量及其分布,数三2018,7,选择题,,,"(7) 设随机变量 X 的概率密度 $f(x)$ 满足 $f(1 + x) = f(1 - x)$ ，且 $\int_{0}^{2} f(x) \, dx = 0.6$ ，则 $P\{X < 0\} = (\quad)$",0.2.,0.3.,0.4.,0.5.,"答案 A.
+分析 本题主要考查概率密度的性质以及定积分的性质.
+已知条件中给出 $f(1 + x) = f(1 - x)$ ，说明 $X$ 的概率密度 $f(x)$ 的图像关于 $x = 1$ 对称。利用这一点，我们可以计算 $P\{X < 0\}$ 。
+解 由于 $f(1 + x) = f(1 - x)$ ，故 $f(x)$ 的图像关于 $x = 1$ 对称。于是， $P\{X < 0\} = P\{X > 2\}$ 。又因为 $P\{0 \leqslant X \leqslant 2\} = \int_{0}^{2} f(x) \, \mathrm{d}x = 0.6$ ，且
+$$ P \{X < 0 \} + P \{0 \leqslant X \leqslant 2 \} + P \{X > 2 \} = 1 $$
+所以 $P\{X < 0\} = \frac{1 - P\{0 \leqslant X \leqslant 2\}}{2} = \frac{1 - 0.6}{2} = 0.2.$
+因此,应选 A."
+zt-031914,真题,概率论,第二章 随机变量及其分布,数三2019,14,填空题,,,"(14) 设随机变量 X 的概率密度为 $f(x)=\left\{\begin{aligned}&\frac{x}{2},&0<x<2,\\ &0,& 其他,\end{aligned}\right.$ $F(x)$ 为 $X$ 的分布函数，$E(X)$ 为 $X$ 的数学期望，则 $P\{F(X)>E(X)-1\}=$ ____.",,,,,"答案 应填 $\frac{2}{3}$ .
+分析 本题主要考查随机变量的函数的分布以及数学期望的计算.
+所求概率实际上与随机变量 X 的函数 $F(X)$ 的分布有关，可先由已知条件计算得 $E(X)$ 以及 $F(x)$ ，再根据定义计算所求概率.
+解（法一）分别计算 $E(X)$ ， $F(x)$ .
+$$ E (X) = \int_ {- \infty} ^ {+ \infty} x f (x) \mathrm{d} x = \int_ {0} ^ {2} \frac {x ^ {2}}{2} \mathrm{d} x = \left. \frac {x ^ {3}}{6} \right| _ {0} ^ {2} = \frac {4}{3}. $$
+当 x < 0 时， $F(x) = 0$ .
+当 $0 \leqslant x < 2$ 时， $F(x) = \int_{-\infty}^{x} f(t) \, \mathrm{d}t = \int_{0}^{x} \frac{t}{2} \, \mathrm{d}t = \frac{x^2}{4}$ .
+当 $x \geqslant 2$ 时， $F(x) = 1$ .
+于是， $F(x)=\left\{\begin{aligned}&0,&x<0,\\&\frac{x^{2}}{4},&0\leqslant x<2,\\&1,&x\geqslant2.\end{aligned}\right.$
+因此，
+$$ \begin{array}{r l} P \{F (X) > E (X) - 1 \} & = P \left\{F (X) > \frac {1}{3} \right\} = P \left\{\frac {X ^ {2}}{4} > \frac {1}{3}, 0 \leqslant X < 2 \right\} + P \{X \geqslant 2 \} \\ & = P \left\{\frac {2}{\sqrt {3}} < X < 2 \right\} + \int_ {2} ^ {+ \infty} f (x) d x = 1 - \int_ {0} ^ {\frac {2}{\sqrt {5}}} \frac {x}{2} d x + 0 \\ & = 1 - \frac {x ^ {2}}{4} \Big | _ {0} ^ {\frac {2}{\sqrt {5}}} = \frac {2}{3}. \end{array} $$
+(法二) 我们先证明 $Y = F(X)$ 服从 $(0, 1)$ 上的均匀分布.
+注意到 $F(x)$ 在 $(0,2)$ 上严格单调增加, 其值域为 $(0,1)$ , 故可定义 $F^{-1}(y), y \in (0,1)$ . 考虑 Y 的分布函数 $F_{Y}(y)$ .
+当 $y < 0$ 时，由于 $F(X)$ 仅在 $[0, 1]$ 上取值，故 $F_{Y}(y) = 0$ .
+当 $0 \leqslant y < 1$ 时，
+$$ F _ {Y} (y) = P \{Y \leqslant y \} = P \{F (X) \leqslant y \} = P \{X \leqslant F ^ {- 1} (y) \} = F (F ^ {- 1} (y)) = y. $$
+当 $y \geqslant 1$ 时, $P\{Y \leqslant y\} = 1$ , 即 $F_{Y}(y) = 1$ .
+因此, $F_{Y}(y)=\left\{\begin{aligned}&0,&y<0,\\&y,&0\leqslant y<1,\\&1,&y\geqslant1.\end{aligned}\right.$ 这说明 $Y=F(X)$ 服从 $(0,1)$ 上的均匀分布.
+由法一可知 $E(X) = \frac{4}{3}$ , 故
+$$ P \{F (X) > E (X) - 1 \} = P \left\{F (X) > \frac {1}{3} \right\} = 1 - P \left\{F (X) \leqslant \frac {1}{3} \right\} = 1 - \frac {1}{3} = \frac {2}{3}. $$
+注 由法二的方法可推出一个更具一般性的结论:若随机变量X的分布函数 $F_{X}(x)$ 严格单调增加,其反函数 $F_{X}^{-1}(y)$ 存在,则 $Y=F_{X}(X)$ 服从(0,1)上的均匀分布.
+## 三、解答题"
+zt-032322,真题,概率论,第二章 随机变量及其分布,数三2023,22,解答题,,,"(22) ( 12 分)
+设随机变量 $X$ 的概率密度为 $f(x) = \frac{\mathrm{e}^x}{(1 + \mathrm{e}^x)^2}, -\infty < x < +\infty$ ，令 $Y = \mathrm{e}^X$ .
+（I）求 $X$ 的分布函数；
+(Ⅱ) 求 Y 的概率密度;
+(Ⅲ)Y的数学期望是否存在?",,,,,"分析 本题主要考查一维随机变量的分布以及随机变量的函数的分布.
+第(Ⅰ)问可以直接对概率密度积分得到分布函数.
+第(Ⅱ)问可以根据定义法或公式法计算 $Y = e^{X}$ 的概率密度. 求得 Y 的概率密度后, 再根据数学期望的定义即可判断 $E(Y)$ 是否存在.
+求随机变量的函数的概率密度一般有两种方法:利用定义和利用相关定理.
+(1) 定义法
+若随机变量 X 的概率密度为 $f(x)$ , $Y = g(X)$ , 则
+$$ F _ {Y} (y) = P \{Y \leqslant y \} = P \{g (X) \leqslant y \} = \int_ {g (x) \leqslant y} f (x) \mathrm{d} x. $$
+利用 $f_{Y}(y)=F_{Y}^{\prime}(y)$ 可求得Y的概率密度.
+(2) 公式法
+设随机变量 X 具有概率密度 $f_{X}(x)$ ， $-\infty < x < +\infty$ ，又设函数 $g(x)$ 处处可导且恒有 $g'(x) > 0$ （或恒有 $g'(x) < 0$ ），则 $Y = g(X)$ 是连续型随机变量，其概率密度为
+$$ f _ {Y} (y) = \left\{ \begin{array}{l l} f _ {X} (h (y)) | h ^ {\prime} (y) |, & \alpha < y < \beta , \\ 0, & \text {其他}, \end{array} \right. $$
+其中 $\alpha = \min \{g(-\infty), g(+\infty)\}$ , $\beta = \max \{g(-\infty), g(+\infty)\}$ , $h(y)$ 是 $g(x)$ 的反函数.
+解（I）记 $X$ 的分布函数为 $F_{X}(x)$ 。由概率密度的定义可知，
+$$ F _ {X} (x) = \int_ {- \infty} ^ {x} f (t) \mathrm{d} t = \int_ {- \infty} ^ {x} \frac {\mathrm{e} ^ {t}}{(1 + \mathrm{e} ^ {t}) ^ {2}} \mathrm{d} t \stackrel {u = \mathrm{e} ^ {t}} {=} \int_ {0} ^ {\mathrm{e} ^ {x}} \frac {\mathrm{d} u}{(1 + u) ^ {2}} = \left. \frac {- 1}{1 + u} \right| _ {0} ^ {\mathrm{e} ^ {x}} = \frac {\mathrm{e} ^ {x}}{1 + \mathrm{e} ^ {x}}. $$
+(Ⅱ)(法一) 定义法.
+计算 Y 的分布函数 $F_{Y}(y)$ .
+由于 $Y = e^{X} > 0$ ，故当 $y \leqslant 0$ 时， $F_{Y}(y) = P\{Y \leqslant y\} = 0$ .
+当 $y > 0$ 时，
+$$ F _ {Y} (y) = P \{Y \leqslant y \} = P \{\mathrm{e} ^ {X} \leqslant y \} = P \{X \leqslant \ln y \} = F _ {X} (\ln y) = \frac {y}{1 + y}. $$
+因此, $F_{Y}(y)=\left\{\begin{aligned}&\frac{y}{1+y},&y>0,\\ &0,&y\leqslant0.\end{aligned}\right.$ 当y>0时, $f_{Y}(y)=F_{Y}^{\prime}(y)=\frac{1}{(1+y)^{2}}.$ 当 $y\leqslant0$ 时, $f_{Y}(y)=F_{Y}^{\prime}(y)=0.$
+综上所述，Y 的概率密度为
+$$ f _ {Y} (y) = \left\{ \begin{array}{l l} \frac {1}{(1 + y) ^ {2}}, & y > 0, \\ 0, & y \leqslant 0. \end{array} \right. $$
+(法二) 公式法.
+函数 $g(x) = e^{x}$ 在 $(-∞, +∞)$ 上处处可导且 $g'(x) = e^{x} > 0$ .
+$$ \alpha = \min \left\{g (- \infty), g (+ \infty) \right\} = 0, \quad \beta = \max \left\{g (- \infty), g (+ \infty) \right\} = + \infty . $$
+$g(x)$ 的反函数为 $x = \ln y, (\ln y)' = \frac{1}{y}$ .
+由公式法可得, 当 y > 0 时,
+$$ f _ {Y} (y) = f _ {X} (\ln y) \left| \frac {1}{y} \right| = \frac {1}{y} \cdot \frac {\mathrm{e} ^ {\ln y}}{(1 + \mathrm{e} ^ {\ln y}) ^ {2}} = \frac {1}{y} \cdot \frac {y}{(1 + y) ^ {2}} = \frac {1}{(1 + y) ^ {2}}. $$
+当 $y \leqslant 0$ 时, $f_{Y}(y) = 0$ .
+因此， $Y$ 的概率密度为 $f_{Y}(y) = \begin{cases} \frac{1}{(1 + y)^{2}}, & y > 0, \\ 0, & y \leqslant 0. \end{cases}$
+(Ⅲ) 若 Y 的数学期望存在, 则由数学期望的定义可知
+$$ \begin{array}{r l} E (Y) & = \int_ {- \infty} ^ {+ \infty} y f _ {Y} (y) \mathrm{d} y = \int_ {0} ^ {+ \infty} \frac {y \mathrm{d} y}{(1 + y) ^ {2}} = \int_ {0} ^ {+ \infty} \frac {1 + y - 1}{(1 + y) ^ {2}} \mathrm{d} y \\ & = \int_ {0} ^ {+ \infty} \left[ \frac {1}{1 + y} - \frac {1}{(1 + y) ^ {2}} \right] \mathrm{d} y = \left[ \ln (1 + y) + \frac {1}{1 + y} \right] \Bigg | _ {0} ^ {+ \infty} = + \infty . \end{array} $$
+因此, $E(Y)$ 不存在.
+注 也可以由反常积分的极限审敛法说明反常积分 $\int_{0}^{+\infty}\frac{y\mathrm{d}y}{(1 + y)^2}$ 发散.由于
+$$ \lim\limits_ {y \to + \infty} y \cdot \frac {y}{(1 + y) ^ {2}} = \lim\limits_ {y \to + \infty} \frac {y ^ {2}}{(1 + y) ^ {2}} = 1, $$
+故由反常积分的极限审敛法可知 $\int_0^{+\infty}\frac{y\mathrm{d}y}{(1 + y)^2}$ 发散.
+拓展
+反常积分的极限审敛法
+(1) 无穷限反常积分的极限审敛法 设函数 $f(x)$ 在区间 $[a, +\infty)$ 上连续， $f(x) \geqslant 0$ ，并且存在常数 $p$ ，使得 $\lim\limits_{x \to +\infty} x^p f(x) = A$ .
+(i) 若 $0 \leqslant A < +\infty, p > 1$ ，则反常积分 $\int_{a}^{+\infty} f(x) \mathrm{d}x$ 收敛；
+(ii) 若 $0 < A \leqslant +\infty, p \leqslant 1$ ，则反常积分 $\int_{a}^{+\infty} f(x) \mathrm{d}x$ 发散.
+(2) 无界函数的反常积分的极限审敛法 设函数 $f(x)$ 在区间 $(a, b]$ 上连续， $f(x) \geqslant 0$ ， $\lim\limits_{x \to a^{+}} f(x) = +\infty$ ，并且存在常数 $p$ ，使得 $\lim\limits_{x \to a^{+}} (x - a)^{p} f(x) = A$ .
+(i) 若 $0 \leqslant A < +\infty, 0 < p < 1$ ，则反常积分 $\int_{a}^{b} f(x) \mathrm{d}x$ 收敛；
+(ii) 若 $0 < A \leqslant +\infty, p \geqslant 1$ ，则反常积分 $\int_{a}^{b} f(x) \mathrm{d}x$ 发散."

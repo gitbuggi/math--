@@ -1,0 +1,375 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+80181201,880,微积分,第八章 数三专题,,1,基础题,填空题,,"设某商品的需求量 $Q$ 对价格 $P$ 的弹性为 $P \ln 3$ , 若该商品的市场最大需求量为 1500 件, 则需求函数为 $Q = \_$ .",,,,,"$1500 \cdot 3^{-P}$ .
+
+解 需求对价格的弹性为 $\eta = -\frac{P}{Q} \cdot \frac{\mathrm{d}Q}{\mathrm{d}P}$ , 为可分离变量方程. $\frac{\mathrm{d}Q}{Q} = (-\ln 3)\mathrm{d}P$ , 积分得 $Q(P) = C\mathrm{e}^{-(\ln 3)P}$ . 又 $Q(0) = 1500$ , 得 $C = 1500$ , 故需求函数为 $Q = 1500 \cdot 3^{-P}$ ."
+80181202,880,微积分,第八章 数三专题,,2,基础题,填空题,,设商品的需求函数为 $Q = 100 - 5P$ ，其中 $P$ 为价格，若商品需求对价格的弹性的绝对值大于 1，则商品价格 $P$ 的取值范围为 \_\_\_\_.,,,,,"$(10,20]$ .
+
+解 由 Q = 100 - 5P，知 $Q'(P) = -5$ 。需求对价格的弹性为
+
+$\eta = P \cdot \frac {Q ^ {\prime} (P)}{Q (P)} = - \frac {5 P}{1 0 0 - 5 P}.$
+
+由已知， $|\eta| = \left|\frac{-5P}{100 - 5P}\right| > 1$ ，解得 $P > 20$ 或 $10 < P < 20.$
+
+又由 $Q(P)=100-5P=0$ ，知最高价格为 P=20，故 P 的取值范围为 $(10,20]$ ."
+80181203,880,微积分,第八章 数三专题,,3,基础题,填空题,,设边际成本函数为 $MC = 3Q^2 - 118Q + 1200$ ，其中 $Q$ 为产量，固定成本为 1500，则总成本函数为 $C(Q) = \_$ .,,,,,"$Q^{3}-59Q^{2}+1\ 200Q+1\ 500.$
+
+解 总成本函数为
+
+$C (Q) = \int (3 Q ^ {2} - 1 1 8 Q + 1 2 0 0) \mathrm{d} Q = Q ^ {3} - 5 9 Q ^ {2} + 1 2 0 0 Q + C.$
+
+由固定成本 $C(0)=1\ 500$ ，得 C=1\\ 500，故 $C(Q)=Q^{3}-59Q^{2}+1\ 200Q+1\ 500$ .
+
+【注】 本题也可以直接计算
+
+$C (Q) = \int_ {0} ^ {Q} (3 t ^ {2} - 1 1 8 t + 1 2 0 0) \mathrm{d} t + 1 5 0 0 = Q ^ {3} - 5 9 Q ^ {2} + 1 2 0 0 Q + 1 5 0 0.$"
+80181204,880,微积分,第八章 数三专题,,4,基础题,填空题,,差分方程 $2y_{t+1} - y_t = 3 \cdot \left(\frac{1}{2}\right)^t$ 的通解为 \_\_\_\_.,,,,,"$y_{t}=3t\left(\frac{1}{2}\right)^{t}+C\left(\frac{1}{2}\right)^{t}$ (C为任意常数).
+
+解 原方程改写为 $y_{t+1}-\frac{1}{2}y_{t}=\frac{3}{2}\left(\frac{1}{2}\right)^{t}$ . 由一阶线性非齐次差分方程公式, 得特解为
+
+$\begin{array}{r l} y _ {t} ^ {*} & = \sum_ {k = 0} ^ {t - 1} \left(\frac {1}{2}\right) ^ {k} \cdot \frac {3}{2} \cdot \left(\frac {1}{2}\right) ^ {t - k - 1} = \frac {3}{2} \sum_ {k = 0} ^ {t - 1} \left(\frac {1}{2}\right) ^ {t - 1} \\ & = \frac {3}{2} \cdot \left(\frac {1}{2}\right) ^ {t} \cdot t \cdot \left(\frac {1}{2}\right) ^ {- 1} = 3 t \cdot \left(\frac {1}{2}\right) ^ {t}, \end{array}$
+
+对应齐次差分方程的通解为 $C\left(\frac{1}{2}\right)^t$ ，故原方程的通解为 $y_{t} = 3t\left(\frac{1}{2}\right)^{t} + C\left(\frac{1}{2}\right)^{t}$ （ $C$ 为任意常数）.
+
+【注】非齐次差分方程 $y_{t+1} + ay_{t} = f(t)$ 的通解公式为
+
+$y _ {t} = C \cdot (- a) ^ {t} + \sum_ {k = 0} ^ {t - 1} (- a) ^ {k} \cdot f (t - k - 1).$
+
+事实上，将 $t = 0, 1, 2, \cdots$ 代入 $y_{t+1} + ay_t = f(t)$ ，得
+
+$\begin{array}{l} {y _ {1} = (- a) y _ {0} + f (0),} \\ {y _ {2} = (- a) y _ {1} + f (1) = (- a) ^ {2} y _ {0} + (- a) f (0) + f (1),} \\ {y _ {3} = (- a) y _ {2} + f (2) = (- a) ^ {3} y _ {0} + (- a) ^ {2} f (0) + (- a) f (1) + f (2),} \\ {\quad \vdots} \\ {y _ {t} = (- a) ^ {t} y _ {0} + (- a) ^ {t - 1} f (0) + (- a) ^ {t - 2} f (1) + \dots + (- a) f (t - 2) + f (t - 1)} \\ {\quad = C (- a) ^ {t} + \sum_ {k = 0} ^ {t - 1} (- a) ^ {k} \bullet f (t - k - 1).} \end{array}$"
+80181205,880,微积分,第八章 数三专题,,5,基础题,填空题,,差分方程 $y_{t+1}-\frac{2}{3}y_{t}=\frac{2}{3}$ 的通解为 \_\_\_\_.,,,,,"$y_{t}=C\left(\frac{2}{3}\right)^{t}+2$ (C为任意常数).
+
+解 由已知,非齐次项为常数 $\frac{2}{3}$ ,由于 $y_{t+1}+ay_{t}=b$ 的通解为
+
+$y_{t}=\left\{\begin{aligned}C\cdot(-a)^{t}+\frac{b}{1+a},&a\neq-1,\\ C+bt,\quad&a=-1\end{aligned}\right.$ (C为任意常数),
+
+故所求通解为 $y_{t} = C\left(\frac{2}{3}\right)^{t} + 2$ (C 为任意常数).
+
+【注】 $y_{t+1} + ay_t = b$ 的通解公式见《2027考研数学高等数学辅导讲义》."
+80181206,880,微积分,第八章 数三专题,,6,基础题,填空题,,差分方程 $y_{t+1}-2y_{t}=2^{t}$ 的通解为 \_\_\_\_.,,,,,"$C \cdot 2^{t} + \frac{1}{2} t 2^{t}$ (C 为任意常数).
+
+解 对应齐次方程的通解为 $y_{t} = C \cdot 2^{t}$ .
+
+设非齐次方程的特解为 $y_{t}^{*}=at2^{t}$ ，将 $y_{t}^{*}$ 代入原方程，得 2a=1，即 $a=\frac{1}{2}$ ，所求通解为 $y_{t}=C\cdot2^{t}+\frac{1}{2}t2^{t}$ （C 为任意常数）."
+80181207,880,微积分,第八章 数三专题,,7,基础题,填空题,,差分方程 $\Delta^{2}y_{t}-y_{t}=5$ 的通解为 \_\_\_\_.,,,,,"$y_{t}=-5+C\cdot2^{t}(C$ 为任意常数).
+
+解 由 $\Delta^{2}y_{t}=y_{t+2}-2y_{t+1}+y_{t}$ ，原二阶差分方程化为一阶差分方程为
+
+$y _ {t + 2} - 2 y _ {t + 1} = 5,$
+
+对应齐次差分方程的通解为 $y_{t}=C\cdot2^{t}$ .
+
+设非齐次差分方程为 $y_{t}^{*}=a$ ，则 a-2a=5，得 a=-5，故所求通解为 $y_{t}=-5+C\cdot2^{t}$ （C 为任意常数）.
+
+【注】由方程 $y_{t+2}-2y_{t+1}=5$ 的非齐次项为常数 5，可直接利用公式求解."
+80181301,880,微积分,第八章 数三专题,,1,基础题,解答题,,设某产品生产 $x$ 单位，边际单位成本函数为 $\left[\frac{C(x)}{x}\right]' = -\frac{100}{x^2}$ ，当产量为 1 单位时，成本为 102，若边际收益函数为 $R'(x) = 12 - \frac{x}{10}$ ，且 $R(0) = 0$ ，求利润最大时的产量和平均价格.,,,,,"解 先求成本函数, 从而可得利润函数. 依题设, 有
+
+$\frac {C (x)}{x} = - \int \frac {1 0 0}{x ^ {2}} \mathrm{d} x + C _ {1} = \frac {1 0 0}{x} + C,$
+
+故 $C(x) = 100 + Cx$ ，由 $C(1) = 102$ ，得 $C = 2$ ，所以 $C(x) = 100 + 2x$ .又
+
+$R (x) = R (0) + \int_ {0} ^ {x} \left(1 2 - \frac {t}{1 0}\right) \mathrm{d} t = 1 2 x - 0. 0 5 x ^ {2},$
+
+故利润函数为 $L(x)=R(x)-C(x)=10x-0.05x^{2}-100$ .
+
+令 $L'(x)=10-0.1x=0$ , 得 x=100 。而 $L''(100)=-0.1<0$ ，所以 $L(x)$ 在 x=100 处取极大值，也是最大值，故当产量为 100 单位时，利润最大，此时平均价格为 $\overline{P}=\frac{R(100)}{100}=7$ 。"
+80181302,880,微积分,第八章 数三专题,,2,基础题,解答题,,"设某产品的成本函数 $C(Q)=aQ^{2}+bQ+c$ ，需求函数为 $Q=\frac{m-P}{n}$ ，其中 Q 为需求量（即产量），P 为单价，a, b, c, m, n 均为大于零的常数，且 m > b. 求：
+(I) 利润最大时的产量及最大利润;
+(II) 需求对价格的弹性 $\eta(\eta>0)$ ;
+(III) 当 $|\eta|=1$ 时的产量.",,,,,"解（I）利润函数为
+
+$\begin{array}{r l} L (Q) & = P Q - C (Q) = (m - n Q) \cdot Q - (a Q ^ {2} + b Q + c) \\ & = - (n + a) Q ^ {2} + (m - b) Q - c. \end{array}$
+
+由 $L^{\prime}(Q) = -2(n + a)Q + m - b = 0$ ，得 $Q = \frac{m - b}{2(n + a)}$ ，又
+
+$L ^ {\prime \prime} (Q) = - 2 (n + a) < 0,$
+
+所以当 $Q = \frac{m - b}{2(n + a)}$ 时，利润最大，此时最大利润为 $L_{\max} = \frac{(m - b)^{2}}{4(n + a)} - c$ .
+
+(Ⅱ) 由弹性定义, 知需求对价格的弹性为
+
+$\eta = - \frac {P}{Q} \cdot Q ^ {\prime} = - \frac {m - n Q}{Q} \cdot \left(- \frac {1}{n}\right) = \frac {m - n Q}{n Q} = \frac {P}{m - P}.$
+
+（Ⅲ）当 $|\eta| = 1$ 时，即 $\left|\frac{m - nQ}{nQ}\right| = 1$ ，解得 $Q = \frac{m}{2n}$"
+80181303,880,微积分,第八章 数三专题,,3,基础题,解答题,,"某公司通过电视和网络两种形式作广告, 设销售收入为 $R(\text{万元})$ , 电视广告费为 $x_{1}(\text{万元})$ , 网络广告费为 $x_{2}(\text{万元})$ , 它们之间有如下关系: $R(x_{1}, x_{2}) = 15 + 14x_{1} + 32x_{2} - 8x_{1}x_{2} - 2x_{1}^{2} - 10x_{2}^{2}$ .
+(I) 在广告费用不限的条件下，求最佳广告方案；
+(II) 若广告费用为 1.5 万元, 求相应的广告方案.",,,,,"解（I）依题意，利润函数为
+
+$L = R - \left(x _ {1} + x _ {2}\right) = 1 5 + 1 3 x _ {1} + 3 1 x _ {2} - 8 x _ {1} x _ {2} - 2 x _ {1} ^ {2} - 1 0 x _ {2} ^ {2},$
+
+$\int \frac {\partial L}{\partial x _ {1}} = 1 3 - 8 x _ {2} - 4 x _ {1} = 0,$
+
+$\left[ \frac {\partial L}{\partial x _ {2}} = 3 1 - 8 x _ {1} - 2 0 x _ {2} = 0, \right.$
+
+解得 $x_{1} = 0.75, x_{2} = 1.25$ . 又
+
+$A = \frac {\partial^ {2} L}{\partial x _ {1} ^ {2}} = - 4, B = \frac {\partial^ {2} L}{\partial x _ {1} \partial x _ {2}} = - 8, C = \frac {\partial^ {2} L}{\partial x _ {2} ^ {2}} = - 2 0,$
+
+$A C - B ^ {2} = (- 4) \times (- 2 0) - (- 8) ^ {2} > 0, A = - 4 < 0,$
+
+故当 $x_{1}=0.75, x_{2}=1.25$ 时，利润最大，为最佳广告方案.
+
+（Ⅱ）由已知， $x_{1}+x_{2}=1.5$ ，即求函数L在条件 $x_{1}+x_{2}=1.5$ 下的最值.
+
+令 $F = L + \lambda (x_{1} + x_{2} - 1.5)$ ，则
+
+$\left\{ \begin{array}{l} \frac {\partial F}{\partial x _ {1}} = 1 3 - 8 x _ {2} - 4 x _ {1} + \lambda = 0, \\ \frac {\partial F}{\partial x _ {2}} = 3 1 - 8 x _ {1} - 2 0 x _ {2} + \lambda = 0, \\ \frac {\partial F}{\partial \lambda} = x _ {1} + x _ {2} - 1. 5 = 0, \end{array} \right.$
+
+解得 $x_{1}=0, x_{2}=1.5$ ，即将广告费 1.5 万元全部投入网络广告为最优方案。"
+80181304,880,微积分,第八章 数三专题,,4,基础题,解答题,,设某公司的总成本函数为 $C = C(Q) = \frac{1}{2} Q^{2} + 36Q + 9800$ ，求平均成本最低时的最低平均成本.,,,,,"解 由总成本函数知, 当平均成本最低时, 平均成本函数为
+
+$A C = \frac {C (Q)}{Q} = \frac {1}{2} Q + 3 6 + \frac {9 8 0 0}{Q},$
+
+此题相当于求 AC 的最小值.
+
+因边际成本函数 $MC = C'(Q) = 36 + Q$ ，由 MC = AC，有
+
+$Q + 3 6 = \frac {1}{2} Q + 3 6 + \frac {9 8 0 0}{Q},$
+
+解得 Q = 140 或 Q = -140（舍）。又 $\frac{\mathrm{d}(MC)}{\mathrm{d}Q} = 1 > 0$ ，故当产出水平 Q = 140 时，平均成本最低，最低平均成本为
+
+$A C = \left(\frac {1}{2} Q + 3 6 + \frac {9 8 0 0}{Q}\right) \Big | _ {Q = 1 4 0} = 1 7 6.$
+
+【注】求 $AC = \frac{C(Q)}{Q}$ 的最小值问题.
+
+设平均成本函数在产出水平 $Q = Q_{0}$ 时取得最小值,由极值存在的必要条件,知
+
+$\frac {\mathrm{d} (A C)}{\mathrm{d} Q} = \frac {Q \cdot C ^ {\prime} (Q) - C (Q)}{Q ^ {2}} = \frac {1}{Q} (M C - A C) = 0,$
+
+而 Q > 0, 故 MC = AC.
+
+再由极值存在的充分条件,知
+
+$\frac {\mathrm{d} ^ {2} (A C)}{\mathrm{d} Q ^ {2}} = - \frac {1}{Q ^ {2}} (M C - A C) + \frac {1}{Q} \left[ \frac {\mathrm{d} (M C)}{\mathrm{d} Q} - \frac {\mathrm{d} (A C)}{\mathrm{d} Q} \right] > 0,$
+
+而 $MC = AC, \frac{\mathrm{d}(AC)}{\mathrm{d}Q} = 0$ ，即有 $\frac{\mathrm{d}(MC)}{\mathrm{d}Q} > 0$ ."
+80182201,880,微积分,第八章 数三专题,,1,综合题,填空题,,"设某公司在 t 时刻的收入为 $R(t)$ , $R(t)$ 为连续函数，且 $R(0)=0$ ，从 0 时刻到 t 时刻的平均收入为 $-\frac{1}{2}t + \frac{R(t)}{t}$ ，则 $R(t)=$ \_\_\_\_.",,,,,"$e^{t}-t-1.$
+
+解 依题设,有
+
+$\frac {\int_ {0} ^ {t} R (x) \mathrm{d} x}{t} = - \frac {1}{2} t + \frac {R (t)}{t},$
+
+即
+
+$\int_ {0} ^ {t} R (x) \mathrm{d} x = - \frac {1}{2} t ^ {2} + R (t),$
+
+上式两边对 $t$ 求导，得 $R(t) = -t + R'(t)$ ，即 $R'(t) - R(t) = t$ ，解一阶线性微分方程，得
+
+$\begin{array}{r l} R (t) & = \mathrm{e} ^ {\int \mathrm{d} t} \left(\int t \mathrm{e} ^ {- \int \mathrm{d} t} \mathrm{d} t + c\right) \\ & = \mathrm{e} ^ {t} \left(\int t \mathrm{e} ^ {- t} \mathrm{d} t + c\right) \\ & = \mathrm{e} ^ {t} \left(c - t \mathrm{e} ^ {- t} + \int \mathrm{e} ^ {- t} \mathrm{d} t\right) \\ & = c \mathrm{e} ^ {t} - t - 1, \end{array}$
+
+由 $R(0)=0$ , 知 c=1 , 故 $R(t)=\mathrm{e}^{t}-t-1$"
+80182202,880,微积分,第八章 数三专题,,2,综合题,填空题,,已知某产品的生产函数为 $Q = AK^{\alpha}L^{\beta}$ ，其中 Q 表示产量，K 表示资金，L 表示劳动力，A， $\alpha$ ， $\beta$ 均为正常数，且 $\alpha + \beta = 1$ ，则 $K \frac{\partial Q}{\partial K} + L \frac{\partial Q}{\partial L} =$ \_\_\_\_ .,,,,,"$Q$ .
+
+解 依题设,知
+
+资金弹性为
+
+$E _ {Q K} = \frac {K}{Q} \frac {\partial Q}{\partial K} = \frac {K}{A K ^ {\alpha} L ^ {\beta}} \cdot A \alpha K ^ {\alpha - 1} L ^ {\beta} = \alpha ,$
+
+劳动力弹性为
+
+$E _ {Q L} = \frac {L}{Q} \frac {\partial Q}{\partial L} = \frac {L}{A K ^ {\alpha} L ^ {\beta}} \cdot A \beta K ^ {\alpha} L ^ {\beta - 1} = \beta .$
+
+由 $\alpha +\beta = 1$ ，知 $E_{QK} + E_{QL} = 1$ ，即
+
+$\frac {K}{Q} \frac {\partial Q}{\partial K} + \frac {L}{Q} \frac {\partial Q}{\partial L} = 1,$
+
+故
+
+$K \frac {\partial Q}{\partial K} + L \frac {\partial Q}{\partial L} = Q.$"
+80182301,880,微积分,第八章 数三专题,,1,综合题,解答题,,"设生产商的总收益函数和总成本函数分别为 $R = R(Q) = 30Q - 3Q^{2}, C = C(Q) = 2 + 2Q + Q^{2}$ ，生产商以获取最大利润为目标, 税务机关对产品征税. 求:
+(I) 生产商纳税前的最大利润，及此时的产量和产品价格；
+(Ⅱ) 征税收益的最大值及此时的税率 t.",,,,,"解（Ⅰ）纳税前，利润函数为
+
+$\begin{array}{l} {L (Q) = R - C = - 4 Q ^ {2} + 2 8 Q - 2,} \\ {L ^ {\prime} (Q) = - 8 Q + 2 8 = 0,} \end{array}$
+
+得 $Q_{0}=3.5$ . 又 $L''(Q)=-8<0$ , 故当产量 $Q_{0}=3.5$ 时, 利润最大, 最大值为 47, 此时产品的价格为
+
+$P = \frac {R (Q)}{Q} \Big | _ {Q = 3. 5} = (3 0 - 3 Q) \Big | _ {Q = 3. 5} = 1 9. 5.$
+
+（Ⅱ）设纳税后获得最大利润的产量为 $Q_{t}$ ，则征税收益函数为 $T = tQ_{t}$ .
+
+先求 $Q_{t}$ ，纳税后的总成本函数为 $C_{t}=C_{t}(Q)=Q^{2}+2Q+2+tQ$ .
+
+由 $R^{\prime}(Q) = 30 - 6Q, C_{t}^{\prime}(Q) = 2Q + 2 + t$ ，且 $R^{\prime}(Q) = C_{t}^{\prime}(Q)$ ，得
+
+$3 0 - 6 Q = 2 Q + 2 + t,$
+
+可知
+
+$Q _ {t} = \frac {2 8 - t}{8}.①$
+
+又由 $R''(Q) = -6, C_t''(Q) = 2$ ，知 $R''(Q) < C_t''(Q)$ ，故纳税后获得最大利润的产出水平由式①确定，而 $Q_t$ 的取值与税率 $t$ 有关。此时，征税收益函数为
+
+$T = t Q _ {t} = \frac {2 8 t - t ^ {2}}{8},$
+
+由此确定税率 t，可使税收 T 取最大值。
+
+由 $\frac{\mathrm{d}T}{\mathrm{d}t} = \frac{28 - 2t}{8} = 0$ ，得 $t = 14$ ，且 $\frac{\mathrm{d}^2T}{\mathrm{d}t^2} = -\frac{1}{4} < 0$ ，故当税率 $t = 14$ 时，征税收益最大，最大值为
+
+$T = \frac {1 4}{8} \times (2 8 - 1 4) = 2 4. 5.$"
+80182302,880,微积分,第八章 数三专题,,2,综合题,解答题,,"设生产某种产品的固定成本为 $C_{0}$ (万元)，每生产一件产品，成本增加。(万元)，已知该产品需求对价格的弹性为 $\eta = \frac{P}{b - P} > 0$ ，P 为价格，若市场对该产品的最大需求量为 c 件，其中 a, b, c, $C_{0}$ 均大于零.
+(I) 为获得最大利润,问如何定价?
+(II) 若每销售一件产品需纳税 t 万元, 问如何定价可使利润最大?",,,,,"解（I）依题意，成本函数为 $C(Q)=C_{0}+aQ$ .
+
+需求对价格的弹性为 $\eta = -\frac{P}{Q} \frac{dQ}{dP} = \frac{P}{b - P}$ ，则 $\frac{dQ}{Q} = \frac{dP}{P - b}$ ，积分得 $\ln Q = \ln(b - P) + \ln \mu \quad (\mu \text{ 为常数})$ ,
+
+即 $Q = \mu (b - P)$ . 又由 $Q(0) = c$ , 知 $c = \mu b$ , 所以 $Q = \frac{c}{b} (b - P)$ .
+
+利润函数为
+
+$\begin{array}{r l} & {L _ {1} = P Q - a Q - C _ {0} = Q (P - a) - C _ {0}} \\ & {\qquad = \frac {c}{b} (b - P) (P - a) - C _ {0} = \frac {c}{b} [ - P ^ {2} + (a + b) P - a b ] - C _ {0}.} \end{array}$
+
+令 $L_{1}^{\prime} = \frac{c}{b} [-2P + (a + b)] = 0$ ，得 $P = \frac{a + b}{2}$ 又 $L_{1}^{\prime \prime} = -\frac{2c}{b} < 0$ ，故当 $P = \frac{a + b}{2}$ 时， $L_{1}$ 为最大值，此时可获最大利润.
+
+(Ⅱ) 利润函数为
+
+$\begin{array}{r l} L _ {2} & = P Q - a Q - C _ {0} - t Q = Q [ P - (a + t) ] - C _ {0} \\ & = \frac {c}{b} (b - P) (P - a - t) - C _ {0}. \end{array}$
+
+令 $L_{2}^{\prime} = \frac{c}{b} [-2P + (a + b + t)] = 0$ ，得 $P = \frac{a + b + t}{2}$ 又 $L_{2}^{\prime \prime} = -\frac{2c}{b} < 0$ ，故当 $P = \frac{a + b + t}{2}$ 时， $L_{2}$ 最大，此时利润最大."
+80182303,880,微积分,第八章 数三专题,,3,综合题,解答题,,"设生产某产品的固定成本为 40，边际成本和边际收益分别为 $MC = Q^2 - 14Q + 111, MR = 100 - 2Q$ ，求生产商的最大利润.",,,,,"解 先求最大利润的产出水平.
+
+由极值存在的必要条件,知 MR = MC, 故
+
+$1 0 0 - 2 Q = Q ^ {2} - 1 4 Q + 1 1 1, \quad \text {即} \quad Q ^ {2} - 1 2 Q + 1 1 = 0,$
+
+解得 $Q_{1}=1, Q_{2}=11$ .
+
+又由极值存在的充分条件,知 $\frac{\mathrm{d}(MR)}{\mathrm{d}Q}<\frac{\mathrm{d}(MC)}{\mathrm{d}Q}$ ,而
+
+$\frac {\mathrm{d}}{\mathrm{d} Q} (1 0 0 - 2 Q) = - 2, \quad \frac {\mathrm{d}}{\mathrm{d} Q} (Q ^ {2} - 1 4 Q + 1 1 1) = 2 Q - 1 4,$
+
+故 $Q_{2}=11$ 符合要求, 即获得最大利润的产出水平为 $Q_{2}=11$ , 所以最大利润为
+
+$\begin{array}{r l} L (1 1) & = \int_ {0} ^ {1 1} (M R - M C) \mathrm{d} Q - 4 0 \\ & = \int_ {0} ^ {1 1} [ (1 0 0 - 2 Q) - (Q ^ {2} - 1 4 Q + 1 1 1) ] \mathrm{d} Q - 4 0 \\ & = \int_ {0} ^ {1 1} (- Q ^ {2} + 1 2 Q - 1 1) \mathrm{d} Q - 4 0 = 1 2 1 \frac {1}{3}. \end{array}$
+
+【注】总成本函数、总收益函数分别为 $C(Q)=\int(MC)\mathrm{d}Q$ ， $R(Q)=\int(MR)\mathrm{d}Q$ ，也可写为
+
+$C (Q) = \int_ {0} ^ {Q} (M C) \mathrm{d} Q + C _ {0}, R (Q) = \int_ {0} ^ {Q} (M R) \mathrm{d} Q,$
+
+故利润 $L(Q) = \int_0^Q (MR - MC)\mathrm{d}Q - C_0$ ，其中 $C_0$ 为固定成本."
+80182304,880,微积分,第八章 数三专题,,4,综合题,解答题,,"设某商品的需求函数为 Q = 100 - 5P.
+(I) 当 P=3 时, 问涨价会使销售收入增加还是减少? 若价格上涨幅度为 8.5%, 则对销售收入影响的幅度是多少?
+(II) 当 P=12 时, 问涨价会使销售收入增加还是减少? 若价格上涨幅度为 5%, 则对销售收入影响的幅度是多少?",,,,,"解（I）由已知，需求对价格的弹性为
+
+$\eta_{QP}=-\frac{P}{Q}\cdot\frac{dQ}{dP}=\frac{P}{20-P}$ (Q 表示需求量, P 表示价格),
+
+$\eta_ {Q P} \Big | _ {P = 3} = \frac {3}{1 7} < 1,$
+
+故当 P = 3 时, 涨价会使销售收入增加.
+
+销售收入对价格的弹性为
+
+$\eta_ {R P} = \frac {P}{R} \cdot \frac {\mathrm{d} R}{\mathrm{d} P} = \frac {2 0 - 2 P}{2 0 - P}, \eta_ {R P} \Big | _ {P = 3} = \frac {1 4}{1 7},$
+
+其中R表示收入,故当P=3时,涨价8.5%,对销售收入产生的影响为 $\frac{14}{17}\times8.5\%=7\%$ ,即会使销售收入增加7%.
+
+（Ⅱ）与（Ⅰ）类似，当 $P = 12$ 时， $\eta_{QP}\Big|_{P = 12} = \frac{P}{20 - P}\Big|_{P = 12} = \frac{3}{2} >1$ ，即涨价会使销售收入减少.
+
+$\eta_ {R P} \Big | _ {P = 1 2} = - \frac {1}{2}, \quad \frac {\mathrm{d} R}{R} = \eta_ {R P} \cdot \frac {\mathrm{d} P}{P} = \left(- \frac {1}{2}\right) \times 5 \% = - 2.5 \%,$
+
+故涨价 5%，会使销售收入减少 2.5%.
+
+【注】① $\frac{dR}{dP} = \frac{d(PQ)}{dP} = Q + P \frac{dQ}{dP} = Q \left(1 + \frac{P}{Q} \frac{dQ}{dP}\right) = Q (1 - \eta_{QP})$ .
+
+当 $\eta_{QP}<1$ 时，有 $\frac{dR}{dP}>0$ ，即涨价会使销售收入增加；
+
+当 $\eta_{QP} > 1$ 时, 有 $\frac{dR}{dP} < 0$ , 即涨价会使销售收入减少.
+
+② 当涨价相对幅度为 $\frac{dP}{P}$ 时,销售收入所受影响的相对幅度为
+
+$\frac {\mathrm{d} R}{R} = \frac {P}{R} \cdot \frac {\mathrm{d} R}{\mathrm{d} P} \cdot \frac {\mathrm{d} P}{P} = \eta_ {R P} \cdot \frac {\mathrm{d} P}{P}.$"
+80182305,880,微积分,第八章 数三专题,,5,综合题,解答题,,"为实现利润最大化，厂商需要对某商品确定其定价模型.设 $Q$ 为该商品的需求量， $P$ 为价格，MC为边际成本， $\eta$ 为需求弹性 $(\eta >0)$
+(I) 证明: 定价模型为 $P = \frac{MC}{1 - \frac{1}{\eta}}$ ;
+(II) 若该商品的成本函数为 $C(Q) = 1600 + Q^2$ , 需求函数为 $Q = 40 - P$ , 求由 (I) 中定价模型确定的此商品价格.",,,,,"证（Ⅰ）由收益 R = QP，可得边际收益为
+
+$M R = \frac {\mathrm{d} R}{\mathrm{d} Q} = P + Q \cdot \frac {\mathrm{d} P}{\mathrm{d} Q} = P \left(1 - \frac {1}{\eta}\right),$
+
+要使利润最大,应有 MR = MC, 即 $P\left(1 - \frac{1}{\eta}\right) = MC$ , 所以定价模型为 $P = \frac{MC}{1 - \frac{1}{\eta}}$ .
+
+解（Ⅱ）由已知，得 $MC=\frac{dC}{dQ}=2Q=2(40-P)$ ，
+
+$\eta = - \frac {P}{Q} \cdot \frac {\mathrm{d} Q}{\mathrm{d} P} = - \frac {P}{4 0 - P} \cdot (- 1) = \frac {P}{4 0 - P},$
+
+从而
+
+$P = \frac {M C}{1 - \frac {1}{\eta}} = \frac {2 (4 0 - P)}{1 - \frac {4 0 - P}{P}} = \frac {P (4 0 - P)}{P - 2 0},$
+
+故 P = 30，即价格为 P = 30。"
+80182306,880,微积分,第八章 数三专题,,6,综合题,解答题,,"(I) 设某商品的需求函数为 $Q = \varphi(P)$ , P 表示价格， $\varphi$ 为严格单调函数，证明: 边际收益与需求价格弹性 $E_{d}$ 有如下关系: $\frac{dR}{dQ} = P\left(1 + \frac{1}{E_{d}}\right) (P > 0, R$ 表示总收益);
+(II) 若 Q = 8000 - 8P, 求总收益最大时的需求量 Q 和商品的价格.",,,,,"证（I）由已知， $Q = \varphi(P)$ 的反函数为 $P = \varphi^{-1}(Q)$ ，则 $\varphi'(P) = \frac{1}{[\varphi^{-1}(Q)]'}$ . 总收益为 $R = R(Q) = \varphi^{-1}(Q) \cdot Q$ ，故
+
+$\frac {\mathrm{d} R}{\mathrm{d} Q} = \left[ \varphi^ {- 1} (Q) Q \right] ^ {\prime} = \left[ \varphi^ {- 1} (Q) \right] ^ {\prime} \cdot Q + \varphi^ {- 1} (Q) \cdot 1$
+
+$\begin{array}{l} {= \frac {1}{\varphi^ {\prime} (P)} \cdot Q + \varphi^ {- 1} (Q)} \\ {= \left(\frac {\mathrm{d} Q}{\mathrm{d} P}\right) ^ {- 1} \cdot Q + P = P \cdot \left(\frac {\mathrm{d} Q}{\mathrm{d} P}\right) ^ {- 1} \cdot \frac {Q}{P} + P} \\ {= P \left[ 1 + \left(\frac {\mathrm{d} Q}{\mathrm{d} P} \frac {P}{Q}\right) ^ {- 1} \right] = P \left(1 + \frac {1}{E _ {d}}\right).} \end{array}$
+
+（Ⅱ）由（Ⅰ）知，当 $E_{d}=-1$ 时， $\frac{dR}{dQ}=0$ ；当 $E_{d}<-1$ 时， $\frac{dR}{dQ}>0$ ；当 $E_{d}>-1$ 时， $\frac{dR}{dQ}<0$ ，故当需求价格弹性 $E_{d}=-1$ 时，总收益取得最大值.
+
+由 $Q = 8000 - 8P$ ，得 $\frac{\mathrm{d}Q}{\mathrm{d}P} = -8$ ，当 $E_{d} = \frac{P}{Q}\cdot \frac{\mathrm{d}Q}{\mathrm{d}P} = \frac{-8P}{8000 - 8P} = \frac{-P}{1000 - P} = -1$ 时， $P = 500$ 此时收益最大，需求量为 $Q = (8000 - 8P)\Big|_{P = 500} = 4000.$
+
+【注】第(Ⅱ)问也可有如下解法：
+
+总收益 $R = R(Q) = Q \cdot P = 1000Q - \frac{1}{8}Q^{2}$ .
+
+由 $R^{\prime}(Q) = 1000 - \frac{1}{4} Q = 0$ ，得 $Q = 4000.$ 又 $R''(Q) = -\frac{1}{4} < 0$ ，故当 $Q = 4000$ 时，总收益最大，此时价格为
+
+$P = 1 0 0 0 - \frac {1}{8} Q \Big | _ {Q = 4 0 0 0} = 5 0 0.$"
+80182307,880,微积分,第八章 数三专题,,7,综合题,解答题,,"在同一市场上销售两种性能有差异的同一类手机 $A$ 与 $B$ , 设 $Q_A$ , $Q_B$ 分别表示它们的需求量, $P_A, P_B$ 分别为其价格, 且生产这两种手机时每部所需的平均成本分别为 $\overline{C_A} = 4.5$ (百元/件), $\overline{C_B} = 2$ (百元/件). 已知需求函数分别为 $Q_A = 9.5 - P_A + 2P_B, Q_B = 7 + 2P_A - 5P_B$ , 试确定其价格, 使其利润最大.",,,,,"解依题设, 总利润函数为
+
+$\begin{array}{r l} L & = R - C = (P _ {\mathrm{A}} Q _ {\mathrm{A}} + P _ {\mathrm{B}} Q _ {\mathrm{B}}) - (\overline {{C _ {\mathrm{A}}}} Q _ {\mathrm{A}} + \overline {{C _ {\mathrm{B}}}} Q _ {\mathrm{B}}) \\ & = (P _ {\mathrm{A}} - 4. 5) (9. 5 - P _ {\mathrm{A}} + 2 P _ {\mathrm{B}}) + (P _ {\mathrm{B}} - 2) (7 + 2 P _ {\mathrm{A}} - 5 P _ {\mathrm{B}}) \\ & = 1 0 P _ {\mathrm{A}} + 8 P _ {\mathrm{B}} - P _ {\mathrm{A}} ^ {2} - 5 P _ {\mathrm{B}} ^ {2} + 4 P _ {\mathrm{A}} P _ {\mathrm{B}} - 5 6. 7 5. \end{array}$
+
+由
+
+$\frac {\partial L}{\partial P _ {\mathrm{A}}} = 1 0 - 2 P _ {\mathrm{A}} + 4 P _ {\mathrm{B}} = 0, \quad \frac {\partial L}{\partial P _ {B}} = 8 + 4 P _ {\mathrm{A}} - 1 0 P _ {\mathrm{B}} = 0,$
+
+得唯一驻点 $P_{A}=33, P_{B}=14$ . 又
+
+$A = \frac {\partial^ {2} L}{\partial P _ {\mathrm{A}} ^ {2}} = - 2, \quad B = \frac {\partial^ {2} L}{\partial P _ {\mathrm{A}} \partial P _ {\mathrm{B}}} = 4, \quad C = \frac {\partial^ {2} L}{\partial P _ {\mathrm{B}} ^ {2}} = - 1 0,$
+
+$A C - B ^ {2} = - 2 \times (- 1 0) - 4 ^ {2} = 4 > 0, A = - 2 < 0,$
+
+故 $L(33,14)=164.25$ (百元) 为最大利润."
+80182308,880,微积分,第八章 数三专题,,8,综合题,解答题,,求差分方程 $y_{t+1}-2y_{t}=\sin t$ 的通解.,,,,,"解 由已知, 特征根 r = 2, 则对应的齐次差分方程的通解为 $Y_{t} = C \cdot 2^{t}$ .
+
+又 $a = -2, w = 1, \Delta = (a + \cos w)^2 + \sin^2 w \neq 0$ ，故取 $k = 0$ ，令非齐次差分方程的特解为
+
+$y _ {t} ^ {*} = A \cos t + B \sin t,$
+
+代入原方程，得 $A\cos (t + 1) + B\sin (t + 1) - 2A\cos t - 2B\sin t = \sin t$ ，即
+
+$A(\cos t \cos 1 - \sin t \sin 1) + B(\sin t \cos 1 + \cos t \sin 1) - 2A \cos t - 2B \sin t = \sin t.$
+
+比较两端 $\cos t, \sin t$ 项的系数, 得
+
+$\left\{ \begin{array}{l} (\cos 1 - 2) A + B \sin 1 = 0, \\ - A \sin 1 + B (\cos 1 - 2) = 1, \end{array} \right.$
+
+解得
+
+$A = \frac {- \sin 1}{5 - 4 \cos 1}, \quad B = \frac {\cos 1 - 2}{5 - 4 \cos 1},$
+
+故所求通解为
+
+$y _ {t} = C \cdot 2 ^ {t} + \frac {1}{5 - 4 \cos 1} [ - \sin 1 \cos t + (\cos 1 - 2) \sin t ].$"
+80182309,880,微积分,第八章 数三专题,,9,综合题,解答题,,"设生产函数为 $Q = 8L^{\frac{1}{2}}K^{\frac{1}{4}}$ ，其中 $L$ 为劳动力投入量， $K$ 为资金投入量，产品的价格 $P = 4$ ，设投入两要素的价格分别为 $P_L = 4, P_K = 8$ ，求当利润最大时的产出水平和最大利润.",,,,,"解依题设,利润函数为
+
+则
+
+$\begin{array}{r l} F (L, K) & = R - C = P Q - (P _ {K} \cdot K + P _ {L} \cdot L) = 3 2 L ^ {\frac {1}{2}} K ^ {\frac {1}{4}} - 8 K - 4 L, \\ & \left\{ \begin{array}{l} \frac {\partial F}{\partial L} = 1 6 L ^ {- \frac {1}{2}} K ^ {\frac {1}{4}} - 4 = 0, \\ \frac {\partial F}{\partial K} = 8 L ^ {\frac {1}{2}} K ^ {- \frac {3}{4}} - 8 = 0, \end{array} \right. \end{array}$
+
+解得 L = 64, K = 16.
+
+又
+
+$\frac {\partial^ {2} F}{\partial L ^ {2}} = - 8 L ^ {- \frac {3}{2}} K ^ {\frac {1}{4}}, \quad \frac {\partial^ {2} F}{\partial L \partial K} = 4 L ^ {- \frac {1}{2}} K ^ {- \frac {3}{4}}, \quad \frac {\partial^ {2} F}{\partial K ^ {2}} = - 6 L ^ {\frac {1}{2}} K ^ {- \frac {7}{4}},$
+
+将 $L = 64, K = 16$ 代入可得
+
+$\begin{array}{r l} \frac {\partial^ {2} F}{\partial L ^ {2}} \cdot \frac {\partial^ {2} F}{\partial K ^ {2}} - \left(\frac {\partial^ {2} F}{\partial L \partial K}\right) ^ {2} & = 4 8 L ^ {- 1} K ^ {- \frac {3}{2}} - 1 6 L ^ {- 1} K ^ {- \frac {3}{2}} \\ & = 3 2 L ^ {- 1} K ^ {- \frac {3}{2}} = \frac {1}{1 2 8}, \end{array}$
+
+且 $\frac{\partial^2F}{\partial L^2} = -8\times 16^{\frac{1}{4}}\times 64^{-\frac{3}{2}} < 0$ ，所以，当 $L = 64,K = 16$ 时，利润最大.
+
+将 L = 64, K = 16 分别代入利润函数和生产函数, 可得最大利润为
+
+$\begin{array}{r l} F (6 4, 1 6) & = 4 \times 8 \times 1 6 ^ {\frac {1}{4}} \times 6 4 ^ {\frac {1}{2}} - (8 \times 1 6 + 4 \times 1 6) \\ & = 5 1 2 - 3 8 4 = 1 2 8, \end{array}$
+
+此时产出水平 Q = 128."

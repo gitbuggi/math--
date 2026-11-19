@@ -1,0 +1,1499 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+80121101,880,微积分,第二章 一元函数微分学,,1,基础题,选择题,,"设 $f(x)=\left\{\begin{aligned}&\frac{1-\cos x}{\sqrt{x}},&x>0,\\ &x^{2}\cdot\varphi(x),&x\leqslant0,\end{aligned}\right.$ 其中 $\varphi(x)$ 是有界函数，则 $f(x)$ 在 x=0 处（）.",可导,"连续,但不可导","极限存在,但不连续",极限不存在,"A.
+
+解
+
+$\lim\limits_ {x \to 0 ^ {+}} f (x) = \lim\limits_ {x \to 0 ^ {+}} \frac {1 - \cos x}{\sqrt {x}} = \lim\limits_ {x \to 0 ^ {+}} \frac {\frac {1}{2} x ^ {2}}{\sqrt {x}} = 0,$
+
+$\lim\limits_ {x \to 0 ^ {-}} f (x) = \lim\limits_ {x \to 0 ^ {-}} x ^ {2} \cdot \varphi (x) = 0,$
+
+而 $f(0) = 0$ ，故 $f(x)$ 在 $x = 0$ 处连续.因为
+
+$f _ {+} ^ {\prime} (0) = \lim\limits_ {x \rightarrow 0 ^ {+}} \frac {f (x) - f (0)}{x - 0} = \lim\limits_ {x \rightarrow 0 ^ {+}} \frac {1 - \cos x}{x \sqrt {x}} = \lim\limits_ {x \rightarrow 0 ^ {+}} \frac {\frac {1}{2} x ^ {2}}{x \sqrt {x}} = 0,$
+
+$f _ {-} ^ {\prime} (0) = \lim\limits_ {x \to 0 ^ {-}} \frac {f (x) - f (0)}{x - 0} = \lim\limits_ {x \to 0 ^ {-}} \frac {x ^ {2} \varphi (x)}{x} = 0,$
+
+故 $f_{+}^{\prime}(0)=f_{-}^{\prime}(0)=0$ , 所以 $f^{\prime}(0)=0$ , 选项 A 正确."
+80121102,880,微积分,第二章 一元函数微分学,,2,基础题,选择题,,"设 $f'(x)$ 存在，a, b 为任意实数，则 $\lim\limits_{\Delta x \to 0} \frac{f(x + a\Delta x) - f(x - b\Delta x)}{\Delta x} = (\quad)$ .",$(a + b)f^{\prime}(x)$,$(a-b)f'(x)$,$af'(x)$,$bf'(x)$,"A.
+
+解
+
+$\begin{array}{r l} & {\underset {\Delta x \to 0} {\lim} \frac {f (x + a \Delta x) - f (x - b \Delta x)}{\Delta x}} \\ & {= \underset {\Delta x \to 0} {\lim} a \cdot \frac {f (x + a \Delta x) - f (x)}{a \Delta x} + \underset {\Delta x \to 0} {\lim} b \cdot \frac {f (x - b \Delta x) - f (x)}{- b \Delta x}} \\ & {= a f ^ {\prime} (x) + b f ^ {\prime} (x) = (a + b) f ^ {\prime} (x).} \end{array}$
+
+故选项 A 正确."
+80121103,880,微积分,第二章 一元函数微分学,,3,基础题,选择题,,"下列函数中, 在 x=0 处不可导的是().",$f(x)=|x|\sin|x|$,$f(x) = |x|\sin \sqrt{|x|}$,$f(x) = \cos |x|$,$f(x) = \cos \sqrt{|x|}$,"D.
+
+解 因为
+
+$f _ {+} ^ {\prime} (0) = \lim\limits_ {x \to 0 ^ {+}} \frac {\cos \sqrt {| x |} - 1}{x} = \lim\limits_ {x \to 0 ^ {+}} \frac {- \frac {1}{2} | x |}{x} = - \frac {1}{2},$
+
+$f _ {-} ^ {\prime} (0) = \lim\limits_ {x \rightarrow 0 ^ {-}} \frac {\cos \sqrt {| x |} - 1}{x} = \lim\limits_ {x \rightarrow 0 ^ {-}} \frac {- \frac {1}{2} | x |}{x} = \frac {1}{2},$
+
+故 $f(x)=\cos\sqrt{|x|}$ 在 x=0 处不可导. 选项 D 正确."
+80121104,880,微积分,第二章 一元函数微分学,,4,基础题,选择题,,"设 $f(-x) = -f(x)$ ，且在 $(0, +\infty)$ 内， $f'(x) > 0$ ， $f''(x) > 0$ ，则 $f(x)$ 在 $(-∞, 0)$ 内必有（）.","$f'(x) < 0, f''(x) < 0$","$f'(x) < 0, f''(x) > 0$","$f'(x) > 0, f''(x) < 0$","$f'(x) > 0, f''(x) > 0$","C.
+解 由已知, 得 $f(x)$ 是奇函数, 故 $f'(x)$ 是偶函数, $f''(x)$ 是奇函数, 从而由 $f'(x) > 0$ , $x \in (0, +\infty)$ , 可知当 $x \in (-\infty, 0)$ 时, $f'(x) > 0$ ; 由 $f''(x) > 0$ , $x \in (0, +\infty)$ , 可知当 $x \in (-\infty, 0)$ 时, $f''(x) < 0$ , 选项 C 正确."
+80121105,880,微积分,第二章 一元函数微分学,,5,基础题,选择题,,"设 $f(x)$ 在 $[-1,1]$ 上二阶可导，且 $f''(x)>0,\int_{-1}^{1}f(x)\mathrm{d}x=2$ ，则 $f(0)$ 的取值范围为（）.","$(-∞,0]$","$(0,+\infty)$","$(-∞,1)$","$(1, +\infty)$","C.
+
+解 应用泰勒公式, $f(x)$ 在 x=0 处展开为
+
+$f (x) = f (0) + f ^ {\prime} (0) (x - 0) + \frac {f ^ {\prime \prime} (\xi)}{2 !} (x - 0) ^ {2} \geqslant f (0) + f ^ {\prime} (0) x,$
+
+其中 $\xi$ 介于0与 $x$ 之间，故
+
+$\int_ {- 1} ^ {1} f (x) \mathrm{d} x > \int_ {- 1} ^ {1} [ f (0) + f ^ {\prime} (0) x ] \mathrm{d} x = 2 f (0),$
+
+所以， $f(0) < \frac{1}{2}\int_{-1}^{1}f(x)\mathrm{d}x = 1$ ，选项C正确."
+80121106,880,微积分,第二章 一元函数微分学,,6,基础题,选择题,,"设 $f(x)$ 在 x=0 的某邻域内连续, $f(0)=0$ , $\lim\limits_{x\to0}\frac{f(x)}{1-\cos x}=2$ , 则 $f(x)$ 在 x=0 处 ( ).",不可导,可导且 $f'(0) \neq 0$,有极小值,有极大值,"C.
+解
+$\begin{array}{r l}f ^ {\prime} (0)&= \lim\limits_ {x \rightarrow 0} \frac {f (x) - f (0)}{x - 0} = \lim\limits_ {x \rightarrow 0} \frac {f (x)}{x} = \lim\limits_ {x \rightarrow 0} \frac {f (x)}{1 - \cos x} \cdot \frac {1 - \cos x}{x}\\&= 2 \lim\limits_ {x \rightarrow 0} \frac {1 - \cos x}{x} = 2 \lim\limits_ {x \rightarrow 0} \frac {\frac {1}{2} x ^ {2}}{x} = 0,\end{array}$
+
+故可排除选项 A, B.
+
+再由 $\lim\limits_{x\to0}\frac{f(x)}{1-\cos x}=2>0$ 、保号性及 $1-\cos x>0$ ，知在x=0的某邻域内有 $f(x)>0=f(0)$ ，故 $f(0)$ 为极小值。选项C正确。"
+80121107,880,微积分,第二章 一元函数微分学,,7,基础题,选择题,,$y=(x-1)^{2}(x-3)^{2}$ 的拐点个数为().,0,1,2,3,"C.
+
+解 因为
+
+$y ^ {\prime} = \left[ (x - 1) ^ {2} (x - 3) ^ {2} \right] ^ {\prime} = 4 (x - 1) (x - 2) (x - 3),$
+
+则 $y''$ 是二次函数，故 $y''$ 最多只有两个零点，由罗尔定理知， $y''$ 在 $(1,2)$ 和 $(2,3)$ 内各有一个零点，且 $y''$ 在其零点两侧变号，故有 2 个拐点，选项 C 正确."
+80121108,880,微积分,第二章 一元函数微分学,,8,基础题,选择题,,"设 $f'(x_{0}) = f''(x_{0}) = 0, f'''(x_{0}) > 0$ ，则下列选项正确的是（）.",$x_0$ 是 $f(x)$ 的极值点,$f(x_0)$ 是 $f(x)$ 的极大值,$f(x_0)$ 是 $f(x)$ 的极小值,"$\left(x_0, f(x_0)\right)$ 是 $y = f(x)$ 的拐点","D.
+
+解 由 $f''(x_{0})=0$ 及已知条件有
+
+$f ^ {\prime \prime \prime} (x _ {0}) = \lim\limits_ {x \to x _ {0}} \frac {f ^ {\prime \prime} (x) - f ^ {\prime \prime} (x _ {0})}{x - x _ {0}} = \lim\limits_ {x \to x _ {0}} \frac {f ^ {\prime \prime} (x)}{x - x _ {0}} > 0,$
+
+由极限的保号性, 可知当 $x > x_{0}$ 时, $f''(x) > 0$ ; 当 $x < x_{0}$ 时, $f''(x) < 0$ , 即在 $x_{0}$ 两侧 $f''(x)$ 变号, 故 $(x_{0}, f(x_{0}))$ 是 $y = f(x)$ 的拐点. 选项 D 正确.
+
+【注】选项 A 不正确, 例如, 对于 $f(x) = x^{3}$ , 有 $f'(0) = f''(0) = 0, f'''(0) = 6 \neq 0$ , 但 x = 0 不是 $f(x) = x^{3}$ 的极值点."
+80121109,880,微积分,第二章 一元函数微分学,,9,基础题,选择题,,"设 $f(x)$ 有一阶连续导数, $F(x)=f(x)(1+|\sin x|)$ , 则 $f(0)=0$ 是 $F(x)$ 在 x=0 处可导的().",必要非充分条件,充分非必要条件,充分必要条件,既非充分又非必要条件,"C.
+
+解 利用导数的定义,有
+
+$\begin{array}{r l} F _ {+} ^ {\prime} (0) & = \lim\limits_ {x \to 0 ^ {+}} \frac {F (x) - F (0)}{x - 0} = \lim\limits_ {x \to 0 ^ {+}} \frac {f (x) (1 + | \sin x |) - f (0)}{x} \\ & = \lim\limits_ {x \to 0 ^ {+}} \frac {f (x) - f (0)}{x} + \lim\limits_ {x \to 0 ^ {+}} \frac {f (x) \sin x}{x} = f _ {+} ^ {\prime} (0) + f (0). \end{array}$
+
+同理, $F_{-}^{\prime}(0)=f_{-}^{\prime}(0)-f(0)$ ，故 $F(x)$ 在x=0处可导 $\Leftrightarrow F_{+}^{\prime}(0)=F_{-}^{\prime}(0)\Leftrightarrow f(0)=0$ ，所以选项C正确."
+80121110,880,微积分,第二章 一元函数微分学,,10,基础题,选择题,,"设 $f(x)$ 在 x=a 处连续, 则 $f(x)$ 在 x=a 处可导的一个充分条件是().",$\lim\limits_{x\to \infty}|x|\left[f\left(a + \frac{1}{|x|}\right) - f(a)\right]$ 存在,$\lim\limits_{x\to0}\frac{f(a+x^{3})-f(a)}{x^{2}}$ 存在,$\lim\limits_{\Delta x\to0}\frac{f(a+\Delta x)-f(a-\Delta x)}{2\Delta x}$ 存在,$\lim\limits_{x\to 0}\frac{f(a + x^3) - f(a)}{\tan x^3}$ 存在,"D.
+
+解
+
+$\lim\limits_ {x \to 0} \frac {f (a + x ^ {3}) - f (a)}{\tan x ^ {3}} = \lim\limits_ {x \to 0} \frac {f (a + x ^ {3}) - f (a)}{x ^ {3}} = f ^ {\prime} (a).$
+
+对于选项 A, 因
+
+$\begin{array}{r l} & \lim\limits_ {x \to \infty} | x | \left[ f \left(a + \frac {1}{| x |}\right) - f (a) \right] \\ & = \lim\limits_ {x \to \infty} \frac {f \left(a + \frac {1}{| x |}\right) - f (a)}{\frac {1}{| x |}} \frac {\frac {1}{| x |} = \Delta x}{\text { }} \lim\limits_ {\Delta x \to 0 ^ {+}} \frac {f (a + \Delta x) - f (a)}{\Delta x} = f _ {+} ^ {\prime} (a), \end{array}$
+
+故排除选项 A.
+
+对于选项 B, 因
+
+$\lim\limits_ {x \to 0} \frac {f (a + x ^ {3}) - f (a)}{x ^ {2}} = \lim\limits_ {x \to 0} \frac {f (a + x ^ {3}) - f (a)}{x ^ {3}} \cdot x$
+
+存在, 有可能 $\lim\limits_{x\to0}\frac{f(a+x^{3})-f(a)}{x^{3}}$ 为 $\infty$ (因 $0\cdot\infty$ 型极限可能存在), 故排除选项 B.
+
+对于选项 C, 因
+
+$\begin{array}{r l}&\lim\limits_ {\Delta x \rightarrow 0} \frac {f (a + \Delta x) - f (a - \Delta x)}{2 \Delta x}\\&= \lim\limits_ {\Delta x \rightarrow 0} \left[ \frac {f (a + \Delta x) - f (a)}{\Delta x} \cdot \frac {1}{2} + \frac {f (a - \Delta x) - f (a)}{- \Delta x} \cdot \frac {1}{2} \right]\end{array}$
+
+存在,不能确定 $\lim\limits_{\Delta x\to0}\frac{f(a+\Delta x)-f(a)}{\Delta x}$ 与 $\lim\limits_{\Delta x\to0}\frac{f(a-\Delta x)-f(a)}{-\Delta x}$ 均存在.故排除选项C.
+
+综上所述,选项 D 正确."
+80121111,880,微积分,第二章 一元函数微分学,,11,基础题,选择题,,设 $f(x)$ 有任意阶导数，且 $f'(x)=f^{2}(x)$ ，则 $f^{(n)}(x)=(\quad)(n>3)$ .,$n!f^{n+1}(x)$,$nf^{n+1}(x)$,$f^{2n}(x)$,$n!f^{2n}(x)$,"A.
+
+解 由题意, 知 $f(x)$ 有任意阶导数, 且 $f'(x) = f^{2}(x)$ , 则
+
+$\begin{array}{l} {f ^ {\prime \prime} (x) = [ f ^ {2} (x) ] ^ {\prime} = 2 f (x) f ^ {\prime} (x) = 2 f (x) f ^ {2} (x) = 2 f ^ {3} (x),} \\ {f ^ {\prime \prime \prime} (x) = [ 2 f ^ {3} (x) ] ^ {\prime} = 3 \cdot 2 f ^ {2} (x) f ^ {\prime} (x) = 3! f ^ {4} (x),} \end{array}$
+
+由此归纳可知， $f^{(n)}(x)=n!f^{n+1}(x)$ ，故选项A正确."
+80121112,880,微积分,第二章 一元函数微分学,,12,基础题,选择题,,"设 $\delta > 0, f(x)$ 在 $(- \delta, \delta)$ 内有定义, 当 $x \in (-\delta, \delta)$ 时, 有 $|f(x)| \leqslant x^2$ , 则 $x = 0$ 是 $f(x)$ 的 ( ).",间断点,连续但不可导点,可导点且 $f'(0)=0$,可导点且 $f'(0) \neq 0$,"C.
+
+解 由已知， $|f(0)| \leqslant 0$ ，故 $f(0) = 0$ 。又
+
+$0 \leqslant \left| \frac {f (x) - f (0)}{x - 0} \right| = \left| \frac {f (x)}{x} \right| \leqslant \frac {x ^ {2}}{| x |} = | x |,$
+
+由夹逼准则，有 $\lim\limits_{x\to0}\left|\frac{f(x)-f(0)}{x-0}\right|=\lim\limits_{x\to0}\left|\frac{f(x)}{x}\right|=0$ ，即 $|f'(0)|=0$ ，故 $f'(0)=0$ ，选项C正确."
+80121113,880,微积分,第二章 一元函数微分学,,13,基础题,选择题,,"设 $f(x)$ 连续, 且 $f'(x_{0}) > 0$ , 则存在 $\delta > 0$ , 使得().","对任意 $x \in (x_0 - \delta, x_0)$ , 有 $f(x) > f(x_0)$","对任意 $x \in (x_0, x_0 + \delta)$ , 有 $f(x) > f(x_0)$","$f(x)$ 在 $(x_{0}-\delta, x_{0})$ 内单调减少","$f(x)$ 在 $(x_0, x_0 + \delta)$ 内单调增加","B.
+
+$f _ {+} ^ {\prime} (x _ {0}) = \lim\limits_ {x \to x _ {0} ^ {+}} \frac {f (x) - f (x _ {0})}{x - x _ {0}} > 0,$
+
+故由极限的保号性，知对于 $x \in (x_0, x_0 + \delta)$ ，有 $f(x) > f(x_0)$ ，即选项B正确.
+
+$f _ {-} ^ {\prime} (x _ {0}) = \lim\limits_ {x \to x _ {0} ^ {-}} \frac {f (x) - f (x _ {0})}{x - x _ {0}} > 0, \quad x \in (x _ {0} - \delta , x _ {0}),$
+
+有 $f(x) < f(x_{0})$ ，故选项 A 错误.
+
+对于选项 C, D, 由 $f'(x_{0}) > 0$ , 不能推出 $f(x)$ 在 $(x_{0} - \delta, x_{0})$ 和 $(x_{0}, x_{0} + \delta)$ 内的单调性."
+80121114,880,微积分,第二章 一元函数微分学,,14,基础题,选择题,,"已知 $y = x^{3} + ax^{2} + bx + c$ 在 x = -2 处取得极值，且与直线 $y = -3x + 3$ 相切于点 $(1,0)$ ，则（）.","a=1, b=-8, c=6","a=-1, b=-8, c=-6","a=1, b=8, c=-6","a=-1, b=8, c=-6","A.
+
+解 由已知, $y'(-2)=0,y'(1)=-3,y(1)=0$ ,即
+
+$\left\{ \begin{array}{l} (x ^ {3} + a x ^ {2} + b x + c) ^ {\prime} \Big | _ {x = - 2} = 0, \\ (x ^ {3} + a x ^ {2} + b x + c) ^ {\prime} \Big | _ {x = 1} = - 3, \\ (x ^ {3} + a x ^ {2} + b x + c) \Big | _ {x = 1} = 0, \end{array} \right.$
+
+故 $\left\{\begin{aligned}12-4a+b&=0,\\ 3+2a+b&=-3,\end{aligned}\right.$ 解得a=1,b=-8,c=6.选项A正确. $1+a+b+c=0,$"
+80121115,880,微积分,第二章 一元函数微分学,,15,基础题,选择题,,下列选项中正确的是().,"设 $f(x)$ 在 $(-a, a)(a > 0)$ 内为偶函数, 则 x = 0 是 $f(x)$ 的极值点","设 $x_{0} \in (a, b)$ , $(a, b)$ 上的函数 $f(x)$ 满足: 当 $x \in (a, x_{0})$ 时, $f'(x) > 0$ , 当 $x \in (x_{0}, b)$ 时 $f'(x) < 0$ , 则 $f(x)$ 在 $x_{0}$ 处取得最大值","设 $f(x)$ 在 $x = x_0$ 处取得极大值, 则存在 $x_0$ 的邻域 $(x_0 - \sigma, x_0 + \sigma)$ , 使得 $f(x)$ 在 $(x_0 - \sigma, x_0)$ 内单调递增, 在 $(x_0, x_0 + \sigma)$ 内单调递减","设 $f(x)$ 在 $(-a, a)(a > 0)$ 内可导且为偶函数，则 $f'(0) = 0$","D.
+
+解 若 $f(x)$ 在 $(-a, a)$ 内可导且为偶函数，则 $f'(x)$ 在 $(-a, a)$ 内为奇函数，从而 $\forall x \in (-a, a)$ ，有 $f'(-x) = -f'(x)$ .
+
+令 x = 0 ，得 $f'(0) = -f'(0)$ ，故 $f'(0) = 0$ 。选项 D 正确。
+
+对于选项 B, $y = f(x)$ 的图形如图 2-1 所示, 但 $f(x)$ 在 $(a, b)$ 内无最大值.
+
+![Image](images/80121115.jpg)
+
+对于选项 A, 如 $f(x)=\left\{\begin{aligned}x^{3}\sin\frac{1}{x},&x\neq0,\\ 0,&x=0\end{aligned}\right.$ 是偶函数, 但 x=0 不是极值点.
+
+图2-1
+
+对于选项 C, 如 $f(x)=\left\{\begin{aligned}&1-x^{2}\left(1+\sin\frac{1}{x}\right),&x\neq0,\\ &1,&x=0.\end{aligned}\right.$ 是 f(x) 的极值点.
+
+$f ^ {\prime} (x) = \left\{ \begin{array}{l l} - 2 x \left(1 + \sin \frac {1}{x}\right) + \cos \frac {1}{x}, & x \neq 0, \\ 0, & x = 0. \end{array} \right.$
+
+令 $x_{n} = \frac{1}{n\pi}$ ，当 $n\to \pm \infty$ 时， $x_{n}\rightarrow 0,f^{\prime}(x_{n}) = \frac{-2}{n\pi} +(-1)^{n}.$
+
+无论 $\sigma$ 取多么小, $f(x)$ 在 $(0,\sigma)$ 内都不单调递减, 在 $(- \sigma,0)$ 内都不单调递增."
+80121116,880,微积分,第二章 一元函数微分学,,16,基础题,选择题,,曲线 $y=\frac{1}{|x|-1}+\ln(1+e^{-x})$ 的渐近线的条数为().,1,2,3,4,"D.
+
+解 当 $x = \pm 1$ 时, 函数没有定义, 且当 $x \to 1$ 时, $y \to \infty$ , 故 x = 1 为铅直渐近线. 同理, x = -1 为铅直渐近线.
+
+由 $\lim\limits_{x\to +\infty}y = \lim\limits_{x\to +\infty}\left[\frac{1}{|x| - 1} +\ln (1 + \mathrm{e}^{-x})\right] = 0$ ，知有水平渐近线 $y = 0$
+
+又
+
+$\lim\limits_ {x \rightarrow - \infty} \frac {y}{x} = \lim\limits_ {x \rightarrow - \infty} \left[ \frac {1}{x (| x | - 1)} + \frac {\ln (1 + e ^ {- x})}{x} \right] = 0 + \lim\limits_ {x \rightarrow - \infty} \frac {- e ^ {- x}}{1 + e ^ {- x}} = - 1,$
+
+$\begin{array}{r l}\lim\limits_ {x \rightarrow - \infty} (y + x)&= \lim\limits_ {x \rightarrow - \infty} \left[ \frac {1}{| x | - 1} + \ln (1 + e ^ {- x}) + x \right]\\&= \lim\limits_ {x \rightarrow - \infty} \left[ \ln (1 + e ^ {- x}) + \ln e ^ {x} \right]\\&= \lim\limits_ {x \rightarrow - \infty} \ln \left[ (1 + e ^ {- x}) \cdot e ^ {x} \right] = \lim\limits_ {x \rightarrow - \infty} \ln (e ^ {x} + 1) = 0,\end{array}$
+
+故 y = -x 为斜渐近线. 选项 D 正确."
+80121117,880,微积分,第二章 一元函数微分学,,17,基础题,选择题,,设 $f(x)$ 为连续函数，且 $\lim\limits_{x\to+\infty}\mathrm{e}^{x}[1+x+f(x)]$ 存在，则曲线 $y=f(x)$ 有斜渐近线（）.,$y = x$,$y = -x$,$y = x + 1$,$y = -x - 1$,"D.
+
+解 由 $\lim\limits_{x\to +\infty}\mathrm{e}^{x}[1 + x + f(x)] = \lim\limits_{x\to +\infty}\frac{1 + x + f(x)}{\mathrm{e}^{-x}}$ 存在，知
+
+$\lim\limits_ {x \rightarrow + \infty} [ f (x) + x + 1 ] = \lim\limits_ {x \rightarrow + \infty} [ f (x) - (- x - 1) ] = 0,$
+
+故 $y = f(x)$ 有斜渐近线 y = -x - 1. 选项 D 正确.
+
+【注】设曲线 $y = f(x)$ 有斜渐近线 $y = kx + b$ . 如图 2-2 所示, $P(x, y)$ 为 $y = f(x)$ 上任意一点, 由斜渐近线的定义, $P(x, y)$ 到直线 $y = kx + b$ 的距离 $|PM| \to 0 (x \to \infty)$ , 从而 $|PN| \to 0 (x \to \infty)$ . 故有
+
+$\lim\limits_ {x \rightarrow \infty} [ f (x) - (k x + b) ] = 0.$
+
+![Image](images/80121117.jpg)
+
+图2-2"
+80121201,880,微积分,第二章 一元函数微分学,,1,基础题,填空题,,"设 $f(x)$ 在 x=0 处可导, 且 $f'(0)=2, f(0)=0$ , 则 $\lim\limits_{x\to0}\frac{f(1-\cos x)}{\ln(1+x^{2})}=$ \_\_\_\_.",,,,,"1.
+
+解
+
+$\lim\limits_ {x \rightarrow 0} \frac {f (1 - \cos x)}{\ln (1 + x ^ {2})} = \lim\limits_ {x \rightarrow 0} \frac {x ^ {2}}{\ln (1 + x ^ {2})} \cdot \frac {1 - \cos x}{x ^ {2}} \cdot \frac {f (1 - \cos x) - f (0)}{1 - \cos x}.$
+
+由于当 $x \to 0$ 时， $\ln (1 + x^2) \sim x^2, 1 - \cos x \sim \frac{1}{2} x^2$ ，故
+
+$\text { 原式 } = 1 \cdot {\frac {1}{2}} \cdot f ^ {\prime} (0) = {\frac {1}{2}} \times 2 = 1.$"
+80121202,880,微积分,第二章 一元函数微分学,,2,基础题,填空题,,设 $f(x)$ 连续， $\lim\limits_{x \to 0} \frac{\ln [f(x+1)+\mathrm{e}^{x^2}]}{x}=1$ ，则 $\lim\limits_{x \to 0} \frac{f[(1+\tan x)^2]-f(1+\tan x)}{x}=$ \_\_\_\_.,,,,,"1.
+
+解由
+
+$\begin{array}{r l} \lim\limits_ {x \to 0} \frac {\ln [ f (x + 1) + \mathrm{e} ^ {x ^ {2}} ]}{x} & = \lim\limits_ {x \to 0} \frac {\ln [ f (x + 1) + \mathrm{e} ^ {x ^ {2}} + 1 - 1 ]}{x} \\ & = \lim\limits_ {x \to 0} \frac {f (x + 1) + \mathrm{e} ^ {x ^ {2}} - 1}{x} = \lim\limits_ {x \to 0} \frac {f (x + 1)}{x} + 0 = 1, \end{array}$
+
+知 $\lim\limits_{x\to 0}\frac{f(x + 1)}{x} = 1.$ 由 $f(x)$ 连续，知 $f(1) = 0$ ，故
+
+$\begin{array}{r l} & f ^ {\prime} (1) = \lim\limits_ {x \to 0} \frac {f (x + 1) - f (1)}{x} = 1, \\ & \lim\limits_ {x \to 0} \frac {f [ (1 + \tan x) ^ {2} ] - f (1 + \tan x)}{x} \\ & = \lim\limits_ {x \to 0} \frac {f [ (1 + \tan x) ^ {2} ] - f (1)}{x} - \lim\limits_ {x \to 0} \frac {f (1 + \tan x) - f (1)}{x} \\ & = \lim\limits_ {x \to 0} \frac {f (1 + 2 \tan x + \tan^ {2} x) - f (1)}{2 \tan x + \tan^ {2} x} \cdot \frac {2 \tan x + \tan^ {2} x}{x} - \\ & \lim\limits_ {x \to 0} \frac {f (1 + \tan x) - f (1)}{\tan x} \cdot \frac {\tan x}{x} \\ & = 2 f ^ {\prime} (1) - f ^ {\prime} (1) \\ & = f ^ {\prime} (1) = 1. \end{array}$"
+80121203,880,微积分,第二章 一元函数微分学,,3,基础题,填空题,,设 $y = f(x)$ 由方程 $x = \int_{1}^{y - x} \sin^{2}\left(\frac{\pi t}{4}\right) dt$ 确定，则 $\lim\limits_{n \to \infty} n\left[f\left(\frac{1}{n}\right) - 1\right] =$ \_\_\_\_.,,,,,"3.
+
+解 $x = \int_{1}^{y - x}\sin^2\left(\frac{\pi t}{4}\right)\mathrm{d}t$ 两边同时对 $x$ 求导，得 $1 = (y' - 1)\cdot \sin^2\left[\frac{\pi}{4} (y - x)\right]$ ，解得
+
+$y ^ {\prime} = \csc^ {2} \left[ \frac {\pi}{4} (y - x) \right] + 1.$
+
+又由已知，当 $x = 0$ 时， $y = 1$ ，即 $f(0) = 1$ ，故 $y'\bigg|_{x=0} = 3$ ，于是
+
+$\lim\limits_ {n \rightarrow \infty} n \left[ f \left(\frac {1}{n}\right) - 1 \right] = \lim\limits_ {n \rightarrow \infty} \frac {f \left(\frac {1}{n}\right) - f (0)}{\frac {1}{n}} = f ^ {\prime} (0) = 3.$"
+80121204,880,微积分,第二章 一元函数微分学,,4,基础题,填空题,,设函数 $f(x)$ 有连续导数，且 $\lim\limits_{x \to 0} \left[ \frac{\sin x}{x^2} + \frac{f(x)}{x} \right] = 2$ ，则 $f(x)$ 的一阶麦克劳林展开式为 \_\_\_\_.,,,,,"$f(x) = -1 + 2x + o(x)$ .
+
+解由
+
+$\lim\limits_ {x \rightarrow 0} \left[ \frac {\sin x}{x ^ {2}} + \frac {f (x)}{x} \right] = \lim\limits_ {x \rightarrow 0} \frac {\sin x + x f (x)}{x ^ {2}} = 2,$
+
+知 $\sin x + xf(x)$ 与 $2x^{2}$ 是等价无穷小. 又由于
+
+$\begin{array}{r l} \sin x + x f (x) & = [ x + o (x ^ {2}) ] + x [ f (0) + f ^ {\prime} (0) x + o (x) ] \\ & = [ 1 + f (0) ] x + f ^ {\prime} (0) x ^ {2} + o (x ^ {2}), \end{array}$
+
+故 $f(0) = -1, f'(0) = 2$ ，所以
+
+$f (x) = f (0) + f ^ {\prime} (0) x + o (x) = - 1 + 2 x + o (x).$"
+80121205,880,微积分,第二章 一元函数微分学,,5,基础题,填空题,,"设函数 $f(x)$ 在 $(- \infty, +\infty)$ 内连续， $f''(x)$ 的图形如图所示，则曲线 $y = f(x)$ 的拐点个数为 \_\_\_\_.",,,,,"2.
+
+解 由 $f''(x)$ 的图形可知, $f''(x_1) = f''(x_2) = 0$ , $f''(0)$ 不存在, 在 $x = x_1$ 的两侧二阶导数不变号, 故其不是拐点. 在 $x = 0$ , $x = x_2$ 两侧二阶导数变号, 所以 $y = f(x)$ 有两个拐点."
+80121206,880,微积分,第二章 一元函数微分学,,6,基础题,填空题,,"设 $f'(0)$ 存在, $f(0)=0$ , 且 $\lim\limits_{x\to0}\left[1+\frac{1-\cos f(x)}{\sin x}\right]^{\frac{1}{x}}=e$ , 则 $f'(0)=$ \_\_\_\_.",,,,,"$\pm\sqrt{2}$ .
+
+解 依题设,有
+
+$\lim\limits_ {x \to 0} \left[ 1 + \frac {1 - \cos f (x)}{\sin x} \right] ^ {\frac {1}{x}} = \lim\limits_ {x \to 0} \left\{\left[ 1 + \frac {1 - \cos f (x)}{\sin x} \right] ^ {\frac {\sin x}{1 - \cos f (x)}} \right\} ^ {\frac {1 - \cos f (x)}{x \sin x}} = e,$
+
+故 $\lim\limits_{x\to0}\frac{1-\cos f(x)}{x\sin x}=1$ . 当 $x\to0$ 时， $\sin x\sim x,1-\cos f(x)\sim\frac{1}{2}f^{2}(x)$ ，且 $f'(0)$ 存在，故
+
+$1 = \lim\limits_ {x \rightarrow 0} \frac {1 - \cos f (x)}{x \sin x} = \frac {1}{2} \lim\limits_ {x \rightarrow 0} \frac {f ^ {2} (x)}{x ^ {2}} = \frac {1}{2} \lim\limits_ {x \rightarrow 0} \frac {f (x)}{x} \cdot \lim\limits_ {x \rightarrow 0} \frac {f (x)}{x} = \frac {1}{2} f ^ {\prime} (0) \cdot f ^ {\prime} (0),$
+
+解得 $f'(0)=\pm\sqrt{2}$ ."
+80121207,880,微积分,第二章 一元函数微分学,,7,基础题,填空题,,当 $x \to 0$ 时， $\mathrm{e}^x + \ln (1 - x) - 1$ 与 $x^n$ 是同阶无穷小，则 $n = \underline{\quad}$ .,,,,,"3.
+
+解
+
+$\mathrm{e} ^ {x} = 1 + x + \frac {1}{2} x ^ {2} + \frac {1}{6} x ^ {3} + o (x ^ {3}),$
+
+$\ln (1 - x) = - x - \frac {1}{2} x ^ {2} - \frac {1}{3} x ^ {3} + o (x ^ {3}),$
+
+故
+
+$\begin{array}{r l} \mathrm{e} ^ {x} + \ln (1 - x) - 1 & = 1 + x + \frac {1}{2} x ^ {2} + \frac {1}{6} x ^ {3} - x - \frac {1}{2} x ^ {2} - \frac {1}{3} x ^ {3} - 1 + o (x ^ {3}) \\ & = - \frac {1}{6} x ^ {3} + o (x ^ {3}), \end{array}$
+
+所以 n = 3."
+80121208,880,微积分,第二章 一元函数微分学,,8,基础题,填空题,,"设 $f(x) = n^2 \mathrm{e}^{\frac{x}{n}} - (1 + n)x$ 在 $x = x_n$ 处有水平切线, 则 $\lim\limits_{n \to \infty} \mathrm{e}^{x_n} =$ \_\_\_\_.",,,,,"e.
+
+解 对 $f(x)$ 求导, 得 $f'(x) = n e^{\frac{x}{n}} - (1 + n)$ . 依题意, 有
+
+$f ^ {\prime} (x _ {n}) = n \mathrm{e} ^ {\frac {x}{n}} - (1 + n) = 0,$
+
+解得 $x_{n} = n\ln \left(1 + \frac{1}{n}\right)$ 故 $\lim\limits_{n\to \infty}\mathrm{e}^{x_n} = \lim\limits_{n\to \infty}\mathrm{e}^{n\ln \left(1 + \frac{1}{n}\right)} = \mathrm{e}.$"
+80121209,880,微积分,第二章 一元函数微分学,,9,基础题,填空题,,设 $\frac{d}{dx}[f(x^{3})]=\frac{1}{x}$ ，则 $f'(x)=$ \_\_\_\_.,,,,,"$\frac{1}{3x}.$
+
+解 由 $\frac{\mathrm{d}}{\mathrm{d}x}[f(x^3)] = 3x^2 \cdot f'(x^3) = \frac{1}{x}$ , 得 $f'(x^3) = \frac{1}{3x^3}$ , 所以 $f'(x) = \frac{1}{3x}$ ."
+80121210,880,微积分,第二章 一元函数微分学,,10,基础题,填空题,,设 $f(x)=\ln\left(\sqrt{1+x^{2}}-x\right)$ ，则 $f^{(5)}(0)=$ \_\_\_\_.,,,,,"$(1 0) - 9.$
+
+解 由 $f(x) = \ln (\sqrt{1 + x^2} - x)$ ，可求得 $f'(x) = -\frac{1}{\sqrt{1 + x^2}}$ .
+
+令 $g(x) = -\frac{1}{\sqrt{1 + x^2}} = -(1 + x^2)^{-\frac{1}{2}}, g(x)$ 在 $x = 0$ 处的麦克劳林展开式为
+
+$\begin{array}{r l} g (x) & = - (1 + x ^ {2}) ^ {- \frac {1}{2}} = - \left[ 1 - \frac {1}{2} x ^ {2} + \frac {- \frac {1}{2} (- \frac {1}{2} - 1) x ^ {4}}{2 !} + o (x ^ {4}) \right] \\ & = - 1 + \frac {1}{2} x ^ {2} - \frac {3}{8} x ^ {4} - o (x ^ {4}), \end{array}$
+
+则 $g^{(4)}(0)=4!\times\left(-\frac{3}{8}\right)=-9.$ 故 $f^{(5)}(0)=-9.$"
+80121211,880,微积分,第二章 一元函数微分学,,11,基础题,填空题,,"设 $\lim\limits_{x\to+\infty}\left(\sqrt{ax^{2}-x+3}-2x\right)=b$ ，其中 a，b 为常数，a>0，则曲线 $y=\sqrt{ax^{2}-x+3}$ 在 $(0,+\infty)$ 内的斜渐近线方程为 \_\_\_\_.",,,,,"$y = 2x - \frac{1}{4}.$
+
+解 由已知,有
+
+$\lim\limits_ {x \to + \infty} (\sqrt {a x ^ {2} - x + 3} - 2 x) = \lim\limits_ {x \to + \infty} x \left(\sqrt {a - \frac {1}{x} + \frac {3}{x ^ {2}}} - 2\right) = b,$
+
+故 $\lim\limits_{x\to +\infty}\left(\sqrt{a - \frac{1}{x} + \frac{3}{x^2}} -2\right) = 0$ ，即有 $\sqrt{a} = 2,a = 4.$
+
+将 a = 4 代入原式, 并有理化, 得
+
+$\begin{array}{r l} b & = \lim\limits_ {x \to + \infty} (\sqrt {4 x ^ {2} - x + 3} - 2 x) = \lim\limits_ {x \to + \infty} \frac {- x + 3}{\sqrt {4 x ^ {2} - x + 3} + 2 x} \\ & = \lim\limits_ {x \to + \infty} \frac {- 1 + \frac {3}{x}}{\sqrt {4 - \frac {1}{x} + \frac {3}{x ^ {2}}} + 2} = - \frac {1}{4}, \end{array}$
+
+所以 $\lim\limits_{x\to +\infty}\left(\sqrt{4x^2 - x + 3} -2x + \frac{1}{4}\right) = \lim\limits_{x\to +\infty}\left[\sqrt{4x^2 - x + 3} -\left(2x - \frac{1}{4}\right)\right] = 0.$
+
+故斜渐近线方程为 $y = 2x - \frac{1}{4}$ ."
+80121212,880,微积分,第二章 一元函数微分学,,12,基础题,填空题,,设 $f(x)=\cos|x|+x^{2}|x|$ 在 x=0 处存在的最高阶导数的阶数为 \_\_\_\_.,,,,,"2.
+解 法一
+在 x = 0 的邻域内， $\cos |x| = \cos x, x^{2} |x|$ 在 x = 0 处二阶可导，三阶不可导，故阶数为 2.
+
+【法二】
+在 $x=0$附近，$\cos{x}=1-\frac{x^{2}}{2!}+\frac{x^{4}}{4!}+\ldots $
+而$ x^{2}\mid x\mid $可以看作一个三次项（类似于$ \pm x^{3}$）。
+所以 $f\left(x\right)=1-\frac{x^{2}}{2}+o\left(x^{2}\right)+\pm x^{3}$。
+因为表达式中最高次项只到 $x^{2}$（$x^{3} $处因为符号相反导致导数不连续），所以最高阶导数为 2阶。"
+80121213,880,微积分,第二章 一元函数微分学,,13,基础题,填空题,,"设函数 $y = y(x)$ 二阶可导, $\frac{\mathrm{d}y}{\mathrm{d}x} = (3 - y)y^{b}(b > 0)$ , 若曲线 $y = y(x)$ 有一个拐点为 $(a, 2)$ ，则 b = \_\_\_\_.",,,,,"2.
+
+解 由 $y(x)$ 二阶可导， $(a,2)$ 是 $y=y(x)$ 的拐点，知 $y(a)=2,y''(a)=0$ .
+
+由 $\frac{\mathrm{dy}}{\mathrm{dx}} = (3 - y)y^b$ ，有
+
+$\frac {\mathrm{d} ^ {2} y}{\mathrm{d} x ^ {2}} = (3 - y) b y ^ {b - 1} \frac {\mathrm{d} y}{\mathrm{d} x} - y ^ {b} \frac {\mathrm{d} y}{\mathrm{d} x} = \frac {\mathrm{d} y}{\mathrm{d} x} y ^ {b - 1} [ (3 - y) b - y ].①$
+
+又$\left. \frac {\mathrm{d} ^ {2} y}{\mathrm{d} x ^ {2}} \right| _ {x = a} = 0,$
+
+$\frac {\mathrm{d} y}{\mathrm{d} x} \Big | _ {x = a} = [ 3 - y (a) ] [ y (a) ] ^ {b} = [ y (a) ] ^ {b} = 2 ^ {b} \neq 0,$
+
+将上面两式代入式 ①, 得
+
+$[ 3 - y (a) ] b - y (a) = (3 - 2) b - 2 = b - 2 = 0,$
+
+故 b = 2."
+80121214,880,微积分,第二章 一元函数微分学,,14,基础题,填空题,,"设 $f(x)$ 在 $(- \infty, + \infty)$ 内有定义, 且对任意的 $x, y$ , 有 $f(x + y) - f(x) = [f(x) - 1]y + a(y)$ , 其中 $\lim\limits_{y \to 0} \frac{a(y)}{y} = 0$ , 且 $f(0) = 2$ , 则 $f(x) =$ \_\_\_\_.",,,,,"$e^{x} + 1.$
+
+解 由已知条件, 视 y 为 $\Delta x$ , 知 $f(x)$ 在点 x 处可微, 且 $\mathrm{d}[f(x)] = [f(x) - 1] \mathrm{d}x$ , 故 $\mathrm{d}x = \frac{1}{f(x) - 1} \mathrm{d}[f(x)]$ , 两边积分, 得
+
+$x = \ln | f (x) - 1 | + c.$
+
+由 $f(0)=2$ ，得 c=0，故 $f(x)=\mathrm{e}^{x}+1$ 。"
+80121215,880,微积分,第二章 一元函数微分学,,15,基础题,填空题,,"设函数 $y = y(x)$ 由方程 $\arctan\frac{x}{y} = \ln\sqrt{\frac{x^{2} + y^{2}}{2}} + \frac{\pi}{4} (x > 0, y > 0)$ 确定，则 $y(x)$ 的极大值为 \_\_\_\_.",,,,,"1.
+
+解 将已知方程化为
+
+$\arctan \frac {x}{y} = \frac {1}{2} \ln (x ^ {2} + y ^ {2}) - \frac {1}{2} \ln 2 + \frac {\pi}{4},$
+
+上式两边同时对 x 求导, 得
+
+$\frac {1}{1 + \left(\frac {x}{y}\right) ^ {2}} \cdot \frac {y - x y ^ {\prime}}{y ^ {2}} = \frac {1}{2} \frac {2 x + 2 y y ^ {\prime}}{x ^ {2} + y ^ {2}},$
+
+即 $y'=\frac{-x+y}{x+y}$ . 令 $y'=0$ , 得 x=y, 代入原方程可求得 x=1, y=1, 故 $y'(1)=0$ .
+
+由于 $y'=\frac{-x+y}{x+y}$ ，即 $(x+y)y'=-x+y$ ，故两边同时对 x 求导，得
+
+$(1 + y ^ {\prime}) y ^ {\prime} + (x + y) y ^ {\prime \prime} = - 1 + y ^ {\prime},$
+
+将 $x = 1, y = 1, y'(1) = 0$ 代入上式，得 $y''(1) = -\frac{1}{2} < 0$ .
+
+故 $y(x)$ 的极大值为 $y(1)=1$ ."
+80121301,880,微积分,第二章 一元函数微分学,,1,基础题,解答题,,"计算下列函数的导数:
+(I) $y = \frac {1}{\sqrt [ 3 ]{x \cdot \sqrt [ 3 ]{x}}};$
+(II) $y = x ^ {a ^ {a}} + a ^ {x ^ {a}} + a ^ {a ^ {x}} (a > 0);$
+(III) $y = 2 ^ {| \sin x |};$
+(IV) $y = \ln | \tan x + \sec x |.$",,,,,"解 (I) 因 $y = \frac{1}{\sqrt[3]{x \cdot \sqrt[3]{x}}} = x^{-\frac{4}{9}}$ , 故 $y' = -\frac{4}{9} x^{-\frac{13}{9}}$ .
+
+(Ⅱ) 由原式可得
+
+$\begin{array}{r l} y ^ {\prime} & = a ^ {a} x ^ {a ^ {a} - 1} + a ^ {x ^ {a}} (\ln a) \cdot (x ^ {a}) ^ {\prime} + a ^ {a ^ {x}} \cdot (\ln a) \cdot (a ^ {x}) ^ {\prime} \\ & = a ^ {a} x ^ {a ^ {a} - 1} + a (\ln a) x ^ {a - 1} \cdot a ^ {x ^ {a}} + (\ln a) ^ {2} \cdot a ^ {x} \cdot a ^ {a ^ {x}}. \end{array}$
+
+【注】将 $x^{a^{a}}$ 视为幂函数.
+
+（Ⅲ）由 $\left|\sin x\right|=\sqrt{\sin^{2}x}$ ，有 $y=2^{\left|\sin x\right|}=2^{\sqrt{\sin^{2}x}}$ ，则
+
+$\begin{array}{r l} y ^ {\prime} & = 2 ^ {\sqrt {\sin^ {2} x}} \cdot (\ln 2) \cdot (\sqrt {\sin^ {2} x}) ^ {\prime} = 2 ^ {\sqrt {\sin^ {2} x}} \cdot (\ln 2) \cdot \frac {2 \sin x \cos x}{2 \sqrt {\sin^ {2} x}} \\ & = 2 ^ {| \sin x |} \cdot (\ln 2) \cdot \sin 2 x \cdot \frac {1}{2 | \sin x |} (\sin x \neq 0). \end{array}$
+
+【注】当 $\sin x = 0$ 时， $y = 2^{\left|\sin x\right|}$ 的左、右导数值分别存在，且异号.
+
+(Ⅳ) 由原式可得
+
+$\begin{array}{r l} y ^ {\prime} & = \frac {1}{\tan x + \sec x} \cdot (\tan x + \sec x) ^ {\prime} \\ & = \frac {1}{\tan x + \sec x} \cdot (\sec^ {2} x + \sec x \tan x) = \sec x. \end{array}$
+
+【注】 $(\ln |x|)'=\frac{1}{x}(x\neq0)$ ."
+80121302,880,微积分,第二章 一元函数微分学,,2,基础题,解答题,,"求下列函数的导数:
+(I) $y = (1 + x ^ {2}) ^ {\sin x};$
+(II) $y = \ln {\frac {1}{\sqrt {x + \sqrt {x ^ {2} + 1}}}}.$",,,,,"解（Ⅰ）对原式取对数，有 $\ln |y| = \ln (1 + x^{2}) \sin x$ . 两边再同时对 x 求导，得
+
+$\frac {1}{y} \cdot y ^ {\prime} = \ln (1 + x ^ {2}) \cos x + \frac {2 x \sin x}{1 + x ^ {2}},$
+
+故
+
+$y ^ {\prime} = (1 + x ^ {2}) ^ {\sin x} \left[ \ln (1 + x ^ {2}) \cos x + \frac {2 x \sin x}{1 + x ^ {2}} \right].$
+
+（Ⅱ）利用对数的性质，化简后再求导.
+
+$\begin{array}{r l} & y = \ln \frac {1}{\sqrt {x + \sqrt {x ^ {2} + 1}}} = - \frac {1}{2} \ln (x + \sqrt {x ^ {2} + 1}), \\ & y ^ {\prime} = - \frac {1}{2} \cdot \frac {1}{x + \sqrt {x ^ {2} + 1}} \cdot (x + \sqrt {x ^ {2} + 1}) ^ {\prime} \\ & = - \frac {1}{2} \cdot \frac {1}{x + \sqrt {x ^ {2} + 1}} \cdot \left(1 + \frac {2 x}{2 \sqrt {x ^ {2} + 1}}\right) = - \frac {1}{2 \sqrt {x ^ {2} + 1}}. \end{array}$"
+80121303,880,微积分,第二章 一元函数微分学,,3,基础题,解答题,,"求下列函数的微分:
+(I) 设 $y = \varphi \left( \arctan \frac{1}{x} \right)$ ，其中 $\varphi$ 可导，求 dy;
+(II) 设 $y = y(x)$ 由方程 $e^{x+y} - y \sin x = 0$ 确定, 求 dy.",,,,,"解（I）由题设可得
+
+$\begin{array}{r l} \mathrm{d} y & = \varphi^ {\prime} \left(\arctan \frac {1}{x}\right) \cdot \mathrm{d} \left(\arctan \frac {1}{x}\right) = \varphi^ {\prime} \left(\arctan \frac {1}{x}\right) \cdot \frac {1}{1 + \left(\frac {1}{x}\right) ^ {2}} \mathrm{d} \left(\frac {1}{x}\right) \\ & = \varphi^ {\prime} \left(\arctan \frac {1}{x}\right) \cdot \frac {1}{1 + \left(\frac {1}{x}\right) ^ {2}} \cdot \left(- \frac {1}{x ^ {2}}\right) \mathrm{d} x = - \varphi^ {\prime} \left(\arctan \frac {1}{x}\right) \cdot \frac {1}{1 + x ^ {2}} \mathrm{d} x. \end{array}$
+
+(Ⅱ) 由题设可得
+
+$\begin{array}{r l} & {\mathrm{d} (\mathrm{e} ^ {x + y} - y \sin x) = 0, \text {即} \mathrm{e} ^ {x + y} \mathrm{d} (x + y) - [ \sin x \mathrm{d} y + y \mathrm{d} (\sin x) ] = 0,} \\ & {\qquad \mathrm{e} ^ {x + y} (\mathrm{d} x + \mathrm{d} y) - (\sin x \mathrm{d} y + y \cos x \mathrm{d} x) = 0,} \end{array}$
+
+故
+
+$\mathrm{d} y = \frac {y \cos x - \mathrm{e} ^ {x + y}}{\mathrm{e} ^ {x + y} - \sin x} \mathrm{d} x = \frac {y (\cos x - \sin x)}{(y - 1) \sin x} \mathrm{d} x.$"
+80121304,880,微积分,第二章 一元函数微分学,,4,基础题,解答题,,"设 $y = y(x)$ 由方程 $\sqrt{x^2 + y^2} = \mathrm{e}^{\arctan \frac{y}{x}}$ 确定, 求 $\frac{d^2y}{\mathrm{d}x^2}$ .",,,,,"解 对方程两边同时取对数, 再对 x 求导, 得 $\frac{1}{2}\ln(x^{2}+y^{2})=\arctan\frac{y}{x}$ , 即
+
+$\frac {1}{2} \cdot \frac {2 x + 2 y \cdot y ^ {\prime}}{x ^ {2} + y ^ {2}} = \frac {1}{1 + \left(\frac {y}{x}\right) ^ {2}} \cdot \frac {y ^ {\prime} x - y \cdot 1}{x ^ {2}},$
+
+解得
+
+$y ^ {\prime} = \frac {x + y}{x - y},$
+
+$y ^ {\prime \prime} = \frac {(1 + y ^ {\prime}) (x - y) - (x + y) (1 - y ^ {\prime})}{(x - y) ^ {2}} = \frac {2 x y ^ {\prime} - 2 y}{(x - y) ^ {2}}.$
+
+将 $y'=\frac{x+y}{x-y}$ 代入上式，得 $y''=\frac{2(x^{2}+y^{2})}{(x-y)^{3}}$ ."
+80121305,880,微积分,第二章 一元函数微分学,,5,基础题,解答题,,"设 $f(x)$ 在 $(0, +\infty)$ 内满足 $f(xy) = f(x) + f(y)$ ，且 $f'(1) = 1$ ，证明： $f(x)$ 在 $(0, +\infty)$ 内可导，并求 $f(x)$ .",,,,,"证令 x = y = 1，由 $f(xy) = f(x) + f(y)$ ，知 $f(1) = 0$ .
+
+$\begin{array}{r l}f ^ {\prime} (x)&= \lim\limits_ {\Delta x \rightarrow 0} \frac {f (x + \Delta x) - f (x)}{\Delta x} = \lim\limits_ {\Delta x \rightarrow 0} \frac {f \left[ x \left(1 + \frac {\Delta x}{x}\right)\right] - f (x)}{\Delta x}\\&= \lim\limits_ {\Delta x \rightarrow 0} \frac {f (x) + f \left(1 + \frac {\Delta x}{x}\right) - f (x)}{\Delta x}\\&= \lim\limits_ {\Delta x \rightarrow 0} \frac {f \left(1 + \frac {\Delta x}{x}\right) - f (1)}{\frac {\Delta x}{x}} \cdot \frac {1}{x} = \frac {f ^ {\prime} (1)}{x} = \frac {1}{x},\end{array}$
+
+故 $f(x)$ 在 $(0,+\infty)$ 内可导.
+
+由 $f^{\prime}(x) = \frac{1}{x}$ 积分得 $f(x) = \ln x + C.$ 又由 $f(1) = 0$ ，得 $C = 0$ ，所以 $f(x) = \ln x$"
+80121306,880,微积分,第二章 一元函数微分学,,6,基础题,解答题,,"设 $f(x) = \begin{cases} e^{-\frac{1}{x^2}}, & x \neq 0, \\ 0, & x = 0, \end{cases}$ 求 $f^{(n)}(0)$ .",,,,,"解 $f'(0) = \lim\limits_{x \to 0} \frac{f(x) - f(0)}{x} = \lim\limits_{x \to 0} \frac{\mathrm{e}^{-\frac{1}{x^2}}}{x} = 0$ . 当 $x \neq 0$ 时, $f'(x) = \frac{2}{x^3} \mathrm{e}^{-\frac{1}{x^2}}$ , 故
+
+$f ^ {\prime \prime} (0) = \lim\limits_ {x \rightarrow 0} \frac {f ^ {\prime} (x) - f ^ {\prime} (0)}{x} = \lim\limits_ {x \rightarrow 0} \frac {1}{x} \cdot \frac {2}{x ^ {3}} \cdot \mathrm{e} ^ {- \frac {1}{x ^ {2}}} = \lim\limits_ {x \rightarrow 0} \frac {2}{x ^ {4}} \mathrm{e} ^ {- \frac {1}{x ^ {2}}} = 0.$
+
+同理可得 $f^{(k)}(0)=0\quad(k=3,4,\cdots)$ ，所以 $f^{(n)}(0)=0$ .
+
+【注】利用洛必达法则,对任意正整数 k,有 $\lim\limits_{x\to0}\frac{e^{-\frac{1}{x^{2}}}}{x^{k}}=0.$"
+80121307,880,微积分,第二章 一元函数微分学,,7,基础题,解答题,,"设 $f(x)$ 二阶可导, $f(0)=0, f'(0)=1, f''(0)=2$ , 求 $\lim\limits_{x\to0}\frac{f(x)-x}{x^{2}}$ .",,,,,"解 $\lim\limits_{x\to0}\frac{f(x)-x}{x^{2}}=\lim\limits_{x\to0}\frac{f'(x)-1}{2x}=\lim\limits_{x\to0}\frac{f'(x)-f'(0)}{2x}=\frac{1}{2}f''(0)=1.$
+
+【注】 ① 错误解法是：
+
+$\lim\limits_ {x \to 0} \frac {f (x) - x}{x ^ {2}} = \lim\limits_ {x \to 0} \frac {f ^ {\prime} (x) - 1}{2 x} = \lim\limits_ {x \to 0} \frac {f ^ {\prime \prime} (x)}{2} = \frac {1}{2} f ^ {\prime \prime} (0) = 1,$
+
+题中条件是 $f(x)$ 二阶可导，不能保证 $f''(x)$ 连续，故 $\lim\limits_{x\to0}\frac{f''(x)}{2}=\frac{1}{2}f''(0)$ 错误.
+
+② 此题也可用泰勒公式求解. 由于
+
+$f (x) = f (0) + f ^ {\prime} (0) x + \frac {f ^ {\prime \prime} (0)}{2 !} x ^ {2} + o (x ^ {2}) = x + x ^ {2} + o (x ^ {2}),$
+
+故
+
+$\lim\limits_ {x \rightarrow 0} \frac {f (x) - x}{x ^ {2}} = \lim\limits_ {x \rightarrow 0} \frac {x + x ^ {2} + o (x ^ {2}) - x}{x ^ {2}} = 1.$"
+80121308,880,微积分,第二章 一元函数微分学,,8,基础题,解答题,,"设函数 $f(x)$ 在 $x = 0$ 处连续, 且 $\lim\limits_{x \to 0} \frac{xf(x) - (1 + x)^{2x} + 1}{x^2} = 1$ . 证明: $f(x)$ 在 $x = 0$ 处可导, 并求 $f'(0)$ .",,,,,"证 由 $\lim\limits_{x\to 0}\frac{xf(x) - (1 + x)^{2x} + 1}{x^2} = 1$ ，并根据极限与无穷小的关系，有
+
+$\frac {x f (x) - (1 + x) ^ {2 x} + 1}{x ^ {2}} = 1 + \alpha (\text {当} x \to 0 \text {时}, \alpha \to 0),$
+
+即
+
+$x f (x) - \mathrm{e} ^ {2 x \ln (1 + x)} + 1 = x ^ {2} + x ^ {2} \alpha .①$
+
+由式 ①, 可得
+
+$\begin{array}{r l} f (x) & = \frac {1}{x} [ x ^ {2} + x ^ {2} \alpha + \mathrm{e} ^ {2 x \ln (1 + x)} - 1 ] \\ & = x + x \alpha + \frac {1}{x} [ \mathrm{e} ^ {2 x \ln (1 + x)} - 1 ]. \end{array}$
+
+由 $f(x)$ 在 $x = 0$ 处连续，知 $\lim\limits_{x\to 0}f(x) = f(0)$ ，即有
+
+$f (0) = \lim\limits_ {x \to 0} f (x) = \lim\limits_ {x \to 0} \frac {1}{x} [ \mathrm{e} ^ {2 x \ln (1 + x)} - 1 ] = \lim\limits_ {x \to 0} \frac {2 x \ln (1 + x)}{x} = 0.$
+
+故
+
+$\begin{array}{r l}f ^ {\prime} (0)&= \lim\limits_ {x \rightarrow 0} \frac {f (x) - f (0)}{x} = \lim\limits_ {x \rightarrow 0} \frac {x + x \alpha + \frac {1}{x} [ \mathrm{e} ^ {2 x \ln (1 + x)} - 1 ]}{x}\\&= 1 + \lim\limits_ {x \rightarrow 0} \frac {\mathrm{e} ^ {2 x \ln (1 + x)} - 1}{x ^ {2}} = 1 + \lim\limits_ {x \rightarrow 0} \frac {2 x \ln (1 + x)}{x ^ {2}}\\&= 1 + \lim\limits_ {x \rightarrow 0} \frac {2 x ^ {2}}{x ^ {2}} = 1 + 2 = 3.\end{array}$"
+80121309,880,微积分,第二章 一元函数微分学,,9,基础题,解答题,,"设 $f(x)$ 在 $[a,b]$ 上连续, 在 $(a,b)$ 内可导, 0 < a < b, 且 $f(a)=f(b)=0$ , 证明:
+(I) 至少存在一点 $\xi \in (a, b)$ ，使得 $2f(\xi) + \xi f'(\xi) = 0;$
+(II) 至少存在一点 $\eta \in (a, b)$ ，使得 $2\eta f(\eta) - f'(\eta) = 0$ .",,,,,"证（Ⅰ）令 $F(x) = x^{2}f(x)$ ，则 $F(a) = F(b) = 0$ ，由罗尔定理，知存在一点 $\xi \in (a, b)$ ，使得 $F'(\xi) = 0$ ，即 $2\xi f(\xi) + \xi^2 f'(\xi) = 0$ ，故
+
+$2 f (\xi) + \xi f ^ {\prime} (\xi) = 0.$
+
+（Ⅱ）令 $G(x)=\mathrm{e}^{-x^{2}}f(x)$ ，则 $G(a)=G(b)=0$ ，由罗尔定理，知存在一点 $\eta\in(a,b)$ ，使得 $G'(\eta)=0$ ，即 $-2\eta\mathrm{e}^{-\eta^{2}}f(\eta)+\mathrm{e}^{-\eta^{2}}f'(\eta)=0$ ，故 $2\eta f(\eta)-f'(\eta)=0$ 。"
+80121310,880,微积分,第二章 一元函数微分学,,10,基础题,解答题,,"设 $f(x)$ 在 $[0, +\infty)$ 上连续，在 $(0, +\infty)$ 内可导，且 $f(0) = 0$ ， $\lim\limits_{x \to +\infty} f(x) = 0$ ，证明：至少存在一点 $\xi \in (0, +\infty)$ ，使得 $f'(\xi) = 0$ .",,,,,"证 只要证 $f(x)$ 在 $(0, +\infty)$ 内取得极值即可.
+
+若 $f(x)=0$ ，则在 $(0,+\infty)$ 内处处有 $f'(x)=0$ ，因此不妨设 $f(x)$ 在 $(0,+\infty)$ 内不恒为 0，于是存在 $x_{1}>0$ ，使得 $f(x_{1})\neq0$ ，故不妨设 $f(x_{1})>0$ 。
+
+由 $\lim\limits_{x\to+\infty}f(x)=0$ , 知存在正实数 $M>x_{1}$ , 使得当 x>M 时, 有 $|f(x)|<f(x_1) .$
+
+又 $f(x)$ 在 $[0,M]$ 上连续，所以存在 $\xi\in[0,M]$ ，使得
+
+$f (\xi) = \max _ {0 \leqslant x \leqslant M} \{f (x) \},$
+
+于是 $f(\xi)$ 是 $f(x)$ 在 $(0, +\infty)$ 内的最大值，也是 $f(x)$ 的极值，故 $f'(\xi) = 0$ .
+
+【注】此题可视为罗尔定理的推广."
+80121311,880,微积分,第二章 一元函数微分学,,11,基础题,解答题,,"设 $f(x)$ 在 $[0,1]$ 上可导, $f(0) = 0, f(1) = 1$ , 且 $f(x)$ 不恒等于 $x$ , 证明: 存在一点 $\xi \in (0,1)$ , 使得 $f'(\xi) > 1$ .",,,,,"证 由 $f(x)$ 不恒等于 x，可知存在 $x_{0} \in (0,1)$ ，使得 $f(x_{0}) \neq x_{0}$ .
+
+若 $f(x_0) > x_0$ ，根据拉格朗日中值定理，知存在一点 $\xi_{1}\in (0,x_{0})$ ，使得
+
+$f ^ {\prime} (\xi_ {1}) = \frac {f (x _ {0}) - f (0)}{x _ {0} - 0} > \frac {x _ {0}}{x _ {0}} = 1;$
+
+若 $f(x_0) < x_0$ ，根据拉格朗日中值定理，知存在一点 $\xi_2 \in (x_0, 1)$ ，使得
+
+$f ^ {\prime} (\xi_ {2}) = \frac {f (1) - f (x _ {0})}{1 - x _ {0}} > \frac {1 - x _ {0}}{1 - x _ {0}} = 1.$
+
+综上可知,知存在一点 $\xi\in(0,1)$ , 使得 $f'(\xi)>1$ ."
+80121312,880,微积分,第二章 一元函数微分学,,12,基础题,解答题,,"设 $f(x)$ 在 $[0,1]$ 上连续, 在 $(0,1)$ 内可导, 且 $f(0)=0, f(1)=1$ . 证明:
+(I) 存在 $x_{0} \in (0,1)$ ，使得 $f(x_{0}) = 2(1 - x_{0})$ ;
+(II) 存在两点 $\xi, \eta \in (0,1)$ , 且 $\xi \neq \eta$ , 使得 $f'(\xi)[1 + f'(\eta)] = 2$ .",,,,,"证（Ⅰ）令 $F(x)=f(x)-2(1-x)$ ，则 $F(x)$ 在 $[0,1]$ 上连续，且 $F(0)=-2<0, F(1)=1>0$ 。由零点定理，知存在 $x_{0}\in(0,1)$ ，使得 $F(x_{0})=0$ ，即 $f(x_{0})=2(1-x_{0})$ 。
+
+(Ⅱ) $f(x)$ 在 $[0,x_{0}]$ 和 $[x_{0},1]$ 上分别应用拉格朗日中值定理,存在 $\xi\in(0,x_{0}),\eta\in(x_{0},1)$ ,使得
+
+$f ^ {\prime} (\xi) = \frac {f (x _ {0}) - f (0)}{x _ {0} - 0} = \frac {f (x _ {0})}{x _ {0}} = \frac {2 (1 - x _ {0})}{x _ {0}},$
+
+$f ^ {\prime} (\eta) = \frac {f (1) - f (x _ {0})}{1 - x _ {0}} = \frac {1 - f (x _ {0})}{1 - x _ {0}} = \frac {2 x _ {0} - 1}{1 - x _ {0}},$
+
+所以
+
+$f ^ {\prime} (\xi) [ 1 + f ^ {\prime} (\eta) ] = \frac {2 (1 - x _ {0})}{x _ {0}} \Big (1 + \frac {2 x _ {0} - 1}{1 - x _ {0}} \Big) = 2.$"
+80121313,880,微积分,第二章 一元函数微分学,,13,基础题,解答题,,"设 $f(x)$ 在 [0,1] 上连续, 在 (0,1) 内可导, 已知在 (0,1) 内, 对任意 $x_{1} < x_{2}$ , 有 $f\left(\frac{x_{1} + x_{2}}{2}\right) \geqslant \frac{f(x_{1}) + f(x_{2})}{2}$ , 证明: 在 (0,1) 内存在 $\xi_{1} < \xi_{2}$ , 使得 $f'(\xi_{1}) \geqslant f'(\xi_{2})$ .",,,,,"证 令 $x_0 = \frac{x_1 + x_2}{2}$ , 将不等式变形为 $f(x_0) \geqslant \frac{f(x_1) + f(x_2)}{2}$ , 即
+
+$f (x _ {0}) - f (x _ {1}) \geqslant f (x _ {2}) - f (x _ {0}).①$
+
+由拉格朗日中值定理,得
+
+$\begin{array}{r l} & {f (x _ {0}) - f (x _ {1}) = f ^ {\prime} (\xi_ {1}) (x _ {0} - x _ {1}) \quad (\xi_ {1} \text {介于} x _ {1} \text {与} x _ {0} \text {之间}),} \\ & {f (x _ {2}) - f (x _ {0}) = f ^ {\prime} (\xi_ {2}) (x _ {2} - x _ {0}) \quad (\xi_ {2} \text {介于} x _ {0} \text {与} x _ {2} \text {之间}),} \end{array}$
+
+将以上两式同时代入式 ①, 得
+
+$f ^ {\prime} (\xi_ {1}) (x _ {0} - x _ {1}) \geqslant f ^ {\prime} (\xi_ {2}) (x _ {2} - x _ {0}),$
+
+而 $x_0 - x_1 = x_2 - x_0 = \frac{x_2 - x_1}{2} > 0$ ，故 $f'(\xi_1) \geqslant f'(\xi_2)$ ."
+80121314,880,微积分,第二章 一元函数微分学,,14,基础题,解答题,,"设 $f(x)$ 在 $[0,1]$ 上二阶可导， $|f''(x)| \leqslant 1$ ， $f(x)$ 在 $(0,1)$ 内取得最小值，证明：$\left| f ^ {\prime} (0) \right| + \left| f ^ {\prime} (1) \right| \leqslant 1.$",,,,,"证 由 $f(x)$ 在(0,1)内取得最小值，知存在一点 $x_0 \in (0,1)$ ，使得 $f(x_0)$ 为 $f(x)$ 在(0,1)内的最小值，于是 $f'(x_0) = 0$ .
+
+由拉格朗日中值定理,有
+
+$\begin{array}{l l} {f ^ {\prime} (x _ {0}) - f ^ {\prime} (0) = f ^ {\prime \prime} (\xi_ {1}) (x _ {0} - 0)} & {(0 < \xi_ {1} < x _ {0}),} \\ {f ^ {\prime} (1) - f ^ {\prime} (x _ {0}) = f ^ {\prime \prime} (\xi_ {2}) (1 - x _ {0})} & {(x _ {0} < \xi_ {2} < 1),} \end{array}$
+
+于是
+
+两式相加, 得
+
+$\begin{array}{r l} & {\mid f ^ {\prime} (0) \mid = \mid f ^ {\prime \prime} (\xi_ {1}) \mid (x _ {0} - 0) \leqslant x _ {0},} \\ & {\mid f ^ {\prime} (1) \mid = \mid f ^ {\prime \prime} (\xi_ {2}) \mid (1 - x _ {0}) \leqslant 1 - x _ {0},} \\ & {\quad \mid f ^ {\prime} (0) \mid + \mid f ^ {\prime} (1) \mid \leqslant 1.} \end{array}$"
+80121315,880,微积分,第二章 一元函数微分学,,15,基础题,解答题,,"设 $f(x)$ 在 $[0,1]$ 上二阶可导, 且 $f(0) = f(1) = 2\int_{\frac{1}{2}}^{1} f(x) \, \mathrm{d}x$ , 证明:
+(I) 至少存在一点 $\xi \in (0,1)$ ，使得 $f''(\xi) = 0;$
+(II) 对 $\forall \lambda \in R,$ 至少存在一点 $\eta \in (0,1)$ ，使得 $f''(\eta) - \lambda f'(\eta) = 0.$",,,,,"证（Ⅰ）由推广的积分中值定理，知存在一点 $c \in \left(\frac{1}{2}, 1\right)$ ，使得
+
+$2 \int_ {\frac {1}{2}} ^ {1} f (x) \mathrm{d} x = 2 f (c) \left(1 - \frac {1}{2}\right) = f (c),$
+
+于是 $f(0) = f(c) = f(1)$ ，在 $[0, c]$ 和 $[c, 1]$ 上分别应用罗尔定理，有
+
+$f ^ {\prime} \left(\xi_ {1}\right) = 0 (0 < \xi_ {1} < c), f ^ {\prime} \left(\xi_ {2}\right) = 0 (c < \xi_ {2} < 1)$
+
+在 $[\xi_1, \xi_2]$ 上再应用罗尔定理，有 $f''(\xi) = 0, \xi \in (\xi_1, \xi_2) \subset (0, 1)$ .
+
+（Ⅱ）令 $F(x)=\mathrm{e}^{-\lambda x}f'(x)$ ，则 $F(\xi_{1})=F(\xi_{2})=0$ ，由罗尔定理，知至少存在一点 $\eta\in(\xi_{1},\xi_{2})\subset(0,1)$ ，使得 $F'(\eta)=0$ ，即
+
+$\mathrm{e} ^ {- \lambda \eta} [ f ^ {\prime \prime} (\eta) - \lambda f ^ {\prime} (\eta) ] = 0,$
+
+故 $f''(\eta)-\lambda f'(\eta)=0.$"
+80121316,880,微积分,第二章 一元函数微分学,,16,基础题,解答题,,"设 $a, b$ 为正数, 证明: 至少存在一点 $\xi \in (a, b)$ , 使得 $\frac{ae^b - be^a}{a - b} = e^\xi (1 - \xi)$ .",,,,,"证 $\frac{a\mathrm{e}^b - b\mathrm{e}^a}{a - b} = \mathrm{e}^\xi (1 - \xi)$ 等式左边分子、分母同时除以 $ab$ ，有
+
+$\frac {\frac {e ^ {b}}{b} - \frac {e ^ {a}}{a}}{\frac {1}{b} - \frac {1}{a}} = e ^ {\xi} (1 - \xi).$
+
+对 $F(x) = \frac{\mathrm{e}^x}{x}, G(x) = \frac{1}{x}$ 在 $[a, b]$ 上应用柯西中值定理，有
+
+$\frac {\frac {e ^ {b}}{b} - \frac {e ^ {a}}{a}}{\frac {1}{b} - \frac {1}{a}} = \frac {\frac {\xi e ^ {\xi} - e ^ {\xi}}{\xi^ {2}}}{- \frac {1}{\xi^ {2}}} = e ^ {\xi} (1 - \xi) \quad (a < \xi < b),$
+
+故原等式成立."
+80121317,880,微积分,第二章 一元函数微分学,,17,基础题,解答题,,"证明下列不等式:
+(I) 当 $0 < x < \pi$ 时, 有 $\sin\frac{x}{2} > \frac{x}{\pi}$ ;
+(II) 当 e < a < b 时, 有 $a^{b} > b^{a}$ ;
+(III) 当 $x > 0$ 时, 有 $(x^{2} - 1)\ln x \geqslant (x - 1)^{2}$ ;
+(IV) 若 $\lim\limits_{x\to 0}\frac{f(x)}{x} = 1$ ，且 $f''(x) > 0$ ，则有 $f(x)\geqslant x$",,,,,"证（I）要证 $\sin \frac{x}{2} > \frac{x}{\pi}, 0 < x < \pi$ ，只需证 $\frac{\sin \frac{x}{2}}{x} > \frac{1}{\pi}$ . 令 $f(x) = \frac{\sin \frac{x}{2}}{x} - \frac{1}{\pi}$ ，则
+
+$f ^ {\prime} (x) = \frac {\frac {x}{2} \cos \frac {x}{2} - \sin \frac {x}{2}}{x ^ {2}} = \frac {\left(\frac {x}{2} - \tan \frac {x}{2}\right) \cos \frac {x}{2}}{x ^ {2}}.$
+
+当 $0 < x < \pi$ 时， $\cos \frac{x}{2} > 0, \tan \frac{x}{2} > \frac{x}{2}$ ，故 $f'(x) < 0$ ，从而 $f(x)$ 单调减少，于是 $f(x) > f(\pi) = 0$ ，即 $f(x) = \frac{\sin \frac{x}{2}}{x} - \frac{1}{\pi} > 0.$
+
+（Ⅱ）要证 $a^b > b^a$ ，只需证 $\mathrm{e}^{b\ln a} > \mathrm{e}^{a\ln b}$ ，即证 $b\ln a > a\ln b$ .
+
+令 $f(x) = x\ln a - a\ln x$ ，且 $x\geqslant a$ ，则 $f^{\prime}(x) = \ln a - \frac{a}{x}$ 由 $\mathrm{e} < a < b$ ，得
+
+$\ln b > \ln a > \ln e = 1,$
+
+故 $f'(x) > 1 - \frac{a}{x} \geqslant 0$ ，从而当 $x \geqslant a$ 时， $f(x)$ 严格单调增加，于是 $f(b) > f(a)$ ，即 $b \ln a > a \ln b$ ，所以原不等式成立.
+
+(Ⅲ) 令 $f(x) = (x^2 - 1)\ln x - (x - 1)^2$ ，则
+
+$f ^ {\prime} (x) = 2 x \ln x - x + 2 - \frac {1}{x}, f ^ {\prime} (1) = 0,$
+
+$f ^ {\prime \prime} (x) = 2 \ln x + 1 + \frac {1}{x ^ {2}}, f ^ {\prime \prime} (1) > 0,$
+
+$f ^ {\prime \prime \prime} (x) = \frac {2 (x ^ {2} - 1)}{x ^ {3}}.$
+
+当 0 < x < 1 时， $f'''(x) < 0$ ; 当 $1 < x < +\infty$ 时， $f'''(x) > 0$ ，故 $f''(x)$ 在 $(0,1)$ 内单调减少，在 $(1,+\infty)$ 内单调增加，因而 $f''(x)$ 在 x = 1 处取到最小值.
+
+又 $f''(1) > 0$ ，所以当 $x \in (0, +\infty)$ 时， $f''(x) > 0$ ，从而 $f'(x)$ 在 $(0, +\infty)$ 内单调增加.
+
+又由 $f'(1)=0$ ，可知当 0<x<1 时， $f'(x)<0$ ；当 $1 时， f'(x)>0 。$
+
+同理可知 $f(x)$ 在 x = 1 处取到最小值，又 $f(1) = 0$ ，所以 $f(x) > 0$ ，故原不等式成立.
+
+(Ⅳ) 由已知,有
+
+$f (0) = \lim\limits_ {x \to 0} f (x) = \lim\limits_ {x \to 0} x \cdot \frac {f (x)}{x} = 0,$
+
+$f ^ {\prime} (0) = \lim\limits_ {x \to 0} \frac {f (x) - f (0)}{x - 0} = \lim\limits_ {x \to 0} \frac {f (x)}{x} = 1.$
+
+由泰勒公式,有
+
+$f(x)=f(0)+f'(0)x+\frac{f''(\xi)}{2!}x^{2}=x+\frac{f''(\xi)}{2}x^{2}$ ( $\xi$ 介于x与0之间),
+
+由 $f''(x)>0$ , 知 $f(x)\geqslant x$ , 故原不等式成立."
+80121318,880,微积分,第二章 一元函数微分学,,18,基础题,解答题,,"设 $x > 0$ , 证明: $\left(1 + \frac{1}{2x}\right)\left(1 + \frac{1}{x}\right)^x > e$ .",,,,,"证 对所证不等式 $\left(1+\frac{1}{2x}\right)\left(1+\frac{1}{x}\right)^{x}>e$ 两边同时取对数,得
+
+$\ln \frac {2 x + 1}{2 x} + \ln \left(1 + \frac {1}{x}\right) ^ {x} > 1.$
+
+令 $f(x) = \ln \frac{2x + 1}{2x} +\ln \left(1 + \frac{1}{x}\right)^x -1,x > 0$ ，则
+
+$\lim\limits_ {x \rightarrow + \infty} f (x) = \ln 1 + \ln \mathrm{e} - 1 = 0,$
+
+$f ^ {\prime} (x) = - \frac {1}{(2 x + 1) x} + \ln \frac {x + 1}{x} - \frac {1}{x + 1},$
+
+$\lim\limits_ {x \rightarrow + \infty} f ^ {\prime} (x) = 0,$
+
+$f ^ {\prime \prime} (x) = \frac {4 x + 1}{(2 x ^ {2} + x) ^ {2}} - \frac {1}{x ^ {2} + x} + \frac {1}{(x + 1) ^ {2}} = \frac {5 x ^ {2} + 5 x + 1}{(2 x ^ {2} + x) ^ {2} (x + 1) ^ {2}} > 0,$
+
+故 $f'(x)$ 单调增加且 $\lim\limits_{x\to+\infty}f'(x)=0$ ，从而当 x>0 时，有 $f'(x)<0$ ，所以 $f(x)$ 单调减少且 $\lim\limits_{x\to+\infty}f(x)=0$ 。故当 x>0 时， $f(x)>0$ ，所证不等式成立。"
+80121319,880,微积分,第二章 一元函数微分学,,19,基础题,解答题,,"求函数 $y=(x-1)e^{\frac{\pi}{2}+\arctan x}$ 的单调区间和极值, 并求其渐近线.",,,,,"解 $y' = \frac{x^{2} + x}{1 + x^{2}} e^{\frac{\pi}{2} + \arctan x}$ ，令 $y' = 0$ ，得 x = 0, x = -1.
+
+列表如下：
+
+|x|$(-\infty,-1)$|-1|(-1,0)|0|$(0,+\infty)$|
+|---|---|---|---|---|---|
+|y'|\+|0|-|0|\+|
+|y|$\nearrow$|$-2e^{\frac{\pi}{4}}$|$\searrow$|$-e^{\frac{\pi}{2}}$|$\nearrow$|
+
+由列表可知，单调减少区间为 $(-1,0)$ ，单调增加区间为 $(-∞,-1)$ 和 $(0,+∞)$ 。极小值为 $f(0)=-\mathrm{e}^{\frac{\pi}{2}}$ ，极大值为 $f(-1)=-2\mathrm{e}^{\frac{\pi}{4}}$ 。
+
+$k _ {1} = \lim\limits_ {x \to + \infty} \frac {y}{x} = \lim\limits_ {x \to + \infty} \frac {(x - 1) \mathrm{e} ^ {\frac {\pi}{2} + \arctan x}}{x} = \mathrm{e} ^ {\pi},$
+
+$\begin{array}{r l} b _ {1} & = \lim\limits_ {x \to + \infty} (y - k _ {1} x) = \lim\limits_ {x \to + \infty} \frac {\mathrm{e} ^ {\frac {\pi}{2} + \arctan x} - \mathrm{e} ^ {\pi}}{\frac {1}{x}} - \lim\limits_ {x \to + \infty} \mathrm{e} ^ {\frac {\pi}{2} + \arctan x} \\ & = \lim\limits_ {x \to + \infty} \frac {\mathrm{e} ^ {\pi} \left(\mathrm{e} ^ {\arctan x - \frac {\pi}{2}} - 1\right)}{\frac {1}{x}} - \mathrm{e} ^ {\pi} = \lim\limits_ {x \to + \infty} \mathrm{e} ^ {\pi} \cdot \frac {\arctan x - \frac {\pi}{2}}{\frac {1}{x}} - \mathrm{e} ^ {\pi} \\ & = \mathrm{e} ^ {\pi} \lim\limits_ {x \to + \infty} \frac {- x ^ {2}}{1 + x ^ {2}} - \mathrm{e} ^ {\pi} = - \mathrm{e} ^ {\pi} - \mathrm{e} ^ {\pi} = - 2 \mathrm{e} ^ {\pi}. \end{array}$
+
+同理，当 $x \to -\infty$ 时， $k_{2} = 1, b_{2} = -2$ ，故有两条斜渐近线，分别为
+
+$y = \mathrm{e} ^ {\pi} (x - 2), \quad y = x - 2,$
+
+且函数 y 没有水平渐近线和铅直渐近线."
+80121320,880,微积分,第二章 一元函数微分学,,20,基础题,解答题,,"设 $f(x) = \begin{cases} x^{2x}, & x > 0, \\ x + 2, & x \leqslant 0, \end{cases}$ 求 $f(x)$ 的单调区间和极值.",,,,,"解 因为
+
+$\begin{array}{r l}\lim\limits_ {x \rightarrow 0 ^ {+}} f (x)&= \lim\limits_ {x \rightarrow 0 ^ {+}} x ^ {2 x} = \lim\limits_ {x \rightarrow 0 ^ {+}} \mathrm{e} ^ {2 x \ln x} = \mathrm{e} ^ {\lim\limits_ {x \rightarrow 0 ^ {+}} 2 x \ln x} = \mathrm{e} ^ {0} = 1,\\&\lim\limits_ {x \rightarrow 0 ^ {-}} f (x) = \lim\limits_ {x \rightarrow 0 ^ {-}} (x + 2) = 2,\end{array}$
+
+故 $f(x)$ 在 x = 0 处不连续, 所以不可导, 于是
+
+$f ^ {\prime} (x) = \left\{ \begin{array}{l l} 2 x ^ {2 x} (\ln x + 1), & x > 0, \\ 1, & x < 0. \end{array} \right.$
+
+令 $f'(x)=0$ , 得驻点 $x=\frac{1}{e}$ , 故 x=0 和 $x=\frac{1}{e}$ 是可能的极值点.
+
+当 $x < 0$ 时， $f'(x) = 1 > 0$ ；当 $0 < x < \frac{1}{\mathrm{e}}$ 时， $f'(x) < 0$ ，故 $f(0) = 2$ 是 $f(x)$ 的极大值。当 $0 < x < \frac{1}{\mathrm{e}}$ 时， $f'(x) < 0$ ；当 $x > \frac{1}{\mathrm{e}}$ 时， $f'(x) > 0$ ，故 $f\left(\frac{1}{\mathrm{e}}\right) = \mathrm{e}^{-\frac{2}{\mathrm{e}}}$ 是 $f(x)$ 的极小值。综上可知， $f(x)$ 在 $(- \infty, 0)$ 和 $\left(\frac{1}{\mathrm{e}}, + \infty\right)$ 内单调增加，在 $\left(0, \frac{1}{\mathrm{e}}\right)$ 内单调减少。"
+80121321,880,微积分,第二章 一元函数微分学,,21,基础题,解答题,,求曲线 $y = \sqrt{4x^2 + x} \ln \left(2 + \frac{1}{x}\right)$ 的全部渐近线.,,,,,"解 函数 $y = \sqrt{4x^{2} + x} \ln\left(2 + \frac{1}{x}\right)$ 在 $\left[-\frac{1}{2}, 0\right]$ 上没有定义. 由于 $\lim\limits_{x \to \left(-\frac{1}{2}\right)^{-}} y = -\infty$ ,
+
+$\begin{array}{r l} \lim\limits_ {x \to 0 ^ {+}} y & = \lim\limits_ {x \to 0 ^ {+}} \sqrt {4 x ^ {2} + x} \ln \left(2 + \frac {1}{x}\right) \\ & = \lim\limits_ {x \to 0 ^ {+}} \sqrt {4 x ^ {2} + x} \ln (2 x + 1) - \lim\limits_ {x \to 0 ^ {+}} (\sqrt {4 x + 1} \cdot \sqrt {x} \ln x) = 0, \end{array}$
+
+故 $x = -\frac{1}{2}$ 是铅直渐近线.
+
+$\begin{array}{r l} & k = \lim\limits_ {x \to + \infty} \frac {y}{x} = \lim\limits_ {x \to + \infty} \frac {| x |}{x} \sqrt {4 + \frac {1}{x}} \ln \left(2 + \frac {1}{x}\right) = 2 \ln 2, \\ & b = \lim\limits_ {x \to + \infty} [ y - (2 \ln 2) x ] \\ & = \lim\limits_ {x \to + \infty} (\sqrt {4 x ^ {2} + x} - 2 x) \ln \left(2 + \frac {1}{x}\right) + \lim\limits_ {x \to + \infty} 2 x \left[ \ln \left(2 + \frac {1}{x}\right) - \ln 2 \right] \\ & = \lim\limits_ {x \to + \infty} \frac {x}{\sqrt {4 x ^ {2} + x} + 2 x} \ln \left(2 + \frac {1}{x}\right) + \lim\limits_ {x \to + \infty} 2 x \ln \left(1 + \frac {1}{2 x}\right) = \frac {1}{4} \ln 2 + 1. \end{array}$
+
+同理，可求得 $\lim\limits_{x\to -\infty}\frac{y}{x} = -2\ln 2$ ， $\lim\limits_{x\to -\infty}[y + (2\ln 2)x] = -\frac{1}{4}\ln 2 - 1$ ，所以曲线有两条斜渐近线，分别为
+
+$y = (2 \ln 2) x + \frac {1}{4} \ln 2 + 1, \quad y = - (2 \ln 2) x - \frac {1}{4} \ln 2 - 1.$"
+80121322,880,微积分,第二章 一元函数微分学,,22,基础题,解答题,,讨论曲线 $y = 4 \ln x + k$ 与 $y = 4x + \ln^{4}x$ 交点的个数.,,,,,"解 问题等价于讨论 $\ln^{4}x - 4\ln x + 4x - k = 0$ 不同实根的个数.
+
+令 $f(x) = \ln^4 x - 4\ln x + 4x - k$ ，定义域为 $(0, + \infty)$ ，则
+
+$f ^ {\prime} (x) = \frac {4 (\ln^ {3} x - 1 + x)}{x} = 0,$
+
+得唯一驻点 x = 1.
+
+当 0 < x < 1 时， $f'(x) < 0$ ， $f(x)$ 单调减少；当 x > 1 时， $f'(x) > 0$ ， $f(x)$ 单调增加，故 $f(1) = 4 - k$ 为 $f(x)$ 的最小值，且 $\lim\limits_{x \to +\infty} f(x) = +\infty$ ， $\lim\limits_{x \to +\infty} f(x) = +\infty$ 。
+
+当 4-k>0 时， $f(x)=0$ 没有实根，无交点；
+
+当 4-k=0 时， $f(x)=0$ 有唯一实根，交点个数为 1；
+
+当 $4 - k < 0$ 时， $f(x) = 0$ 仅有两个不同实根，交点个数为2.
+
+【注】设 $f(x)$ 在 $[a,b]$ 上连续，且
+
+$\lim\limits_ {x \rightarrow a ^ {+}} f (x) > 0 (< 0), \quad \lim\limits_ {x \rightarrow b ^ {-}} f (x) > 0 (< 0),$
+
+若仅存在 $x_0 \in (a, b)$ , 使得 $f(x_0)$ 为 $f(x)$ 的极小值 $m$ 或极大值 $M$ , 则:
+
+① 当 $m > 0$ （或 $M < 0$ ）时，在 $[a, b]$ 上 $f(x)$ 与 $x$ 轴没有交点，故 $f(x) = 0$ 在 $[a, b]$ 上没有实根，如图2-3(a)所示；
+
+② 当 $m = 0$ (或 $M = 0$ ) 时, 在 $[a, b]$ 上 $f(x)$ 与 $x$ 轴只有一个交点, 故 $f(x) = 0$ 在 $[a, b]$ 上只有一个实根, 如图2-3(b)所示;
+
+③ 当 $m < 0$ (或 $M > 0$ ) 时, 在 $[a, b]$ 上 $f(x)$ 与 $x$ 仅有两个交点, 故 $f(x) = 0$ 在 $[a, b]$ 上仅有两个不同实根, 如图2-3(c)所示.
+
+![Image](images/80121322.jpg)
+
+(a)
+
+![Image](images/80121322-2.jpg)
+
+(b)
+
+![Image](images/80121322-3.jpg)
+
+图2-3
+
+(c)
+
+上述结论对 $(-∞,+∞)$ 仍成立."
+80122101,880,微积分,第二章 一元函数微分学,,1,综合题,选择题,,"设 $f(x)$ 在 $(1-\delta,1+\delta)(\delta>0)$ 内存在导数， $f'(x)$ 严格单调减少，且 $f(1)=f'(1)=1$ ，则（）.","在 $(1 - \delta, 1)$ 和 $(1, 1 + \delta)$ 内, 均有 $f(x) < x$","在 $(1 - \delta, 1)$ 和 $(1, 1 + \delta)$ 内, 均有 $f(x) > x$","在 $(1 - \delta, 1)$ 内, $f(x) < x$ ; 在 $(1, 1 + \delta)$ 内, $f(x) > x$","在 $(1-\delta,1)$ 内, $f(x)>x$ ; 在 $(1,1+\delta)$ 内, $f(x)$","A.
+
+解 比较 $f(x)$ 与 x 的大小, 考虑用作差法构造新函数, 利用单调性求解.
+
+令 $F(x)=f(x)-x$ ，则 $F'(x)=f'(x)-1$ ， $F(1)=f(1)-1=0$ 。
+
+因 $f'(x)$ 严格单调减少, 所以当 $x \in (1 - \delta, 1)$ 时, $f'(x) > f'(1) = 1$ , 从而 $F'(x) = f'(x) - 1 > 0$ , 即 $F(x)$ 在 $(1 - \delta, 1)$ 内单调增加, 所以 $F(x) < F(1) = 0$ , 故 $f(x) < x$ .
+
+同理，当 $x \in (1, 1 + \delta)$ 时， $f'(1) > f'(x)$ ， $F'(x) = f'(x) - 1 < 0$ ，于是 $F(x)$ 在 $x \in (1, 1 + \delta)$ 内单调减少，故 $F(1) > F(x)$ ，即 $f(x) < x$ 。所以选项A正确。"
+80122102,880,微积分,第二章 一元函数微分学,,2,综合题,选择题,,"设 $f(x)$ 在 $[0, +\infty)$ 上二阶可导， $f(0) = 0$ ， $f''(x) < 0$ ，当 $0 < a < x < b$ 时，有（）.",$af(x) > xf(a)$,$bf(x) > xf(b)$,$xf(x) > bf(b)$,$xf(x) > af(a)$,"B.
+
+解 讨论 $\frac{f(x)}{x}$ 的单调性. 令 $F(x)=\frac{f(x)}{x}$ ，则
+
+$\begin{array}{r l} F ^ {\prime} (x) & = \frac {x f ^ {\prime} (x) - f (x)}{x ^ {2}} = \frac {x f ^ {\prime} (x) - [ f (x) - f (0) ]}{x ^ {2}} \\ & = \frac {x f ^ {\prime} (x) - f ^ {\prime} (\xi) x}{x ^ {2}} \quad (0 < \xi < x < b). \end{array}$
+
+由于 $f''(x)<0$ ，则 $f'(x) $，故 $F'(x)<0$ ，所以$ F(x) $单调减少，故 $\frac{f(x)}{x}>\frac{f(b)}{b}$ 。选项 B 正确。"
+80122103,880,微积分,第二章 一元函数微分学,,3,综合题,选择题,,设 $f(x)=(x-a)\ln x-x$ 有两个极值点，则实数 a 的取值范围为（）.,"$\left[-\frac{1}{e}, +\infty\right)$","$\left(-\frac{1}{e},+\infty\right)$","$\left[-\frac{1}{e},0\right)$","$\left(-\frac{1}{e},0\right)$","解 令 $f(x) = (x - a)\ln x - x$ ，则 $f'(x) = \ln x + \frac{x - a}{x} - 1 = \ln x - \frac{a}{x}$ .
+
+因为 $f(x)$ 有两个极值点, 所以 $f'(x) = \ln x - \frac{a}{x}$ 有两个不等的正根, 即 $a = x \ln x$ 有两个不等的正根.
+
+令 $g(x) = x\ln x(x > 0)$ ，则 $g'(x) = \ln x + 1(x > 0)$ . 因为当 $0 < x < \frac{1}{\mathrm{e}}$ 时， $g'(x) < 0$ ；当 $x > \frac{1}{\mathrm{e}}$
+
+时, $g'(x)>0$ ,所以 $g(x)$ 在 $\left(0,\frac{1}{\mathrm{e}}\right)$ 内递减,在 $\left(\frac{1}{\mathrm{e}},+\infty\right)$ 内递增.故
+
+$g (x) _ {\min} = g \left(\frac {1}{\mathrm{e}}\right) = \frac {1}{\mathrm{e}} \ln \frac {1}{\mathrm{e}} = - \frac {1}{\mathrm{e}}.$
+
+当 $x \to 0$ 时, $g(x) \to 0$ ; 当 $x \to +\infty$ 时, $g(x) \to +\infty$ . 如图2-4所示, 当 $-\frac{1}{\mathrm{e}} < a < 0$ 时, $y = a$ 与 $g(x)$ 有两个不同的交点, 即当 $-\frac{1}{\mathrm{e}} < a < 0$ 时, $f(x)$ 有两个极值点.
+
+![Image](images/80122103.jpg)
+
+故选项 D 正确.
+
+图2-4"
+80122104,880,微积分,第二章 一元函数微分学,,4,综合题,选择题,,设 $f(x)$ 在 x=0 的某邻域内有定义，则 $F(x)=f(x)|\sin x|$ 在 x=0 处可导的充分必要条件是().,$\lim\limits_{x\to 0}f(x)$ 存在,$\lim\limits_{x\to0}f(x)=f(0)$,$f(x)$ 在 x=0 处可导,"$\lim\limits_{x\to0^{-}}f(x)$ 和 $\lim\limits_{x\to0^{+}}f(x)$ 均存在, 且 $\lim\limits_{x\to0^{-}}f(x)=-\lim\limits_{x\to0^{+}}f(x)$","D.
+
+解 利用导数定义,有
+
+$F _ {-} ^ {\prime} (0) = \lim\limits_ {x \to 0 ^ {-}} \frac {F (x) - F (0)}{x - 0} = \lim\limits_ {x \to 0 ^ {-}} \frac {- f (x) \sin x}{x} = - \lim\limits_ {x \to 0 ^ {-}} f (x),$
+
+$F _ {+} ^ {\prime} (0) = \lim\limits_ {x \to 0 ^ {+}} \frac {F (x) - F (0)}{x - 0} = \lim\limits_ {x \to 0 ^ {+}} \frac {f (x) \sin x}{x} = \lim\limits_ {x \to 0 ^ {+}} f (x),$
+
+$F(x)$ 在 x = 0 处可导 $\Leftrightarrow F_{-}^{\prime}(0) = F_{+}^{\prime}(0) \Leftrightarrow -\lim\limits_{x \to 0^{-}} f(x) = \lim\limits_{x \to 0^{+}} f(x)$ ,
+
+故选项 D 正确."
+80122105,880,微积分,第二章 一元函数微分学,,5,综合题,选择题,,"设 $f(x)$ 在 $(-\infty, +\infty)$ 内是连续的奇函数， $F(x) = \int_{0}^{|x|} f(t) dt$ ，则下列选项中正确的是（）.",$F(x)$ 是不可导的奇函数,$F(x)$ 是可导的偶函数,$F(x)$ 是不可导的偶函数,$F(x)$ 是可导的奇函数,"B.
+
+解 由已知,有 $f(0)=0,F(0)=0.$
+
+$F _ {+} ^ {\prime} (0) = \lim\limits_ {x \to 0 ^ {+}} \frac {F (x) - F (0)}{x} = \lim\limits_ {x \to 0 ^ {+}} \frac {\int_ {0} ^ {x} f (t) \mathrm{d} t}{x} = \lim\limits_ {x \to 0 ^ {+}} f (x) = f (0) = 0,$
+
+$F _ {-} ^ {\prime} (0) = \lim\limits_ {x \rightarrow 0 ^ {-}} \frac {F (x) - F (0)}{x} = \lim\limits_ {x \rightarrow 0 ^ {-}} \frac {\int_ {0} ^ {- x} f (t) \mathrm{d} t}{x} = \lim\limits_ {x \rightarrow 0 ^ {-}} [ - f (- x) ] = - f (0) = 0,$
+
+故 $F(x)$ 在 x=0 处可导，且 $F'(0)=0$ 。所以，有
+
+$F ^ {\prime} (x) = \left\{ \begin{array}{l l} f (x), & x > 0, \\ 0, & x = 0, \\ - f (- x), & x < 0. \end{array} \right.$
+
+即 $F(x)$ 在 $(-∞,+∞)$ 内可导.
+
+记 $h(x) = \int_{0}^{x} f(t) \, \mathrm{d}t$ ，由 $f(t)$ 是奇函数，知 $h(x)$ 是偶函数，从而 $F(x) = h(|x|)$ 是偶函数。选项 B 正确。"
+80122106,880,微积分,第二章 一元函数微分学,,6,综合题,选择题,,"设 $f(x)$ 在 $(-1,1)$ 内可导, 且 $\lim\limits_{x\to0}\frac{f(x)}{x^{2}}=1$ , 则().",$\lim\limits_{x\to 0}\frac{f'(x)}{x}$ 存在,$\lim\limits_{x\to0}\frac{f'(x)}{x}$ 不存在,"$f'(0)=0, f''(0)=2$",$f(0)$ 是 $f(x)$ 的极小值,"D.
+
+解 由 $f(x)$ 在 $(-1,1)$ 内可导，且 $\lim\limits_{x\to 0}\frac{f(x)}{x^2} = 1$ ，知 $f(0) = 0$
+
+又由 $\lim\limits_{x\to 0}\frac{f(x)}{x^2} = \lim\limits_{x\to 0}\frac{f(x) - f(0)}{x}\cdot \frac{1}{x} = 1$ ，知
+
+$\lim\limits_ {x \to 0} \frac {f (x) - f (0)}{x} = f ^ {\prime} (0) = 0,$
+
+故 x = 0 是 $f(x)$ 的驻点.
+
+由 $\lim\limits_{x\to0}\frac{f(x)}{x^{2}}=1>0$ ，且根据极限的保号性，知在x=0的去心邻域内，有 $f(x)>0=f(0)$ ，故 $f(0)$ 是 $f(x)$ 的极小值。选项D正确。
+
+对于选项A,B, $\lim\limits_{x\to 0}\frac{f'(x)}{x}$ 不一定存在.如
+
+$f (x) = \left\{ \begin{array}{l l} x ^ {3} \sin \frac {1}{x} + x ^ {2}, & x \neq 0, \\ 0, & x = 0. \end{array} \right.$
+
+$\lim\limits_ {x \to 0} \frac {f (x)}{x ^ {2}} = \lim\limits_ {x \to 0} \frac {x ^ {3} \sin \frac {1}{x} + x ^ {2}}{x ^ {2}} = 1,$
+
+$f(x)$ 是可导函数,且
+
+$f ^ {\prime} (x) = \left\{ \begin{array}{l l} 3 x ^ {2} \sin \frac {1}{x} - x \cos \frac {1}{x} + 2 x, & x \neq 0, \\ 0, & x = 0, \end{array} \right.$
+
+但 $\lim\limits_{x\to0}\frac{f'(x)}{x}=\lim\limits_{x\to0}\left(3x\sin\frac{1}{x}-\cos\frac{1}{x}+2\right)$ 不存在，故排除选项A,B.
+
+对于选项 C, 由 $\lim\limits_{x\to0}\frac{f'(x)}{x}$ 不一定存在, 知 $f''(0)=2$ 不一定成立. 故排除选项 C."
+80122107,880,微积分,第二章 一元函数微分学,,7,综合题,选择题,,"下列结论中正确的是 ( ).
+①若 $f(x)$ 在 x=a 处连续，且 $\lim\limits_{x\to0}\frac{f(a+x^{3})-f(a)}{x^{2}}$ 存在，则 $f'(a)$ 存在；
+②若 $\lim\limits_{n\to\infty}n\left[f\left(a+\frac{1}{n}\right)-f(a)\right](n$ 为正整数) 存在，则 $f'(a)$ 存在；
+③若 $f(x)=(x-a)\varphi(x)$ ，其中 $\varphi(x)$ 在 x=a 处连续，则 $f'(a)$ 存在；
+④存在 $\delta > 0$ ，对 $\forall x \in (a - \delta, a + \delta)$ ，有 $|f(x)| \leqslant L|x - a|^a$ ，其中 $L > 0$ ， $\alpha > 1$ 为常数，则 $f'(a)$ 存在.",①②,②③,②④,③④,"D.
+
+解 ① 不能推出 $f'(a)$ 存在. 因为 $\lim\limits_{x \to 0} \frac{f(a + x^3) - f(a)}{x^2} = \lim\limits_{x \to 0} \frac{f(a + x^3) - f(a)}{x^3} \cdot x$ 存在, 有可能 $\lim\limits_{x \to 0} \frac{f(a + x^3) - f(a)}{x^3}$ 为 $\infty$ (因 $\infty \cdot 0$ 型极限可能存在).
+
+② 不能推出 $f'(a)$ 存在. 如
+
+$f (x) = \left\{ \begin{array}{l l} x \sin \frac {\pi}{x}, & x \neq 0, \\ 0, & x = 0, \end{array} \right.$
+
+则 $\lim\limits_{\Delta x\to 0}\frac{f(0 + \Delta x) - f(0)}{\Delta x} = \lim\limits_{\Delta x\to 0}\sin \frac{\pi}{\Delta x}$ 不存在，即 $f^{\prime}(0)$ 不存在，但
+
+$\lim\limits_ {n \to \infty} \frac {f \left(\frac {1}{n}\right) - f (0)}{\frac {1}{n}} = \lim\limits_ {n \to \infty} \sin n \pi = 0.$
+
+③ 可推出 $f(x)$ 在 x = a 处可导, 有
+
+$f ^ {\prime} (a) = \lim\limits_ {x \to a} \frac {f (x) - f (a)}{x - a} = \lim\limits_ {x \to a} \frac {(x - a) \varphi (x) - 0}{x - a} = \varphi (a).$
+
+④ 可推出 $f'(a)$ 存在.
+
+由 $|f(x)| \leqslant L|x - a|^{\alpha}$ , 知 $f(a) = 0$ , 且
+
+$0 \leqslant \left| \frac {f (x) - f (a)}{x - a} \right| \leqslant L | x - a | ^ {\alpha - 1}, x \in (a - \delta , a + \delta).$
+
+由 $a > 1$ ，知 $\lim\limits_{x\to a}L|x - a|^{a - 1} = 0.$ 故由夹逼准则知 $\lim\limits_{x\to a}\left|\frac{f(x) - f(a)}{x - a}\right| = 0$ ，从而
+
+$f ^ {\prime} (a) = \lim\limits_ {x \to a} \frac {f (x) - f (a)}{x - a} = 0.$
+
+综上所述,选项 D 正确."
+80122108,880,微积分,第二章 一元函数微分学,,8,综合题,选择题,,下列函数在 $x = 0$ 处不可导的是 ( ).,$|x|\int_{0}^{x}\sin t^{2}dt$,$|\sin (x - \sin x)|$,$\int_{-1}^{x}\sqrt{|t|}\ln |t|dt$,$\sqrt{e^{|x|}}$,"D.
+
+解 记 $f(x)=\sqrt{\mathrm{e}^{|x|}}$ ，则 $f(0)=1$ .
+
+因
+
+$f _ {+} ^ {\prime} (0) = \lim\limits_ {x \rightarrow 0 ^ {+}} \frac {f (x) - f (0)}{x} = \lim\limits_ {x \rightarrow 0 ^ {+}} \frac {\mathrm{e} ^ {\frac {1}{2} | x |} - 1}{x} = \lim\limits_ {x \rightarrow 0 ^ {+}} \frac {\frac {1}{2} | x |}{x} = \frac {1}{2},$
+
+$f _ {-} ^ {\prime} (0) = \lim\limits_ {x \rightarrow 0 ^ {-}} \frac {f (x) - f (0)}{x} = \lim\limits_ {x \rightarrow 0 ^ {-}} \frac {\mathrm{e} ^ {\frac {1}{2} | x |} - 1}{x} = \lim\limits_ {x \rightarrow 0 ^ {-}} \frac {\frac {1}{2} | x |}{x} = - \frac {1}{2},$
+
+故 $f(x) = \sqrt{\mathrm{e}^{|x|}}$ 在 $x = 0$ 处不可导.选项D正确
+
+对于选项 A, 因为 $\int_{0}^{x}\sin t^{2}dt$ 在 x=0 处可导且为 0, $|x|$ 在 x=0 处连续但不可导, 故 $|x|\int_{0}^{x}\sin t^{2}dt$ 在 x=0 处可导.
+
+对于选项 B, 记 $f(x) = \sin(x - \sin x)$ , 则 $f(0) = 0$ ,
+
+$f ^ {\prime} (0) = \cos (x - \sin x) \cdot (1 - \cos x) \Big | _ {x = 0} = 0,$
+
+故 $|f(x)| = |\sin (x - \sin x)|$ 在 $x = 0$ 处可导.
+
+对于选项 C, 由
+
+$\begin{array}{r l} & {\underset {x \to 0 ^ {+}} {\lim} \sqrt {x} \ln x = \underset {x \to 0 ^ {+}} {\lim} \frac {\ln x}{\frac {1}{\sqrt {x}}} = \underset {x \to 0 ^ {+}} {\lim} \frac {\frac {1}{x}}{\frac {1}{- 2 \sqrt {x}} \cdot \frac {1}{x}} = \underset {x \to 0 ^ {+}} {\lim} (- 2 \sqrt {x}) = 0,} \\ & {\quad \underset {x \to 0 ^ {-}} {\lim} \sqrt {- x} \ln (- x) \overset {- x = u} {=} \underset {u \to 0 ^ {+}} {\lim} \sqrt {u} \ln u = 0,} \end{array}$
+
+知 $\lim\limits_{x\to0}\sqrt{|x|}\ln|x|=0$ ，故x=0是 $\sqrt{|x|}\ln|x|$ 的可去间断点，从而 $\int_{-1}^{x}\sqrt{|t|}\ln|t|dt$ 在x=0处可导.
+
+【注】结论：设 $F(x)=\int_{a}^{x}f(t)\mathrm{d}t,f(x)$ 在 $[a,b]$ 上除点 $x_{0}\in(a,b)$ 外连续，若 $x_{0}$ 是 $f(x)$ 的可去间断点，则 $F(x)$ 在 $x_{0}$ 处可导，且 $F'(x_{0})=\lim\limits_{x\to x_{0}}f(x)$ ."
+80122109,880,微积分,第二章 一元函数微分学,,9,综合题,选择题,,"$y=f(x)$ 在 $x_{0}$ 的某邻域内有四阶连续导数, 且 $f'(x_{0})=f''(x_{0})=f'''(x_{0})=0,f^{(4)}(x_{0})<0$ , 则().",$f(x)$ 在 $x_0$ 处取得极小值,$f(x)$ 在 $x_0$ 处取得极大值,"$(x_0, f(x_0))$ 是 $y = f(x)$ 的拐点",$f(x)$ 在 $x_0$ 的某邻域内单调减少,"B.
+
+解 由已知 $f'(x_0) = f''(x_0) = f'''(x_0) = 0$ 及泰勒公式，有
+
+$\begin{array}{r l} & {f (x) = f (x _ {0}) + f ^ {\prime} (x _ {0}) (x - x _ {0}) + \frac {f ^ {\prime \prime} (x _ {0})}{2 !} (x - x _ {0}) ^ {2} + \frac {f ^ {\prime \prime \prime} (x _ {0})}{3 !} (x - x _ {0}) ^ {3} +} \\ & {\qquad \frac {f ^ {(4)} (\xi)}{4 !} (x - x _ {0}) ^ {4} \quad (\xi \text {介于} x _ {0} \text {与} x \text {之间})} \\ & {\qquad = f (x _ {0}) + \frac {f ^ {(4)} (\xi)}{4 !} (x - x _ {0}) ^ {4}, \quad x \in (x _ {0} - \delta , x _ {0} + \delta),} \end{array}$
+
+故 $f(x) - f(x_0) = \frac{f^{(4)}(\xi)}{4!} (x - x_0)^4 < 0$ ，于是 $f(x)$ 在 $x_0$ 处取得极大值.选项B正确"
+80122110,880,微积分,第二章 一元函数微分学,,10,综合题,选择题,,"设 $f(x)$ 在 $[a, b]$ 上可导, $f(x)$ 在 $x = a$ 处取得最小值, 在 $x = b$ 处取得最大值. $F(x) = \int_{0}^{x} f(t) dt, x \in [a, b]$ , 则 ( ).",$F_{+}^{\prime\prime}(a)>0$ 且 $F_{-}^{\prime\prime}(b)<0$,$F_{+}^{\prime \prime}(a)\geqslant 0$ 且 $F_{-}^{\prime \prime}(b)\geqslant 0$,$F_{+}^{\prime\prime}(a)<0$ 且 $F_{-}^{\prime\prime}(b)<0$,$F_{+}^{\prime \prime}(a) < 0$ 且 $F_{-}^{\prime \prime}(b) > 0$,"B.
+
+解 由已知, $F'(x)=f(x)$ 在 x=a 处取得最小值,在 x=b 处取得最大值.
+
+用反证法. 若 $F_{+}^{\prime\prime}(a)<0$ , 则
+
+$F _ {+} ^ {\prime \prime} (a) = \lim\limits_ {x \rightarrow a ^ {+}} \frac {F ^ {\prime} (x) - F _ {+} ^ {\prime} (a)}{x - a} = \lim\limits_ {x \rightarrow a ^ {+}} \frac {f (x) - f (a)}{x - a} < 0.$
+
+由极限的保号性, 知在 x = a 的某去心右邻域内 $f(x) < f(a)$ , 这与 $f(x)$ 在 x = a 处取得最小值矛盾, 故 $F_{+}^{\prime\prime}(a) \geqslant 0$ . 同理, 若 $F_{-}^{\prime\prime}(b) < 0$ , 则 $f(x)$ 在 x = b 处不可能取得最大值, 所以 $F_{-}^{\prime\prime}(b) \geqslant 0$ . 选项 B 正确."
+80122111,880,微积分,第二章 一元函数微分学,,11,综合题,选择题,,"设 $f(x)$ 在 $x_0$ 的某邻域内连续, 且 $\lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{(x - x_0)^n} = 1$ , 则 ( ).","当 n 为奇数时, $x_{0}$ 是 $f(x)$ 的极大值点","当 $n$ 为奇数时, $x_0$ 是 $f(x)$ 的极小值点","当 n 为偶数时, $x_{0}$ 是 $f(x)$ 的极小值点","当 $n$ 为偶数时, $x_0$ 是 $f(x)$ 的极大值点","C.
+
+解 利用极值的定义判别.
+
+由 $\lim\limits_{x\to x_0}\frac{f(x) - f(x_0)}{(x - x_0)^n} = 1 > 0$ ，知在 $x_0$ 的去心邻域内有 $\frac{f(x) - f(x_0)}{(x - x_0)^n} >0$ ，即 $f(x) - f(x_0)$ 的正负由 $(x - x_0)^n$ 确定.
+
+当 n 为奇数时，若 $x > x_{0}$ ，则 $f(x) - f(x_{0}) > 0$ ；若 $x < x_{0}$ ，则 $f(x) - f(x_{0}) < 0$ ，故 $x_{0}$ 不是 $f(x)$ 的极值点；
+
+当 n 为偶数时，当 $x > x_{0}$ 或 $x < x_{0}$ 时，都有 $f(x) - f(x_{0}) > 0$ ，故 $x_{0}$ 是 $f(x)$ 的极小值点，选项 C 正确."
+80122112,880,微积分,第二章 一元函数微分学,,12,综合题,选择题,,"设 $f(x)$ 在 $(1, +\infty)$ 内可导，且 $\lim\limits_{x \to +\infty} [2f(x) + f'(x)] = 1$ ，则下列结论中正确的是（）.
+① $\lim\limits_{x\to+\infty}e^{2x}f(x)=0;$
+② $\lim\limits_{x\to+\infty}e^{2x}f(x)=+\infty;$
+③ $\lim\limits_{x\to+\infty}f'(x)=+\infty;$
+④ $\lim\limits_{x\to+\infty}f'(x)=0.$",①③,①④,②③,②④,"D.
+
+解 由 $\left[\mathrm{e}^{2x}f(x)\right]' = \mathrm{e}^{2x}\left[2f(x) + f'(x)\right],\lim\limits_{x\to +\infty}\left[2f(x) + f'(x)\right] = 1$ ，知 $\lim\limits_{x\to +\infty}\left[\mathrm{e}^{2x}f(x)\right]' = +\infty .$
+
+令 $h(x) = \mathrm{e}^{2x}f(x)$ ，由极限性质，知存在 $x_0 > 1$ 。当 $x > x_0$ 时， $h'(x) > 1$ ，应用拉格朗日中值定理，知存在 $\xi \in (x_0, x)$ ，使得
+
+$\begin{array}{r l} & h (x) - h (x _ {0}) = h ^ {\prime} (\xi) (x - x _ {0}) > x - x _ {0}, \\ & \quad h (x) > h (x _ {0}) + x - x _ {0}. \end{array}$
+
+从而有
+
+上式两端取极限，得 $\lim\limits_{x\to +\infty}h(x) = +\infty$ ，即 $\lim\limits_{x\to +\infty}\mathrm{e}^{2x}f(x) = +\infty$ （结论 $②$ 正确）.
+
+由洛必达法则,有
+
+故
+
+$\begin{array}{r l} \lim\limits_ {x \to + \infty} f (x) & = \lim\limits_ {x \to + \infty} \frac {h (x)}{\mathrm{e} ^ {2 x}} = \lim\limits_ {x \to + \infty} \frac {h ^ {\prime} (x)}{2 \mathrm{e} ^ {2 x}} = \lim\limits_ {x \to + \infty} \frac {2 f (x) + f ^ {\prime} (x)}{2} = \frac {1}{2}, \\ \lim\limits_ {x \to + \infty} f ^ {\prime} (x) & = \lim\limits_ {x \to + \infty} [ 2 f (x) + f ^ {\prime} (x) ] - 2 \lim\limits_ {x \to + \infty} f (x) \\ & = 1 - 2 \lim\limits_ {x \to + \infty} f (x) = 1 - 2 \times \frac {1}{2} = 0 (\text {结论} ④ 正 确). \end{array}$
+
+因此,选项 D 正确."
+80122113,880,微积分,第二章 一元函数微分学,,13,综合题,选择题,,"设 $f(x)$ 在 $x = 0$ 处二阶可导, $f(0) = 0$ , 且 $\lim\limits_{x \to 0} \frac{f(x) + f'(x)}{x} = 1$ , 则存在 $\delta > 0$ , 使得 ( ).","曲线 $y = f(x)$ 在 $(- \delta, \delta)$ 内是凸的","曲线 $y = f(x)$ 在 $(- \delta, \delta)$ 内是凹的","$f(x)$ 在 $(-\delta,0)$ 内单调递增，在 $(0,\delta)$ 内单调递减","$f(x)$ 在 $(- \delta, 0)$ 内单调递减，在 $(0, \delta)$ 内单调递增","D.
+
+解 由 $\lim\limits_{x\to0}\frac{f(x)+f'(x)}{x}=1$ ，知 $\lim\limits_{x\to0}[f(x)+f'(x)]=0.$
+
+又由 $f(0)=0$ ，可得 $f'(0)=0$ 。因此
+
+$\begin{array}{r l}\lim\limits_ {x \rightarrow 0} \frac {f (x) + f ^ {\prime} (x)}{x}&= \lim\limits_ {x \rightarrow 0} \frac {f (x) - f (0) + f ^ {\prime} (x) - f ^ {\prime} (0)}{x}\\&= f ^ {\prime} (0) + f ^ {\prime \prime} (0) = f ^ {\prime \prime} (0) = 1 > 0,\end{array}$
+
+即 $f''(0)=\lim\limits_{x\to0}\frac{f'(x)}{x}>0.$
+
+故存在 $\delta > 0$ ，使得在 $(- \delta, 0)$ 内， $f'(x) < 0, f(x)$ 单调递减；在 $(0, \delta)$ 内， $f'(x) > 0, f(x)$ 单调递增。选项 D 正确。"
+80122114,880,微积分,第二章 一元函数微分学,,14,综合题,选择题,,"设 $f(x)$ 在 $(-∞, +∞)$ 内可导，则下列命题中正确的是().",若 $\lim\limits_{x\to -\infty}f(x) = -\infty$ ，则必有 $\lim\limits_{x\to -\infty}f'(x) = -\infty$,若 $\lim\limits_{x\to +\infty}f'(x) = -\infty$ ，则必有 $\lim\limits_{x\to +\infty}f(x) = -\infty$,若 $\lim\limits_{x\to +\infty}f(x) = +\infty$ ，则必有 $\lim\limits_{x\to +\infty}f'(x) = +\infty$,若 $\lim\limits_{x\to +\infty}f'(x) = +\infty$ ，则必有 $\lim\limits_{x\to +\infty}f(x) = +\infty$,"D.
+
+解 涉及 $f(x)$ 与 $f'(x)$ 的极限, 考虑用拉格朗日中值定理.
+
+由 $\lim\limits_{x\to+\infty}f'(x)=+\infty$ ，知存在充分大的 $x_{0}$ 和 M ，当 $x>x_{0}$ 时，有 $f'(x)>M>1$ ，故当 $x\to+\infty$ 时， $f(x)=f(x_{0})+f'(\xi)(x-x_{0})>f(x_{0})+(x-x_{0})\to+\infty$ （ $\xi$ 介于 $x_{0}$ 与 x 之间），故选项 D 正确."
+80122115,880,微积分,第二章 一元函数微分学,,15,综合题,选择题,,"设 $k > 0$ ，则方程 $\ln x - \frac{x}{\mathrm{e}} + k = 0$ 在 $(0, +\infty)$ 内的不同实根的个数为（）.",0,1,2,3,"C.
+
+解令 $f(x) = \ln x - \frac{x}{\mathrm{e}} + k$ ，则 $f'(x) = \frac{1}{x} - \frac{1}{\mathrm{e}} = \frac{\mathrm{e} - x}{\mathrm{e}x}$ .
+
+令 $f'(x)=0$ , 得 x=e , 可知 x=e 是 $f(x)$ 的最大值点, 最大值为 $f(e)=k$ .
+
+由 $k > 0$ ，知当 $x\in (0,\mathrm{e})$ 时， $f(x)$ 单调增加；当 $x\in (\mathrm{e}, + \infty)$ 时， $f(x)$ 单调减少，故函数 $f(x)$ 的图形与 $x$ 轴有两个不同交点，即方程有两个不同实根，选项C正确."
+80122116,880,微积分,第二章 一元函数微分学,,16,综合题,选择题,,"设当 $x \neq 0$ 时, 方程 $kx + \frac{1}{x^{2}} = 1$ 有且仅有一个实根, 则 ( ).",$|k| > \frac{2}{9}\sqrt{3}$,$|k| < \frac{2}{9}\sqrt{3}$,$k=\frac{2}{9}\sqrt{3}$,$k=-\frac{2}{9}\sqrt{3}$,"A.
+
+解 依题意 $k \neq 0$ ，否则方程有两个实根。当 $x \neq 0$ 时，原方程与 $k x^{3} - x^{2} + 1 = 0$ 同解。
+
+令 $f(x) = kx^{3} - x^{2} + 1$ ，则 $f^{\prime}(x) = 3kx^{2} - 2x = x(3kx - 2) = 0$ ，得驻点 $x_{1} = 0, x_{2} = \frac{2}{3k}$ . 又 $f''(x) = 2(3kx - 1)$ ，有 $f''(0) < 0, f''\left(\frac{2}{3k}\right) = 2 > 0.$ 由 $f''(0) < 0$ ，可知 $f(0) = 1 > 0$ 是极大值点.
+
+要使方程有唯一实根, 必须有 $f\left(\frac{2}{3k}\right) > 0$ (否则有两个实根), 故 $\frac{8k}{27k^{3}} - \frac{4}{9k^{2}} + 1 > 0$ , 解得 $|k| > \frac{2}{9}\sqrt{3}$ , 所以选项 A 正确."
+80122117,880,微积分,第二章 一元函数微分学,,17,综合题,选择题,,"设方程 $x^{n} + nx = k (n = 1, 2, \cdots)$ 在 $x \in (0, +\infty)$ 内的实根为 $x_{n}$ ，其中 k > 0，则 $\lim\limits_{n \to \infty} (1 + x_{n})^{n} = (\quad)$ .",e,$e^{k}$,$e^{-k}$,$e^{-1}$,"B.
+
+解记 $f_{n}(x) = x^{n} + nx - k, f_{n}(0) = -k < 0, f_{n}\left(\frac{k}{n}\right) = \left(\frac{k}{n}\right)^{n} > 0.$
+
+由零点定理, 知 $f_{n}(x_{n})=0, x_{n}\in\left(0,\frac{k}{n}\right)$ . 又由 $f_{n}^{\prime}(x)=nx^{n-1}+n>0$ , 知 $f_{n}(x)$ 严格单调递增, 故 $x_{n}$ 是方程唯一的实根.
+
+当 $n > k$ 且 $n > 1$ 时， $\frac{k}{n} < 1, \frac{k}{n^2} < \frac{k}{n}$
+
+$f _ {n} \left(\frac {k}{n} - \frac {k}{n ^ {2}}\right) = \left(\frac {k}{n} - \frac {k}{n ^ {2}}\right) ^ {n} - \frac {k}{n} < \left(\frac {k}{n} - \frac {k}{n ^ {2}}\right) - \frac {k}{n} = - \frac {k}{n ^ {2}} < 0.$
+
+由 $f_{n}(x)$ 严格单调递增及 $f_{n}(x_{n}) = 0$ ，知
+
+$\frac {k}{n} - \frac {k}{n ^ {2}} < x _ {n} < \frac {k}{n},$
+
+$\left(1 + \frac {k}{n} - \frac {k}{n ^ {2}}\right) ^ {n} < (1 + x _ {n}) ^ {n} < \left(1 + \frac {k}{n}\right) ^ {n}.$
+
+又
+
+$\lim\limits_ {n \rightarrow \infty} \left(1 + \frac {k}{n}\right) ^ {n} = \mathrm{e} ^ {k},$
+
+$\lim\limits_ {n \to \infty} \left(1 + \frac {k}{n} - \frac {k}{n ^ {2}}\right) ^ {n} = \lim\limits_ {n \to \infty} \left(1 + \frac {k}{n} - \frac {k}{n ^ {2}}\right) ^ {\frac {1}{\frac {k}{n} - \frac {k}{n ^ {2}}} \cdot \left(\frac {k}{n} - \frac {k}{n ^ {2}}\right) \cdot n} = e ^ {k},$
+
+故 $\lim\limits_{n\to\infty}(1+x_{n})^{n}=e^{k}$ .选项B正确."
+80122118,880,微积分,第二章 一元函数微分学,,18,综合题,选择题,,"设可导函数 $f(x)(x \in [0,1])$ 满足 $f'(x) \geqslant M > 0$ ，且 $f\left(\frac{1}{2}\right) \geqslant 0$ ，则在区间（）上，有 $f(x) \geqslant \frac{1}{4}M$ .","$\left[0,\frac{1}{4}\right]$","$\left[\frac{1}{4},\frac{1}{2}\right]$","$\left[\frac{1}{2},\frac{3}{4}\right]$","$\left[\frac{3}{4},1\right]$","D.
+
+解 由拉格朗日中值定理,有
+
+$f\left(x\right)-f\left(\frac{1}{2}\right)\geq M\left(x-\frac{1}{2}\right)$
+
+移项整理：
+$f\left(x\right)\geq f\left(\frac{1}{2}\right)+M\left(x-\frac{1}{2}\right)$
+
+$x-\frac12 \geq \frac14$"
+80122119,880,微积分,第二章 一元函数微分学,,19,综合题,选择题,,"设 $f'(x)$ 在 $[0,4]$ 上连续，曲线 $y=f'(x)$ 与 x=0, y=0, x=4 围成如图所示的三个区域，其面积 $S_{1}, S_{2}, S_{3}$ 满足 $S_{2}>S_{1}>S_{3}$ ，则下列选项中正确的是（）.",$f(1) > f(3) > f(4)$,$f(4) > f(3) > f(1)$,$f(3) > f(4) > f(1)$,$f(4) > f(1) > f(3)$,"C.
+
+解 由已知, 当 $x \in (0,1)$ 时, $f'(x) < 0$ ; 当 $x \in (1,3)$ 时, $f'(x) > 0$ ; 当 $x \in (3,4)$ 时, $f'(x) < 0$ . 由拉格朗日中值定理, 有
+
+$\begin{array}{l} {f (3) - f (1) = f ^ {\prime} (\xi_ {1}) (3 - 1) = 2 f ^ {\prime} (\xi_ {1}) > 0, \quad \xi_ {1} \in (1, 3),} \\ {f (4) - f (3) = f ^ {\prime} (\xi_ {2}) (4 - 3) = f ^ {\prime} (\xi_ {2}) < 0, \quad \xi_ {2} \in (3, 4),} \end{array}$
+
+且由牛顿-莱布尼茨公式,有
+
+$f (4) - f (1) = \int_ {1} ^ {4} f ^ {\prime} (x) \mathrm{d} x = \int_ {1} ^ {3} f ^ {\prime} (x) \mathrm{d} x + \int_ {3} ^ {4} f ^ {\prime} (x) \mathrm{d} x = S _ {2} - S _ {3} > 0,$
+
+故 $f(3) > f(4) > f(1)$ . 选项 C 正确."
+80122120,880,微积分,第二章 一元函数微分学,,20,综合题,选择题,,"设 $f(x)$ 在 $[0,1]$ 上二阶可导，且 $f''(x) > 0, f(0) = f(1)$ . 当 $x \in (0,1)$ 时，下列选项中结论正确的是（）.
+① $(1-x)[f(x)-f(0)]$
+② $(1 - x)[f(x) - f(0)] > x[f(1) - f(x)];$
+③ $x[f(x) - f(0)] < (1 - x)[f(1) - f(x)];$
+④ $x[f(x) - f(0)] > (1 - x)[f(1) - f(x)].$",①④,②③,②④,①③,"D.
+
+解 依题设, $y=f(x)$ 如图2-5所示.
+
+结论 ① 可变形为
+
+$\frac {f (x) - f (0)}{x} < \frac {f (1) - f (x)}{1 - x}.$
+
+由拉格朗日中值定理,有
+
+![Image](images/80122120.jpg)
+
+$\begin{array}{l l} {f ^ {\prime} (\xi_ {1}) = \frac {f (x) - f (0)}{x},} & {\xi_ {1} \in (0, x),} \\ {f ^ {\prime} (\xi_ {2}) = \frac {f (1) - f (x)}{1 - x},} & {\xi_ {2} \in (x, 1).} \end{array}$
+
+图2-5
+
+由 $f''(x)>0$ , 知 $f'(x)$ 单调增加, 故 $f'(\xi_{1}) , 结论①正确.结论③可变形为$
+
+$x f (x) - x f (0) < f (1) - f (x) - x f (1) + x f (x).$
+
+由 $f(0)=f(1)$ ，知结论③可变形为 $f(x) 。由结论①正确，知 f(x) 。故结论③正确。$
+
+综上所述,选项 D 正确."
+80122121,880,微积分,第二章 一元函数微分学,,21,综合题,选择题,,"设 $f(x)$ 在 $[-1, 1]$ 上有定义，则“ $\frac{f(x) - f(1)}{x - 1}$ 在 $[-1, 1)$ 上严格单调递增”是“ $y = f(x)$ 的图形在 $[-1, 1]$ 上是凹的”的（）.",充分必要条件,充分非必要条件,必要非充分条件,既非充分条件又非必要条件,"C.
+
+解 
+必要性：若 $y = f(x)$ 的图形在 $[-1,1]$ 上是凹的，则由定义，对于 $[-1,1]$ 上的任意 $x_{1} \neq x_{2}$ ，当 $0 < \lambda < 1$ 时，有
+
+$f \left(\lambda x _ {1} + (1 - \lambda) x _ {2}\right) < \lambda f \left(x _ {1}\right) + (1 - \lambda) f \left(x _ {2}\right).①$
+
+在 $[-1,1)$ 上任取 $x_{1} < x_{2}$ ，则存在 $\lambda \in (0,1)$ ，使得 $\lambda x_{1} + (1 - \lambda) \cdot 1 = x_{2}$ . 由式①，得 $f(x_{2}) = f(\lambda x_{1} + (1 - \lambda) \cdot 1) < \lambda f(x_{1}) + (1 - \lambda)f(1)$ ，
+
+即 $f(x_{2}) - f(1) < \lambda [f(x_{1}) - f(1)]$ 由于 $x_{1} - 1 < 0, \lambda > 0$ ，故
+
+$\frac {f (x _ {2}) - f (1)}{\lambda (x _ {1} - 1)} > \frac {f (x _ {1}) - f (1)}{x _ {1} - 1}.②$
+
+又 $x_{2} - 1 = \lambda x_{1} + 1 - \lambda -1 = \lambda (x_{1} - 1)$ ，由式②得
+
+$\frac {f (x _ {1}) - f (1)}{x _ {1} - 1} < \frac {f (x _ {2}) - f (1)}{x _ {2} - 1},$
+
+故 $\frac{f(x)-f(1)}{x-1}$ 在 $[-1,1)$ 上严格单调递增.
+
+若 $\frac{f(x) - f(1)}{x - 1}$ 在 $[-1, 1)$ 上严格单调递增，但 $y = f(x)$ 的图形在 $[-1, 1]$ 上不一定是凹的，例如， $f(x) = \begin{cases} x^2, & -1 \leqslant x < 0, \\ x^2 - 1, & 0 \leqslant x \leqslant 1, \end{cases}$ 则有
+
+$g (x) \stackrel {\text {记}} {=} \frac {f (x) - f (1)}{x - 1} = \left\{ \begin{array}{l l} x + 1 + \frac {1}{x - 1}, & - 1 \leqslant x < 0, \\ x + 1, & 0 \leqslant x < 1, \end{array} \right.$
+
+易知 $g(x)$ 在 $[-1,0)$ 和 $[0,1)$ 上分别严格单调递增，且 $\lim\limits_{x\to0}g(x)=0$ ，即 $g(x)$ 在 $[-1,1) $上严格单调递增，但$ f(x) $不连续，在 $[-1,1] $上不是凹函数.
+
+综上所述,选项 C 正确.
+
+【注】凹函数的定义: 设 $f(x)$ 在区间 I 上连续, 对任意 $x_{1} \neq x_{2}, x_{1}, x_{2} \in I, 0 < \lambda < 1$ , 若 $f(\lambda x_{1} + (1 - \lambda)x_{2}) < \lambda f(x_{1}) + (1 - \lambda)f(x_{2})$ , 则称 $y = f(x)$ 在 I 上是凹的."
+80122122,880,微积分,第二章 一元函数微分学,,22,综合题,选择题,,"设在 $[0, +\infty)$ 上的可导函数 $y = f(x)$ 满足 $y' - p(x)y > 0$ , 且 $f(0) \geqslant 0$ , 其中 $p(x)$ 在 $[0, +\infty)$ 上为正值连续函数. 当 $0 < a < b$ 时, 下列选项中正确的是 ( ).",$f(0) < f(a) < f(b)$,$f(b) < f(a) < f(0)$,$f(b) < f(0) < f(a)$,$f(a) < f(0) < f(b)$,"A.
+
+解 依题设, 当 x > 0 时, 有
+
+$y ^ {\prime} - p (x) y > 0,$
+
+上式两边同时乘以 $\mathrm{e}^{-\int_{0}^{x}p(t)\mathrm{d}t}$ ，得
+
+$\mathrm{e} ^ {- \int_ {0} ^ {x} p (t) \mathrm{d} t} [ y ^ {\prime} - p (x) y ] > 0,$
+
+故有 $\left[f(x)\mathrm{e}^{-\int_0^x p(t)\mathrm{d}t}\right]' > 0$ ，从而 $f(x)\mathrm{e}^{-\int_0^x p(t)\mathrm{d}t}$ 在 $(0, + \infty)$ 内单调增加，所以
+
+$f (x) \mathrm{e} ^ {- \int_ {0} ^ {x} p (t) \mathrm{d} t} > f (x) \mathrm{e} ^ {- \int_ {0} ^ {x} p (t) \mathrm{d} t} \Bigg | _ {x = 0} = f (0) \geqslant 0.$
+
+而由 $\mathrm{e}^{-\int_{0}^{x}p(t)\mathrm{d}t}>0$ , 可知 $f(x)>0, x\in(0,+\infty)$ .
+
+由已知，可得 $y' = f'(x) > p(x)f(x) > 0$ ，于是 $y = f(x)$ 在 $(0, +\infty)$ 内单调增加. 故当 $0 < a < b$ 时，有
+
+$f (0) < f (a) < f (b).$
+
+选项 A 正确."
+80122123,880,微积分,第二章 一元函数微分学,,23,综合题,选择题,,设 $\lim\limits_{x\to x_{0}^{-}}f'(x)=\lim\limits_{x\to x_{0}^{+}}f'(x)=1$ ，则（）.,$f(x)$ 在 $x = x_{0}$ 处必可导且 $f'(x_{0}) = 1$,$f(x)$ 在 $x = x_0$ 处必连续但不可导,$f(x)$ 在 $x = x_{0}$ 处必存在极限但不连续,$f(x)$ 分别在 $x = x_{0}$ 处的某去心左邻域与去心右邻域内单调增加,"D.
+
+解 由 $\lim\limits_{x\to x_0^-}f'(x) = \lim\limits_{x\to x_0^+}f'(x) = 1$ ，知 $\lim\limits_{x\to x_0}f'(x) = 1 > 0.$
+
+由极限的保号性,知 $f(x)$ 分别在 $x_{0}$ 的去心左邻域与去心右邻域内单调增加.选项 D 正确.
+由 $\lim\limits_{x\to x_{0}}f'(x)=1$ ，不能保证 $f(x)$ 在 $x_{0}$ 处可导，也不能保证 $f(x)$ 在 $x_{0}$ 处连续和极限存在.
+
+例如， $f(x)=\left\{\begin{aligned}x+1,&x>0,\\ x,&x\leqslant0,\end{aligned}\right.$ 则当 $x\neq0$ 时， $f'(x)=1$ ，且
+
+$\lim\limits_ {x \to 0 ^ {-}} f ^ {\prime} (x) = \lim\limits_ {x \to 0 ^ {+}} f ^ {\prime} (x) = 1.$
+
+但 $\lim\limits_{x\to 0^{-}}f(x) = 0\neq \lim\limits_{x\to 0^{+}}f(x) = 1$ ，所以 $\lim\limits_{x\to 0}f(x)$ 不存在， $f(x)$ 在 $x = 0$ 处不连续，不可导.故排除选项A,B,C.
+
+【注】注意区别 $f_{-}^{\prime}(x_{0}), f_{+}^{\prime}(x_{0})$ 均存在和 $\lim\limits_{x\to x_{0}^{-}}f^{\prime}(x)=\lim\limits_{x\to x_{0}^{+}}f^{\prime}(x)$ ."
+80122124,880,微积分,第二章 一元函数微分学,,24,综合题,选择题,,"设 $f(x)=\left\{\begin{aligned}&\frac{1}{(x-1)^{a}}\sin\frac{1}{(x-1)^{\beta}},&x>1,\\ &0,&x\leqslant1\end{aligned}\right.$ $(\alpha<0,\beta>0)$ ，若 $f'(x)$ 在 x=1 处连续，则（）.",$\alpha < -1$ 且 $\alpha + \beta < -1$,$\alpha < -1$ 且 $\alpha +\beta \leqslant -1$,$\alpha \leqslant -1$ 且 $\alpha +\beta < - 1$,$\alpha \leqslant -1$ 且 $\alpha +\beta \leqslant -1$,"A.
+
+解
+
+$f _ {+} ^ {\prime} (1) = \lim\limits_ {x \to 1 ^ {+}} \frac {f (x) - f (1)}{x - 1} = \lim\limits_ {x \to 1 ^ {+}} \frac {1}{(x - 1) ^ {\alpha + 1}} \sin \frac {1}{(x - 1) ^ {\beta}}.$
+
+当 $\alpha + 1 < 0$ 时， $f_{+}^{\prime}(1) = 0$ ；当 $\alpha + 1 \geqslant 0$ 时， $f_{+}^{\prime}(1)$ 不存在。而
+
+$f _ {-} ^ {\prime} (1) = \lim\limits_ {x \to 1 ^ {-}} \frac {f (x) - f (1)}{x - 1} = \lim\limits_ {x \to 1 ^ {-}} \frac {0 - 0}{x - 1} = 0,$
+
+故当 $\alpha < -1$ 时，有
+
+$f ^ {\prime} (x) = \left\{ \begin{array}{l l} \frac {- \alpha}{(x - 1) ^ {\alpha + 1}} \sin \frac {1}{(x - 1) ^ {\beta}} + \frac {- \beta}{(x - 1) ^ {\alpha + \beta + 1}} \cos \frac {1}{(x - 1) ^ {\beta}}, & x > 1, \\ 0, & x \leqslant 1. \end{array} \right.$
+
+$\lim\limits_ {x \to 1 ^ {+}} f ^ {\prime} (x) = \lim\limits_ {x \to 1 ^ {+}} \left[ \frac {- \alpha}{(x - 1) ^ {\alpha + 1}} \sin \frac {1}{(x - 1) ^ {\beta}} + \frac {- \beta}{(x - 1) ^ {\alpha + \beta + 1}} \cos \frac {1}{(x - 1) ^ {\beta}} \right].$
+
+当 $\alpha+1<0$ 且 $\alpha+\beta+1<0$ 时，有 $\lim\limits_{x\to1^{+}}f'(x)=0$ 。而 $\lim\limits_{x\to1^{-}}f'(x)=0$ ，即当 $\alpha<-1$ 且 $\alpha+\beta<-1$ 时， $\lim\limits_{x\to1}f'(x)=0=f'(1)$ ，从而 $f'(x)$ 在 x=1 处连续。选项 A 正确。"
+80122201,880,微积分,第二章 一元函数微分学,,1,综合题,填空题,,设函数 $f(x)=\left[\tan\left(\frac{\pi}{4}x\right)-1\right]\left[\tan\left(\frac{\pi}{4}x^{2}\right)-2\right]\cdots\left[\tan\left(\frac{\pi}{4}x^{100}\right)-100\right]$ ，则 $f'(1)=$ \_\_\_\_.,,,,,"$-\frac{99!}{2}\pi.$
+
+解 由 $\left[\tan\left(\frac{\pi}{4}x\right)-1\right]\bigg|_{x=1}=0$ ，可令 $f(x)=\left[\tan\left(\frac{\pi}{4}x\right)-1\right] \cdot g(x)$ ，则
+
+$\begin{array}{r l} f ^ {\prime} (1) & = \left[ \tan \left(\frac {\pi}{4} x\right) - 1 \right] ^ {\prime} \Big | _ {x = 1} \cdot g (1) + 0 \cdot g ^ {\prime} (1) \\ & = \left[ \tan \left(\frac {\pi}{4} x\right) - 1 \right] ^ {\prime} \Big | _ {x = 1} \left[ \tan \left(\frac {\pi}{4} x ^ {2}\right) - 2 \right] \dots \left[ \tan \left(\frac {\pi}{4} x ^ {1 0 0}\right) - 1 0 0 \right] \Big | _ {x = 1} \\ & = \frac {\pi}{4} \cdot \frac {1}{\cos^ {2} \left(\frac {\pi}{4}\right)} \cdot (- 9 9!) = - \frac {9 9 !}{2} \pi . \end{array}$"
+80122202,880,微积分,第二章 一元函数微分学,,2,综合题,填空题,,"设 $f(x)=3x^{2}+kx^{-3}$ ，若对任意 $x\in(0,+\infty)$ ，都有 $f(x)\geqslant20$ ，则 k 至少为 \_\_\_\_.",,,,,"64.
+
+解 由 $f(x) = 3x^{2} + kx^{-3}$ ，有 $f'(x) = 6x - 3kx^{-4} = 0$ ，得唯一驻点 $x = \sqrt[5]{\frac{k}{2}}$ . 又
+
+$f ^ {\prime \prime} (x) = 6 + 1 2 k x ^ {- 5}, \quad f ^ {\prime \prime} \left(\sqrt [ 5 ]{\frac {k}{2}}\right) > 0,$
+
+故 $f\left(\sqrt[5]{\frac{k}{2}}\right) = 5\left(\frac{k}{2}\right)^{\frac{2}{5}}$ 为 $f(x)$ 在 $(0, + \infty)$ 内的最小值.
+
+由 $5\left(\frac{k}{2}\right)^{\frac{2}{5}} \geqslant 20$ ，解得 $k \geqslant 64$ ，即 $k$ 至少为64."
+80122203,880,微积分,第二章 一元函数微分学,,3,综合题,填空题,,"已知 $f(x)$ 在 $(-∞, +∞)$ 内可导，且 $\lim\limits_{x→∞} f'(x) = e, \lim\limits_{x→∞} \left( \frac{x+k}{x-k} \right)^x = \lim\limits_{x→∞} [f(x) - f(x-1)]$ ，则 k = \_\_\_\_.",,,,,"$\frac{1}{2}.$
+
+解 易知 $k \neq 0$ , 故有
+
+$\lim\limits_ {x \rightarrow \infty} \left(\frac {x + k}{x - k}\right) ^ {x} = \lim\limits_ {x \rightarrow \infty} \left[\left(1 + \frac {2 k}{x - k}\right) ^ {\frac {x - k}{2 k}} \right] ^ {\frac {2 k x}{x - k}} = \mathrm{e} ^ {2 k}.$
+
+由拉格朗日中值定理,有
+
+$f(x)-f(x-1)=f'(\xi)\cdot1$ ( $\xi$ 介于x-1与x之间),
+
+因而 $\lim\limits_{x\to\infty}[f(x)-f(x-1)]=\lim\limits_{x\to\infty}f'(\xi)=e$ ，于是 $e^{2k}=e$ ，所以 $k=\frac{1}{2}$ ."
+80122204,880,微积分,第二章 一元函数微分学,,4,综合题,填空题,,"设 $y = f(x)$ 在 $(-\infty, \infty)$ 内连续，且其导函数 $f'(x)$ 的图形如图所示，其中 x = 0 和 $x = x_{5}$ 是 $f'(x)$ 的铅直渐近线，则 $y = f(x)$ 的极值点个数为 \_\_\_\_，拐点个数为 \_\_\_\_.",,,,,"4,3.
+
+解 由图 2-6 可知，
+
+$f ^ {\prime} \left(x _ {1}\right) = f ^ {\prime} \left(x _ {3}\right) = f ^ {\prime} \left(x _ {4}\right) = f ^ {\prime} \left(x _ {6}\right) = 0,$
+
+故 $x_{1}, x_{3}, x_{4}, x_{6}$ 是驻点. $f'(0)$ 和 $f'(x_{5})$ 不存在, 所以可能的极值点为 $x = x_{1}, x = x_{3}, x = x_{4}, x = x_{6}, x = 0, x = x_{5}$ , 在 $x = x_{1}, x = x_{3}, x = 0, x = x_{4}$ 两侧的 $f'(x)$ 均异号, 故有 4 个极值点.
+
+$f ^ {\prime \prime} \left(x _ {2}\right) = 0, f ^ {\prime \prime} \left(x _ {6}\right) = 0, f ^ {\prime \prime} (0)$
+
+$f ^ {\prime \prime} (x _ {5})$
+
+![Image](images/80122204.jpg)
+
+$f ^ {\prime \prime} (x)$
+
+$x = x _ {2}, x = x _ {6}$
+
+$x = x _ {5}$
+
+$f ^ {\prime \prime} (x)$
+
+图2-6"
+80122205,880,微积分,第二章 一元函数微分学,,5,综合题,填空题,,"设 $y = f(x)$ 在 $x_0$ 处有三阶连续导数, $f'(x_0) = 1$ , $f''(x_0) = 2$ , $f'''(x_0) = 3$ , $y = f(x)$ 有反函数 $x = g(y)$ , 且 $y_0 = f(x_0)$ , 则 $g'''(y_0) =$ \_\_\_\_.",,,,,"9.
+
+解 由反函数求导法则, 可知 $g'(y) = \frac{1}{f'(x)}$ . 由复合函数求导法则, 可知
+
+$\begin{array}{r l} g ^ {\prime \prime} (y) & = \frac {\mathrm{d}}{\mathrm{d} y} \left[ \frac {1}{f ^ {\prime} (x)} \right] = \frac {\mathrm{d}}{\mathrm{d} x} \left[ \frac {1}{f ^ {\prime} (x)} \right] \cdot \frac {\mathrm{d} x}{\mathrm{d} y} \\ & = - \frac {f ^ {\prime \prime} (x)}{\left[ f ^ {\prime} (x) \right] ^ {2}} \cdot \frac {1}{f ^ {\prime} (x)} = - \frac {f ^ {\prime \prime} (x)}{\left[ f ^ {\prime} (x) \right] ^ {3}}, \end{array}$
+
+$\begin{array}{r l} g ^ {\prime \prime \prime} (y) & = \frac {\mathrm{d}}{\mathrm{d} y} [ g ^ {\prime \prime} (y) ] = - \frac {\mathrm{d}}{\mathrm{d} y} \left\{\frac {f ^ {\prime \prime} (x)}{[ f ^ {\prime} (x) ] ^ {3}} \right\} = - \frac {\mathrm{d}}{\mathrm{d} x} \left\{\frac {f ^ {\prime \prime} (x)}{[ f ^ {\prime} (x) ] ^ {3}} \right\} \cdot \frac {\mathrm{d} x}{\mathrm{d} y} \\ & = - \frac {f ^ {\prime \prime \prime} (x) [ f ^ {\prime} (x) ] ^ {3} - 3 [ f ^ {\prime} (x) ] ^ {2} \cdot [ f ^ {\prime \prime} (x) ] ^ {2}}{[ f ^ {\prime} (x) ] ^ {6}} \cdot \frac {1}{f ^ {\prime} (x)} \\ & = - \frac {f ^ {\prime \prime \prime} (x) [ f ^ {\prime} (x) ] ^ {3} - 3 [ f ^ {\prime} (x) ] ^ {2} [ f ^ {\prime \prime} (x) ] ^ {2}}{[ f ^ {\prime} (x) ] ^ {7}}, \end{array}$
+
+故
+
+$g ^ {\prime \prime \prime} (y _ {0}) = - \frac {f ^ {\prime \prime \prime} (x _ {0}) [ f ^ {\prime} (x _ {0}) ] ^ {3} - 3 [ f ^ {\prime} (x _ {0}) ] ^ {2} [ f ^ {\prime \prime} (x _ {0}) ] ^ {2}}{[ f ^ {\prime} (x _ {0}) ] ^ {7}} = 9.$"
+80122206,880,微积分,第二章 一元函数微分学,,6,综合题,填空题,,"设 $f(x)$ 为 $(-1, +\infty)$ 内的连续函数, $f(x) = \int_{0}^{x} e^{-f(t)} dt$ , 若 $g(x) = xf(x + 1)$ , 则 $g^{(n)}(0)(n > 2) = \_\_\_\_.$",,,,,"$n!\frac{(-1)^{n - 2}}{(n - 1)2^{n - 1}}.$
+
+解 $f(x)=\int_{0}^{x}\mathrm{e}^{-f(t)}\mathrm{d}t$ 两边同时对 x 求导，得 $f'(x)=\mathrm{e}^{-f(x)}$ ，即 $\mathrm{e}^{f(x)}\cdot f'(x)=1$ .
+两边同时积分, 得 $\mathrm{e}^{f(x)} = x + c$ , 即 $f(x) = \ln(x + c)$ .
+由已知, $f(0)=0$ ,得c=1,故 $f(x)=\ln(x+1)$ .因此
+
+$\begin{array}{r l} g (x) & = x f (x + 1) = x \ln (x + 2) = x \ln \left[ 2 \left(1 + \frac {x}{2}\right) \right] \\ & = x \left[ \ln 2 + \ln \left(1 + \frac {x}{2}\right) \right] \\ & = x \left[ \ln 2 + \frac {x}{2} - \frac {1}{2} \left(\frac {x}{2}\right) ^ {2} + \dots + (- 1) ^ {n - 1} \frac {1}{n} \left(\frac {x}{2}\right) ^ {n} + o (x ^ {n}) \right] \\ & = x \ln 2 + \frac {x ^ {2}}{2} - \frac {1}{2 \cdot 2 ^ {2}} x ^ {3} + \dots + \frac {(- 1) ^ {n - 1}}{n \cdot 2 ^ {n}} x ^ {n + 1} + o (x ^ {n + 1}), \end{array}$
+
+所以 $g^{(n)}(0)=n!a_{n}=n!\frac{(-1)^{n-2}}{(n-1)2^{n-1}}.$"
+80122207,880,微积分,第二章 一元函数微分学,,7,综合题,填空题,,设 $f(x)=(x^{2}-4x+3)^{n}$ ，则 $f^{(n)}(1)=$ \_\_\_\_.,,,,,"$(-2)^{n}n!$ .
+
+解 由 $f(x) = (x^2 - 4x + 3)^n = (x - 1)^n (x - 3)^n$ ，知
+
+$\lim\limits_ {x \to 1} \frac {f (x)}{(x - 1) ^ {n}} = \lim\limits_ {x \to 1} (x - 3) ^ {n} = (- 2) ^ {n},$
+
+故当 $x \to 1$ 时， $f(x) \sim (-2)^n (x - 1)^n$ 或 $f(x) = (-2)^n (x - 1)^n + o[(x - 1)^n]$ .
+
+又由泰勒公式,有
+
+$f (x) = f (1) + f ^ {\prime} (1) (x - 1) + \dots + \frac {f ^ {(n)} (1)}{n !} (x - 1) ^ {n} + o [ (x - 1) ^ {n} ],$
+
+得 $\frac{f^{(n)}(1)}{n!} = (-2)^n$ ，故 $f^{(n)}(1) = (-2)^n n!$ ."
+80122301,880,微积分,第二章 一元函数微分学,,1,综合题,解答题,,"已知 $f(x)$ 是周期为 5 的连续函数， $f(x)$ 在 x=1 的某邻域内满足
+$$f (1 + \sin x) - 3 f (1 - \sin x) = 8 x + a (x),$$
+其中 $\alpha(x)$ 是当 $x \to 0$ 时比 x 高阶的无穷小, 且 $f(x)$ 在 x = 1 处可导, 求曲线 $y = f(x)$ 在点 $(6, f(6))$ 处的切线方程.",,,,,"解 考虑到 $f(x)$ 的周期性及 $f(x)$ 在 x = 1 处可导, 本题关键是求 $f(1)$ 和 $f'(1)$ .
+
+由 $\lim\limits_{x\to 0}[f(1 + \sin x) - 3f(1 - \sin x)] = \lim\limits_{x\to 0}[8x + \alpha (x)],$
+
+得 $f(1)-3f(1)=0$ ，即 $f(1)=0$ 。又
+
+$\lim\limits_ {x \to 0} \frac {f (1 + \sin x) - 3 f (1 - \sin x)}{\sin x} = \lim\limits_ {x \to 0} \left[ \frac {8 x}{\sin x} + \frac {\alpha (x)}{x} \cdot \frac {x}{\sin x} \right] = 8,$
+
+即
+
+$\lim\limits_ {x \rightarrow 0} \left[ \frac {f (1 + \sin x) - f (1)}{\sin x} + 3 \frac {f (1 - \sin x) - f (1)}{- \sin x} \right] = 8,$
+
+故 $f'(1)+3f'(1)=8$ ，即 $f'(1)=2$ 。又 $f(x+5)=f(x)$ ，有
+
+$f (6) = f (1) = 0, \quad f ^ {\prime} (6) = f ^ {\prime} (1) = 2,$
+
+故切线方程为 $y - 0 = 2(x - 6)$ ，即 $2x - y - 12 = 0$"
+80122302,880,微积分,第二章 一元函数微分学,,2,综合题,解答题,,"设 $f(x)$ 在 $[0,1]$ 上二阶可导，且 $\lim\limits_{x\to 0^{+}}\frac{f(x)}{x} = \lim\limits_{x\to 1^{-}}\frac{f(x)}{x - 1} = 1$ ，证明：
+(I) 至少存在一点 $\xi \in (0,1)$ ，使得 $f(\xi) = 0;$
+(II) 至少存在一点 $\eta \in (0,1)$ ，使得 $f''(\eta) = f(\eta)$ .",,,,,"证 (I) 由
+
+$\lim\limits_ {x \to 0 ^ {+}} \frac {f (x)}{x} = 1 \Rightarrow \left\{ \begin{array}{l l} f (0) = 0, \\ f _ {+} ^ {\prime} (0) = \lim\limits_ {x \to 0 ^ {+}} \frac {f (x) - f (0)}{x - 0} = 1, \end{array} \right.$
+
+$\lim\limits_ {x \to 1 ^ {-}} \frac {f (x)}{x - 1} = 1 \Rightarrow \left\{ \begin{array}{l l} f (1) = 0, \\ f _ {-} ^ {\prime} (1) = \lim\limits_ {x \to 1 ^ {-}} \frac {f (x) - f (1)}{x - 1} = 1, \end{array} \right.$
+
+知 $f(0)=f(1)=0$ , $f_{+}^{\prime}(0)f_{-}^{\prime}(1)>0$ . 由保号性及
+
+$f _ {+} ^ {\prime} (0) = \lim\limits_ {x \to 0 ^ {+}} \frac {f (x)}{x} = 1 > 0,$
+
+知 $\exists x_{1}\in (0,\delta_{1})(\delta_{1} > 0)$ ，使得 $f(x_{1}) > 0$ ；由
+
+$f _ {-} ^ {\prime} (1) = \lim\limits_ {x \rightarrow 1 ^ {-}} \frac {f (x)}{x - 1} = 1 > 0,$
+
+知 $\exists x_{2} \in (1 - \delta_{2}, 1)(\delta_{2} > 0)$ , 使得 $f(x_{2}) < 0$ , 由零点定理, 知 $\exists \xi \in (x_{1}, x_{2}) \subset (0, 1)$ , 使得 $f(\xi) = 0$ . (Ⅱ) 令 $g(x) = f(x)e^{-x}$ , 在 $[0, \xi]$ 和 $[\xi, 1]$ 上分别应用罗尔定理.
+
+由 $g(0) = g(\xi) = 0$ ，知 $\exists \xi_1\in (0,\xi)$ ，使得 $g^{\prime}(\xi_{1}) = 0$ ，即
+
+$\mathrm{e} ^ {- \xi_ {1}} \left[ f ^ {\prime} (\xi_ {1}) - f (\xi_ {1}) \right] = 0,$
+
+可得 $f'(\xi_{1}) - f(\xi_{1}) = 0.$
+
+又由 $g(\xi)=g(1)=0$ , 知 $\exists\xi_{2}\in(\xi,1)$ , 使得 $g'(\xi_{2})=0$ , 即
+
+$\mathrm{e} ^ {- \xi_ {2}} \left[ f ^ {\prime} \left(\xi_ {2}\right) - f \left(\xi_ {2}\right) \right] = 0,$
+
+可得 $f'(\xi_{2}) - f(\xi_{2}) = 0$ ，于是 $f'(x) - f(x) = 0$ 有两个根 $\xi_{1}$ 和 $\xi_{2}$ .
+
+再令 $F(x) = \mathrm{e}^{x}[f'(x) - f(x)]$ ，在 $[\xi_1, \xi_2]$ 上应用罗尔定理， $F(\xi_1) = F(\xi_2) = 0$ ，所以 $\exists \eta \in (\xi_1, \xi_2) \subset (0, 1)$ ，使得 $F'(\eta) = 0$ ，即
+
+$\mathrm{e} ^ {\eta} \left[ f ^ {\prime \prime} (\eta) - f ^ {\prime} (\eta) + f ^ {\prime} (\eta) - f (\eta) \right] = 0,$
+
+故 $f''(\eta) = f(\eta)$ ."
+80122303,880,微积分,第二章 一元函数微分学,,3,综合题,解答题,,"在 $x = 0$ 的右邻域内，用多项式 $\mathrm{e} + ax + bx^2$ 近似表示函数 $f(x) = (1 + x)^{\frac{1}{x}}$ ，使其误差是比 $x^2$ 高阶的无穷小 $(x \to 0^{+})$ ，求 $a, b$ 的值.",,,,,"解 将函数 $f(x)$ 进行恒等变换, 有 $f(x)=(1+x)^{\frac{1}{x}}=\mathrm{e}^{\frac{1}{x}\ln(1+x)}$ . 又
+
+$\ln (1 + x) = x - \frac {1}{2} x ^ {2} + \frac {1}{3} x ^ {3} + o (x ^ {3}), \quad \mathrm{e} ^ {x} = 1 + x + \frac {x ^ {2}}{2 !} + o (x ^ {2}),$
+
+故
+
+$\begin{array}{r l} \mathrm{e} ^ {\frac {1}{x} \ln (1 + x)} & = \mathrm{e} ^ {\frac {1}{x} [ x - \frac {1}{2} x ^ {2} + \frac {1}{3} x ^ {3} + o (x ^ {3}) ]} = \mathrm{e} \cdot \mathrm{e} ^ {- \frac {1}{2} x + \frac {1}{3} x ^ {2} + o (x ^ {2})} \\ & = \mathrm{e} \cdot \left[ 1 + \left(- \frac {1}{2} x + \frac {1}{3} x ^ {2}\right) + \frac {1}{2 !} \left(- \frac {1}{2} x + \frac {1}{3} x ^ {3}\right) ^ {2} + o (x ^ {2}) \right] \\ & = \mathrm{e} - \frac {1}{2} \mathrm{e} x + \frac {1 1}{2 4} \mathrm{e} x ^ {2} + o (x ^ {2}), \end{array}$
+
+所以 $a = -\frac{1}{2}e, b = \frac{11}{24}e.$"
+80122304,880,微积分,第二章 一元函数微分学,,4,综合题,解答题,,"设 $f(x)$ 在 $[a, b]$ 上可导，证明：
+(I) 若 $f_{+}^{\prime}(a)f_{-}^{\prime}(b)<0$ ，则存在 $\xi\in(a,b)$ ，使得 $f^{\prime}(\xi)=0;$
+(II) 若 $f_{+}^{\prime}(a) \neq f_{-}^{\prime}(b)$ ，则对介于 $f_{+}^{\prime}(a)$ 和 $f_{-}^{\prime}(b)$ 之间的每个实数 $\mu$ ，都存在 $\xi \in (a, b)$ ，使得 $f^{\prime}(\xi) = \mu$ .",,,,,"证（Ⅰ）由已知， $f_{+}^{\prime}(a)f_{-}^{\prime}(b)<0$ ，不妨设 $f_{+}^{\prime}(a)<0, f_{-}^{\prime}(b)>0.$
+
+由 $f_{+}^{\prime}(a) = \lim\limits_{x\to a^{+}}\frac{f(x) - f(a)}{x - a} < 0,$
+
+知存在 $x_{1} \in (a, a + \delta_{1})(\delta_{1} > 0)$ , 使得 $f(x_{1}) < f(a)$ , 故 $f(a)$ 不是 $f(x)$ 在 $[a, b]$ 上的最小值.
+
+同理，由 $f_{-}^{\prime}(b) > 0$ 可推得 $f(b)$ 不是 $f(x)$ 在 $[a,b]$ 上的最小值，于是 $f(x)$ 在 $[a,b]$ 上的最小值只能在区间 $(a,b)$ 内取得.令 $x = \xi \in (a,b),f(x)$ 取得最小值，从而知 $f^{\prime}(\xi) = 0$
+
+(Ⅱ) 令 $g(x) = f(x) - \mu x$ ，则 $g'(x) = f'(x) - \mu$ ，于是有 $g_{+}'(a) \cdot g_{-}'(b) < 0$ .
+
+由（Ⅰ）知，存在 $\xi\in(a,b)$ ，使得 $g'(\xi)=0$ ，即 $f'(\xi)=\mu$ 。
+
+【注】本题(Ⅱ)是导函数的介值定理.本题(Ⅰ)说明导函数 $f'(x)$ 具有连续函数的零点定理性质,本题(Ⅱ)说明 $f'(x)$ 具有介值定理性质,不需要 $f'(x)$ 连续的条件."
+80122305,880,微积分,第二章 一元函数微分学,,5,综合题,解答题,,"设 $f(x)$ 在 $[0,1]$ 上具有二阶导数, 且 $|f(x)| \leqslant a, |f''(x)| \leqslant b$ , 其中 $a, b$ 都是非负常数, $c$ 是 $(0,1)$ 内任一点.
+(I) 试写出 $f(x)$ 在 x=c 处带拉格朗日余项的一阶泰勒公式;
+(II) 证明: $|f'(c)| \leqslant 2a + \frac{b}{2}$ .",,,,,"解 (I) $f(x) = f(c) + f'(c)(x - c) + \frac{f''(\xi)}{2!}(x - c)^2 (\xi \text{ 介于 } x \text{ 与 } c \text{ 之间}).$
+
+证（Ⅱ）在上式中，分别令 x = 0, x = 1，则有
+
+$f (0) = f (c) + f ^ {\prime} (c) (0 - c) + \frac {f ^ {\prime \prime} (\xi_ {1})}{2 !} (0 - c) ^ {2} \quad (0 < \xi_ {1} < c < 1),$
+
+$f (1) = f (c) + f ^ {\prime} (c) (1 - c) + \frac {f ^ {\prime \prime} (\xi_ {2})}{2 !} (1 - c) ^ {2} \quad (0 < c < \xi_ {2} < 1).$
+
+两式相减，得 $f(1) - f(0) = f'(c) + \frac{1}{2!} [f''(\xi_2)(1 - c)^2 - f''(\xi_1)c^2]$ ，故
+
+$\mid f ^ {\prime} (c) \mid \leqslant \mid f (1) \mid + \mid f (0) \mid + \frac {1}{2 !} \mid f ^ {\prime \prime} (\xi_ {2}) \mid (1 - c) ^ {2} + \frac {1}{2 !} \mid f ^ {\prime \prime} (\xi_ {1}) \mid c ^ {2}$
+
+$\leqslant a + a + \frac {b}{2} [ (1 - c) ^ {2} + c ^ {2} ].$
+
+又因 $c \in (0,1)$ , $(1-c)^{2} + c^{2} \leqslant 1$ , 故 $\left| f'(c) \right| \leqslant 2a + \frac{b}{2}$ ."
+80122306,880,微积分,第二章 一元函数微分学,,6,综合题,解答题,,"证明下列结论:
+(I) 设 $f(x)=\int_{0}^{x}\frac{dt}{1+t^{2}}+\int_{0}^{\frac{1}{x}}\frac{dt}{1+t^{2}}(x>0)$ ，则 $f(x)=\frac{\pi}{2}$ ;
+(II) 当 $x \geqslant 1$ 时, $\arctan x - \frac{1}{2} \arccos \frac{2x}{1 + x^2} = \frac{\pi}{4}$ .",,,,,"证 (I)
+
+$f ^ {\prime} (x) = \frac {1}{1 + x ^ {2}} + \frac {1}{1 + \left(\frac {1}{x}\right) ^ {2}} \cdot \left(- \frac {1}{x ^ {2}}\right) = 0,$
+
+故 $f(x) \equiv c$ (c 为常数). 又 $f(1) = 2\int_{0}^{1}\frac{\mathrm{d}t}{1 + t^2} = 2\arctan t\Big|_{0}^{1} = 2\times \frac{\pi}{4} = \frac{\pi}{2}$ , 故 $f(x) = \frac{\pi}{2}$ .
+
+(Ⅱ) 当 x = 1 时, $\arctan 1 - \frac{1}{2} \arccos \frac{2}{1 + 1^{2}} = \frac{\pi}{4}$ ;
+
+当 $x > 1$ 时，令 $f(x) = \arctan x - \frac{1}{2}\arccos \frac{2x}{1 + x^2} -\frac{\pi}{4}$ ，则
+
+$\begin{array}{r l} f ^ {\prime} (x) & = \frac {1}{1 + x ^ {2}} + \frac {1}{2} \cdot \frac {1}{\sqrt {1 - \frac {4 x ^ {2}}{(1 + x ^ {2}) ^ {2}}}} \cdot \frac {2 (1 + x ^ {2}) - 4 x ^ {2}}{(1 + x ^ {2}) ^ {2}} \\ & = \frac {1}{1 + x ^ {2}} + \frac {1 + x ^ {2}}{x ^ {2} - 1} \cdot \frac {1 - x ^ {2}}{(1 + x ^ {2}) ^ {2}} \equiv 0, \end{array}$
+
+故 $f(x) \equiv c$ (c 为常数).
+
+又 $f(x)$ 在 $[1, +\infty)$ 上连续，故 $f(1) = \lim\limits_{x\to 1^{+}}f(x) = 0$ ，有 $f(x) = 0$ ，即
+
+$\arctan x - \frac {1}{2} \arccos \frac {2 x}{1 + x ^ {2}} = \frac {\pi}{4}.$"
+80122307,880,微积分,第二章 一元函数微分学,,7,综合题,解答题,,"设函数 $f(x)$ 有二阶连续导数，且 $(x - 1)f''(x) = 1 - \mathrm{e}^{1 - x} + 2(x - 1)f'(x)$ ，证明: 当 $x = x_0$ 是 $f(x)$ 的极值点时, $f(x)$ 在 $x_0$ 处取得极小值.",,,,,"证 当 $x_0$ 是 $f(x)$ 的极值点时, 有 $f'(x_0) = 0$ , 将 $x_0$ 代入已知条件得
+
+$f ^ {\prime \prime} (x _ {0}) = \frac {1 - \mathrm{e} ^ {1 - x _ {0}}}{x _ {0} - 1}.$
+
+当 $x_0 \neq 1$ 时，若 $x_0 > 1$ ，则 $f''(x_0) > 0$ ，若 $x_0 < 1$ ，则 $f''(x_0) > 0$ ，故 $x = x_0$ 为 $f(x)$ 的极小值点；当 $x_0 = 1$ 时，由 $f'(1) = 0, f''(1) = \lim\limits_{x \to 1} f''(x) = \lim\limits_{x \to 1} \frac{1 - e^{1 - x}}{x - 1} = 1 > 0$ ，知 $f(x)$ 在 $x_0 = 1$ 处取得极小值。综上可知， $f(x)$ 在 $x_0$ 处取得极小值。"
+80122308,880,微积分,第二章 一元函数微分学,,8,综合题,解答题,,"设 $f(x)=nx(1-x)^{n}$ (n 为正整数), 求 $f(x)$ 在 [0,1] 上的最大值 $M(n)$ 和 $\lim\limits_{n\to\infty}M(n)$ .",,,,,"解 对 $f(x)$ 求导, 得
+
+$f ^ {\prime} (x) = n (1 - x) ^ {n} + n ^ {2} x (1 - x) ^ {n - 1} \cdot (- 1) = n (1 - x) ^ {n - 1} [ 1 - (n + 1) x ] \quad (0 < x < 1),$
+
+令 $f'(x_{0})=0$ , 解得 $x_{0}=\frac{1}{n+1}$ .
+
+当 $0 < x < \frac{1}{n + 1}$ 时， $f'(x) > 0$ ；当 $\frac{1}{n + 1} < x < 1$ 时， $f'(x) < 0$ ，故 $f(x)$ 在点 $x_0$ 处取得极大值。又因为 $f(0) = 0, f(1) = 0$ ，所以
+
+$M (n) = f \left(x _ {0}\right) = \frac {n}{n + 1} \left(1 - \frac {1}{n + 1}\right) ^ {n} = \left(\frac {n}{n + 1}\right) ^ {n + 1}$
+
+为 $f(x)$ 在 $[0,1]$ 上的最大值，且 $\lim\limits_{n\to \infty}M(n) = \lim\limits_{n\to \infty}\left(\frac{n}{n + 1}\right)^{n + 1} = \mathrm{e}^{-1}$ ."
+80122309,880,微积分,第二章 一元函数微分学,,9,综合题,解答题,,"设 $f(x)=\arctan x$ , 求 $f^{(n)}(0)$ .",,,,,"解 由 $f(x)=\arctan x$ ，有 $f'(x)=\frac{1}{1+x^{2}}$ ，故
+
+$(1 + x ^ {2}) f ^ {\prime} (x) = 1.$
+
+上式两边同时对 x 求 $(n-1)$ 阶导数, 得
+
+$\left[ (1 + x ^ {2}) f ^ {\prime} (x) \right] ^ {(n - 1)} = 0,$
+
+利用莱布尼茨公式,令 $u = f'(x)$ , $v = 1 + x^{2}$ , 则
+
+$f ^ {(n)} (x) (1 + x ^ {2}) + (n - 1) f ^ {(n - 1)} (x) \cdot 2 x + \frac {(n - 1) (n - 2)}{2} f ^ {(n - 2)} (x) \cdot 2 = 0,$
+
+将 x = 0 代入上式, 得
+
+$f ^ {(n)} (0) (1 + 0) + (n - 1) f ^ {(n - 1)} (0) \cdot 0 + \frac {(n - 1) (n - 2)}{2} f ^ {(n - 2)} (0) \cdot 2 = 0,$
+
+即
+
+$f ^ {(n)} (0) = - (n - 1) (n - 2) f ^ {(n - 2)} (0).①$
+
+又 $f(0)=0$ ，由式①，得 $f''(0)=0$ ，故 $f^{(2k)}(0)=0$ 。
+
+又 $f'(0)=1$ ，由式①，得
+
+$f ^ {\prime \prime \prime} (0) = - 2!, \quad f ^ {(5)} = - 4 \cdot 3 \cdot f ^ {\prime \prime \prime} (0) = 4!,$
+
+故 $f^{(2k+1)}(0)=(-1)^{k}(2k)!(k=0,1,2,\cdots)$ .
+
+【注】也可利用泰勒公式求解.
+
+$f (x) = \arctan x = x - \frac {x ^ {3}}{3} + \frac {x ^ {5}}{5} - \dots + (- 1) ^ {k} \cdot \frac {x ^ {2 k + 1}}{2 k + 1} + \dots$
+
+$f ^ {(n)} (0) = \left\{ \begin{array}{l l} 0, & n = 2 k, \\ (- 1) ^ {k} (2 k)!, & n = 2 k + 1. \end{array} \right.$"
+80122310,880,微积分,第二章 一元函数微分学,,10,综合题,解答题,,"已知 $f(x)$ 可导, 证明: 曲线 $y = f(x) (f(x) > 0)$ 与曲线 $y = f(x) \sin x$ 在交点处相切.",,,,,"证 只要证明两曲线在交点处的导数相等.
+
+设交点为 $(x_{0},y_{0})$ ，则 $f(x_{0})=f(x_{0})\sin x_{0}$ ，又 $f(x_{0})>0$ ，故 $\sin x_{0}=1$ ，得 $x_{0}=\frac{\pi}{2}+2n\pi$ （n为整数）.
+
+曲线 $y = f(x)$ 在点 $(x_{0}, y_{0})$ 处的切线斜率为 $f'(x_{0})$ ;
+
+曲线 $y = f(x) \sin x$ 在点 $(x_{0}, y_{0})$ 处的切线斜率为
+
+$\left[ f (x) \sin x \right] ^ {\prime} \Big | _ {x = x _ {0}} = f ^ {\prime} (x _ {0}) \sin x _ {0} + f (x _ {0}) \cos x _ {0},$
+
+由于在 $x_0 = \frac{\pi}{2} + 2n\pi$ 处， $\cos x_0 = 0, \sin x_0 = 1$ ，故 $[f(x)\sin x]'|_{x=x_0} = f'(x_0)$ .
+
+因此它们在交点处相切."
+80122311,880,微积分,第二章 一元函数微分学,,11,综合题,解答题,,"设 $f(x)$ 有二阶连续导数, $f(0)=f'(0)=0$ , $f''(0)>0$ , $u=u(x)$ 是曲线 $y=f(x)$ 在点 $(x,f(x))$ 处的切线在 x 轴上的截距, 求 $\lim\limits_{x\to0}\frac{x}{u(x)}$ .",,,,,"解 $y = f(x)$ 在点 $(x, f(x))$ 处的切线方程为
+
+$Y = f (x) + f ^ {\prime} (x) (X - x).$
+
+令 $Y = 0$ ，可得切线在 $x$ 轴上的截距为 $X = x - \frac{f(x)}{f'(x)} = u(x)$ ，故
+
+$\begin{array}{r l} & {\underset {x \to 0} {\lim} \frac {x}{u (x)} = \underset {x \to 0} {\lim} \frac {x}{x - \frac {f (x)}{f ^ {\prime} (x)}} = \underset {x \to 0} {\lim} \frac {x f ^ {\prime} (x)}{x f ^ {\prime} (x) - f (x)}} \\ & {\quad \frac {\text {洛必达}}{\text {法则}} \underset {x \to 0} {\lim} \frac {f ^ {\prime} (x) + x f ^ {\prime \prime} (x)}{x f ^ {\prime \prime} (x)} = 1 + \underset {x \to 0} {\lim} \frac {f ^ {\prime} (x)}{x f ^ {\prime \prime} (x)}} \\ & {\quad = 1 + \underset {x \to 0} {\lim} \frac {f ^ {\prime} (x) - f ^ {\prime} (0)}{x - 0} \bullet \frac {1}{f ^ {\prime \prime} (x)}} \\ & {\quad = 1 + \frac {f ^ {\prime \prime} (0)}{f ^ {\prime \prime} (0)} = 1 + 1 = 2.} \end{array}$"
+80122312,880,微积分,第二章 一元函数微分学,,12,综合题,解答题,,"设 $f(x)$ 在区间 $(a,b)$ 内可导, $f'(x)$ 在 $(a,b)$ 内严格单调增加, 对任意的 $x_{1}, x_{2} \in (a,b)$ , 且 $x_{1} \neq x_{2}$ , 证明: $f[\lambda x_{1} + (1 - \lambda)x_{2}] < \lambda f(x_{1}) + (1 - \lambda)f(x_{2})$ , 其中 $0 < \lambda < 1$ .",,,,,"证 由已知, 不妨设 $x_{1} < x_{2}$ . 令 $x = \lambda x_{1} + (1 - \lambda)x_{2}$ , 则 $x_{1} < x < x_{2}$ . 由拉格朗日中值定理, 有
+
+$f (x) - f \left(x _ {1}\right) = f ^ {\prime} \left(\xi_ {1}\right) \left(x - x _ {1}\right) = f ^ {\prime} \left(\xi_ {1}\right) (1 - \lambda) \left(x _ {2} - x _ {1}\right) \quad \left(x _ {1} < \xi_ {1} < x\right),①$
+
+$f \left(x _ {2}\right) - f (x) = f ^ {\prime} \left(\xi_ {2}\right) \left(x _ {2} - x\right) = f ^ {\prime} \left(\xi_ {2}\right) \lambda \left(x _ {2} - x _ {1}\right) \quad \left(x < \xi_ {2} < x _ {2}\right).②$
+
+式 ① × λ - 式 ② × (1 - λ)，得
+
+$f (x) - \lambda f \left(x _ {1}\right) - (1 - \lambda) f \left(x _ {2}\right) = \lambda (1 - \lambda) \left(x _ {2} - x _ {1}\right) \left[ f ^ {\prime} \left(\xi_ {1}\right) - f ^ {\prime} \left(\xi_ {2}\right) \right].$
+
+由 $f^{\prime}(x)$ 严格单调增加，知 $f^{\prime}(\xi_{1}) < f^{\prime}(\xi_{2})$ ，即 $f(x) - \lambda f(x_{1}) - (1 - \lambda)f(x_{2}) < 0$ ，故
+
+$f \left[ \lambda x _ {1} + (1 - \lambda) x _ {2} \right] < \lambda f \left(x _ {1}\right) + (1 - \lambda) f \left(x _ {2}\right).$
+
+【注】①对任意的 $x_{1}, x_{2} \in (a, b)$ , 且 $x_{1} \neq x_{2}, 0 < \lambda < 1$ , 有
+
+$f \left[ \lambda x _ {1} + (1 - \lambda) x _ {2} \right] < \lambda f \left(x _ {1}\right) + (1 - \lambda) f \left(x _ {2}\right)$
+
+② 若 $f(x)$ 在 $(a,b)$ 内二阶可导，且 $f''(x)>0$ ，对任意 $x_{1},x_{2}\in(a,b),x_{1}\neq x_{2}$ ，则
+
+$f \left[ \lambda x _ {1} + (1 - \lambda) x _ {2} \right] < \lambda f \left(x _ {1}\right) + (1 - \lambda) f \left(x _ {2}\right).$
+
+可用泰勒公式证明. 令 $x = \lambda x_{1} + (1 - \lambda)x_{2}, f(u)$ 在点 $x$ 处展开, 有
+
+$f(u)=f(x)+f'(x)(u-x)+\frac{f''(\xi)}{2!}(u-x)^{2}$ ( $\xi$ 介于u与x之间),
+
+将 $u = x_{1}, u = x_{2}$ 代入上式, 得
+
+$\begin{array}{r l} f (x _ {1}) & = f (x) + f ^ {\prime} (x) (x _ {1} - x) + \frac {f ^ {\prime \prime} (\xi_ {1})}{2 !} (x _ {1} - x) ^ {2} \\ & = f (x) + f ^ {\prime} (x) (1 - \lambda) (x _ {1} - x _ {2}) + \frac {f ^ {\prime \prime} (\xi_ {1})}{2 !} (x _ {1} - x) ^ {2}, \\ f (x _ {2}) & = f (x) + f ^ {\prime} (x) (x _ {2} - x) + \frac {f ^ {\prime \prime} (\xi_ {2})}{2 !} (x _ {2} - x) ^ {2} \\ & = f (x) + f ^ {\prime} (x) \lambda (x _ {2} - x _ {1}) + \frac {f ^ {\prime \prime} (\xi_ {2})}{2 !} (x _ {2} - x) ^ {2}, \end{array}①$
+
+②
+
+其中 $\xi_{1}$ 介于 $x_{1}$ 与 x 之间， $\xi_{2}$ 介于 $x_{2}$ 与 x 之间，则式 ①×λ\+式 ②×(1-λ)，得
+
+$\lambda f \left(x _ {1}\right) + (1 - \lambda) f \left(x _ {2}\right) = f (x) + \lambda \frac {f ^ {\prime \prime} \left(\xi_ {1}\right)}{2} \left(x _ {1} - x\right) ^ {2} + (1 - \lambda) \frac {f ^ {\prime \prime} \left(\xi_ {2}\right)}{2} \left(x _ {2} - x\right) ^ {2}.$
+
+由 $f''(x) > 0$ ，知
+
+$\lambda f \left(x _ {1}\right) + (1 - \lambda) f \left(x _ {2}\right) > f (x) = f \left[ \lambda x _ {1} + (1 - \lambda) x _ {2} \right].$"
+80122313,880,微积分,第二章 一元函数微分学,,13,综合题,解答题,,"设函数 $f(x)$ 在区间 $(a,b)$ 内可导，行列式 $|A|=\left|\begin{matrix}1 & x_{1} & f(x_{1}) \\ 1 & x_{2} & f(x_{2}) \\ 1 & x_{3} & f(x_{3})\end{matrix}\right|$ . 证明: 导函数 $f'(x)$ 在 $(a,b)$ 内严格单调增加的充分必要条件是对 $(a,b)$ 内任意的 $x_{1} ，有 |A|>0 .$",,,,,"证 将 $|\mathbf{A}|$ 的第2行 $\times (-1)$ 加到第3行, 再将第1行 $\times (-1)$ 加到第2行, 按 $|\mathbf{A}|$ 的第1列展开, 有
+
+$\begin{array}{r l} \mid \mathbf {A} \mid & = \left| \begin{array}{c c c} 1 & x _ {1} & f (x _ {1}) \\ 1 & x _ {2} & f (x _ {2}) \\ 1 & x _ {3} & f (x _ {3}) \end{array} \right| = \left| \begin{array}{c c c} 1 & x _ {1} & f (x _ {1}) \\ 0 & x _ {2} - x _ {1} & f (x _ {2}) - f (x _ {1}) \\ 0 & x _ {3} - x _ {2} & f (x _ {3}) - f (x _ {2}) \end{array} \right| \\ & = \left| \begin{array}{c c} x _ {2} - x _ {1} & f (x _ {2}) - f (x _ {1}) \\ x _ {3} - x _ {2} & f (x _ {3}) - f (x _ {2}) \end{array} \right| \\ & = (x _ {2} - x _ {1}) [ f (x _ {3}) - f (x _ {2}) ] - (x _ {3} - x _ {2}) [ f (x _ {2}) - f (x _ {1}) ]. \end{array}$
+
+故 $|\mathbf{A}| > 0$ 等价于 $\frac{f(x_3) - f(x_2)}{x_3 - x_2} >\frac{f(x_2) - f(x_1)}{x_2 - x_1}.$
+
+先证必要性.由拉格朗日中值定理,知存在 $\xi_{1}\in(x_{1},x_{2}),\xi_{2}\in(x_{2},x_{3})$ ,使得
+
+$f ^ {\prime} (\xi_ {1}) = \frac {f (x _ {2}) - f (x _ {1})}{x _ {2} - x _ {1}}, \quad f ^ {\prime} (\xi_ {2}) = \frac {f (x _ {3}) - f (x _ {2})}{x _ {3} - x _ {2}}.$
+
+由 $f'(x)$ 在 $(a,b)$ 内严格单调增加以及 $\xi_{1}<\xi_{2}$ ，可得 $f'(\xi_{1}) ，即$
+
+$\frac {f (x _ {3}) - f (x _ {2})}{x _ {3} - x _ {2}} > \frac {f (x _ {2}) - f (x _ {1})}{x _ {2} - x _ {1}}.$
+
+再证充分性. 任取 $x_0, x_1, x_2 \in (a, b)$ , 满足 $x_1 < x_0 < x_2$ . 取 $s, t$ 满足 $x_1 < s < x_0 < t < x_2$ . 由已知, 有
+
+$\frac {f (s) - f (x _ {1})}{s - x _ {1}} < \frac {f (x _ {0}) - f (s)}{x _ {0} - s}, \quad \frac {f (t) - f (x _ {0})}{t - x _ {0}} < \frac {f (x _ {2}) - f (t)}{x _ {2} - t},$
+
+则
+
+$f ^ {\prime} (x _ {1}) = \lim\limits_ {s \to x _ {1} ^ {+}} \frac {f (s) - f (x _ {1})}{s - x _ {1}} \leqslant \lim\limits_ {s \to x _ {1} ^ {+}} \frac {f (x _ {0}) - f (s)}{x _ {0} - s} = \frac {f (x _ {0}) - f (x _ {1})}{x _ {0} - x _ {1}},①$
+
+$f ^ {\prime} (x _ {2}) = \lim\limits_ {t \to x _ {2} ^ {-}} \frac {f (x _ {2}) - f (t)}{x _ {2} - t} \geqslant \lim\limits_ {t \to x _ {2} ^ {-}} \frac {f (t) - f (x _ {0})}{t - x _ {0}} = \frac {f (x _ {2}) - f (x _ {0})}{x _ {2} - x _ {0}}.②$
+
+由式 ①、式 ② 以及 $\frac{f(x_0) - f(x_1)}{x_0 - x_1} < \frac{f(x_2) - f(x_0)}{x_2 - x_0}$ ，知 $f'(x_1) < f'(x_2)$ .
+
+由 $x_{1}, x_{2}$ 的任意性, 知 $f'(x)$ 在 $(a, b)$ 内严格单调增加."
+80122314,880,微积分,第二章 一元函数微分学,,14,综合题,解答题,,"设 $f(x)$ 在 $[0,1]$ 上连续，在 $(0,1)$ 内可导，且 $f(0)=0, f(1)=1$ . 证明:
+(I) 存在 $\xi_{1}$ 与 $\xi_{2}$ 满足 $0 < \xi_{1} < \xi_{2} < 1$ ，使得 $f'\left(\xi_{1}\right) + f'\left(\xi_{2}\right) = 2$ .
+(II) 在 $(0,1)$ 内存在 $\xi$ 与 $\eta$ ，使得 $\eta f'(\xi)=f(\eta)f'(\eta)$ .",,,,,"证（I）由拉格朗日中值定理，知存在一点 $\xi_{1} \in \left(0, \frac{1}{2}\right)$ ，使得
+
+$f ^ {\prime} (\xi_ {1}) = \frac {f \left(\frac {1}{2}\right) - f (0)}{\frac {1}{2} - 0} = 2 f \left(\frac {1}{2}\right);①$
+
+存在一点 $\xi_{2} \in \left(\frac{1}{2}, 1\right)$ , 使得
+
+$f ^ {\prime} (\xi_ {2}) = \frac {f (1) - f \left(\frac {1}{2}\right)}{1 - \frac {1}{2}} = 2 \left[ 1 - f \left(\frac {1}{2}\right) \right].②$
+
+式 ① \+ 式 ② , 得
+
+$f ^ {\prime} (\xi_ {1}) + f ^ {\prime} (\xi_ {2}) = 2.$
+
+(Ⅱ) 所证不等式变形为
+
+$f ^ {\prime} (\xi) = \frac {f (\eta) f ^ {\prime} (\eta)}{\eta}.$
+
+由拉格朗日中值定理,知存在一点 $\xi \in (0,1)$ ,使得
+
+$f ^ {\prime} (\xi) = \frac {f (1) - f (0)}{1 - 0} = 1.$
+
+③
+
+令 $F(x) = f^{2}(x), G(x) = x^{2}$ ，则 $F(0) = 0, F(1) = 1, G(0) = 0, G(1) = 1$ .
+
+由柯西中值定理,知存在一点 $\eta \in (0,1)$ , 使得
+
+$\frac {F ^ {\prime} (\eta)}{G ^ {\prime} (\eta)} = \frac {F (1) - F (0)}{G (1) - G (0)} = 1,$
+
+即
+
+$\frac {f (\eta) f ^ {\prime} (\eta)}{\eta} = 1.④$
+
+由式 ③ 与式 ④, 知 $f'(\xi) = \frac{f(\eta)f'(\eta)}{\eta}$ , 即 $\eta f'(\xi) = f(\eta)f'(\eta)$ ."
+80123301,880,微积分,第二章 一元函数微分学,,1,拓展题,解答题,,"已知函数 $f(x)$ 在 $[0, +\infty)$ 上有二阶连续导数, $f(0) = f'(0) = 0$ , 且 $x \in [0, +\infty)$ , 有 $f''(x) > 0$ , 设 $F(x)$ 是曲线 $y = f(x)$ 上任一点 $(x, f(x))$ 处的切线在 x 轴上的截距 $(x > 0)$ , 求 $\lim\limits_{x \to 0^{+}} [F(x) + F'(x)]$ .",,,,,"解 由已知, 点 $(x, f(x))$ 处的切线方程为
+
+$Y - f (x) = f ^ {\prime} (x) (X - x),$
+
+令 $Y = 0$ ，可得切线在 $\pmb{x}$ 轴上的截距为 $F(x) = x - \frac{f(x)}{f'(x)} (x > 0)$
+
+由 $f''(x)>0$ , 知 $f'(x)>f'(0)=0$
+
+$\lim\limits_ {x \to 0 ^ {+}} F (x) = \lim\limits_ {x \to 0 ^ {+}} \left[ x - \frac {f (x)}{f ^ {\prime} (x)} \right] = - \lim\limits_ {x \to 0 ^ {+}} \frac {f (x)}{f ^ {\prime} (x)} = 0,$
+
+故
+
+$\begin{array}{r l} \lim\limits_ {x \to 0 ^ {+}} F ^ {\prime} (x) & = \lim\limits_ {x \to 0 ^ {+}} \left[ 1 - \frac {f ^ {\prime 2} (x) - f (x) f ^ {\prime \prime} (x)}{f ^ {\prime 2} (x)} \right] = \lim\limits_ {x \to 0 ^ {+}} \frac {f (x) f ^ {\prime \prime} (x)}{f ^ {\prime 2} (x)} \\ & = f ^ {\prime \prime} (0) \lim\limits_ {x \to 0 ^ {+}} \frac {f (x)}{f ^ {\prime 2} (x)} = f ^ {\prime \prime} (0) \lim\limits_ {x \to 0 ^ {+}} \frac {f ^ {\prime} (x)}{2 f ^ {\prime} (x) f ^ {\prime \prime} (x)} = \frac {1}{2}, \\ & \lim\limits_ {x \to 0 ^ {+}} [ F (x) + F ^ {\prime} (x) ] = 0 + \frac {1}{2} = \frac {1}{2}. \end{array}$"
+80123302,880,微积分,第二章 一元函数微分学,,2,拓展题,解答题,,"设 $f(x)$ 在 $[a, b]$ 上有二阶连续导数，且 $f(a) = f(b) = 0, M = \max_{a \leqslant x \leqslant b} |f''(x)|$ . 证明：
+(I) $\max_{a\leqslant x\leqslant b}|f(x)|\leqslant\frac{1}{8}M(b-a)^{2};$
+
+(II)$\max_{a\leqslant x\leqslant b}|f'(x)|\leqslant\frac{1}{2}M(b-a).$",,,,,"证（Ⅰ）当 $f(x) \equiv 0$ 时，显然原不等式恒成立。不妨设 $f(x) \neq 0$ ，且 $\left|f(x_{0})\right| = \max_{a \leqslant x \leqslant b} |f(x)|$ ，则 $x_{0}$ 是 $f(x)$ 的极值点，从而 $f'(x_{0}) = 0$ ，故利用泰勒公式，可知存在 $\xi$ ，使得
+
+$f (x) = f \left(x _ {0}\right) + f ^ {\prime} \left(x _ {0}\right) \left(x - x _ {0}\right) + \frac {1}{2} f ^ {\prime \prime} (\xi) \left(x - x _ {0}\right) ^ {2} = f \left(x _ {0}\right) + \frac {1}{2} f ^ {\prime \prime} (\xi) \left(x - x _ {0}\right) ^ {2}$
+
+成立，将 $x = a, x = b$ 代入上式，得
+
+$0 = f (a) = f (x _ {0}) + \frac {1}{2} f ^ {\prime \prime} (\xi_ {1}) (a - x _ {0}) ^ {2},①$
+
+$0 = f (b) = f (x _ {0}) + \frac {1}{2} f ^ {\prime \prime} (\xi_ {2}) (b - x _ {0}) ^ {2},②$
+
+其中 $\xi_{1}\in(a,x_{0}),\xi_{2}\in(x_{0},b)$ .
+
+若 $x_0 \in \left(a, \frac{a + b}{2}\right]$ , 则由式 ①, 得
+
+$\mid f (x _ {0}) \mid = \frac {1}{2} \mid f ^ {\prime \prime} (\xi_ {1}) \mid (a - x _ {0}) ^ {2} \leqslant \frac {1}{2} \max _ {a \leqslant x \leqslant b} \mid f ^ {\prime \prime} (x) \mid \cdot \frac {(b - a) ^ {2}}{4} = \frac {1}{8} M (b - a) ^ {2}.$
+
+若 $x_0 \in \left(\frac{a + b}{2}, b\right)$ , 则由式 ②, 得
+
+$\mid f (x _ {0}) \mid = \frac {1}{2} \mid f ^ {\prime \prime} (\xi_ {2}) \mid (b - x _ {0}) ^ {2} \leqslant \frac {1}{2} \max _ {a \leqslant x \leqslant b} \mid f ^ {\prime \prime} (x) \mid \cdot \frac {(b - a) ^ {2}}{4} = \frac {1}{8} M (b - a) ^ {2}.$
+
+综上所述,原不等式得证.
+
+（Ⅱ）不妨设 $|f'(x_1)| = \max_{a\leqslant x\leqslant b}|f'(x)|$ ，则由泰勒公式，可知
+
+$0 = f (a) = f (x _ {1}) + f ^ {\prime} (x _ {1}) (a - x _ {1}) + \frac {1}{2} f ^ {\prime \prime} (\eta_ {1}) (a - x _ {1}) ^ {2},③$
+
+$0 = f (b) = f (x _ {1}) + f ^ {\prime} (x _ {1}) (b - x _ {1}) + \frac {1}{2} f ^ {\prime \prime} (\eta_ {2}) (b - x _ {1}) ^ {2},④$
+
+其中 $\eta_1\in (a,x_1),\eta_2\in (x_1,b)$ .由式 $③ -$ 式 $④$ ，得
+
+$\begin{array}{r l} | f ^ {\prime} (x _ {1}) (b - a) | & = \frac {1}{2} | f ^ {\prime \prime} (\eta_ {2}) (b - x _ {1}) ^ {2} - f ^ {\prime \prime} (\eta_ {1}) (a - x _ {1}) ^ {2} | \\ & \leqslant \frac {1}{2} | f ^ {\prime \prime} (\eta_ {2}) (b - x _ {1}) ^ {2} | + \frac {1}{2} | f ^ {\prime \prime} (\eta_ {1}) (a - x _ {1}) ^ {2} | \\ & \leqslant \frac {1}{2} \max _ {a \leqslant x \leqslant b} | f ^ {\prime \prime} (x) | \cdot [ (b - x _ {1}) ^ {2} + (a - x _ {1}) ^ {2} ], \end{array}$
+
+又 $(a - x_{1})^{2} + (b - x_{1})^{2}$ 在 $a\leqslant x_1\leqslant b$ 上的最大值为 $(b - a)^{2}$ ，故 $\max_{a\leqslant x\leqslant b}|f'(x)|\leqslant \frac{1}{2} M(b - a)$ ."
+80123303,880,微积分,第二章 一元函数微分学,,3,拓展题,解答题,,"设 $f(x)$ 在 $[0,1]$ 上连续, 且 $\int_{0}^{1} f(x) \mathrm{d}x = A \neq 0$ .
+(I) 证明: 存在 $x_{1}$ 和 $x_{2}$ 满足 $0 < x_{1} < x_{2} < 1$ , 使得 $f(x_{1}) + f(x_{2}) = 2A$ ;
+(II) 记 $M = \max_{x \in [0,1]} \left\{ |f(x)| \right\}$ ，证明：在 $(0,1)$ 内，存在不同的 $\xi$ 和 $\eta$ ，使得 $\left| \frac{1}{f(\xi)} + \frac{1}{f(\eta)} \right| \geqslant \frac{2}{M}$ .",,,,,"证 (I) 令 $F(x) = \frac{1}{A} \int_{0}^{x} f(t) \, \mathrm{d}t$ ，则 $F(0) = 0, F(1) = 1$ ，且 $F'(x) = \frac{1}{A} f(x)$ .
+
+由拉格朗日中值定理,知存在 $x_{1} \in \left(0, \frac{1}{2}\right)$ , 使得
+
+$F ^ {\prime} (x _ {1}) = \frac {1}{A} f (x _ {1}) = \frac {F \left(\frac {1}{2}\right) - F (0)}{\frac {1}{2} - 0} = 2 F \left(\frac {1}{2}\right);①$
+
+存在 $x_{2} \in \left(\frac{1}{2}, 1\right)$ , 使得
+
+$F ^ {\prime} (x _ {2}) = \frac {1}{A} f (x _ {2}) = \frac {F (1) - F \left(\frac {1}{2}\right)}{1 - \frac {1}{2}} = 2 \left[ 1 - F \left(\frac {1}{2}\right) \right].②$
+
+式 ① \+ 式 ② 得
+
+$f (x _ {1}) + f (x _ {2}) = 2 A.$
+
+(Ⅱ) 由(Ⅰ)知, $F(0)<\frac{1}{2} .$
+
+由介值定理,知存在 $C \in (0,1)$ , 使得 $F(C) = \frac{1}{2}$ .
+
+对 $F(x)$ 在 $[0,C]$ 和 $[C,1]$ 上分别利用拉格朗日中值定理，有
+
+$F ^ {\prime} (\xi) = \frac {F (C) - F (0)}{C - 0} = \frac {1}{2 C}, \quad \xi \in (0, C),③$
+
+$F ^ {\prime} (\eta) = \frac {F (1) - F (C)}{1 - C} = \frac {1}{2 (1 - C)}, \quad \eta \in (C, 1).④$
+
+由式 ③ 和式 ④, 得
+
+$f (\xi) = \frac {A}{2 C}, \quad f (\eta) = \frac {A}{2 (1 - C)}.$
+
+又因为 $|A| = \left|\int_{0}^{1}f(x)\mathrm{d}x\right|\leqslant \int_{0}^{1}|f(x)|\mathrm{d}x\leqslant \int_{0}^{1}M\mathrm{d}x = M$ ，故
+
+$\left| \frac {1}{f (\xi)} + \frac {1}{f (\eta)} \right| = \left| \frac {2 C}{A} + \frac {2 (1 - C)}{A} \right| = \frac {2}{| A |} \geqslant \frac {2}{M}.$"

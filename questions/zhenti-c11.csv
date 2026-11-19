@@ -1,0 +1,488 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+zt-030917,真题,微积分,第六章 二重积分,数三2009,17,解答题,,题型一 计算二重积分,"(17) ( 10 分)
+计算二重积分 $\iint_{D} (x - y) \, \mathrm{d}x \, \mathrm{d}y$ ，其中 $D = \{(x, y) \mid (x - 1)^2 + (y - 1)^2 \leqslant 2, y \geqslant x\}$ .",,,,,"分析 本题主要考查二重积分的计算.由于积分区域为圆域的一部分,故可以考虑在极坐标系下进行计算.
+点 M 的直角坐标 $(x, y)$ 与极坐标 $(r, \theta)$ 满足 $\left\{\begin{aligned} x &= r \cos \theta, \\ y &= r \sin \theta. \end{aligned}\right.$ 若在极坐标系下计算，则有公式
+$$ \iint_ {D} f (x, y) \mathrm{d} \sigma = \iint_ {D} f (r \cos \theta , r \sin \theta) r \mathrm{d} r \mathrm{d} \theta , $$
+其中 $r\mathrm{d}r\mathrm{d}\theta$ 为极坐标系中的面积元素.
+解 如图所示,作极坐标变换 $\left\{\begin{aligned} x &= r\cos\theta, \\ y &= r\sin\theta, \end{aligned}\right.$ 则圆方程 $(x - 1)^{2}$
+![image](images/zt-030917.jpg)
+$+ (y - 1)^{2} = 2$ 变成 $r = 2(\cos \theta + \sin \theta)$ ，从而 $D$ 在极坐标系下表示为
+$$ D = \left\{(r, \theta) \mid 0 \leqslant r \leqslant 2 (\cos \theta + \sin \theta), \frac {\pi}{4} \leqslant \theta \leqslant \frac {3 \pi}{4} \right\}. $$
+因此，
+$$ \begin{array}{r l} \iint_ {D} (x - y) \mathrm{d} x \mathrm{d} y & = \int_ {\frac {\pi}{4}} ^ {\frac {3 \pi}{4}} (\cos \theta - \sin \theta) \mathrm{d} \theta \int_ {0} ^ {2 (\cos \theta + \sin \theta)} r ^ {2} \mathrm{d} r = \int_ {\frac {\pi}{4}} ^ {\frac {3 \pi}{4}} (\cos \theta - \sin \theta) \left[ \frac {r ^ {3}}{3} \right| _ {0} ^ {2 (\cos \theta + \sin \theta)} \\ & = \frac {8}{3} \int_ {\frac {\pi}{4}} ^ {\frac {3 \pi}{4}} (\cos \theta + \sin \theta) ^ {2} (\cos^ {2} \theta - \sin^ {2} \theta) \mathrm{d} \theta = \frac {8}{3} \int_ {\frac {\pi}{4}} ^ {\frac {3 \pi}{4}} (1 + \sin 2 \theta) \cos 2 \theta \mathrm{d} \theta \\ & = \frac {u = \sin 2 \theta}{3} \frac {4}{3} \int_ {1} ^ {- 1} (1 + u) \mathrm{d} u = - \frac {8}{3}. \end{array} $$
+或者也可以这样计算.
+$$ \begin{array}{r l} \iint_ {D} (x - y) \mathrm{d} x \mathrm{d} y & = \frac {8}{3} \int_ {\frac {\pi}{4}} ^ {\frac {3 \pi}{4}} (\cos \theta + \sin \theta) ^ {3} (\cos \theta - \sin \theta) \mathrm{d} \theta = \frac {8}{3} \int_ {\frac {\pi}{4}} ^ {\frac {3 \pi}{4}} (\cos \theta + \sin \theta) ^ {3} \mathrm{d} (\cos \theta + \sin \theta) \\ & = \frac {2}{3} (\cos \theta + \sin \theta) ^ {4} \left| _ {\frac {\pi}{4}} ^ {\frac {3 \pi}{4}} = - \frac {8}{3}. \right. \end{array} $$
+拓展
+二重积分的计算
+二重积分的计算有以下四个方面需要注意：①对称性的利用、②坐标系的选取、③改变积分次序、④区域分块.作为总结，我们给出计算二重积分的流程图.
+![image](images/zt-030917-2.jpg)"
+zt-030919,真题,微积分,第六章 二重积分,数三2009,19,解答题,,题型一 计算二重积分,"(19) ( 10 分)
+设曲线 $y=f(x)$ ，其中 $f(x)$ 是可导函数，且 $f(x)>0$ 。已知曲线 $y=f(x)$ 与直线 y=0, x=1 及 $x=t(t>1)$ 所围成的曲边梯形绕 x 轴旋转一周所得的立体体积值是该曲边梯形面积值的 $\pi t$ 倍，求该曲线的方程。",,,,,"分析 本题主要考查定积分的几何应用和微分方程的求解. 可先求出旋转体的体积以及曲边梯形的面积, 再根据已知条件列出等式. 对于含变限积分的等式, 一般可通过求导将其转化成微分方程并求解.
+![image](images/zt-030919.jpg)
+D 绕x轴转动
+![image](images/zt-030919-2.jpg)
+![image](images/zt-030919-3.jpg)
+(a)
+D 绕y轴转动
+(b)
+![image](images/zt-030919-4.jpg)
+计算旋转体的体积
+- 如图(a)所示,若旋转体由区域 $D$ (由 $y=f(x),x=a,x=b(b>a\geqslant0)$ ,以及x轴围成的曲边梯形)绕x轴旋转而来,则该旋转体的体积为
+$$ V _ {x} = \pi \int_ {a} ^ {b} [ f (x) ] ^ {2} \mathrm{d} x. $$
+如图(b)所示,区域D绕y轴旋转所得旋转体的体积为
+$$ V _ {y} = 2 \pi \int_ {a} ^ {b} x f (x) \mathrm{d} x. $$
+我们可以用元素法来推导这两个公式.
+当区域 $D$ 绕 $x$ 轴旋转时，如图(a)，取横坐标 $x$ 为积分变量， $x$ 的变化范围为 $[a, b]$ . 小区间 $[x, x + \mathrm{d}x]$ 对应的窄曲边梯形绕 $x$ 轴旋转而成的薄片的体积近似于以 $f(x)$ 为底面半径， $\mathrm{d}x$ 为高的圆柱体的体积，即体积元素为 $\mathrm{d}V = \pi [f(x)]^2\mathrm{d}x$ . 于是，
+$$ V _ {x} = \pi \int_ {a} ^ {b} [ f (x) ] ^ {2} \mathrm{d} x. $$
+当区域 $D$ 绕 $y$ 轴旋转时，如图(b)，取横坐标 $x$ 为积分变量， $x$ 的变化范围为 $[a, b]$ . 小区间 $[x, x + \mathrm{d}x]$ 对应的窄曲边梯形绕 $y$ 轴旋转而成的旋转体的体积近似于一圆柱壳的体积，圆柱壳的高为 $f(x)$ ，厚为 $\mathrm{d}x$ ，底面圆周长为 $2\pi x$ ，即体积元素为 $\mathrm{d}V = 2\pi xf(x)\mathrm{d}x$ . 于是，
+$$ V _ {y} = 2 \pi \int_ {a} ^ {b} x f (x) \mathrm{d} x. $$
+- 同理, 若旋转体由区域 $D'$ (由 $x = \varphi(y), y = a, y = b (b > a \geqslant 0)$ , 以及 $y$ 轴围成的曲边梯形) 绕 $y$ 轴旋转而来, 则该旋转体的体积为
+$$ V _ {y} = \pi \int_ {a} ^ {b} [ \varphi (y) ] ^ {2} \mathrm{d} y. $$
+区域 $D^{\prime}$ 绕 $x$ 轴旋转所得旋转体的体积为
+$$ V _ {x} = 2 \pi \int_ {a} ^ {b} y \varphi (y) d y. $$
+一阶非齐次线性微分方程 $y' + p(x)y = q(x)$ 的求解公式
+$$ y = \mathrm{e} ^ {- \int p (x) \mathrm{d} x} \left[ \int q (x) \mathrm{e} ^ {\int p (x) \mathrm{d} x} \mathrm{d} x + C \right], $$
+其中 C 为任意常数.
+齐次微分方程 $\frac{dy}{dx}=\varphi\left(\frac{y}{x}\right)$ 的解法 作变换 $u=\frac{y}{x}$ ，则y=ux， $\frac{dy}{dx}=x\frac{du}{dx}+u$ ，于是原方程化为 $x\frac{\mathrm{d}u}{\mathrm{d}x}=\varphi(u)-u.$
+用分离变量法求解后,代回 $u=\frac{y}{x}$ 并解出 y 即可.
+解 由旋转体的体积公式知曲边梯形绕 $x$ 轴旋转一周所得的立体体积 $V = \pi \int_{1}^{t}[f(x)]^{2}\mathrm{d}x.$ 由定积分的几何意义知曲边梯形的面积 $S = \int_{1}^{t}f(x)\mathrm{d}x.$ 由已知条件知 $V = \pi tS$ ，故对任意的 $t > 1$ ，都有
+$$ \pi \int_ {1} ^ {t} [ f (x) ] ^ {2} \mathrm{d} x = \pi t \int_ {1} ^ {t} f (x) \mathrm{d} x. $$
+上式两端消去 $\pi$ 后并关于 t 求导得，
+$$ [ f (t) ] ^ {2} = \int_ {1} ^ {t} f (x) \mathrm{d} x + t f (t).\tag{1} $$
+继续对上式两端关于 t 求导得，
+$$ 2 f (t) f ^ {\prime} (t) = 2 f (t) + t f ^ {\prime} (t). $$
+令 $y = f(t)$ ，得
+$$ \frac {\mathrm{d} y}{\mathrm{d} t} = \frac {2 y}{2 y - t}. $$
+下面用两种方法解方程 $\frac{dy}{dt}=\frac{2y}{2y-t}.$
+(法一) 由 $\frac{dy}{dt}=\frac{2y}{2y-t}$ 可得 $\frac{dt}{dy}+\frac{1}{2y}t=1.$
+此为一阶非齐次线性微分方程,其通解为
+$$ t = \mathrm{e} ^ {- \int \frac {1}{2 y} \mathrm{d} y} \left(\int \mathrm{e} ^ {\int \frac {1}{2 y} \mathrm{d} y} \mathrm{d} y + C\right) = y ^ {- \frac {1}{2}} \left(\frac {2}{3} y ^ {\frac {3}{2}} + C\right) = C y ^ {- \frac {1}{2}} + \frac {2}{3} y. $$
+由(1)式可得 $[f(1)]^2 = f(1)$ ，于是 $f(1) = 1$ （舍去 $f(1) = 0$ ）。代入上式解得 $C = \frac{1}{3}$ ，即 $t = \frac{1}{3\sqrt{y}} + \frac{2}{3} y$ 。因此，所求曲线方程为
+$$ x = \frac {1}{3 \sqrt {y}} + \frac {2}{3} y, \quad x \geqslant 1. $$
+（法二）此为齐次微分方程.令 $u=\frac{y}{t}$ ，则 $y=ut,\frac{dy}{dt}=u+t\frac{du}{dt}$ ，从而 $u+t\frac{du}{dt}=\frac{dy}{dt}=\frac{2y}{2y-t}=\frac{2u}{2u-1}$ .整理得
+$$ \frac {2 u - 1}{3 u - 2 u ^ {2}} \mathrm{d} u = \frac {\mathrm{d} t}{t}. $$
+对上式两端积分得，
+$$ \int \frac {2 u - 1}{3 u - 2 u ^ {2}} \mathrm{d} u = \int \left(- \frac {1}{3 u} + \frac {4}{3} \cdot \frac {1}{3 - 2 u}\right) \mathrm{d} u = \int \frac {\mathrm{d} t}{t}. $$
+由于 $y > 0, t > 1$ ，故 $u > 0$ ，从而 $-\frac{1}{3} \ln u - \frac{2}{3} \ln |3 - 2u| = \ln t + C_1$ ，其中 $C_1$ 为常数，即 $[u(3 - 2u)^2]^{-\frac{1}{3}} = Ct$ ， $C = e^{C_1}$ .
+(2)
+同法一可得 $f(1) = 1$ . 于是 $u(1) = \frac{f(1)}{1} = 1$ . 代入 (2) 式解得 $C = 1$ .
+将 $u = \frac{y}{t}$ 代入(2)式化简得到 $y(3t - 2y)^2 = 1$ ，从而 $t = \frac{1}{3}\left(\pm \frac{1}{\sqrt{y}} + 2y\right)$ . 由于 $y(1) = 1$ ，故 $t = \frac{1}{3}\left(\frac{1}{\sqrt{y}} + 2y\right)$ ，即所求曲线方程为 $x = \frac{1}{3\sqrt{y}} + \frac{2}{3} y, x \geqslant 1$ .
+注 法一通过交换自变量与因变量的地位,简化了微分方程求解的计算过程. 这种技巧在解微分方程时经常用到."
+zt-031010,真题,微积分,第六章 二重积分,数三2010,10,填空题,,题型一 计算二重积分,"(10) 设位于曲线 $y = \frac{1}{\sqrt{x(1 + \ln^{2}x)}}$ ( $e \leqslant x < +\infty$ ) 下方, x 轴上方的无界区域为 G, 则 G 绕 x 轴旋转一周所得空间区域的体积为 ____.",,,,,"答案 应填 $\frac{\pi^{2}}{4}$ .
+分析 本题主要考查旋转体体积的计算.
+解 由曲线表达式可知，y 是关于 x 的单调减少函数且 $\lim\limits_{x\to0}\frac{y(x)}{x}=0$ .
+由旋转体的体积公式知 $G$ 绕 $\pmb{x}$ 轴旋转一周所得空间区域的体积
+$$ \begin{array}{r l} V & = \pi \int_ {e} ^ {+ \infty} \left[ \frac {1}{\sqrt {x (1 + \ln^ {2} x)}} \right] ^ {2} d x = \pi \int_ {e} ^ {+ \infty} \frac {1}{x (1 + \ln^ {2} x)} d x \\ & = \pi \int_ {e} ^ {+ \infty} \frac {d (\ln x)}{1 + \ln^ {2} x} = \pi \arctan (\ln x) \Bigg | _ {e} ^ {+ \infty} = \pi \left(\frac {\pi}{2} - \frac {\pi}{4}\right) = \frac {\pi^ {2}}{4}. \end{array} $$
+![image](images/zt-031010.jpg)"
+zt-031016,真题,微积分,第六章 二重积分,数三2010,16,解答题,,题型一 计算二重积分,"(16) ( 10 分)
+计算二重积分 $\iint_{D} (x + y)^{3} \mathrm{d}x \mathrm{~d}y$ ，其中 $D$ 由曲线 $x = \sqrt{1 + y^{2}}$ 与直线 $x + \sqrt{2}y = 0$ 及 $x - \sqrt{2}y = 0$ 围成.",,,,,"分析 本题主要考查二重积分的计算.通过观察发现,积分区域D关于x轴对称,因此我们可以利用积分区域的对称性以及被积函数的奇偶性来简化计算.
+解 如图所示,积分区域 D 关于 x 轴对称,故
+![image](images/zt-031016.jpg)
+$$ \iint_ {D} (x + y) ^ {3} \mathrm{d} x \mathrm{d} y = \iint_ {D} (x ^ {3} + 3 x ^ {2} y + 3 x y ^ {2} + y ^ {3}) \mathrm{d} x \mathrm{d} y = \iint_ {D} (x ^ {3} + 3 x y ^ {2}) \mathrm{d} x \mathrm{d} y. $$
+分别计算 $x = \sqrt{1 + y^2}$ 与 $x = \sqrt{2} y, x = -\sqrt{2} y$ 的交点得 $(\sqrt{2}, 1), (\sqrt{2}, -1)$ . 记 $D_1$ 为区域 $D$ 位于 $x$ 轴以上的部分. 将 $D_1$ 写为 Y 型区域. $D_1 = \{(x, y) | \sqrt{2} y \leqslant x \leqslant \sqrt{1 + y^2}, 0 \leqslant y \leqslant 1\}$ . 于是,
+$$ \begin{array}{r l} \iint_ {D} (x + y) ^ {3} \mathrm{d} x \mathrm{d} y & = 2 \iint_ {D _ {1}} (x ^ {3} + 3 x y ^ {2}) \mathrm{d} x \mathrm{d} y = 2 \int_ {0} ^ {1} \mathrm{d} y \int_ {\sqrt {2} y} ^ {\sqrt {1 + y ^ {2}}} (x ^ {3} + 3 x y ^ {2}) \mathrm{d} x \\ & = 2 \left[ \int_ {0} ^ {1} \frac {(1 + y ^ {2}) ^ {2} - (2 y ^ {2}) ^ {2}}{4} \mathrm{d} y + \int_ {0} ^ {1} \frac {3 y ^ {2} (1 + y ^ {2} - 2 y ^ {2})}{2} \mathrm{d} y \right] \\ & = \frac {1}{2} \int_ {0} ^ {1} (1 + 2 y ^ {2} - 3 y ^ {4}) \mathrm{d} y + 3 \int_ {0} ^ {1} (y ^ {2} - y ^ {4}) \mathrm{d} y = \int_ {0} ^ {1} \left(\frac {1}{2} + 4 y ^ {2} - \frac {9}{2} y ^ {4}\right) \mathrm{d} y \\ & = \frac {1}{2} + \frac {4}{3} - \frac {9}{1 0} = \frac {1 4}{1 5}. \end{array} $$
+注 本题也可以将区域 D 写成 X 型区域, 这样就需要对积分区域进行划分, 增加了计算量.
+拓展
+积分区域关于坐标轴的对称性与被积函数的奇偶性
+设 $f(x,y)$ 在有界闭区域D上连续.有如下结论.
+① 当积分区域 D 关于 y 轴对称时，
+- 若 $f(x,y)$ 为关于 $x$ 的奇函数, 则 $\iint_{D} f(x,y) \mathrm{d}\sigma = 0$ .
+- 若 $f(x, y)$ 为关于 $x$ 的偶函数，则 $\iint_{D} f(x, y) \mathrm{d}\sigma = 2 \iint_{D_1} f(x, y) \mathrm{d}\sigma$ ，其中 $D_1$ 为 $D$ 在 $x \geqslant 0$ 半平
+面上的部分.
+② 当积分区域 D 关于 x 轴对称时，
+- 若 $f(x, y)$ 为关于 $y$ 的奇函数, 则 $\iint_{D} f(x, y) \mathrm{d}\sigma = 0$ .
+- 若 $f(x, y)$ 为关于 $y$ 的偶函数, 则 $\iint_{D} f(x, y) \mathrm{d}\sigma = 2 \iint_{D_1} f(x, y) \mathrm{d}\sigma$ , 其中 $D_1$ 为 $D$ 在 $y \geqslant 0$ 半平面上的部分.
+在计算二重积分时,要注意能否利用对称性简化计算,一般有如下四种情况.
+(1) 若积分区域关于 y 轴对称, 被积函数关于 x 具有奇偶性, 则可以利用上述结论的第①部分简化计算.
+(2) 若积分区域关于 x 轴对称, 被积函数关于 y 具有奇偶性, 则可以利用上述结论的第②部分简化计算.
+(3) 积分区域关于 y 轴(或 x 轴) 对称, 而被积函数的一部分关于 x (或关于 y) 具有奇偶性. 若可以对被积函数进行拆分, 则可以利用对称性来简化计算.
+(4) 被积函数关于某个变量具有奇偶性,而积分区域既不关于 y 轴对称,也不关于 x 轴对称. 若可以对积分区域进行划分,使得它的一部分关于坐标轴对称,则也可以利用对称性来简化计算."
+zt-031112,真题,微积分,第六章 二重积分,数三2011,12,填空题,,,(12) 曲线 $y = \sqrt{x^{2} - 1}$ ，直线 x = 2 及 x 轴所围的平面图形绕 x 轴旋转所成的旋转体的体积为 ____.,,,,,"答案 应填 $\frac{4}{3}\pi$ .
+分析 本题主要考查旋转体的体积计算.
+解 如图所示,联立方程 $\left\{\begin{aligned}y&=\sqrt{x^{2}-1}\\ x&=2\end{aligned}\right.$ ，可解得曲线 $y=\sqrt{x^{2}-1}$ 与直线x=2的交点为 $(2,\sqrt{3})$ .
+由旋转体的体积公式知所求体积为
+![image](images/zt-031112.jpg)
+$$ V = \pi \int_ {1} ^ {2} y ^ {2} (x) \mathrm{d} x = \pi \int_ {1} ^ {2} \left(x ^ {2} - 1\right) \mathrm{d} x = \pi \left(\frac {x ^ {3}}{3} - x\right) \Bigg | _ {1} ^ {2} = \frac {4}{3} \pi . $$"
+zt-031119,真题,微积分,第六章 二重积分,数三2011,19,解答题,,,"(19) ( 10 分)
+设函数 $f(x)$ 在区间 $[0,1]$ 上具有连续导数， $f(0)=1$ ，且满足$\iint_{D_t} f'(x + y) \, \mathrm{d}x \, \mathrm{d}y = \iint_{D_t} f(t) \, \mathrm{d}x \, \mathrm{d}y$ ，
+其中 $D_t = \{(x, y) \mid 0 \leqslant y \leqslant t - x, 0 \leqslant x \leqslant t\} (0 < t \leqslant 1)$ 求 $f(x)$ 的表达式.",,,,,"分析 本题是一道将二重积分与微分方程初值问题结合在一起的综合题. 我们可先从二重积分出发, 将其化为二次积分以挖掘信息.
+注意：t 是参数，在计算二重积分的过程中，可将其看作常数.
+此外,对同时含有变限积分 $\int_{0}^{t}f(x)\mathrm{d}x$ 和 $f(t)$ 的等式,一般可考虑对等式两端关于t求导,将其转化为微分方程,从而通过解微分方程得到 $f(t)$ 的表达式.
+本题对等式两端求导后得到一个可分离变量的微分方程.
+可分离变量的微分方程的解法 将方程写成 $f(x)\mathrm{d}x=g(t)\mathrm{d}t$ 的形式,通过对方程两端积分来求解.
+解
+$$ \begin{array}{r l} \iint_ {D _ {t}} f ^ {\prime} (x + y) \mathrm{d} x \mathrm{d} y & = \int_ {0} ^ {t} \mathrm{d} x \int_ {0} ^ {t - x} f ^ {\prime} (x + y) \mathrm{d} y \stackrel {u = x + y} {=} \int_ {0} ^ {t} \mathrm{d} x \int_ {x} ^ {t} f ^ {\prime} (u) \mathrm{d} u \\ & = \int_ {0} ^ {t} [ f (t) - f (x) ] \mathrm{d} x = t f (t) - \int_ {0} ^ {t} f (x) \mathrm{d} x. \end{array} $$
+另一方面,由于 $f(t)$ 中不包含变量x,y,从而
+$$ \iint_ {D _ {t}} f (t) \mathrm{d} x \mathrm{d} y = f (t) \iint_ {D _ {t}} \mathrm{d} x \mathrm{d} y = \frac {t ^ {2}}{2} f (t), $$
+其中 $\frac{t^{2}}{2}$ 是 $D_{t}$ 的面积,故我们得到一个新的等式,
+$$ t f (t) - \int_ {0} ^ {t} f (x) \mathrm{d} x = \frac {t ^ {2}}{2} f (t).\tag{1} $$
+对(1)式两端关于 $t$ 求导, 得 $f(t) + tf'(t) - f(t) = tf(t) + \frac{t^2}{2} f'(t)$ , 化简得
+$$ (2 - t) f ^ {\prime} (t) = 2 f (t). $$
+这是一个可分离变量的微分方程. 解该方程得, $f(t) = \frac{C}{(2 - t)^2}$ , $0 < t \leqslant 1$ . 由 $f(x)$ 在 [0,1] 上连续且 $f(0) = 1$ 得,
+$$ f (0) = \lim\limits_ {t \to 0 ^ {+}} \frac {C}{(2 - t) ^ {2}} = \frac {C}{4} = 1. $$
+从而 C = 4.
+因此， $f(x) = \frac{4}{(2 - x)^2},0\leqslant x\leqslant 1.$"
+zt-031203,真题,微积分,第六章 二重积分,数三2012,3,选择题,,,"(3) 设函数 $f(t)$ 连续, 则二次积分 $\int_{0}^{\frac{\pi}{2}}\mathrm{d}\theta\int_{2\cos\theta}^{2}f(r^{2})r\mathrm{d}r=$",$\int_{0}^{2}\mathrm{d}x\int_{\sqrt{2x-x^{2}}}^{\sqrt{4-x^{2}}}\sqrt{x^{2}+y^{2}}f(x^{2}+y^{2})\mathrm{d}y.$,$\int_{0}^{2}\mathrm{d}x\int_{\sqrt{2x-x^{2}}}^{\sqrt{4-x^{2}}}f(x^{2}+y^{2})\mathrm{d}y.$,$\int_{0}^{2}\mathrm{d}y\int_{1+\sqrt{1-y^{2}}}^{\sqrt{4-y^{2}}}\sqrt{x^{2}+y^{2}}f(x^{2}+y^{2})\mathrm{d}x.$,$\int_{0}^{2}\mathrm{d}y\int_{1+\sqrt{1-y^{2}}}^{\sqrt{4-y^{2}}}f(x^{2}+y^{2})\mathrm{d}x.$,"答案 B.
+分析 本题主要考查直角坐标系与极坐标系之间的相互转化.
+我们先将极坐标系下的区域写出来,然后利用 $r=\sqrt{x^{2}+y^{2}}$ , $\cos\theta=\frac{x}{\sqrt{x^{2}+y^{2}}}$ , $\sin\theta=\frac{y}{\sqrt{x^{2}+y^{2}}}$ 代换,将其化为直角坐标系下的区域.
+本题中， $0 \leqslant \theta \leqslant \frac{\pi}{2}$ ，说明 $x \geqslant 0, y \geqslant 0$ .
+解 原二次积分对应的二重积分的积分区域为 $D = \left\{(r, \theta) \mid 2 \cos \theta \leqslant r \leqslant 2, 0 \leqslant \theta \leqslant \frac{\pi}{2}\right\}$ . 曲线 $r = 2, r = 2 \cos \theta$ 的直角坐标方程分别为 $x^{2} + y^{2} = 4, x^{2} + y^{2} = 2x.$
+![image](images/zt-031203.jpg)
+(a)
+![image](images/zt-031203-2.jpg)
+(b)
+由于 $0 \leqslant \theta \leqslant \frac{\pi}{2}$ , 故区域 $D$ 如图 (a) 所示. $D$ 在直角坐标系下可表示为
+$$ D = \{(x, y) \mid \sqrt {2 x - x ^ {2}} \leqslant y \leqslant \sqrt {4 - x ^ {2}}, 0 \leqslant x \leqslant 2 \}. $$
+将 $f(r^{2})$ 换成 $f(x^{2}+y^{2})$ ，将 $r\mathrm{d}r\mathrm{d}\theta$ 换成 $\mathrm{d}x\mathrm{d}y$ ，得 $\int_{0}^{2}\mathrm{d}x\int_{\sqrt{2x-x^{2}}}^{\sqrt{4-x^{2}}}f(x^{2}+y^{2})\mathrm{d}y.$ 应选B.
+下面我们说明选项 A、C、D 不正确.
+选项A中的积分区域表示与选项B一样,但是被积函数多了一个因子 $\sqrt{x^{2}+y^{2}}$ .注意到,极坐标与直角坐标的相互转化中, $rdrd\theta=dxdy$ ,原积分中的 $rdrd\theta$ 转化为dxdy,被积函数变为 $f(x^{2}+y^{2})$ ,在新积分中,没有因子r.选项A不正确.
+被积函数与选项 A 一样.选项 C 不正确.
+选项 D 中的积分区域为 $D' = \{(x, y) \mid 1 + \sqrt{1 - y^{2}} \leqslant x \leqslant \sqrt{4 - y^{2}}, 0 \leqslant y \leqslant 2\}$ ， $D'$ 如图(b)所示。选项 D 不正确。"
+zt-031212,真题,微积分,第六章 二重积分,数三2012,12,填空题,,,(12) 由曲线 $y = \frac{4}{x}$ 和直线 y = x 及 y = 4x 在第一象限中围成的平面图形的面积为 ____.,,,,,"答案 应填 $4\ln 2$ .
+分析 本题主要考查二重积分的应用.
+在直角坐标系下计算二重积分时,应先判断积分区域的类型,并根据被积函数和积分区域的特点来选择适当的积分次序进行积分. 当积分区域既不是 X 型区域也不是 Y 型区域,而是混合型区域时,我们一般可以对区域进行划分,使得划分后所得每块小区域不再是混合型区域,然后计算.
+解 D 为由曲线 $y=\frac{4}{x}$ 和直线 y=x 及 y=4x 在第一象限中围成的平面区域. 由二重积分的几何意义知, 所求面积为 $\iint dx dy$ . 先求出这三条曲线在第一象限中的交点, 分别为 (1,4), (2,2).
+![image](images/zt-031212.jpg)
+(a)
+![image](images/zt-031212-2.jpg)
+(b)
+(法一) 如图(a)所示, 将区域 D 划分为两个 X 型区域.
+$$ D _ {1} = \{(x, y) | x \leqslant y \leqslant 4 x, 0 \leqslant x \leqslant 1 \}, D _ {2} = \{(x, y) | x \leqslant y \leqslant \frac {4}{x}, 1 \leqslant x \leqslant 2 \}. $$
+因此，
+$$ \begin{array}{r l} D \text { 的面积 } & = \iint_ {D} \mathrm{d} x \mathrm{d} y = \int_ {0} ^ {1} \mathrm{d} x \int_ {x} ^ {4 x} \mathrm{d} y + \int_ {1} ^ {2} \mathrm{d} x \int_ {x} ^ {\frac {4}{x}} \mathrm{d} y = \int_ {0} ^ {1} 3 x \mathrm{d} x + \int_ {1} ^ {2} \left(\frac {4}{x} - x\right) \mathrm{d} x \\ & = \frac {3}{2} + 4 \ln 2 - \frac {3}{2} = 4 \ln 2. \end{array} $$
+(法二) 如图(b) 所示, 将区域 D 划分为两个 Y 型区域.
+$$ D _ {1} = \left\{(x, y) \mid \frac {y}{4} \leqslant x \leqslant y, 0 \leqslant y \leqslant 2 \right\}, D _ {2} = \left\{(x, y) \mid \frac {y}{4} \leqslant x \leqslant \frac {4}{y}, 2 \leqslant y \leqslant 4 \right\}. $$
+因此，
+$$ \begin{array}{r l} D \text {的面积} & = \iint_ {D} \mathrm{d} x \mathrm{d} y = \int_ {0} ^ {2} \mathrm{d} y \int_ {\frac {y}{4}} ^ {y} \mathrm{d} x + \int_ {2} ^ {4} \mathrm{d} y \int_ {\frac {y}{4}} ^ {\frac {4}{y}} \mathrm{d} x = \int_ {0} ^ {2} \frac {3}{4} y \mathrm{d} y + \int_ {2} ^ {4} \left(\frac {4}{y} - \frac {y}{4}\right) \mathrm{d} y \\ & = \frac {3}{2} + 4 \ln 2 - \frac {3}{2} = 4 \ln 2. \end{array} $$"
+zt-031216,真题,微积分,第六章 二重积分,数三2012,16,解答题,,,"(16) ( 10 分)
+计算二重积分 $\iint_{D} e^{x} xy \, \mathrm{d}x \, \mathrm{d}y$ ，其中 $D$ 是以曲线 $y = \sqrt{x}, y = \frac{1}{\sqrt{x}}$ 及 $y$ 轴为边界的无界区域.",,,,,"分析 本题主要考查反常二重积分的计算. 本题中的积分区域为无界区域, 在计算时, 写出无界区域的表示, 将二重积分化为二次积分, 最后得到一个反常积分. 依照反常积分的计算方法求值即可.
+![image](images/zt-031216.jpg)
+解 将 $D$ 看作X型区域, $D = \left\{(x,y) \mid \sqrt{x} \leqslant y \leqslant \frac{1}{\sqrt{x}}, 0 < x \leqslant 1\right\}$ , 则
+$$ \begin{array}{r l} \iint_ {D} \mathrm{e} ^ {x} x y \mathrm{d} x \mathrm{d} y & = \int_ {0} ^ {1} \mathrm{d} x \int_ {\sqrt {x}} ^ {\frac {1}{\sqrt {x}}} \mathrm{e} ^ {x} x y \mathrm{d} y = \int_ {0} ^ {1} \frac {1}{2} (1 - x ^ {2}) \mathrm{e} ^ {x} \mathrm{d} x = \frac {1}{2} \int_ {0} ^ {1} (1 - x ^ {2}) \mathrm{d} (\mathrm{e} ^ {x}) \\ & = \frac {1}{2} \left[ (1 - x ^ {2}) \mathrm{e} ^ {x} \Big | _ {0} ^ {1} + \int_ {0} ^ {1} 2 x \mathrm{e} ^ {x} \mathrm{d} x \right] \\ & = \frac {1}{2} \left(- 1 + 2 x \mathrm{e} ^ {x} \Big | _ {0} ^ {1} - 2 \int_ {0} ^ {1} \mathrm{e} ^ {x} \mathrm{d} x\right) \\ & = \frac {1}{2} [ - 1 + 2 \mathrm{e} - 2 (\mathrm{e} - 1) ] = \frac {1}{2}. \end{array} $$
+注 本题也可以将积分区域 D 看作 Y 型区域进行计算, 这样就需要对 D 进行划分, 并且计算会复杂许多."
+zt-031316,真题,微积分,第六章 二重积分,数三2013,16,解答题,,,"(16) ( 10 分)
+设 D 是由曲线 $y = x^{\frac{1}{3}}$ ，直线 $x = a (a > 0)$ 及 x 轴所围成的平面图形， $V_{x}, V_{y}$ 分别是 D 绕 x 轴，y 轴旋转一周所得旋转体的体积。若 $V_{y} = 10V_{x}$ ，求 a 的值。",,,,,"分析 本题主要考查求旋转体的体积.
+D 绕 x 轴旋转一周所得旋转体的体积: $V_{x} = \pi \int_{a}^{b} [f(x)]^{2} \, dx$ .
+D 绕 y 轴旋转一周所得旋转体的体积: $V_{y} = 2\pi \int_{a}^{b} x f(x) \, dx$ .
+解 (法一) $D$ 绕 $x$ 轴旋转所得的旋转体的体积 $V_{x}$ 为
+$$ V _ {x} = \pi \int_ {0} ^ {a} \left(x ^ {\frac {1}{3}}\right) ^ {2} \mathrm{d} x = \frac {3 \pi}{5} x ^ {\frac {5}{3}} \Bigg | _ {0} ^ {a} = \frac {3 \pi}{5} a ^ {\frac {5}{3}}. $$
+D 绕 y 轴旋转所得旋转体的体积 $V_{y}$ 为
+$$ V _ {y} = 2 \pi \int_ {0} ^ {a} x \cdot x ^ {\frac {1}{3}} \mathrm{d} x = 2 \pi \cdot \frac {3}{7} a ^ {\frac {7}{3}} = \frac {6 \pi}{7} a ^ {\frac {7}{3}}. $$
+由于 $V_{y} = 10V_{x}$ ，故 $\frac{6\pi}{7} a^{\frac{7}{3}} = 10\cdot \frac{3\pi}{5} a^{\frac{5}{3}}.$ 整理得
+$$ a ^ {\frac {5}{3}} \left(6 \pi - \frac {6 \pi}{7} a ^ {\frac {2}{3}}\right) = 0. $$
+因此，a=0 或 $a^{\frac{2}{3}}=7$ . 由题设知，a>0，故 $a^{\frac{2}{3}}=7$ ，即 $a=7\sqrt{7}$ .
+(法二)D绕y轴旋转所得旋转体的体积 $V_{y}$ 为底面半径为a,高为 $a^{\frac{1}{3}}$ 的圆柱体体积减去 $D'$ (如图,由曲线 $y=x^{\frac{1}{3}}$ ,直线 $y=a^{\frac{1}{3}}$ 与y轴围成)绕y轴旋转所得旋转体的体积 $V_{y}'$ .
+![image](images/zt-031316.jpg)
+圆柱体的体积 $V = \pi a^{2} \cdot a^{\frac{1}{3}} = \pi a^{\frac{7}{3}}$ .
+$$ V _ {y} ^ {\prime} = \pi \int_ {0} ^ {a ^ {\frac {1}{3}}} (y ^ {3}) ^ {2} \mathrm{d} y = \frac {\pi}{7} y ^ {7} \Bigg | _ {0} ^ {a ^ {\frac {1}{3}}} = \frac {\pi}{7} a ^ {\frac {7}{3}}. $$
+因此， $V_{y}=\pi a^{\frac{7}{3}}-\frac{\pi}{7}a^{\frac{7}{3}}=\frac{6\pi}{7}a^{\frac{7}{3}}.$
+其余同法一."
+zt-031317,真题,微积分,第六章 二重积分,数三2013,17,解答题,,题型一 计算二重积分,"(17) ( 10 分)
+设平面区域 D 由直线 $x = 3y$, $y = 3x$ 及 $x + y = 8$ 围成, 计算 $\iint_{D} x^{2} dx dy$ .",,,,,"分析 本题主要考查二重积分的计算.
+本题中的二重积分,既可以考虑在直角坐标系下计算,也可以考虑在极坐标系下计算.
+解（法一）在直角坐标系下计算.
+如图所示,可以分别求出 y=3x 与 $x+y=8$ 的交点,以及 x=3y 与 $x+y=8$ 的交点.
+$$ \left\{ \begin{array}{l} y = 3 x, \\ x + y = 8, \end{array} \right. \Rightarrow \left\{ \begin{array}{l} x = 2, \\ y = 6, \end{array} \right. \quad \left\{ \begin{array}{l} x = 3 y, \\ x + y = 8, \end{array} \right. \Rightarrow \left\{ \begin{array}{l} x = 6, \\ y = 2. \end{array} \right. $$
+于是直线 x = 2 将区域 D 分为两部分 $D_{1}, D_{2}$ .
+![image](images/zt-031317.jpg)
+$$ D _ {1} = \left\{(x, y) \mid \frac {x}{3} \leqslant y \leqslant 3 x, 0 \leqslant x \leqslant 2 \right\}, D _ {2} = \left\{(x, y) \mid \frac {x}{3} \leqslant y \leqslant 8 - x, 2 \leqslant x \leqslant 6 \right\}. $$
+$$ \begin{array}{r l} \iint_ {D} x ^ {2} \mathrm{d} x \mathrm{d} y & = \int_ {0} ^ {2} x ^ {2} \mathrm{d} x \int_ {\frac {x}{3}} ^ {3 x} \mathrm{d} y + \int_ {2} ^ {6} x ^ {2} \mathrm{d} x \int_ {\frac {x}{3}} ^ {8 - x} \mathrm{d} y = \int_ {0} ^ {2} x ^ {2} \cdot \frac {8}{3} x \mathrm{d} x + \int_ {2} ^ {6} \left(8 - \frac {4}{3} x\right) x ^ {2} \mathrm{d} x \\ & = \frac {2}{3} x ^ {4} \Big | _ {0} ^ {2} + \frac {8}{3} x ^ {3} \Big | _ {2} ^ {6} - \frac {1}{3} x ^ {4} \Big | _ {2} ^ {6} = \frac {4 1 6}{3}. \end{array} $$
+(法二) 在极坐标系下计算.
+三条直线的方程分别为 $\theta = \arctan \frac{1}{3}, \theta = \arctan 3$ ，以及 $r(\cos \theta + \sin \theta) = 8$ . 此时，区域 $D$ 在极坐标系下的表示为
+$$ D = \left\{(r, \theta) \mid 0 \leqslant r \leqslant \frac {8}{\cos \theta + \sin \theta}, \arctan \frac {1}{3} \leqslant \theta \leqslant \arctan 3 \right\}. $$
+$$ \begin{array}{r l} & {\iint_ {D} x ^ {2} \mathrm{d} x \mathrm{d} y \overset{\text {极坐标}}{=} \iint_ {D} r ^ {2} \cos^ {2} \theta \cdot r \mathrm{d} r \mathrm{d} \theta = \int_ {\arctan \frac {1}{3}} ^ {\arctan 3} \cos^ {2} \theta \mathrm{d} \theta \int_ {0} ^ {\frac {8}{\cos \theta + \sin \theta}} r ^ {3} \mathrm{d} r} \\ & {\qquad = \frac {8 ^ {4}}{4} \int_ {\arctan \frac {1}{3}} ^ {\arctan 3} \frac {\cos^ {2} \theta}{(\cos \theta + \sin \theta) ^ {4}} \mathrm{d} \theta = \frac {8 ^ {4}}{4} \int_ {\arctan \frac {1}{3}} ^ {\arctan 3} \frac {1}{(1 + \tan \theta) ^ {4}} \cdot \sec^ {2} \theta \mathrm{d} \theta} \\ & {\qquad = \frac {u = \tan \theta}{4} \frac {8 ^ {4}}{4} \int_ {\frac {1}{3}} ^ {3} \frac {1}{(1 + u) ^ {4}} \mathrm{d} u = \frac {8 ^ {4}}{4} \cdot (- \frac {1}{3}) \left. \frac {1}{(1 + u) ^ {3}} \right| _ {\frac {1}{3}} ^ {3} = \frac {4 1 6}{3}.} \end{array} $$
+注 ①法一中选择了先y,后x的积分次序.感兴趣的读者可以用先x,后y的积分次序计算所求积分,看看哪种计算方法比较简单.
+②本题也可以使用二重积分的换元法来计算.
+如图所示, 区域 D 为坐标系 xOy 下第一象限中的一个三角形区域, 我们可以通过作变换将其变成新坐标系 $uO'v$ 下第一象限中的矩形区域 $D'$ , 从而使得相应的二次积分的计算较简单.
+![image](images/zt-031317-2.jpg)
+![image](images/zt-031317-3.jpg)
+令 $\left\{\begin{aligned}u&=x+y,\\ v&=\frac{y}{x},\end{aligned}\right.$ 可解得 $\left\{\begin{aligned}x&=\frac{u}{1+v},\\ y&=\frac{uv}{1+v},\end{aligned}\right.$ 而原来的直线方程 x=3y, y=3x, $x+y=8$ 分别变成 $v=\frac{1}{3},v=3,u=8.$ 区域 $D'$ 可表示为
+$$ D ^ {\prime} = \left\{(u, v) \mid 0 \leqslant u \leqslant 8, \frac {1}{3} \leqslant v \leqslant 3 \right\}. $$
+计算雅可比行列式 $J(u,v)$ 得
+$$ J (u, v) = \frac {\partial (x , y)}{\partial (u , v)} = \left| \begin{array}{c c} \frac {1}{1 + v} & \frac {- u}{(1 + v) ^ {2}} \\ \frac {v}{1 + v} & \frac {u}{(1 + v) ^ {2}} \end{array} \right| = \frac {u + u v}{(1 + v) ^ {3}} = \frac {u}{(1 + v) ^ {2}} \geqslant 0. $$
+因此，
+$$ \begin{array}{r l} \iint_ {D} x ^ {2} \mathrm{d} x \mathrm{d} y & = \iint_ {D ^ {\prime}} \left(\frac {u}{1 + v}\right) ^ {2} \cdot \frac {u}{(1 + v) ^ {2}} \mathrm{d} u \mathrm{d} v = \int_ {\frac {1}{3}} ^ {3} (1 + v) ^ {- 4} \mathrm{d} v \int_ {0} ^ {8} u ^ {3} \mathrm{d} u \\ & = - \frac {1}{3} \left(\frac {1}{4 ^ {3}} - \frac {3 ^ {3}}{4 ^ {3}}\right) \times \frac {8 ^ {4}}{4} = \frac {4 1 6}{3}. \end{array} $$"
+zt-031410,真题,微积分,第六章 二重积分,数三2014,10,填空题,,题型一 计算二重积分,"(10) 设 D 是由曲线 $xy + 1 = 0$ 与直线 $y + x = 0$ 及 y = 2 围成的有界区域, 则 D 的面积为 ____.",,,,,"答案 应填 $\frac{3}{2} - \ln 2$ .
+分析 本题主要考查利用二重积分计算平面区域的面积.
+由二重积分的几何意义知,区域 D 的面积等于 $\iint_{D} dx dy$ .
+![image](images/zt-031410.jpg)
+(a)
+![image](images/zt-031410-2.jpg)
+(b)
+![image](images/zt-031410-3.jpg)
+解（法一）区域 D 如图(a)所示. 将 D 写为 Y 型区域,
+$$ D = \left\{(x, y) \mid - y \leqslant x \leqslant - \frac {1}{y}, 1 \leqslant y \leqslant 2 \right\}. $$
+因此，
+$D$ 的面积 $= \iint_{D} \mathrm{d}x \mathrm{d}y = \int_{1}^{2} \mathrm{d}y \int_{-y}^{-\frac{1}{y}} \mathrm{d}x = \int_{1}^{2} \left(-\frac{1}{y} + y\right) \mathrm{d}y = -\ln y \left| _{1}^{2} + \frac{y^{2}}{2} \right|_{1}^{2} = \frac{3}{2} - \ln 2.$
+(法二) 如图(b) 所示, 将 D 分为两个 X 型区域 $D_{1}, D_{2}$ .
+$$ D _ {1} = \{(x, y) | - x \leqslant y \leqslant 2, - 2 \leqslant x \leqslant - 1 \}, $$
+$$ D _ {2} = \left\{(x, y) \mid - \frac {1}{x} \leqslant y \leqslant 2, - 1 \leqslant x \leqslant - \frac {1}{2} \right\}. $$
+因此，
+$$ \begin{array}{r l} D \text {的面积} & = \iint_ {D} \mathrm{d} x \mathrm{d} y = \iint_ {D _ {1}} \mathrm{d} x \mathrm{d} y + \iint_ {D _ {2}} \mathrm{d} x \mathrm{d} y = \int_ {- 2} ^ {- 1} \mathrm{d} x \int_ {- x} ^ {2} \mathrm{d} y + \int_ {- 1} ^ {- \frac {1}{2}} \mathrm{d} x \int_ {- \frac {1}{x}} ^ {2} \mathrm{d} y \\ & = \int_ {- 2} ^ {- 1} (2 + x) \mathrm{d} x + \int_ {- 1} ^ {- \frac {1}{2}} \left(2 + \frac {1}{x}\right) \mathrm{d} x = \frac {1}{2} + 1 + \ln \frac {1}{2} = \frac {3}{2} - \ln 2. \end{array} $$"
+zt-031412,真题,微积分,第六章 二重积分,数三2014,12,填空题,,题型二 交换积分次序,(12) 二次积分 $\int_{0}^{1}\mathrm{d}y\int_{y}^{1}\left(\frac{\mathrm{e}^{x^{2}}}{x}-\mathrm{e}^{y^{2}}\right)\mathrm{d}x=$ ____.,,,,,"答案 应填 $\frac{e-1}{2}$ .
+分析 本题主要考查利用交换积分次序求积分.
+二重积分的计算方法是将其转化为二次积分. 在计算二重积分时, 选择不同的积分次序, 计算量是不同的. 当按照某一种积分次序计算二次积分的计算量较大或者算不出来的时候, 我们可以考虑改变积分次序.
+被积函数包含 $e^{x^{2}}$ 的二次积分, 通常会用到交换积分次序.
+解
+$$ \begin{array}{r l} \int_ {0} ^ {1} \mathrm{d} y \int_ {y} ^ {1} \left(\frac {\mathrm{e} ^ {x ^ {2}}}{x} - \mathrm{e} ^ {y ^ {2}}\right) \mathrm{d} x & = \int_ {0} ^ {1} \mathrm{d} y \int_ {y} ^ {1} \frac {\mathrm{e} ^ {x ^ {2}}}{x} \mathrm{d} x - \int_ {0} ^ {1} \mathrm{d} y \int_ {y} ^ {1} \mathrm{e} ^ {y ^ {2}} \mathrm{d} x \\ & = \int_ {0} ^ {1} \mathrm{d} x \int_ {0} ^ {x} \frac {\mathrm{e} ^ {x ^ {2}}}{x} \mathrm{d} y - \int_ {0} ^ {1} (1 - y) \mathrm{e} ^ {y ^ {2}} \mathrm{d} y \\ & = \int_ {0} ^ {1} \mathrm{e} ^ {x ^ {2}} \mathrm{d} x - \int_ {0} ^ {1} \mathrm{e} ^ {y ^ {2}} \mathrm{d} y + \int_ {0} ^ {1} y \mathrm{e} ^ {y ^ {2}} \mathrm{d} y \\ & = \frac {1}{2} \int_ {0} ^ {1} \mathrm{e} ^ {y ^ {2}} \mathrm{d} (y ^ {2}) = \frac {1}{2} \mathrm{e} ^ {y ^ {2}} \Big | _ {0} ^ {1} = \frac {\mathrm{e} - 1}{2}. \end{array} $$
+拓展
+本题属于改变积分次序来求积分的题型.
+改变二次积分的积分次序来求积分,是二重积分中的重要考点.选择适当的积分次序,不仅能减少计算量,而且在某些时候,积分次序是“唯一”的,即只有在特定的积分次序下,才能使用我们现有的方法得到二重积分的结果.于是,有一类问题,通常需要改变积分次序才能求得二次积分的值.
+解决此类问题的方法：
+①根据二次积分的上、下限,写出积分区域的边界;
+②由积分区域的边界,画出积分区域,或者写出积分区域的表达式;
+③ 交换积分次序,即用不同于原二次积分的积分次序写出新的二次积分并计算.
+注意: 在将二次积分改写成二重积分时, 有时候可能要加上一个负号.
+【例】交换二次积分的积分次序： $\int_{-1}^{0}\mathrm{d}y\int_{2}^{1 - y}f(x,y)\mathrm{d}x =$ ____.（2001年数学一试题）
+解 记原二次积分为 $I$ . 先写出 $I$ 所对应的积分区域. 考虑二次积分的上、下限, 分别对应边界直线 $x = 1 - y, x = 2$ 和 $y = 0$ . 如图所示, 积分区域为
+$$ D = \{(x, y) \mid 1 - y \leqslant x \leqslant 2, - 1 \leqslant y \leqslant 0 \} = \{(x, y) \mid 1 - x \leqslant y \leqslant 0, 1 \leqslant x \leqslant 2 \}. $$
+![image](images/zt-031412.jpg)
+我们发现， $\iint_{D}f(x,y)\mathrm{d}x\mathrm{d}y = \int_{-1}^{0}\mathrm{d}y\int_{1 - y}^{2}f(x,y)\mathrm{d}x = -I.$
+因此，
+$$ I = - \iint_ {D} f (x, y) \mathrm{d} x \mathrm{d} y = - \int_ {1} ^ {2} \mathrm{d} x \int_ {1 - x} ^ {0} f (x, y) \mathrm{d} y = \int_ {1} ^ {2} \mathrm{d} x \int_ {0} ^ {1 - x} f (x, y) \mathrm{d} y. $$"
+zt-031416,真题,微积分,第六章 二重积分,数三2014,16,解答题,,题型一 计算二重积分,"(16)(10分)
+设平面区域 $D = \{(x,y) \mid 1 \leqslant x^2 + y^2 \leqslant 4, x \geqslant 0, y \geqslant 0\}$ , 计算 $\iint_{D} \frac{x \sin(\pi \sqrt{x^2 + y^2})}{x + y} \, \mathrm{d}x \, \mathrm{d}y$ .",,,,,"分析 本题主要考查二重积分的计算.
+由积分区域的形状以及被积函数中含有 $\sqrt{x^2 + y^2}$ 知, 在极坐标系下计算该二重积分比较方便. 此外, 注意到积分区域关于直线 $y = x$ 对称, 从而具有轮换对称性, 因此我们可以使用轮换对称性来简化计算.
+积分区域关于变量的轮换对称性
+设 $f(x,y)$ 在有界闭区域D上连续.当积分区域D关于直线y=x对称时,
+(1) $\iint_{D_1} f(x, y) \mathrm{d}\sigma = \iint_{D_2} f(y, x) \mathrm{d}\sigma$ ，其中 $D_1$ 和 $D_2$ 分别为 $D$ 位于直线 $y = x$ 以上的部分和 $D$ 位于直线 $y = x$ 以下的部分.
+(2) $\iint_{D} f(x, y) \, \mathrm{d}\sigma = \iint_{D} f(y, x) \, \mathrm{d}\sigma.$
+$$ (3) \iint_ {D} f (x, y) \mathrm{d} \sigma = \frac {1}{2} \iint_ {D} [ f (x, y) + f (y, x) ] \mathrm{d} \sigma . $$
+在上述结论中,我们通常称积分区域 D 关于变量 x, y 具有轮换对称性. 在使用轮换对称性时, 我们较常使用的结论是(3). 当积分区域 D 关于变量 x, y 具有轮换对称性, 并且 $f(x, y) + f(y, x)$ 的形式较简单, $\iint_{D} [f(x, y) + f(y, x)] \, \mathrm{d}\sigma$ 较容易计算时, 可使用(3)来简化 $\iint_{D} f(x, y) \, \mathrm{d}\sigma$ 的计算. 灵活使用轮换对称性, 能帮助我们减少计算量, 提高解题速度.
+解 记 $\iint_{D} \frac{x \sin(\pi \sqrt{x^2 + y^2})}{x + y} \mathrm{d} x \mathrm{d} y = I$ . 积分区域如图所示.
+(法一) 在极坐标系下, $D = \left\{(r, \theta) \mid 1 \leqslant r \leqslant 2, 0 \leqslant \theta \leqslant \frac{\pi}{2}\right\}$ .
+$$ I = \int_ {0} ^ {\frac {\pi}{2}} \mathrm{d} \theta \int_ {1} ^ {2} \frac {r \cos \theta \sin (\pi r)}{r (\cos \theta + \sin \theta)} \cdot r \mathrm{d} r = \int_ {0} ^ {\frac {\pi}{2}} \frac {\cos \theta}{\cos \theta + \sin \theta} \mathrm{d} \theta \int_ {1} ^ {2} r \sin (\pi r) \mathrm{d} r. $$
+![image](images/zt-031416.jpg)
+由于
+$$ \int_ {0} ^ {\frac {\pi}{2}} \frac {\cos \theta}{\cos \theta + \sin \theta} \mathrm{d} \theta \overset{t = \frac {\pi}{2} - \theta}{=} - \int_ {\frac {\pi}{2}} ^ {0} \frac {\sin t}{\cos t + \sin t} \mathrm{d} t = \int_ {0} ^ {\frac {\pi}{2}} \frac {\sin \theta}{\cos \theta + \sin \theta} \mathrm{d} \theta , $$
+故
+$$ \int_ {0} ^ {\frac {\pi}{2}} \frac {\cos \theta}{\cos \theta + \sin \theta} \mathrm{d} \theta = \frac {1}{2} \int_ {0} ^ {\frac {\pi}{2}} \left(\frac {\cos \theta}{\cos \theta + \sin \theta} + \frac {\sin \theta}{\cos \theta + \sin \theta}\right) \mathrm{d} \theta = \frac {1}{2} \int_ {0} ^ {\frac {\pi}{2}} 1 \mathrm{d} \theta = \frac {\pi}{4}. $$
+此外，
+$$ \int_ {1} ^ {2} r \sin (\pi r) \mathrm{d} r = - \frac {1}{\pi} \int_ {1} ^ {2} r \mathrm{d} [ \cos (\pi r) ] = - \frac {1}{\pi} [ r \cos (\pi r) \Big | _ {1} ^ {2} - \int_ {1} ^ {2} \cos (\pi r) \mathrm{d} r ] = - \frac {3}{\pi}. $$
+因此， $I=\frac{\pi}{4}\times\left(-\frac{3}{\pi}\right)=-\frac{3}{4}.$
+(法二) 首先,由于积分区域 D 关于 y = x 对称,故对 x, y 具有轮换对称性,从而
+$$ I = \iint_ {D} \frac {x \sin (\pi \sqrt {x ^ {2} + y ^ {2}})}{x + y} \mathrm{d} x \mathrm{d} y = \iint_ {D} \frac {y \sin (\pi \sqrt {x ^ {2} + y ^ {2}})}{x + y} \mathrm{d} x \mathrm{d} y. $$
+因此，
+$$ I = \frac {1}{2} \iint_ {D} \left[ \frac {x \sin (\pi \sqrt {x ^ {2} + y ^ {2}})}{x + y} + \frac {y \sin (\pi \sqrt {x ^ {2} + y ^ {2}})}{x + y} \right] d x d y = \frac {1}{2} \iint_ {D} \sin (\pi \sqrt {x ^ {2} + y ^ {2}}) d x d y. $$
+在极坐标系下, $D=\left\{(r,\theta)\mid1\leqslant r\leqslant2,0\leqslant\theta\leqslant\frac{\pi}{2}\right\}$ .
+$$ I = \frac {1}{2} \int_ {0} ^ {\frac {\pi}{2}} \mathrm{d} \theta \int_ {1} ^ {2} \sin (\pi r) \cdot r \mathrm{d} r = \frac {\pi}{4} \int_ {1} ^ {2} r \sin (\pi r) \mathrm{d} r, $$
+由法一知 $\int_{1}^{2} r \sin (\pi r) \, \mathrm{d}r = -\frac{3}{\pi}$ , 故 $I = \frac{\pi}{4} \times \left(-\frac{3}{\pi}\right) = -\frac{3}{4}$ .
+注 在法一中,我们证明了 $\int_{0}^{\frac{\pi}{2}}\frac{\cos\theta}{\cos\theta + \sin\theta}\mathrm{d}\theta = \int_{0}^{\frac{\pi}{2}}\frac{\sin\theta}{\sin\theta + \cos\theta}\mathrm{d}\theta.$
+事实上,我们有更一般的结论.
+设 $f(x)$ 是定义在[0,1]上的连续函数. 利用换元法, 我们能证明
+$$ \int_ {0} ^ {\frac {\pi}{2}} f (\cos x) \mathrm{d} x = \int_ {0} ^ {\frac {\pi}{2}} f (\sin x) \mathrm{d} x. $$
+令 $t = \frac{\pi}{2} - x$ ，则
+$$ \int_ {0} ^ {\frac {\pi}{2}} f (\cos x) \mathrm{d} x \overset{t = \frac {\pi}{2} - x}{=} - \int_ {\frac {\pi}{2}} ^ {0} f (\sin t) \mathrm{d} t = \int_ {0} ^ {\frac {\pi}{2}} f (\sin x) \mathrm{d} x. $$
+拓展
+1. 下面我们讨论一下二重积分的计算中, 何时选取极坐标系.
+(1) 若二重积分的被积函数在极坐标系下可化为关于 r 或者关于 $\theta$ 的一元函数, 例如 $f(\sqrt{x^{2}+y^{2}}), f\left(\frac{y}{x}\right)$ 等, 则可以尝试在极坐标系下计算该二重积分.
+(2) 若二重积分的积分区域为圆域、圆环域、扇形域或它们的一部分, 则可以尝试在极坐标系下计算该二重积分.
+值得一提的是,我们常选择在极坐标系下表示圆域,在直角坐标系下表示用直线围成的区域,但有些时候,根据题目的需要,也会用极坐标来表示直线围成的区域.
+2. 下面我们给出常见的具有轮换对称性的区域的例子, 如图所示.
+![image](images/zt-031416-2.jpg)"
+zt-031516,真题,微积分,第六章 二重积分,数三2015,16,解答题,,题型一 计算二重积分,"(16) ( 10 分)
+计算二重积分 $\iint_{D} x(x + y) \, \mathrm{d}x \, \mathrm{d}y$ ，其中 $D = \{(x, y) \mid x^2 + y^2 \leqslant 2, y \geqslant x^2\}$ .",,,,,"分析 本题主要考查二重积分的计算.计算前,应先观察积分区域和被积函数的特点,若能利用对称性来简化计算,则应先化简,再计算.
+解 由图(a)可知,区域D关于y轴对称,而xy为关于x的奇函数,故 $\iint_{D}xy\,dx\,dy=0$ .又因为 $x^{2}$ 为关于x的偶函数,所以
+![image](images/zt-031516.jpg)
+(a)
+![image](images/zt-031516-2.jpg)
+(b)
+![image](images/zt-031516-3.jpg)
+(c)
+$$ \iint_ {D} x (x + y) \mathrm{d} x \mathrm{d} y = \iint_ {D} x ^ {2} \mathrm{d} x \mathrm{d} y = 2 \iint_ {D _ {1}} x ^ {2} \mathrm{d} x \mathrm{d} y, $$
+其中 $D_{1}$ 是 D 位于右半平面的部分. 我们可以用两种方法来计算 $\iint_{D_{1}} x^{2} \, dx \, dy$ .
+(法一) 在直角坐标系下计算.
+如图(b)所示, 先求出圆弧 $x^{2} + y^{2} = 2$ 与抛物线 $y = x^{2}$ 的交点. 由 $\left\{\begin{aligned}x^{2} + y^{2} &= 2, \\ y &= x^{2},\end{aligned}\right.$ 可求得 $(x, y) = (1, 1)$ 或 $(x, y) = (-1, 1)$ . 在第一象限中的交点为 $(x, y) = (1, 1)$ .
+由圆方程 $x^{2} + y^{2} = 2$ 可得， $y = \sqrt{2 - x^2}$ . 由于圆弧在第一象限，故根号前取 $+$ 号. 将区域 $D_{1}$ 写成 X 型区域，
+$$ D _ {1} = \{(x, y) | x ^ {2} \leqslant y \leqslant \sqrt {2 - x ^ {2}}, 0 \leqslant x \leqslant 1 \}. $$
+从而
+$$ \begin{array}{r l} \iint_ {D _ {1}} x ^ {2} \mathrm{d} x \mathrm{d} y & = \int_ {0} ^ {1} \mathrm{d} x \int_ {x ^ {2}} ^ {\sqrt {2 - x ^ {2}}} x ^ {2} \mathrm{d} y = \int_ {0} ^ {1} x ^ {2} (\sqrt {2 - x ^ {2}} - x ^ {2}) \mathrm{d} x \\ & = \int_ {0} ^ {1} x ^ {2} \sqrt {2 - x ^ {2}} \mathrm{d} x - \int_ {0} ^ {1} x ^ {4} \mathrm{d} x = \int_ {0} ^ {1} x ^ {2} \sqrt {2 - x ^ {2}} \mathrm{d} x - \frac {1}{5} \\ & \overset{x = \sqrt {2} \sin t}{=} \int_ {0} ^ {\frac {\pi}{4}} 4 \sin^ {2} t \cos^ {2} t \mathrm{d} t - \frac {1}{5} = \int_ {0} ^ {\frac {\pi}{4}} (\sin 2 t) ^ {2} \mathrm{d} t - \frac {1}{5} \\ & = \int_ {0} ^ {\frac {\pi}{4}} \frac {1 - \cos 4 t}{2} \mathrm{d} t - \frac {1}{5} = \frac {\pi}{8} - \frac {1}{5}. \end{array} $$
+因此，
+$$ \iint_ {D} x (x + y) \mathrm{d} x \mathrm{d} y = 2 \iint_ {D _ {1}} x ^ {2} \mathrm{d} x \mathrm{d} y = \frac {\pi}{4} - \frac {2}{5}. $$
+(法二) 在极坐标系下计算.
+写出 $x^{2} + y^{2} = 2$ 的极坐标形式： $r = \sqrt{2}$ .写出 $y = x^2$ 的极坐标形式： $r\sin \theta = r^2\cos^2\theta$ ，化简为 $r = \tan \theta \sec \theta$
+可求得圆弧与抛物线的交点坐标为 $\left(\sqrt{2},\frac{\pi}{4}\right)$ . 如图(c)所示, 连接极点与该交点, 将区域 $D_{1}$ 分成两部分, $D_{1}=D_{1}^{\prime}\cup D_{1}^{\prime\prime}$ . $D_{1}^{\prime}$ 由 $\theta=\frac{\pi}{4}$ , $\theta=\frac{\pi}{2}$ 以及圆弧 $r=\sqrt{2}$ 围成; $D_{1}^{\prime\prime}$ 由 $\theta=\frac{\pi}{4}$ , $r=\tan\theta\sec\theta$ 围成. 从而
+$$ D _ {1} ^ {\prime} = \left\{(r, \theta) \mid 0 \leqslant r \leqslant \sqrt {2}, \frac {\pi}{4} \leqslant \theta \leqslant \frac {\pi}{2} \right\}, D _ {1} ^ {\prime \prime} = \left\{(r, \theta) \mid 0 \leqslant r \leqslant \tan \theta \sec \theta , 0 \leqslant \theta \leqslant \frac {\pi}{4} \right\} $$
+$$ \begin{array}{r l} \iint_ {D _ {1}} x ^ {2} \mathrm{d} x \mathrm{d} y & = \int_ {\frac {\pi}{4}} ^ {\frac {\pi}{2}} \mathrm{d} \theta \int_ {0} ^ {\sqrt {2}} r ^ {3} \cos^ {2} \theta \mathrm{d} r + \int_ {0} ^ {\frac {\pi}{4}} \mathrm{d} \theta \int_ {0} ^ {\tan \theta \sec \theta} r ^ {3} \cos^ {2} \theta \mathrm{d} r \\ & = \int_ {\frac {\pi}{4}} ^ {\frac {\pi}{2}} \frac {1 + \cos 2 \theta}{2} \mathrm{d} \theta + \int_ {0} ^ {\frac {\pi}{4}} \cos^ {2} \theta \cdot \frac {\tan^ {4} \theta \sec^ {4} \theta}{4} \mathrm{d} \theta \\ & = \frac {\pi}{8} - \frac {1}{4} + \frac {1}{4} \int_ {0} ^ {\frac {\pi}{4}} \tan^ {4} \theta \sec^ {2} \theta \mathrm{d} \theta \overset{u = \tan \theta}{=} \frac {\pi}{8} - \frac {1}{4} + \frac {1}{4} \int_ {0} ^ {1} u ^ {4} \mathrm{d} u \\ & = \frac {\pi}{8} - \frac {1}{5}. \end{array} $$
+因此，
+$$ \iint_ {D} x (x + y) \mathrm{d} x \mathrm{d} y = 2 \iint_ {D _ {1}} x ^ {2} \mathrm{d} x \mathrm{d} y = \frac {\pi}{4} - \frac {2}{5}. $$"
+zt-031518,真题,微积分,第六章 二重积分,数三2015,18,解答题,,,"(18) ( 10 分)
+设函数 $f(x)$ 在定义域 $I$ 上的导数大于零.若对任意的 $x_{0}\in I$ ，曲线 $y=f(x)$ 在点 $(x_{0},f(x_{0}))$ 处的切线与直线 $x=x_{0}$ 及 $x$ 轴所围成区域的面积恒为4，且 $f(0)=2$ ，求 $f(x)$ 的表达式.",,,,,"分析 本题综合考查了导数的几何意义与解可分离变量的微分方程.
+题设条件“对任意的 $x_{0}\in I$ ，曲线 $y=f(x)$ 在点 $(x_{0},f(x_{0}))$ 处的切线与直线 $x=x_{0}$ 及x轴所围成区域的面积恒为4”是解题关键，我们可以根据该条件列出微分方程，然后再求解.
+解 如图所示,曲线 $y=f(x)$ 在点 $(x_{0},f(x_{0}))$ 处的切线为
+$$ y - f (x _ {0}) = f ^ {\prime} (x _ {0}) (x - x _ {0}). $$
+![image](images/zt-031518.jpg)
+令 y=0，注意到 $f'(x)>0$ ，解得 $x=x_{0}-\frac{f(x_{0})}{f'(x_{0})}$ ，即该切线与 x 轴的交点为 $\left(x_{0}-\frac{f(x_{0})}{f'(x_{0})},0\right)$ .
+曲线 $y = f(x)$ 在点 $(x_0, f(x_0))$ 处的切线与直线 $x = x_0$ 及 $x$ 轴所围成区域为三角形，底边长 $\left|x_0 - \left[x_0 - \frac{f(x_0)}{f'(x_0)}\right]\right|$ ，高 $|f(x_0) - 0|$ . 于是，
+$$ \frac {\left| f (x _ {0}) - 0 \right| \cdot \left| x _ {0} - \left[ x _ {0} - \frac {f (x _ {0})}{f ^ {\prime} (x _ {0})} \right] \right|}{2} = 4, \quad \text {即} \frac {\left| f (x _ {0}) \right| \cdot \left| \frac {f (x _ {0})}{f ^ {\prime} (x _ {0})} \right|}{2} = 4. $$
+由于 $f'(x)>0$ ,故
+$$ \frac {\left[ f (x _ {0}) \right] ^ {2}}{f ^ {\prime} (x _ {0})} = 8, \quad x _ {0} \in I, $$
+即 $f(x)$ 满足微分方程 $8y' = y^{2}$ .
+分离变量, 得 $\frac{8}{y^{2}}dy = dx$ . 方程两端积分, 得 $-\frac{8}{y} = x + C$ , 其中 C 为待定常数. 由于 $f(0) = 2$ , 故 C = -4, 从而 $y = \frac{8}{4 - x}$ .
+因此，
+$$ f (x) = \frac {8}{4 - x}, \quad x \in I. $$"
+zt-031612,真题,微积分,第六章 二重积分,数三2016,12,填空题,,题型一 计算二重积分,"(12) 设 $D = \{(x, y) \mid |x| \leqslant y \leqslant 1, -1 \leqslant x \leqslant 1\}$ ，则 $\iint_{D} x^{2} e^{-y^{2}} dx dy =$ ____ .",,,,,"答案 应填 $\frac{1}{3} - \frac{2}{3\mathrm{e}}$ .
+分析 本题主要考查二重积分的计算.
+本题中的被积函数含有因子 $e^{-y^{2}}$ ，计算此类二重积分时，需注意积分次序的选择.
+解 如图所示, 区域 D 是由 y = x, y = -x 以及 y = 1 围成的三角形区域. D 关于 y 轴对称. $D_{1}$ 为 D 位于右半平面的部分. 由于 $x^{2}e^{-y^{2}}$ 是关于 x 的偶函数, 故
+$$ \begin{array}{r l} \iint_ {D} x ^ {2} \mathrm{e} ^ {- y ^ {2}} \mathrm{d} x \mathrm{d} y & = 2 \iint_ {D _ {1}} x ^ {2} \mathrm{e} ^ {- y ^ {2}} \mathrm{d} x \mathrm{d} y = 2 \int_ {0} ^ {1} \mathrm{d} y \int_ {0} ^ {y} x ^ {2} \mathrm{e} ^ {- y ^ {2}} \mathrm{d} x = \frac {2}{3} \int_ {0} ^ {1} y ^ {3} \mathrm{e} ^ {- y ^ {2}} \mathrm{d} y \\ & \overset{t = y ^ {2}}{=} \frac {1}{3} \int_ {0} ^ {1} t \mathrm{e} ^ {- t} \mathrm{d} t = \frac {1}{3} - \frac {2}{3 \mathrm{e}}. \end{array} $$
+![image](images/zt-031612.jpg)
+注 若将 $\iint_{D_1} x^2 \mathrm{e}^{-y^2} \mathrm{d}x \mathrm{~d}y$ 写成 $\int_0^1 \mathrm{d}x \int_x^1 x^2 \mathrm{e}^{-y^2} \mathrm{d}y$ ，则无法根据已学积分方法计算出结果.
+拓展
+1.二重积分的计算
+二重积分的计算需要注意以下四个方面：（1）对称性的利用，（2）坐标系的选取，（3）改变积分次序，（4）区域分块.作为总结，我们给出计算二重积分的流程图.
+![image](images/zt-031612-2.jpg)
+2. 积分区域关于坐标轴的对称性与被积函数的奇偶性设 $f(x, y)$ 在有界闭区域 $D$ 上连续.
+(1) 当积分区域 D 关于 y 轴对称时，
+- 若 $f(x,y)$ 为关于 $x$ 的奇函数, 则 $\iint_{D} f(x,y) \mathrm{d}\sigma = 0$ .
+- 若 $f(x, y)$ 为关于 $x$ 的偶函数, 则 $\iint_{D} f(x, y) \mathrm{d}\sigma = 2 \iint_{D_1} f(x, y) \mathrm{d}\sigma$ , 其中 $D_1$ 为 $D$ 在 $x \geqslant 0$ 半平面上的部分.
+(2) 当积分区域 D 关于 x 轴对称时，
+- 若 $f(x,y)$ 为关于 $y$ 的奇函数, 则 $\iint_{D} f(x,y) \mathrm{d}\sigma = 0$ .
+- 若 $f(x, y)$ 为关于 $y$ 的偶函数，则 $\iint_{D} f(x, y) \mathrm{d}\sigma = 2 \iint_{D_1} f(x, y) \mathrm{d}\sigma$ ，其中 $D_1$ 为 $D$ 在 $y \geqslant 0$ 半平面上的部分.
+在计算二重积分时,要注意能否利用对称性简化计算,一般有如下四种情况.
+(1) 若积分区域关于 y 轴对称, 被积函数关于 x 具有奇偶性, 则可以利用上述结论的第①部分简化计算.
+(2) 若积分区域关于 $x$ 轴对称, 被积函数关于 $y$ 具有奇偶性, 则可以利用上述结论的第②部分简化计算.
+(3) 积分区域关于 y 轴(或 x 轴) 对称, 而被积函数的一部分关于 x (或关于 y) 具有奇偶性. 若可以对被积函数进行拆分, 则可以利用对称性来简化计算.
+(4) 被积函数关于某个变量具有奇偶性,而积分区域既不关于 y 轴对称,也不关于 x 轴对称. 若可以对积分区域进行划分,使得它的一部分关于坐标轴对称,则也可以利用对称性来简化计算."
+zt-031716,真题,微积分,第六章 二重积分,数三2017,16,解答题,,题型一 计算二重积分,"(16) ( 10 分)
+计算积分 $\iint_{D} \frac{y^3}{(1 + x^2 + y^4)^2} \mathrm{d}x \mathrm{~d}y$ ，其中 $D$ 是第一象限中以曲线 $y = \sqrt{x}$ 与 $x$ 轴为边界的无界区域.",,,,,"分析 本题主要考查反常二重积分的计算.本题中的积分区域为无界区域,在计算时,写出无界区域的表示,将二重积分化为二次积分,最后得到一个反常积分.依照计算反常积分的方法求值即可.
+![image](images/zt-031716.jpg)
+解 积分区域 D 为第一象限中, 曲线 $y = \sqrt{x}$ 以下, x 轴以上的无界区域, 写成 X 型区域的形式.
+$$ D = \{(x, y) | 0 \leqslant y \leqslant \sqrt {x}, 0 \leqslant x < + \infty \}. $$
+$$ \begin{array}{r l} \iint_ {D} \frac {y ^ {3}}{(1 + x ^ {2} + y ^ {4}) ^ {2}} \mathrm{d} x \mathrm{d} y & = \int_ {0} ^ {+ \infty} \mathrm{d} x \int_ {0} ^ {\sqrt {x}} \frac {y ^ {3}}{(1 + x ^ {2} + y ^ {4}) ^ {2}} \mathrm{d} y = \frac {1}{4} \int_ {0} ^ {+ \infty} \mathrm{d} x \int_ {0} ^ {\sqrt {x}} \frac {\mathrm{d} (y ^ {4})}{(1 + x ^ {2} + y ^ {4}) ^ {2}} \\ & = \frac {1}{4} \int_ {0} ^ {+ \infty} \left(- \frac {1}{1 + x ^ {2} + y ^ {4}} \Big | _ {0} ^ {\sqrt {x}}\right) \mathrm{d} x = \frac {1}{4} \int_ {0} ^ {+ \infty} \left(\frac {1}{1 + x ^ {2}} - \frac {1}{1 + 2 x ^ {2}}\right) \mathrm{d} x \\ & = \frac {1}{4} \left[ \arctan x - \frac {\sqrt {2}}{2} \arctan (\sqrt {2} x) \right] \Big | _ {0} ^ {+ \infty} = \frac {1}{4} \left(\frac {\pi}{2} - \frac {\sqrt {2}}{2} \times \frac {\pi}{2}\right) = \frac {(2 - \sqrt {2}) \pi}{1 6}. \end{array} $$"
+zt-031816,真题,微积分,第六章 二重积分,数三2018,16,解答题,,,"(16) ( 10 分)
+设平面区域 D 由曲线 $y = \sqrt{3(1 - x^{2})}$ 与直线 $y = \sqrt{3}x$ 及 y 轴围成. 计算二重积分 $\iint_{D} x^{2} dx dy$ .",,,,,"分析 本题主要考查二重积分的计算.
+曲线 $y = \sqrt{3(1 - x^2)}$ 为椭圆 $x^{2} + \frac{y^{2}}{3} = 1$ 位于上半平面的部分， $y = \sqrt{3}x$ 为一条过原点，且斜率为 $\sqrt{3}$ 的直线.求出它们的交点，即可写出区域 $D$ 在直角坐标系下的表示.
+解 计算曲线 $y = \sqrt{3(1 - x^{2})}$ 与直线 $y = \sqrt{3}x$ 的交点.
+联立 $\left\{\begin{aligned}y&=\sqrt{3(1-x^{2})},\\ y&=\sqrt{3}x,\end{aligned}\right.$ 解得 $x=\frac{\sqrt{2}}{2},y=\frac{\sqrt{6}}{2}.$
+区域 D 如图所示, 其可以写成 X 型区域.
+$$ D = \left\{(x, y) \mid \sqrt {3} x \leqslant y \leqslant \sqrt {3 (1 - x ^ {2})}, 0 \leqslant x \leqslant \frac {\sqrt {2}}{2} \right\}. $$
+于是，
+![image](images/zt-031816.jpg)
+$$ \begin{array}{r l} \iint_ {D} x ^ {2} \mathrm{d} x \mathrm{d} y & = \int_ {0} ^ {\frac {\sqrt {2}}{2}} x ^ {2} \mathrm{d} x \int_ {\sqrt {3} x} ^ {\sqrt {3 (1 - x ^ {2})}} \mathrm{d} y = \sqrt {3} \int_ {0} ^ {\frac {\sqrt {2}}{2}} (\sqrt {1 - x ^ {2}} - x) x ^ {2} \mathrm{d} x \\ & = \sqrt {3} \left(\int_ {0} ^ {\frac {\sqrt {2}}{2}} x ^ {2} \sqrt {1 - x ^ {2}} \mathrm{d} x - \int_ {0} ^ {\frac {\sqrt {2}}{2}} x ^ {3} \mathrm{d} x\right). \end{array} $$
+分别计算 $\int_0^{\frac{\sqrt{2}}{2}}x^2\sqrt{1 - x^2}\mathrm{d}x,\int_0^{\frac{\sqrt{2}}{2}}x^3\mathrm{d}x.$
+$$ \begin{array}{r l} & \int_ {0} ^ {\frac {\sqrt {2}}{2}} x ^ {2} \sqrt {1 - x ^ {2}} \mathrm{d} x \overset{x = \sin t}{=} \int_ {0} ^ {\frac {\pi}{4}} \sin^ {2} t \cos t \cdot \cos t \mathrm{d} t = \frac {1}{4} \int_ {0} ^ {\frac {\pi}{4}} \sin^ {2} 2 t \mathrm{d} t = \frac {1}{4} \int_ {0} ^ {\frac {\pi}{4}} \frac {1 - \cos 4 t}{2} \mathrm{d} t \\ & \qquad = \frac {1}{4} \times \frac {\pi}{8} - \frac {1}{4} \cdot \frac {\sin 4 t}{8} \Big | _ {0} ^ {\frac {\pi}{4}} = \frac {\pi}{3 2} - 0 = \frac {\pi}{3 2}. \end{array} $$
+$$ \int_ {0} ^ {\frac {\sqrt {2}}{2}} x ^ {3} \mathrm{d} x = \frac {x ^ {4}}{4} \Big | _ {0} ^ {\frac {\sqrt {2}}{2}} = \frac {1}{1 6}. $$
+因此,原积分 $=\sqrt{3}\times\left(\frac{\pi}{32}-\frac{1}{16}\right)=\frac{\sqrt{3}}{32}(\pi-2)$ .
+也可以如下计算 $\int_0^{\frac{\sqrt{2}}{2}}x^2\sqrt{1 - x^2}\mathrm{d}x.$
+$$ \int_ {0} ^ {\frac {\sqrt {2}}{2}} x ^ {2} \sqrt {1 - x ^ {2}} \mathrm{d} x = \frac {1}{4} \int_ {0} ^ {\frac {\pi}{4}} \sin^ {2} 2 t \mathrm{d} t \overset{u = 2 t}{=} \frac {1}{8} \int_ {0} ^ {\frac {\pi}{2}} \sin^ {2} u \mathrm{d} u = \frac {1}{8} \times \frac {\pi}{2} \times \frac {1}{2} = \frac {\pi}{3 2}. $$"
+zt-031917,真题,微积分,第六章 二重积分,数三2019,17,解答题,,,"(17) ( 10 分)
+设函数 $y(x)$ 是微分方程 $y' - xy = \frac{1}{2\sqrt{x}} e^{\frac{x^{2}}{2}}$ 满足条件 $y(1) = \sqrt{e}$ 的特解.
+(Ⅰ) 求 $y(x)$ ;
+(Ⅱ)设平面区域 $D = \{(x, y) \mid 1 \leqslant x \leqslant 2, 0 \leqslant y \leqslant y(x)\}$ ，求 D 绕 x 轴旋转所得旋转体的体积.",,,,,"分析 本题主要考查一阶非齐次线性微分方程求解以及旋转体体积的计算.
+解（Ⅰ）由一阶非齐次线性微分方程的求解公式可得，
+$$ \begin{array}{r l} y & = \mathrm{e} ^ {\int x \mathrm{d} x} \left[ \int \frac {1}{2 \sqrt {x}} \cdot \mathrm{e} ^ {\frac {x ^ {2}}{2}} \cdot \mathrm{e} ^ {\int (- x) \mathrm{d} x} \mathrm{d} x + C \right] = \mathrm{e} ^ {\frac {x ^ {2}}{2}} \left(\int \frac {1}{2 \sqrt {x}} \cdot \mathrm{e} ^ {\frac {x ^ {2}}{2}} \cdot \mathrm{e} ^ {- \frac {x ^ {2}}{2}} \mathrm{d} x + C\right) \\ & = \mathrm{e} ^ {\frac {x ^ {2}}{2}} \left(\int \frac {1}{2 \sqrt {x}} \mathrm{d} x + C\right) = \sqrt {x} \mathrm{e} ^ {\frac {x ^ {2}}{2}} + C \mathrm{e} ^ {\frac {x ^ {2}}{2}}, \end{array} $$
+其中 C 为待定常数.
+代入 $x = 1, y(1) = \sqrt{\mathrm{e}}$ ，可得 $\sqrt{\mathrm{e}} = \sqrt{\mathrm{e}} + C\sqrt{\mathrm{e}}.$ 解得 $C = 0$ .
+因此， $y(x)=\sqrt{x}\mathrm{e}^{\frac{x^{2}}{2}}$
+(Ⅱ) 区域 D 如图所示.
+根据旋转体的体积计算公式，
+$$ \begin{array}{r l} V & = \pi \int_ {1} ^ {2} (\sqrt {x} \mathrm{e} ^ {\frac {x ^ {2}}{2}}) ^ {2} \mathrm{d} x = \pi \int_ {1} ^ {2} x \mathrm{e} ^ {x ^ {2}} \mathrm{d} x = \frac {1}{2} \pi \int_ {1} ^ {2} \mathrm{e} ^ {x ^ {2}} \mathrm{d} (x ^ {2}) \\ & = \frac {1}{2} \pi \mathrm{e} ^ {x ^ {2}} \Bigg | _ {1} ^ {2} = \frac {1}{2} \pi (\mathrm{e} ^ {4} - \mathrm{e}). \end{array} $$
+![image](images/zt-031917.jpg)"
+zt-032018,真题,微积分,第六章 二重积分,数三2020,18,解答题,,,"(18) ( 10 分)
+设 $D = \{(x,y) | x^2 + y^2 \leqslant 1, y \geqslant 0\}$ , 连续函数 $f(x,y)$ 满足
+$$ f (x, y) = y \sqrt {1 - x ^ {2}} + x \iint_ {D} f (x, y) \mathrm{d} x \mathrm{d} y, $$
+求 $\iint_{D}xf(x,y)dxdy.$",,,,,"分析 本题主要考查二重积分的概念与计算.
+要计算 $\iint_{D} xf(x, y) \mathrm{d}x \mathrm{~d}y$ ，可以先计算 $f(x, y)$ 的表达式。注意已知条件中所给等式，等式右端的二重积分可看作常数 $A$ ，从而对该等式两端积分可得一含 $A$ 的方程，解该方程即可得 $A$ 。进一步可得 $f(x, y)$ 。
+解 记 $A = \iint_{D} f(x, y) \, \mathrm{d}x \, \mathrm{d}y$ .
+等式 $f(x,y) = y\sqrt{1 - x^2} +x\iint \limits_{D}f(x,y)\mathrm{d}x\mathrm{d}y$ 两端在 $D$ 上积分，可得 $A = \iint \limits_{D}y\sqrt{1 - x^2}\mathrm{d}x\mathrm{d}y + A\iint \limits_{D}x\mathrm{d}x\mathrm{d}y.$
+![image](images/zt-032018.jpg)
+区域 $D$ 如图所示, 为位于 $x$ 轴上方的半圆盘, 关于 $y$ 轴对称. 又因为 $x$ 为关于 $x$ 的奇函数, 所以 $\iint_{D} x \mathrm{d}x \mathrm{d}y = 0$ .
+将 $D$ 写成X型区域. $D = \{(x,y) | 0 \leqslant y \leqslant \sqrt{1 - x^2}, -1 \leqslant x \leqslant 1\}$ . 于是，
+$$ \begin{array}{r l} {A} & {= \iint_ {D} y \sqrt {1 - x ^ {2}} \mathrm{d} x \mathrm{d} y = \int_ {- 1} ^ {1} \sqrt {1 - x ^ {2}} \mathrm{d} x \int_ {0} ^ {\sqrt {1 - x ^ {2}}} y \mathrm{d} y = \int_ {- 1} ^ {1} \sqrt {1 - x ^ {2}} \cdot \frac {1 - x ^ {2}}{2} \mathrm{d} x} \\ & {\overset{\text {对称性}}{=} \int_ {0} ^ {1} (1 - x ^ {2}) ^ {\frac {3}{2}} \mathrm{d} x \overset{x = \sin t}{=} \int_ {0} ^ {\frac {\pi}{2}} \cos^ {3} t \cdot \cos t \mathrm{d} t} \\ & {= \frac {3}{4} \times \frac {1}{2} \times \frac {\pi}{2} = \frac {3}{1 6} \pi .} \end{array} $$
+因此， $f(x,y) = y\sqrt{1 - x^2} +\frac{3\pi}{16} x.$
+$$ \begin{array}{r l} {\iint_ {D} x f (x, y) \mathrm{d} x \mathrm{d} y} & {= \iint_ {D} \left(x y \sqrt {1 - x ^ {2}} + \frac {3 \pi}{1 6} x ^ {2}\right) \mathrm{d} x \mathrm{d} y \stackrel {\text {对称性}} {=} \frac {3 \pi}{1 6} \iint_ {D} x ^ {2} \mathrm{d} x \mathrm{d} y} \\ & {\stackrel {\text {极坐标}} {=} \frac {3 \pi}{1 6} \int_ {0} ^ {\pi} \mathrm{d} \theta \int_ {0} ^ {1} r ^ {2} \cos^ {2} \theta \cdot r \mathrm{d} r = \frac {3 \pi}{1 6} \int_ {0} ^ {\pi} \cos^ {2} \theta \mathrm{d} \theta \int_ {0} ^ {1} r ^ {3} \mathrm{d} r} \\ & {= \frac {3 \pi}{1 6} \cdot 2 \int_ {0} ^ {\frac {\pi}{2}} \cos^ {2} \theta \mathrm{d} \theta \cdot \frac {1}{4} = \frac {3 \pi}{1 6} \times 2 \times \frac {1}{2} \times \frac {\pi}{2} \times \frac {1}{4}} \\ & {= \frac {3 \pi^ {2}}{1 2 8}.} \end{array} $$
+拓展
+给定有界区间 $[a, b]$ , 则 $f(x)$ 在该区间上的定积分 $\int_{a}^{b} f(x) \mathrm{d}x$ 为一常数; 给定平面有界区域 $D$ , 则 $f(x, y)$ 在该区域上的二重积分 $\iint_{D} f(x, y) \mathrm{d}x \mathrm{d}y$ 为一常数. 即便不知道 $f(x)$ 与 $f(x, y)$ 的具体表达式, 只要积分存在, 我们也知道这两个积分值为常数. 这是关于定积分与二重积分的概念的理解. 本题考查了对二重积分的理解. 下面为历年数三中的同类数三.
+【例】设 $f(x,y)$ 连续，且 $f(x,y)=xy+\iint_{D}f(u,v)\mathrm{d}u\mathrm{d}v$ ，其中D是由 $y=0,y=x^{2},x=1$ 所围区域，则 $f(x,y)$ 等于( )（1999年数学三试题） (A) $xy.$ (B) $2xy.$ (C) $xy + \frac{1}{8}.$ (D) $xy + 1.$
+答案 C. 再给出一道考查对定积分的理解的数三. 【例】设 $f(x)$ 是连续函数,且 $f(x)=x+2\int_{0}^{1}f(t)\mathrm{d}t$ ,则 $f(x)=$ ____。(1989年数学一、二试题) 答案 x-1."
+zt-032113,真题,微积分,第六章 二重积分,数三2021,13,填空题,,,"(13) 设平面区域 D 由曲线 $y = \sqrt{x} \sin \pi x (0 \leqslant x \leqslant 1)$ 与 x 轴围成, 则 D 绕 x 轴旋转所围成的旋转体的体积为 ____.",,,,,"答案 应填 $\frac{\pi}{4}$ .
+分析 本题主要考查旋转体的体积计算.
+本题的计算过程中,可以用到如下结论.
+设 $f(x)$ 在 $[0,1]$ 上连续,则
+$$ \int_ {0} ^ {\pi} x f (\sin x) \mathrm{d} x = \frac {\pi}{2} \int_ {0} ^ {\pi} f (\sin x) \mathrm{d} x. $$
+解（法一）根据旋转体的体积公式，
+$$ \begin{array}{r l} V & = \pi \int_ {0} ^ {1} (\sqrt {x} \sin \pi x) ^ {2} \mathrm{d} x = \pi \int_ {0} ^ {1} x \sin^ {2} \pi x \mathrm{d} x \stackrel {\pi x = t} {=} \frac {1}{\pi} \int_ {0} ^ {\pi} t \sin^ {2} t \mathrm{d} t = \frac {1}{\pi} \cdot \frac {\pi}{2} \int_ {0} ^ {\pi} \sin^ {2} t \mathrm{d} t \\ & = \frac {1}{2} \cdot 2 \int_ {0} ^ {\frac {\pi}{2}} \sin^ {2} t \mathrm{d} t = \frac {\pi}{4}. \end{array} $$
+(法二) 下面用另一种方法计算 $\int_{0}^{\pi} t \sin^{2} t dt$ .
+$$ \begin{array}{r l} \int_ {0} ^ {\pi} t \sin^ {2} t \mathrm{d} t & = \int_ {0} ^ {\pi} t \cdot \frac {1 - \cos 2 t}{2} \mathrm{d} t = \frac {1}{2} \int_ {0} ^ {\pi} (t - t \cos 2 t) \mathrm{d} t = \frac {1}{2} \left(\frac {t ^ {2}}{2} \Big | _ {0} ^ {\pi} - \int_ {0} ^ {\pi} t \cos 2 t \mathrm{d} t\right) \\ & = \frac {1}{2} \left[ \frac {\pi^ {2}}{2} - \frac {1}{2} \int_ {0} ^ {\pi} t \mathrm{d} (\sin 2 t) \right] = \frac {\pi^ {2}}{4} - \frac {1}{4} \left(t \sin 2 t \Big | _ {0} ^ {\pi} - \int_ {0} ^ {\pi} \sin 2 t \mathrm{d} t\right) \\ & = \frac {\pi^ {2}}{4} - \frac {1}{4} \left(0 + \frac {\cos 2 t}{2} \Big | _ {0} ^ {\pi}\right) = \frac {\pi^ {2}}{4}. \end{array} $$
+拓展
+定积分计算的常用公式
+(1) 设 $f(x)$ 在 $[0,1]$ 上连续，则
+(i) $\int_0^{\frac{\pi}{2}}f(\sin x)\mathrm{d}x = \int_0^{\frac{\pi}{2}}f(\cos x)\mathrm{d}x.$
+(ii) $\int_0^\pi xf(\sin x)\mathrm{d}x = \frac{\pi}{2}\int_0^\pi f(\sin x)\mathrm{d}x.$
+(2) 设 $f(x)$ 是连续的周期函数, 周期为 T, 则
+(i) $\int_{a}^{a + T}f(x)\mathrm{d}x = \int_0^T f(x)\mathrm{d}x.$
+(ii) $\int_{a}^{a + nT}f(x)\mathrm{d}x = n\int_{0}^{T}f(x)\mathrm{d}x$ ，其中 $n$ 为正整数.
+(3) $\sin^n x, \cos^n x$ 在 $\left[0, \frac{\pi}{2}\right]$ 上的积分：
+$$ \int_ {0} ^ {\frac {\pi}{2}} \sin^ {n} x \mathrm{d} x = \int_ {0} ^ {\frac {\pi}{2}} \cos^ {n} x \mathrm{d} x = \left\{ \begin{array}{l l} \frac {(n - 1) ! !}{n ! !}, \\ \frac {\pi}{2} \cdot \frac {(n - 1) ! !}{n ! !}, \end{array} \right. $$
+正整数 n 的双阶乘 $n!!$ 表示不超过这个正整数且与它有相同奇偶性的所有正整数的乘积."
+zt-032119,真题,微积分,第六章 二重积分,数三2021,19,解答题,,,"(19) ( 12 分)
+设有界区域 D 是圆 $x^{2} + y^{2} = 1$ 和直线 $y = x$ 以及 $x$ 轴在第一象限围成的部分. 计算二重积分 $\iint_{D} e^{(x+y)^{2}} (x^{2} - y^{2}) \, dx \, dy$ .",,,,,"分析 本题主要考查二重积分的计算.
+本题中的积分区域与圆域有关,故可以考虑在极坐标系下计算该二重积分.在计算过程中,根据被积函数的特点,要注意积分次序的选择.
+$$ \sin 2 \theta = 2 \sin \theta \cos \theta , \cos 2 \theta = \cos^ {2} \theta - \sin^ {2} \theta . $$
+解 区域 D 在极坐标系下的表示为
+$$D = \left\{(r, \theta) \mid 0 \leqslant r \leqslant 1, 0 \leqslant \theta \leqslant \frac {\pi}{4} \right\}.$$
+在极坐标系下计算积分.
+$${\iint_ {D} \mathrm{e} ^ {(x + y) ^ {2}} ( x ^ {2} - y ^ {2} ) \mathrm{d} x \mathrm{d} y \frac {\text {极坐标}}{\text {极坐标}} \iint_ {D} \mathrm{e} ^ {r ^ {2} (\cos \theta + \sin \theta) ^ {2}} \cdot r ^ {2} ( \cos^ {2} \theta - \sin^ {2} \theta ) \cdot r \mathrm{d} r \mathrm{d} \theta} \\  {= \iint_ {D} \mathrm{e} ^ {r ^ {2} (1 + \sin 2 \theta)} r ^ {3} \cos 2 \theta \mathrm{d} r \mathrm{d} \theta = \int_ {0} ^ {1} r ^ {3} \mathrm{d} r \int_ {0} ^ {\frac {\pi}{4}} \mathrm{e} ^ {r ^ {2} (1 + \sin 2 \theta)} \cos 2 \theta \mathrm{d} \theta} \\  {= \int_ {0} ^ {1} r ^ {3} \mathrm{d} r \int_ {0} ^ {\frac {\pi}{4}} \mathrm{e} ^ {r ^ {2} (1 + \sin 2 \theta)} \mathrm{d} \left(\frac {1 + \sin 2 \theta}{2}\right) = \frac {1}{2} \int_ {0} ^ {1} r ^ {3} \cdot \frac {\mathrm{e} ^ {r ^ {2} (1 + \sin 2 \theta)}}{r ^ {2}} \Big | _ {0} ^ {\frac {\pi}{4}} \mathrm{d} r} \\  {= \frac {1}{2} \int_ {0} ^ {1} r ( e ^ {2 r ^ {2}} - e ^ {r ^ {2}} ) \mathrm{d} r = \frac {1}{4} \int_ {0} ^ {1} ( e ^ {2 r ^ {2}} - e ^ {r ^ {2}} ) \mathrm{d} ( r ^ {2})}$$
+
+$$= \frac {1}{4} \left(\frac {\mathrm{e} ^ {2 r ^ {2}}}{2} - \mathrm{e} ^ {r ^ {2}}\right) \Bigg | _ {0} ^ {1} = \frac {1}{8} (\mathrm{e} ^ {2} - 2 \mathrm{e} + 1) = \frac {1}{8} (\mathrm{e} - 1) ^ {2}.$$"
+zt-032214,真题,微积分,第六章 二重积分,数三2022,14,填空题,,,"(14) 已知函数 $f(x)=\left\{\begin{aligned}&\mathrm{e}^{x},&0\leqslant x\leqslant1,\\ &0,& 其他,\end{aligned}\right.$ 则 $\int_{-\infty}^{+\infty}\mathrm{d}x\int_{-\infty}^{+\infty}f(x)f(y-x)\mathrm{d}y=$ ____.",,,,,"答案 应填 $e^{2}-2e+1$ .
+分析 本题主要考查无界区域上的二重积分的计算.
+积分区域为全平面,被积函数为 $f(x)f(y-x)$ ,但根据 $f(x)$ 的定义,可知被积函数仅在有界区域上非零,从而将所求积分转化为有界区域上的二重积分.
+解 根据 $f(x)$ 的定义, $f(x)$ 仅在 $0 \leqslant x \leqslant 1$ 时非零, $f(y - x)$ 仅在 $0 \leqslant y - x \leqslant 1$ 时非零. 于是, $f(x)f(y - x)$ 仅在区域 $D = \{(x, y) | 0 \leqslant y - x \leqslant 1, 0 \leqslant x \leqslant 1\}$ , 即 $D = \{(x, y) | x \leqslant y \leqslant x + 1, 0 \leqslant x \leqslant 1\}$ 上非零.
+$$ \begin{array}{r l} \int_ {- \infty} ^ {+ \infty} \mathrm{d} x \int_ {- \infty} ^ {+ \infty} f (x) f (y - x) \mathrm{d} y & = \int_ {0} ^ {1} \mathrm{d} x \int_ {x} ^ {x + 1} \mathrm{e} ^ {x} \mathrm{e} ^ {y - x} \mathrm{d} y = \int_ {0} ^ {1} \mathrm{d} x \int_ {x} ^ {x + 1} \mathrm{e} ^ {y} \mathrm{d} y \\ & = \int_ {0} ^ {1} (\mathrm{e} ^ {x + 1} - \mathrm{e} ^ {x}) \mathrm{d} x = (\mathrm{e} ^ {x + 1} - \mathrm{e} ^ {x}) \Bigg | _ {0} ^ {1} \\ & = (\mathrm{e} ^ {2} - \mathrm{e}) - (\mathrm{e} - 1) = \mathrm{e} ^ {2} - 2 \mathrm{e} + 1. \end{array} $$"
+zt-032219,真题,微积分,第六章 二重积分,数三2022,19,解答题,,,"(19) ( 12 分)
+已知平面区域 $D = \{(x, y) \mid y - 2 \leqslant x \leqslant \sqrt{4 - y^2}, 0 \leqslant y \leqslant 2\}$ ，计算 $I = \iint_{D} \frac{(x - y)^2}{x^2 + y^2} \mathrm{d}x \mathrm{d}y.$",,,,,"分析 本题主要考查二重积分的计算.
+根据积分区域以及被积函数的特点,可以考虑在极坐标系下计算.
+解 在极坐标系下计算.
+由 D 的表达式可知, 如图(a)所示, D 是由直线 $y = x + 2$ , 圆 $x^{2} + y^{2} = 4$ 以及 x 轴围成的部分.
+直线 $y = x + 2$ 在极坐标系下的表示为 $r = \frac{2}{\sin\theta - \cos\theta}$ , 圆 $x^{2} + y^{2} = 4$ 在极坐标系下的表示为 $r = 2$ .
+![image](images/zt-032219.jpg)
+(a)
+![image](images/zt-032219-2.jpg)
+(b)
+如图(b)所示,将D分为两部分 $D_{1}$ 和 $D_{2}$ .
+$$ D _ {1} = \left\{(r, \theta) \mid 0 \leqslant r \leqslant 2, 0 \leqslant \theta \leqslant \frac {\pi}{2} \right\}. $$
+$$ D _ {2} = \left\{(r, \theta) \mid 0 \leqslant r \leqslant \frac {2}{\sin \theta - \cos \theta}, \frac {\pi}{2} \leqslant \theta \leqslant \pi \right\}. $$
+因此，
+$$ \begin{array}{r l} & {\iint_ {D} \frac {(x - y) ^ {2}}{x ^ {2} + y ^ {2}} \mathrm{d} x \mathrm{d} y \stackrel {\text {极坐标}} {=} \iint_ {D} \frac {r ^ {2} (\cos \theta - \sin \theta) ^ {2}}{r ^ {2}} \cdot r \mathrm{d} r \mathrm{d} \theta = \iint_ {D} (\cos \theta - \sin \theta) ^ {2} \cdot r \mathrm{d} r \mathrm{d} \theta} \\ & {\qquad = \int_ {0} ^ {\frac {\pi}{2}} (\cos \theta - \sin \theta) ^ {2} \mathrm{d} \theta \int_ {0} ^ {2} r \mathrm{d} r + \int_ {\frac {\pi}{2}} ^ {\pi} (\cos \theta - \sin \theta) ^ {2} \mathrm{d} \theta \int_ {0} ^ {\frac {2}{\sin \theta - \cos \theta}} r \mathrm{d} r} \\ & {\qquad = 2 \int_ {0} ^ {\frac {\pi}{2}} (1 - 2 \sin \theta \cos \theta) \mathrm{d} \theta + \int_ {\frac {\pi}{2}} ^ {\pi} (\cos \theta - \sin \theta) ^ {2} \cdot \frac {r ^ {2}}{2} \Big | _ {0} ^ {\frac {2}{\sin \theta - \cos \theta}} \mathrm{d} \theta} \\ & {\qquad = 2 \left(\frac {\pi}{2} - \sin^ {2} \theta \Big | _ {0} ^ {\frac {\pi}{2}}\right) + \int_ {\frac {\pi}{2}} ^ {\pi} (\cos \theta - \sin \theta) ^ {2} \cdot \frac {2}{(\sin \theta - \cos \theta) ^ {2}} \mathrm{d} \theta} \\ & {\qquad = \pi - 2 + 2 \times (\pi - \frac {\pi}{2}) = 2 \pi - 2.} \end{array} $$"
+zt-032318,真题,微积分,第六章 二重积分,数三2023,18,解答题,,,"(18) ( 12 分)
+已知平面区域 $D = \left\{(x,y) \mid 0 \leqslant y \leqslant \frac{1}{x\sqrt{1 + x^2}}, x \geqslant 1\right\}$ .
+(I) 求 D 的面积;
+(Ⅱ) 求 D 绕 x 轴旋转所成旋转体的体积.",,,,,"分析 本题主要考查定积分的几何应用.
+如图所示, 区域 D 是由曲线 $y = \frac{1}{x \sqrt{1 + x^{2}}}$ , 直线 x = 1 以及 x 轴围成的无界区域, 求面积与旋转体的体积时, 需要计算反常积分.
+解（Ⅰ）区域 D 是由曲线 $y = \frac{1}{x \sqrt{1 + x^{2}}}$ ，直线 x = 1 以及 x 轴围成的无界区域，其面积为
+$$ \begin{array}{r l} S & = \int_ {1} ^ {+ \infty} \frac {1}{x \sqrt {1 + x ^ {2}}} \mathrm{d} x \overset{x = \tan t}{=} \int_ {\frac {\pi}{4}} ^ {\frac {\pi}{2}} \frac {\mathrm{d} (\tan t)}{\tan t \sqrt {1 + \tan^ {2} t}} = \int_ {\frac {\pi}{4}} ^ {\frac {\pi}{2}} \frac {\sec^ {2} t}{\tan t \sec t} \mathrm{d} t \\ & = \int_ {\frac {\pi}{4}} ^ {\frac {\pi}{2}} \frac {\mathrm{d} t}{\sin t} = \int_ {\frac {\pi}{4}} ^ {\frac {\pi}{2}} \frac {\mathrm{d} (- \cos t)}{1 - \cos^ {2} t} \overset{u = \cos t}{=} \int_ {\frac {\sqrt {2}}{2}} ^ {0} \frac {- \mathrm{d} u}{1 - u ^ {2}} = \frac {1}{2} \int_ {0} ^ {\frac {\sqrt {2}}{2}} \left(\frac {1}{1 - u} + \frac {1}{1 + u}\right) \mathrm{d} u \\ & = \left. \frac {1}{2} \ln \frac {1 + u}{1 - u} \right| _ {0} ^ {\frac {\sqrt {2}}{2}} = \ln (\sqrt {2} + 1). \end{array} $$
+(Ⅱ)由旋转体的体积公式可知,区域D绕x轴旋转所成旋转体的体积为
+$$ \begin{array}{r l} V & = \int_ {1} ^ {+ \infty} \pi \left(\frac {1}{x \sqrt {1 + x ^ {2}}}\right) ^ {2} \mathrm{d} x = \pi \int_ {1} ^ {+ \infty} \frac {1}{x ^ {2} (1 + x ^ {2})} \mathrm{d} x = \pi \int_ {1} ^ {+ \infty} \left(\frac {1}{x ^ {2}} - \frac {1}{1 + x ^ {2}}\right) \mathrm{d} x \\ & = \pi \left(- \frac {1}{x} - \arctan x\right) \Big | _ {1} ^ {+ \infty} = \pi \left(1 - \frac {\pi}{4}\right). \end{array} $$"
+zt-032319,真题,微积分,第六章 二重积分,数三2023,19,解答题,,,"(19) ( 12 分)
+已知平面区域 $D = \{(x, y) | (x - 1)^2 + y^2 \leqslant 1\}$ , 计算二重积分 $\iint_{D} |\sqrt{x^2 + y^2} - 1| \, \mathrm{d}x \, \mathrm{d}y$ .",,,,,"分析 本题主要考查二重积分的计算.
+区域 D 如图(a) 所示, 包括蓝色部分与灰色部分, 被积函数为 $\left|\sqrt{x^{2}+y^{2}}-1\right|$ , 在区域 D 内积分, 需要将区域分为两部分, $\sqrt{x^{2}+y^{2}}-1>0$ 的部分, 即灰色部分, $\sqrt{x^{2}+y^{2}}-1\leqslant0$ 的部分, 即蓝色部分.
+此外,还可以利用积分区域的对称性简化计算.
+![image](images/zt-032319.jpg)
+(a)
+![image](images/zt-032319-2.jpg)
+(b)
+![image](images/zt-032319-3.jpg)
+(c)
+解 注意到 $\left|\sqrt{x^{2}+y^{2}}-1\right|$ 为关于 y 的偶函数, 而积分区域 D 关于 x 轴对称, 记 D 位于上半平面的部分为 $D_{1}$ , 即图(b) 中的蓝色部分与灰色部分, 则
+$$ \iint_ {D} \mid \sqrt {x ^ {2} + y ^ {2}} - 1 \mid \mathrm{d} x \mathrm{d} y = 2 \iint_ {D _ {1}} \mid \sqrt {x ^ {2} + y ^ {2}} - 1 \mid \mathrm{d} x \mathrm{d} y. $$
+在区域 $x^{2} + y^{2}\leqslant 1$ 内， $\mid \sqrt{x^2 + y^2} -1\mid = 1 - \sqrt{x^2 + y^2};$ 在区域 $x^{2} + y^{2}\leqslant 1$ 外， $\mid \sqrt{x^2 + y^2} -1\mid =$ $\sqrt{x^2 + y^2} -1.$ 记 $x^{2} + y^{2}\leqslant 1$ 与 $D_{1}$ 的公共部分为 $D_{2}$ ，即图(b)中的蓝色部分，则
+$$ \begin{array}{r l} \iint_ {D _ {1}} | \sqrt {x ^ {2} + y ^ {2}} - 1 | \mathrm{d} x \mathrm{d} y & = \iint_ {D _ {1} \backslash D _ {2}} (\sqrt {x ^ {2} + y ^ {2}} - 1) \mathrm{d} x \mathrm{d} y + \iint_ {D _ {2}} (1 - \sqrt {x ^ {2} + y ^ {2}}) \mathrm{d} x \mathrm{d} y \\ & = \iint_ {D _ {1}} (\sqrt {x ^ {2} + y ^ {2}} - 1) \mathrm{d} x \mathrm{d} y - 2 \iint_ {D _ {2}} (\sqrt {x ^ {2} + y ^ {2}} - 1) \mathrm{d} x \mathrm{d} y. \end{array} $$
+下面分别计算 $\iint_{D_1} (\sqrt{x^2 + y^2} - 1) \, \mathrm{d}x \, \mathrm{d}y, \iint_{D_2} (\sqrt{x^2 + y^2} - 1) \, \mathrm{d}x \, \mathrm{d}y.$
+圆周 $(x - 1)^2 + y^2 = 1$ 的极坐标方程为 $r = 2\cos \theta$ ，故 $D_{1}$ 在极坐标系下的表示为
+$$ D _ {1} = \left\{(r, \theta) \mid 0 \leqslant r \leqslant 2 \cos \theta , 0 \leqslant \theta \leqslant \frac {\pi}{2} \right\}. $$
+于是，
+$$ \begin{array}{r l} \iint_ {D _ {1}} (\sqrt {x ^ {2} + y ^ {2}} - 1) \mathrm{d} x \mathrm{d} y & \stackrel {\text {极坐标}} {=} \int_ {0} ^ {\frac {\pi}{2}} \mathrm{d} \theta \int_ {0} ^ {2 \cos \theta} (r - 1) \cdot r \mathrm{d} r = \int_ {0} ^ {\frac {\pi}{2}} \left(\frac {r ^ {3}}{3} - \frac {r ^ {2}}{2}\right) \Big | _ {0} ^ {2 \cos \theta} \mathrm{d} \theta \\ & = \int_ {0} ^ {\frac {\pi}{2}} \left(\frac {8}{3} \cos^ {3} \theta - 2 \cos^ {2} \theta\right) \mathrm{d} \theta = \frac {8}{3} \int_ {0} ^ {\frac {\pi}{2}} \cos^ {3} \theta \mathrm{d} \theta - 2 \int_ {0} ^ {\frac {\pi}{2}} \cos^ {2} \theta \mathrm{d} \theta \\ & = \frac {8}{3} \cdot \frac {2}{3} - 2 \cdot \frac {\pi}{4} = \frac {1 6}{9} - \frac {\pi}{2}. \end{array} $$
+联立 $\left\{\begin{aligned}x^{2}+y^{2}&=1,\\ (x-1)^{2}+y^{2}&=1,\end{aligned}\right.$ 解得 $\left\{\begin{aligned}x&=\frac{1}{2},\\ y&=\pm\frac{\sqrt{3}}{2},\end{aligned}\right.$ 从而圆周 $x^{2}+y^{2}=1$ 与圆周 $(x-1)^{2}+y^{2}=1$ 在上半平面的交点为 $\left(\frac{1}{2},\frac{\sqrt{3}}{2}\right)$ . 连接原点 O 与点 $\left(\frac{1}{2},\frac{\sqrt{3}}{2}\right)$ 的直线方程为 $y=\sqrt{3}x$ , 其极坐标方程为 $\theta=\frac{\pi}{3}$ . 如图(c)所示, $D_{2}$ 可以由直线 $\theta=\frac{\pi}{3}$ 分为两部分, 在极坐标系下的表示为
+$$ D _ {2} = \left\{(r, \theta) \mid 0 \leqslant r \leqslant 1, 0 \leqslant \theta \leqslant \frac {\pi}{3} \right\} \cup \left\{(r, \theta) \mid 0 \leqslant r \leqslant 2 \cos \theta , \frac {\pi}{3} \leqslant \theta \leqslant \frac {\pi}{2} \right\}. $$
+于是，
+$$ \iint_ {D _ {2}} (\sqrt {x ^ {2} + y ^ {2}} - 1) \mathrm{d} x \mathrm{d} y {\overset {\text {极坐标}} {=}} \int_ {0} ^ {\frac {\pi}{3}} \mathrm{d} \theta \int_ {0} ^ {1} (r - 1) \cdot r \mathrm{d} r + \int_ {\frac {\pi}{3}} ^ {\frac {\pi}{2}} \mathrm{d} \theta \int_ {0} ^ {2 \cos \theta} (r - 1) \cdot r \mathrm{d} r. $$
+其中，
+$$ \int_ {0} ^ {\frac {\pi}{3}} \mathrm{d} \theta \int_ {0} ^ {1} (r - 1) \cdot r \mathrm{d} r = \int_ {0} ^ {\frac {\pi}{3}} \left(\frac {r ^ {3}}{3} - \frac {r ^ {2}}{2}\right) \Bigg | _ {0} ^ {1} \mathrm{d} \theta = \int_ {0} ^ {\frac {\pi}{3}} \left(\frac {1}{3} - \frac {1}{2}\right) \mathrm{d} \theta = - \frac {1}{6} \cdot \frac {\pi}{3} = - \frac {\pi}{1 8}. $$
+$$ \begin{array}{r l} \int_ {\frac {\pi}{3}} ^ {\frac {\pi}{2}} \mathrm{d} \theta \int_ {0} ^ {2 \cos \theta} (r - 1) \cdot r \mathrm{d} r & = \int_ {\frac {\pi}{3}} ^ {\frac {\pi}{2}} \left(\frac {8}{3} \cos^ {3} \theta - 2 \cos^ {2} \theta\right) \mathrm{d} \theta = \frac {8}{3} \int_ {\frac {\pi}{3}} ^ {\frac {\pi}{2}} \cos^ {3} \theta \mathrm{d} \theta - 2 \int_ {\frac {\pi}{3}} ^ {\frac {\pi}{2}} \cos^ {2} \theta \mathrm{d} \theta \\ & = \frac {8}{3} \int_ {\frac {\pi}{3}} ^ {\frac {\pi}{2}} (1 - \sin^ {2} \theta) \mathrm{d} (\sin \theta) - \int_ {\frac {\pi}{3}} ^ {\frac {\pi}{2}} (1 + \cos 2 \theta) \mathrm{d} \theta \end{array} $$
+$$ \begin{array}{l} = \frac {8}{3} \left(\sin \theta - \frac {\sin^ {3} \theta}{3}\right) \Big | _ {\frac {\pi}{3}} ^ {\frac {\pi}{2}} - \frac {\pi}{6} - \frac {\sin 2 \theta}{2} \Big | _ {\frac {\pi}{3}} ^ {\frac {\pi}{2}} \\ = - \frac {\pi}{6} + \frac {8}{3} \left(\frac {2}{3} - \frac {3 \sqrt {3}}{8}\right) + \frac {\sqrt {3}}{4} = - \frac {\pi}{6} + \frac {1 6}{9} - \frac {3 \sqrt {3}}{4}. \end{array} $$
+因此，
+$$ \iint_ {D _ {2}} \left(\sqrt {x ^ {2} + y ^ {2}} - 1\right) \mathrm{d} x \mathrm{d} y = - \frac {\pi}{1 8} - \frac {\pi}{6} + \frac {1 6}{9} - \frac {3 \sqrt {3}}{4} = - \frac {2 \pi}{9} + \frac {1 6}{9} - \frac {3 \sqrt {3}}{4}. $$
+综上所述，
+$$ \iint_ {D} \mid \sqrt {x ^ {2} + y ^ {2}} - 1 \mid \mathrm{d} x \mathrm{d} y = 2 \left(\frac {1 6}{9} - \frac {\pi}{2} + \frac {4 \pi}{9} - \frac {3 2}{9} + \frac {3 \sqrt {3}}{2}\right) = - \frac {3 2}{9} - \frac {\pi}{9} + 3 \sqrt {3}. $$"

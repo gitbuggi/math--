@@ -1,0 +1,1241 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+jc-0106,辅导讲义,概率论,第四章 随机变量的数字特征,,1,,,题型一 期望与方差的一般计算,"【例题1】设盒子中装有 $m$ 个颜色各异的球,有放回地抽取 $n$ 次,每次抽1个球.设 $X$ 表示 $n$ 次中抽到的球的颜色的种数, 则 $E(X) = \_$ .",,,,,"答案 $m\left[1 - \left(1 - \frac{1}{m}\right)^n\right]$
+解析 本题考查对数学期望性质的理解.
+
+若直接分析 X 的概率分布, 过程非常烦琐, 故采用拆分的思想来计算.
+
+$X_{i}=\begin{cases}1,&n\text{次中抽到过第}i\text{种颜色的球},\\0,&\text{其他},\end{cases}\quad i=1,2,\cdots,m,$
+
+则
+
+$$
+X = X _ {1} + X _ {2} + \dots + X _ {m}.
+$$
+
+事件“ $X_{i}=0$ ”表示n次中没有抽到第i种颜色的球,由于是有放回的抽取,n次中各次抽取结果互不影响,因此有
+
+$$
+P \{X _ {i} = 0 \} = \left(1 - \frac {1}{m}\right) ^ {n}, P \{X _ {i} = 1 \} = 1 - \left(1 - \frac {1}{m}\right) ^ {n},
+$$
+
+故 $E(X_{i}) = 1 - \left(1 - \frac{1}{m}\right)^{n}$ ，于是
+
+$$
+E (X) = E \left(\sum_ {i = 1} ^ {m} X _ {i}\right) = \sum_ {i = 1} ^ {m} E \left(X _ {i}\right) = m \left[ 1 - \left(1 - \frac {1}{m}\right) ^ {n} \right].
+$$"
+jc-0107,辅导讲义,概率论,第四章 随机变量的数字特征,,2,,,题型一 期望与方差的一般计算,"【例题2】现有20张奖券,其中8张为1元,5张为2元,7张为5元,今某人从中随机地无放回地抽取10张,则此人抽得奖券的总额的数学期望为（）.",20,24,26.5,28.5,"答案 (C)
+解析 本题考查对数学期望性质的理解.
+
+同上题,若直接列举抽得奖券的总额 X 的分布律,计算相对烦琐,宜采用拆分的方法计算.
+
+定义 $X_{i}$ 为第 $i(i=1,2,\cdots,5)$ 次抽奖所得的金额，根据第一章所讲的抽签原理可知 $X_{i}(i=1,2,\cdots,5)$ 具有同分布的性质，则
+
+$$
+\begin{array}{l} {P \left\{X _ {i} = 2 \right\} = 0. 8, P \left\{X _ {i} = 5 \right\} = 0. 2,} \\ {E (X _ {i}) = 2 \times 0. 8 + 5 \times 0. 2 = 2. 6.} \end{array}
+$$
+
+由于 $X = X_{1} + X_{2} + \cdots + X_{5}$ ，因此
+
+$$
+E (X) = E \left(X _ {1}\right) + E \left(X _ {2}\right) + \dots + E \left(X _ {5}\right) = 2. 6 \times 5 = 1 3,
+$$
+
+故选(C)."
+jc-0108,辅导讲义,概率论,第四章 随机变量的数字特征,,3,,,题型一 期望与方差的一般计算,"【例题 3】已知编号为 1,2,3,4 的 4 个袋中各有 3 个白球,2 个黑球.现从 1,2,3 袋中各取一球放入第 4 号袋中，则 4 号袋中白球数 X 的期望 $E(X)=$ ____；方差 $D(X)=$ ____.",,,,,"答案 $\frac{24}{5}$ ; $\frac{18}{25}$
+解析 本题考查运用调整法计算离散型随机变量的数字特征.
+
+若直接列举 X 的分布律,则计算过程比较复杂.
+
+定义Y为放入第4袋中的白球数,由于各袋球数相同,每取一球相当于一次试验,各次试验中取到白球的概率 $p=\frac{3}{5}$ ,则 $Y\sim B\left(3,\frac{3}{5}\right)$ .根据常见分布的数字特征,若 $Y\sim B(n,p)$ ,则 $E(Y)=np,D(Y)=np(1-p)$ .
+
+考虑到 $X = 3 + Y$ ，则
+
+$$
+E (X) = 3 + E (Y) = 3 + 3 \times \frac {3}{5} = \frac {2 4}{5}, D (X) = D (Y) = 3 \times \frac {3}{5} \times \frac {2}{5} = \frac {1 8}{2 5}.
+$$"
+jc-0109,辅导讲义,概率论,第四章 随机变量的数字特征,,4,,,题型一 期望与方差的一般计算,"【例题4】设随机变量 $X$ 只取非负整数值,且其分布律为 $P\{X = k\} = \frac{a^k}{(1 + a)^{k + 1}}, a > 0$ , 则 $E(X)$ 和 $D(X)$ 分别为（）.","$a, a(1 + a)$","$a, a^2$","$1 + a, a(1 + a)$","$a^2, a$","答案 (A)
+解析 本题考查运用调整法计算离散型随机变量的期望和方差.
+
+若本题直接用级数求和的方法计算 $E(X)$ , $D(X)$ ，则求解过程较为烦琐.
+
+观察 $P\{X=k\}=\left(\frac{a}{1+a}\right)^{k}\left(\frac{1}{1+a}\right)$ , $k=0,1,2,\cdots$ ，该分布律形似于几何分布的分布律，运用调整法，令 $Y=X+1$ ，则
+
+$$
+P \{Y = k \} = P \{X = k - 1 \} = \left(\frac {a}{1 + a}\right) ^ {k - 1} \left(\frac {1}{1 + a}\right), k = 1, 2, \dots ,
+$$
+
+即 $Y$ 服从参数为 $\frac{1}{1 + a}$ 的几何分布，此时
+
+$$
+E (X) = E (Y - 1) = E (Y) - 1 = \frac {1}{\frac {1}{1 + a}} - 1 = a,
+$$
+
+$$
+D (X) = D (Y - 1) = D (Y) = \frac {1 - \frac {1}{1 + a}}{\left(\frac {1}{1 + a}\right) ^ {2}} = a (1 + a).
+$$"
+jc-0110,辅导讲义,概率论,第四章 随机变量的数字特征,,5,,,题型一 期望与方差的一般计算,"【例题5】设随机变量 $X$ 的概率密度为 $f(x) = \begin{cases} 2^{-x}\ln 2, & x > 0, \\ 0, & x \leq 0. \end{cases}$ 对 $X$ 进行独立重复的观测,直到出现2个大于3的观测值停止.记 $Y$ 为观测次数.
+
+（1）求 $Y$ 的概率分布；
+
+(2) 求 $E(Y)$ .",,,,,"解析 本题考查运用调整法计算离散型随机变量的数字特征.
+
+$$
+(1) P \{X > 3 \} = \int_ {3} ^ {+ \infty} 2 ^ {- x} \ln 2 \mathrm{d} x = - 2 ^ {- x} \Big | _ {3} ^ {+ \infty} = \frac {1}{8}.
+$$
+
+根据题中定义知 $Y \geqslant 2$ ，令 $p = \frac{1}{8}$ ，则
+
+$$
+\begin{array}{r l} P \{Y = k \} & = C _ {k - 1} ^ {1} p (1 - p) ^ {k - 1 - 1} \cdot p \\ & = (k - 1) p ^ {2} (1 - p) ^ {k - 2} (k = 2, 3, \dots). \end{array}
+$$
+
+(2) 根据数学期望的定义, 有
+
+$$
+\begin{array}{r l} E (Y) & = \sum_ {k = 2} ^ {\infty} k \bullet P \{Y = k \} \\ & = \sum_ {k = 2} ^ {\infty} k (k - 1) p ^ {2} (1 - p) ^ {k - 2}. \end{array}
+$$
+
+下面用两种方法来计算.
+
+方法一: 直接法.
+
+由于
+
+$$
+\begin{array}{r l} \sum_ {k = 2} ^ {\infty} k (k - 1) x ^ {k - 2} & \xlongequal {| x | <   1} \left(\sum_ {k = 2} ^ {\infty} x ^ {k}\right) ^ {\prime \prime} = \left(\frac {x ^ {2}}{1 - x}\right) ^ {\prime \prime} \\ & = \left(- x - 1 + \frac {1}{1 - x}\right) ^ {\prime \prime} = \frac {2}{(1 - x) ^ {3}}, \end{array}
+$$
+
+则
+
+$$
+\begin{array}{r l} E (Y) & = p ^ {2} \sum_ {k = 2} ^ {\infty} k (k - 1) x ^ {k - 2} \Big | _ {x = 1 - p} \\ & = p ^ {2} \cdot \frac {2}{[ 1 - (1 - p) ] ^ {3}} = \frac {2}{p} = 1 6. \end{array}
+$$
+
+方法二:调整法.
+
+$$
+E (Y) = \sum_ {k = 2} ^ {\infty} k (k - 1) p ^ {2} (1 - p) ^ {k - 2}.
+$$
+
+令 $k - 1 = t$ ，则
+
+$$
+E (Y) = \left[ \sum_ {t = 1} ^ {\infty} (t + 1) t p (1 - p) ^ {t - 1} \right] p, t = 1, 2, \dots ,
+$$
+
+其中 $p(1-p)^{t-1}(t=1,2,\cdots)$ 可视作参数为 p 的几何分布的分布律，则
+
+$$
+\begin{array}{r l} E (Y) & = p \cdot \sum_ {t = 1} ^ {\infty} (t ^ {2} + t) p (1 - p) ^ {t - 1} = p E (t ^ {2} + t) \\ & = p \left\{\left[ E (t) \right] ^ {2} + D (t) + E (t) \right\} = p \left[ \left(\frac {1}{p}\right) ^ {2} + \frac {1 - p}{p ^ {2}} + \frac {1}{p} \right] \\ & = p \cdot \frac {2}{p ^ {2}} = \frac {2}{p} = 1 6. \end{array}
+$$"
+jc-0111,辅导讲义,概率论,第四章 随机变量的数字特征,,6,,,题型一 期望与方差的一般计算,"【例题6】设随机变量 $X$ 的分布函数为 $F(x) = 0.2\Phi (x) + 0.8\Phi \left(\frac{x - 4}{2}\right)$ , 其中 $\Phi (x)$ 为标准正态分布的分布函数, 则 $D(X) = (\quad)$ .",5.49,5.96,5.31,1,"答案 (B)
+解析 本题考查运用调整法计算正态分布的数字特征.
+
+本题中 X 不服从正态分布, 只能用定义来计算.
+
+$\Phi(x)=\int_{-\infty}^{x}\varphi(t)\mathrm{d}t$ ，其中 $\varphi(t)=\frac{1}{\sqrt{2\pi}}\mathrm{e}^{-\frac{t^{2}}{2}}$ ， $-\infty<t<+\infty$ .
+
+$$
+f (x) = F ^ {\prime} (x) = 0. 2 \varphi (x) + 0. 8 \varphi \left(\frac {x - 4}{2}\right) \cdot \frac {1}{2},
+$$
+
+$$
+E (X) = \int_ {- \infty} ^ {+ \infty} x f (x) \mathrm{d} x = 0. 2 \int_ {- \infty} ^ {+ \infty} x \varphi (x) \mathrm{d} x + 0. 4 \int_ {- \infty} ^ {+ \infty} x \varphi \left(\frac {x - 4}{2}\right) \mathrm{d} x,\tag{①}
+$$
+
+其中 $\int_{-\infty}^{+\infty} x\varphi(x)\mathrm{d}x$ 可视作 $X \sim N(0,1)$ 条件下的数学期望，数值为0.
+
+$$
+\begin{array}{r l} & {\int_ {- \infty} ^ {+ \infty} x \varphi \left(\frac {x - 4}{2}\right) \mathrm{d} x \stackrel {\frac {x - 4}{2} = t} {=} \int_ {- \infty} ^ {+ \infty} (2 t + 4) \varphi (t) \mathrm{d} (2 t + 4)} \\ & {\qquad = \int_ {- \infty} ^ {+ \infty} (4 t + 8) \varphi (t) \mathrm{d} t.} \end{array}
+$$
+
+考虑 $\varphi(t)$ 是 $N(0,1)$ 的概率密度，上式可视作 $t \sim N(0,1)$ 条件下 $4t + 8$ 的数学期望，即
+
+$$
+\int_ {- \infty} ^ {+ \infty} (4 t + 8) \varphi (t) \mathrm{d} t = E (4 t + 8) = 4 E (t) + 8 = 8,
+$$
+
+代入 ① 式可知
+
+$$
+E (X) = 0. 4 \times 8 = 3. 2.
+$$
+
+$$
+\begin{array}{r l} E (X ^ {2}) & = \int_ {- \infty} ^ {+ \infty} x ^ {2} f (x) \mathrm{d} x \\ & = 0. 2 \int_ {- \infty} ^ {+ \infty} x ^ {2} \varphi (x) \mathrm{d} x + 0. 4 \int_ {- \infty} ^ {+ \infty} x ^ {2} \varphi \left(\frac {x - 4}{2}\right) \mathrm{d} x, \end{array}\tag{②}
+$$
+
+其中 $\int_{-\infty}^{+\infty} x^2 \varphi(x) \mathrm{d}x$ 可视作 $X \sim N(0,1)$ 条件下 $X^2$ 的数学期望，则
+
+$$
+\int_ {- \infty} ^ {+ \infty} x ^ {2} \varphi (x) \mathrm{d} x = 0 ^ {2} + 1 = 1.
+$$
+
+$$
+\begin{array}{r l} & {\int_ {- \infty} ^ {+ \infty} x ^ {2} \varphi \left(\frac {x - 4}{2}\right) \mathrm{d} x \stackrel {\frac {x - 4}{2} = t} {=} \int_ {- \infty} ^ {+ \infty} (2 t + 4) ^ {2} \varphi (t) \mathrm{d} (2 t + 4)} \\ & {\qquad = \int_ {- \infty} ^ {+ \infty} 2 (2 t + 4) ^ {2} \varphi (t) \mathrm{d} t.} \end{array}
+$$
+
+考虑 $\varphi(t)$ 是 $N(0,1)$ 的概率密度，上式可视作 $t \sim N(0,1)$ 条件下 $2(2t+4)^{2}$ 的数学期望，即
+
+$$
+\begin{array}{r l} \int_ {- \infty} ^ {+ \infty} 2 (2 t + 4) ^ {2} \varphi (t) \mathrm{d} t & = 2 E (2 t + 4) ^ {2} \\ & = 2 \left\{\left[ E (2 t + 4) \right] ^ {2} + D (2 t + 4) \right\} \\ & = 2 \left\{\left[ 2 E (t) + 4 \right] ^ {2} + 4 D (t) \right\} \\ & = 2 (4 ^ {2} + 4) = 4 0, \end{array}
+$$
+
+代入 ② 式, 得 $E(X^{2}) = 0.2 + 0.4 \times 40 = 16.2$ .
+
+综上， $D(X) = E(X^2) - [E(X)]^2 = 16.2 - (3.2)^2 = 5.96.$
+
+【注】本题中由于直接计算 $E(X)$ , $E(X^{2})$ 比较困难, 因而采用调整法, 将 $E(X)$ , $E(X^{2})$ 拆成几个计算规模较小的积分, 进而运用调整法将不常见的数字特征转化为常见分布的期望与方差, 起到“曹冲称象”的效果."
+jc-0112,辅导讲义,概率论,第四章 随机变量的数字特征,,7,,,题型一 期望与方差的一般计算,"【例题7】设随机变量 $X$ 服从标准正态分布 $N(0,1)$ ，定义 $Y = Xe^{2X}$ ，则 $E(Y) = \_$ ； $D(Y) = \_$ .",,,,,"答案 $2\mathrm{e}^{2};17\mathrm{e}^{8} - 4\mathrm{e}^{4}$
+解析 本题考查运用调整法计算期望和方差.
+
+由定义可知
+
+$$
+\begin{array}{r l} E (Y) & = \int_ {- \infty} ^ {+ \infty} x \mathrm{e} ^ {2 x} \cdot \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {x ^ {2}}{2}} \mathrm{d} x \\ & = \mathrm{e} ^ {2} \int_ {- \infty} ^ {+ \infty} x \cdot \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {x ^ {2} - 4 x + 4}{2}} \mathrm{d} x \\ & = \mathrm{e} ^ {2} \int_ {- \infty} ^ {+ \infty} x \cdot \underbrace {\frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {(x - 2) ^ {2}}{2}}} _ {N (2, 1)} \mathrm{d} x, \end{array}
+$$
+
+其中 $\frac{1}{\sqrt{2\pi}}\mathrm{e}^{-\frac{(x - 2)^2}{2}}$ 可视作 $X\sim N(2,1)$ 条件下的概率密度，则
+
+$$
+\int_ {- \infty} ^ {+ \infty} x \cdot \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {(x - 2) ^ {2}}{2}} \mathrm{d} x \stackrel {X \sim N (2, 1) \text {条件下的期望}} {=} 2,
+$$
+
+故 $E(Y)=2e^{2}$ .
+
+$$
+\begin{array}{r l} E (Y ^ {2}) & = \int_ {- \infty} ^ {+ \infty} x ^ {2} \mathrm{e} ^ {4 x} \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {x ^ {2}}{2}} \mathrm{d} x \\ & = \mathrm{e} ^ {8} \int_ {- \infty} ^ {+ \infty} x ^ {2} \cdot \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {x ^ {2} - 8 x + 1 6}{2}} \mathrm{d} x \\ & = \mathrm{e} ^ {8} \int_ {- \infty} ^ {+ \infty} x ^ {2} \cdot \underbrace {\frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {(x - 4) ^ {2}}{2}}} _ {N (4, 1)} \mathrm{d} x, \end{array}
+$$
+
+故
+
+$$
+\int_ {- \infty} ^ {+ \infty} x ^ {2}   \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {(x - 4) ^ {2}}{2}} \mathrm{d} x   \frac {X \sim N (4 , 1)   \text {条件下}   X ^ {2}   \text {的期望}}{}   4 ^ {2} + 1 = 1 7  ,
+$$
+
+故 $E(Y^{2}) = 17\mathrm{e}^{8},D(Y) = E(Y^{2}) - [E(Y)]^{2} = 17\mathrm{e}^{8} - 4\mathrm{e}^{4}.$"
+jc-0113,辅导讲义,概率论,第四章 随机变量的数字特征,,8,,,题型一 期望与方差的一般计算,"【例题8】已知随机变量 $X_{1}, X_{2}, X_{3}$ 方差存在且不为零, 则下列结论不正确的是 ( ) .","若 $X_{1}$ 与 $X_{2}$ 不相关, 则 $D(X_{1} + X_{2}) = D(X_{1}) + D(X_{2})$","若 $D(X_{1} + X_{2}) = D(X_{1}) + D(X_{2})$ , 则 $X_{1}$ 与 $X_{2}$ 不相关","若 $X_{1}, X_{2}, X_{3}$ 两两不相关, 则 $D(X_{1} + X_{2} + X_{3}) = D(X_{1}) + D(X_{2}) + D(X_{3})$","若 $D(X_{1} + X_{2} + X_{3}) = D(X_{1}) + D(X_{2}) + D(X_{3})$ , 则 $X_{1}, X_{2}, X_{3}$ 两两不相关","答案 (D)
+解析 本题考查对方差性质的理解.
+
+由于 $D(X_{1} + X_{2}) = D(X_{1}) + D(X_{2}) + 2\mathrm{Cov}(X_{1},X_{2})$ ，故
+
+$D(X_{1} + X_{2}) = D(X_{1}) + D(X_{2})\Leftrightarrow \mathrm{Cov}(X_{1},X_{2}) = 0\Leftrightarrow X_{1}$ 与 $X_{2}$ 不相关，
+
+选项(A)，(B) 正确.
+
+根据方差的性质, 可知
+
+$$
+\begin{array}{r l} & D (X _ {1} + X _ {2} + X _ {3}) = D (X _ {1}) + D (X _ {2}) + D (X _ {3}) + 2 \mathrm{Cov} (X _ {1}, X _ {2}) + \\ & \qquad \qquad \qquad \qquad \qquad \qquad \qquad 2 \mathrm{Cov} (X _ {1}, X _ {3}) + 2 \mathrm{Cov} (X _ {2}, X _ {3}), \end{array}
+$$
+
+故
+
+$$
+\begin{array}{l} \operatorname{Cov} (X _ {1}, X _ {2}) = \operatorname{Cov} (X _ {1}, X _ {3}) = \operatorname{Cov} (X _ {2}, X _ {3}) = 0 \Rightarrow \\ D (X _ {1} + X _ {2} + X _ {3}) = D (X _ {1}) + D (X _ {2}) + D (X _ {3}), \end{array}
+$$
+
+所以选项(C) 正确.
+
+而选项(D)未必成立.事实上,若取 $X_{1}=X_{2}=X\sim N(0,1)$ , $X_{3}=-\frac{1}{2}X$ ,则
+
+$$
+\operatorname{Cov} (X _ {1}, X _ {2}) + \operatorname{Cov} (X _ {1}, X _ {3}) + \operatorname{Cov} (X _ {2}, X _ {3}) = D (X) - \frac {1}{2} D (X) - \frac {1}{2} D (X) = 0,
+$$
+
+但 $\mathrm{Cov}(X_{1},X_{2})=\mathrm{Cov}(X,X)=D(X)\neq0,X_{1},X_{2},X_{3}$ 两两不相关不成立."
+jc-0114,辅导讲义,概率论,第四章 随机变量的数字特征,,9,,,题型一 期望与方差的一般计算,"【例题 9】已知随机变量 $X_{1}, X_{2}, X_{3}$ 相互独立且都服从正态分布 $N(0, \sigma^{2})$ ，如果随机变量 $Y = X_{1}X_{2}X_{3}$ 的方差 $D(Y) = \frac{1}{64}$ ，则 $\sigma =$ ____ .",,,,,"答案 $\frac{1}{2}$
+解析 本题考查对方差的概念和性质的理解.
+
+根据方差的定义,有
+
+$$
+\begin{array}{r l} D (Y) & = D (X _ {1} X _ {2} X _ {3}) = E \big [ (X _ {1} X _ {2} X _ {3}) ^ {2} \big ] - \big [ E (X _ {1} X _ {2} X _ {3}) \big ] ^ {2} \\ & = E (X _ {1} ^ {2} X _ {2} ^ {2} X _ {3} ^ {2}) - \big [ E (X _ {1}) E (X _ {2}) E (X _ {3}) \big ] ^ {2}. \end{array}
+$$
+
+由于 $X_{1}, X_{2}, X_{3}$ 相互独立，所以 $X_{1}^{2}, X_{2}^{2}, X_{3}^{2}$ 相互独立. 又 $E(X_{i}) = 0$ ，且
+
+$$
+E (X _ {i} ^ {2}) = [ E (X _ {i}) ] ^ {2} + D (X _ {i}) = \sigma^ {2},
+$$
+
+故 $D(Y) = E(X_1^2)E(X_2^2)E(X_3^2) = (\sigma^2)^3 = \frac{1}{64}$ ，解得 $\sigma^2 = \frac{1}{4}$ ，即 $\sigma = \frac{1}{2} (\sigma$ 为标准差，大于0).
+
+【注】设 X 与 Y 独立，则 $E(XY)=E(X)E(Y)$ ，而 $D(XY)\neq D(X)D(Y)$ ，需要通过 $D(XY)=E[(XY)^{2}]-[E(XY)]^{2}=E(X^{2}Y^{2})-[E(X)E(Y)]^{2}=E(X^{2})E(Y^{2})-[E(X)]^{2}[E(Y)]^{2}$ 来计算."
+jc-0115,辅导讲义,概率论,第四章 随机变量的数字特征,,10,,,题型一 期望与方差的一般计算,"【例题10】设随机变量 $X$ 与 $Y$ 相互独立，且 $X \sim N(1, \sigma^2), Y \sim N(1, 4)$ ，已知 $D(XY) = 14$ ，则 $P\{X + Y < 3\} = (\quad)$ .",$\Phi\left(\frac{1}{2}\right)$,$\Phi\left(\frac{1}{\sqrt{2}}\right)$,$\Phi\left(\frac{1}{\sqrt{6}}\right)$,$\Phi\left(\frac{1}{3}\right)$,"答案 (C)
+解析 本题考查对方差概念的理解,考查对正态分布性质的运用.
+
+由方差的定义,有
+
+$$
+D (X Y) = E \big [ (X Y) ^ {2} \big ] - \big [ E (X Y) \big ] ^ {2},\tag{①}
+$$
+
+由于 X, Y 相互独立, 有 $E(XY) = E(X)E(Y) = 1$ .
+
+$$
+\begin{array}{r l} E [ (X Y) ^ {2} ] & = E (X ^ {2} Y ^ {2}) = [ E (X ^ {2}) ] [ E (Y ^ {2}) ] \\ & = \{[ E (X) ] ^ {2} + D (X) \} \{[ E (Y) ] ^ {2} + D (Y) \} \\ & = (1 + \sigma^ {2}) \times 5. \end{array}\tag{②}
+$$
+
+② 代入 ① 得 $D(XY) = 5(1 + \sigma^2) - 1 = 14$ ，解得 $\sigma^2 = 2$ .
+
+故 $X \sim N(1,2), Y \sim N(1,4)$ , 且 $X, Y$ 相互独立, 则 $X + Y$ 服从正态分布.
+
+由 $E(X+Y)=E(X)+E(Y)=2, D(X+Y)=D(X)+D(Y)=6$ ，即 $X+Y \sim N(2,6)$ . 故
+
+$$
+P \{X + Y <   3 \} = P \left\{\frac {X + Y - 2}{\sqrt {6}} <   \frac {1}{\sqrt {6}} \right\} = \Phi \left(\frac {1}{\sqrt {6}}\right).
+$$
+
+选(C).
+
+【注】考试中遇到非常规结构的期望及方差的计算,应优先运用定义来化简."
+jc-0116,辅导讲义,概率论,第四章 随机变量的数字特征,,11,,,题型一 期望与方差的一般计算,"【例题 11】设随机变量 $X \sim U(0,3)$ ，随机变量 Y 服从参数为 2 的泊松分布，且 $\mathrm{Cov}(X,Y) = -1$ ，则 $D(2X - Y + 1) = (\quad)$ .",1,5,9,10,"答案 (C)
+解析 本题考查对方差概念和性质的理解.
+
+根据方差的性质,有
+
+$$
+\begin{array}{r l} D (2 X - Y + 1) & = D (2 X - Y) \\ & = D (2 X) + D (Y) - 2 \mathrm{Cov} (2 X, Y) \\ & = 4 D (X) + D (Y) - 4 \mathrm{Cov} (X, Y) \\ & = 4 \times \frac {3 ^ {2}}{1 2} + 2 - 4 \times (- 1) \\ & = 9. \end{array}
+$$
+
+选(C).
+
+【注】 $E(X+Y)=E(X)+E(Y)$ 恒成立,但由于 $D(X+Y)=D(X)+D(Y)+2\mathrm{Cov}(X,Y)$ ,
+
+因而 $D(X+Y)=D(X)+D(Y)$ 仅在 $\mathrm{Cov}(X,Y)=0$ 时成立."
+jc-0117,辅导讲义,概率论,第四章 随机变量的数字特征,,12,,,题型一 期望与方差的一般计算,【例题12】设随机变量 $X$ 的数学期望为 $\mu$ ，方差为 $\sigma^2 (\sigma > 0)$ ，则对任意常数 $C$ ，必有（ ）.,$E\left[(X + C)^2\right] = E\left(X^2\right) + C^2$,$E\left[(X + C)^2\right] > E\left[(X - \mu)^2\right]$,$E\left[(X + C)^2\right] < E\left[(X - \mu)^2\right]$,$E\left[(X + C)^2\right] \geq E\left[(X - \mu)^2\right]$,"答案 (D)
+解析 本题考查对期望和方差性质的理解.
+
+根据数学期望的性质,有
+
+$$
+\begin{array}{r l} E [ (X + C) ^ {2} ] & = [ E (X + C) ] ^ {2} + D (X + C) \\ & = [ E (X) + C ] ^ {2} + D (X) \\ & = (\mu + C) ^ {2} + \sigma^ {2}. \end{array}
+$$
+
+对于(A), $E(X^{2})+C^{2}=\left[E(X)\right]^{2}+D(X)+C^{2}=\mu^{2}+\sigma^{2}+C^{2}\neq E[(X+C)^{2}]$ ，排除(A).
+
+由于 $E[(X - \mu)^2] = E[X - E(X)]^2 = D(X) = \sigma^2$ ，故 $E[(X + C)^2] = (\mu +C)^2 +$ $\sigma^2\geqslant \sigma^2$ ，(B)，(C)都不成立，选(D)."
+jc-0118,辅导讲义,概率论,第四章 随机变量的数字特征,,1,,,题型二 绝对值型期望与方差的计算,"【例题13】设 $X$ 服从参数为1的泊松分布,则 $E|X - E(X)| = (\quad)$",$\frac{1}{\mathrm{e}}$,$\frac{1}{2}$,$\frac{2}{\mathrm{e}}$,1,"答案 (C)
+解析 本题考查绝对值型随机变量期望的计算.
+
+由于 $X \sim P(\lambda)$ ，则 $E(X) = \lambda$ ，且 $P\{X = k\} = \frac{\lambda^{k}}{k!} e^{-\lambda} (k = 0, 1, 2, \cdots)$ .
+
+本题中 $E(X)=1$ ，则
+
+$$
+\begin{array}{r l} E \mid X - E (X) \mid & = E \mid X - 1 \mid = \sum_ {k = 0} ^ {\infty} \mid k - 1 \mid \cdot \frac {\lambda^ {k}}{k !} \mathrm{e} ^ {- \lambda} \\ & = \mid - 1 \mid \frac {\lambda^ {0}}{0 !} \mathrm{e} ^ {- \lambda} + \sum_ {k = 1} ^ {\infty} (k - 1) \frac {\lambda^ {k}}{k !} \mathrm{e} ^ {- \lambda} \\ & = \mathrm{e} ^ {- \lambda} + \sum_ {k = 1} ^ {\infty} (k - 1) \frac {\lambda^ {k}}{k !} \mathrm{e} ^ {- \lambda}. \end{array}\tag{①}
+$$
+
+若用级数直接求解 $\sum_{k=1}^{\infty}(k-1)\frac{\lambda^k}{k!}\mathrm{e}^{-\lambda}$ 较烦琐，故用调整法计算，如下.
+
+$$
+\begin{array}{r l} \sum_ {k = 1} ^ {\infty} (k - 1) \frac {\lambda^ {k}}{k !} \mathrm{e} ^ {- \lambda} & = \sum_ {k = 0} ^ {\infty} (k - 1) \frac {\lambda^ {k}}{k !} \mathrm{e} ^ {- \lambda} - (- 1) \frac {\lambda^ {0}}{0 !} \mathrm{e} ^ {- \lambda} \\ & = \mathrm{e} ^ {- \lambda} + \sum_ {k = 0} ^ {\infty} (k - 1) \underbrace {\frac {\lambda^ {k}}{k !} \mathrm{e} ^ {- \lambda}} _ {P (\lambda)}, \end{array}
+$$
+
+其中 $\frac{\lambda^{k}}{k!}\mathrm{e}^{-\lambda}(k=0,1,2,\cdots)$ 刚好是 $X\sim P(\lambda)$ 的分布律，故 $\sum_{k=0}^{\infty}(k-1)\frac{\lambda^{k}}{k!}\mathrm{e}^{-\lambda}$ 可视作 $X\sim$
+
+$P(\lambda)$ 条件下, X-1 的数学期望, 此时
+
+$$
+E (X - 1) = E (X) - 1 = \lambda - 1,
+$$
+
+故
+
+$$
+\sum_ {k = 1} ^ {\infty} (k - 1) \frac {\lambda^ {k}}{k !} \mathrm{e} ^ {- \lambda} = \lambda - 1 + \mathrm{e} ^ {- \lambda},\tag{②}
+$$
+
+②式代入 ① 式, 得 $E \mid X - E(X) = \lambda - 1 + 2\mathrm{e}^{-\lambda} \stackrel{\lambda = 1}{=} 2\mathrm{e}^{-1}$ ."
+jc-0119,辅导讲义,概率论,第四章 随机变量的数字特征,,2,,,题型二 绝对值型期望与方差的计算,"【例题 14】设 $X_{1}, X_{2}$ 为取自总体 $N(\mu, \sigma^{2})$ 的简单随机样本, $\sigma > 0$ 未知, 若 $\hat{\sigma} = \{a | X_{1} - X_{2}\}$ , 且 $E(\hat{\sigma}) = \sigma$ , 则 a = ( ).",$\frac{\sqrt{\pi}}{2}$,$\frac{\sqrt{2\pi}}{2}$,$\sqrt{\pi}$,$\sqrt{2\pi}$,"答案 (A)
+解析 本题考查绝对值型随机变量期望的计算.
+
+本题若直接用定义计算 $E(\hat{\sigma}) = \int_{-\infty}^{+\infty}\mathrm{d}x_1\int_{-\infty}^{+\infty}a|x_1 - x_2|f(x_1,x_2)\mathrm{d}x_2$ ，过程比较烦琐.由于 $X_{1},X_{2}$ 相互独立，故 $X_{1} - X_{2}$ 服从正态分布，且
+
+$$
+E (X _ {1} - X _ {2}) = E (X _ {1}) - E (X _ {2}) = \mu - \mu = 0,
+$$
+
+$$
+D (X _ {1} - X _ {2}) = D (X _ {1}) + D (X _ {2}) = 2 \sigma^ {2},
+$$
+
+则 $X_{1} - X_{2}\sim N(0,2\sigma^{2}),\frac{X_{1} - X_{2} - 0}{\sqrt{2\sigma^{2}}} = t\sim N(0,1)$ ，故
+
+$$
+\begin{array}{r l} {E (\hat {\sigma}) = E \{a \mid x _ {1} - x _ {2} \mid \}} & {= E (a \sqrt {2 \sigma^ {2}} \mid t \mid)} \\ & {= a \sqrt {2 \sigma^ {2}} \int_ {- \infty} ^ {+ \infty} \mid t \mid \bullet \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {t ^ {2}}{2}} \mathrm{d} t (\text {被积函数为偶函数})} \\ & {= a \frac {\sqrt {2 \sigma^ {2}}}{\sqrt {2 \pi}} \bullet 2 \int_ {0} ^ {+ \infty} t \mathrm{e} ^ {- \frac {t ^ {2}}{2}} \mathrm{d} t} \\ & {= a \frac {\sigma}{\sqrt {\pi}} \bullet 2 (- \mathrm{e} ^ {- \frac {t ^ {2}}{2}}) \Big | _ {0} ^ {+ \infty} = \frac {2 \sigma}{\sqrt {\pi}} \bullet a.} \end{array}
+$$
+
+由 $E(\hat{\sigma}) = \frac{2\sigma}{\sqrt{\pi}} a = \sigma$ ，解得 $a = \frac{\sqrt{\pi}}{2}$"
+jc-0120,辅导讲义,概率论,第四章 随机变量的数字特征,,3,,,题型二 绝对值型期望与方差的计算,"【例题15】设随机变量 $X$ 在 $[-a, a]$ 上服从均匀分布, 且 $a > 1$ .
+
+（1）求 $E\left(\min \{|X|, 1\}\right)$ ;
+
+（2）求 $E\left(\max \{|X|, 1\}\right)$ .",,,,,"解析 本题考查绝对值型随机变量期望的计算.
+
+由题意得， $X\sim U(-a,a),f(x) = \left\{ \begin{array}{ll}\frac{1}{2a}, & x\in [-a,a],\\ 0, & \text{其他}. \end{array} \right.$
+
+$$
+\min \{| X |, 1 \} = \left\{ \begin{array}{l l} | x |, & | x | <   1, \\ 1, & | x | \geqslant 1. \end{array} \right.\tag{1}
+$$
+
+$$
+\begin{array}{r l} E (\min \{| X |, 1 \}) & = \int_ {- \infty} ^ {+ \infty} \min \{| x |, 1 \} f (x) \mathrm{d} x = \int_ {- a} ^ {a} \min \{| x |, 1 \} f (x) \mathrm{d} x \\ & = 2 \int_ {0} ^ {a} \min \{| x |, 1 \} f (x) \mathrm{d} x = 2 \left(\int_ {0} ^ {1} \frac {x}{2 a} \mathrm{d} x + \int_ {1} ^ {a} \frac {1}{2 a} \mathrm{d} x\right) = 1 - \frac {1}{2 a}. \end{array}\tag{2}
+$$
+
+$$
+\max \{| X |, 1 \} = \left\{ \begin{array}{l l} 1, & | x | <   1, \\ | x |, & | x | \geqslant 1. \end{array} \right.
+$$
+
+$$
+\begin{array}{r l} E (\max \{| X |, 1 \}) & = \int_ {- \infty} ^ {+ \infty} \max \{| x |, 1 \} f (x) \mathrm{d} x = \int_ {- a} ^ {a} \max \{| x |, 1 \} f (x) \mathrm{d} x \\ & = 2 \int_ {0} ^ {a} \max \{| x |, 1 \} f (x) \mathrm{d} x = 2 \left(\int_ {0} ^ {1} \frac {1}{2 a} \mathrm{d} x + \int_ {1} ^ {a} \frac {x}{2 a} \mathrm{d} x\right) = \frac {1}{2 a} + \frac {a}{2}. \end{array}
+$$
+
+【注】本题中 $f(x)$ , $\min\{|x|,1\}$ , $\max\{|x|,1\}$ 均为偶函数, 故充分运用奇偶性简化计算."
+jc-0121,辅导讲义,概率论,第四章 随机变量的数字特征,,1,,,题型三 运用降维法计算期望与方差,"【例题 16】设随机变量 X 和 Y 的联合分布在以点 $(2,0)$ , $(0,1)$ , $(2,1)$ 为顶点的三角形区域上服从均匀分布, 求随机变量 $Z = X + Y$ 的方差.",,,,,"解析 本题考查运用降维法计算随机变量的期望和方差.
+
+若直接计算
+
+$$
+D (Z) = D (X + Y) = D (X) + D (Y) + 2 \mathrm{Cov} (X, Y),
+$$
+
+计算过程较烦琐. 本题直接用卷积分公式求 $Z = X + Y$ 的概率密度.
+
+三角形区域如图所示,由题意得,其面积 $S=\frac{1}{2}\times1\times2=1$ , 则
+
+$$
+f (x, y) = \left\{ \begin{array}{l l} \frac {1}{S} = 1, & 0 <   x <   2, 1 - \frac {x}{2} <   y <   1, \\ 0, & \text {其他}. \end{array} \right.
+$$
+
+由 $Z = X + Y$ ，解得 $Y = Z - X$ ，则
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-10-06/b055224c-5d48-411f-a86b-19aa2871d6bc/92433755b9ced73369dd3dc7649ffe377d3955702e64d2dad14457914ec85239.jpg)
+
+
+$$
+\begin{array}{r l} f _ {z} (z) & = \int_ {- \infty} ^ {+ \infty} f (x, z - x) \left| \frac {\partial (z - x)}{\partial z} \right| \mathrm{d} x \\ & = \int_ {- \infty} ^ {+ \infty} f (x, z - x) \mathrm{d} x. \end{array}
+$$
+
+由 $\left\{\begin{aligned}0&<x<2,\\ 1-\frac{x}{2}&<y=z-x<1,\end{aligned}\right.$ 得 $\left\{\begin{aligned}0&<x<2,\\ z&-1<x<2(z-1).\end{aligned}\right.$
+
+分别由 $z - 1 = 0,2(z - 1) = 0,z - 1 = 2,2(z - 1) = 2$ ，解得 $\pmb{z}$ 的关键点为 $1,2,3.$
+
+① 若 $z < 1, z - 1 < x < 2(z - 1)$ 无解， $f_{Z}(z) = 0$ ；
+
+② 若 1 < z < 2,
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-10-06/b055224c-5d48-411f-a86b-19aa2871d6bc/dd42df4b3c84b206298d0a2477460a2316dd74359ebab8663897e771f631892d.jpg)
+
+
+由图知 $z - 1 < x < 2(z - 1), f_Z(z) = \int_{z - 1}^{2(z - 1)} \mathrm{d}x = z - 1$ ;
+
+③ 若 2 < z < 3，
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-10-06/b055224c-5d48-411f-a86b-19aa2871d6bc/77bdd458c3a733c161f70260d91f560aa17180e540007cefd1e8ff66f2151176.jpg)
+
+
+由图知 $z - 1 < x < 2, f_{Z}(z) = \int_{z - 1}^{2} \mathrm{d}x = 3 - z$ ;
+
+④ 若 z > 3，
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-10-06/b055224c-5d48-411f-a86b-19aa2871d6bc/fc5225a59e74e8b8877bee8189e0785aaa7dc586086b3eb2654eb7d289d024cb.jpg)
+
+
+由图知，x 无解， $f_{z}(z)=0$ .
+
+综上, $f_{Z}(z)=\left\{\begin{aligned}z-1,&1<z<2,\\ 3-z,&2<z<3,\text{故}\\ 0,&\text{其他},\end{aligned}\right.$
+
+$$
+\begin{array}{r l} E (Z) & = \int_ {- \infty} ^ {+ \infty} z f (z) \mathrm{d} z = \int_ {1} ^ {2} z (z - 1) \mathrm{d} z + \int_ {2} ^ {3} z (3 - z) \mathrm{d} z \\ & = \left(\frac {z ^ {3}}{3} - \frac {z ^ {2}}{2}\right) \Big | _ {1} ^ {2} + \left(\frac {3}{2} z ^ {2} - \frac {z ^ {3}}{3}\right) \Big | _ {2} ^ {3} = 2. \end{array}
+$$
+
+$$
+\begin{array}{r l} E (Z ^ {2}) & = \int_ {- \infty} ^ {+ \infty} z ^ {2} f (z) \mathrm{d} z = \int_ {1} ^ {2} z ^ {2} (z - 1) \mathrm{d} z + \int_ {2} ^ {3} z ^ {2} (3 - z) \mathrm{d} z \\ & = \left(\frac {z ^ {4}}{4} - \frac {z ^ {3}}{3}\right) \Big | _ {1} ^ {2} + \left(z ^ {3} - \frac {z ^ {4}}{4}\right) \Big | _ {2} ^ {3} = \frac {2 5}{6}. \end{array}
+$$
+
+则 $D(Z) = E(Z^2) - [E(Z)]^2 = \frac{25}{6} - 4 = \frac{1}{6}$ ."
+jc-0122,辅导讲义,概率论,第四章 随机变量的数字特征,,2,,,题型三 运用降维法计算期望与方差,"【例题17】设二维随机变量 $(X,Y)$ 的联合概率密度为 $f(x,y) = \frac{1}{2\pi\sigma^2}\mathrm{e}^{-\frac{x^2 + y^2}{2\sigma^2}}(-\infty < x,y < +\infty)$ ，记 $Z = X^{2} + Y^{2}$ .
+
+(1) 求 Z 的概率密度;
+
+(2) 求 $E(Z)$ , $D(Z)$ .",,,,,"解析 本题考查运用降维法计算复杂随机变量的期望和方差.
+
+(1) 根据 $Z = X^{2} + Y^{2}$ 可知 Z 的关键点是 0，下面分区间计算分布函数.
+
+当 $z < 0$ 时， $F(z) = P\{X^2 + Y^2 \leqslant z\} = P\{\emptyset\} = 0.$
+
+当 $z \geqslant 0$ 时，
+
+$$
+\begin{array}{r l} F (z) & = P \left\{Z \leqslant z \right\} = P \left\{X ^ {2} + Y ^ {2} \leqslant z \right\} \\ & = \iint_ {x ^ {2} + y ^ {2} \leqslant z} \frac {1}{2 \pi \sigma^ {2}} \mathrm{e} ^ {- \frac {x ^ {2} + y ^ {2}}{2 \sigma^ {2}}} \mathrm{d} x \mathrm{d} y \frac {x = r \cos \theta}{y = r \sin \theta} \int_ {0} ^ {2 \pi} \mathrm{d} \theta \int_ {0} ^ {\sqrt {z}} \frac {1}{2 \pi \sigma^ {2}} \mathrm{e} ^ {- \frac {r ^ {2}}{2 \sigma^ {2}}} r \mathrm{d} r \\ & = \int_ {0} ^ {\sqrt {z}} \frac {r}{\sigma^ {2}} \mathrm{e} ^ {- \frac {r ^ {2}}{2 \sigma^ {2}}} \mathrm{d} r. \end{array}
+$$
+
+于是
+
+$$
+f _ {Z} (z) = F ^ {\prime} (z) = \left\{ \begin{array}{l l} \frac {1}{2 \sigma^ {2}} \mathrm{e} ^ {- \frac {z}{2 \sigma^ {2}}}, & z > 0, \\ 0, & \text {其他}, \end{array} \right.
+$$
+
+由此可以看出， $Z$ 服从参数为 $\frac{1}{2\sigma^2}$ 的指数分布.
+
+(2) 由指数分布的性质可知, $E(Z)=2\sigma^{2},D(Z)=4\sigma^{4}$ .
+
+【注】本题若直接用定义计算 $E(Z)$ ， $D(Z)$ ，则计算量庞大，效率较低。采用先求解Z的概率密度的方法可以有效降低计算量。"
+jc-0123,辅导讲义,概率论,第四章 随机变量的数字特征,,3,,,题型三 运用降维法计算期望与方差,"【例题 18】设总体 X 的概率密度为 $f(x;\theta)=\left\{\begin{aligned}\frac{3x^{2}}{\theta^{3}},&0<x<\theta,\\0,& 其他.\end{aligned}\right.$ 其中 $\theta\in(0,+\infty)$ 为未知参数， $X_{1},X_{2},X_{3}$ 为来自总体 X 的简单随机样本，令 $T=\max\left\{X_{1},X_{2},X_{3}\right\}$ .
+
+(1) 求 T 的概率密度;
+
+(2) 求 $E(T), D(T)$ .",,,,,"解析 本题考查运用降维法计算 max 型随机变量的期望与方差.
+
+$$
+\begin{array}{r l} (1) F _ {X} (x) & = \int_ {- \infty} ^ {x} f (x; \theta) \mathrm{d} x = \left\{ \begin{array}{l l} 0, & x <   0, \\ \int_ {0} ^ {x} \frac {3 \tau^ {2}}{\theta^ {3}} \mathrm{d} \tau = \left(\frac {x}{\theta}\right) ^ {3}, & 0 \leqslant x <   \theta , \\ 1, & x \geqslant \theta . \end{array} \right. \\ F _ {T} (t) & = P \{\max \{X _ {1}, X _ {2}, X _ {3} \} \leqslant t \} = P \{X _ {1} \leqslant t, X _ {2} \leqslant t, X _ {3} \leqslant t \} \\ & \quad \frac {X _ {1} , X _ {2} , X _ {3} \text {独立同分布}}{} [ F _ {X} (t) ] ^ {3} = \left\{ \begin{array}{l l} 0, & t <   0, \\ \frac {t ^ {9}}{\theta^ {9}}, & 0 \leqslant t <   \theta , \\ 1, & t \geqslant \theta . \end{array} \right. \end{array}
+$$
+
+于是
+
+$$
+f _ {T} (t) = F _ {T} ^ {\prime} (t) = \left\{ \begin{array}{l l} \frac {9 t ^ {8}}{\theta^ {9}}, & 0 <   t <   \theta , \\ 0, & \text {其他}. \end{array} \right.
+$$
+
+(2)
+
+$$
+E (T) = \int_ {0} ^ {\theta} t \cdot \frac {9 t ^ {8}}{\theta^ {9}} \mathrm{d} t = \frac {9}{\theta^ {9}} \cdot \left. \frac {t ^ {1 0}}{1 0} \right| _ {0} ^ {\theta} = \frac {9}{1 0} \theta ,
+$$
+
+$$
+E (T ^ {2}) = \int_ {0} ^ {\theta} t ^ {2} \cdot \frac {9 t ^ {8}}{\theta^ {9}} \mathrm{d} t = \frac {9}{\theta^ {9}} \cdot \left. \frac {t ^ {1 1}}{1 1} \right| _ {0} ^ {\theta} = \frac {9}{1 1} \theta^ {2}.
+$$
+
+$$
+D (T) = E (T ^ {2}) - [ E (T) ] ^ {2} = \frac {9}{1 1} \theta^ {2} - \frac {8 1}{1 0 0} \theta^ {2} = \frac {9}{1 1 0 0} \theta^ {2}.
+$$
+
+【注】本题中若直接计算 $E(T)=\int dx_{1}\int dx_{2}\int f(x_{1},x_{2},x_{3})\max\{x_{1},x_{2},x_{3}\}dx_{3}$ ，计算量非常大，区间划分比较烦琐，因而运用降维法先求出T的概率密度 $f_{T}(t)$ ，此时 $E(T),D(T)$ 的计算与 $X_{1},X_{2},X_{3}$ 无关，只与 $f_{T}(t)$ 有关."
+jc-0124,辅导讲义,概率论,第四章 随机变量的数字特征,,1,,,题型四 协方差与相关系数的计算,"【例题 19】已知随机变量 $X_{1}, X_{2}, \cdots, X_{n}$ 相互独立, 且有相同的方差 $\sigma^{2} (\sigma^{2} \neq 0)$ , 记 $\overline{X} = \frac{1}{n} \sum_{i=1}^{n} X_{i}$ , 则 $D(X_{1} - \overline{X}) =$ ____; $X_{1}$ 与 $\overline{X}$ 的相关系数 $\rho =$ ____.",,,,,"答案 $\frac{n - 1}{n}\sigma^2;\frac{1}{\sqrt{n}}$
+解析 本题考查应用数字特征性质与定义直接计算.
+
+由于 $X_{1}, X_{2}, \cdots, X_{n}$ 相互独立，且 $D(X_{i}) = \sigma^{2}$ ，故
+
+$$
+D (X _ {1} - \overline {{X}}) = D (X _ {1}) + D (\overline {{X}}) - 2 \operatorname{Cov} (X _ {1}, \overline {{X}}),
+$$
+
+其中
+
+$$
+\begin{array}{r l} & D (X _ {1}) = \sigma^ {2}, \\ & D (\overline {{{X}}}) = D \Big (\frac {X _ {1} + X _ {2} + \cdots + X _ {n}}{n} \Big) \\ & = \frac {D (X _ {1}) + D (X _ {2}) + \cdots + D (X _ {n})}{n ^ {2}} = \frac {\sigma^ {2}}{n}. \end{array}
+$$
+
+$$
+\begin{array}{r l} \operatorname{Cov} (X _ {1}, \overline {{{X}}}) & = \operatorname{Cov} \Bigl (X _ {1}, \frac {X _ {1} + X _ {2} + \cdots + X _ {n}}{n} \Bigr) \\ & = \frac {1}{n} \operatorname{Cov} (X _ {1}, X _ {1} + X _ {2} + \dots + X _ {n}) \\ & = \frac {\operatorname{Cov} (X _ {1} , X _ {1}) + \operatorname{Cov} (X _ {1} , X _ {2}) + \cdots + \operatorname{Cov} (X _ {1} , X _ {n})}{n}. \end{array}
+$$
+
+由 $X_{1}, X_{2}, \cdots, X_{n}$ 独立同分布，则有
+
+$$
+\operatorname{Cov} (X _ {i}, X _ {j}) = \left\{ \begin{array}{l l} D (X _ {i}) = \sigma^ {2}, & i = j, \\ 0, & i \neq j, \end{array} \right. i, j = 1, 2, \dots , n,
+$$
+
+则 $\operatorname{Cov}(X_1, \overline{X}) = \frac{D(X_1)}{n} = \frac{\sigma^2}{n}$ .
+
+所以
+
+$$
+D (X _ {1} - \overline {{{X}}}) = D (X _ {1}) + D (\overline {{{X}}}) - 2 \operatorname{Cov} (X _ {1}, \overline {{{X}}}) = \sigma^ {2} + \frac {\sigma^ {2}}{n} - 2 \cdot \frac {\sigma^ {2}}{n} = \frac {n - 1}{n} \sigma^ {2},
+$$
+
+$X_{1}$ 与 $\overline{X}$ 的相关系数为
+
+$$
+\rho = \frac {\mathrm{Cov} (X _ {1} , \overline {{{X}}})}{\sqrt {D (X _ {1})} \sqrt {D (\overline {{{X}}})}} = \frac {\sigma^ {2} / n}{\sigma \cdot \sigma / \sqrt {n}} = \frac {1}{\sqrt {n}}.
+$$"
+jc-0125,辅导讲义,概率论,第四章 随机变量的数字特征,,2,,,题型四 协方差与相关系数的计算,"【例题20】设二维随机变量 $(X,Y)$ 的概率分布为
+
+| $X \backslash Y$ | $0$ | $1$ | $2$ |
+|:---:|:---:|:---:|:---:|
+| $-1$ | $0.1$ | $0.1$ | $b$ |
+| $1$ | $a$ | $0.1$ | $0.1$ |
+若事件 $\left\{\max\{X,Y\}=2\right\}$ 与事件 $\left\{\min\{X,Y\}=1\right\}$ 相互独立, 则 $\operatorname{Cov}(X,Y)=()$ .",-0.6,-0.36,0,0.48,"答案 B
+解析 本题考查协方差的概念与计算.
+
+由独立性的定义,有
+
+$P\{\max \{X,Y\} = 2,\min \{X,Y\} = 1\} = P\{\max \{X,Y\} = 2\} P\{\min \{X,Y\} = 1\}$ . 其中
+
+$$
+P \{\max \{X, Y \} = 2, \min \{X, Y \} = 1 \} = P \{X = 2, Y = 1 \} + P \{X = 1, Y = 2 \} = 0. 1,
+$$
+
+$$
+\begin{array}{r l} P \{\max \{X, Y \} = 2 \} & = P \{X = 2, Y <   2 \} + P \{Y = 2, X <   2 \} + P \{X = 2, Y = 2 \} \\ & = 0 + (b + 0. 1) + 0 = b + 0. 1, \end{array}
+$$
+
+$$
+\begin{array}{r l} P \{\min \{X, Y \} = 1 \} & = P \{X = 1, Y > 1 \} + P \{Y = 1, X > 1 \} + P \{X = 1, Y = 1 \} \\ & = 0. 1 + 0 + 0. 1 = 0. 2. \end{array}
+$$
+
+由 0.1 = 0.2 (b + 0.1)，解得 b = 0.4。
+
+由概率规范性 $\sum_{i}\sum_{j}P\{X = x_{i};Y_{j} = y_{1}\} = 1$ ，即 $0.4 + a + b = 1$ ，解得 $a = 0.2$ ，此时边缘分布律为
+
+<table><tr><td>X</td><td>-1</td><td>1</td></tr><tr><td>P</td><td>0.6</td><td>0.4</td></tr></table>
+
+<table><tr><td>Y</td><td>0</td><td>1</td><td>2</td></tr><tr><td>P</td><td>0.3</td><td>0.2</td><td>0.5</td></tr></table>
+
+$E(X)=(-1)\times0.6+1\times0.4=-0.2,E(Y)=0\times0.3+1\times0.2+2\times0.5=1.2;$ $E(XY)=\sum_{\substack{(i,j)\\ 1\leqslant i\leqslant2,1\leqslant j\leqslant3}}x_{i}y_{j}p_{ij}=(-1)\times0.1+(-2)\times b+1\times0.1+2\times0.1=-0.6.$
+
+综上， $\operatorname{Cov}(X,Y) = E(XY) - E(X)E(Y) = -0.6 - (-0.24) = -0.36.$"
+jc-0126,辅导讲义,概率论,第四章 随机变量的数字特征,,3,,,题型四 协方差与相关系数的计算,"【例题 21】设随机变量 $X_{1}, X_{2}, \cdots, X_{n} (n > 2)$ 相互独立, 且均服从正态分布 $N(0, \sigma^{2})$ , 定义随机变量 $\overline{X} = \frac{1}{n} \sum_{i=1}^{n} X_{i}$ , 记 $Y_{i} = X_{i} - 2\overline{X}, i = 1, 2, \cdots, n$ .
+
+（1）求 $Y_{i}$ 的方差 $D(Y_{i})(\mathrm{i}=1,2,\cdots,n)$ ;
+
+(2) 求 $Y_{1}$ 与 $Y_{n}$ 的协方差 $Cov(Y_{1}, Y_{n})$ .",,,,,"解析 本题考查协方差的性质与计算.
+
+(1) 由题意 $E(X_{i})=0, D(X_{i})=\sigma^{2}(i=1,2,\cdots,n)$ .
+
+$$
+\operatorname{Cov} (X _ {i}, X _ {j}) = \left\{ \begin{array}{l l} D (X _ {i}) = \sigma^ {2}, & i = j, \\ 0, & i \neq j. \end{array} \right.
+$$
+
+$$
+\begin{array}{r l} D (Y _ {i}) & = D (X _ {i} - 2 \overline {{{X}}}) \\ & = D (X _ {i}) + D (2 \overline {{{X}}}) - 2 \mathrm{Cov} (X _ {i}, 2 \overline {{{X}}}) \\ & = D (X _ {i}) + 4 D (\overline {{{X}}}) - 4 \mathrm{Cov} (X _ {i}, \overline {{{X}}}). \end{array}
+$$
+
+同上题,有
+
+$$
+D (\overline {{{X}}}) = D \left(\frac {X _ {1} + X _ {2} + \cdots + X _ {n}}{n}\right) = \frac {D (X _ {1})}{n} = \frac {\sigma^ {2}}{n},
+$$
+
+$$
+\operatorname{Cov} (X _ {i}, \overline {{{X}}}) = \operatorname{Cov} \left(X _ {i}, \frac {X _ {1} + X _ {2} + \cdots + X _ {n}}{n}\right) = \frac {\operatorname{Cov} (X _ {i} , X _ {i})}{n} = \frac {\sigma^ {2}}{n},
+$$
+
+故 $D(Y_{i}) = \sigma^{2} + \frac{4}{n}\sigma^{2} - 4\frac{\sigma^{2}}{n} = \sigma^{2}.$
+
+$$
+\begin{array}{r l} (2) \mathrm{Cov} (Y _ {1}, Y _ {n}) & = \mathrm{Cov} (X _ {1} - 2 \overline {{{X}}}, X _ {n} - 2 \overline {{{X}}}) \\ & = \mathrm{Cov} (X _ {1}, X _ {n}) + \mathrm{Cov} (- 2 \overline {{{X}}}, X _ {n}) + \mathrm{Cov} (X _ {1}, - 2 \overline {{{X}}}) + \mathrm{Cov} (- 2 \overline {{{X}}}, - 2 \overline {{{X}}}) \\ & = 0 - 2 \mathrm{Cov} (\overline {{{X}}}, X _ {n}) - 2 \mathrm{Cov} (X _ {1}, \overline {{{X}}}) + 4 \mathrm{Cov} (\overline {{{X}}}, \overline {{{X}}}) \\ & = - 2 \cdot \frac {\sigma^ {2}}{n} - 2 \cdot \frac {\sigma^ {2}}{n} + 4 D (\overline {{{X}}}) \end{array}
+$$
+
+$$
+= - \frac {4}{n} \sigma^ {2} + \frac {4}{n} \sigma^ {2} = 0.
+$$
+
+【注】本题再一次体现了协方差计算的特点. 不要先写出定义, 而是运用协方差可拆分的性质, 将复杂协方差计算拆成若干个小规模协方差计算, 进一步运用独立性、同分布性进行求解."
+jc-0127,辅导讲义,概率论,第四章 随机变量的数字特征,,4,,,题型四 协方差与相关系数的计算,"【例题22】设随机变量 $X$ 服从正态分布 $N(-1,1), Y$ 服从正态分布 $N(1,2)$ , 若 $X$ 与 $X + 2Y$ 不相关, 则 $X$ 与 $X - Y$ 的相关系数为（）. (公众号: 风中羽小易)",$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{3}{4}$,"答案 (D)
+解析 本题考查用定义计算相关系数.
+
+由 X 与 $X + 2Y$ 不相关, 可知
+
+$$
+\operatorname{Cov} (X, X + 2 Y) = \operatorname{Cov} (X, X) + 2 \operatorname{Cov} (X, Y) = D (X) + 2 \operatorname{Cov} (X, Y) = 0,
+$$
+
+由于 $D(X) = 1$ ，可得 $\operatorname{Cov}(X,Y) = -\frac{1}{2}$ 所以
+
+$$
+\operatorname{Cov} (X, X - Y) = \operatorname{Cov} (X, X) - \operatorname{Cov} (X, Y) = D (X) - \operatorname{Cov} (X, Y) = \frac {3}{2},
+$$
+
+$$
+D (X - Y) = D (X) + D (Y) - 2 \operatorname{Cov} (X, Y) = 1 + 2 - 2 \left(- \frac {1}{2}\right) = 4.
+$$
+
+由定义, 可知
+
+$$
+\rho = \frac {\mathrm{Cov} (X , X - Y)}{\sqrt {D (X)} \sqrt {D (X - Y)}} = \frac {3}{4},
+$$
+
+故选(D)."
+jc-0128,辅导讲义,概率论,第四章 随机变量的数字特征,,5,,,题型四 协方差与相关系数的计算,"【例题23】随机变量 $X$ 与 $Y$ 的分布律为
+
+| $X$ | $0$ | $1$ |
+|:---:|:---:|:---:|
+| $P$ | $\frac{1}{2}$ | $\frac{1}{2}$ |
+
+| $Y$ | $0$ | $1$ |
+|:---:|:---:|:---:|
+| $P$ | $\frac{1}{4}$ | $\frac{3}{4}$ |
+且 $P\{X=Y\}=\frac{1}{4}$ ，则 X 与 Y 的相关系数为 ____.",,,,,"答案 $-\frac{1}{\sqrt{3}}$
+解析 本题考查离散型随机变量相关系数的计算.
+
+$$
+P \{X = Y \} = P \{X = Y = 0 \} + P \{X = Y = 1 \} = \frac {1}{4}.
+$$
+
+设 $P\{X = Y = 0\} = a, P\{X = Y = 1\} = b$ ，则有 $a + b = \frac{1}{4}$ .
+
+X,Y 联合分布律如表所示,由边缘分布条件可知,
+
+<table><tr><td>X\Y</td><td>0</td><td>1</td><td><eq>p_{i}</eq>.</td></tr><tr><td>0</td><td>a</td><td></td><td><eq>\frac{1}{2}</eq></td></tr><tr><td>1</td><td></td><td>b</td><td><eq>\frac{1}{2}</eq></td></tr><tr><td><eq>p_{\cdot j}</eq></td><td><eq>\frac{1}{4}</eq></td><td><eq>\frac{3}{4}</eq></td><td></td></tr></table>
+
+$$
+P \{X = 0, Y = 1 \} = \frac {1}{2} - a = \frac {3}{4} - b,
+$$
+
+可得 $b - a = \frac{1}{4}$ 又 $b + a = \frac{1}{4}$ 联立解得 $b = \frac{1}{4}, a = 0$ .
+
+$$
+\begin{array}{r l} \mathrm{Cov} (X, Y) & = E (X Y) - E (X) E (Y) \\ & = \sum_ {(i, j)} x _ {i} y _ {j} p _ {i j} - \frac {1}{2} \times \frac {3}{4} \\ & = 1 \cdot 1 \cdot P \{X = Y = 1 \} - \frac {3}{8} = \frac {1}{4} - \frac {3}{8} = - \frac {1}{8}. \end{array}
+$$
+
+$$
+\rho_ {X Y} = \frac {\operatorname{Cov} (X , Y)}{\sqrt {D (X)} \sqrt {D (Y)}} = \frac {- \frac {1}{8}}{\sqrt {\frac {1}{2} \times \frac {1}{2}} \sqrt {\frac {1}{4} \times \frac {3}{4}}} = \frac {- \frac {1}{8}}{\frac {1}{2} \times \frac {\sqrt {3}}{4}} = - \frac {1}{\sqrt {3}}.
+$$
+
+【注】本题中 X, Y 服从 $B(1, p_{i}), i = 1, 2$ ，故期望为 $p_{i}$ ，方差为 $p_{i}(1 - p_{i})$ ."
+jc-0129,辅导讲义,概率论,第四章 随机变量的数字特征,,6,,,题型四 协方差与相关系数的计算,"【例题24】设随机变量 $X$ 与 $Y$ 的相关系数为 $\frac{1}{6}$ , 且 $E(X) = 0, E(Y) = 1, E(X^2) = 4, E(Y^2) = 10$ , 则 $E[(X + Y)^2] = \_$ .",,,,,"答案 16
+解析 本题考查运用相关系数计算协方差,进而进行数学期望的计算.
+
+由 $\rho_{XY} = \frac{1}{6}$ ，立即写出
+
+$$
+\begin{array}{r l} \operatorname{Cov} (X, Y) & = \rho_ {X Y} \sqrt {D (X)} \sqrt {D (Y)} = \rho_ {X Y} \sqrt {E (X ^ {2}) - [ E (X) ] ^ {2}} \sqrt {E (Y ^ {2}) - [ E (Y) ] ^ {2}} \\ & = \frac {1}{6} \times \sqrt {4} \times \sqrt {9} = 1. \\ & E [ (X + Y) ^ {2} ] = [ E (X + Y) ] ^ {2} + D (X + Y), \end{array}
+$$
+
+其中
+
+$$
+E (X + Y) = E (X) + E (Y) = 1,
+$$
+
+$$
+\begin{array}{r l} D (X + Y) & = D (X) + D (Y) + 2 \mathrm{Cov} (X, Y) \\ & = \{E (X ^ {2}) - [ E (X) ] ^ {2} \} + \{E (Y ^ {2}) - [ E (Y) ] ^ {2} \} + 2 \\ & = 4 + 9 + 2 \\ & = 1 5. \end{array}
+$$
+
+综上， $E[(X+Y)^{2}]=[E(X+Y)]^{2}+D(X+Y)=1+15=16.$"
+jc-0130,辅导讲义,概率论,第四章 随机变量的数字特征,,7,,,题型四 协方差与相关系数的计算,"【例题 25】设二维随机变量 $(X,Y)$ 服从正态分布 $N(0,0;1,1;\rho)$ ，其中 $\rho\in(-1,1)$ ，若a,b为满足 $a^{2}+b^{2}=1$ 的任意实数，则 $D(aX+bY)$ 的最大值为（）.",1,2,$1+\left|\rho\right|$,$1+\rho^{2}$,"答案 (C)
+
+>解析 本题考查运用数字特征先计算协方差,进而计算方差.
+
+由题可知 $E(X) = E(Y) = 0, D(X) = D(Y) = 1$ ，则有
+
+$$
+\operatorname{Cov} (X, Y) = \rho \sqrt {D (X)} \sqrt {D (Y)} = \rho .
+$$
+
+根据方差性质, 可知
+
+$$
+\begin{array}{r l} D (a X + b Y) & = D (a X) + D (b Y) + 2 \mathrm{Cov} (a X, b Y) \\ & = a ^ {2} D (X) + b ^ {2} D (Y) + 2 a b \mathrm{Cov} (X, Y) \\ & = a ^ {2} + b ^ {2} + 2 a b \rho = 1 + 2 a b \rho . \end{array}
+$$
+
+根据基本不等式, 可知 $a^{2} + b^{2} = 1 \geqslant 2 |ab|$ , 则 $1 + 2ab\rho \leqslant 1 + 2 |ab\rho| \leqslant 1 + |\rho|$ , 故选(C)."
+jc-0131,辅导讲义,概率论,第四章 随机变量的数字特征,,8,,,题型四 协方差与相关系数的计算,"【例题26】设二维随机变量 $(X,Y)$ 服从二维正态分布 $N\left(1,2;1,4; - \frac{1}{8}\right)$
+
+（1）求 $E\left(\left|2X - Y\right|\right)$
+
+(2) 求 $D\left(\left|2X-Y\right|\right)$ .",,,,,"解析 本题考查运用相关系数先求解协方差,进而求解期望和方差.
+
+(1) 由于 $(X, Y) \sim N\left(1, 2; 1, 4; -\frac{1}{8}\right)$ , 根据二维正态分布的性质, 有
+
+$$
+X \sim N (1, 1), Y \sim N (2, 4), \rho_ {X Y} = - \frac {1}{8}.
+$$
+
+根据题意,有
+
+$$
+\operatorname{Cov} (X, Y) = \rho_ {X Y} \sqrt {D (X)} \sqrt {D (Y)} = - \frac {1}{8} \times \sqrt {1} \times \sqrt {4} = - \frac {1}{4}.
+$$
+
+根据期望与方差的性质
+
+$$
+E (2 X - Y) = 2 E (X) - E (Y) = 0,
+$$
+
+$$
+\begin{array}{r l} D (2 X - Y) & = D (2 X) + D (Y) - 2 \operatorname{Cov} (2 X, Y) \\ & = 4 D (X) + D (Y) - 4 \operatorname{Cov} (X, Y) = 9, \end{array}
+$$
+
+则 $2X - Y \sim N(0,9)$ , 标准化可得 $\frac{2X - Y}{3} \sim N(0,1)$ .
+
+定义 $U = \frac{2X - Y}{3}$ ，则 $E(U) = 0, D(U) = 1.$
+
+$$
+E (| 2 X - Y |) = 3 E (| U |) = 3 \int_ {- \infty} ^ {+ \infty} | u | \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {u ^ {2}}{2}} \mathrm{d} u = 6 \int_ {0} ^ {+ \infty} u \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {u ^ {2}}{2}} \mathrm{d} u = \frac {6}{\sqrt {2 \pi}}.
+$$
+
+(2) $D(|2X - Y|) = D(|3U|) = 9D(|U|) = 9\{E(U^2) - [E|U]^2\}$ .
+
+由(1)知，
+
+$$
+E \mid u \mid = \frac {2}{\sqrt {2 \pi}},
+$$
+
+则 $D(|2X - Y|) = 9\{[E(U)]^2 + D(U) - [E|U]|^2\} = 9 - \frac{18}{\pi}.$"
+jc-0132,辅导讲义,概率论,第四章 随机变量的数字特征,,9,,,题型四 协方差与相关系数的计算,"【例题 27】设随机变量 X, Y 的概率分布相同，X 的概率分布为 $P\{X=0\}=\frac{1}{3}, P\{X=1\}=\frac{2}{3}$ ，且 X 与 Y 的相关系数 $\rho_{XY}=\frac{1}{2}$ .
+
+(1) 求 $(X,Y)$ 的概率分布;
+
+（2）求 $X + Y$ 与 X - Y 的相关系数，并说明 $X + Y$ 与 X - Y 是否相互独立.",,,,,"解析 本题考查运用相关系数计算离散型随机变量的概率分布.
+
+(1) $X \sim B\left(1, \frac{2}{3}\right)$ ，则 $E(X) = \frac{2}{3}$ , $D(X) = \frac{2}{3}\left(1 - \frac{2}{3}\right) = \frac{2}{9}$ .
+
+由于 X, Y 同分布, 则 $E(X) = E(Y)$ , $D(X) = D(Y)$ .
+
+由 $\rho_{XY} = \frac{1}{2}$ ，立即写出 $\operatorname{Cov}(X,Y) = \rho_{XY}\sqrt{D(X)}\sqrt{D(Y)} = \frac{1}{9}.$
+
+由 $\operatorname{Cov}(X,Y) = E(XY) - E(X)E(Y) = \frac{1}{9}$ , 得 $E(XY) = \frac{5}{9}$ .
+
+由数学期望的定义, 得 $\sum_{(i,j)} x_{i} y_{j} p_{ij} = \frac{5}{9}$ .
+
+观察联合分布律可知，对于 $(X,Y) = (0,0)$ ， $(X,Y) = (0,1)(X,Y) = (1,0)$ ，均有 $x_{i}y_{j}p_{ij} = 0$ ，故
+
+$$
+\sum_ {(i, j)} x _ {i} y _ {j} p _ {i j} = 1 \cdot 1 \cdot P \{X = Y = 1 \} = \frac {5}{9}.
+$$
+
+则
+
+$$
+P \{X = 0, Y = 1 \} = P \{Y = 1 \} - P \{X = 1, Y = 1 \} = \frac {2}{3} - \frac {5}{9} = \frac {1}{9},
+$$
+
+$$
+P \{X = 1, Y = 0 \} = P \{X = 1 \} - P \{X = 1, Y = 1 \} = \frac {2}{3} - \frac {5}{9} = \frac {1}{9},
+$$
+
+$$
+P \{X = 0, Y = 0 \} = 1 - (P \{X = 1, Y = 1 \} + P \{X = 0, Y = 1 \} + P \{X = 1, Y = 0 \}) = \frac {2}{9}.
+$$
+
+所以 $(X, Y)$ 概率分布为
+
+<table><tr><td>X\Y</td><td>0</td><td>1</td></tr><tr><td>0</td><td><eq>\frac{2}{9}</eq></td><td><eq>\frac{1}{9}</eq></td></tr><tr><td>1</td><td><eq>\frac{1}{9}</eq></td><td><eq>\frac{5}{9}</eq></td></tr></table>
+
+(2) 由于 $(X, Y)$ 仅有 $(0, 0), (0, 1), (1, 0), (1, 1)$ 四个取值，因此
+
+$$
+P \{X + Y \leqslant 1 \} = 1 - P \{X + Y > 1 \} = 1 - P \{X = 1, Y = 1 \} = 1 - \frac {5}{9} = \frac {4}{9}.
+$$"
+jc-0133,辅导讲义,概率论,第四章 随机变量的数字特征,,10,,,题型四 协方差与相关系数的计算,"【例题28】设 $(X,Y)$ 是二维随机变量，且随机变量 $X_{1} = X + Y, X_{2} = X - Y$ ，已知 $(X_{1},X_{2})$ 的概率密度为 $f(x_{1},x_{2}) = \frac{1}{2\sqrt{3}\pi}\exp \left\{-\frac{1}{2}\left[\left(\frac{x_1 - 4}{\sqrt{3}}\right)^2 + (x_2 - 2)^2\right]\right\}$ .
+
+（1）求 $X$ 与 $Y$ 的边缘概率密度；（2）计算 $X$ 与 $Y$ 的相关系数 $\rho_{XY}$",,,,,"解析 本题考查二维正态分布条件下相关系数的计算.
+
+(1) 由题意
+
+$$
+f (x _ {1}, x _ {2}) = \frac {1}{\sqrt {2 \pi} \sqrt {3}} \mathrm{e} ^ {- \frac {(x _ {1} - 4) ^ {2}}{2 \times (\sqrt {3}) ^ {2}}} \cdot \frac {1}{\sqrt {2 \pi} \cdot 1} \mathrm{e} ^ {- \frac {(x _ {2} - 2) ^ {2}}{2 \times 1 ^ {2}}},
+$$
+
+故 $X_{1} \sim N(4,3), X_{2} \sim N(2,1)$ ，且 $X_{1}$ 与 $X_{2}$ 相互独立.
+
+又由 $X_{1} = X + Y, X_{2} = X - Y$ ，解得 $X = \frac{X_{1} + X_{2}}{2}, Y = \frac{X_{1} - X_{2}}{2}$ .
+
+显然 X, Y 均服从正态分布, 只需计算期望、方差.
+
+$$
+E (X) = \frac {E (X _ {1}) + E (X _ {2})}{2} = \frac {4 + 2}{2} = 3,
+$$
+
+$$
+D (X) = D \left(\frac {X _ {1} + X _ {2}}{2}\right) = \frac {D (X _ {1}) + D (X _ {2})}{4} = \frac {3 + 1}{4} = 1,
+$$
+
+故 $X \sim N(3,1), f_X(x) = \frac{1}{\sqrt{2\pi}} \mathrm{e}^{-\frac{(x-3)^2}{2}}, -\infty < x < +\infty.$
+
+$$
+E (Y) = E \Big (\frac {X _ {1} - X _ {2}}{2} \Big) = \frac {E (X _ {1}) - E (X _ {2})}{2} = \frac {4 - 2}{2} = 1,
+$$
+
+$$
+D (Y) = D \left(\frac {X _ {1} - X _ {2}}{2}\right) = \frac {D (X _ {1}) + D (X _ {2})}{4} = \frac {3 + 1}{4} = 1,
+$$
+
+故 $Y \sim N(1, 1), f_{Y}(y) = \frac{1}{\sqrt{2\pi}} \mathrm{e}^{-\frac{(y-1)^{2}}{2}}, -\infty < y < +\infty.$
+
+(2)
+
+$$
+\operatorname{Cov} (X, Y) = E (X Y) - E (X) E (Y).
+$$
+
+由于 X, Y 缺乏独立性, 若用上式直接计算较为烦琐, 故
+
+$$
+\begin{array}{r l} \operatorname{Cov} (X, Y) & = \operatorname{Cov} \left(\frac {X _ {1} + X _ {2}}{2}, \frac {X _ {1} - X _ {2}}{2}\right) = \frac {\operatorname{Cov} (X _ {1} + X _ {2} , X _ {1} - X _ {2})}{4} \\ & = \frac {1}{4} \left[ \operatorname{Cov} (X _ {1}, X _ {1}) + \operatorname{Cov} (X _ {2}, X _ {1}) + \operatorname{Cov} (X _ {1}, - X _ {2}) + \operatorname{Cov} (X _ {2}, - X _ {2}) \right] \\ & = \frac {D (X _ {1}) - D (X _ {2})}{4} = \frac {3 - 1}{4} = \frac {1}{2}, \end{array}
+$$
+
+故
+
+$$
+\rho_ {X Y} = \frac {\mathrm{Cov} (X , Y)}{\sqrt {D (X)} \sqrt {D (Y)}} = \frac {\frac {1}{2}}{\sqrt {1} \times \sqrt {1}} = \frac {1}{2}.
+$$"
+jc-0134,辅导讲义,概率论,第四章 随机变量的数字特征,,11,,,题型四 协方差与相关系数的计算,"【例题 29】设随机变量 $X \sim N(0,1)$ ，在 X = x 条件下，随机变量 $Y \sim N(x,1)$ ，则 X 与 Y 的相关系数为（）.",$\frac{1}{4}$,$\frac{1}{2}$,$\frac{\sqrt{3}}{3}$,$\frac{\sqrt{2}}{2}$,"答案 (D)
+解析 本题考查二维正态分布条件下相关系数的计算.
+
+先求 X, Y 的协方差 $\mathrm{Cov}(X, Y) = E(XY) - E(X)E(Y)$ .
+
+由于 $X \sim N(0,1)$ , 则 $E(X) = 0$ , 于是 $\operatorname{Cov}(X,Y) = E(XY)$ .
+
+由定义，有 $E(XY) = \int_{-\infty}^{+\infty}\mathrm{d}x\int_{-\infty}^{+\infty}xyf(x,y)\mathrm{d}y$ ，本题中 $f(x,y)$ 未知，但 $f(x,y) = f_X(x)f_{Y|X}(y|x)$ ，得
+
+$$
+E (X Y) = \int_ {- \infty} ^ {+ \infty} \mathrm{d} x \int_ {- \infty} ^ {+ \infty} x y f _ {X} (x) f _ {Y | X} (y \mid x) \mathrm{d} y.
+$$
+
+由于 $\int_{-\infty}^{+\infty} y f_{Y|X}(y \mid x) \mathrm{d}y$ 可视作 $x$ 已知, $Y \sim N(x, 1)$ 条件下 $Y$ 的数学期望, 数值上等于 $x$ , 故
+
+$$
+\int_ {- \infty} ^ {+ \infty} y f _ {Y | X} (y \mid x) \mathrm{d} y = x,
+$$
+
+于是
+
+$$
+\begin{array}{r l} E (X Y) & = \int_ {- \infty} ^ {+ \infty} x \cdot x \cdot f _ {X} (x) \mathrm{d} x \\ & = E (X ^ {2}) = [ E (X) ] ^ {2} + D (X) = 1, \end{array}
+$$
+
+即 $\mathrm{Cov}(X,Y)=1.$
+
+另一方面，
+
+$$
+\begin{array}{r l} f _ {Y} (Y) & = \int_ {- \infty} ^ {+ \infty} f (x, y) \mathrm{d} x = \int_ {- \infty} ^ {+ \infty} f _ {X} (x) f _ {Y | X} (y \mid x) \mathrm{d} x \\ & = \int_ {- \infty} ^ {+ \infty} \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {x ^ {2}}{2}} \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {(y - x) ^ {2}}{2}} \mathrm{d} x \\ & = \int_ {- \infty} ^ {+ \infty} \frac {1}{2 \pi} \mathrm{e} ^ {- (x ^ {2} - x y + \frac {y ^ {2}}{2})} \mathrm{d} x \\ & = \mathrm{e} ^ {- \frac {y ^ {2}}{4}} \cdot \frac {1}{2 \pi} \sqrt {\pi} \int_ {- \infty} ^ {+ \infty} \frac {1}{\sqrt {2 \pi} \frac {1}{\sqrt {2}}} \mathrm{e} ^ {- \frac {(x - \frac {y}{2}) ^ {2}}{2 \cdot (\frac {1}{\sqrt {2}}) ^ {2}}} \mathrm{d} x \\ & = \frac {1}{\sqrt {2 \pi} \sqrt {2}} \mathrm{e} ^ {- \frac {y ^ {2}}{2 (\sqrt {2}) ^ {2}}}, \end{array}
+$$
+
+即 $Y \sim N(0,2), D(Y) = 2$ ，于是
+
+$$
+\rho_ {X Y} = \frac {\operatorname{Cov} (X , Y)}{\sqrt {D (X)} \sqrt {D (Y)}} = \frac {1}{\sqrt {1} \times \sqrt {2}} = \frac {\sqrt {2}}{2}.
+$$
+
+【注】条件数学期望不在考试大纲之内,不需要专门学习,只需要运用调整法将非常规数字特征计算转化为常规数字特征计算即可."
+jc-0135,辅导讲义,概率论,第四章 随机变量的数字特征,,12,,,题型四 协方差与相关系数的计算,"【例题30】假设随机变量 $X$ 与 $Y$ 的方差均大于 $0, X$ 与 $Y$ 相关系数为 $\rho$ , 则 $\rho = 1$ 的充分必要条件是（）.",$Y = aX + b(a > 0)$,"$\operatorname{Cov}(X, Y) = 1, D(X) = D(Y) = 1$","$\operatorname{Cov}(X, Y) = \frac{1}{4}, \sqrt{D(X)}\sqrt{D(Y)} = \frac{1}{4}$",$D(X + Y) = \left[\sqrt{D(X)} + \sqrt{D(Y)}\right]^2$,"答案 (D)
+解析 本题考查对相关系数性质的理解.
+
+$$
+\rho = 1 \Leftrightarrow P \{Y = a X + b \} = 1, \text {且} a > 0.
+$$
+
+本题中(A)是充分非必要条件，
+
+$$
+Y = a X + b (a > 0) \Rightarrow \rho = 1,
+$$
+
+但另一方面, $\rho=1$ 无法推出X,Y之间的运算关系.
+
+(B), (C) 都不是必要条件. 因为 $\rho = 1$ 无法推出 $\operatorname{Cov}(X, Y)$ 的具体取值, 故只能选(D).
+
+(D) 选项中，
+
+$$
+D (X + Y) = D (X) + D (Y) + 2 \sqrt {D (X) D (Y)},
+$$
+
+即
+
+$$
+D (X) + D (Y) + 2 \operatorname{Cov} (X, Y) = D (X) + D (Y) + 2 \sqrt {D (X) D (Y)},
+$$
+
+故
+
+$$
+\operatorname{Cov} (X, Y) = \sqrt {D (X)} \sqrt {D (Y)} \Leftrightarrow \rho = \frac {\operatorname{Cov} (X , Y)}{\sqrt {D (X)} \sqrt {D (Y)}} = 1.
+$$
+
+【注】本题存在常见的易错点, 即 $\left|\rho\right|=1$ 只与 X,Y 的概率分布有关, 但无法得出 X,Y 之间的运算关系."
+jc-0136,辅导讲义,概率论,第四章 随机变量的数字特征,,13,,,题型四 协方差与相关系数的计算,"【例题31】设随机变量 $X \sim U(0,1), Y \sim U(1,4)$ , 且相关系数 $\rho_{XY} = 1$ , 则（）.",$P\{Y = -2X + 6\} = 1$,$P\{Y = -2X + 3\} = 1$,$P\{Y = 3X + 1\} = 1$,$P\{Y = 4X + 1\} = 1$,"答案 (C)
+解析 本题考查对相关系数性质的理解.
+
+如上题所述,可得
+
+$$
+\rho = 1 \Leftrightarrow P \{Y = a X + b \} = 1, a > 0,
+$$
+
+故首先排除(A)，(B).
+
+由 $P\{Y=aX+b\}=1$ , 可知 $\left\{\begin{aligned}E(Y)&=E(aX+b),\\ D(Y)&=D(aX+b).\end{aligned}\right.$
+
+又
+
+$$
+D (Y) = D (a X + b) = D (a X) = a ^ {2} D (X),
+$$
+
+故
+
+$$
+a ^ {2} = \frac {D (Y)}{D (X)} = \frac {\frac {(4 - 1) ^ {2}}{1 2}}{\frac {1}{1 2}} = 9 \Rightarrow a = 3 (a > 0).
+$$
+
+由 $E(Y) = E(aX + b) = aE(X) + b$ ，即 $\frac{1 + 4}{2} = a\cdot \frac{1}{2} +b$ ，代入 $a = 3$ ，解得 $b = 1$ ，故选(C)."
+jc-0137,辅导讲义,概率论,第四章 随机变量的数字特征,,14,,,题型四 协方差与相关系数的计算,"【例题 32】将一枚硬币重复掷 n 次,以 X 和 Y 分别表示正面向上和反面向上的次数,定义随机变量 $U = X + 3Y, V = 6X + Y$ , 则 U 和 V 的相关系数等于（）.",-1,0,$\frac{1}{2}$,1,"答案 (A)
+解析 本题考查对相关系数性质的理解.
+
+若用定义计算 $\rho_{UV} = \frac{\mathrm{Cov}(U,V)}{\sqrt{D(U)}\sqrt{D(V)}}$ 比较烦琐，于是考虑到 $X + Y = n$ ，则 $Y = n - X$ 则有
+
+$$
+U = X + 3 Y = X + 3 (n - X) = - 2 X + 3 n,
+$$
+
+$$
+V = 6 X + Y = 6 X + n - X = 5 X + n,
+$$
+
+$$
+V = - \frac {5}{2} (- 2 X + 3 n) + \frac {1 7}{2} n = - \frac {5}{2} U + \frac {1 7}{2} n,
+$$
+
+即 U, V 负相关，则 $\rho_{UV} = -1$ ，选(A).
+
+【注】若直接写出 V=6U-17Y，得出 U, V 正相关，则 $\rho_{UV}=1$ ，这种解法是经典错误解法，因为 -17Y 并非常数，上述结构不满足 $V=aU+b$ 形式."
+jc-0138,辅导讲义,概率论,第四章 随机变量的数字特征,,1,,,题型五 随机变量的不相关性,"【例题33】设随机变量 $X$ 与 $Y$ 相互独立,具有非零的方差, $D(X) \neq D(Y)$ ,下列命题中正确的个数是（）.
+
+① $3X + 1$ 与 $4Y - 2$ 相关; ② $X + Y$ 与 $X - Y$ 不相关;
+
+③ $X + Y$ 与 $2Y + 1$ 相互独立; ④ $\mathrm{e}^{X}$ 与 $2Y + 1$ 相互独立.",1,2,3,4,"答案 (A)
+解析 本题考查不相关性的概念.
+
+若 X 与 Y 相互独立，则随机变量 $g(X)$ ， $h(Y)$ 相互独立，故 $e^{X}$ 与 $2Y + 1$ 相互独立，④ 正确.
+
+由 $3X+1$ 与 4Y-2 独立，故 $3X+1$ 与 4Y-2 不相关，① 错误.
+
+$$
+\begin{array}{r l} \operatorname{Cov} (X + Y, X - Y) & = \operatorname{Cov} (X, X) + \operatorname{Cov} (Y, X) + \operatorname{Cov} (X, - Y) + \operatorname{Cov} (Y, - Y) \\ & = D (X) - D (Y) \neq 0, \end{array}
+$$
+
+故 $X + Y$ 与 $X - Y$ 相关，②错误.
+
+$$
+\begin{array}{r l} \operatorname{Cov} (X + Y, 2 Y + 1) & = \operatorname{Cov} (X + Y, 2 Y) + \operatorname{Cov} (X + Y, 1) \\ & = \operatorname{Cov} (X, 2 Y) + \operatorname{Cov} (Y, 2 Y) \\ & = 2 \operatorname{Cov} (X, Y) + 2 D (Y) \\ & = 2 D (Y) \neq 0, \end{array}
+$$
+
+故 $X + Y$ 与 $2Y + 1$ 相关 $\Rightarrow X + Y$ 与 $2Y + 1$ 不相互独立，③错误.
+
+综上,选(A).
+
+【注】若随机变量相关,则一定不独立."
+jc-0139,辅导讲义,概率论,第四章 随机变量的数字特征,,2,,,题型五 随机变量的不相关性,"【例题34】对于任意随机变量 $X$ 和 $Y$ ,与命题“ $X$ 和 $Y$ 不相关”不等价的是（）.",$E(XY) = E(X)E(Y)$,"$\operatorname{Cov}(X,Y) = 0$",$D(XY) = D(X)D(Y)$,$D(X + Y) = D(X) + D(Y)$,"答案 (C)
+解析 本题考查对不相关性的理解.
+
+由不相关定义知 $\rho = 0\Leftrightarrow \mathrm{Cov}(X,Y) = 0$ $\Leftrightarrow E(XY) = E(X)E(Y)$ $\Leftrightarrow D(X + Y) = D(X) + D(Y),$
+
+故(A)，(B)，(D)均符合不相关的定义，(C)无法得出."
+jc-0140,辅导讲义,概率论,第四章 随机变量的数字特征,,3,,,题型五 随机变量的不相关性,"【例题 35】假设随机变量 X 在 $(-1,1)$ 上服从均匀分布, a 是区间 $(-1,1)$ 上的一个定点, Y 为点 X 到点 a 的距离, 当 a = ____ 时, 随机变量 X 与 Y 不相关.",,,,,"答案 0
+解析 本题考查对不相关性的理解.
+
+已知 $X \sim f(x) = \begin{cases} \frac{1}{2}, & -1 \leqslant x \leqslant 1, \\ 0, & \text{其他}, \end{cases}$ 根据均匀分布的性质，可知 $E(X) = 0$ .
+
+X 与 Y 不相关 $\Leftrightarrow\mathrm{Cov}(X,Y)=E(XY)-E(X)E(Y)=0\Leftrightarrow E(XY)=0.$
+
+依题意得, $Y=|X-a|$ ,则
+
+$$
+\begin{array}{r l} E (X Y) & = E (X | X - a |) = \int_ {- 1} ^ {1} x | x - a | \cdot \frac {1}{2} \mathrm{d} x \\ & = \frac {1}{2} \left[ \int_ {- 1} ^ {a} x (a - x) \mathrm{d} x + \int_ {a} ^ {1} x (x - a) \mathrm{d} x \right] \end{array}
+$$
+
+$$
+\begin{array}{l} = \frac {1}{2} \left[ \left(\frac {a x ^ {2}}{2} - \frac {x ^ {3}}{3}\right) \Big | _ {- 1} ^ {a} + \left(\frac {x ^ {3}}{3} - \frac {a x ^ {2}}{2}\right) \Big | _ {a} ^ {1} \right] \\ = \frac {a}{6} (a ^ {2} - 3). \end{array}
+$$
+
+令 $E(XY) = \frac{a}{6} (a^2 - 3) = 0$ ，解得 $a = 0 (a = \pm \sqrt{3}$ 舍去）."
+jc-0141,辅导讲义,概率论,第四章 随机变量的数字特征,,4,,,题型五 随机变量的不相关性,"【例题36】设随机变量 $X$ 与 $Y$ 服从正态分布 $N(-1,2)$ 与 $N(1,2)$ , 并且 $X$ 与 $Y$ 不相关, $aX + Y$ 与 $X + bY$ 也不相关, 则（）.",$a - b = 1$,$a - b = 0$,$a + b = 1$,$a + b = 0$,"答案 (D)
+解析 本题考查对不相关性的理解.
+
+由 X, Y 不相关, 立即写出 $\mathrm{Cov}(X, Y) = 0$ .
+由 $aX + Y, X + bY$ 也不相关, 有 $\mathrm{Cov}(aX+Y,X+bY)$ $=\mathrm{Cov}(aX,X)+\mathrm{Cov}(Y,X)+\mathrm{Cov}(aX,bY)+\mathrm{Cov}(Y,bY)$ $=aD(X)+0+0+bD(Y)=0,$
+
+代入 $D(X)=D(Y)=2$ ，可得 $2a+2b=0$ ，即 $a+b=0$ ，选(D).
+
+【注】不相关性是数字特征范畴下的概念,解题最容易的切入点就是 $\mathrm{Cov}(X,Y)=0$ , 这是由协方差易拆分的性质决定的."
+jc-0142,辅导讲义,概率论,第四章 随机变量的数字特征,,5,,,题型五 随机变量的不相关性,"【例题37】设随机变量 $X$ 与 $Y$ 相互独立,且方差 $D(X) > 0, D(Y) > 0$ ,则（）.",$X$ 与 $X + Y$ 一定相关,$X$ 与 $X + Y$ 一定不相关,$X$ 与 $XY$ 一定相关,$X$ 与 $XY$ 一定不相关,"答案 (A)
+解析 本题考查对不相关性的理解.
+
+已知 X 与 Y 独立, 故 $\mathrm{Cov}(X,Y)=0$ ,
+
+$$
+\operatorname{Cov} (X, X + Y) = \operatorname{Cov} (X, X) + \operatorname{Cov} (X, Y) = D (X) > 0,
+$$
+
+所以 X 与 $X + Y$ 一定相关，(A) 正确，(B) 错误.
+
+又由于
+
+$$
+\begin{array}{r l} & {\operatorname{Cov} (X, X Y) = E (X ^ {2} Y) - E (X) E (X Y) = E (X ^ {2}) \bullet E (Y) - [ E (X) ] ^ {2} \bullet E (Y)} \\ & {= \{E (X ^ {2}) - [ E (X) ] ^ {2} \} E (Y) = D (X) \bullet E (Y) \left\{ \begin{array}{l l} {= 0,} & {\text {若} E (Y) = 0,} \\ {\neq 0,} & {\text {若} E (Y) \neq 0,} \end{array} \right.} \end{array}
+$$
+
+故选项(C)，(D)是否成立无法确定.
+
+【注】分析不相关性最直接的思路是列出协方差."
+jc-0143,辅导讲义,概率论,第四章 随机变量的数字特征,,1,,,题型六 随机变量的不相关性与独立性的关系,"【例题 38】设随机变量 X 与 Y 相互独立, X 服从标准正态分布, Y 的概率分布为
+
+$$
+P \{Y = 1 \} = p, P \{Y = - 1 \} = 1 - p (0 <   p <   1). \text {令} Z = X Y.
+$$
+
+(1) 求 Z 的概率密度;
+
+(2) p 为何值时, X 与 Z 不相关?
+
+(3) $X$ 与 $Z$ 是否相互独立?",,,,,"解析 本题考查不相关性与独立性之间的关系.
+
+(1) $Z = XY$ 是混合型随机变量, 用定义求解分布函数.
+
+$$
+\begin{array}{r l} F _ {Z} (z) & = P \{Z \leqslant z \} = P \{X Y \leqslant z \} \\ & = P \{Y = 1, X Y \leqslant z \} + P \{Y = - 1, X Y \leqslant z \} \\ & = P \{Y = 1, X \leqslant z \} + P \{Y = - 1 \} P \{X \geqslant - z \}. \end{array}
+$$
+
+由 X, Y 相互独立, 可知
+
+$$
+\begin{array}{r l} F _ {Z} (z) & = p \bullet P \{X \leqslant z \} + (1 - p) P \{X \geqslant - z \} \\ & = p \Phi (z) + (1 - p) [ 1 - \Phi (- z) ] \\ & = p \Phi (z) + (1 - p) \Phi (z) \\ & = \Phi (z), \end{array}
+$$
+
+故 $Z \sim N(0,1), f(z) = \frac{1}{\sqrt{2\pi}} \mathrm{e}^{-\frac{z^2}{2}}, -\infty < z < +\infty.$
+
+(2) 讨论不相关性直接计算协方差.
+
+$$
+\operatorname{Cov} (X, Z) = E (X Z) - E (X) E (Z).
+$$
+
+由于 $E(X) = 0$ ，则
+
+$$
+\operatorname{Cov} (X, Z) = E (X Z) = E (X \cdot X \cdot Y) = E \left(X ^ {2}\right) \cdot E (Y),
+$$
+
+其中
+
+$$
+E (X ^ {2}) = [ E (X) ] ^ {2} + D (X) = 1,
+$$
+
+$$
+E (Y) = 1 \cdot p + (- 1) \cdot (1 - p) = 2 p - 1,
+$$
+
+故 $\operatorname{Cov}(X,Z) = 2p - 1$ ，仅当 $p = \frac{1}{2}$ 时， $\operatorname{Cov}(X,Z) = 0,X$ 与 $Z$ 不相关
+
+(3) 虽然 $X \sim N(0,1)$ , $Z \sim N(0,1)$ , 但 $(X,Z)$ 并不服从二维正态分布.
+
+X 与 Z 不相关,无法推出独立性.
+
+由条件可知 $|Z| = |X||Y| = |X|$ ，即
+
+$$
+P \{\mid X \mid <   1, \mid Z \mid <   1 \} = P \{\mid X \mid <   1 \} > P \{\mid X \mid <   1 \} P \{\mid Z \mid <   1 \},
+$$
+
+即 $X$ 与 $Z$ 不相互独立.
+
+【注】在大多数题目中,不相关性是无法推出独立性的.若无法用定义证明两个随机变量严格相互独立,通过举反例的方法否定X,Y的独立性是最常用的解题方法."
+jc-0144,辅导讲义,概率论,第四章 随机变量的数字特征,,2,,,题型六 随机变量的不相关性与独立性的关系,"【例题39】设二维随机变量 $(X,Y)$ 的概率密度为 $f(x,y) = \frac{1}{2}\left[\varphi_1(x,y) + \varphi_2(x,y)\right]$ , 其中 $\varphi_1(x,y)$ 和 $\varphi_2(x,y)$ 都是二维正态概率密度, 且它们对应的二维随机变量的相关系数分别为 $\frac{1}{3}$ 和 $-\frac{1}{3}$ . 它们的边缘概率密度所对应的随机变量的数学期望都是 0, 方差都是 1.
+
+（1）求随机变量 X 和 Y 的密度函数 $f_{1}(x)$ 和 $f_{2}(y)$ ;
+
+(2) 求 X 和 Y 的相关系数 $\rho$ ;
+
+（3）X 与 Y 是否相互独立？请说明理由.",,,,,"解析 本题考查不相关性与独立性之间的关系.
+
+(1) 由二维正态概率密度的性质, 得
+
+$$
+\int_ {- \infty} ^ {+ \infty} \varphi_ {i} (x, y) \mathrm{d} x = \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {y ^ {2}}{2}}, \int_ {- \infty} ^ {+ \infty} \varphi_ {i} (x, y) \mathrm{d} y = \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {x ^ {2}}{2}}, i = 1, 2.
+$$
+
+另一方面， $\mathrm{Cov}_{\varphi_1}(X,Y) = \frac{1}{3} \times \sqrt{1} \times \sqrt{1} = \frac{1}{3}$ ，即 $\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} xy \varphi_1(x, y) \, \mathrm{d}x \, \mathrm{d}y = \frac{1}{3}$ .
+
+同理可知 $\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xy\varphi_2(x,y)\mathrm{d}x\mathrm{d}y = -\frac{1}{3}.$
+
+根据边缘概率密度的定义, 可知
+
+$$
+f _ {1} (x) = \int_ {- \infty} ^ {+ \infty} f (x, y) \mathrm{d} y = \frac {1}{2} \left[ \int_ {- \infty} ^ {+ \infty} \varphi_ {1} (x, y) \mathrm{d} y + \int_ {- \infty} ^ {+ \infty} \varphi_ {2} (x, y) \mathrm{d} y \right] = \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {x ^ {2}}{2}},
+$$
+
+$$
+f _ {2} (y) = \int_ {- \infty} ^ {+ \infty} f (x, y) \mathrm{d} x = \frac {1}{2} \left[ \int_ {- \infty} ^ {+ \infty} \varphi_ {1} (x, y) \mathrm{d} x + \int_ {- \infty} ^ {+ \infty} \varphi_ {2} (x, y) \mathrm{d} x \right] = \frac {1}{\sqrt {2 \pi}} \mathrm{e} ^ {- \frac {y ^ {2}}{2}},
+$$
+
+故 $E(X) = 0, E(Y) = 0, D(X) = 1, D(Y) = 1.$
+
+(2) 根据定义, 可知
+
+$$
+\begin{array}{r l} E (X Y) & = \int_ {- \infty} ^ {+ \infty} \int_ {- \infty} ^ {+ \infty} x y f (x, y) \mathrm{d} x \mathrm{d} y \\ & = \frac {1}{2} \int_ {- \infty} ^ {+ \infty} \int_ {- \infty} ^ {+ \infty} x y [ \varphi_ {1} (x, y) + \varphi_ {2} (x, y) ] \mathrm{d} x \mathrm{d} y \\ & = \frac {1}{2} \left(\frac {1}{3} - \frac {1}{3}\right) = 0, \end{array}
+$$
+
+故 $\rho = \frac{E(XY) - E(X)E(Y)}{\sqrt{D(X)}\sqrt{D(Y)}} = 0.$
+
+(3)
+
+$$
+\varphi_ {1} (x, y) = \frac {1}{2 \pi \sqrt {1 - \frac {1}{9}}} \exp \left\{- \frac {1}{2 \left(1 - \frac {1}{9}\right)} \left(x ^ {2} - \frac {2}{3} x y + y ^ {2}\right) \right\},
+$$
+
+$$
+\varphi_ {2} (x, y) = \frac {1}{2 \pi \sqrt {1 - \frac {1}{9}}} \exp \left\{- \frac {1}{2 \left(1 - \frac {1}{9}\right)} \left(x ^ {2} + \frac {2}{3} x y + y ^ {2}\right) \right\},
+$$
+
+所以 $f_{1}(x)f_{2}(y)\neq f(x,y)$ ，因此 $X,Y$ 不相互独立.
+
+【注】本题只是借用二维正态分布的概率密度的线性组合函数定义了 $(X,Y)$ 的概率密度,而并未给出 $(X,Y)$ 是二维正态分布这个条件,故此情况下不相关与不独立并不等价."
+jc-0145,辅导讲义,概率论,第四章 随机变量的数字特征,,3,,,题型六 随机变量的不相关性与独立性的关系,"【例题 40】设随机变量 $(X,Y)$ 服从二维正态分布 $N\left(0,0;1,4;-\frac{1}{2}\right)$ ，则下列随机变量中服从标准正态分布且与X相互独立的是（）.",$\frac{\sqrt{5}}{5}(X+Y)$,$\frac{\sqrt{5}}{5}(X-Y)$,$\frac{\sqrt{3}}{3}(X+Y)$,$\frac{\sqrt{3}}{3}(X-Y)$,"答案 (C)
+解析 本题考查不相关性与独立性之间的关系.
+
+若 $(X,Y)$ 服从二维正态分布，则 $(aX + bY, cX + dY)$ 也服从二维正态分布 $(ad \neq bc)$ ，此时独立性与不相关性等价.
+
+由题意知， $X\sim N(0,1),Y\sim N(0,4),\rho_{XY} = -\frac{1}{2}$ ，则
+
+$$
+\operatorname{Cov} (X, Y) = \rho_ {X Y} \sqrt {D (X)} \sqrt {D (Y)} = - \frac {1}{2} \sqrt {1 \times 4} = - 1,
+$$
+
+$$
+\operatorname{Cov} (X + Y, X) = \operatorname{Cov} (X, X) + \operatorname{Cov} (Y, X) = D (X) + \operatorname{Cov} (X, Y) = 0,
+$$
+
+故 $X + Y$ 与 $X$ 独立.
+
+另一方面，
+
+$$
+\begin{array}{c} E (X + Y) = E (X) + E (Y) = 0, \\ D (X + Y) = D (X) + D (Y) + 2 \operatorname{Cov} (X, Y) = 3, \end{array}
+$$
+
+即 $X + Y \sim N(0,3), \frac{X + Y - 0}{\sqrt{3}} \sim N(0,1)$ , (C) 符合条件, (A) 错误.
+
+由于 $\operatorname {Cov}(X - Y,X) = \operatorname {Cov}(X,X) - \operatorname {Cov}(Y,X)$ $= D(X) - \operatorname {Cov}(Y,X) = 2,$
+
+故 X-Y 与 X 不独立，(B)，(D) 均错误."
+jc-0146,辅导讲义,概率论,第四章 随机变量的数字特征,,4,,,题型六 随机变量的不相关性与独立性的关系,"【例题 41】设 $A_{1}, A_{2}$ 是两个随机事件, 随机变量 $X_{i} = \begin{cases} -1, & A_{i}, \\ 1, & \overline{A}_{i} (i = 1, 2), \end{cases}$ 已知 $X_{1}$ 与 $X_{2}$ 不相关, 则 ( ).",$X_{1}$ 与 $X_{2}$ 不一定独立,$A_{1}$ 与 $A_{2}$ 一定独立,$A_{1}$ 与 $A_{2}$ 不一定独立,$A_{1}$ 与 $A_{2}$ 一定不独立,"答案 (B)
+解析 本题考查不相关性与独立性之间的关系.
+
+直观上看 $X_{1}$ 与 $X_{2}$ 不相关想到不一定独立，此时(A)，(C)均符合，题目无答案.下面用定义严格计算.
+
+$X_{1}$ 与 $X_{2}$ 的联合分布律如下
+
+<table><tr><td><eq>X_1</eq>\<eq>X_2</eq></td><td>-1</td><td>1</td><td><eq>p_i</eq>.</td></tr><tr><td>-1</td><td><eq>P(A_1A_2)</eq></td><td><eq>P(A_1\overline{A}_2)</eq></td><td><eq>P(A_1)</eq></td></tr><tr><td>1</td><td><eq>P(\overline{A}_1A_2)</eq></td><td><eq>P(\overline{A}_1\overline{A}_2)</eq></td><td><eq>1-P(A_1)</eq></td></tr><tr><td><eq>p_{\cdot j}</eq></td><td><eq>P(A_2)</eq></td><td><eq>1-P(A_2)</eq></td><td>1</td></tr></table>
+
+$$
+\begin{array}{r l} & E (X _ {1} X _ {2}) = \sum_ {(i, j)} x _ {i} y _ {j} p _ {i j} \\ & = (- 1) ^ {2} P (A _ {1} A _ {2}) + 1 ^ {2} \bullet P (\overline {{{A}}} _ {1} \overline {{{A}}} _ {2}) + (- 1) [ P (\overline {{{A}}} _ {1} A _ {2}) + P (A _ {1} \overline {{{A}}} _ {2}) ] \\ & = P (A _ {1} A _ {2}) + P (\overline {{{A}}} _ {1}) - P (\overline {{{A}}} _ {1} A _ {2}) - P (\overline {{{A}}} _ {1} A _ {2}) - P (A _ {1} \overline {{{A}}} _ {2}) \\ & = P (A _ {1} A _ {2}) + [ 1 - P (A _ {1}) ] - 2 [ P (A _ {2}) - P (A _ {1} A _ {2}) ] - [ P (A _ {1}) - P (A _ {1} A _ {2}) ] \\ & = 1 - 2 P (A _ {1}) - 2 P (A _ {2}) + 4 P (A _ {1} A _ {2}), \end{array}\tag{①}
+$$
+
+$$
+\begin{array}{r l} E (X _ {1}) E (X _ {2}) & = \left\{(- 1) P (A _ {1}) + 1 \bullet [ 1 - P (A _ {1}) ] \right\} \left\{(- 1) P (A _ {2}) + 1 \bullet [ 1 - P (A _ {2}) ] \right\} \\ & = [ 1 - 2 P (A _ {1}) ] [ 1 - 2 P (A _ {2}) ] \\ & = 1 - 2 P (A _ {1}) - 2 P (A _ {2}) + 4 P (A _ {1}) P (A _ {2}). \end{array}\tag{②}
+$$
+
+由 $X_{1}$ 与 $X_{2}$ 不相关，得 $E(X_{1}X_{2}) - E(X_{1})E(X_{2}) = 0$ ，代入①，②得 $P(A_{1}A_{2}) = P(A_{1})P(A_{2})$ ，故 $A_{1}$ 与 $A_{2}$ 相互独立，选(B)，其余均错误.
+
+【注】随机变量 X, Y 不相关不一定独立, 这句话的意思并不是直接得出结论 X, Y 不一定独立, 而是需要进一步分析:
+
+①举反例,否定X,Y独立;
+
+②或严格证明 X, Y 独立.
+
+本题即采用了方法 ②.
+
+另外，由于 $A_{1}, A_{2}$ 相互独立，而 $X_{1}, X_{2}$ 分别是由 $A_{1}, A_{2}$ 定义的函数，则 $X_{1}$ 与 $X_{2}$ 一定独立."

@@ -1,0 +1,1094 @@
+﻿题号ID,来源,模块,章节,套卷,序号,难度,选填解,题型,题目内容,选项A,选项B,选项C,选项D,解析
+80171101,880,微积分,第七章 无穷级数,,1,基础题,选择题,,设级数 $\sum_{n=1}^{\infty} u_n$ 与 $\sum_{n=1}^{\infty} v_n$ 均发散，则（）.,$\sum_{n=1}^{\infty}(u_n + v_n)$ 必发散,$\sum_{n = 1}^{\infty}u_n\nu_n$ 必发散,$\sum_{n=1}^{\infty}\left(|u_{n}|+|v_{n}|\right)$ 必发散,$\sum_{n=1}^{\infty}\left(u_n^2 + v_n^2\right)$ 必发散,"C.
+
+解由 $\sum_{n=1}^{\infty} u_n$ 发散, 知 $\sum_{n=1}^{\infty} |u_n|$ 发散 (否则因 $\sum_{n=1}^{\infty} u_n$ 绝对收敛, 故 $\sum_{n=1}^{\infty} u_n$ 收敛, 与 $\sum_{n=1}^{\infty} u_n$ 发散矛盾). 同理, 由 $\sum_{n=1}^{\infty} v_n$ 发散, 知 $\sum_{n=1}^{\infty} |v_n|$ 发散, 于是 $\sum_{n=1}^{\infty} (|u_n| + |v_n|)$ 必发散, 选项 C 正确.
+
+对于选项A，当 $\sum_{n = 1}^{\infty}u_n$ 与 $\sum_{n = 1}^{\infty}v_{n}$ 至少有一个不是正项级数时，若 $\sum_{n = 1}^{\infty}u_n$ 与 $\sum_{n = 1}^{\infty}v_{n}$ 都发散，则 $\sum_{n = 1}^{\infty}(u_n + v_n)$ 不一定发散，如 $\sum_{n = 1}^{\infty}\frac{1}{n}$ 与 $\sum_{n = 1}^{\infty}\left(-\frac{1}{n}\right)$ 均发散，但 $\sum_{n = 1}^{\infty}\left(\frac{1}{n} -\frac{1}{n}\right) = \sum_{n = 1}^{\infty}0$ 收敛.
+
+对于选项 B, 如 $\sum_{n=1}^{\infty}\frac{1}{\sqrt{n}}$ 与 $\sum_{n=1}^{\infty}\frac{1}{n}$ 均发散, 但 $\sum_{n=1}^{\infty}\frac{1}{\sqrt{n}}\cdot\frac{1}{n}=\sum_{n=1}^{\infty}\frac{1}{n^{\frac{3}{2}}}$ 收敛.
+
+对于选项D,如 $\sum_{n=1}^{\infty}\frac{1}{n}$ 与 $\sum_{n=1}^{\infty}\left(-\frac{1}{n}\right)$ 均发散,但 $\sum_{n=1}^{\infty}\left[\frac{1}{n^2} +\left(-\frac{1}{n}\right)^2\right] = \sum_{n=1}^{\infty}\frac{2}{n^2}$ 收敛."
+80171102,880,微积分,第七章 无穷级数,,2,基础题,选择题,,下列选项中正确的是().,若 $\sum_{n=1}^{\infty}|u_n v_n|$ 收敛，则 $\sum_{n=1}^{\infty} u_n^2$ 与 $\sum_{n=1}^{\infty} v_n^2$ 都收敛,"若 $\sum_{n=1}^{\infty} u_n^2$ 和 $\sum_{n=1}^{\infty} v_n^2$ 都收敛, 则 $\sum_{n=1}^{\infty} (u_n + v_n)^2$ 收敛","若 $\sum_{n=1}^{\infty} v_n$ 收敛且 $u_n \leqslant v_n$ , 则 $\sum_{n=1}^{\infty} u_n$ 收敛",若 $\sum_{n=1}^{\infty}u_{n}$ 发散 $(u_{n}\geqslant0)$ ，则 $u_{n}\geqslant\frac{1}{n}$,"B.
+
+解 由于 $0 \leqslant (u_{n} + v_{n})^{2} = u_{n}^{2} + v_{n}^{2} + 2u_{n}v_{n} \leqslant 2(u_{n}^{2} + v_{n}^{2}),$
+
+若 $\sum_{n=1}^{\infty} u_n^2$ 和 $\sum_{n=1}^{\infty} v_n^2$ 都收敛，则 $\sum_{n=1}^{\infty} 2(u_n^2 + v_n^2)$ 收敛。由比较审敛法，知 $\sum_{n=1}^{\infty} (u_n + v_n)^2$ 收敛，选项 B 正确。对于选项 A，不一定成立。
+
+对于选项 C, 缺正项级数条件, 不一定成立.
+
+对于选项 D, 如 $\sum_{n=1}^{\infty}\frac{1}{2n}$ 发散, 但 $\frac{1}{2n}<\frac{1}{n}$ .
+
+【注】 常用不等式 $|u_{n}v_{n}|\leqslant \frac{1}{2} (u_{n}^{2} + v_{n}^{2}).$"
+80171103,880,微积分,第七章 无穷级数,,3,基础题,选择题,,下列选项中正确的是().,"若 $\sum_{n=1}^{\infty} u_n$ 与 $\sum_{n=1}^{\infty} v_n$ 都收敛, 则 $\sum_{n=1}^{\infty} u_n v_n$ 必收敛","若 $\sum_{n=1}^{\infty} u_n$ 与 $\sum_{n=1}^{\infty} v_n$ 都发散, 则 $\sum_{n=1}^{\infty} u_n v_n$ 必发散","若 $\sum_{n=1}^{\infty} u_n$ 收敛, $\sum_{n=1}^{\infty} v_n$ 发散, 则 $\sum_{n=1}^{\infty} u_n v_n$ 必发散","若 $\sum_{n=1}^{\infty} u_n$ 收敛, $\sum_{n=1}^{\infty} v_n (v_n > 0)$ 收敛, 则 $\sum_{n=1}^{\infty} |u_n v_n|$ 收敛","D.
+
+解 由 $\sum_{n=1}^{\infty} u_n$ 收敛, 知 $\lim\limits_{n \to \infty} u_n = 0$ (级数收敛的必要条件). 又
+
+$\lim\limits_ {n \to \infty} \frac {| u _ {n} v _ {n} |}{v _ {n}} = \lim\limits_ {n \to \infty} | u _ {n} | = 0,$
+
+由比较审敛法的极限形式,知 $\sum_{n=1}^{\infty}|u_{n}v_{n}|$ 收敛,选项 D 正确.
+
+对于选项 A, 取 $u_{n} = v_{n} = \frac{(-1)^{n}}{\sqrt{n}}$ , $\sum_{n=1}^{\infty} u_{n}$ 与 $\sum_{n=1}^{\infty} v_{n}$ 都(条件)收敛, 但 $\sum_{n=1}^{\infty} u_{n} v_{n} = \sum_{n=1}^{\infty} \frac{1}{n}$ 发散.
+
+对于选项B，取 $u_{n} = \frac{1}{n}, v_{n} = -\frac{1}{n}, \sum_{n=1}^{\infty} u_{n}$ 与 $\sum_{n=1}^{\infty} v_{n}$ 都发散，但 $\sum_{n=1}^{\infty} u_{n} v_{n} = -\sum_{n=1}^{\infty} \frac{1}{n^{2}}$ 收敛.
+
+对于选项C，取 $u_{n} = \frac{1}{n^{2}}, v_{n} = \frac{1}{n}, \sum_{n=1}^{\infty} u_{n}$ 收敛， $\sum_{n=1}^{\infty} v_{n}$ 发散，但 $\sum_{n=1}^{\infty} u_{n} v_{n} = \sum_{n=1}^{\infty} \frac{1}{n^{3}}$ 收敛."
+80171104,880,微积分,第七章 无穷级数,,4,基础题,选择题,,设 $\sum_{n=1}^{\infty} u_n$ 收敛，则下列级数中收敛的是（）.,$\sum_{n = 1}^{\infty}u_n^2$,$\sum_{n = 1}^{\infty}\left(u_n + u_{n + 1}\right)$,$\sum_{n=1}^{\infty} (-1)^{n-1} \frac{u_n}{n}$,$\sum_{n = 1}^{\infty}\left(u_{2n - 1} - u_{2n}\right)$,"B.
+
+解 由 $\sum_{n=1}^{\infty} u_n$ 收敛, 知 $\sum_{n=1}^{\infty} u_{n+1}$ 收敛, 根据收敛级数的运算性质, 知 $\sum_{n=1}^{\infty} (u_n + u_{n+1})$ 收敛, 选项 B 正确. 
+取 $u_n = (-1)^{n-1} \frac{1}{\sqrt{n}}$ , 由交错级数的莱布尼茨定理, 知 $\sum_{n=1}^{\infty} u_n = \sum_{n=1}^{\infty} (-1)^{n-1} \frac{1}{\sqrt{n}}$ 收敛, 但 $\sum_{n=1}^{\infty} u_n^2 = \sum_{n=1}^{\infty} \frac{1}{n}$ 发散, 故排除选项 A. 
+取 $u_n = \frac{(-1)^{n-1}}{\ln(n+1)}$ , 则 $\sum_{n=1}^{\infty} u_n$ 收敛, 但 $\sum_{n=1}^{\infty} (-1)^{n-1} \frac{u_n}{n} = \sum_{n=1}^{\infty} \frac{1}{n \ln(n+1)}$ 发散, 故排除选项 C. 
+取 $u_n = \frac{(-1)^{n-1}}{n}$ , 则 $\sum_{n=1}^{\infty} u_n$ 收敛, 但 $\sum_{n=1}^{\infty} (u_{2n-1} - u_{2n}) = \sum_{n=1}^{\infty} \left( \frac{1}{2n-1} + \frac{1}{2n} \right)$ 发散, 故排除选项 D.
+
+【注】① 当正项级数 $\sum_{n=1}^{\infty} u_n$ 收敛时，有 $\lim\limits_{n \to \infty} u_n = 0$ ，则当 $n$ 充分大时， $|u_n| = u_n < 1$ （有界），故 $u_n^2 < u_n$ ，由比较审敛法，知 $\sum_{n=1}^{\infty} u_n^2$ 收敛。
+
+② 若条件改为 $\sum_{n=1}^{\infty} (-1)^{n-1} u_n (u_n > 0)$ 收敛，则 $\sum_{n=1}^{\infty} (u_{2n-1} - u_{2n})$ 收敛（收敛级数加括号后仍收敛）.
+
+③ 若条件改为 $\sum_{n=1}^{\infty} u_n^2$ 收敛, 则 $\sum_{n=1}^{\infty} (-1)^{n-1} \frac{u_n}{n}$ 绝对收敛, 因 $\left| (-1)^{n-1} \frac{u_n}{n} \right| \leqslant \frac{1}{2} \left( u_n^2 + \frac{1}{n^2} \right)$ , 而 $\sum_{n=1}^{\infty} \frac{1}{n^2}$ 收敛, 由比较审敛法, 可知 $\sum_{n=1}^{\infty} (-1)^{n-1} \frac{u_n}{n}$ 绝对收敛."
+80171105,880,微积分,第七章 无穷级数,,5,基础题,选择题,,设 $\sum_{n=1}^{\infty} u_n (u_n > 0)$ 收敛，则下列选项中正确的是（）.,$\sum_{n=1}^{\infty} u_n^2$ 收敛,$\sum_{n = 1}^{\infty}\sqrt{u_n}$ 收敛,$\lim\limits_{n\to \infty}\frac{u_{n + 1}}{u_n} < 1$,$\lim\limits_{n\to\infty}\sqrt[n]{u_{n}}<1$,"A.
+
+解 由 $\sum_{n=1}^{\infty} u_n (u_n > 0)$ 收敛, 知 $\lim\limits_{n \to \infty} u_n = 0$ , 故当 $n$ 充分大时, $|u_n| = u_n < 1$ (有界性), 则 $u_n^2 < u_n$ , 由比较审敛法, 可知 $\sum_{n=1}^{\infty} u_n^2$ 收敛, 选项 A 正确.
+
+对于选项B，取 $u_{n} = \frac{1}{n^{2}}$ ，则 $\sum_{n = 1}^{\infty}\sqrt{u_n} = \sum_{n = 1}^{\infty}\frac{1}{n}$ 发散.
+
+选项 C 与选项 D 不正确是由于比值法和根值法的条件是充分非必要的."
+80171106,880,微积分,第七章 无穷级数,,6,基础题,选择题,,下列选项中正确的是().,若 $\sum_{n=1}^{\infty} u_n (u_n > 0)$ 收敛，则 $\lim\limits_{n \to \infty} n^2 u_n = 0$,若 $\sum_{n=1}^{\infty} u_n$ 收敛，则 $\sum_{n=1}^{\infty} (-1)^{n-1} u_n$ 必条件收敛,若 $\sum_{n=1}^{\infty} (-1)^{n-1} u_n (u_n > 0)$ 条件收敛，则 $\sum_{n=1}^{\infty} u_n$ 发散,若 $\sum_{n=1}^{\infty}\left(u_{2n-1} + u_{2n}\right)$ 收敛，则 $\sum_{n=1}^{\infty}u_n$ 必收敛,"C.
+
+解 由 $\sum_{n=1}^{\infty}(-1)^{n-1}u_{n}(u_{n}>0)$ 条件收敛, 知 $\sum_{n=1}^{\infty}|(-1)^{n-1}u_{n}|=\sum_{n=1}^{\infty}u_{n}$ 发散(否则与已知条件收敛矛盾). 对于选项 A, 由正项级数的比较审敛法的条件是充分非必要的, 知错误. 对于 $\sum_{n=1}^{\infty}u_{n}(u_{n}>0)$ , 有
+
+$\lim\limits_{n\to \infty}n^{2}u_{n} = \lim\limits_{n\to \infty}\frac{u_{n}}{\frac{1}{n^{2}}} = 0\not\equiv \sum_{n = 1}^{\infty}u_{n}$ 收敛.
+
+选项 B 显然不一定成立(缺正项级数条件). 选项 D 缺正项级数条件."
+80171107,880,微积分,第七章 无穷级数,,7,基础题,选择题,,级数 $\sum_{n=1}^{\infty} \frac{\sqrt{n+1}-\sqrt{n-1}}{n} \sin(n+k)(k$ 为常数,绝对收敛,条件收敛,发散,收敛性与 k 有关,"A.
+
+解 已知级数为任意项级数， $\left|\frac{\sqrt{n+1}-\sqrt{n-1}}{n}\sin(n+k)\right|\leqslant\frac{\sqrt{n+1}-\sqrt{n-1}}{n}$ ，而 $\frac{\sqrt{n+1}-\sqrt{n-1}}{n}=\frac{2}{n(\sqrt{n+1}+\sqrt{n-1})}=\frac{2}{n^{\frac{3}{2}}\left(\sqrt{1+\frac{1}{n}}+\sqrt{1-\frac{1}{n}}\right)}$ 故 $\frac{\sqrt{n+1}-\sqrt{n-1}}{n}\sim\frac{1}{n^{\frac{3}{2}}}(n\rightarrow\infty)$ ，而 $\sum_{n=1}^{\infty}\frac{1}{n^{\frac{3}{2}}}$ 收敛，所以原级数绝对收敛，选项A正确."
+80171108,880,微积分,第七章 无穷级数,,8,基础题,选择题,,设幂级数 $\sum_{n=1}^{\infty} a_n(x-1)^n$ 在 $x = -1$ 处条件收敛，则 $\sum_{n=1}^{\infty} a_n(\quad)$ .,发散,条件收敛,绝对收敛,无法确定敛散性,"C.
+
+解 令 $x-1=t$，当 $x=-1$ 时，有 $t=-2$。
+
+依题意， $\sum_{n = 1}^{\infty}a_n t^n$ 在 $t = -2$ 处条件收敛，故 $t = -2$ 是其收敛区间的端点，即 $\sum_{n = 1}^{\infty}a_n t^n$ 的收敛区间为 $(-2,2)$ ，故 $-2 < x - 1 < 2$ ，即 $-1 < x < 3.$
+
+$\sum_{n=1}^{\infty} a_n (x - 1)^n$ 在 $x = 2$ 时为 $\sum_{n=1}^{\infty} a_n$ ，显然 $x = 2 \in (-1,3)$ ，故 $\sum_{n=1}^{\infty} a_n$ 绝对收敛."
+80171109,880,微积分,第七章 无穷级数,,9,基础题,选择题,,"设级数 $\sum_{n=0}^{\infty} a_n x^n$ 在 $x = 2$ 处条件收敛, 则 $\sum_{n=0}^{\infty} \frac{a_n}{n+1} (x-1)^n$ 在 $x = -1$ 处 ( ).",绝对收敛,条件收敛,发散,敛散性不确定,"D.
+
+解 由 $\sum_{n=0}^{\infty} a_n x^n$ 在 $x = 2$ 处条件收敛, 知其收敛半径为 2. 又 $\sum_{n=0}^{\infty} \frac{a_n}{n+1} (x-1)^n$ 可由 $\sum_{n=0}^{\infty} a_n x^n$ 平移求积分得到, 故收敛半径不变, 仍为 2.
+
+因 $x = -1$ 位于 $\sum_{n=0}^{\infty} \frac{a_n}{n+1} (x-1)^n$ 收敛区间的端点处, 故其敛散性视具体 $\{a_n\}$ 确定.
+
+例如，若 $a_{n} = \frac{(-1)^{n}}{2^{n}\ln(n + 2)}$ ，则 $\sum_{n = 0}^{\infty}a_nx^n$ 在 $x = 2$ 处条件收敛，而 $\sum_{n = 0}^{\infty}\frac{a_n}{n + 1} (x - 1)^n$ 在 $x = -1$ 处发散.又如，若 $a_{n} = \frac{(-1)^{n}}{2^{n}(n + 1)}$ ，则 $\sum_{n = 0}^{\infty}a_nx^n$ 在 $x = 2$ 处条件收敛，而 $\sum_{n = 0}^{\infty}\frac{a_n}{n + 1} (x - 1)^n$ 在 $x = -1$ 处为 $\sum_{n = 0}^{\infty}\frac{1}{(n + 1)^2}$ ，绝对收敛.
+
+综上所述,选项 D 正确."
+80171201,880,微积分,第七章 无穷级数,,1,基础题,填空题,,设 $f(x)=\sum_{n=0}^{\infty}x^{n}$ ，则将 $F(x)=\frac{xf(x)}{1-x}$ 展开为 x 的幂级数后变为 \_\_\_\_.,,,,,"$\sum_{n=0}^{\infty} nx^{n}, |x| < 1.$
+
+解 由于 $f(x) = \sum_{n=0}^{\infty} x^n = \frac{1}{1 - x}, |x| < 1, f'(x) = \frac{1}{(1 - x)^2}$ ，故
+
+$F (x) = \frac {x f (x)}{1 - x} = \frac {x}{(1 - x) ^ {2}} = x f ^ {\prime} (x) = x \sum_ {n = 1} ^ {\infty} n x ^ {n - 1} = \sum_ {n = 0} ^ {\infty} n x ^ {n}, \quad | x | < 1.$"
+80171202,880,微积分,第七章 无穷级数,,2,基础题,填空题,,"设 $\sum_{n=0}^{\infty} a_n(x-1)^n$ 的收敛域为 $[-1,3]$ ，则 $\sum_{n=0}^{\infty} a_n x^{2n}$ 的收敛域为 \_\_\_\_.",,,,,"$\left[-\sqrt{2},\sqrt{2}\right]$ .
+
+解 由 $-1 \leqslant x \leqslant 3$ ，知 $-2 \leqslant x - 1 \leqslant 2$ ，故 $\sum_{n=0}^{\infty} a_n t^n$ 的收敛域为 $[-2, 2]$ ，令 $t = x^2$ ，于是 $\sum_{n=0}^{\infty} a_n x^{2n}$ 的收敛域为 $[- \sqrt{2}, \sqrt{2}]$ ."
+80171203,880,微积分,第七章 无穷级数,,3,基础题,填空题,,将 $f(x)=\int_{0}^{x}\mathrm{e}^{-t^{2}}dt$ 展开为 x 的幂级数后变为 \_\_\_\_.,,,,,"$f (x) = \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {x ^ {2 n + 1}}{(2 n + 1) n !}, x \in (- \infty , + \infty).$
+
+解 由 $e^{x}=1+x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\cdots+\frac{x^{n}}{n!}+\cdots,x\in(-\infty,+\infty)$ ，知
+
+$\begin{array}{r l} f (x) & = \int_ {0} ^ {x} \mathrm{e} ^ {- t ^ {2}} \mathrm{d} t = \int_ {0} ^ {x} \left[ 1 - t ^ {2} + \frac {t ^ {4}}{2 !} - \frac {t ^ {6}}{3 !} + \dots + (- 1) ^ {n} \frac {t ^ {2 n}}{n !} + \dots \right] \mathrm{d} t \\ & = \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {x ^ {2 n + 1}}{(2 n + 1) n !}, x \in (- \infty , + \infty). \end{array}$"
+80171301,880,微积分,第七章 无穷级数,,1,基础题,解答题,,"判别下列级数的敛散性:
+(I) $\sum_{n=1}^{\infty}\frac{n^{n+\frac{1}{n}}}{\left(n+\frac{1}{n}\right)^{n}};$
+
+(II) $\sum_{n=1}^{\infty} \frac{a^n}{n^p} (a > 0, p > 0)$ ;
+
+(III)$\sum_{n = 1}^{\infty}\frac{1}{\int_{0}^{n}\sqrt{1 + x^{3}}\mathrm{d}x};$
+
+(IV)$\sum_{n = 1}^{\infty}\left(a^{\frac{1}{n}} - a^{\frac{1}{n + 1}}\right)(a > 0);$
+
+(V)$\sum_{n = 1}^{\infty}\Big[\frac{1}{n} -\ln \Big(1 + \frac{1}{n}\Big)\Big];$
+
+(VI)$\sum_{n = 1}^{\infty}\left(\sqrt[n]{a} -\sqrt{1 + \frac{1}{n}}\right)(a > 0).$",,,,,"解（Ⅰ）由于 $\lim\limits_{n\to\infty}\frac{n^{n+\frac{1}{n}}}{\left(n+\frac{1}{n}\right)^n}=\lim\limits_{n\to\infty}\frac{n^n\cdot\sqrt[n]{n}}{n^n\cdot\left(1+\frac{1}{n^2}\right)^n}=1\neq0$ ，故级数发散（根据级数收敛的必要条件）.
+
+(Ⅱ) 用比值法,有
+
+$\lim\limits_ {n \rightarrow \infty} \frac {a ^ {n + 1}}{(n + 1) ^ {p}} \cdot \frac {n ^ {p}}{a ^ {n}} = a.$
+
+当 0 < a < 1 时，级数收敛；当 a > 1 时，级数发散；当 a = 1 时， $\sum_{n=1}^{\infty}\frac{1}{n^{p}}$ 为 p 级数。当 $0 < p \leqslant 1$ 时，级
+
+数发散;当 p > 1 时,级数收敛.
+
+（Ⅲ）用比较法， $\frac{1}{\int_{0}^{n}\sqrt{1+x^{3}}\mathrm{d}x}<\frac{1}{\int_{0}^{n}\sqrt{x^{3}}\mathrm{d}x}=\frac{1}{\frac{2}{5}n^{\frac{5}{2}}}$ ，而 $\sum_{n=1}^{\infty}\frac{1}{n^{\frac{5}{2}}}$ 收敛，故级数收敛.
+
+(Ⅳ) $a^{\frac{1}{n}} - a^{\frac{1}{n + 1}} = a^{\frac{1}{n + 1}}(a^{\frac{1}{n} -\frac{1}{n + 1}} - 1) = a^{\frac{1}{n + 1}}[a^{\frac{1}{n(n + 1)}} - 1] \sim \frac{\ln a}{n(n + 1)} \sim \frac{\ln a}{n^2} (n \to \infty)$ , 而 $\sum_{n=1}^{\infty} \frac{\ln a}{n^2}$ 收敛,
+
+由比较审敛法,知原级数收敛.
+
+(V) 由泰勒公式, 得
+
+$\frac {1}{n} - \ln \left(1 + \frac {1}{n}\right) = \frac {1}{n} - \left[ \frac {1}{n} - \frac {1}{2} \cdot \frac {1}{n ^ {2}} + o \left(\frac {1}{n ^ {2}}\right) \right] = \frac {1}{2 n ^ {2}} + o \left(\frac {1}{n ^ {2}}\right),$
+
+即 $\lim\limits_{n\to \infty}\frac{\frac{1}{n} - \ln\left(1 + \frac{1}{n}\right)}{\frac{1}{2n^2}} = 1$ ，由比较审敛法，知原级数收敛.
+
+【注】比较审敛法的极限形式:设有正项级数 $\sum_{n=1}^{\infty}u_{n},\sum_{n=1}^{\infty}v_{n}$ .
+
+$\lim\limits_{n\to \infty}\frac{u_n}{v_n} = l,\quad \left\{ \begin{array}{ll}0 < l < + \infty , & \sum_{n = 1}^{\infty}u_{n}\text{与}\sum_{n = 1}^{\infty}v_{n}\text{的敛散性相同},\\ l = 0, & \text{当}\sum_{n = 1}^{\infty}v_{n}\text{收敛时},\sum_{n = 1}^{\infty}u_{n}\text{也收敛},\\ l = +\infty , & \text{当}\sum_{n = 1}^{\infty}v_{n}\text{发散时},\sum_{n = 1}^{\infty}u_{n}\text{也发散}. \end{array} \right.$
+
+利用其判别级数的敛散性,关键是找同阶或等价无穷小.
+
+(VI) 由泰勒公式, 得
+
+$\begin{array}{r l} & \sqrt [ n ]{a} - \sqrt {1 + \frac {1}{n}} = \mathrm{e} ^ {\frac {\ln a}{n}} - \left(1 + \frac {1}{n}\right) ^ {\frac {1}{2}} \\ & = 1 + \frac {1}{n} \ln a + \frac {1}{2} \cdot \frac {1}{n ^ {2}} \ln^ {2} a + o \left(\frac {1}{n ^ {2}}\right) - \left[ 1 + \frac {1}{2} \cdot \frac {1}{n} + \frac {1}{2} \cdot \frac {1}{2} \cdot \left(- \frac {1}{2}\right) \cdot \frac {1}{n ^ {2}} + o \left(\frac {1}{n ^ {2}}\right) \right] \\ & = \left(\ln a - \frac {1}{2}\right) \cdot \frac {1}{n} + \frac {1}{n ^ {2}} \left(\frac {1}{2} \ln^ {2} a + \frac {1}{8}\right) + o \left(\frac {1}{n ^ {2}}\right). \end{array}$
+
+当 $\ln a - \frac{1}{2} = 0$ ，即 $a = \sqrt{\mathrm{e}}$ 时，级数收敛；当 $\ln a - \frac{1}{2}\neq 0$ ，即 $a\neq \sqrt{\mathrm{e}}$ 时，级数发散."
+80171302,880,微积分,第七章 无穷级数,,2,基础题,解答题,,"判别下列级数的敛散性, 若收敛, 则判断是条件收敛还是绝对收敛;
+(I) 设 $\sum_{n=1}^{\infty} (-1)^{n-1} a_n e^n$ 收敛，判别 $\sum_{n=1}^{\infty} a_n$ 的敛散性；
+
+(II)$\sum_{n = 1}^{\infty}(-1)^{n - 1}\frac{1}{\ln(1 + n)};$
+
+(III)$\sum_{n = 1}^{\infty}\frac{(-1)^{n}}{\sqrt{n} - \ln n};$
+
+(IV)$\sum_{n = 1}^{\infty}(-1)^{n - 1}(\sqrt[n]{3} -1).$",,,,,"解（I）由已知条件，知 $\lim\limits_{n\to\infty}(-1)^{n-1}a_ne^n=0$ ，即 $\lim\limits_{n\to\infty}a_ne^n=0$ ，故当 n 充分大时， $|a_{n}e^{n}| \leqslant M \quad (M > 0)$ ,
+
+所以 $|a_{n}| \leqslant \frac{M}{\mathrm{e}^{n}}$ ，而 $\sum_{n=1}^{\infty} \frac{M}{\mathrm{e}^{n}}$ 收敛，故 $\sum_{n=1}^{\infty} a_{n}$ 绝对收敛.
+
+(Ⅱ)
+
+$\sum_ {n = 1} ^ {\infty} \left| (- 1) ^ {n - 1} \frac {1}{\ln (1 + n)} \right| = \sum_ {n = 1} ^ {\infty} \frac {1}{\ln (1 + n)},$
+
+由于 $\frac{1}{\ln(1+n)}>\frac{1}{n}$ ，而 $\sum_{n=1}^{\infty}\frac{1}{n}$ 发散，由比较审敛法，知原级数不绝对收敛.
+
+又 $\lim\limits_{n\to \infty}\frac{1}{\ln(1 + n)} = 0,\left\{\frac{1}{\ln(1 + n)}\right\}$ 单调减少，由莱布尼茨定理，知原级数条件收敛.
+
+（Ⅲ）由于 $\frac{1}{\sqrt{n} - \ln n} \geqslant \frac{1}{\sqrt{n}}$ ，而 $\sum_{n=1}^{\infty} \frac{1}{\sqrt{n}}$ 发散，知 $\sum_{n=1}^{\infty} \frac{(-1)^n}{\sqrt{n} - \ln n}$ 不绝对收敛.
+
+令 $f(x) = \frac{1}{\sqrt{x} - \ln x}$ , 则 $\lim\limits_{x \to +\infty} f(x) = \lim\limits_{x \to +\infty} \frac{1}{\sqrt{x} - \ln x} = 0$ ,
+
+$f ^ {\prime} (x) = \frac {- \left(\frac {1}{2 \sqrt {x}} - \frac {1}{x}\right)}{(\sqrt {x} - \ln x) ^ {2}} = \frac {- (\sqrt {x} - 2)}{2 x (\sqrt {x} - \ln x) ^ {2}} < 0 (x > 4),$
+
+故 $\lim\limits_{n\to\infty}\frac{1}{\sqrt{n}-\ln n}=0$ ，且 $\left\{\frac{1}{\sqrt{n}-\ln n}\right\}(n>4)$ 单调减少，由莱布尼茨定理，知原级数条件收敛.
+
+$\sqrt [ n ]{3} - 1 = \mathrm{e} ^ {\frac {\ln 3}{n}} - 1 \sim \frac {\ln 3}{n} (n \rightarrow \infty),$
+
+而 $\sum_{n=1}^{\infty} \frac{\ln 3}{n}$ 发散, 由比较审敛法, 知 $\sum_{n=1}^{\infty} (\sqrt[n]{3} - 1)$ 发散, 即原级数不绝对收敛.
+
+又 $\lim\limits_{n\to \infty}\left(\sqrt[n]{3} -1\right) = 0$ ，且 $\{\sqrt[n]{3} -1\}$ 单调减少，由莱布尼茨定理，知原级数条件收敛."
+80171303,880,微积分,第七章 无穷级数,,3,基础题,解答题,,"求下列级数的收敛域:
+(I) $\sum_{n=1}^{\infty}\frac{(-1)^{n}x^{n}}{2^{n}\sqrt{n}};$
+
+(II)$\sum_{n = 1}^{\infty}\frac{(x - 3)^{n}}{n\cdot 3^{n}};$
+
+(III)$\sum_{n = 1}^{\infty}(-1)^{n}n^{n}x^{n};$
+
+(IV)$\sum_{n = 1}^{\infty}\frac{x^{2n - 1}}{3^{n}}.$",,,,,"解（I）利用公式 $\lim\limits_{n\to \infty}\left|\frac{a_{n + 1}}{a_n}\right| = \lim\limits_{n\to \infty}\frac{2^n\sqrt{n}}{2^{n + 1}\sqrt{n + 1}} = \frac{1}{2} = \rho$ ，故 $R = \frac{1}{\rho} = 2.$
+
+当 $x = 2$ 时， $\sum_{n = 1}^{\infty}\frac{(-1)^{n}2^{n}}{2^{n}\sqrt{n}} = \sum_{n = 1}^{\infty}\frac{(-1)^{n}}{\sqrt{n}}$ 条件收敛(根据莱布尼茨定理)；
+
+当 $x = -2$ 时， $\sum_{n=1}^{\infty} \frac{(-1)^n (-2)^n}{2^n \sqrt{n}} = \sum_{n=1}^{\infty} \frac{1}{\sqrt{n}}$ 发散，所以级数的收敛域为 $(-2, 2]$ .
+
+（Ⅱ）记 $a_{n} = \frac{1}{n3^{n}}, x - 3 = t$ ，则 $\lim\limits_{n\to \infty}\left|\frac{a_{n + 1}}{a_n}\right| = \lim\limits_{n\to \infty}\frac{n3^n}{(n + 1)3^{n + 1}} = \frac{1}{3}$ ，故级数 $\sum_{n=1}^{\infty}\frac{t^n}{n3^n}$ 的收敛半径为3.当 $|x - 3| < 3$ 时，即 $0 < x < 6$ ，级数收敛.
+
+当 $x = 0$ 时， $\sum_{n = 1}^{\infty}(-1)^{n}\frac{1}{n}$ 条件收敛；
+
+当 $x = 6$ 时， $\sum_{n = 1}^{\infty}\frac{1}{n}$ 发散，故收敛域为[0,6).
+
+（Ⅲ）因 $\lim\limits_{n\to \infty}\left|\frac{a_{n + 1}}{a_n}\right| = \lim\limits_{n\to \infty}\frac{(n + 1)^{n + 1}}{n^n} = \lim\limits_{n\to \infty}(n + 1)\left(1 + \frac{1}{n}\right)^n = +\infty ,$
+
+故 R = 0，所以级数仅在 x = 0 处收敛。
+
+（Ⅳ）级数 $\sum_{n=1}^{\infty} \frac{x^{2n-1}}{3^n}$ 只含 $x$ 的奇次幂项，简称缺项，不能直接利用公式，而用比值法，有
+
+$\lim\limits_ {n \rightarrow \infty} \left| \frac {u _ {n + 1} (x)}{u _ {n} (x)} \right| = \lim\limits_ {n \rightarrow \infty} \left| \frac {x ^ {2 (n + 1) - 1}}{3 ^ {n + 1}} \cdot \frac {3 ^ {n}}{x ^ {2 n - 1}} \right| = \frac {x ^ {2}}{3}.$
+
+当 $\frac{x^{2}}{3}<1$ ，即 $|x|<\sqrt{3}$ 时，级数收敛；
+
+当 $\frac{x^{2}}{3}>1$ ，即 $|x|>\sqrt{3}$ 时，级数发散，故收敛半径为 $R=\sqrt{3}$ .
+
+当 $x = \sqrt{3}$ 时， $\sum_{n = 1}^{\infty}\frac{1}{\sqrt{3}}$ 发散（一般项不趋于0）；
+
+当 $x = -\sqrt{3}$ 时， $\sum_{n=1}^{\infty}\frac{-1}{\sqrt{3}}$ 发散，故收敛域为 $(- \sqrt{3}, \sqrt{3})$ ."
+80171304,880,微积分,第七章 无穷级数,,4,基础题,解答题,,"求下列级数的收敛域:
+(I) $\sum_{n=1}^{\infty}\frac{x^{n^{2}}}{2^{n}}$
+
+(II) $\sum_{n=1}^{\infty} \frac{x^{2n+1}}{3^n + n^2}$ ;
+
+(III)$\sum_{n = 1}^{\infty}\left(1 + \frac{1}{n}\right)^{-n^{2}}x^{n};$
+
+(IV)$\sum_{n = 2}^{\infty}\left(\frac{1}{n\ln n} +\frac{1}{2^{n}}\right)x^{n}.$",,,,,"解（I）缺项，用比值法，有 $\lim\limits_{n\to\infty}\left|\frac{u_{n+1}(x)}{u_n(x)}\right|=\lim\limits_{n\to\infty}\left|\frac{x^{(n+1)^2}}{2^{n+1}}\cdot\frac{2^n}{x^{n^2}}\right|=\lim\limits_{n\to\infty}\frac{|x|^{2n+1}}{2}.$
+
+当 $|x| < 1$ 时， $\lim\limits_{n \to \infty} \frac{|x|^{2n+1}}{2} = 0 < 1$ ，级数收敛；
+
+当 $|x| > 1$ 时， $\lim\limits_{n\to \infty}\frac{|x|^{2n + 1}}{2} = +\infty$ ，级数发散；
+
+当 $|x| = 1$ 时， $\lim\limits_{n\to \infty}\frac{|x|^{2n + 1}}{2} = \frac{1}{2} < 1$ ，级数收敛，故收敛域为[-1,1].
+
+(Ⅱ) 缺项, 用比值法, 有
+
+$\begin{array}{r l} & {\underset {n \to \infty} {\lim} \left| \frac {u _ {n + 1} (x)}{u _ {n} (x)} \right| = \underset {n \to \infty} {\lim} \left| \frac {x ^ {2 (n + 1) + 1}}{3 ^ {n + 1} + (n + 1) ^ {2}} \cdot \frac {3 ^ {n} + n ^ {2}}{x ^ {2 n + 1}} \right|} \\ & {\qquad = \underset {n \to \infty} {\lim} \frac {3 ^ {n} + n ^ {2}}{3 ^ {n + 1} + (n + 1) ^ {2}} \cdot x ^ {2} = \underset {n \to \infty} {\lim} \frac {1 + \frac {n ^ {2}}{3 ^ {n}}}{1 + \frac {(n + 1) ^ {2}}{3 ^ {n + 1}}} \cdot \frac {x ^ {2}}{3} = \frac {x ^ {2}}{3}.} \end{array}$
+
+当 $\frac{x^{2}}{3}<1$ ，即 $-\sqrt{3} 时，级数收敛.$
+
+当 $x = \sqrt{3}$ 时，级数为 $\sum_{n=1}^{\infty} \frac{3^n \cdot \sqrt{3}}{3^n + n^2}$ ，由于
+
+$\lim\limits_ {n \to \infty} \frac {3 ^ {n} \cdot \sqrt {3}}{3 ^ {n} + n ^ {2}} = \lim\limits_ {n \to \infty} \frac {\sqrt {3}}{1 + \frac {n ^ {2}}{3 ^ {n}}} = \sqrt {3} \neq 0,$
+
+故级数发散.
+
+同理, 当 $x = -\sqrt{3}$ 时, 级数发散, 所以收敛域为 $(- \sqrt{3}, \sqrt{3})$ .
+
+（Ⅲ）不缺项，用公式，有 $\lim\limits_{n\to \infty}\sqrt[n]{|a_n|} = \lim\limits_{n\to \infty}\left(1 + \frac{1}{n}\right)^{-n} = \mathrm{e}^{-1}$ ，收敛半径 $R = \mathrm{e}$
+
+当 $x = \mathrm{e}$ 时，级数为 $\sum_{n=1}^{\infty}\left(1 + \frac{1}{n}\right)^{-n^2}\cdot \mathrm{e}^n$ ，记 $b_{n} = \left(1 + \frac{1}{n}\right)^{-n^{2}}\mathrm{e}^{n} = \left[\frac{\mathrm{e}}{\left(1 + \frac{1}{n}\right)^{n}}\right]^{n}$ ，由于 $\left(1 + \frac{1}{n}\right)^{n} < \mathrm{e},$ 故 $b_{n} > 1$ ，即 $\lim\limits_{n\to \infty}b_n\neq 0$ ，所以级数发散.
+
+同理，x = -e 也是发散点，故收敛域为 $(-e, e)$ .
+
+(IV)
+
+$\sum_ {n = 2} ^ {\infty} \left(\frac {1}{n \ln n} + \frac {1}{2 ^ {n}}\right) x ^ {n} = \sum_ {n = 2} ^ {\infty} \frac {x ^ {n}}{n \ln n} + \sum_ {n = 2} ^ {\infty} \frac {x ^ {n}}{2 ^ {n}}.$
+
+对 $\sum_{n=2}^{\infty} \frac{x^n}{n \ln n}$ , 用公式, 有 $\lim\limits_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = \lim\limits_{n \to \infty} \frac{n \ln n}{(n+1) \ln(n+1)} = 1$ , 收敛半径 $R_1 = 1$ .
+
+当 $x = 1$ 时， $\sum_{n=2}^{\infty}\frac{1}{n\ln n}$ 发散；
+
+当 $x = -1$ 时， $\sum_{n=2}^{\infty} \frac{(-1)^n}{n \ln n}$ 是交错级数，且 $\lim\limits_{n \to \infty} \frac{1}{n \ln n} = 0, \left\{\frac{1}{n \ln n}\right\} (n \geqslant 2)$ 单调减少，故收敛，所以收敛域为 $[-1, 1)$ .
+
+对 $\sum_{n=2}^{\infty} \frac{x^n}{2^n}$ , 有 $\lim\limits_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = \frac{1}{2}$ , 收敛半径 $R_2 = 2$ . 当 $x = \pm 2$ 时, 级数发散, 收敛域为 $(-2, 2)$ .
+
+综上所述,所求级数收敛域为 $[-1,1)$ .
+
+【注】① $\sum_{n=2}^{\infty} \frac{1}{n \ln n}$ 用积分判别法: 由于 $\int_{2}^{+\infty} \frac{\mathrm{d}x}{x \ln x} = \ln (\ln x) \bigg|_{2}^{+\infty} = +\infty$ ，反常积分发散，故级数 $\sum_{n=2}^{\infty} \frac{1}{n \ln n}$ 发散.
+
+② 设级数 $\sum_{n=0}^{\infty} a_n x^n$ 与 $\sum_{n=0}^{\infty} b_n x^n$ 的收敛半径分别为 $R_1$ 和 $R_2$ , 则当 $R_1 \neq R_2$ 时, $\sum_{n=0}^{\infty} (a_n + b_n) x^n$ 的收敛半径 $R = \min \{R_1, R_2\}$ ."
+80171305,880,微积分,第七章 无穷级数,,5,基础题,解答题,,"求下列幂级数的收敛域及和函数:
+(I) $\sum_{n=1}^{\infty}\frac{x^{n-1}}{n2^{n}};$
+
+(II)$\sum_{n = 0}^{\infty}\frac{(n - 1)^{2}}{n + 1} x^{n};$
+
+(III) $\sum_{n=0}^{\infty}\frac{n^{2}+1}{n!}x^{n};$
+
+(IV)$\sum_{n = 0}^{\infty}\frac{(-1)^{n}(n + 1)}{(2n + 3)!} x^{2n}.$",,,,,"解（I）易求得 $\sum_{n=1}^{\infty}\frac{x^{n-1}}{n2^{n}}$ 的收敛半径 R = 2，收敛域为 $[-2, 2)$ .
+
+令 $S(x) = \sum_{n=1}^{\infty} \frac{x^{n-1}}{n2^n}$ , 则 $xS(x) = \sum_{n=1}^{\infty} \frac{x^n}{n2^n}$ ,
+
+$\begin{array}{r l} {[ x S (x) ] ^ {\prime}} & {= \left[ \sum_ {n = 1} ^ {\infty} \frac {1}{n} \Big (\frac {x}{2} \Big) ^ {n} \right] ^ {\prime} = \sum_ {n = 1} ^ {\infty} \left[ \frac {1}{n} \Big (\frac {x}{2} \Big) ^ {n} \right] ^ {\prime}} \\ & {= \frac {1}{2} \sum_ {n = 1} ^ {\infty} \Big (\frac {x}{2} \Big) ^ {n - 1} = \frac {1}{2} \cdot \frac {1}{1 - \frac {x}{2}} = \frac {1}{2 - x},} \end{array}$
+
+两边同时积分，得 $xS(x) - 0S(0) = \int_0^x\frac{\mathrm{d}t}{2 - t} = -\ln (2 - x) + \ln 2.$
+
+当 $x \neq 0$ 时， $S(x) = -\frac{1}{x} \ln \left(1 - \frac{x}{2}\right)$ ;
+
+当 x = 0 时, $S(0) = \frac{1}{2}$ .
+
+故
+
+$S (x) = \left\{ \begin{array}{l l} - \frac {1}{x} \ln \left(1 - \frac {x}{2}\right), & - 2 \leqslant x < 0, 0 < x < 2, \\ \frac {1}{2}, & x = 0. \end{array} \right.$
+
+(Ⅱ) 先求收敛半径, 用公式, 有
+
+$\lim\limits_ {n \rightarrow \infty} \left| \frac {a _ {n + 1}}{a _ {n}} \right| = \lim\limits_ {n \rightarrow \infty} \frac {(n + 1 - 1) ^ {2}}{n + 1 + 1} \cdot \frac {n + 1}{(n - 1) ^ {2}} = 1,$
+
+故收敛半径 R = 1，当 $x = \pm 1$ 时，由于一般式不趋于零，所以发散，故收敛域为 $(-1, 1)$ .
+
+令
+
+$\begin{array}{r l} S (x) & = \sum_ {n = 0} ^ {\infty} \frac {(n - 1) ^ {2}}{n + 1} x ^ {n} = \sum_ {n = 0} ^ {\infty} \frac {(n + 1 - 2) ^ {2}}{n + 1} x ^ {n} \\ & = \sum_ {n = 0} ^ {\infty} (n + 1) x ^ {n} - 4 \sum_ {n = 0} ^ {\infty} x ^ {n} + 4 \sum_ {n = 0} ^ {\infty} \frac {x ^ {n}}{n + 1}, \end{array}$
+
+记
+
+$S _ {1} (x) = \sum_ {n = 0} ^ {\infty} (n + 1) x ^ {n}, \quad S _ {2} (x) = 4 \sum_ {n = 0} ^ {\infty} x ^ {n}, \quad S _ {3} = 4 \sum_ {n = 0} ^ {\infty} \frac {x ^ {n}}{n + 1},$
+
+$S _ {1} (x) = \sum_ {n = 0} ^ {\infty} (x ^ {n + 1}) ^ {\prime} = \left(\sum_ {n = 0} ^ {\infty} x ^ {n + 1}\right) ^ {\prime} = \left(\frac {x}{1 - x}\right) ^ {\prime} = \frac {1}{(1 - x) ^ {2}}, \quad | x | < 1,$
+
+$S _ {2} (x) = 4 \sum_ {n = 0} ^ {\infty} x ^ {n} = \frac {4}{1 - x}, \quad | x | < 1,$
+
+$x S _ {3} (x) = 4 \sum_ {n = 0} ^ {\infty} \frac {x ^ {n + 1}}{n + 1},$
+
+则 $[xS_3(x)]' = 4\sum_{n=0}^{\infty} x^n = \frac{4}{1 - x}$ , 积分得 $xS_3(x) - 0 = -4\ln (1 - x)(-1 < x < 1)$ , 故
+
+$\begin{array}{r l} S (x) & = S _ {1} (x) - S _ {2} (x) + S _ {3} (x) = \frac {1}{(1 - x) ^ {2}} - \frac {4}{1 - x} - \frac {4}{x} \mathrm{ln} (1 - x) \\ & = \frac {4 x - 3}{(1 - x) ^ {2}} - \frac {4}{x} \mathrm{ln} (1 - x) \quad (| x | < 1 \text {且} x \neq 0). \end{array}$
+
+当 x = 0 时, $S(0) = 1$ .
+
+（Ⅲ）由 $\lim\limits_{n\to \infty}\left|\frac{a_{n + 1}}{a_n}\right| = 0$ ，知收敛半径 $R = +\infty$ ，故收敛域为 $(- \infty , + \infty)$
+
+令 $S(x) = \sum_{n=0}^{\infty} \frac{n^2 + 1}{n!} x^n$ ，则
+
+$S (x) = \sum_ {n = 0} ^ {\infty} \frac {n ^ {2}}{n !} x ^ {n} + \sum_ {n = 0} ^ {\infty} \frac {x ^ {n}}{n !} = \sum_ {n = 1} ^ {\infty} \frac {n}{(n - 1) !} x ^ {n} + \mathrm{e} ^ {x}$
+
+$\begin{array}{l} = \sum_ {n = 1} ^ {\infty} \frac {n - 1 + 1}{(n - 1) !} x ^ {n} + \mathrm{e} ^ {x} \\ = \sum_ {n = 2} ^ {\infty} \frac {x ^ {n}}{(n - 2) !} + \sum_ {n = 1} ^ {\infty} \frac {x ^ {n}}{(n - 1) !} + \mathrm{e} ^ {x} \\ = x ^ {2} \sum_ {n = 2} ^ {\infty} \frac {x ^ {n - 2}}{(n - 2) !} + x \sum_ {n = 1} ^ {\infty} \frac {x ^ {n - 1}}{(n - 1) !} + \mathrm{e} ^ {x} \\ = x ^ {2} \mathrm{e} ^ {x} + x \mathrm{e} ^ {x} + \mathrm{e} ^ {x}, x \in (- \infty , + \infty). \end{array}$
+
+【注】 $\sum_{n = 0}^{\infty}\frac{x^n}{n!} = \mathrm{e}^x,x\in (-\infty , + \infty).$
+
+（IV）级数 $\sum_{n=0}^{\infty} \frac{(-1)^n (n+1)}{(2n+3)!} x^{2n}$ ，缺项，用比值法，有
+
+$\begin{array}{r l} & {\underset {n \to \infty} {\lim} \left| \frac {u _ {n + 1} (x)}{u _ {n} (x)} \right| = \underset {n \to \infty} {\lim} \left| \frac {(- 1) ^ {n + 1} (n + 2) x ^ {2 (n + 1)}}{\left[ 2 (n + 1) + 3 \right] !} \cdot \frac {(2 n + 3) !}{(- 1) ^ {n} (n + 1) x ^ {2 n}} \right|} \\ & {\qquad = \underset {n \to \infty} {\lim} \frac {x ^ {2}}{2 (n + 1) (2 n + 5)} = 0 (\text {对任意} x),} \end{array}$
+
+故收敛域为 $(-∞,+∞)$ .
+
+考虑到分母为 $(2n+3)!$ ，用 $\sin x$ 的展开式，得
+
+$\sin x = \sum_ {n = 0} ^ {\infty} \frac {(- 1) ^ {n}}{(2 n + 1) !} x ^ {2 n + 1} = x - \sum_ {n = 0} ^ {\infty} \frac {(- 1) ^ {n}}{(2 n + 3) !} x ^ {2 n + 3},$
+
+故 $\sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+3)!} x^{2n+3} = x - \sin x$ ，即
+
+$\sum_ {n = 0} ^ {\infty} \frac {(- 1) ^ {n}}{(2 n + 3) !} x ^ {2 n + 2} = 1 - \frac {\sin x}{x} (x \neq 0),$
+
+上式两边同时对 $x$ 求导，得 $\sum_{n=0}^{\infty} \frac{2(n+1)(-1)^n}{(2n+3)!} x^{2n+1} = -\frac{1}{x^2} (x \cos x - \sin x)$ ，故
+
+$S (x) = \sum_ {n = 0} ^ {\infty} \frac {(- 1) ^ {n} (n + 1)}{(2 n + 3) !} x ^ {2 n} = \frac {1}{2 x ^ {3}} (\sin x - x \cos x) \quad (x \neq 0),$
+
+当 x = 0 时, $S(0) = \frac{1}{6}$ , 所以
+
+$S (x) = \left\{ \begin{array}{l l} \frac {1}{2 x ^ {3}} (\sin x - x \cos x), & x \neq 0, \\ \frac {1}{6}, & x = 0. \end{array} \right.$"
+80171306,880,微积分,第七章 无穷级数,,6,基础题,解答题,,"将下列函数展开为 x 的幂级数，并确定收敛域:
+(I)$f_{1}(x) = \frac{1}{x^{2} - 3x + 2};$
+
+(II)$f_{2}(x)=\ln(1-x-2x^{2});$
+
+(III)$f_{3}(x) = \ln (x + \sqrt{1 + x^{2}});$
+
+(IV)$f_{4}(x) = x\arctan x - \ln \sqrt{1 + x^{2}}.$",,,,,"$f _ {1} (x) = \frac {1}{x ^ {2} - 3 x + 2} = \frac {1}{(1 - x) (2 - x)} = \frac {1}{1 - x} - \frac {1}{2 - x},$
+
+由于 $\frac{1}{1 - x} = \sum_{n=0}^{\infty} x^n, |x| < 1$ , 则
+
+$\frac {1}{2 - x} = \frac {1}{2} \cdot \frac {1}{1 - \frac {x}{2}} = \frac {1}{2} \sum_ {n = 0} ^ {\infty} \left(\frac {x}{2}\right) ^ {n} = \sum_ {n = 0} ^ {\infty} \frac {x ^ {n}}{2 ^ {n + 1}}, \quad | x | < 2,$
+
+所以
+
+$f _ {1} (x) = \frac {1}{1 - x} - \frac {1}{2 - x} = \sum_ {n = 0} ^ {\infty} \left(1 - \frac {1}{2 ^ {n + 1}}\right) x ^ {n}, \quad x \in (- 1, 1).$
+
+（Ⅱ）由于 $\ln (1 - x - 2x^2) = \ln [(1 - 2x)(1 + x)] = \ln (1 + x) + \ln (1 - 2x)$ ，且
+
+$\ln (1 + x) = \sum_ {n = 1} ^ {\infty} (- 1) ^ {n + 1} \frac {x ^ {n}}{n}, \quad (- 1 < x \leqslant 1),$
+
+$\ln (1 - 2 x) = \sum_ {n = 1} ^ {\infty} (- 1) ^ {n + 1} \frac {(- 2 x) ^ {n}}{n} = - \sum_ {n = 1} ^ {\infty} \frac {2 ^ {n} x ^ {n}}{n} \left(- \frac {1}{2} \leqslant x < \frac {1}{2}\right),$
+
+故
+
+$f _ {2} (x) = \ln (1 - x - 2 x ^ {2}) = \sum_ {n = 1} ^ {\infty} \frac {(- 1) ^ {n + 1} - 2 ^ {n}}{n} x ^ {n}, \quad x \in \left[ - \frac {1}{2}, \frac {1}{2}\right).$
+
+(Ⅲ) 由 $f_{3}(x) = \ln (x + \sqrt{1 + x^{2}})$ ，得 $f_{3}'(x) = \frac{1 + \frac{2x}{2\sqrt{1 + x^{2}}}}{x + \sqrt{1 + x^{2}}} = \frac{1}{\sqrt{1 + x^{2}}}$ ，而
+
+$\frac {1}{\sqrt {1 + x ^ {2}}} = 1 - \frac {1}{2} x ^ {2} + \frac {1 \times 3}{2 \times 4} x ^ {4} - \frac {1 \times 3 \times 5}{2 \times 4 \times 6} x ^ {6} + \dots (- 1 \leqslant x \leqslant 1),$
+
+故
+
+$\begin{array}{r l} \ln (x + \sqrt {1 + x ^ {2}}) & = \int_ {0} ^ {x} f _ {3} ^ {\prime} (t) \mathrm{d} t + f _ {3} (0) \\ & = x - \frac {1}{2 \times 3} x ^ {3} + \frac {1 \times 3}{2 \times 4 \times 5} x ^ {5} - \frac {1 \times 3 \times 5}{2 \times 4 \times 6 \times 7} x ^ {7} + \dots \\ & = x + \sum_ {n = 1} ^ {\infty} (- 1) ^ {n} \frac {(2 n - 1) ! !}{n ! 2 ^ {n} (2 n + 1)} x ^ {2 n + 1}, \quad | x | \leqslant 1. \end{array}$
+
+【注】由 $f_{3}(x) - f_{3}(0) = \int_{0}^{x}f_{3}^{\prime}(t)\mathrm{d}t$ ，其中 $f_{3}(0) = 0$ ，知 $f_{3}(x) = f_{3}(0) + \int_{0}^{x}f_{3}^{\prime}(t)\mathrm{d}t.$
+
+(Ⅳ) 由于 $f_{4}(x) = x \arctan x - \ln \sqrt{1 + x^{2}} = \int_{0}^{x} \arctan t \, \mathrm{d}t$ ，而
+
+$\arctan t = t - \frac {1}{3} t ^ {3} + \frac {1}{5} t ^ {5} - \frac {1}{7} t ^ {7} + \dots + \frac {(- 1) ^ {n}}{2 n + 1} t ^ {2 n + 1} + \dots , \quad | t | \leqslant 1,$
+
+故
+
+$\begin{array}{r l} f _ {4} (x) & = \frac {1}{2} x ^ {2} - \frac {1}{3 \times 4} x ^ {4} + \frac {1}{5 \times 6} x ^ {6} - \frac {1}{7 \times 8} x ^ {8} + \dots + \\ & \frac {(- 1) ^ {n}}{(2 n + 1) (2 n + 2)} x ^ {2 n + 2} + \dots , \quad | x | \leqslant 1. \end{array}$
+
+【注】此题也可分别将 $x \arctan x$ 和 $\ln \sqrt{1 + x^{2}}$ 展开为 x 的幂级数，有
+
+$\ln \sqrt {1 + x ^ {2}} = \frac {1}{2} \ln (1 + x ^ {2}) = \frac {1}{2} \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {x ^ {2 n + 2}}{n + 1} = \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {x ^ {2 n + 2}}{2 n + 2}, \quad | x | \leqslant 1,$
+
+$(\arctan x) ^ {\prime} = \frac {1}{1 + x ^ {2}} = \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} x ^ {2 n},$
+
+积分得
+
+$\int_ {0} ^ {x} (\arctan t) ^ {\prime} \mathrm{d} t = \arctan x - \arctan 0 = \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {x ^ {2 n + 1}}{2 n + 1},$
+
+故 $x\arctan x = \sum_{n = 0}^{\infty}(-1)^{n}\frac{x^{2n + 2}}{2n + 1},|x|\leqslant 1,$ 所以
+
+$\begin{array}{r l} x \arctan x - \ln \sqrt {1 + x ^ {2}} & = \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {x ^ {2 n + 2}}{2 n + 1} - \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {x ^ {2 n + 2}}{2 n + 2} \\ & = \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \left(\frac {1}{2 n + 1} - \frac {1}{2 n + 2}\right) x ^ {2 n + 2} \\ & = \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {x ^ {2 n + 2}}{(2 n + 1) (2 n + 2)}, \quad | x | \leqslant 1. \end{array}$"
+80171307,880,微积分,第七章 无穷级数,,7,基础题,解答题,,"设函数 $f(x)$ 满足 $f(x) = \frac{1}{(1 + x)^2} - 2\int_{0}^{\frac{1}{2}} f(x) \, \mathrm{d}x$ ，请将 $f(x)$ 展开成 $x$ 的幂级数.",,,,,"解 记 $A = \int_{0}^{\frac{1}{2}} f(x) \mathrm{d}x$ ，对 $f(x) = \frac{1}{(1 + x)^2} - 2\int_{0}^{\frac{1}{2}} f(x) \mathrm{d}x$ 两端从 0 到 $\frac{1}{2}$ 积分，得
+
+$A = \int_ {0} ^ {\frac {1}{2}} \frac {\mathrm{d} x}{(1 + x) ^ {2}} - 2 \int_ {0} ^ {\frac {1}{2}} A \mathrm{d} x = - \frac {1}{1 + x} \Bigg | _ {0} ^ {\frac {1}{2}} - 2 \times \frac {1}{2} A = \frac {1}{3} - A,$
+
+故 $A = \frac{1}{6}$ , 从而 $f(x) = \frac{1}{(1 + x)^2} - \frac{1}{3}$ .
+
+又
+
+$\begin{array}{r l} \frac {1}{(1 + x) ^ {2}} & = \left(- \frac {1}{1 + x}\right) ^ {\prime} = \left[ - \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} x ^ {n} \right] ^ {\prime} = \left[ \sum_ {n = 0} ^ {\infty} (- 1) ^ {n + 1} x ^ {n} \right] ^ {\prime} \\ & = \sum_ {n = 1} ^ {\infty} (- 1) ^ {n + 1} n x ^ {n - 1}, \quad | x | < 1, \end{array}$
+
+故 $f(x) = -\frac{1}{3} + \sum_{n=1}^{\infty} (-1)^{n+1} nx^{n-1}$ .
+
+当 $x = \pm 1$ 时，级数一般项不趋于零，故均发散，所以收敛域为 $(-1, 1)$ ."
+80171308,880,微积分,第七章 无穷级数,,8,基础题,解答题,,将 $f(x)=\frac{x}{x^{2}-5x+6}$ 展开为 x-5 的幂级数.,,,,,"解
+
+$\begin{array}{r l} f (x) & = \frac {x}{x ^ {2} - 5 x + 6} = \frac {3}{x - 3} - \frac {2}{x - 2} \\ & = \frac {3}{2 + (x - 5)} - \frac {2}{3 + (x - 5)} \\ & = \frac {3}{2} \frac {1}{1 + \frac {1}{2} (x - 5)} - \frac {2}{3} \frac {1}{1 + \frac {1}{3} (x - 5)} \\ & = \frac {3}{2} \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \left(\frac {x - 5}{2}\right) ^ {n} - \frac {2}{3} \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \left(\frac {x - 5}{3}\right) ^ {n} \\ & = \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \left(\frac {3}{2 ^ {n + 1}} - \frac {2}{3 ^ {n + 1}}\right) (x - 5) ^ {n}, \end{array}$
+
+收敛域取 $-1 < \frac{x - 5}{2} < 1$ 与 $-1 < \frac{x - 5}{3} < 1$ 的交集，即 $3 < x < 7$ ."
+80171309,880,微积分,第七章 无穷级数,,9,基础题,解答题,,将 $f(x) = \sin \frac{\pi}{2} x$ 在 $x = -2$ 处进行幂级数展开.,,,,,"解
+
+$\begin{array}{r l} f (x) & = \sin \frac {\pi}{2} x = \sin \frac {\pi}{2} (x + 2 - 2) \\ & = - \sin \left[ \pi - \frac {\pi}{2} (x + 2) \right] = - \sin \frac {\pi}{2} (x + 2) \\ & = - \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {1}{(2 n + 1) !} \left[ \frac {\pi}{2} (x + 2) \right] ^ {2 n + 1} \\ & = \sum_ {n = 0} ^ {\infty} \frac {(- 1) ^ {n + 1}}{(2 n + 1) !} \left(\frac {\pi}{2}\right) ^ {2 n + 1} (x + 2) ^ {2 n + 1} (- \infty < x < + \infty). \end{array}$
+
+【注】将函数 $f(x)$ 展开为幂级数, 常用两种方法:
+
+① 直接法: 先求泰勒系数 $a_{n} = \frac{f^{(n)}(x_{0})}{n!}$ ，再证明余项 $R_{n}(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x - x_{0})^{n+1}$ 的极限为 $\lim\limits_{n\to\infty}R_{n}(x)=0$ ，则
+
+$f (x) = f \left(x _ {0}\right) + \frac {f ^ {\prime} \left(x _ {0}\right)}{1 !} \left(x - x _ {0}\right) + \dots + \frac {f ^ {(n)} \left(x _ {0}\right)}{n !} \left(x - x _ {0}\right) ^ {n} + \dots , \quad x \in (a, b),$
+
+其中 $(a,b)$ 为级数的收敛域.
+
+② 间接法: 利用函数展开为幂级数的唯一性和常用函数的幂级数, 借助于幂级数的四则运算、逐项求导、逐项积分和变量代换等方法, 求得函数的幂级数展开式.
+
+一般简单函数采用直接法."
+80171310,880,微积分,第七章 无穷级数,,10,基础题,解答题,,"求下列级数的和:
+
+(I) $\sum_{n=2}^{\infty}\frac{1}{(n^{2}-1)2^{n}}$ ;
+
+(II) $\sum_{n=0}^{\infty}\frac{2n+1}{n!}$ .",,,,,"解（Ⅰ）所求级数的和为幂级数 $\sum_{n=2}^{\infty}\frac{x^{n}}{n^{2}-1}$ 的和函数 $S(x)$ 在 $x=\frac{1}{2}$ 处的值.
+
+令 $S(x) = \sum_{n=2}^{\infty} \frac{x^n}{n^2 - 1} (|x| < 1)$ , 则
+
+$S (x) = \sum_ {n = 2} ^ {\infty} \frac {1}{2} \left(\frac {1}{n - 1} - \frac {1}{n + 1}\right) x ^ {n} = \frac {1}{2} x \left(\sum_ {n = 2} ^ {\infty} \frac {x ^ {n - 1}}{n - 1} - \frac {1}{x} \sum_ {n = 2} ^ {\infty} \frac {x ^ {n}}{n + 1}\right) \quad (x \neq 0),$
+
+而
+
+$\sum_ {n = 2} ^ {\infty} \frac {x ^ {n - 1}}{n - 1} = \sum_ {n = 1} ^ {\infty} \frac {x ^ {n}}{n}, \quad \frac {1}{x ^ {2}} \sum_ {n = 2} ^ {\infty} \frac {x ^ {n + 1}}{n + 1} = \frac {1}{x ^ {2}} \sum_ {n = 3} ^ {\infty} \frac {x ^ {n}}{n} (x \neq 0),$
+
+令 $g(x) = \sum_{n=1}^{\infty} \frac{x^n}{n}$ , 则 $g'(x) = \sum_{n=1}^{\infty} x^{n-1} = \frac{1}{1-x}, |x| < 1$ , 故
+
+$g (x) = g (x) - g (0) = \int_ {0} ^ {x} g ^ {\prime} (t) \mathrm{d} t = \int_ {0} ^ {x} \frac {\mathrm{d} t}{1 - t} = - \ln (1 - x),$
+
+从而
+
+$\begin{array}{r l} S (x) & = \frac {x}{2} \left\{- \ln (1 - x) - \frac {1}{x ^ {2}} \left[ - \ln (1 - x) - x - \frac {x ^ {2}}{2} \right] \right\} \\ & = \frac {2 + x}{4} + \frac {1 - x ^ {2}}{2 x} \ln (1 - x), \quad | x | < 1, x \neq 0, \end{array}$
+
+故 $\sum_{n=2}^{\infty} \frac{1}{(n^2 - 1)2^n} = S\left(\frac{1}{2}\right) = \frac{5}{8} - \frac{3}{4} \ln 2.$
+
+【注】也可将 $\sum_{n=1}^{\infty} \frac{x^n}{n} = -\ln(1 - x), |x| < 1$ 视为常用结果.
+
+（Ⅱ）构造幂级数，令 $S(x) = \sum_{n=0}^{\infty} \frac{2n + 1}{n!} x^{2n}$ ，易求得其收敛域为 $(- \infty, + \infty)$ ，则
+
+$\begin{array}{r l} S (x) & = \sum_ {n = 0} ^ {\infty} \left(\frac {x ^ {2 n + 1}}{n !}\right) ^ {\prime} = \left(\sum_ {n = 0} ^ {\infty} \frac {x ^ {2 n + 1}}{n !}\right) ^ {\prime} = \left[ x \sum_ {n = 0} ^ {\infty} \frac {(x ^ {2}) ^ {n}}{n !} \right] ^ {\prime} \\ & = (x \cdot e ^ {x ^ {2}}) ^ {\prime} = (1 + 2 x ^ {2}) e ^ {x ^ {2}}, \quad x \in (- \infty , + \infty), \end{array}$
+
+故 $\sum_{n=0}^{\infty} \frac{2n+1}{n!} = S(1) = 3\mathrm{e}$ ."
+80171311,880,微积分,第七章 无穷级数,,11,基础题,解答题,,"(I) 证明: $y(x)=1+\frac{x^{3}}{3!}+\frac{x^{6}}{6!}+\frac{x^{9}}{9!}+\cdots+\frac{x^{3n}}{(3n)!}+\cdots(-\infty<x<+\infty)$ 满足微分方程 $y''+y'+y=e^{x} ;$
+(II) 利用 (I) 的结果求 $\sum_{n=0}^{\infty}\frac{x^{3n}}{(3n)!}$ .",,,,,"证 (I) $y(x) = 1 + \frac{x^3}{3!} + \frac{x^6}{6!} + \frac{x^9}{9!} + \cdots + \frac{x^{3n}}{(3n)!} + \cdots,$
+
+$y ^ {\prime} (x) = \frac {x ^ {2}}{2 !} + \frac {x ^ {5}}{5 !} + \frac {x ^ {8}}{8 !} + \dots + \frac {x ^ {3 n - 1}}{(3 n - 1) !} + \dots ,$
+
+$y ^ {\prime \prime} (x) = x + \frac {x ^ {4}}{4 !} + \frac {x ^ {7}}{7 !} + \dots + \frac {x ^ {3 n - 2}}{(3 n - 2) !} + \dots ,$
+
+故 $y'' + y' + y = \sum_{n=0}^{\infty} \frac{x^n}{n!} = e^x$ .
+
+解（Ⅱ）由（Ⅰ），解初值问题： $\left\{\begin{aligned}y^{\prime\prime}+y^{\prime}+y=e^{x},\\ y(0)=1,y^{\prime}(0)=0,\end{aligned}\right.$ 可得 $y(x)=\frac{2}{3}e^{-\frac{x}{2}}\cos\frac{\sqrt{3}}{2}x+\frac{1}{3}e^{x}$ 为所求和函数."
+80172101,880,微积分,第七章 无穷级数,,1,综合题,选择题,,级数 $\sum_{n=1}^{\infty}\left[(-1)^{n}\ln\left(1+\frac{1}{\sqrt{n}}\right)+\frac{\sin kn\pi}{n^{2}}\right](k$ 为常数 $)$ .,条件收敛,绝对收敛,发散,敛散性与 $k$ 有关,"A.
+
+解 由 $\left|\frac{\sin kn\pi}{n^2}\right| \leqslant \frac{1}{n^2}$ , 知 $\sum_{n=1}^{\infty} \frac{\sin kn\pi}{n^2}$ 绝对收敛. 由
+
+$\left| (- 1) ^ {n} \ln \left(1 + \frac {1}{\sqrt {n}}\right) \right| = \ln \left(1 + \frac {1}{\sqrt {n}}\right) \sim \frac {1}{\sqrt {n}}$
+
+及 $\sum_{n=1}^{\infty} \frac{1}{\sqrt{n}}$ 发散, 知 $\sum_{n=1}^{\infty} (-1)^n \ln \left(1 + \frac{1}{\sqrt{n}}\right)$ 不绝对收敛.
+
+而 $\lim\limits_{n\to\infty}\ln\left(1+\frac{1}{\sqrt{n}}\right)=0$ ，且 $\left\{\ln\left(1+\frac{1}{\sqrt{n}}\right)\right\}$ 单调减少，由交错级数的莱布尼茨定理，知 $\sum_{n=1}^{\infty}(-1)^{n}\cdot\ln\left(1+\frac{1}{\sqrt{n}}\right)$ 条件收敛，所以原级数条件收敛，选项A正确."
+80172102,880,微积分,第七章 无穷级数,,2,综合题,选择题,,设正项数列 $\{a_n\}$ 满足 $\lim\limits_{n\to \infty}\frac{n}{a_n} = 1$ ，则级数 $\sum_{n=1}^{\infty}(-1)^{n+1}\frac{a_n + a_{n+1}}{a_na_{n+1}}$ （ ）.,绝对收敛,条件收敛,发散,敛散性不确定,"B.
+
+解 由已知,有 $\sum_{n=1}^{\infty} (-1)^{n+1} \frac{a_n + a_{n+1}}{a_n a_{n+1}} = \sum_{n=1}^{\infty} (-1)^{n+1} \left( \frac{1}{a_n} + \frac{1}{a_{n+1}} \right)$ 为交错级数. 由 $\lim\limits_{n \to \infty} \frac{n}{a_n} = \lim\limits_{n \to \infty} \frac{\frac{1}{a_n}}{\frac{1}{n}} = 1$ , 知 $\lim\limits_{n \to \infty} \frac{1}{a_n} = 0$ .
+
+由于不能确定 $\frac{1}{a_n}$ 的单调性，按照级数的敛散性定义，考虑其部分和为
+
+$\begin{array}{r l} S _ {n} & = \sum_ {k = 1} ^ {n} (- 1) ^ {k + 1} \left(\frac {1}{a _ {k}} + \frac {1}{a _ {k + 1}}\right) \\ & = \left(\frac {1}{a _ {1}} + \frac {1}{a _ {2}}\right) - \left(\frac {1}{a _ {2}} + \frac {1}{a _ {3}}\right) + \dots + (- 1) ^ {n + 1} \left(\frac {1}{a _ {n}} + \frac {1}{a _ {n + 1}}\right) \\ & = \frac {1}{a _ {1}} + \frac {(- 1) ^ {n + 1}}{a _ {n + 1}}, \end{array}$
+
+故 $\lim\limits_{n\to\infty}S_n=\frac{1}{a_1}$ ，原级数收敛.
+
+下面考察取绝对值后的级数 $\sum_{n=1}^{\infty}\left(\frac{1}{a_n} +\frac{1}{a_{n+1}}\right)$ .
+
+由
+
+$\lim\limits_ {n \rightarrow \infty} \frac {\frac {1}{a _ {n}} + \frac {1}{a _ {n + 1}}}{\frac {1}{n}} = \lim\limits_ {n \rightarrow \infty} \left(\frac {n}{a _ {n}} + \frac {n + 1}{a _ {n + 1}} \cdot \frac {n}{n + 1}\right) = 1 + 1 = 2,$
+
+且 $\sum_{n=1}^{\infty} \frac{1}{n}$ 发散, 以及比较法的极限形式, 知 $\sum_{n=1}^{\infty} \left( \frac{1}{a_n} + \frac{1}{a_{n+1}} \right)$ 发散. 故原级数条件收敛. 选项 B 正确."
+80172103,880,微积分,第七章 无穷级数,,3,综合题,选择题,,"设 $a > 0, \sum_{n=1}^{\infty} \frac{a^n n!}{n^n}$ 收敛， $\sum_{n=2}^{\infty} \frac{\sqrt{n+2} - \sqrt{n-2}}{n^a}$ 发散，则（）",$a > \mathrm{e}$,$a = \mathrm{e}$,$\frac{1}{2} < a < e$,$0 < a \leqslant \frac{1}{2}$,"解 记 $u_{n} = \frac{a^{n}n!}{n^{n}}$ ，用比值法，有
+
+$\lim\limits_ {n \rightarrow \infty} \frac {u _ {n + 1}}{u _ {n}} = \lim\limits_ {n \rightarrow \infty} \frac {a ^ {n + 1} (n + 1) !}{(n + 1) ^ {n + 1}} \cdot \frac {n ^ {n}}{a ^ {n} n !} = \lim\limits_ {n \rightarrow \infty} \frac {a}{\left(1 + \frac {1}{n}\right) ^ {n}} = \frac {a}{e},$
+
+则级数 $\sum_{n=1}^{\infty} \frac{a^n n!}{n^n}$ 当 $a < e$ 时收敛，当 $a > e$ 时发散，当 $a = e$ 时，比值法失效.
+
+又由 $\left(1 + \frac{1}{n}\right)^n < \mathrm{e}$ , 知 $\frac{u_{n+1}}{u_n} > 1$ , 故 $\lim\limits_{n \to \infty} u_n \neq 0$ , 从而当 $a = \mathrm{e}$ 时级数发散.
+
+$\frac {\sqrt {n + 2} - \sqrt {n - 2}}{n ^ {a}} = \frac {4}{n ^ {a} (\sqrt {n + 2} + \sqrt {n - 2})} = \frac {4}{n ^ {a + \frac {1}{2}} \left(\sqrt {1 + \frac {2}{n}} + \sqrt {1 - \frac {2}{n}}\right)},$
+
+即 $\frac{\sqrt{n + 2} - \sqrt{n - 2}}{n^a}\sim \frac{2}{n^{a + \frac{1}{2}}} (n\to \infty)$ .而 $\sum_{n = 1}^{\infty}\frac{2}{n^{a + \frac{1}{2}}}$ 当 $0 < a + \frac{1}{2}\leqslant 1$ 时发散，由 $0 < a + \frac{1}{2}\leqslant 1$ 以及 $a < e$ 和 $a > 0$ （已知），得 $0 < a\leqslant \frac{1}{2}$ ，故选项D正确.
+
+【注】 常见不等式： $\left(1 + \frac{1}{n}\right)^n < \mathrm{e} < \left(1 + \frac{1}{n}\right)^{n + 1}(n$ 为正整数）."
+80172104,880,微积分,第七章 无穷级数,,4,综合题,选择题,,"设 $u_{n} = \frac{|a_{n}| + a_{n}}{2}, v_{n} = \frac{|a_{n}| - a_{n}}{2}$ ，则下列四个级数的收敛性关系是（）.
+(I) $\sum_{n=1}^{\infty}a_{n};$
+(II)$\sum_{n = 1}^{\infty}|a_{n}|$
+(III)$\sum_{n = 1}^{\infty}u_n;$
+(IV)$\sum_{n = 1}^{\infty}v_{n}$",若 $(I)$ 收敛，则 $(III)$ 和 $(IV)$ 都收敛,若 $(II)$ 收敛，则 $(I)$ ， $(III)$ 和 $(IV)$ 都收敛,若 (III) 和 (IV) 发散，则 (I) 和 (II) 都发散,$(I)(II)(II)(IV)$ 的收敛性无确定关系,"B.
+
+解 若 $\sum_{n=1}^{\infty}|a_n|$ 收敛, 则 $\sum_{n=1}^{\infty}a_n$ 收敛. 由
+
+$0 \leqslant u _ {n} = \frac {| a _ {n} | + a _ {n}}{2} \leqslant | a _ {n} |, 0 \leqslant v _ {n} = \frac {| a _ {n} | - a _ {n}}{2} \leqslant | a _ {n} |,$
+
+以及比较审敛法，知 $\sum_{n = 1}^{\infty}u_n$ 与 $\sum_{n = 1}^{\infty}\upsilon_{n}$ 都收敛.故选项B正确"
+80172105,880,微积分,第七章 无穷级数,,5,综合题,选择题,,"设正项数列 $\{a_{n}\},\{b_{n}\}$ 满足 $a_{n}=\ln\left(a_{n}+\mathrm{e}^{b_{n}}\right)(n=1,2,\cdots)$ ，则下列选项中错误的是（）.",若 $\sum_{n=1}^{\infty} a_n$ 收敛，则 $\sum_{n=1}^{\infty} b_n$ 收敛,"若 $\sum_{n=1}^{\infty} a_n$ 发散, 则 $\sum_{n=1}^{\infty} b_n$ 发散",若 $\sum_{n=1}^{\infty} a_n$ 收敛，则 $\sum_{n=1}^{\infty} b_n^2$ 收敛,若 $\sum_{n=1}^{\infty} b_n^2$ 发散，则 $\sum_{n=1}^{\infty} a_n$ 发散,"B.
+
+解 由 $a_{n} = \ln (a_{n} + \mathrm{e}^{b_{n}})$ ，可知 $\mathrm{e}^{a_n} = a_n + \mathrm{e}^{b_n}$ ，故 $\mathrm{e}^{a_n} - \mathrm{e}^{b_n} = a_n > 0$ ，从而 $a_{n} > b_{n} > 0$ .
+
+对于选项 A, 由比较审敛法可知, 当 $\sum_{n=1}^{\infty}a_{n}$ 收敛时, $\sum_{n=1}^{\infty}b_{n}$ 收敛, 排除 A.
+
+对于选项 B, 当 $\sum_{n=1}^{\infty}a_{n}$ 发散时, $\sum_{n=1}^{\infty}b_{n}$ 不一定发散, 选项 B 错误, 故选 B.
+
+若取 $a_{n} = \frac{1}{n}$ 则 $\sum_{n=1}^{\infty} a_{n} = \sum_{n=1}^{\infty} \frac{1}{n}$ 发散. 由 $\mathrm{e}^{a_{n}} = a_{n} + \mathrm{e}^{b_{n}}$ ，得 $b_{n} = \ln (\mathrm{e}^{a_{n}} - a_{n}) = \ln \left(\mathrm{e}^{\frac{1}{n}} - \frac{1}{n}\right)$ . 当 $n \to \infty$ 时，
+
+$\ln \left(\mathrm{e} ^ {\frac {1}{n}} - \frac {1}{n}\right) = \ln \left(\mathrm{e} ^ {\frac {1}{n}} - \frac {1}{n} + 1 - 1\right) \sim \mathrm{e} ^ {\frac {1}{n}} - \frac {1}{n} - 1.$
+
+又 $\mathrm{e}^{\frac{1}{n}} - \frac{1}{n} - 1 = \frac{1}{2n^2} + o\left(\frac{1}{n^2}\right), \sum_{n=1}^{\infty}\left[\frac{1}{2n^2} + o\left(\frac{1}{n^2}\right)\right]$ 收敛，从而 $\sum_{n=1}^{\infty} b_n$ 收敛.
+
+对于选项 C, 由 $\sum_{n=1}^{\infty} a_n$ 收敛, 可知 $\lim\limits_{n \to \infty} a_n = 0$ . 当 $n$ 充分大时, $|a_n| = a_n < 1$ , 故 $a_n^2 < a_n$ , 从而 $\sum_{n=1}^{\infty} a_n^2$ 收敛. 由 $a_n^2 > b_n^2 > 0$ , 可知 $\sum_{n=1}^{\infty} b_n^2$ 收敛, 排除 C.
+
+选项 D 是选项 C 的逆否命题, 由选项 C 正确, 可知选项 D 正确, 排除 D."
+80172106,880,微积分,第七章 无穷级数,,6,综合题,选择题,,设 $\{u_n\}$ 是单调减少的正值数列，则下列级数中收敛的是（）.,$\sum_{n=1}^{\infty} (-1)^{n-1} u_n$,$\sum_{n=1}^{\infty}\frac{u_n}{n}$,$\sum_{n=1}^{\infty}\left(1 - \frac{u_{n+1}}{u_n}\right)$,$\sum_{n=1}^{\infty} \frac{u_n - u_{n+1}}{\sqrt{u_n}}$,"D.
+
+解 对于选项 D, 由已知, $u_{n} > 0$ , 根据单调有界准则, 知 $\lim\limits_{n \to \infty} u_{n}$ 存在, 且 $\sum_{n=1}^{\infty} \frac{u_{n} - u_{n+1}}{\sqrt{u_{n}}}$ 是正项级数. 由
+
+$\begin{array}{r l} & {\frac {u _ {n} - u _ {n + 1}}{\sqrt {u _ {n}}} = \frac {(\sqrt {u _ {n}} + \sqrt {u _ {n + 1}}) (\sqrt {u _ {n}} - \sqrt {u _ {n + 1}})}{\sqrt {u _ {n}}}} \\ & {\qquad = \left(1 + \sqrt {\frac {u _ {n + 1}}{u _ {n}}}\right) (\sqrt {u _ {n}} - \sqrt {u _ {n + 1}})} \\ & {\qquad \leqslant 2 (\sqrt {u _ {n}} - \sqrt {u _ {n + 1}}) \quad \left(\text {因为} \frac {u _ {n + 1}}{u _ {n}} \leqslant 1\right),} \end{array}$
+
+知该级数的部分和为
+
+$\begin{array}{r l} S _ {n} & = \sum_ {k = 1} ^ {n} \frac {u _ {k} - u _ {k + 1}}{\sqrt {u _ {k}}} \leqslant 2 \sum_ {k = 1} ^ {n} (\sqrt {u _ {k}} - \sqrt {u _ {k + 1}}) \\ & = 2 (\sqrt {u _ {1}} - \sqrt {u _ {n + 1}}) < 2 \sqrt {u _ {1}}, \end{array}$
+
+从而 $\{S_n\}$ 有上界. 又 $\{S_n\}$ 单调增加, 故 $\lim S_n$ 存在, 级数收敛. 选项 D 正确.
+
+对于选项 A, $\lim\limits_{n\to\infty}u_n$ 存在, 但不一定有 $\lim\limits_{n\to\infty}u_n=0$ . 由级数收敛的必要条件知, $\sum_{n=1}^{\infty}(-1)^{n-1}u_n$ 不一定收敛.
+
+对于选项B, 取 $u_{n}=1+\frac{1}{n}$ ，则 $\{u_{n}\}$ 是单调减少的正值数列，且 $\frac{u_{n}}{n}=\frac{1}{n}+\frac{1}{n^{2}}$ 。而 $\sum_{n=1}^{\infty}\frac{1}{n}$ 发散， $\sum_{n=1}^{\infty}\frac{1}{n^{2}}$ 收敛，故 $\sum_{n=1}^{\infty}\frac{u_{n}}{n}$ 发散。
+
+对于选项C，取 $u_{n} = \frac{1}{n}$ ，则 $1 - \frac{u_{n + 1}}{u_n} = 1 - \frac{n}{n + 1} = \frac{1}{n + 1}$ 而 $\sum_{n = 1}^{\infty}\frac{1}{n + 1}$ 发散.
+
+综上所述,排除选项 A,B,C."
+80172107,880,微积分,第七章 无穷级数,,7,综合题,选择题,,$\sum_{n=0}^{\infty}(-1)^{n}\frac{n+1}{(2n+1)!}=(\quad)$ .,$\frac{1}{2} (\sin 1 + \cos 1)$,$2 \sin 1 + \cos 1$,$\sin 1 + 2\cos 1$,$\sin 1 + \cos 1$,"A.
+
+解
+
+$\begin{array}{r l} & {\sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {n + 1}{(2 n + 1) !} = \frac {1}{2} \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {2 (n + 1)}{(2 n + 1) !}} \\ & {= \frac {1}{2} \left[ \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {1}{(2 n + 1) !} + \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {2 n + 1}{(2 n + 1) !} \right]} \\ & {= \frac {1}{2} \left[ \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {1}{(2 n + 1) !} + \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {1}{(2 n) !} \right] = \frac {1}{2} (\sin 1 + \cos 1).} \end{array}$
+
+【注】 $\sin x = \sum_{n=0}^{\infty} (-1)^{n} \frac{x^{2n+1}}{(2n+1)!}, \cos x = \sum_{n=0}^{\infty} (-1)^{n} \frac{x^{2n}}{(2n)!}$ ."
+80172108,880,微积分,第七章 无穷级数,,8,综合题,选择题,,"设 $y = x \sin x$ 在 $[0, n\pi]$ 上与 x 轴所围图形的面积为 $a_{n} (n = 1, 2, \cdots)$ ，则 $\sum_{k=1}^{\infty} \frac{1}{\sqrt{a_{k} a_{k+1}}} = (\quad)$ .",$\frac{1}{\sqrt{\pi}}$,$\frac{1}{\pi}$,$\pi$,$\sqrt{\pi}$,"B.
+
+解 依题设,有
+
+$\begin{array}{r l} a _ {n} & = \int_ {0} ^ {n \pi} x | \sin x | \mathrm{d} x \xlongequal {x = n \pi - t} \int_ {0} ^ {n \pi} (n \pi - t) | \sin t | \mathrm{d} t \\ & = n \pi \int_ {0} ^ {n \pi} | \sin t | \mathrm{d} t - \int_ {0} ^ {n \pi} t | \sin t | \mathrm{d} t = n ^ {2} \pi \int_ {0} ^ {\pi} \sin t \mathrm{d} t - a _ {n}, \end{array}$
+
+移项, 得 $a_{n}=\frac{n^{2}\pi}{2}\int_{0}^{\pi}\sin t\,dt=n^{2}\pi.$ 由于
+
+$\sum_ {k = 1} ^ {n} \frac {1}{\sqrt {a _ {k} a _ {k + 1}}} = \frac {1}{\pi} \sum_ {k = 1} ^ {n} \frac {1}{k (k + 1)} = \frac {1}{\pi} \sum_ {k = 1} ^ {n} \left(\frac {1}{k} - \frac {1}{k + 1}\right) = \frac {1}{\pi} \left(1 - \frac {1}{n + 1}\right),$
+
+故 $\sum_{k=1}^{\infty} \frac{1}{\sqrt{a_k a_{k+1}}} = \lim\limits_{n \to \infty} \sum_{k=1}^{n} \frac{1}{\sqrt{a_k a_{k+1}}} = \frac{1}{\pi}$ .
+
+选项 B 正确."
+80172109,880,微积分,第七章 无穷级数,,9,综合题,选择题,,"设 $f(x) = \sum_{n=1}^{\infty} a_n x^{n+1}$ 在 $[0,1]$ 上收敛，则级数 $\sum_{n=1}^{\infty} (-1)^{n-1} f\left(\frac{1}{n}\right)(\quad)$ .",发散,条件收敛,绝对收敛,敛散性不确定,"C.
+
+解 依题设, $f(x)=\sum_{n=1}^{\infty}a_{n}x^{n+1}$ 在 x=1 处收敛, 即 $\sum_{n=1}^{\infty}a_{n}$ 收敛, 故 $\lim\limits_{n\to\infty}a_{n}=0$ , 从而 $|a_{n}|\leqslant M(M\geqslant0)$ ,
+故 $\left|(-1)^{n-1}f\left(\frac{1}{n}\right)\right|=\left|\sum_{k=1}^{\infty}a_{k}\left(\frac{1}{n}\right)^{k+1}\right|\leqslant M\sum_{k=1}^{\infty}\left(\frac{1}{n}\right)^{k+1}$ $=M\cdot\frac{\frac{1}{n^{2}}}{1-\frac{1}{n}}=\frac{M}{n(n-1)}\quad(n=2,3,\cdots).$
+
+而 $\sum_{n=2}^{\infty} \frac{M}{n(n-1)}$ 收敛, 故 $\sum_{n=1}^{\infty} (-1)^{n-1} f\left(\frac{1}{n}\right)$ 绝对收敛.
+
+选项 C 正确."
+80172110,880,微积分,第七章 无穷级数,,10,综合题,选择题,,"设有两个数列 $\{a_{n}\}$ 与 $\{b_{n}\}$ , 若 $\lim\limits_{n\to \infty}b_n = 0$ , 则 ( ).","当 $\sum_{n=1}^{\infty} a_n$ 收敛时, $\sum_{n=1}^{\infty} a_nb_n$ 收敛",当 $\sum_{n=1}^{\infty}|a_n|$ 收敛时， $\sum_{n=1}^{\infty}a_nb_n$ 收敛,"当 $\sum_{n=1}^{\infty} a_n$ 发散时, $\sum_{n=1}^{\infty} a_nb_n$ 发散","当 $\sum_{n=1}^{\infty}|a_n|$ 发散时, $\sum_{n=1}^{\infty}a_n^2 b_n^2$ 发散","B.
+
+解 对于选项 B, 由 $\lim\limits_{n\to\infty}b_n=0$ , 知 $\{b_n\}$ 有界, 即存在 M>0, 使得 $|b_n|\leqslant M$ , 故 $|a_nb_n|\leqslant M|a_n|$ . 又因为 $\sum_{n=1}^{\infty}|a_n|$ 收敛, 所以由比较审敛法, 知 $\sum_{n=1}^{\infty}|a_nb_n|$ 收敛, 故 $\sum_{n=1}^{\infty}a_nb_n$ 收敛, 选项 B 正确.
+
+对于选项 A, 若取 $a_{n}=b_{n}=\frac{(-1)^{n}}{\sqrt{n}}$ ，则 $\sum_{n=1}^{\infty}a_{n}$ 收敛， $\lim\limits_{n\to\infty}b_{n}=0$ ，但 $\sum_{n=1}^{\infty}a_{n}b_{n}=\sum_{n=1}^{\infty}\frac{1}{n}$ 发散，故排除选项 A.
+
+对于选项C,D,若取 $a_{n} = b_{n} = \frac{1}{n}$ ，则可排除选项C,D."
+80172111,880,微积分,第七章 无穷级数,,11,综合题,选择题,,"设正值数列 $\{a_{n}\},\{b_{n}\}$ 满足 $b_{1}=1, b_{n+1}(b_{n+1}-b_{n})=a_{n}(n=1,2,\cdots)$ ，则 $\{b_{n}\}$ 收敛是级数 $\sum_{n=1}^{\infty}a_{n}$ 收敛的（）.",充分非必要条件,必要非充分条件,充分必要条件,既非充分也非必要条件,"C.
+
+解 
+必要性：
+
+若 $\sum_{n=1}^{\infty} a_n$ 收敛, 则由 $b_{n+1}(b_{n+1} - b_n) = a_n$ 及 $a_n > 0, b_n > 0$ , 知 $b_{n+1} - b_n > 0$ , 即 $\{b_n\}$ 单调增加. 由 $b_1 = 1$ , 知 $b_n \geqslant 1$ , 且
+
+$0 < b _ {n + 1} - b _ {n} \leqslant a _ {n} = b _ {n + 1} (b _ {n + 1} - b _ {n}).$
+
+由级数的比较判别法知， $\sum_{n = 1}^{\infty}(b_{n + 1} - b_n)$ 收敛，故其部分和
+
+$S _ {n} = \sum_ {k = 1} ^ {n} (b _ {k + 1} - b _ {k}) = b _ {n + 1} - b _ {1}$的极限存在,从而 $\{b_{n}\}$ 收敛.
+
+充分性
+
+法一：有界性
+
+放缩不等式：$a_{n}\leq L\left(b_{n+1}-b_{n}\right)$
+
+考察级数$ \sum a_{n}$的部分和 $S_{N}$：$S_{N}=\sum_{n=1}^{N} a_{n}\leq L\sum_{n=1}^{N} (\left.b_{n+1}-b_{n}\right)=L\left(b_{N+1}-b_{1}\right)$
+
+
+法二：
+
+若 $\{b_{n}\}$ 收敛，即 $\lim\limits_{n\to \infty}b_n$ 存在，从而 $\lim\limits_{n\to \infty}b_n^2$ 存在，由于 $\sum_{n = 1}^{\infty}(b_{n + 1}^{2} - b_{n}^{2})$ 的部分和为
+
+$S _ {n} ^ {\prime} = \sum_ {k = 1} ^ {n} (b _ {k + 1} ^ {2} - b _ {k} ^ {2}) = b _ {n + 1} ^ {2} - b _ {1} ^ {2},$
+
+故 $\lim\limits_{n\to\infty}S_{n}^{\prime}$ 存在,从而 $\sum_{n=1}^{\infty}(b_{n+1}^{2}-b_{n}^{2})$ 收敛.
+
+由 $0 < a_{n} = b_{n+1}(b_{n+1} - b_{n}) < (b_{n+1} + b_{n})(b_{n+1} - b_{n}) = b_{n+1}^{2} - b_{n}^{2}$ 及级数的比较判别法，知 $\sum_{n=1}^{\infty} a_{n}$ 收敛。故选项 C 正确。"
+80172112,880,微积分,第七章 无穷级数,,12,综合题,选择题,,已知级数 $\frac{1}{\sqrt{2}-1}-\frac{1}{\sqrt{2}+1}+\frac{1}{\sqrt{3}-1}-\frac{1}{\sqrt{3}+1}+\cdots+\frac{1}{\sqrt{n}-1}-\frac{1}{\sqrt{n}+1}+\cdots$ ，下列选项中正确的是（）.,"由莱布尼茨定理,可推得原级数收敛","由于添加括号后级数发散,故原级数发散","由于各项取绝对值后得到的级数发散,故原级数发散","由 $\lim\limits_{n\to \infty}\frac{1}{\sqrt{n} - 1} = 0,$ 可知原级数收","B.
+
+解 对于选项 B, 由级数的性质, 知
+
+$\sum_{n=1}^{\infty}a_{n}$ 收敛 $\Rightarrow$ 添加括号后仍收敛，
+
+其逆否命题成立,即添加括号后的级数发散,原级数也发散,故选项 B 正确.
+
+对于选项 A, 级数一般项不单调, 不能用莱布尼茨定理, 故排除选项 A.
+
+对于选项 C, $\sum_{n=1}^{\infty}|a_{n}|$ 收敛 $\Rightarrow\sum_{n=1}^{\infty}a_{n}$ 收敛, 但 $\sum_{n=1}^{\infty}|a_{n}|$ 发散, $\sum_{n=1}^{\infty}a_{n}$ 可能条件收敛, 不一定有 $\sum_{n=1}^{\infty}a_{n}$ 发散, 故排除选项 C.
+
+对于选项 D, $\lim\limits_{n\to\infty}a_n=0$ 是 $\sum_{n=1}^{\infty}a_n$ 收敛的必要条件, 不是充分条件, 故排除选项 D."
+80172113,880,微积分,第七章 无穷级数,,13,综合题,选择题,,"幂级数 $\sum_{n=2}^{\infty}\frac{x^{n}}{n^{p}\ln n}$ 的收敛域为 $[-1,1]$ ，则（）.",$0 \leqslant p < 1$,p=1,p > 1,p < 0,"C.
+
+解记 $u_{n} = \frac{1}{n^{p}\ln n}$ ，则由
+
+$\lim\limits_ {n \rightarrow \infty} \left| \frac {u _ {n + 1}}{u _ {n}} \right| = \lim\limits_ {n \rightarrow \infty} \frac {n ^ {p} \ln n}{(n + 1) ^ {p} \ln (n + 1)} = \lim\limits_ {n \rightarrow \infty} \frac {1}{\left(1 + \frac {1}{n}\right) ^ {p}} \cdot \frac {\ln n}{\ln (n + 1)} = 1,$
+
+知收敛半径 R = 1，收敛区间为 $(-1, 1)$ .
+
+若 $p > 1$ ，当 $x = 1$ 时， $\frac{1}{n^p\ln n} < \frac{1}{n^p} (n\geqslant 3)$ ，而 $\sum_{n = 2}^{\infty}\frac{1}{n^p}$ 收敛，故由比较判别法，知 $\sum_{n = 2}^{\infty}\frac{1}{n^p\ln n}$ 收敛；
+
+当 $x = -1$ 时， $\sum_{n=2}^{\infty} \frac{(-1)^n}{n^p \ln n}$ 为交错级数。由于 $\left\{\frac{1}{n^p \ln n}\right\}$ 单调减少且趋于零，根据莱布尼茨定理知其收敛。故收敛域为 $[-1, 1]$ ，选项 C 正确。
+
+对于选项 A, 若 $0 \leqslant p < 1$ , 当 x = 1 时, 由于
+
+$\lim\limits_ {n \to \infty} \frac {\frac {1}{n ^ {p} \ln n}}{\frac {1}{n}} = \lim\limits_ {n \to \infty} \frac {n ^ {1 - p}}{\ln n} = + \infty ,$
+
+而 $\sum_{n=2}^{\infty} \frac{1}{n}$ 发散, 故由比较判别法, 知 $\sum_{n=2}^{\infty} \frac{1}{n^{p} \ln n}$ 发散;
+
+当 $x = -1$ 时， $\sum_{n=2}^{\infty} (-1)^{n} \frac{1}{n^{p} \ln n}$ 收敛，故收敛域为 $[-1, 1)$ .
+
+对于选项B, 若 $p = 1$ , 当 $x = 1$ 时, 原级数为 $\sum_{n=2}^{\infty} \frac{1}{n \ln n}$ . 考虑
+
+$\int_ {2} ^ {+ \infty} \frac {\mathrm{d} x}{x \ln x} = \ln (\ln x) \Big | _ {2} ^ {+ \infty} = + \infty ,$
+
+由积分判别法,知 $\sum_{n=2}^{\infty}\frac{1}{n\ln n}$ 发散;
+
+当 $x = -1$ 时，原级数为 $\sum_{n=2}^{\infty} (-1)^n \frac{1}{n \ln n}$ ，由莱布尼茨定理知其收敛，故收敛域为 $[-1, 1)$ .
+
+对于选项 D, 若 p < 0, 则 $u_{n}$ 不趋于零 ( $n \rightarrow \infty$ ), 幂级数在 $x = \pm 1$ 处发散, 收敛域为 (-1, 1)."
+80172114,880,微积分,第七章 无穷级数,,14,综合题,选择题,,设级数 $\sum_{n=1}^{\infty} (-1)^{n-1} \frac{1}{n^{2-p}}$ 绝对收敛， $\sum_{n=2}^{\infty} (-1)^{n} \frac{1}{n^{p} (\ln n)^{2}}$ 条件收敛，则（）.,$0 \leqslant p < 1$,$0 < p \leqslant 1$,$0 \leqslant p < 2$,$0 < p < 1$,"解 由 $\sum_{n=1}^{\infty} (-1)^{n-1} \frac{1}{n^{2-p}}$ 绝对收敛, 知 $\sum_{n=1}^{\infty} \frac{1}{n^{2-p}}$ 收敛, 故 $2 - p > 1$ , 即 $p < 1$ .
+
+对于 $\sum_{n=2}^{\infty} (-1)^{n} \frac{1}{n^{p} (\ln n)^{2}}$ , 记 $a_{n} = \frac{1}{n^{p} (\ln n)^{2}}$ .
+
+当 $p < 0$ 时， $\lim\limits_{n\to \infty}a_n = \lim\limits_{n\to \infty}\frac{n^{-p}}{(\ln n)^2} = +\infty$ ，故原级数发散；
+
+当 $0 \leqslant p < 1$ 时，由于 $\lim\limits_{n \to \infty} \frac{a_n}{\frac{1}{n}} = \lim\limits_{n \to \infty} \frac{n^{1 - p}}{(\ln n)^2} = +\infty$ ，而 $\sum_{n=2}^{\infty} \frac{1}{n}$ 发散，故原级数不绝对收敛。又因 $\{a_n\}$ 单调减少，且
+
+$\lim\limits_ {n \to \infty} a _ {n} = \lim\limits_ {n \to \infty} \frac {1}{n ^ {p} (\ln n) ^ {2}} = 0,$
+
+由莱布尼茨定理知,原级数收敛,从而条件收敛,选项 A 正确."
+80172115,880,微积分,第七章 无穷级数,,15,综合题,选择题,,"设 $f(x)$ 有一阶连续导数, 且 $\lim\limits_{x\to0}\frac{f(x)}{x}=1, a_n=f\left(\frac{1}{n}\right)(n=1,2,\cdots)$ , 则().","$\sum_{n=1}^{\infty} (-1)^{n-1} a_n$ 收敛, $\sum_{n=1}^{\infty} a_n$ 收敛","$\sum_{n=1}^{\infty} (-1)^{n-1} a_n$ 发散, $\sum_{n=1}^{\infty} a_n^2$ 收敛","$\sum_{n=1}^{\infty} (-1)^{n-1} a_n$ 发散, $\sum_{n=1}^{\infty} a_n$ 收敛","$\sum_{n=1}^{\infty} (-1)^{n-1} a_n$ 收敛, $\sum_{n=1}^{\infty} a_n^2$ 收敛","D.
+
+解 依题设, $\lim\limits_{n\to\infty}\frac{f^{2}\left(\frac{1}{n}\right)}{\frac{1}{n^{2}}}=\left[\lim\limits_{n\to\infty}\frac{f\left(\frac{1}{n}\right)}{\frac{1}{n}}\right]^{2}=1>0$ ,而 $\sum_{n=1}^{\infty}\frac{1}{n^{2}}$ 收敛,故 $\sum_{n=1}^{\infty}a_{n}^{2}$ 收敛.
+
+又由 $\lim\limits_{n\to\infty}\frac{f\left(\frac{1}{n}\right)}{\frac{1}{n}}=1$ ，知 $\sum_{n=1}^{\infty}a_{n}$ 发散。由 $\lim\limits_{x\to0}\frac{f(x)}{x}=1>0$ 及 $f(x)$ 的连续性，知 $f(0)=\lim\limits_{x\to0}f(x)=0$ ，故
+
+$f ^ {\prime} (0) = \lim\limits_ {x \to 0} \frac {f (x) - f (0)}{x} = 1 > 0.$
+
+而由 $f'(x)$ 连续，知在 x = 0 的邻域内有 $f'(x) > 0, f(x)$ 单调增加，当 n 充分大时， $f\left(\frac{1}{n}\right)$ 单调减少，且有 $\lim\limits_{n \to \infty} f\left(\frac{1}{n}\right) = f(0) = 0$ ，故由莱布尼茨定理，知 $\sum_{n=1}^{\infty} (-1)^{n-1} a_n$ 收敛。
+
+综上所述,选项 D 正确."
+80172116,880,微积分,第七章 无穷级数,,16,综合题,选择题,,下列级数中发散的是().,$\sum_{n=1}^{\infty}e^{-n-(-1)^{n}}$,$\sum_{n=1}^{\infty} \frac{e}{e^n - n}$,$\sum_{n=2}^{\infty}\frac{(-1)^{n}+1}{n\ln n}$,$\sum_{n=1}^{\infty}\left[\ln\frac{1}{n}-\ln\left(\sin\frac{1}{n}\right)\right]$,"C.
+
+解
+
+$\sum_ {n = 2} ^ {\infty} \frac {(- 1) ^ {n} + 1}{n \ln n} = \sum_ {n = 2} ^ {\infty} \frac {(- 1) ^ {n}}{n \ln n} + \sum_ {n = 2} ^ {\infty} \frac {1}{n \ln n},$
+
+其中 $\sum_{n=2}^{\infty} \frac{(-1)^n}{n \ln n}$ 是交错级数， $\left\{\frac{1}{n \ln n}\right\}$ 单调减少，且 $\lim\limits_{n \to \infty} \frac{1}{n \ln n} = 0$ ，由莱布尼茨定理，知收敛.
+
+对于 $\sum_{n=2}^{\infty} \frac{1}{n \ln n}$ , 利用积分判别法. 由于
+
+$\int_ {2} ^ {+ \infty} \frac {\mathrm{d} x}{x \ln x} = \ln (\ln x) \Big | _ {2} ^ {+ \infty} = \infty$
+
+发散. 故选项 C 中的级数发散, 选项 C 正确.
+
+对于选项 A, 利用根值判别法, 有
+
+$\lim\limits_ {n \rightarrow \infty} \sqrt [ n ]{\mathrm{e} ^ {- n - (- 1) ^ {n}}} = \lim\limits_ {n \rightarrow \infty} \mathrm{e} ^ {\frac {- n - (- 1) ^ {n}}{n}} = \mathrm{e} ^ {- 1} < 1,$
+
+故级数收敛.
+
+对于选项 B, $\sum_{n=1}^{\infty}\frac{e}{e^{n}-n}$ 是正项级数, 有
+
+$\frac {\mathrm{e}}{\mathrm{e} ^ {n} - n} = \frac {\mathrm{e}}{\mathrm{e} ^ {n} \left(1 - \frac {n}{\mathrm{e} ^ {n}}\right)} \sim \frac {\mathrm{e}}{\mathrm{e} ^ {n}} = \frac {1}{\mathrm{e} ^ {n - 1}} (n \rightarrow \infty),$
+
+而 $\sum_{n=1}^{\infty}\frac{1}{e^{n-1}}$ 收敛,由比较判别法的极限形式,知级数收敛.
+
+对于选项 D, 由于
+
+$\begin{array}{r l}\ln x - \ln (\sin x)&= - \ln \frac {\sin x}{x} = - \ln \frac {x - \frac {x ^ {3}}{3 !} + o (x ^ {3})}{x}\\&= - \ln \left[ 1 - \frac {1}{6} x ^ {2} + o (x ^ {2}) \right] \sim \frac {1}{6} x ^ {2} (x \rightarrow 0 ^ {+}),\end{array}$
+
+故当 $n \to \infty$ 时， $\left[\ln \frac{1}{n} - \ln \left(\sin \frac{1}{n}\right)\right] \sim \frac{1}{6n^2}$ .
+
+而 $\sum_{n=1}^{\infty} \frac{1}{6n^2}$ 收敛, 由比较判别法的极限形式, 知级数收敛."
+80172201,880,微积分,第七章 无穷级数,,1,综合题,填空题,,"设 $\sum_{n=0}^{\infty} a_n x^n$ 的收敛半径为 3, 则 $\sum_{n=0}^{\infty} na_n (x+1)^{n+1}$ 的收敛区间为 \_\_\_\_.",,,,,"$(-4,2)$ .
+
+解 根据逐项求导收敛半径不变, 即 $\sum_{n=0}^{\infty}a_{n}x^{n}$ 与 $\sum_{n=1}^{\infty}na_{n}x^{n-1}$ 收敛半径相同. 令 $x+1=t$ , 则 $\sum_{n=1}^{\infty}na_{n}t^{n+1}$ 与 $t^{2}\sum_{n=1}^{\infty}na_{n}t^{n-1}$ 收敛半径相同, 故由 $|x+1|<3$ , 得 -4<x<2, 收敛区间为 $(-4,2)$ ."
+80172202,880,微积分,第七章 无穷级数,,2,综合题,填空题,,设 $\sum_{n=0}^{\infty} a_n x^n$ 的收敛半径为 $R = 1$ ，则 $\sum_{n=0}^{\infty} \frac{a_n}{n!} x^n$ 的收敛域为 \_\_\_\_.,,,,,"$(- \infty , + \infty)$
+
+解 由 $\sum_{n=0}^{\infty} a_n x^n$ 的收敛半径 $R = 1$ ，知 $\forall x_0 \in (-1, 1)$ ，级数 $\sum_{n=0}^{\infty} a_n x_0^n$ 绝对收敛（阿贝尔定理），故存在 $M > 0$ ，使得当 $n$ 充分大时，有 $|a_n x_0^n| \leqslant M$ ，因此 $\forall x \in (-\infty, +\infty)$ ，有
+
+$\left| \frac {a _ {n}}{n !} x ^ {n} \right| = \left| \frac {a _ {n} x _ {0} ^ {n}}{n !} \cdot \frac {x ^ {n}}{x _ {0} ^ {n}} \right| \leqslant \frac {1}{n !} \frac {M}{| x _ {0} | ^ {n}} \cdot | x | ^ {n},$
+
+而 $\sum_{n=0}^{\infty} \frac{M}{n! |x_0|^n} \cdot |x|^n$ 对任何 $x \in (-\infty, +\infty)$ 都收敛，故级数 $\sum_{n=0}^{\infty} \frac{a_n}{n!} x^n$ 对任何 $x \in (-\infty, +\infty)$ 都收敛，即收敛域为 $(- \infty, +\infty)$ .
+
+【注】对 $\sum_{n=0}^{\infty} \frac{M}{n! |x_0|^n} \cdot |x|^n$ ，用比值法，对任何 $x \in (-\infty, +\infty)$ ，有
+
+$\lim\limits_ {n \rightarrow \infty} \frac {M | x | ^ {n + 1}}{(n + 1) ! | x _ {0} | ^ {n + 1}} \cdot \frac {n ! | x _ {0} | ^ {n}}{M | x | ^ {n}} = \lim\limits_ {n \rightarrow \infty} \frac {| x |}{(n + 1) | x _ {0} |} = 0,$
+
+故其收敛半径为 $R = +\infty$ .
+
+错误解法是：
+
+由 $\sum_{n=0}^{\infty} a_n x^n$ 的收敛半径 $R = 1$ 推出 $\lim\limits_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = 1$ , 故
+
+$\lim\limits_ {n \rightarrow \infty} \left| \frac {a _ {n + 1}}{(n + 1) !} \frac {n !}{a _ {n}} \right| = \lim\limits_ {n \rightarrow \infty} \frac {1}{n + 1} \left| \frac {a _ {n + 1}}{a _ {n}} \right| = 0 = \rho ,$
+
+所以 $\sum_{n=0}^{\infty} \frac{a_n}{n!} x^n$ 的收敛半径 $R = +\infty$ .
+
+错误的原因是求收敛半径的公式 $\lim\limits_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|=\rho$ ，则 $R=\frac{1}{\rho}(\rho\neq0)$ ，条件是充分非必要的，其实证明收敛半径公式用的是正项级数的比值法，而正项级数的比值法（根值法、比较法）的条件是充分非必要的。
+
+例如: 求 $\sum_{n=0}^{\infty}\frac{2+(-1)^{n}}{2^{n}}x^{n}$ 的收敛半径.
+
+用根值公式,有
+
+$\lim\limits_ {n \rightarrow \infty} \sqrt [ n ]{| a _ {n} |} = \lim\limits_ {n \rightarrow \infty} \sqrt [ n ]{\frac {2 + (- 1) ^ {n}}{2 ^ {n}}} = \frac {1}{2},$
+
+故收敛半径 $R = 2$ .但
+
+$\lim\limits_ {n \rightarrow \infty} \left| \frac {a _ {n + 1}}{a _ {n}} \right| = \lim\limits_ {n \rightarrow \infty} \left| \frac {2 + (- 1) ^ {n + 1}}{2 ^ {n + 1}} \cdot \frac {2 ^ {n}}{2 + (- 1) ^ {n}} \right|$
+
+$= \lim\limits_{n\to \infty}\frac{1}{2}\cdot \frac{2 + (-1)^{n + 1}}{2 + (-1)^{n}} = \left\{ \begin{array}{ll}\frac{1}{6}, & n\text{为偶数，}\\ \frac{3}{2}, & n\text{为奇数，} \end{array} \right.$
+
+故 $\lim\limits_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|$ 不存在，即R=2不能保证 $\lim\limits_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|$ 存在."
+80172203,880,微积分,第七章 无穷级数,,3,综合题,填空题,,已知级数 $\sum_{n=2}^{\infty}\left(\mathrm{e}^{n-a\ln n}-1\right)$ 收敛，则 a 的取值范围为 \_\_\_\_.,,,,,"$(1,+\infty)$ .
+
+解 当 $a \leqslant 0$ 时, $\mathrm{e}^{n^{-a}\ln n} - 1 = \mathrm{e}^{\frac{\ln n}{n^a}} - 1 \to +\infty (n \to \infty)$ , 原级数发散.
+
+当 $a > 0$ 时， $\mathrm{e}^{n^{-a}\ln n} - 1\sim \frac{\ln n}{n^a} (n\to \infty).$
+
+当 $0 < a \leqslant 1$ 时， $\frac{\ln n}{n^a} > \frac{1}{n^a} (n \geqslant 3)$ ，而 $\sum_{n=2}^{\infty} \frac{1}{n^a} (0 < a \leqslant 1)$ 发散，故 $\sum_{n=2}^{\infty} \frac{\ln n}{n^a}$ 发散.
+
+当 $a > 1$ 时，取 $\xi > 0$ ，使得 $a - \xi > 1$ ，则
+
+$\lim\limits_ {n \rightarrow \infty} \frac {\frac {\ln n}{n ^ {a}}}{\frac {1}{n ^ {a - \xi}}} = \lim\limits_ {n \rightarrow \infty} \frac {\ln n}{n ^ {\xi}} = 0.$
+
+而 $\sum_{n=2}^{\infty} \frac{1}{n^{a-\xi}} (a - \xi > 1)$ 收敛, 由比较法知, 原级数收敛.
+
+综上所述， $a \in (1, +\infty)$ ."
+80172204,880,微积分,第七章 无穷级数,,4,综合题,填空题,,$\lim\limits_{n\to\infty}\frac{1}{n}\sum_{k=1}^{n}\frac{1}{3^{k}}\left(1+\frac{1}{k}\right)^{k^{2}}=$ \_\_\_\_.,,,,,"0.
+
+解 由级数和的定义,知
+
+$\lim\limits_ {n \rightarrow \infty} \sum_ {k = 1} ^ {n} \frac {1}{3 ^ {k}} \left(1 + \frac {1}{k}\right) ^ {k ^ {2}} = \sum_ {k = 1} ^ {\infty} \frac {1}{3 ^ {k}} \left(1 + \frac {1}{k}\right) ^ {k ^ {2}},$
+
+判别级数 $\sum_{k=1}^{\infty} \frac{1}{3^k} \left(1 + \frac{1}{k}\right)^{k^2}$ 是否收敛, 若收敛, 则 $\sum_{k=1}^{\infty} \frac{1}{3^k} \left(1 + \frac{1}{k}\right)^{k^2} = S$ 为常数.
+
+用根值法,有
+
+$\lim\limits_ {k \to \infty} \sqrt [ k ]{a _ {k}} = \lim\limits_ {k \to \infty} \left[ \frac {1}{3 ^ {k}} \left(1 + \frac {1}{k}\right) ^ {k ^ {2}} \right] ^ {\frac {1}{k}} = \frac {\mathrm{e}}{3} < 1,$
+
+故级数收敛, 又 $\lim\limits_{n\to\infty}\frac{1}{n}=0$ , 所以原极限 =0."
+80172205,880,微积分,第七章 无穷级数,,5,综合题,填空题,,$\lim\limits_{n\to\infty}\left(\frac{1}{a}+\frac{2}{a^{2}}+\cdots+\frac{n}{a^{n}}\right)(a>1)=$ \_\_\_\_.,,,,,"$\frac{a}{(1-a)^{2}}.$
+
+解 依题意,问题转化为求级数 $\sum_{n=1}^{\infty}\frac{n}{a^{n}}$ 的和.构造幂级数 $S(x)=\sum_{n=1}^{\infty}nx^{n}$ ,则
+
+$S (x) = \sum_ {n = 1} ^ {\infty} n x ^ {n} = x \sum_ {n = 1} ^ {\infty} n x ^ {n - 1} = x \left(\sum_ {n = 0} ^ {\infty} x ^ {n}\right) ^ {\prime} = x \left(\frac {1}{1 - x}\right) ^ {\prime} = \frac {x}{(1 - x) ^ {2}}, \quad | x | < 1,$
+
+令 $x = \frac{1}{a}$ ，则 $\lim\limits_{n \to \infty} \left( \frac{1}{a} + \frac{2}{a^{2}} + \cdots + \frac{n}{a^{n}} \right) = S \left( \frac{1}{a} \right) = \frac{\frac{1}{a}}{\left( 1 - \frac{1}{a} \right)^{2}} = \frac{a}{(1 - a)^{2}}.$"
+80172206,880,微积分,第七章 无穷级数,,6,综合题,填空题,,"设 $\sum_{n=1}^{\infty} (-1)^{n-1} u_n = 2, \sum_{n=1}^{\infty} u_{2n-1} = 5$ , 则 $\sum_{n=1}^{\infty} u_n = \underline{\quad}$ .",,,,,"8.
+
+解 利用收敛级数的定义. 令 $\tau_{n} = \sum_{k=1}^{n} (-1)^{k-1} u_{k}$ , $\sigma_{n} = \sum_{k=1}^{n} u_{2k-1}$ , $S_{n} = \sum_{k=1}^{n} u_{k}$ , 则
+
+$\begin{array}{r l} S _ {2 n} & = - (u _ {1} - u _ {2} + u _ {3} - u _ {4} + \dots + u _ {2 n - 1} - u _ {2 n}) + 2 (u _ {1} + u _ {3} + \dots + u _ {2 n - 1}) \\ & = - \tau_ {2 n} + 2 \sigma_ {n}, \end{array}$
+
+故 $\lim\limits_{n\to \infty}S_{2n} = -\lim\limits_{n\to \infty}\tau_{2n} + 2\lim\limits_{n\to \infty}\sigma_n = -2 + 2\times 5 = 8.$
+
+又 $S_{2n + 1} = S_{2n} + u_{2n + 1}$ ，且 $\lim\limits_{n\to \infty}S_{2n + 1} = \lim\limits_{n\to \infty}S_{2n} + \lim\limits_{n\to \infty}u_{2n + 1} = 8 + 0 = 8$ ，故 $\lim\limits_{n\to \infty}S_n = 8$ ，即 $\sum_{n = 1}^{\infty}u_n = 8.$
+
+【注】由 $\sum_{n=1}^{\infty} u_{2n-1} = S$ 收敛, 根据收敛级数的必要条件, 知 $\lim\limits_{n \to \infty} u_{2n+1} = 0$ ."
+80172207,880,微积分,第七章 无穷级数,,7,综合题,填空题,,"设 $\frac{1}{4} \ln \frac{1 + x}{1 - x} + \frac{1}{2} \arctan x - x = \sum_{n=1}^{\infty} a_{4n+1} x^{4n+1}, |x| < 1$ , 则 $a_{4n+1} =$ \_\_\_\_.",,,,,"$\frac{1}{4n+1}.$
+
+解 记 $f(x)=\frac{1}{4}\ln\frac{1+x}{1-x}+\frac{1}{2}\arctan x-x$ ，则
+
+故
+
+$\begin{array}{r l} f ^ {\prime} (x) & = \frac {1}{4} \Big (\frac {1}{1 + x} + \frac {1}{1 - x} \Big) + \frac {1}{2} \cdot \frac {1}{1 + x ^ {2}} - 1 \\ & = \frac {1}{1 - x ^ {4}} - 1 = \sum_ {n = 1} ^ {\infty} x ^ {4 n}. \\ f (x) & = f (x) - f (0) = \int_ {0} ^ {x} f ^ {\prime} (t) \mathrm{d} t = \sum_ {n = 1} ^ {\infty} \frac {x ^ {4 n + 1}}{4 n + 1}, \quad | x | < 1, \end{array}$
+
+于是 $a_{4n+1}=\frac{1}{4n+1}$ ."
+80172208,880,微积分,第七章 无穷级数,,8,综合题,填空题,,$\sum_{n=1}^{\infty}\int_{n}^{n+1}\frac{\mathrm{d}x}{x\sqrt{x-1}} = \underline{\quad}$ .,,,,,"$\pi$ .
+
+解 级数的前 $n$ 项和为 $S_{n} = \sum_{k=1}^{n}\int_{k}^{k+1}\frac{\mathrm{d}x}{x\sqrt{x-1}} = \int_{1}^{n+1}\frac{\mathrm{d}x}{x\sqrt{x-1}}$ , 故原级数之和为
+
+$S = \lim\limits_ {n \rightarrow \infty} S _ {n} = \lim\limits_ {n \rightarrow \infty} \int_ {1} ^ {n + 1} \frac {\mathrm{d} x}{x \sqrt {x - 1}} = \int_ {1} ^ {+ \infty} \frac {\mathrm{d} x}{x \sqrt {x - 1}}.$
+
+记 $I = \int_{1}^{+\infty}\frac{\mathrm{d}x}{x\sqrt{x - 1}} = \int_{1}^{2}\frac{\mathrm{d}x}{x\sqrt{x - 1}} +\int_{2}^{+\infty}\frac{\mathrm{d}x}{x\sqrt{x - 1}} = I_1 + I_2.$ 因
+
+$I _ {1} = \int_ {1} ^ {2} \frac {\mathrm{d} x}{x \sqrt {x - 1}} \frac {\sqrt {x - 1} = t}{x = t ^ {2} + 1} \int_ {0} ^ {1} \frac {2 t}{t (t ^ {2} + 1)} \mathrm{d} t = 2 \arctan t \Big | _ {0} ^ {1} = \frac {\pi}{2},$
+
+$I _ {2} = \int_ {2} ^ {+ \infty} \frac {\mathrm{d} x}{x \sqrt {x - 1}} \frac {\sqrt {x - 1} = t}{x = t ^ {2} + 1} \int_ {1} ^ {+ \infty} \frac {2 t}{t (t ^ {2} + 1)} \mathrm{d} t = 2 \arctan t \Big | _ {1} ^ {+ \infty} = \frac {\pi}{2},$
+
+故 $I = I_{1} + I_{2} = \frac{\pi}{2} +\frac{\pi}{2} = \pi .$ 所以 $\sum_{n = 1}^{\infty}\int_{n}^{n + 1}\frac{\mathrm{d}x}{x\sqrt{x - 1}} = \pi .$"
+80172209,880,微积分,第七章 无穷级数,,9,综合题,填空题,,$\sum_{n=1}^{\infty}\int_{n}^{n+1}\frac{\arctan x}{x^2}\mathrm{d}x = \underline{\quad}$ .,,,,,"$\frac{\pi}{4}+\frac{1}{2}\ln2.$
+
+解 因级数的前 $n$ 项和为
+
+$S _ {n} = \sum_ {k = 1} ^ {n} \int_ {k} ^ {k + 1} \frac {\arctan x}{x ^ {2}} \mathrm{d} x = \int_ {1} ^ {n + 1} \frac {\arctan x}{x ^ {2}} \mathrm{d} x,$
+
+故原级数的和为
+
+$S = \lim\limits_ {n \to \infty} S _ {n} = \lim\limits_ {n \to \infty} \int_ {1} ^ {n + 1} {\frac {\arctan x}{x ^ {2}}} \mathrm{d} x = \int_ {1} ^ {+ \infty} {\frac {\arctan x}{x ^ {2}}} \mathrm{d} x.$
+
+又
+
+$\begin{array}{r l} \int_ {1} ^ {+ \infty} \frac {\arctan x}{x ^ {2}} \mathrm{d} x & = - \int_ {1} ^ {+ \infty} \arctan x \mathrm{d} \left(\frac {1}{x}\right) \\ & = - \frac {1}{x} \arctan x \Bigg | _ {1} ^ {+ \infty} + \int_ {1} ^ {+ \infty} \frac {\mathrm{d} x}{x (1 + x ^ {2})} = \frac {\pi}{4} + \int_ {1} ^ {+ \infty} \frac {\mathrm{d} x}{x (1 + x ^ {2})}, \end{array}$
+
+而
+
+$\begin{array}{r l} \int_ {1} ^ {+ \infty} \frac {\mathrm{d} x}{x (1 + x ^ {2})} & = \int_ {1} ^ {+ \infty} \left(\frac {1}{x} - \frac {x}{1 + x ^ {2}}\right) \mathrm{d} x \\ & = \lim\limits_ {b \to + \infty} \left(\ln x - \ln \sqrt {1 + x ^ {2}}\right) \Bigg | _ {1} ^ {b} = \lim\limits_ {b \to + \infty} \ln \frac {x}{\sqrt {1 + x ^ {2}}} \Bigg | _ {1} ^ {b} = \frac {1}{2} \ln 2, \end{array}$
+
+故原级数的和为 $\frac{\pi}{4}+\frac{1}{2}\ln2.$"
+80172301,880,微积分,第七章 无穷级数,,1,综合题,解答题,,已知函数 $y = y(x)$ 满足方程 $y' = x + y$ ，且 $y(0) = 1$ ，讨论级数 $\sum_{n=1}^{\infty}\left[y\left(\frac{1}{n}\right) - 1 - \frac{1}{n}\right]$ 的敛散性.,,,,,"解 由 $y' = x + y$ ，得 $y'' = 1 + y'$ ，又由 $y(0) = 1$ ，知 $y'(0) = 1, y''(0) = 2$ ，根据麦克劳林公式，有
+
+$y \left(\frac {1}{n}\right) = y (0) + y ^ {\prime} (0) \frac {1}{n} + \frac {1}{2} y ^ {\prime \prime} (0) \frac {1}{n ^ {2}} + o \left(\frac {1}{n ^ {2}}\right) = 1 + \frac {1}{n} + \frac {1}{n ^ {2}} + o \left(\frac {1}{n ^ {2}}\right)$
+
+所以 $\left|y\left(\frac{1}{n}\right)-1-\frac{1}{n}\right|$ 与 $\frac{1}{n^{2}}$ 是等价无穷小 $(n\to\infty)$ . 而 $\sum_{n=1}^{\infty}\frac{1}{n^{2}}$ 收敛，由比较审敛法，知 $\sum_{n=1}^{\infty}\left[y\left(\frac{1}{n}\right)-1-\frac{1}{n}\right]$ 绝对收敛.
+
+【注】此题也可先解微分方程 $\left\{\begin{aligned}y^{\prime}-y&=x,\\ y(0)&=1,\end{aligned}\right.$ 得 $y=y(x)$ ，再用麦克劳林公式展开 $y\left(\frac{1}{n}\right)$ 求解."
+80172302,880,微积分,第七章 无穷级数,,2,综合题,解答题,,求 $\sum_{n=1}^{\infty} \frac{x^n}{n[3^n + (-2)^n]}$ 的收敛区间，并讨论在端点处的敛散性.,,,,,"解 先用公式求收敛半径, 有
+
+$\lim\limits_ {n \to \infty} \left| \frac {a _ {n + 1}}{a _ {n}} \right| = \lim\limits_ {n \to \infty} \frac {n [ 3 ^ {n} + (- 2) ^ {n} ]}{(n + 1) [ 3 ^ {n + 1} + (- 2) ^ {n + 1} ]} = \lim\limits_ {n \to \infty} \frac {1 + \left(- \frac {2}{3}\right) ^ {n}}{3 \left[ 1 + \left(- \frac {2}{3}\right) ^ {n + 1} \right]} = \frac {1}{3},$
+
+故收敛半径 R = 3，收敛区间为 $(-3, 3)$ .
+
+当 x = 3 时, 级数为 $\sum_{n=1}^{\infty}\frac{3^{n}}{n\left[3^{n}+(-2)^{n}\right]}$ ,
+
+$\frac {3 ^ {n}}{n \left[ 3 ^ {n} + (- 2) ^ {n} \right]} = \frac {1}{1 + \left(- \frac {2}{3}\right) ^ {n}} \cdot \frac {1}{n} \geqslant \frac {1}{2 n},$
+
+而 $\sum_{n=1}^{\infty} \frac{1}{2n}$ 发散, 由比较审敛法, 知级数发散.
+
+当 $x = -3$ 时，级数为 $\sum_{n=1}^{\infty} \frac{(-3)^n}{n[3^n + (-2)^n]}$ ，拆成两个级数，
+
+$\begin{array}{r l} \frac {(- 3) ^ {n}}{n [ 3 ^ {n} + (- 2) ^ {n} ]} & = \frac {(- 1) ^ {n} [ 3 ^ {n} + (- 2) ^ {n} ] - 2 ^ {n}}{3 ^ {n} + (- 2) ^ {n}} \cdot \frac {1}{n} \\ & = (- 1) ^ {n} \frac {1}{n} - \frac {2 ^ {n}}{3 ^ {n} + (- 2) ^ {n}} \cdot \frac {1}{n}. \end{array}$
+
+$\sum_{n=1}^{\infty}(-1)^{n}\frac{1}{n}$ 条件收敛，对 $\sum_{n=1}^{\infty}\frac{2^n}{3^n + (-2)^n}\cdot\frac{1}{n}$ ，采用比值法，有
+
+$\begin{array}{r l} & {\underset {n \to \infty} {\lim} \frac {a _ {n + 1}}{a _ {n}} = \underset {n \to \infty} {\lim} \frac {2 ^ {n + 1}}{3 ^ {n + 1} + (- 2) ^ {n + 1}} \cdot \frac {1}{n + 1} \cdot \frac {[ 3 ^ {n} + (- 2) ^ {n} ] \cdot n}{2 ^ {n}}} \\ & {\qquad = 2 \underset {n \to \infty} {\lim} \frac {3 ^ {n} + (- 2) ^ {n}}{3 ^ {n + 1} + (- 2) ^ {n + 1}} = \frac {2}{3} \underset {n \to \infty} {\lim} \frac {1 + \left(- \frac {2}{3}\right) ^ {n}}{1 + \left(- \frac {2}{3}\right) ^ {n + 1}} = \frac {2}{3} < 1,} \end{array}$
+
+故级数收敛,所以 $\sum_{n=1}^{\infty}\frac{x^{n}}{n\left[3^{n}+(-2)^{n}\right]}$ 在x=-3处收敛."
+80172303,880,微积分,第七章 无穷级数,,3,综合题,解答题,,"设数列 $\{a_{n}\}$ 满足 $a_{n}=a_{0}+nd(n=1,2,\cdots)$ ，其中 $a_{0}\neq0,d\neq0$ 为常数.求:
+(I) $\sum_{n=0}^{\infty}a_{n}x^{n}$ 的收敛域; 
+(II) $\sum_{n=0}^{\infty}\frac{a_{n}}{2^{n}}$ .",,,,,"解（Ⅰ）利用公式求收敛半径，有
+
+$\lim\limits_ {n \rightarrow \infty} \left| \frac {a _ {n + 1}}{a _ {n}} \right| = \lim\limits_ {n \rightarrow \infty} \left| \frac {a _ {0} + (n + 1) d}{a _ {0} + n d} \right| = 1,$
+
+故 R = 1，收敛区间为 $(-1, 1)$ .
+
+当 $x = \pm 1$ 时， $\sum_{n=0}^{\infty} (\pm 1)^n \cdot a_n$ 发散（由 $\lim\limits_{n \to \infty} a_n \neq 0$ 知），故收敛域为 $(-1, 1)$ .
+
+(Ⅱ) 求 $\sum_{n=0}^{\infty} a_{n} x^{n}$ 的和函数 $S(x)$ .
+
+$S (x) = \sum_ {n = 0} ^ {\infty} a _ {n} x ^ {n} = \sum_ {n = 0} ^ {\infty} (a _ {0} + n d) x ^ {n} = \sum_ {n = 0} ^ {\infty} a _ {0} x ^ {n} + d \sum_ {n = 0} ^ {\infty} n x ^ {n} \stackrel {\text {记}} {=} S _ {1} (x) + S _ {2} (x),$
+
+$S _ {1} (x) = \sum_ {n = 0} ^ {\infty} a _ {0} x ^ {n} = \frac {a _ {0}}{1 - x},$
+
+$\begin{array}{r l} S _ {2} (x) & = d \sum_ {n = 0} ^ {\infty} n x ^ {n} = d x \sum_ {n = 0} ^ {\infty} n x ^ {n - 1} = d x \sum_ {n = 0} ^ {\infty} (x ^ {n}) ^ {\prime} = d x \left(\sum_ {n = 0} ^ {\infty} x ^ {n}\right) ^ {\prime} \\ & = d x \left(\frac {1}{1 - x}\right) ^ {\prime} = \frac {d x}{(1 - x) ^ {2}}, \end{array}$
+
+故 $S(x) = \frac{a_0}{1 - x} +\frac{dx}{(1 - x)^2}$ 令 $x = \frac{1}{2}$ ，得 $\sum_{n = 0}^{\infty}\frac{a_n}{2^n} = 2a_0 + 2d.$"
+80172304,880,微积分,第七章 无穷级数,,4,综合题,解答题,,"设 $\frac{1}{1 - x - x^2} = \sum_{n=0}^{\infty} a_n x^n$ . 证明:
+(I)$a_{0}=1,a_{1}=1,a_{n+2}=a_{n+1}+a_{n}(n=0,1,2,\cdots);$
+(II) $\sum_{n=1}^{\infty}\frac{a_{n+1}}{a_{n}a_{n+2}}$ 收敛，并求其和.",,,,,"证（I）由 $\frac{1}{1 - x - x^2} = \sum_{n=0}^{\infty} a_n x^n$ ，得 $(1 - x - x^2) \sum_{n=0}^{\infty} a_n x^n = 1$ ，即
+
+$\sum_ {n = 0} ^ {\infty} a _ {n} x ^ {n} - \sum_ {n = 0} ^ {\infty} a _ {n} x ^ {n + 1} - \sum_ {n = 0} ^ {\infty} a _ {n} x ^ {n + 2} = 1,$
+
+变形为
+
+$\left(a _ {0} + a _ {1} x + \sum_ {n = 0} ^ {\infty} a _ {n + 2} x ^ {n + 2}\right) - \left(a _ {0} x + \sum_ {n = 0} ^ {\infty} a _ {n + 1} x ^ {n + 2}\right) - \sum_ {n = 0} ^ {\infty} a _ {n} x ^ {n + 2} = 1.$
+
+比较上式两边同次幂系数,得
+
+$a _ {0} = 1, \quad a _ {1} - a _ {0} = 0, \quad a _ {n + 2} - a _ {n + 1} - a _ {n} = 0 \quad (n = 0, 1, 2, \dots),$
+
+故 $a_{0}=1,a_{1}=1,a_{n+2}=a_{n+1}+a_{n}(n=0,1,2,\cdots)$ .
+
+(Ⅱ) $\sum_{n=1}^{\infty}\frac{a_{n+1}}{a_{n}a_{n+2}}=\sum_{n=1}^{\infty}\frac{a_{n+2}-a_{n}}{a_{n}a_{n+2}}=\sum_{n=1}^{\infty}\left(\frac{1}{a_{n}}-\frac{1}{a_{n+2}}\right)$ ，又其前n项的和为
+
+$S _ {n} = \left(\frac {1}{a _ {1}} - \frac {1}{a _ {3}}\right) + \left(\frac {1}{a _ {2}} - \frac {1}{a _ {4}}\right) + \dots + \left(\frac {1}{a _ {n}} - \frac {1}{a _ {n + 2}}\right) = \frac {1}{a _ {1}} + \frac {1}{a _ {2}} - \frac {1}{a _ {n + 1}} - \frac {1}{a _ {n + 2}},$
+
+由
+
+$a _ {0} = a _ {1} = 1, \quad a _ {2} = a _ {0} + a _ {1} = 2, \quad a _ {n + 2} = a _ {n} + a _ {n + 1},$
+
+得 $\lim\limits_{n\to\infty}a_n=+\infty$ ，故 $\lim\limits_{n\to\infty}S_n=\frac{1}{a_1}+\frac{1}{a_2}=\frac{3}{2}$ ，即 $\sum_{n=1}^{\infty}\frac{a_{n+1}}{a_na_{n+2}}=\frac{3}{2}$ ."
+80172305,880,微积分,第七章 无穷级数,,5,综合题,解答题,,"设 $\sum_{n=1}^{\infty}u_{n}(u_{n}>0)$ 发散, $S_{n}=u_{1}+u_{2}+\cdots+u_{n}$ .
+(I) 求 $\sum_{n=1}^{\infty}\left(\frac{1}{S_{n}}-\frac{1}{S_{n+1}}\right)$ 的和;
+(II) 证明: $\sum_{n=1}^{\infty} \frac{u_n}{S_n^2}$ 收敛.",,,,,"解（I）由已知， $\sum_{n=1}^{\infty}u_{n}(u_{n}>0)$ 发散，可知 $\lim\limits_{n\to\infty}S_{n}=+\infty$ . 记 $S_{n}^{\prime}$ 为所求级数的部分和，则
+
+$\begin{array}{r l} S _ {n} ^ {\prime} & = \left(\frac {1}{S _ {1}} - \frac {1}{S _ {2}}\right) + \left(\frac {1}{S _ {2}} - \frac {1}{S _ {3}}\right) + \dots + \left(\frac {1}{S _ {n}} - \frac {1}{S _ {n + 1}}\right) \\ & = \frac {1}{S _ {1}} - \frac {1}{S _ {n + 1}}, \end{array}$
+
+故 $\sum_{n=1}^{\infty}\left(\frac{1}{S_n}-\frac{1}{S_{n+1}}\right)=\lim\limits_{n\to\infty}S_n'$ = $\frac{1}{S_1}=\frac{1}{u_1}$ .
+
+证（Ⅱ）记 $\sum_{n=1}^{\infty} \frac{u_n}{S_n^2}$ 的部分和为 $S_n''$ ，则
+
+$\begin{array}{r l} S _ {n} ^ {\prime \prime} & = \sum_ {k = 1} ^ {n} \frac {u _ {k}}{S _ {k} ^ {2}} = \frac {1}{u _ {1}} + \sum_ {k = 2} ^ {n} \frac {S _ {k} - S _ {k - 1}}{S _ {k} ^ {2}} \\ & \leqslant \frac {1}{u _ {1}} + \sum_ {k = 2} ^ {n} \frac {S _ {k} - S _ {k - 1}}{S _ {k - 1} S _ {k}} = \frac {1}{u _ {1}} + \sum_ {k = 2} ^ {n} \left(\frac {1}{S _ {k - 1}} - \frac {1}{S _ {k}}\right) \\ & = \frac {1}{u _ {1}} + \frac {1}{S _ {1}} - \frac {1}{S _ {n}} \leqslant \frac {1}{u _ {1}} + \frac {1}{u _ {1}} = \frac {2}{u _ {1}}, \end{array}$
+
+从而 $\{S_n''\}$ 有上界，且该级数为正项级数，故 $\sum_{n=1}^{\infty} \frac{u_n}{S_n^2}$ 收敛."
+80172306,880,微积分,第七章 无穷级数,,6,综合题,解答题,,"设 $f(x)$ 在 $[a, b]$ 上可导，且满足 $a \leqslant f(x) \leqslant b, |f'(x)| \leqslant k < 1, u_0 \in [a, b], u_n = f(u_{n-1})(u = 1, 2, \cdots)$ ，证明：
+(I) $\sum_{n=1}^{\infty}\left(u_{n+1}-u_{n}\right)$ 绝对收敛;
+(II)$\lim\limits_{n\to\infty}u_n$ 存在.",,,,,"证 (I)
+
+$\begin{array}{r l} \mid u _ {n + 1} - u _ {n} \mid & = \mid f (u _ {n}) - f (u _ {n - 1}) \mid = \mid f ^ {\prime} (\xi_ {n}) \mid \mid u _ {n} - u _ {n - 1} \mid \\ & \leqslant k \mid u _ {n} - u _ {n - 1} \mid \leqslant k ^ {2} \mid u _ {n - 1} - u _ {n - 2} \mid \\ & \leqslant \dots \leqslant k ^ {n} \mid u _ {1} - u _ {0} \mid , \end{array}$
+
+而 $\sum_{n=1}^{\infty} k^n |u_1 - u_0|$ 收敛(等比级数 $k < 1$ ), 由比较审敛法, 知 $\sum_{n=1}^{\infty} (u_{n+1} - u_n)$ 绝对收敛.
+
+（Ⅱ）由（Ⅰ）知， $\sum_{n=1}^{\infty}(u_{n+1}-u_n)$ 绝对收敛，从而 $\sum_{n=1}^{\infty}(u_{n+1}-u_n)$ 收敛，故其部分和的极限 $\lim\limits_{n\to\infty}S_n=\lim\limits_{n\to\infty}(u_{n+1}-u_1)$ 存在，从而 $\lim\limits_{n\to\infty}u_{n+1}$ 存在 $(u_1$ 是一个数），即 $\lim\limits_{n\to\infty}u_n$ 存在."
+80172307,880,微积分,第七章 无穷级数,,7,综合题,解答题,,"设 $f(x)$ 满足 $\mathrm{e}^{f(x)}[f'(x)-1]=x-1(x\geqslant0),f(0)=0,$ 数列 $\{a_{n}\}$ 满足 $a_{1}=1,$
+$$a _ {n + 1} = f (a _ {n}) (n = 1, 2, \dots).$$
+(I) 证明: $\lim\limits_{n\to\infty}a_{n}$ 存在, 并求其值;
+(II) 求 $\sum_{n=1}^{\infty} a_n x^n$ 的收敛域及 $\sum_{n=1}^{\infty} a_n$ 的和.",,,,,"证 (I) 由 $\mathrm{e}^{f(x)}[f'(x) - 1] = x - 1$ , 得 $\mathrm{e}^{f(x)}f'(x) - \mathrm{e}^{f(x)} = x - 1$ .
+
+令 $\mathrm{e}^{f(x)} = u(x)$ ，则
+
+$\begin{array}{r l} u ^ {\prime} (x) - u (x) & = x - 1, \\ u (x) & = \mathrm{e} ^ {\int \mathrm{d} x} \left[ \int (x - 1) \mathrm{e} ^ {- \int \mathrm{d} x} \mathrm{d} x + c \right] \\ & = \mathrm{e} ^ {x} \left[ (1 - x) \mathrm{e} ^ {- x} - \mathrm{e} ^ {- x} + c \right] \\ & = c \mathrm{e} ^ {x} - x. \end{array}$
+
+由 $f(0)=0$ 及 $\mathrm{e}^{f(x)}=u(x)$ ，知 $u(0)=1$ ，可得 c=1，从而 $\mathrm{e}^{f(x)}=u(x)=\mathrm{e}^{x}-x$ ，即 $f(x)=\ln(\mathrm{e}^{x}-x)$ ，故 $a_{n+1}=\ln(\mathrm{e}^{a_{n}}-a_{n})$ 。
+
+由已知 $a_1 = 1 > 0$ ，假设 $a_k > 0$ ，则
+
+$a_{k+1}=\ln(\mathrm{e}^{a_{k}}-a_{k})>\ln1=0$ （这里利用了当 x>0 时， $e^{x}-x>1$ ）.
+
+由数学归纳法,知 $a_{n}>0$ .
+
+又由 $a_{n + 1} = \ln (\mathrm{e}^{a_n} - a_n)$ ，得 $\mathrm{e}^{a_n} - \mathrm{e}^{a_{n + 1}} = a_n > 0.$ 所以 $a_{n} > a_{n + 1} > 0,\{a_{n}\}$ 单调递减
+
+由单调有界准则，知 $\lim\limits_{n\to \infty}a_n$ 存在，记 $\lim\limits_{n\to \infty}a_n = A.\mathrm{e}^{a_n} - \mathrm{e}^{a_{n + 1}} = a_n$ 两边取极限 $(n\rightarrow \infty)$ ，得 $\mathrm{e}^A -\mathrm{e}^A = A.$ 故 $\lim\limits_{n\to \infty}a_n = A = 0.$
+
+$\begin{array}{r l} \text {解（II）因} & \lim\limits_ {n \to \infty} \left| \frac {a _ {n + 1}}{a _ {n}} \right| = \lim\limits_ {n \to \infty} \frac {a _ {n + 1}}{a _ {n}} = \lim\limits_ {n \to \infty} \frac {\ln (\mathrm{e} ^ {a _ {n}} - a _ {n})}{a _ {n}} = \lim\limits_ {n \to \infty} \frac {\ln (\mathrm{e} ^ {a _ {n}} - a _ {n} + 1 - 1)}{a _ {n}} \\ & = \lim\limits_ {n \to \infty} \frac {\mathrm{e} ^ {a _ {n}} - a _ {n} - 1}{a _ {n}} \xlongequal {a _ {n} = t} \lim\limits_ {t \to 0 ^ {+}} \frac {\mathrm{e} ^ {t} - t - 1}{t} = \lim\limits_ {t \to 0 ^ {+}} \frac {\mathrm{e} ^ {t} - 1}{1} = 0, \end{array}$
+
+故收敛域为 $(-∞,+∞)$ .
+
+由于 $\sum_{n=1}^{\infty} a_n$ 的前 $n$ 项和为
+
+$S _ {n} = \sum_ {k = 1} ^ {n} a _ {k} = \sum_ {k = 1} ^ {n} (\mathrm{e} ^ {a _ {k}} - \mathrm{e} ^ {a _ {k + 1}}) = \mathrm{e} ^ {a _ {1}} - \mathrm{e} ^ {a _ {n + 1}},$
+
+故 $\sum_{n=1}^{\infty} a_n$ 的和为 $S = \lim\limits_{n \to \infty} S_n = e - 1$ ."
+80172308,880,微积分,第七章 无穷级数,,8,综合题,解答题,,"设幂级数 $\sum_{n=0}^{\infty} a_n x^n$ 在 $x \in (-\infty, +\infty)$ 内满足 $a_0 = 1$ , 且 $\sum_{n=0}^{\infty} 2a_n x^{n+1} + \sum_{n=0}^{\infty} (n+1)a_{n+1} x^n = 0$ , 求级数 $\sum_{n=0}^{\infty} a_n$ 的和.",,,,,"解 令 $S(x) = \sum_{n=0}^{\infty} a_n x^n$ ，则
+
+$\begin{array}{r l} S ^ {\prime} (x) & = \sum_ {n = 1} ^ {\infty} n a _ {n} x ^ {n - 1} = \sum_ {n = 0} ^ {\infty} (n + 1) a _ {n + 1} x ^ {n}, \\ & 2 x S (x) = \sum_ {n = 0} ^ {\infty} 2 a _ {n} x ^ {n + 1}. \\ & S ^ {\prime} (x) + 2 x S (x) = 0, \end{array}$
+
+依题设,有
+
+解此一阶线性微分方程, 得 $S(x) = C e^{-\int 2x \, dx} = C e^{-x^{2}}$ .
+
+由 $a_0 = 1$ ，知 $S(0) = a_0 = 1$ ，得 $C = 1.$ 所以 $S(x) = \mathrm{e}^{-x^2}$ ，故 $\sum_{n=1}^{\infty} a_n = S(1) = \mathrm{e}^{-1}$ ."
+80172309,880,微积分,第七章 无穷级数,,9,综合题,解答题,,"将 $f(x)=xe^{x}$ 在 x=2 处展开为幂级数, 并求 $f^{(n)}(2)$ .",,,,,"解
+
+$\begin{array}{r l} f (x) & = x \mathrm{e} ^ {x} = (x - 2 + 2) \mathrm{e} ^ {x - 2 + 2} = \mathrm{e} ^ {2} [ (x - 2) + 2 ] \mathrm{e} ^ {x - 2} \\ & = \mathrm{e} ^ {2} [ (x - 2) + 2 ] \sum_ {n = 0} ^ {\infty} \frac {(x - 2) ^ {n}}{n !} \\ & = \mathrm{e} ^ {2} \sum_ {n = 0} ^ {\infty} \frac {(x - 2) ^ {n + 1}}{n !} + 2 \mathrm{e} ^ {2} \left[ 1 + \sum_ {n = 1} ^ {\infty} \frac {(x - 2) ^ {n}}{n !} \right] \\ & = \mathrm{e} ^ {2} \sum_ {n = 0} ^ {\infty} \frac {(x - 2) ^ {n + 1}}{n !} + 2 \mathrm{e} ^ {2} \left[ 1 + \sum_ {n = 0} ^ {\infty} \frac {(x - 2) ^ {n + 1}}{(n + 1) !} \right] \\ & = 2 \mathrm{e} ^ {2} + \sum_ {n = 0} ^ {\infty} \frac {\mathrm{e} ^ {2} (n + 3)}{(n + 1) !} (x - 2) ^ {n + 1}, x \in (- \infty , + \infty). \end{array}$
+应该次数减一，下标加一，就能把常数项加进去
+
+由 $a_{n + 1} = \frac{\mathrm{e}^2(n + 3)}{(n + 1)!}$ ，可知 $a_{n} = \frac{\mathrm{e}^{2}(n + 2)}{n!}$ 故 $f^{(n)}(2) = n!a_n = \mathrm{e}^2 (n + 2).$"
+80172310,880,微积分,第七章 无穷级数,,10,综合题,解答题,,"将 $f(x) = \frac{x - 1}{3 - x}$ 在 $x = 1$ 处展开为幂级数, 并求 $f^{(n)}(1)$ .",,,,,"解
+
+$\begin{array}{r l} f (x) & = \frac {x - 1}{3 - x} = (x - 1) \cdot \frac {1}{3 - x} = (x - 1) \cdot \frac {1}{2 - (x - 1)} \\ & = \frac {1}{2} (x - 1) \cdot \frac {1}{1 - \frac {x - 1}{2}} \\ & = \frac {1}{2} (x - 1) \left[ 1 + \frac {x - 1}{2} + \frac {(x - 1) ^ {2}}{2 ^ {2}} + \dots + \frac {(x - 1) ^ {n}}{2 ^ {n}} + \dots \right] \\ & = \frac {1}{2} \left[ (x - 1) + \frac {(x - 1) ^ {2}}{2} + \frac {(x - 1) ^ {3}}{2 ^ {2}} + \dots + \frac {(x - 1) ^ {n + 1}}{2 ^ {n}} + \dots \right], \end{array}$
+
+其中 $|x - 1| < 2$ . $f^{(n)}(1) = n!a_n = \frac{n!}{2^n}$ ."
+80172311,880,微积分,第七章 无穷级数,,11,综合题,解答题,,"将 $f(x) = \sin x + x\cos x$ 展开为 $x$ 的幂级数, 并求 $\sum_{n=0}^{\infty} (-1)^n \frac{n+1}{(2n+1)!}$ 的和.",,,,,"解
+
+$\begin{array}{r l} f (x) & = \sin x + x \cos x \\ & = \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {x ^ {2 n + 1}}{(2 n + 1) !} + x \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {x ^ {2 n}}{(2 n) !} \\ & = \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \left[ \frac {1}{(2 n + 1) !} + \frac {1}{(2 n) !} \right] x ^ {2 n + 1} \\ & = \sum_ {n = 0} ^ {\infty} (- 1) ^ {n} \frac {2 (n + 1)}{(2 n + 1) !} x ^ {2 n + 1}, \quad x \in (- \infty , + \infty). \end{array}$
+
+令 $x = 1$ ，则 $\sum_{n=0}^{\infty}(-1)^{n}\frac{n+1}{(2n+1)!} = \frac{1}{2} f(1) = \frac{1}{2} (\sin 1 + \cos 1).$
+
+【注】 $\frac{1}{(2n+1)!}+\frac{1}{(2n)!}=\frac{2(n+1)}{(2n+1)!}$ ."
+80172312,880,微积分,第七章 无穷级数,,12,综合题,解答题,,"将 $f(x) = \frac{xe^x - e^x + 1}{x^2}$ 展开为 $x$ 的幂级数, 并求 $\sum_{n=1}^{\infty} \frac{n}{(n+1)!}$ 的和.",,,,,"解 直接展开较为复杂, 考虑到 $\frac{x e^{x} - e^{x} + 1}{x^{2}} = \left(\frac{e^{x} - 1}{x}\right)'$ . 令 $g(x) = \frac{e^{x} - 1}{x}$ , 则
+
+$\begin{array}{r l} g (x) & = \frac {\mathrm{e} ^ {x} - 1}{x} = \frac {1}{x} \left(1 + x + \frac {x ^ {2}}{2 !} + \dots + \frac {x ^ {n}}{n !} + \dots - 1\right) \quad (| x | < \infty , x \neq 0) \\ & = 1 + \frac {x}{2 !} + \dots + \frac {x ^ {n - 1}}{n !} + \dots , \end{array}$
+
+故
+
+$f (x) = \left(\frac {\mathrm{e} ^ {x} - 1}{x}\right) ^ {\prime} = \frac {1}{2 !} + \frac {2}{3 !} x + \dots + \frac {n}{(n + 1) !} x ^ {n - 1} + \dots ,$
+
+所以
+
+$\frac {x \mathrm{e} ^ {x} - \mathrm{e} ^ {x} + 1}{x ^ {2}} = \sum_ {n = 1} ^ {\infty} \frac {n}{(n + 1) !} x ^ {n - 1}, \quad | x | < \infty , x \neq 0.$
+
+令 x = 1, 得 $\sum_{n=1}^{\infty}\frac{n}{(n+1)!}=1.$"
+80172313,880,微积分,第七章 无穷级数,,13,综合题,解答题,,求级数 $\sum_{n=0}^{\infty} x e^{-nx}$ 的收敛域及和函数.,,,,,"解 所给级数不是幂级数.
+
+由于 $\sum_{n=0}^{\infty} x \mathrm{e}^{-nx} = x \sum_{n=0}^{\infty} (\mathrm{e}^{-x})^n$ ，令 $\mathrm{e}^{-x} = t$ ，而 $\sum_{n=0}^{\infty} t^n = \frac{1}{1-t}, t \in (-1, 1)$ ，故当 $-1 < \mathrm{e}^{-x} < 1$ 时 ( $\mathrm{e}^{-x} > 0$ 恒成立)，即当 $x > 0$ 时，原级数收敛，且 $\sum_{n=0}^{\infty} x \mathrm{e}^{-nx} = \frac{x}{1 - \mathrm{e}^{-x}} = \frac{x \mathrm{e}^x}{\mathrm{e}^x - 1}, x \in (0, +\infty)$ .
+
+当 x = 0 时，级数和为 0，故 $\sum_{n=0}^{\infty} x e^{-nx} = \begin{cases} \frac{x e^{x}}{e^{x} - 1}, & x > 0, \\ 0, & x = 0. \end{cases}$"
+80172314,880,微积分,第七章 无穷级数,,14,综合题,解答题,,"设 $a_0 = 3, a_1 = 5$ , 且 $na_n = \frac{2}{3} a_{n-1} - (n-1)a_{n-1}(n > 1)$ , 证明: 当 $|x| < 1$ 时, $\sum_{n=0}^{\infty} a_n x^n$ 收敛, 并求其和函数.",,,,,"证 由 $na_{n} = \frac{2}{3} a_{n-1} - (n-1)a_{n-1}$ , 可知 $a_{n+1} = \frac{1}{n+1}\left(\frac{2}{3} - n\right)a_{n}$ . 因为
+
+$\lim\limits_ {n \to \infty} \left| \frac {a _ {n + 1} x ^ {n + 1}}{a _ {n} x ^ {n}} \right| = \lim\limits_ {n \to \infty} \left| \frac {\frac {1}{n + 1} \left(\frac {2}{3} - n\right) a _ {n}}{a _ {n}} \right| \cdot | x | = | x | < 1,$
+
+所以当 $|x| < 1$ 时， $\sum_{n=0}^{\infty} a_n x^n$ 绝对收敛，故 $\sum_{n=0}^{\infty} a_n x^n$ 收敛.
+
+令 $y(x) = \sum_{n=0}^{\infty} a_n x^n$ ，则
+
+$\begin{array}{r l} y ^ {\prime} (x) & = \sum_ {n = 1} ^ {\infty} n a _ {n} x ^ {n - 1} = a _ {1} + \sum_ {n = 2} ^ {\infty} n a _ {n} x ^ {n - 1} = a _ {1} + \sum_ {n = 1} ^ {\infty} (n + 1) a _ {n + 1} x ^ {n} \\ & = 5 + \sum_ {n = 1} ^ {\infty} \left(\frac {2}{3} a _ {n} - n a _ {n}\right) x ^ {n} = 5 + \frac {2}{3} \left(\sum_ {n = 0} ^ {\infty} a _ {n} x ^ {n} - a _ {0}\right) - x \sum_ {n = 1} ^ {\infty} n a _ {n} x ^ {n - 1} \\ & = 5 + \frac {2}{3} y (x) - \frac {2}{3} \times 3 - x y ^ {\prime} (x) = 3 + \frac {2}{3} y (x) - x y ^ {\prime} (x), \end{array}$
+
+故 $(x + 1)y'(x) - \frac{2}{3} y(x) = 3$ ，即
+
+$y ^ {\prime} - \frac {2}{3 (x + 1)} y = \frac {3}{x + 1}.$
+
+解一阶线性微分方程，得 $y = C(x + 1)^{\frac{2}{3}} - \frac{9}{2}$ ，由 $y(0) = a_0 = 3$ ，得 $C = \frac{15}{2}$ ，故
+
+$y (x) = \sum_ {n = 0} ^ {\infty} a _ {n} x ^ {n} = \frac {1 5}{2} (x + 1) ^ {\frac {2}{3}} - \frac {9}{2}.$"
+80172315,880,微积分,第七章 无穷级数,,15,综合题,解答题,,"设 $f(x) = \sum_{n=0}^{\infty} \frac{a_n}{n!} x^n$ 满足 $\begin{cases} f''(x) - f'(x) - 2f(x) = 0, \\ f(0) = 0, f'(0) = 1, \end{cases}$ 求 $f(x)$ 及 $a_n$ .",,,,,"解 特征方程为 $r^{2}-r-2=0$ ，得 $r_{1}=-1, r_{2}=2$ ，故通解为
+
+$f (x) = C _ {1} \mathrm{e} ^ {- x} + C _ {2} \mathrm{e} ^ {2 x}.$
+
+由 $f(0) = 0, f'(0) = 1$ ，得 $C_1 + C_2 = 0, -C_1 + 2C_2 = 1$ ，解得 $C_1 = -\frac{1}{3}, C_2 = \frac{1}{3}$ ，故
+
+$f (x) = - \frac {1}{3} \mathrm{e} ^ {- x} + \frac {1}{3} \mathrm{e} ^ {2 x}.$
+
+将 $f(x)$ 展开为 x 的幂级数, 得
+
+$\begin{array}{r l} f (x) & = - \frac {1}{3} \mathrm{e} ^ {- x} + \frac {1}{3} \mathrm{e} ^ {2 x} = - \frac {1}{3} \sum_ {n = 0} ^ {\infty} \frac {(- x) ^ {n}}{n !} + \frac {1}{3} \sum_ {n = 0} ^ {\infty} \frac {(2 x) ^ {n}}{n !} \\ & = - \frac {1}{3} \sum_ {n = 0} ^ {\infty} \frac {(- 1) ^ {n} x ^ {n}}{n !} + \frac {1}{3} \sum_ {n = 0} ^ {\infty} \frac {2 ^ {n} x ^ {n}}{n !} = \sum_ {n = 0} ^ {\infty} \left[ \left(- \frac {1}{3}\right) (- 1) ^ {n} + \frac {2 ^ {n}}{3} \right] \frac {x ^ {n}}{n !}, \end{array}$
+
+故 $a_{n} = \frac{1}{3} [(-1)^{n + 1} + 2^{n}]$"
+80173301,880,微积分,第七章 无穷级数,,1,拓展题,解答题,,"设 $a_{0}=1, a_{1}=0, (n+1)a_{n+1}=na_{n}+a_{n-1}(n=1,2,\cdots), S(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$ . 求:
+(I) $\lim\limits_{n\to\infty}a_{n}$ ，并计算级数 $\sum_{n=0}^{\infty}a_{n}x^{n}$ 的收敛半径；
+(II) $S(x)$ 满足的一阶微分方程, 并求和函数 $S(x)$ .",,,,,"解（I）由已知递推关系 $(n+1)a_{n+1}=na_{n}+a_{n-1}$ ，得
+
+故
+
+$\begin{array}{r l} a _ {n + 1} - a _ {n} & = - \frac {1}{n + 1} (a _ {n} - a _ {n - 1}) = - \frac {1}{n + 1} \cdot \left(- \frac {1}{n}\right) (a _ {n - 1} - a _ {n - 2}) \\ & = \dots = \frac {(- 1) ^ {n}}{(n + 1) !} (a _ {1} - a _ {0}) = \frac {(- 1) ^ {n + 1}}{(n + 1) !}, \\ a _ {n + 1} & = a _ {0} + \sum_ {k = 1} ^ {n + 1} (a _ {k} - a _ {k - 1}) = 1 + \sum_ {k = 1} ^ {n + 1} \frac {(- 1) ^ {k}}{k !} = \sum_ {k = 0} ^ {n + 1} \frac {(- 1) ^ {k}}{k !}, \end{array}$
+
+即 $a_{n} = \sum_{k = 0}^{n}\frac{(-1)^{k}}{k!}$ . 注意到 $\sum_{n = 0}^{\infty}\frac{(-1)^{n}x^{n}}{n!} = \mathrm{e}^{-x}$ , 故 $\lim\limits_{n\to \infty}a_n = \mathrm{e}^{-1}$ .
+
+由于 $\lim\limits_{n\to \infty}\left|\frac{a_{n + 1}}{a_n}\right| = \frac{\mathrm{e}^{-1}}{\mathrm{e}^{-1}} = 1$ ，故 $\sum_{n = 0}^{\infty}a_nx^n$ 的收敛半径 $R = 1$
+
+（Ⅱ）由 $S(x) = \sum_{n=0}^{\infty} a_n x^n$ ，有 $S'(x) = \sum_{n=1}^{\infty} na_n x^{n-1}$ ，则 $x S'(x) = \sum_{n=1}^{\infty} na_n x^n$ ，将 $na_n = (n+1)a_{n+1} - a_{n-1}$ 代入，得
+
+$\begin{array}{r l} x S ^ {\prime} (x) & = \sum_ {n = 1} ^ {\infty} [ (n + 1) a _ {n + 1} - a _ {n - 1} ] x ^ {n} = \sum_ {n = 1} ^ {\infty} (n + 1) a _ {n + 1} x ^ {n} - \sum_ {n = 1} ^ {\infty} a _ {n - 1} x ^ {n} \\ & = - a _ {1} + \sum_ {n = 1} ^ {\infty} n a _ {n} x ^ {n - 1} - x \sum_ {n = 0} ^ {\infty} a _ {n} x ^ {n} = 0 + \sum_ {n = 1} ^ {\infty} n a _ {n} x ^ {n - 1} - x \sum_ {n = 0} ^ {\infty} a _ {n} x ^ {n} \\ & = S ^ {\prime} (x) - x S (x), \end{array}$
+
+即 $(1 - x)S'(x) = xS(x)$ ，变形为 $\frac{S'(x)}{S(x)} = \frac{x}{1 - x}$ ，积分得
+
+$\ln | S (x) | = \int {\frac {x}{1 - x}} \mathrm{d} x = - x - \ln (1 - x) + C,$
+
+由 $x = 0, S(0) = 1$ 得 $C = 0$ , 考虑到 $S(0) = 1 > 0$ , 故 $\ln S(x) = -x - \ln (1 - x)$ , 即
+
+$S (x) = \frac {\mathrm{e} ^ {- x}}{1 - x}, \quad x \in (- 1, 1).$"
+80173302,880,微积分,第七章 无穷级数,,2,拓展题,解答题,,"设 $f(x)$ 在 $[-1,1]$ 上有定义，在 x=0 的某邻域内有二阶连续导数，且 $\lim\limits_{x\to0}\frac{f(x)}{x}=0$ ，证明: 级数 $\sum_{n=1}^{\infty}f\left(\frac{1}{n}\right)$ 绝对收敛.",,,,,"证 由 $\lim\limits_{x\to 0}\frac{f(x)}{x} = 0$ ，知 $\lim\limits_{x\to 0}f(x) = f(0) = 0$ ，且
+
+$\lim\limits_ {x \to 0} {\frac {f (x)}{x}} = \lim\limits_ {x \to 0} {\frac {f (x) - f (0)}{x - 0}} = f ^ {\prime} (0) = 0,$
+
+故由泰勒公式, 可知
+
+$f (x) = f (0) + f ^ {\prime} (0) x + \frac {f ^ {\prime \prime} (\theta x)}{2 !} x ^ {2} = \frac {f ^ {\prime \prime} (\theta x)}{2 !} x ^ {2} \quad (0 < \theta < 1).$
+
+又由 $f''(x)$ 在 $x = 0$ 的某邻域内连续，可知 $f''(x)$ 在该邻域内有界，即存在 $M > 0$ ，使得 $\mid f''(x)\mid \leqslant M$ ，故对于充分大的 $n$ ，有
+
+$\left| f \left(\frac {1}{n}\right) \right| = \frac {1}{2} \left| f ^ {\prime \prime} \left(\frac {\theta}{n}\right) \right| \frac {1}{n ^ {2}} \leqslant \frac {M}{2} \cdot \frac {1}{n ^ {2}}.$
+
+又 $\sum_{n=1}^{\infty} \frac{1}{n^2}$ 收敛, 故由比较审敛法, 可知 $\sum_{n=1}^{\infty} f\left(\frac{1}{n}\right)$ 绝对收敛."
+80173303,880,微积分,第七章 无穷级数,,3,拓展题,解答题,,"设 $f(x)$ 满足 $f''(x) + 2f'(x) + f(x) = 0$ ，且 $f(0) = 1, f'(0) = 0, a_n = \int_{n}^{+\infty} f(x) \, dx$ . 求:
+(I) $f(x)$ 及 $a_{n}$ ;
+(II) 级数 $\sum_{n=1}^{\infty} a_n$ 的和.",,,,,"解（Ⅰ）已知特征方程为 $r^{2} + 2r + 1 = 0$ ，得特征根为 $r_{1} = r_{2} = -1$ ，故通解为
+
+$f (x) = C _ {1} \mathrm{e} ^ {- x} + C _ {2} x \mathrm{e} ^ {- x}.$
+
+由 $f(0)=1, f'(0)=0$ , 得 $C_{1}=C_{2}=1$ . 所以
+
+$\begin{array}{r l} f (x) & = \mathrm{e} ^ {- x} + x \mathrm{e} ^ {- x} = (1 + x) \mathrm{e} ^ {- x}. \\ a _ {n} & = \int_ {n} ^ {+ \infty} f (x) \mathrm{d} x = \int_ {n} ^ {+ \infty} (1 + x) \mathrm{e} ^ {- x} \mathrm{d} x = - \int_ {n} ^ {+ \infty} (1 + x) \mathrm{de} ^ {- x} \\ & = - \left[ (1 + x) \mathrm{e} ^ {- x} \Big | _ {n} ^ {+ \infty} - \int_ {n} ^ {+ \infty} \mathrm{e} ^ {- x} \mathrm{d} x \right] \\ & = (1 + n) \mathrm{e} ^ {- n} + \mathrm{e} ^ {- n} = n \mathrm{e} ^ {- n} + 2 \mathrm{e} ^ {- n}. \end{array}$
+
+(Ⅱ) $\sum_{n=1}^{\infty} a_n = \sum_{n=1}^{\infty} n e^{-n} + 2 \sum_{n=1}^{\infty} e^{-n}$ , 而 $\sum_{n=1}^{\infty} e^{-n} = \frac{e^{-1}}{1 - e^{-1}} = \frac{1}{e - 1}$ . 令
+
+$\begin{array}{r l} S (x) & = \sum_ {n = 1} ^ {\infty} n \mathrm{e} ^ {- n x} = - \sum_ {n = 1} ^ {\infty} (\mathrm{e} ^ {- n x}) ^ {\prime} = - \left(\sum_ {n = 1} ^ {\infty} \mathrm{e} ^ {- n x}\right) ^ {\prime} \\ & = - \left(\frac {\mathrm{e} ^ {- x}}{1 - \mathrm{e} ^ {- x}}\right) = \frac {\mathrm{e} ^ {x}}{(\mathrm{e} ^ {x} - 1) ^ {2}}, \quad x >. 0. \end{array}$
+
+令 $x = 1$ ，则 $\sum_{n=1}^{\infty} n e^{-n} = S(1) = \frac{e}{(e-1)^2}$ ，故
+
+$\sum_ {n = 1} ^ {\infty} a _ {n} = \frac {\mathrm{e}}{(\mathrm{e} - 1) ^ {2}} + \frac {2}{\mathrm{e} - 1} = \frac {3 \mathrm{e} - 2}{(\mathrm{e} - 1) ^ {2}}.$"

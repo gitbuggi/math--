@@ -1698,8 +1698,7 @@ $\begin{array}{r l} I & = \iint_ {D} \mathrm{e} ^ {(x + y) ^ {2}} (\sin^ {2} x +
 图5-39
 
 $\begin{array}{l} = \frac {1}{2} \int_ {0} ^ {\frac {\pi}{2}} \frac {1}{(\cos \theta + \sin \theta) ^ {2}} \cdot e ^ {r ^ {2} (\cos \theta + \sin \theta) ^ {2}} \Big | _ {\frac {1}{\cos \theta + \sin \theta}} ^ {\frac {2}{\cos \theta + \sin \theta}} d \theta \\ = \frac {1}{2} (e ^ {4} - e) \int_ {0} ^ {\frac {\pi}{2}} \frac {d \theta}{(\cos \theta + \sin \theta) ^ {2}} = \frac {1}{2} (e ^ {4} - e) \int_ {0} ^ {\frac {\pi}{2}} \frac {d (\tan \theta)}{(1 + \tan \theta) ^ {2}} \\ = \frac {1}{2} (e ^ {4} - e) \left(- \frac {1}{1 + \tan \theta}\right) \Big | _ {0} ^ {\frac {\pi}{2}} = \frac {1}{2} e (e ^ {3} - 1). \end{array}$"
-80162309,880,微积分,第六章 二重积分,,9,综合题,解答题,,"计算 $I = \int_{-\sqrt{\frac{\pi}{2}}}^{\sqrt{\frac{\pi}{2}}} dx \int_{|x|}^{\sqrt{\pi - x^2}} e^{-(x^2 + y^2)} \sin (x^2 + y^2) \, \mathrm{d}y.$
-> 极限",,,,,"解 积分区域 D 如图 5-40 所示, D 关于 y 轴对称, 被积函数关于 x 是偶函数, $D_{1}$ 是 D 位于 y 轴右侧的部分, 采用极坐标, 有
+80162309,880,微积分,第六章 二重积分,,9,综合题,解答题,,"计算 $I = \int_{-\sqrt{\frac{\pi}{2}}}^{\sqrt{\frac{\pi}{2}}} dx \int_{|x|}^{\sqrt{\pi - x^2}} e^{-(x^2 + y^2)} \sin (x^2 + y^2) \, \mathrm{d}y.$",,,,,"解 积分区域 D 如图 5-40 所示, D 关于 y 轴对称, 被积函数关于 x 是偶函数, $D_{1}$ 是 D 位于 y 轴右侧的部分, 采用极坐标, 有
 
 $\begin{array}{r l} I & = 2 \iint_ {D _ {1}} \mathrm{e} ^ {- (x ^ {2} + y ^ {2})} \sin (x ^ {2} + y ^ {2}) \mathrm{d} x \mathrm{d} y \\ & = 2 \int_ {\frac {\pi}{4}} ^ {\frac {\pi}{2}} \mathrm{d} \theta \int_ {0} ^ {\sqrt {\pi}} r \mathrm{e} ^ {- r ^ {2}} \sin r ^ {2} \mathrm{d} r \\ & = 2 \left(\frac {\pi}{2} - \frac {\pi}{4}\right) \cdot \frac {1}{2} \int_ {0} ^ {\sqrt {\pi}} \mathrm{e} ^ {- r ^ {2}} \sin r ^ {2} \mathrm{d} (r ^ {2}) \\ & \xlongequal {r ^ {2} = t} \frac {\pi}{4} \int_ {0} ^ {\pi} \mathrm{e} ^ {- t} \sin t \mathrm{d} t. \end{array}$
 
